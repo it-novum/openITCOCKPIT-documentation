@@ -1,7 +1,7 @@
 site_name: openITCOCKPIT 4
 repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
 repo_name: GitHub
-edit_uri: https://github.com/it-novum/openITCOCKPIT-documentation/edit/German/docs/
+edit_url: /edit/main/German
 docs_dir: docs
 dev_addr: 0.0.0.0:8000
 pages:
