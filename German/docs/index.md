@@ -5,7 +5,7 @@
 [openITCOCKPIT](https://openitcockpit.io/) ist ein Monitoring Tool basieren auf Nagios, Naemon und Prometheus. 
 
 
-![openITCOCKPIT](images/about/raspberrypi.jpg){ align=center }
+![openITCOCKPIT](images/raspberrypi.jpg){ align=center }
 
 *Grafik: openITCOCKPIT installiert auf einem Raspberry Pi 4*
 
