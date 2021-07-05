@@ -1,0 +1,61 @@
+site_name: openITCOCKPIT 4
+repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
+repo_name: GitHub
+edit_uri: /German/docs/
+docs_dir: docs
+dev_addr: 0.0.0.0:8000
+pages:
+  - 'Über openITCOCKPIT': 'index.md'
+  - 'Installation': '02-installation.md'
+  - Frontend:
+    - 'Test': 'Frontend/01-test.md'
+
+extra_javascript:
+  - copyright_year.js
+markdown_extensions:
+    - toc:
+        permalink: True
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - attr_list
+    - def_list
+
+plugins:
+  - search
+
+#  Theme docs: https://squidfunk.github.io/mkdocs-material/getting-started/
+theme:
+  name: material
+  language: de
+  logo: images/logo/openitcockpit-light.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: blue
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.expand
+
+
+copyright: Copyright &copy; 2016 - <span id="copyright-year">YYYY</span> it-novum GmbH
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/openITCOCKPIT
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/G8KhxKuQ9G
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/r/openitcockpit/
+    - icon: fontawesome/brands/github
+      link: https://github.com/it-novum/openITCOCKPIT
