@@ -4,6 +4,7 @@ repo_name: GitHub
 edit_url: /edit/main/German
 docs_dir: docs
 dev_addr: 0.0.0.0:8000
+
 pages:
   - 'Über openITCOCKPIT': 'index.md'
   - 'Installation': '02-installation.md'
@@ -60,3 +61,15 @@ extra:
       link: https://www.reddit.com/r/openitcockpit/
     - icon: fontawesome/brands/github
       link: https://github.com/it-novum/openITCOCKPIT
+
+#https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+  alternate:
+    # Switch to English
+    - name: English
+      link: /English/
+      lang: en
+
+    # Switch to German
+    - name: Deutsch
+      link: /German/
+      lang: de
