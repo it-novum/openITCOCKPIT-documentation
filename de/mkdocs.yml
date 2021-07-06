@@ -1,8 +1,8 @@
 site_name: openITCOCKPIT 4
+site_url: http://mkdocs.oitc.itn:8000/
 repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
 repo_name: GitHub
-edit_url: /edit/main/de
-docs_dir: docs
+edit_url: ''
 dev_addr: 0.0.0.0:8000
 
 pages:
@@ -21,6 +21,8 @@ markdown_extensions:
     - pymdownx.superfences
     - attr_list
     - def_list
+    - markdown_include.include:
+          base_path: docs
 
 plugins:
   - search
@@ -50,7 +52,11 @@ theme:
 
 
 copyright: Copyright &copy; 2016 - <span id="copyright-year">YYYY</span> it-novum GmbH
-
+nav:
+  - FastAPI: index.md
+  - Languages:
+      - de: /
+      - en: /en/
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -61,15 +67,10 @@ extra:
       link: https://www.reddit.com/r/openitcockpit/
     - icon: fontawesome/brands/github
       link: https://github.com/it-novum/openITCOCKPIT
-
-#https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
   alternate:
-    # Switch to English
-    - name: English
-      link: /en/
-      lang: en
-
-    # Switch to German
-    - name: Deutsch
-      link: /de/
+    - link: /
+      name: de - Deutsch
       lang: de
+    - link: /en/
+      name: en - English
+      lang: en
