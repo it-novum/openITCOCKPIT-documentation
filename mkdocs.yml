@@ -1,0 +1,73 @@
+site_name: openITCOCKPIT 4
+repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
+repo_name: GitHub
+edit_url: /edit/main
+docs_dir: docs
+dev_addr: 0.0.0.0:8000
+
+pages:
+  - 'About openITCOCKPIT': 'index.md'
+  - Frontend:
+    - 'Hosts': 'Frontend/02-hosts.md'
+
+extra_javascript:
+  - copyright_year.js
+markdown_extensions:
+    - toc:
+        permalink: True
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - attr_list
+    - def_list
+
+plugins:
+  - search
+
+#  Theme docs: https://squidfunk.github.io/mkdocs-material/getting-started/
+theme:
+  name: material
+  language: en
+  logo: images/logo/openitcockpit-light.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: blue
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.expand
+
+
+copyright: Copyright &copy; 2016 - <span id="copyright-year">YYYY</span> it-novum GmbH
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/openITCOCKPIT
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/G8KhxKuQ9G
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/r/openitcockpit/
+    - icon: fontawesome/brands/github
+      link: https://github.com/it-novum/openITCOCKPIT
+
+#https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+  alternate:
+    # Switch to English
+    - name: English
+      link: /en/
+      lang: en
+
+    # Switch to German
+    - name: Deutsch
+      link: /de/
+      lang: de
