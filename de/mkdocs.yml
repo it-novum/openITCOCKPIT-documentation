@@ -6,10 +6,41 @@ dev_addr: 0.0.0.0:8000
 
 nav:
   - 'Über openITCOCKPIT': 'index.md'
-  - 'Installation': '02-installation.md'
-  - Frontend:
-    - 'Test': 'Frontend/01-test.md'
-    - 'Hosts': 'Frontend/02-hosts.md'
+  - 'Installation': 'installation.md'
+  - 'Beginners Guide': 'beginners.md'
+  - 'Monitoring':
+    - 'Grundlegende Prinzipien': 'monitoring/basic-priciples.md'
+    - 'User Interface': 'monitoring/user-interface.md'
+    - 'Dashboard': 'monitoring/dashboard.md'
+    - 'Acknowledging' : 'monitoring/acknowledging.md'
+    - 'Downtimes': 'monitoring/downtimes.md'
+    - 'Graphing': 'monitoring/graphing.md'
+    - 'Überwachung mit Prometheus': 'monitoring/prometheus.md'
+    - 'Überwachung mit Checkmk': 'monitoring/checkmk.md'
+    - 'Karten': 'monitoring/maps.md'
+    - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
+  - 'Alerting / Benachrichtigungen': 'alerting.md'
+  - 'Reporting': 'reporting.md'
+  - 'Konfiguration': 
+    - 'Container': 'configuration/container.md'
+    - 'Host und Services': 'configuration/host-services.md'
+    - 'Benutzerverwaltung': 'configuration/usermanagement.md'
+    - 'Makros': 'configuration/macros.md'
+    - 'Zeitabschnitte' : 'configuration/timeperiods.md'
+    - 'Kalender': 'configuration/calendar.md'
+    - 'Cronjobs': 'configuration/cronjobs.md'
+    - 'Paketmanager': 'configuration/packagemanager.md'
+    - 'Backup & Restore': 'configuration/backup-restore.md'
+    - 'Konfigurationsdateien': 'configuration/config-file-editor.md'
+    - 'Proxy': 'configuration/proxy.md'
+    - 'Verteiltes Monitoring und Satelliten': 'configuration/distribute-module.md'
+    - 'SNMP Traps': 'configuration/snmp-trap-module.md'
+  - 'Development':
+    - 'Entwicklungsumgebung einrichten': 'development/setup-dev-env.md'
+  - 'Weitere Artikel':
+    - 'Logging': 'additional/logs.md'
+    - 'Theming und CI': 'additional/theming.md'
+    - 'Troubleshooting': 'additional/troubleshooting.md'
 
 extra_javascript:
   - copyright_year.js
