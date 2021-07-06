@@ -52,11 +52,7 @@ theme:
 
 
 copyright: Copyright &copy; 2016 - <span id="copyright-year">YYYY</span> it-novum GmbH
-nav:
-  - FastAPI: index.md
-  - Languages:
-      - de: /
-      - en: /en/
+
 extra:
   social:
     - icon: fontawesome/brands/twitter
