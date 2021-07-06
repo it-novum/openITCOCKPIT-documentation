@@ -1,7 +1,7 @@
 site_name: openITCOCKPIT 4
 repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
 repo_name: GitHub
-edit_url: /edit/main/German
+edit_url: /edit/main/de
 docs_dir: docs
 dev_addr: 0.0.0.0:8000
 
@@ -66,10 +66,10 @@ extra:
   alternate:
     # Switch to English
     - name: English
-      link: /English/
+      link: /en/
       lang: en
 
     # Switch to German
     - name: Deutsch
-      link: /German/
+      link: /de/
       lang: de
