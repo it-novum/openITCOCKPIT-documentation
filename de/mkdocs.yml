@@ -5,7 +5,7 @@ repo_name: GitHub
 edit_url: ''
 dev_addr: 0.0.0.0:8000
 
-pages:
+nav:
   - 'Über openITCOCKPIT': 'index.md'
   - 'Installation': '02-installation.md'
   - Frontend:
