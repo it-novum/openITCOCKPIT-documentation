@@ -61,10 +61,11 @@ Der Reflektionszustand definiert ob entweder nur ein weicher und harter Zustand 
 
 
 
+## Autoreports
 
 Das Autoreport Modul in openITCOCKPIT ist ein konfigurierbarer Report, der automatisiert versendet werden kann.
 
-# Autoreport erstellen
+### Autoreport erstellen
 
 Um einen Autoreport zu erstellen, klciken Sie zunächst auf die Schaltfläche “Neu” in der Autoreports Übersicht.
 
@@ -100,7 +101,7 @@ Der Report wird nun automatisch in der angegebenen Zeit versendet. Sie haben all
 
 Dort wählen Sie dann das Ausgabeformat aus und den Zeitraum der Ausgewertet werden soll. Nach dem Klick auf “Generiere Bericht” bekommen Sie entweder den Report als PDF zum Donwload angeboten oder aber direkt im Browser in der HTML Version angezeigt.
 
-# Autoreport Globals
+### Autoreport Globals
 
 Im Hauptmenü unter Systemkonfiguration → System → Autoreport Globals lassen sich verschiedene Standardeinstellungen zu den Autoreports einstellen. Beschreibungen zu den einzelnen Optionen finden sich direkt in der Tabelle unter dem “Info Button”.
 
