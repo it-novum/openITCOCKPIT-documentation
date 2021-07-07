@@ -1,4 +1,4 @@
-# Container
+## Container
 
 Container sind eine Kernkomponente in openITCOCKPIT. Ob Benutzer, Karten oder Hosts, alles was in openITCOCKPIT angelegt werden kann oder Überwacht wird, befindet sich in Containern. Sie können zum Strukturieren genutzt werden und sind *die* Zentrale Berechtigungskomponente.
 
@@ -6,7 +6,7 @@ Der root Container ist der Standardcontainer der alle anschließenden Container 
 
 Die Container werden in der Container Übersicht in einer Baumtruktur dargestellt. Über diese Baumansicht ist es möglich, weitere Container vom Typ Mandant, Standort und Knoten hinzuzufügen und zu bearbeiten. 
 
-## Containertypen
+### Containertypen
 
 Folgende typen von Containern gibt es in openITCOCKPIT
 
@@ -19,7 +19,7 @@ Folgende typen von Containern gibt es in openITCOCKPIT
 -   Servicegruppe
 -   Servicevorlagengruppe
 
-## Container Details
+### Container Details
 
 Um eine Übersicht der Untercontainer sowie deren Inhalt zu bekommen, klickt man in der Container Übersicht auf “Zeige Details” eines Mandanten, Knoten oder Standort.
 
@@ -28,7 +28,7 @@ Dort kann man zwischen zwei verschiedenen Ansichten auswählen. Die Container an
 Die Container Karte hingegen zeigt eine logische Karte der Struktur des gewählten Containers.
 
 
-# Mandanten
+## Mandanten
 
 Mandanten sind Spezifische Container in openITCOCKPIT die zur Strukturierung und Granularer Berechtigung dienen.
 
@@ -45,7 +45,7 @@ Diese sind 
 
 Ein Mandant bildet die Grundlage für weitere Container vom Typ Standort oder einfache Knoten. 
 
-## Details
+### Details
 
 Um eine Übersicht der untercontainer sowie deren Inhalt zu bekommen, klickt man in der Mandanten Übersicht auf “Zeige Details” eines Mandanten.
 
@@ -54,7 +54,7 @@ Dort kann man zwischen zwei verschiedenen Ansichten auswählen. Die Container an
 Die Container Karte hingegen zeigt eine logische Karte der Struktur des gewählten Containers.
 
 
-# Standorte
+## Standorte
 
 Standorte sind Spezifische Container in openITCOCKPIT die zur Strukturierung und Granularer Berechtigung dienen.
 
