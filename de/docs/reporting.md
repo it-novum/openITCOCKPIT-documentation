@@ -107,6 +107,5 @@ Im Hauptmenü unter Systemkonfiguration → System → Autoreport Globals lassen
 
 ![](/images/autoreportmodule-globalsinfo.png)
 
-Info Button
 
  Bitte Beachten Sie, dass die Optionen die Sie dort setzen sich auf alle über das Autoreport Modul generierten Berichte auswirkt!
