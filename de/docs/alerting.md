@@ -39,7 +39,7 @@ Unter "API Mattermost" können Sie die Konfiguration finden.
 | --- | --- | --- |
 | Webhook URL | :warning: | Definiert die Adresse des Mattermost Servers, welcher genutzt werden soll. **Example**: [http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte](http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte) |
 | Enable Two-Way Integration |     | Über die Zwei-Wege-Integration kann Mattermost Acknowledgements an openITCOCKPIT Senden. Ohne werden nur Alarma an Mattermost geschickt. |
-| openITCOCKPIT API Key |     | Dieser API-Key wird von Mattermost genutzt um die Acknowledgements an openITCOCKPIT zu schicken. Zuerst muss ein [benutzerdefinierter API-Key](https://docs.it-novum.com/display/ODD/Grundlegende+Verwendung) mit openITCOCKPIT erstellt werden |
+| openITCOCKPIT API Key |     | Dieser API-Key wird von Mattermost genutzt um die Acknowledgements an openITCOCKPIT zu schicken. Zuerst muss ein benutzerdefinierter API-Key mit openITCOCKPIT erstellt werden |
 | Use Proxy Server |     | Ob der konfigurierte HTTP Proxy genutzt werden soll oder nicht. |
 
 ### Mattermost Konfiguration
