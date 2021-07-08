@@ -83,6 +83,41 @@ anschließend werden verschiedene Prüfungsintervalle gesetzt.
 Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird. 
 
 
-
-
 Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden. Im gegensatz zu den Hostvorlagen muss hier kein Kontakt oder Kontaktgruppe hinterlegt werden.
+
+
+
+## Hosts
+
+### Host erstellen
+
+Um einen Host zu erstellen wählen Sie zunächst einen Contaner aus, in dem der Host erstellt werden soll. Bitte beachten Sie dass ein nachträgliches ändern des Containers für einen Host **_nicht möglich_** ist!
+
+Danach wählen Sie eine Hostvorlage aus, von dem der neue Host abgeleitet werden soll. 
+
+Sie können anschließend einen Host Namen und eine Host Adresse vergeben, oder aber Sie vergeben eine Host Adresse und lassen den Hostnamen über die DNS-Suche automatisch vervollständigen.
+
+Beim Abspeichern haben Sie die möglichkeit direkt neue Services zum Host anzulegen. Diese können entweder über den openITCOCKPIT Agent, Checkmk oder den Klassischen weg des Manuellen erstellens erzeugt werden.
+
+#### Geteilte Container
+
+Über die Geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben. Diese Option steht zudem auch in der Hostübersicht unter der Host bearbeitungsoption “Teilen” zur verfügung. 
+
+#### Benachrichtigungen
+
+Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird. 
+
+#### Prometheus Exporters
+
+– Folgt – 
+
+
+## Services
+
+### Service erstellen
+
+Um einen Service zu erstellen klicken Sie in der Serviceübersicht zunächst auf die schaltfläche “Neu”. Im sich öffnenden Formular wählen Sie als erstes den Ziel Host aus, auf dem der Service erstellt werden soll. Anschließend wählen Sie eine Servicevorlage aus. Wenn nötig können Sie dem Service, abweichend vom Servicetemplate, einen Namen sowie eine Beschreibung geben. 
+
+#### Benachrichtigungen
+
+Die Benachrichtigungen für einen Service verhalten Sich genau wie die Benachrichtigungen für einen Host
