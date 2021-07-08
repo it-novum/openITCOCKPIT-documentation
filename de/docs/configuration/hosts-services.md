@@ -86,6 +86,36 @@ Damit Benachrichtigung zu einem Service status gesendet werden können, wird in 
 Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden. Im gegensatz zu den Hostvorlagen muss hier kein Kontakt oder Kontaktgruppe hinterlegt werden.
 
 
+## Servicevorlagengruppen
+
+Servicevorlagengruppen sind Sammlungen von Servicevorlagen, die entweder selbst erstellt werden können oder aber über installierbare Module verfügbar sind. Über Module verfügbare Servicevorlagengruppen sind zum jeweiligen Themengebiet passend zusammengefasste Servicevorlagen. 
+
+Servicevorlagengruppen können zu einem Host oder einer Hostgruppe zugewiesen werden. Das bedeutet, dass für alle Servicevorlagen einer Servicevorlagengruppe die entsprechenden Services auf dem zugewiesenen Host oder Hostgruppe erstellt wird.
+
+### Servicevorlagengruppen zuweisen
+
+Es gibt in openITCOCKPIT drei verschiedene Möglichkeiten Servicevorlagengruppen zuzuweisen. 
+
+![](/images/servicetemplategroups-allocate.png)
+
+#### Zuweisen zu Host
+
+Hier wird die aktuelle Servicevorlagengruppe zu einem einzelnen Host zugewiesen. Beim auswählen des Hosts werden alle zu erstellenden Services aufgelistet und können auch über die Auswahlbox abgewählt werden. 
+
+Sollte ein Service dieser Servicevorlagengruppe bereits auf dem Zielhost existieren, so wird dieser standardmäßig nicht zusätzlich erstellt, es sei denn man markiert diesen wieder in der Liste.
+
+![](/images/servicetemplategroups-allocatetohost.png)
+
+#### Einer Hostgruppe zuweisen 
+
+Hier wird die aktuelle Servicevorlage zu den Hosts einer Hostgruppe zugewiesen. Beim auswählen der Hostgruppe werden alle zugehörigen Hosts sowie die zu erstellenden Services für jeden einzelnen Host aufgelistet. Es besteht ebenso die möglichkeit einzelnen Services abzuwählen.
+
+Sollte ein Service dieser Servicevorlagengruppe bereits auf einem der Hosts existieren, so wird dieser standardmäßig nicht zusätzlich erstellt, es sei denn man markiert diesen wieder in der Liste.
+
+#### Zuordnen zur passenden Hostgruppe
+
+"Zuordnen zur passenden Hostgruppe" erstellt Services auf den Hosts einer Hostgruppe die den selben Namen trägt. Der Name der Hostgruppe muss gleich der Name der Servicevorlagengruppe sein. Hier hat man nicht mehr die Möglichkeit die Services an und abzuwählen wie bei den anderen zwei Methoden.
+
 
 ## Hosts
 
@@ -121,3 +151,114 @@ Um einen Service zu erstellen klicken Sie in der Serviceübersicht zunächst auf
 #### Benachrichtigungen
 
 Die Benachrichtigungen für einen Service verhalten Sich genau wie die Benachrichtigungen für einen Host
+
+
+## Host und Service erstellung über Import Modul
+
+### Host-Standardeinstellungen
+
+Host Standardeinstellungen definieren beispielsweise welcher Container und Dienste den Importierten Hosts zugewiesen werden sollen. Dies ist abhängig von der Import Quelle.
+
+![](/images/importmodule-hostdefaults.png)
+
+Zunächst muss ein Container ausgewählt werden, in den die Daten Importiert werden sollen und vergeben einen Namen für die Standardeinstellung.
+
+Anschließend setzen Sie die Einstellungen, die den Importierten Hosts automatisch zugewiesen werden sollen. 
+
+Dies betrifft die Hostvorlage, Geteilte Container und ob die Hosts auf dem Mastersystem oder auf einem Satelliten erstellt werden sollen. 
+
+Zusätzlich haben Sie die Möglichkeit Servicevorlagengruppen-Übereinstimmungen zu tätigen. 
+
+Dazu wählen Sie zuerst das Feld zu Übereinstimmung aus. Dort können Sie zwischen Host Name, Beschreibung, Adresse und Software auswählen.
+
+Danach geben Sie den Regulären Ausdruck an, der mit dem Zuvor ausgewählten Feld übereinstimmen muss. 
+
+Anschließend geben Sie die gewünschte Servicevorlagengruppe an.
+
+### Importer
+
+Ein Importer stellt die Grundlage für das Importieren von Hosts. Hier wird die Datenquelle sowie die Konfiguration der Datenquellenzuordnung definiert. Die Voraussetzung für einen Importer sind Host-Standardeinstellungen. Diese müssen vor dem Erstellen des Importers erstellt werden. 
+
+Als Datenquelle folgende zur verfügung:
+
+###### CSV mit Header
+
+Hier hat die CSV Datei, die man Importieren möchte einen Header. Das bedeutet, dass die Spalten in der Tabelle mit Überschriften gekennzeichnet ist. Pflichtvoraussetzung für den Import ist hier ein Trennzeichen, Eindeutige Kennung, Hostname und Host Adresse. 
+
+![](/images/importmopdule-csvwithheader.png)
+
+###### CSV ohne Header
+
+Der Unterschied zwischen einer CSV mit Header und einer ohne Header besteht darin, dass die Spalten bei einer CSV ohne Header nicht mit überschriften versehen sind. Hier muss also mit der Nummerierung der Spalten gearbeitet werden.
+
+![](/images/importmodule-csvwithoutheader.png)
+
+A = 0, B = 1, C = 2, D = 3
+
+##### Zuweisung von Host-Standardeinstellungen
+
+Die Host-Standardeinstellungen müssen bei der Erstellung des Importers gesetzt werden. Dies Sorgt dafür, dass den Importierten Hosts Standardeinstellungen zugewiesen werden.
+
+![](/images/importmodule-editimporter.png)
+
+### Importierte Host 
+
+![](/images/importmodule-importhostoverview.png)
+
+In der Liste werden alle neuen oder bereits in das Monitoring aufgenommenen Host angezeigt. Alle bevorstehende Änderungen für Services, falls welche vorhanden sind, werden entsprechend angezeigt. Die Vollständigkeit der Eintragen werden mit verschiedenen Wettersymbolen angezeigt. Die Daten können über das Editieren des zu importierenden Hosts können jederzeit ergänzt werden. Falls bestimmt Host nicht in das Monitoring aufgenommen werden sollen, können manuell gelöscht werden. Beim der Synchronisierung mit dem Monitoring werden alle Host, die alle benötigen Felder besitzen, inclusive dazu gehörigen Services in die Konfigurationstabelle aufgenommen. Nun muss nur noch exportiert werden und alle Konfigurationsobjekte werden überwacht.
+
+Im oberen Bereich unter dem Punkt "Import Starten" werden alle auf dem System verfügbaren Importer aufgelistet. Nach dem Klicken auf einen dieser Importers öffnet sich das passende Modal. Im unteren Beispiel ist das ein CSV Importer.
+
+![](/images/importmodule-uploadcsv.png)
+
+
+## Hostgruppen
+
+### Hostgruppe erstellen
+
+Um eine Hostgruppe zu erstellen, klicken Sie zunächst auf die Schaltfläche “Neu” in der Hostgruppen Übersicht.
+
+Dort wählen Sie einen Container aus und vergeben einen Namen für die Hostgruppe.
+
+Um Hosts einer Hostgruppe hinzuzufügen, haben Sie in diesem Formular zwei möglichkeiten.
+
+Die erste ist das gezielte hinzufügen von einzelnen Hosts. Dazu wählen Sie die entsprechenden Hosts aus der Liste “Hosts” aus. 
+
+Die zweite möglichkeit besteht darin, Hosts über ihr Hostvorlage hinzuzufügen. Dabei werden alle Hosts die von den gewählten Hostvorlagen abgeleitet sind automatisch in die Hostgruppe hinzugefügt. 
+
+Danach Speichert man und die Hostgruppe ist fertig erstellt.
+
+### Erweiterte Ansicht
+
+Um zur erweiterten Ansicht einer Hostgruppe zu kommen, klicken Sie in der Hostübersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die “Erweiterte Ansicht”.
+
+Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält. 
+
+Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispiel die Prüfzeit zurückzusetzen, Geplante Wartungszeiten zu erstellen, Hoststatus zu bestätigen oder Benachrichtigungen zu aktivieren / deaktivieren.
+
+Beim klick auf das “+” Symbol eines Hosts in der Liste öffnet sich eine erweitere Ansicht, die die Services des Hosts, sowie die Gesamtstatus derer enthält.
+
+
+## Servicegruppen
+
+### Servicegruppe erstellen
+
+Analog zu den Hostgruppen werden Servicegruppen über die Schaltfläche “Neu” in der Servicegruppen übersicht erstellt.
+
+Dort wählt man einen Container aus und vergibt einen Namen für die Servicegruppe.
+
+Um Services einer Servicegruppe hinzuzufügen, haben Sie in diesem Formular zwei möglichkeiten:
+
+Die erste ist das gezielte hinzufügen von einzelnen Services. Dazu wählen Sie die entsprechenden Hosts aus der Liste “Services” aus. 
+
+Die zweite Möglichkeit besteht darin, Services über ihr Servicevorlage hinzuzufügen. Dabei werden alle Services die von den gewählten Servicevorlagen abgeleitet sind automatisch in die Servicegruppe hinzugefügt. 
+
+Danach Speichert man und die Servicegruppe ist fertig erstellt.
+
+### Erweiterte Ansicht
+
+Um zur erweiterten Ansicht einer Servicegruppe zu kommen, klicken Sie in der Serviceübersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die “Erweiterte Ansicht”.
+
+Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält. 
+
+Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispiel die Prüfzeit zurückzusetzen, Geplante Wartungszeiten zu erstellen, Servicestatus zu bestätigen oder Benachrichtigungen zu aktivieren / deaktivieren.
