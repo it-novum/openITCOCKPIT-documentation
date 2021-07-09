@@ -2,7 +2,7 @@
 
 Die Systemeinstellungen definieren grundlegende Einstellungen an openITCOCKPIT.
 
-Diese Einstellungen sollte nur erfahrene Benutzer verändern, da dies im schlimmsten fall zum kompletten Ausfall des Monitorings führen kann!
+Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da dies im schlimmsten fall zum kompletten Ausfall des Monitorings führen kann!
 
 Verfügbare Einstellungen:
 
