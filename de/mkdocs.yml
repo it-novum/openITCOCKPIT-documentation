@@ -33,6 +33,7 @@ nav:
     - 'Backup & Restore': 'configuration/backup-restore.md'
     - 'Konfigurationsdateien': 'configuration/config-file-editor.md'
     - 'Proxy': 'configuration/proxy.md'
+    - 'Systemeinstellungen': 'configuration/systemsettings.md'
     - 'Verteiltes Monitoring und Satelliten': 'configuration/distribute-module.md'
     - 'SNMP Traps': 'configuration/snmp-trap-module.md'
   - 'Development':
