@@ -9,7 +9,7 @@ nav:
   - 'Installation': 'installation.md'
   - 'Beginners Guide': 'beginners.md'
   - 'Monitoring':
-    - 'Grundlegende Prinzipien': 'monitoring/basic-priciples.md'
+    - 'Grundlegende Prinzipien': 'monitoring/basic-principles.md'
     - 'User Interface': 'monitoring/user-interface.md'
     - 'Dashboard': 'monitoring/dashboard.md'
     - 'Acknowledging' : 'monitoring/acknowledging.md'
