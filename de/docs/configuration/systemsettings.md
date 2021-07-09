@@ -1,10 +1,10 @@
-# Systemeinstellungen
+## Grundlagen
 
 Die Systemeinstellungen definieren grundlegende Einstellungen an openITCOCKPIT.
 
 Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da dies im schlimmsten fall zum kompletten Ausfall des Monitorings führen kann!
 
-Verfügbare Einstellungen:
+## Verfügbare Einstellungen:
 
 |     |     |
 | --- | --- |
