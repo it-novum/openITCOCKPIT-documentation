@@ -43,3 +43,10 @@ Nicht alles was in openITCOCKPIT erstellt und / oder konfiguriert werden kann is
 - Servicegruppen
 - Serviceabhängigkeiten
 - Serviceeskalationen
+
+
+### Wie führe Ich einen Export aus ? 
+
+Einen Export auszuführen in openITCOCKPIT ist eine sehr leichte Aufgabe. Dazu klicken Sie im Kopfzeilen bereich von openITCOCKPIT auf die Schaltfläche :fontawesome-solid-retweet:
+
+![](/images/layout-header-export.png)
