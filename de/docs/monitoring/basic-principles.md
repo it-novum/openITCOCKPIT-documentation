@@ -53,7 +53,7 @@ Einen Export auszuführen in openITCOCKPIT ist eine sehr leichte Aufgabe. Dazu k
 
 In der sich darauf öffnenden Seite klicken Sie anschließend auf :fontawesome-solid-rocket: Starte Aktualisierung
 
-![](/images/export-beforeexport)
+![](/images/export-beforeexport.png)
 
 Ist der Export Erfolgreich durchgelaufen sehen Sie folgende Ausgabe:
 
