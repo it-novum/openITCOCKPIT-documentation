@@ -47,6 +47,14 @@ Nicht alles was in openITCOCKPIT erstellt und / oder konfiguriert werden kann is
 
 ### Wie führe Ich einen Export aus ? 
 
-Einen Export auszuführen in openITCOCKPIT ist eine sehr leichte Aufgabe. Dazu klicken Sie im Kopfzeilen bereich von openITCOCKPIT auf die Schaltfläche :fontawesome-solid-retweet:
+Einen Export auszuführen in openITCOCKPIT ist eine sehr leichte Aufgabe. Dazu klicken Sie im Kopfzeilen bereich von openITCOCKPIT auf die Schaltfläche :fontawesome-solid-retweet: 
 
 ![](/images/layout-header-export.png)
+
+In der sich darauf öffnenden Seite klicken Sie anschließend auf :fontawesome-solid-rocket: Starte Aktualisierung
+
+![](/images/export-beforeexport)
+
+Ist der Export Erfolgreich durchgelaufen sehen Sie folgende Ausgabe:
+
+![](/images/export-afterexport.png)
