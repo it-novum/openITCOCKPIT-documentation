@@ -49,12 +49,12 @@ Nicht alles was in openITCOCKPIT erstellt und / oder konfiguriert werden kann is
 
 Einen Export auszuführen in openITCOCKPIT ist eine sehr leichte Aufgabe. Dazu klicken Sie im Kopfzeilen bereich von openITCOCKPIT auf die Schaltfläche :fontawesome-solid-retweet: 
 
-![](/images/layout-header-export.png)
+![Export Header Button](/images/layout-header-export.png)
 
 In der sich darauf öffnenden Seite klicken Sie anschließend auf :fontawesome-solid-rocket: Starte Aktualisierung
 
-![](/images/export-beforeexport.png)
+![Export before launch](/images/export-beforeexport.png)
 
-Ist der Export Erfolgreich durchgelaufen sehen Sie folgende Ausgabe:
+Ist der Export Erfolgreich durchgelaufen, sehen Sie folgende Ausgabe:
 
-![](/images/export-afterexport.png)
+![Export successful](/images/export-afterexport.png)

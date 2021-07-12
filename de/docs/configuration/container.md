@@ -4,7 +4,7 @@ Container sind eine Kernkomponente in openITCOCKPIT. Ob Benutzer, Karten oder Ho
 
 Der root Container ist der Standardcontainer der alle anschließenden Container enthält. Alles was in diesem angelegt wird, ist Global verfügbar. 
 
-Die Container werden in der Container Übersicht in einer Baumtruktur dargestellt. Über diese Baumansicht ist es möglich, weitere Container vom Typ Mandant, Standort und Knoten hinzuzufügen und zu bearbeiten. 
+Die Container werden in der Container Übersicht in einer Baumstruktur dargestellt. Über diese Baumansicht ist es möglich, weitere Container vom Typ Mandant, Standort und Knoten hinzuzufügen und zu bearbeiten. 
 
 ### Containertypen
 
