@@ -1,6 +1,8 @@
 ## Grundlegende Verwendung der API
 
 ### API Keys
+
+> :boom:
 Als Authentifizierungsmethode mit der API empfehlen wir dringend die Benutzung von API Keys. 
 
 
