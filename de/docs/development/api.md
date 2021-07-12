@@ -2,7 +2,7 @@
 
 ### API Keys
 
-!!! warning
+!!! warning "Authentifizierung"
     Als Authentifizierungsmethode mit der API empfehlen wir dringend die Benutzung von API Keys. 
 
 
