@@ -1,5 +1,80 @@
 ## Markdown Cheatsheet 
 
+
+## Codeblocks und highlighting
+````
+```
+codeblock
+```
+````
+
+### Highlighting
+
+#### PHP
+````
+```php
+declare(strict_types=1);
+
+namespace App\Controller;
+
+use App\Model\Table\FooTable;
+use Cake\ORM\Locator\LocatorAwareTrait;
+
+/**
+ * Class FooController
+ * @package App\Controller
+ */
+class FooController extends AppController {
+    public function foo(){
+
+    }
+}
+```
+````
+
+
+```php
+declare(strict_types=1);
+
+namespace App\Controller;
+
+use App\Model\Table\FooTable;
+use Cake\ORM\Locator\LocatorAwareTrait;
+
+/**
+ * Class FooController
+ * @package App\Controller
+ */
+class FooController extends AppController {
+    public function foo(){
+
+    }
+}
+```
+#### Javascript
+
+````
+```js
+let nachricht = function() {
+    let geheim = 42;
+
+    return function() {
+        return geheim;
+    };
+};
+```
+````
+
+```js
+let nachricht = function() {
+    let geheim = 42;
+
+    return function() {
+        return geheim;
+    };
+};
+```
+
 ## Blockquotes
 ```
 > Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
