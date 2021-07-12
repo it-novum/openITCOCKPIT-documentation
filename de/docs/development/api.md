@@ -2,8 +2,10 @@
 
 ### API Keys
 
-> :boom:
-Als Authentifizierungsmethode mit der API empfehlen wir dringend die Benutzung von API Keys. 
+!!! warning
+    Als Authentifizierungsmethode mit der API empfehlen wir dringend die Benutzung von API Keys. 
+
+
 
 
 Um einen API-Key zu erstellen, müssen Sie die einstellungen zu Ihrem Profil öffnen. Dazu klicken Sie in openITCOCKPIT auf Ihren Namen.
