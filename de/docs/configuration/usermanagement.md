@@ -12,7 +12,7 @@ Im sich nun öffnenden Formular wählen Sie zunächst die entsprechenden Contain
 
 Sie können auch Container und Container Rollen auswählen. Hierbei ist zu beachten, dass Einzeln zugewiesene Container die Berechtigungen von Containerrollen überschreiben. Dies beutet, wenn ein Benutzer über eine Container Rolle lese und schreibrechte besitzt, kann dieses recht über den einzeln ausgewählten Container verändert werden. Dies hat den Vorteil, dass Berechtigungen für einzelne Container nicht in einer komplett neuen Containerrolle definiert werden müssen. 
 
-![](/images/manageusers-containerroles.png)
+![container roles](/images/manageusers-containerroles.png)
 
 Anschließend wählt man für den Neuen Benutzer eine Benutzerrolle und setzt ihn auf “Ist aktiv”. Ist für einen Benutzer die auswahl box “ist aktiv” nicht gesetzt, kann sich dieser Benutzer nicht mehr in openITCOCKPIT Anmelden.
 
@@ -30,7 +30,7 @@ Jedoch wird hier anstatt der Email Adresse, Vorname und Nachname anzugeben der S
 
 Um ein Benutzerpasswort zurückzusetzen klicken sie auf der Übersichtsseite auf "Passwort zurücksetzen"
 
-![](/images/manageusers-resetpassword.png)
+![reset password](/images/manageusers-resetpassword.png)
 
 Der Benutzer bekommt eine E-Mail mit einem neuen Zufallsgeneriertem Passwort, mit dem er sich auf dem System anmelden kann.
 
@@ -51,7 +51,7 @@ Weiter unten im Formular können Sie die entsprechenden Rechte vergeben. Die rec
 
 Dort können dann entweder alle rechte, Index, Neu, Editier oder Lösch rechte vergeben werden, wobei Index, Neu Editieren und Löschen nacheinander angeklickt werden können um für jede Seite diese zu aktivieren.
 
-![](/images/manageuserroles-bulkactions.png)
+![userrole bulk actions](/images/manageuserroles-bulkactions.png)
 
 
 
@@ -65,6 +65,6 @@ Eine Benutzer Container Rolle kann für die Berechtigung von Benutzern verwendet
 
 Beim erstellen einer Benutzer Container Rolle, vergibt man einen Namen und wählt die gewünschten Container aus. 
 
-![](/images/usercontainerroles-add.png)
+![containerroles add](/images/usercontainerroles-add.png)
 
 Für die Container vergibt man die entsprechenden Rechte (lesen oder schreiben/lesen). Nach dem speichern kann die Benutzer Container Rolle verwendet werden.

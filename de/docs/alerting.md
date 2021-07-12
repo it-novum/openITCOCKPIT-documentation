@@ -23,6 +23,39 @@ Die Konfiguration zur Servicebenachrichtigung erfolgt nach demselben Schema.
 ## Eskalationen
 
 
+## Abhängigkeiten
+Abhängigkeiten sind eine Möglichkeit Benachrichtigungen für bestimmte Objekte anhand von Statusinformationen abhängiger Objekte zu unterdrücken. 
+In openITCOCKPIT ist es möglich abhängigkeiten für Hosts und Hostgruppen sowie Services und Servicegruppen zu definieren. 
+
+Dies funktioniert folgendermaßen:
+Bevor Naemon einen Servicecheck ausführt oder eine Benachrichtigung sendet, wird der Host oder der Service nach Abhängigkeiten überprüft. Ist keine Abhängigkeit definiert, so wird der Check ausgeführt und die Benachrichtigung ganz normal versendet. Ist eine Abhängigkeit definiert, wird jede Abhängigkeit wie folgt überprüft:
+
+1. Der Status des abhängigen Hosts oder Services wird geholt.
+2. Dieser Status wird abgeglichen mit den Ausführungs oder Benachrichtigungsfehlerkriterien (Je nach dem was zu diesem Zeitpunkt relevant ist) 
+3. Wenn dieser Status mit einen der ausgewählten Fehlerkriterien übereinstimmt, gilt die Abhängigkeit als fehlgeschlagen und Naemon wird die weitere Überprüfung der Abhängigkeiten abbrechen.
+4. Wenn dieser Status nicht mit einer der ausgewählten Fehlerkriterien übereinstimmt, gilt die Abhängigkeit als bestanden und Naemon wird die nächste Abhängigkeit überprüfen
+
+Diese Schleife wird solange ausgeführt, bis entweder alle Abhängigen Host oder Services die Überprüfung bestanden haben oder eine Abhängigkeit fehlschlägt.  
+
+!!! info
+    Solange nicht anders Konfiguriert, wird Naemon den aktuellsten hard state der abhängigen Host oder Services für die überprüfung nutzen. 
+
+#### Ausführungsfehlerkriterien
+Diese Art der Abhängigkeiten werden genutzt, um aktive Überprüfungen (active checks) zu temporär auszusetzen. 
+Sollten alle Abhängigkeitsüberprüfungen für einen Host oder Service erfolgreich sein, wird Host oder Services ganz normal überprüft. 
+Schlägt eine Abhängigkeitsüberprüfung fehl, so wird Naemon die Überprüfung (Host-/Servicecheck) für den (abhängigen) Host oder Service temporär überspringen. Wenn alle Abhängigkeiten die Überprüfung (zu einem späteren Zeitpunkt) bestehen, wird die Ausführung der Überprüfung (Host-/Servicecheck) ganz normal fortgesetzt.
+
+#### Benachrichtigungsfehlerkriterien
+Wenn alle Abhängigkeitsüberprüfungen für einen Host oder Service erfolgreich sind, werden Benachrichtigungen ganz normal versendet. 
+Schlägt eine Abhängigkeitsüberprüfung fehl, werden die Benachrichtigungen für den (abhängigen) Host oder Service temporär unterdrückt. Wenn alle Abhängigkeiten die Überprüfung (zu einem späteren Zeitpunkt) bestehen, wird das senden der Benachrichtigungen für den (abhängigen) Host oder Service ganz normal fortgesetzt.
+
+#### Abhängigkeitsvererbung
+
+
+### Host abhängigkeiten
+
+### Service Abhängigkeiten
+
 ## Mattermost Modul
 
 ### Was kann ich mit dem Mattermost Modul tun?
@@ -589,8 +622,3 @@ Bearbeite den Kontakt, über den PagerDuty benachrichtigt werden soll, füge den
 ![](/images/contacts-pagerdutynotifications.png)
 
 **Fertig. Die Konfiguration ist abgeschlossen.**  
- 
-
-### Ich brauche Hilfe
-
-Kontaktieren kannst du uns über die hier aufgelisteten wege [https://openitcockpit.io/contact/#contact](https://openitcockpit.io/contact/#contact)
