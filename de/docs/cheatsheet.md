@@ -34,6 +34,7 @@ class FooController extends AppController {
 
 
 ```php
+<?php
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -50,6 +51,7 @@ class FooController extends AppController {
 
     }
 }
+
 ```
 #### Javascript
 
