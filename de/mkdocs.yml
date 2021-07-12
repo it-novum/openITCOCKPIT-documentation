@@ -37,6 +37,7 @@ nav:
     - 'Verteiltes Monitoring und Satelliten': 'configuration/distribute-module.md'
     - 'SNMP Traps': 'configuration/snmp-trap-module.md'
   - 'Development':
+    - 'API': 'development/api.md'
     - 'Entwicklungsumgebung einrichten': 'development/setup-dev-env.md'
     - 'Ein neues Modul erstellen': 'development/create-module.md'
     - 'Ein neues Check Plugin erstellen': 'development/new-check-plugin.md'
