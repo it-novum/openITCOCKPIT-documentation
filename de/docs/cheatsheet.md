@@ -3,7 +3,6 @@
 ## Links
 
 ### Relative Links
-- Pfad ist relativ zum aktuellen Dokument
 - es muss ein `/` am ende des Links stehen
 
 ```
