@@ -10,6 +10,14 @@
 ```
 [Zeitabschnitte](../configuration/timeperiods/)
 
+### Trennlinien
+
+```
+___
+```
+Erzeugt:
+___
+
 ## Codeblocks und highlighting
 ````
 ```
@@ -21,7 +29,7 @@ codeblock
 
 #### PHP
 
-PHP benötigt für das highlighting den öffnenden php tag ``` <?php ```
+- PHP benötigt für das highlighting den öffnenden php tag ``` <?php ```
 
 
 ````
@@ -121,6 +129,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
+___
 
 ```
 !!! note "Changing The Title"
@@ -133,7 +142,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-
+___
 ```
 !!! info
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -143,7 +152,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! info
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! tip
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -153,7 +162,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! tip
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! success
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -163,7 +172,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! success
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! question
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -173,7 +182,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! question
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! warning
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -183,7 +192,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! warning
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! failure
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -193,7 +202,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! failure
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! danger
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -203,7 +212,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! danger
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! bug
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -213,7 +222,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! bug
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! example
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -223,7 +232,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! example
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ```
 !!! quote
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -233,7 +242,7 @@ Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
 !!! quote
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus
-
+___
 ## Emojis und Icons
 
 ### Emojis
