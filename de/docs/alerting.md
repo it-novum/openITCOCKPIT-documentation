@@ -58,7 +58,7 @@ Host Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Service Abh�
 1. Ein Host kann Abhängigkeiten zu einem oder mehreren Hosts haben.
 2. Host Abhängigkeiten werden Standardmäßig nicht vererbt (Über Option vererbbar).
 3. Host Abhängigkeiten können zum unterdrücken von Benachrichtigungen und Check Ausführungen genutzt werden.
-4. Host Abhängigkeiten sind, wenn konfiguriert, nur innerhalb von [Zeitabschnitten](../configuration/timeperiods.md) gültig.
+4. Host Abhängigkeiten sind, wenn konfiguriert, nur innerhalb von [Zeitabschnitten](../configuration/timeperiods) gültig.
 
 ### Service Abhängigkeiten
 Service Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Host Abhängigkeiten.
@@ -67,7 +67,7 @@ Service Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Host Abh�
 2. Ein Service kann Abhängigkeiten zu Services haben die nicht in verbindung mit dem selben Host stehen.
 3. Service Abhängigkeiten werden Standardmäßig nicht vererbt (über Option vererbbar).
 4. Service Abhängigkeiten können zum unterdrücken von Benachrichtigungen und Check Ausführungen genutzt werden.
-5. Service Abhängigkeiten sind, wenn konfiguriert, nur innerhalb von [Zeitabschnitten](../configuration/timeperiods.md) gültig.
+5. Service Abhängigkeiten sind, wenn konfiguriert, nur innerhalb von [Zeitabschnitten](../configuration/timeperiods) gültig.
 
 
 ## Mattermost Modul
