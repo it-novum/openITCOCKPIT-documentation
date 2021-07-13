@@ -21,11 +21,31 @@ Die Konfiguration zur Servicebenachrichtigung erfolgt nach demselben Schema.
 
 
 ## Eskalationen
+Benachrichtigungseskalationen können verwendet werden, um eine oder mehrere Benutzergruppen im Notfall zu benachrichtigen. Wenn ein Host oder Dienst eskaliert, werden Kontakte, Kontaktgruppen und Benachrichtigungsoptionen durch die Eskalation überschrieben. Sie funktionieren für Hosts gleichermaßen wie für Services.
+
+### Wann werden Benachrichtigungen eskaliert?
+Benachrichtigungen werden nur dann eskaliert, wenn mindestens eine Eskalationsdefinition mit der betreffenden Benachrichtigung übereinstimmt. In einer Eskalation wird ein "Bereich" definiert, ab wann Benachrichtigungen eskaliert werden sollen. Dieser Bereich wird bestimmt durch die Erste Benachrichtigung (Ab der wievielten Benachrichtigung greift die Eskalation) und die Letzte Benachrichtigung (Ab der wievielten Benachrichtigung greift wieder die Standardmäßig definierten Benachrichtigungsoptionen des Objekts)
+Ist ein Eskalationszeitraum definiert, so greift die Eskalationsdefinition nur innerhalb des angegebenem [Zeitabschnittes](../configuration/timeperiods/).
+Über die Eskalationsoptionen kann ausgewählt werden für welche Zustände eine Eskalation angestoßen werden soll. Dies sind für Hosts die Zustände:
+- Wiederherstellung (Recovery)
+- Nicht verfügbar (Down)
+- Nicht erreichbar (Unreachable)
+
+und für Services:
+
+- Wiederherstellung (Recovery)
+- Warnung (Warning)
+- Kritisch (Critical)
+- Unbekannt (Unknown)
+
+Die Felder Kontakte und Kontaktgruppen definieren die Kontakte, die im Eskalationsfall Benachrichtigt werden. 
 
 
-## Abhängigkeiten
-Abhängigkeiten sind eine Möglichkeit Benachrichtigungen für bestimmte Objekte anhand von Statusinformationen abhängiger Objekte zu unterdrücken. 
-In openITCOCKPIT ist es möglich abhängigkeiten für Hosts und Hostgruppen sowie Services und Servicegruppen zu definieren. 
+
+
+## Host / Service Abhängigkeiten
+Abhängigkeiten sind eine Möglichkeit Benachrichtigungen und Überprüfungs Ausführungen für bestimmte Objekte anhand von Statusinformationen Abhängiger Objekte zu unterdrücken. 
+In openITCOCKPIT ist es möglich Abhängigkeiten für Hosts und Hostgruppen sowie Services und Servicegruppen zu definieren. 
 
 Dies funktioniert folgendermaßen:
 Bevor Naemon einen Servicecheck ausführt oder eine Benachrichtigung sendet, wird der Host oder der Service nach Abhängigkeiten überprüft. Ist keine Abhängigkeit definiert, so wird der Check ausgeführt und die Benachrichtigung ganz normal versendet. Ist eine Abhängigkeit definiert, wird jede Abhängigkeit wie folgt überprüft:
