@@ -10,7 +10,7 @@
 ```
 [Zeitabschnitte](../configuration/timeperiods/)
 
-### Trennlinien
+## Trennlinien
 
 ```
 ___
