@@ -3,13 +3,13 @@
 ## Links
 
 ### Relative Links
-- Pfad ist relativ zum aktuellen Dokument (bspw: von Ordner "`docs/configuration/`" nach "`docs/development/`" -> "`../development/api/`")
+- Pfad ist relativ zum aktuellen Dokument
 - es muss ein `/` am ende des Links stehen
 
 ```
-[Zeitabschnitte](configuration/timeperiods/)
+[Zeitabschnitte](../configuration/timeperiods/)
 ```
-[Zeitabschnitte](configuration/timeperiods/)
+[Zeitabschnitte](../configuration/timeperiods/)
 
 ## Codeblocks und highlighting
 ````
