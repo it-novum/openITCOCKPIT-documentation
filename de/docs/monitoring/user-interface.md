@@ -1,3 +1,90 @@
+## User Interface
+
+### Das Interface im Überblick
+Das Layout des User Interface Teilt sich in zwei Bereiche auf. Den Navigationsbereich (1. Blau) und den Inhaltsbereich (2. Rot)
+Der Navigationsbereich von openITCOCKPIT bleibt immer gleich, wohingegen der Inhalt der Ausgewählten Seite immer im Inhaltsbereich (2) Angezeigt wird.
+
+![user-interface](/images/user-interface.png)
+
+### Der Navigationsbereich im Detail
+
+#### Obere Navigationsleiste
+![top nav bar](/images/layout-header-explaination.png)
+
+Die Obere Navigationsleiste beinhaltet neben einer Suche (2) und der Uhrzeit (7) weitere kurz links zu verschiedenen Aktionen
+
+1. Schaltfläche zum Ein-/Ausklappen des Hauptmenüs
+2. Suchleiste mit der Möglichkeit nach Hosts, Services, UUIDs und IP Adressen zu suchen.
+3. Subscription Badge - Nur sichtbar bei unregistrieren und Community Editionen.
+4. [Systemzustand (System Health)](#system-health) 
+5. [Export](../basic-principles/#export) Schaltfläche
+6. Zeigt an ob eine neue openITCOCKPIT Version verfügbar ist. Nur sichtbar wenn dies der Fall ist.
+7. Aktuelle Serveruhrzeit
+8. Sprach auswahl Box
+9. Log-out
+
+
+##### System health
+Die System health Anzeige gibt einen schnellen Überblick auf den Zustand des openITCOCKPIT Servers. 
+Hier werden Warnungen und kritische Zustände, wie beispielsweise mangelnder Festplattenspeicher, kritische Arbeitsspeicherauslastung sowie nicht laufenden Dienste, angezeigt.
+Ist die Anzeige Leer und in der Farbe Grün dargestellt, ist mit dem Server alles in Ordnung (siehe screenshot). 
+
+![system health](/images/system-health.png)
+
+#### Hauptmenü
+![main menu](/images/main-menu.png)
+
+Das Hauptmenü in openITCOCKPIT bietet neben der Liste mit allen Menüeinträgen auch die Möglichkeit das Menü zu durchsuchen (1). Dazu muss nur einmal auf die Schaltfläche :fontawesome-solid-angle-down: Dies erleichtert das finden von Einträgen im Menü enorm.
+
+Darunter befindet sich die Anzeige Ihres Benutzernamens. Die Goldene Krone signalisiert dass Adminrechte zu diesem Benutzer vorhanden sind. Durch einen klick auf den Benutzernamen gelangt man in das [Benutzerprofil](#profil).
+
+Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
+- :fontawesome-solid-line-chart: verlinkt zu einer Übersicht, welche das Senden von Anonymisierten Statistiken an die Entwickler von openITCOCKPIT ermöglicht.
+- :fontawesome-solid-bug: führt zur Support Übersichtsseite. Dort haben Sie die möglichkeit Fehler zu melden sowie Kommerziellen Support zu erlange.n
+- fontawesome-solid-life-ring: verlinkt auf die Übersicht der verfügbaren Subkriptionen um Kommerziellen support sowie Enterprise Module zu erhalten.
+- :fontawesome-solid-book: verlinkt zu einer Übersichtsseite die weitere Links zu verschiedenen Dokumentationen enthält.
+
+
+### Profil
+In der Profil Übersicht haben Sie die möglichkeit anpassungen an Ihrem eigenen Benutzerprofil zu tätigen. 
+
+#### Profil Informationen
+
+Neben den Änderungsmöglichkeiten Ihres Namens, E-Mail Adresse und Telefonnummer, können Sie verschiedene Einstellungen treffen die die Darstellung von Listen, Browser Darstellungen und weiteres verändern.
+
+![Profil Information edit](/images/profile-information.png)
+
+1. Zeigt Statusinformationen zu den Überwachten Objekten in der Oberen Navigationsleiste an.
+2. Rekursiver Browser berücksichtigt im [Browser](#browser) die Elemente in verschachtelten, unterhalb des aktuell gewählten Containers. 
+3. Länge der Listen beeinflusst die auf einer seite angezeigten Listenelemente. Diese Einstellung wirkt sich global auf alle Listen aus.
+4. Sprache - Hier kann die Anzeigesprache für den Benutzer geändert werden.
+5. Gewünschtes Datumsformat des Benutzers
+6. Zeitzone des Benutzers.
+
+
+![Header stats](/images/layout-header-with-stats.png)
+Bild zu 1.
+
+#### Profilbild
+
+Um ein Profilbild hochzuladen, können Sie das gewünschte Bild einfach per Drag and Drop in das dafür vorgesehene Feld Ziehen. Das Hochladen und Speichern geschieht anschließend automatisch.
+
+![Profile picture](/images/profile-image.png)
+
+#### Passwort ändern
+
+!!! info
+    Diese Option steht nur bei Lokalen Benutzern zur verfügung. Benutzer die über LDAP hinzugefügt wurden, müssen Ihr Passwort über das Betriebssystem oder ein LDAP-Account-Manager-Tool ändern.
+
+Um ihr Passwort zu ändern können Sie dieses Formular nutzen Dazu müssen Sie Ihr altes Passwort bereithalten und ein Neues Passwort vergeben. Die Voraussetzungen für das neue Passwort sind mindestens 6 alphanumerische Zeichen sowie mindestens eine Ziffer.
+
+![Profile change password](/images/profile-changepassword.png)
+
+#### API-Keys
+Über Ihre Profil können Sie API-Keys erstellen, welche zur Authentifizierung mit der openITCOCKPIT API genutzt werden. Wie sie einen API-Key erstellen erfahren sie in einem [gesonderten Artikel](../development/api/#api-keys)
+
+
+
 ## Browser
 
 Der Browser bietet eine, für einen Benutzer sichtbare, Übersicht aller Container, deren Hosts sowie den Status der Host und Services.

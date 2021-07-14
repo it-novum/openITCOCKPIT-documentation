@@ -10,6 +10,28 @@
 ```
 [Zeitabschnitte](../configuration/timeperiods/)
 
+
+### Anchor Links
+
+Link auf eine Überschrift in der selben Datei
+
+- alles lower case und leerzeichen durch "`-`" ersetzen
+
+```
+[Anchor Links text](#anchor-links) 
+
+### Anchor Links
+
+```
+[Anchor Links text](#anchor-links) 
+
+#### Anchor Links in anderer Datei
+
+```
+[API Keys](../development/api/#api-keys)
+```
+[API Keys](../development/api/#api-keys)
+
 ## Trennlinien
 
 ```
