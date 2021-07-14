@@ -82,7 +82,7 @@ Um ihr Passwort zu ändern können Sie dieses Formular nutzen Dazu müssen Sie I
 ![Profile change password](/images/profile-changepassword.png)
 
 #### API-Keys
-Über Ihre Profil können Sie API-Keys erstellen, welche zur Authentifizierung mit der openITCOCKPIT API genutzt werden. Wie sie einen API-Key erstellen erfahren sie in einem [gesonderten Artikel](../development/api/#api-keys)
+Über Ihre Profil können Sie API-Keys erstellen, welche zur Authentifizierung mit der openITCOCKPIT API genutzt werden. Wie sie einen API-Key erstellen erfahren sie in einem [gesonderten Artikel](../../development/api/#api-keys)
 
 
 
