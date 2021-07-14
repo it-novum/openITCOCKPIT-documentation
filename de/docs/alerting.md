@@ -18,8 +18,12 @@ Die Konfiguration zur Servicebenachrichtigung erfolgt nach demselben Schema.
 
 
 ## Kontaktgruppen
-Kontaktgruppen sind Sammlungen von Kontakten. Sie dienen zur Vereinfachung der Massenhaften Zuweisung von Kontakten an Verschiedenste Objekte. 
-Kontaktgruppen können meist anstatt einzelner Kontakte wie zum beispiel beim erstellen von Host, Services, Eskalationen, Abhängigkeiten oder Vorlagen ausgewählt werden. 
+Kontaktgruppen sind Sammlungen von Kontakten. Sie dienen zur Vereinfachung der Massenhaften Zuweisung von Kontakten an verschiedenste Objekte. 
+Kontaktgruppen können meist anstatt einzelner Kontakte wie zum Beispiel beim erstellen von Host, Services, Eskalationen, Abhängigkeiten oder Vorlagen ausgewählt werden. 
+
+### Ist meine Kontaktgruppe in verwendung ?
+mit der Funktion "Verwendet von" (Used By) ist es möglich eine Übersicht über die Verwendung der jeweiligen Kontaktgruppe zu bekommen. 
+![contactgroup used by list item](/images/contactgroups-usedbylistitem.png)
 
 
 ## Eskalationen
