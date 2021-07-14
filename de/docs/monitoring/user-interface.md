@@ -40,9 +40,9 @@ Darunter befindet sich die Anzeige Ihres Benutzernamens. Die Goldene Krone signa
 
 Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
 
-- :fontawesome-solid-line-chart: verlinkt zu einer Übersicht, welche das Senden von Anonymisierten Statistiken an die Entwickler von openITCOCKPIT ermöglicht.
-- :fontawesome-solid-bug: führt zur Support Übersichtsseite. Dort haben Sie die möglichkeit Fehler zu melden sowie Kommerziellen Support zu erlange.n
-- fontawesome-solid-life-ring: verlinkt auf die Übersicht der verfügbaren Subkriptionen um Kommerziellen support sowie Enterprise Module zu erhalten.
+- :fontawesome-regular-chart-line: verlinkt zu einer Übersicht, welche das Senden von Anonymisierten Statistiken an die Entwickler von openITCOCKPIT ermöglicht.
+- :fontawesome-solid-bug: führt zur Support Übersichtsseite. Dort haben Sie die möglichkeit Fehler zu melden sowie Kommerziellen Support zu erhalten.
+- fontawesome-regular-life-ring: verlinkt auf die Übersicht der verfügbaren Subkriptionen um Kommerziellen support sowie Enterprise Module zu erhalten.
 - :fontawesome-solid-book: verlinkt zu einer Übersichtsseite die weitere Links zu verschiedenen Dokumentationen enthält.
 
 
