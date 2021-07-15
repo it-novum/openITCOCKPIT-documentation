@@ -1,5 +1,13 @@
 ## Markdown Cheatsheet 
 
+## Text markup
+
+### Fett Text (Bold)
+```
+**Fetter Text**
+```
+**Fetter Text**
+
 ## Links
 
 ### Relative Links
