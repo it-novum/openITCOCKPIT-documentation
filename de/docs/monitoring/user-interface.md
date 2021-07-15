@@ -55,7 +55,7 @@ Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
 
 
 #### Seitenmenü Button
-Der Seitenmenü button ist immer um unteren rechten Bildrand zu sehen und enthält zwei funktionen, die auf jeder Seite in openITCOCKPIT anwendbar sind. 
+Der Seitenmenü Button ist immer um unteren rechten Bildrand zu sehen und enthält zwei Funktionen, die auf jeder Seite in openITCOCKPIT anwendbar sind. 
 
 - :fontawesome-solid-expand: stellt die Seite im Vollbildmodus dar.
 - :fontawesome-solid-arrow-up: Scrollt automatisch an den Anfang der aktuellen Seite.
