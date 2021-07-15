@@ -36,13 +36,13 @@ Ist die Anzeige Leer und in der Farbe Grün dargestellt, ist mit dem Server alle
 
 Das Hauptmenü in openITCOCKPIT bietet neben der Liste mit allen Menüeinträgen auch die Möglichkeit das Menü zu durchsuchen (1). Dazu muss nur einmal auf die Schaltfläche :fontawesome-solid-angle-down: Dies erleichtert das finden von Einträgen im Menü enorm.
 
-Darunter befindet sich die Anzeige Ihres Benutzernamens. Die Goldene Krone signalisiert dass Adminrechte zu diesem Benutzer vorhanden sind. Durch einen klick auf den Benutzernamen gelangt man in das [Benutzerprofil](#profil).
+Darunter befindet sich die Anzeige Ihres Benutzernamens. Die Goldene Krone signalisiert dass Administrator Rechte zu diesem Benutzer vorhanden sind. Durch einen klick auf den Benutzernamen gelangt man in das [Benutzerprofil](#profil).
 
 Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
 
 - :fontawesome-solid-chart-line: verlinkt zu einer Übersicht, welche das Senden von Anonymisierten Statistiken an die Entwickler von openITCOCKPIT ermöglicht.
 - :fontawesome-solid-bug: führt zur Support Übersichtsseite. Dort haben Sie die möglichkeit Fehler zu melden sowie Kommerziellen Support zu erhalten.
-- :fontawesome-solid-life-ring: verlinkt auf die Übersicht der verfügbaren Subkriptionen um Kommerziellen support sowie Enterprise Module zu erhalten.
+- :fontawesome-solid-life-ring: verlinkt auf die Übersicht der verfügbaren Subskriptionen um Kommerziellen support sowie Enterprise Module zu erhalten.
 - :fontawesome-solid-book: verlinkt zu einer Übersichtsseite die weitere Links zu verschiedenen Dokumentationen enthält.
 
 
