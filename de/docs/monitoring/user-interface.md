@@ -54,6 +54,16 @@ Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
 - :fontawesome-solid-book: verlinkt zu einer Übersichtsseite die weitere Links zu verschiedenen Dokumentationen enthält.
 
 
+#### Seitenmenü Button
+Der Seitenmenü button ist immer um unteren rechten Bildrand zu sehen und enthält zwei funktionen, die auf jeder Seite in openITCOCKPIT anwendbar sind. 
+
+- :fontawesome-solid-expand: stellt die Seite im Vollbildmodus dar.
+- :fontawesome-solid-arrow-up: Scrollt automatisch an den Anfang der aktuellen Seite.
+
+![sidemenu button](/images/sidemenu-button.png)
+
+
+
 ### Profil
 In der Profil Übersicht haben Sie die möglichkeit anpassungen an Ihrem eigenen Benutzerprofil zu tätigen. 
 
