@@ -19,7 +19,7 @@ Die Obere Navigationsleiste beinhaltet neben einer Suche (2) und der Uhrzeit (7)
 4. [Systemzustand (System Health)](#system-health) 
 5. [Export](../basic-principles/#export) Schaltfläche
 6. Zeigt an ob eine neue openITCOCKPIT Version verfügbar ist. Nur sichtbar wenn dies der Fall ist.
-7. Aktuelle Serveruhrzeit
+7. Aktuelle [(Server)Uhrzeit](#system-uhrzeiten)
 8. Sprach auswahl Box
 9. Log-out
 
