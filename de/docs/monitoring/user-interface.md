@@ -31,6 +31,14 @@ Ist die Anzeige Leer und in der Farbe Grün dargestellt, ist mit dem Server alle
 
 ![system health](/images/system-health.png)
 
+##### System Uhrzeiten
+das User Interface ist in der Lage zwei verschiedene Uhrzeiten anzuzeigen. 
+
+![user server time](/images/user-servertime.png)
+
+Dies geschieht Automatisch, sobald sich die Lokalen Benutzerzeit (1) von der Serverzeit (2) unterscheidet. 
+Anpassungen der Benutzer Zeitzone können im [Profil](#profil-informationen) vorgenommen werden. 
+
 #### Hauptmenü
 ![main menu](/images/main-menu.png)
 
