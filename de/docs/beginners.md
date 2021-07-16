@@ -189,3 +189,36 @@ Der zweite Schritt ist grundsätzlich ein grafischer Konfigurations Generator um
 
 
 ![pull config](/images/agent-basic-pull-configuration.png)
+
+Im dritten Schritt wird Ihnen gezeigt wo Sie den openITCOCKPIT Monitoring Agent [herunterladen](https://openitcockpit.io/download_agent/) und die Konfigurationsdatei ablegen können.
+
+Für dieses Tutorial können Sie mit der Standardkonfiguration fortfahren. Zum nächsten Schritt klicken Sie auf die Schaltfläche "Weiter".
+
+![agent install config](/images/agent-install-config.png)
+
+
+Der openITCOCKPIT Server wird sich zu dem openITCOCKPIT Monitoring Agent auf dem Zielsystem verbinden und ein TLS Zertifikatsaustasch vollziehen. Für jeden openITCOCKPIT Monitoring Agent wird ein einzigartiges Zertifikat generiert. Dieses Zertifikat wird für Authentifizierungs und Verschlüsselungszwecke benötigt.
+
+Klicken Sie auf "Weiter" um fortzufahren.
+
+![cert exchange](/images/certificate-exchange.png)
+
+Das System wird grundlegende health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die die gewünschten ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
+
+
+![create services](/images/agent-create-services.png)
+
+Der Letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
+Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
+
+![services create successfully](/images/agent-services-created-successfully.png)
+
+
+Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
+
+![agent services monitored](/images/agent-services-monitored.png)
+
+
+### Bestimmen des Host status (optional)
+
+Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden um den Host status zu bestimmen. Anstelle eines Pings ist es möglich die Ergebnisse des openITCOCKPIT Monitoring Agent zum bestimmen des Hoststatus zu verwenden. Für weitere Informationen können Sie die Dokumentation nutzen https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status 
