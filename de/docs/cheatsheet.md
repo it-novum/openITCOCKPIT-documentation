@@ -4,9 +4,15 @@
 
 ### Fett Text (Bold)
 ```
-**Fetter Text**
+Dies ist ein **Fetter Text**
 ```
-**Fetter Text**
+Dies ist ein **Fetter Text**
+
+### Italic text (Kursiv)
+```
+hier steht *Kursiver text*
+```
+hier steht *Kursiver text*
 
 ## Links
 
