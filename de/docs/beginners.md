@@ -177,7 +177,9 @@ Im ersten Schritt müssen Sie entscheiden, ob Sie Ihren Host im Push oder Pull M
 - Im **Pull** Modus verbindet sich der openITCOCKPIT **Server** regelmäßig via HTTPS auf dem Port `3333` **zu dem Agenten** und holt die Überprüfungsergebnisse ab
 - im **Push** Modus verbindet sich der openITCOCKPIT Monitoring **Agent** regelmäßig und "Schiebt" seine Überprüfungsergebnisse via HTTPS auf dem Port 443 **zu dem** openITCOCKPIT **Server**. Perfekt wenn Ihr Zielsystem hinter einer NAT ist.
 
-Beide Modi sind einfach einzurichten. Für dieses Tutorial nutzen wir den **Pull Modus**. Klicken Sie hier für den [Push Modus](https://openitcockpit.io/beginners/12-monitoring-through-openitcockpit-agent-push-mode)
+### Pull Modus
+
+Beide Modi sind einfach einzurichten. Für dieses Tutorial nutzen wir den **Pull Modus**. Klicken Sie hier für den [Push Modus](#push-modus)
 
 ![push or pull](/images/agent-push-or-pull.png)
 
@@ -222,3 +224,65 @@ Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services 
 ### Bestimmen des Host status (optional)
 
 Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden um den Host status zu bestimmen. Anstelle eines Pings ist es möglich die Ergebnisse des openITCOCKPIT Monitoring Agent zum bestimmen des Hoststatus zu verwenden. Für weitere Informationen können Sie die Dokumentation nutzen https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status 
+
+
+### Push Modus
+
+Wählen Sie den Push Modus um fortzufahren.
+
+![agent push or pull use push](/images/agent-push-or-pull-use-push.png)
+
+Der zweite Schritt ist grundsätzlich ein grafischer Konfigurations Generator um die Konfigurationsdatei des openITCOCKPIT Monitoring Agent zu modifizieren. Sie müssen nur das Betriebssystem auswählen, welches Sie überachen möchten und klicken auf die Schaltfläche "Weiter".
+
+
+Setzen Sie die öffentliche IP Adresse oder FQDN Ihres openITCOCKPIT Servers im Feld `openITCOCKPIT Server Adresse` und tragen den API-Key, welchen der Agent nutzen soll in das Feld `openITCOCKPIT API Schlüssel` 
+
+Klicken Sie auf die Schalfläche `Nächster` um fortzufahren
+
+!!! danger "Sicherheitshinweis!"
+    Es wird dringend empfohlen einen neuen Benutzer mit sehr wenigen Berechtigungen zu erstellen und einen API-Key für unprivilgierte Benutzer zu verwenden.
+    Um Check Ergebnisse zu übertragen sind keine speziellen Berechtigungen über Benutzerrollen nötig.
+
+
+![agent push config](/images/agent-basic-push-configuration.png)
+
+
+Im dritten Schritt wird Ihnen gezeigt wo Sie den openITCOCKPIT Monitoring Agent [herunterladen](https://openitcockpit.io/download_agent/) und die Konfigurationsdatei ablegen können.
+
+Kopieren Sie die angezeigte Konfigurationsdatei an den angegebenen Pfad und starten Sie den openITCOCKPIT Monitoring Agent Dienst neu. Die Kommandos und Dateipfade hängen vom genutzen Betriebssystem ab. Klicken Sie auf `Nächster` um fortzufahren.
+
+![agent config push](/images/agent-install-config-push.png)
+
+Jeder Agent sendet eine eindeutige Kennung an den openITCOCKPIT Server. Um unauthorisierte Agenten daran zu hindern Check Ergebnisse zu übertragen, müssen alle im Push Modus arbeitenden Agenten manuell zu einem Host zugewiesen werden. Klicken Sie auf `Nächster` um fortzufahren.
+
+![host to agent mapping](/images/map-host-to-agent.png)
+
+Das System wird grundlegende health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die die gewünschten ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
+
+!!! info
+    Da der Agent im Push Modus Arbeitet, ist es möglich dass openITCOCKPIT bisher noch keine Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf :fontawesome-solid-arrow-left: um auf den Vorhergehenden Schritt zuzückzukehren, warten 30 Sekunden und klicken anschließend wieder auf die Schaltfläche `Nächster`.
+
+![create services push](/images/agent-create-services-push.png)
+
+Der Letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
+Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
+
+![services created push export](/images/agent-services-created-successfully-push.png)
+
+
+Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
+
+![agent services monitored push](/images/agent-services-monitored-push.png)
+
+### Bestimmen des Host status (optional, aber empfohlen)
+
+Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden um den Host status zu bestimmen.
+In den meissten fällen ist es nicht möglich einen Ping zum Zielsystem zu senden, wenn der Push Modus genutzt wird.
+
+Bearbeiten Sie den Host und wählen die Hostvorlage `openITCOCKPIT Agent - Push` aus und speichern diesen ab. Vergessen Sie nicht anschließend die Monitoring Engine Konfiguration zu aktualisieren (Export). 
+
+openITCOCKPIT wird nun den Timestamp der zuletzt empfangenen Nachricht des openITCOCKPIT Monitoring Agents auswerten um zu bestimmen ob der Host verfügbar ist oder nicht.
+
+Für weitere Informationen können Sie die Dokumentation nutzen https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status 
+
+![agent push host status](/images/agent-push-host-status.png)
