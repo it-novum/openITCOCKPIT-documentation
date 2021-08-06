@@ -286,3 +286,119 @@ openITCOCKPIT wird nun den Timestamp der zuletzt empfangenen Nachricht des openI
 Für weitere Informationen können Sie die Dokumentation nutzen https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status 
 
 ![agent push host status](/images/agent-push-host-status.png)
+
+
+## Monitoring mit Checkmk
+
+Checkmk ist nahtlos in die openITCOCKPIT Oberfläche integriert. Hosts auf denen der Checkmk Agent oder ein SNMP Exporter läuft, können über die openITCOCKPIT Oberfläche gescannt werden. Zum Zweck dieses Tutorials werden wir ein Ubuntu Linux System überwachen.
+
+### Checkmk Modul für openITCOCKPIT installieren
+
+Die Checkmk Erweiterung für openITCOCKPIT wird als Modul ausgeliefert. Diese Modularisierung hat den Vorteil, den openITCOCKPIT Kern klein und flexibel zu halten. 
+
+
+!!! info "openITCOCKPIT Community Lizenz wird benötigt"
+    Um Zugriff auf die Community Module zu erhalten, wird eine Registrierung ihrer openITCOCKPIT Instanz mit der **kostenlosen** Community Lizenz vorrausgesetzt.
+
+
+Navigieren sie nach `Verwaltung -> Systemwerkzeuge -> Paketmanager` und installieren Sie das *CheckmkModule*
+
+![packagemanager install checkmk](/images/package-manager-install-checkmk.png)
+
+Folgen Sie den Instruktionen
+
+![packagemanager install instructions](/images/package-manger-install-instructions.png)
+
+Die Installation ist fertiggestellt, sobald Sie die folgende Nachricht sehen: `Installation done. Please reload your openITCOCKPIT web interface.`
+
+Navigieren Sie in Ihrem Webbrowser zurück und Drücken `Ctrl + R` oder `Cmd + R` um die Seite neu zu laden.
+
+Das CheckmkModule sollte nun als installiert angezeigt werden.
+
+![installed successful](/images/checkmk-integration-installed-successfully.png)
+
+Jedes Modul kann die verfügbaren Berechtigungen von openITCOCKPIT erweitern. Im Standard werden alle Berechtigungen der `Administrator` Benutzerrolle gewährt.
+
+Sollte Ihr aktueller Benutzer einer anderen Benutzerrolle zugeordnet sein, stellen Sie sicher, dass Sie dieser Rolle die entsprechenden Berechtigungen gewähren.
+
+Navigieren Sie nach `Verwaltung -> Benutzerverwaltung -> Verwalte Benutzerrollen` und wählen Sie Ihre Benutzerrolle.
+
+![checkmk userrole permissions grant](/images/checkmk-user-roles-permissions.png)
+
+Neue Berechtigungen werden nicht automatisch gewährt (ausgenommen Benutzer der `Administrator` Benutzerrolle). Dies hat den Hintergrund dass nicht jeder Benutzer Module nutzen kann, die beispielsweise nur zu Test oder Evaluierungszwecken installiert wurden. 
+
+### Checkmk Agent auf dem Zielsystem installieren
+
+Wie bereits angesprochen, nutzen wir den Checkmk Agent um das Remote System zu überwachen. 
+
+Zuallererst müssen Sie den Checkmk Agenten von Ihrem openITCOCKPIT Server auf das Zielsystem kopieren:
+
+`scp /opt/openitc/check_mk/share/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
+
+!!! tip "Alle Checkmk Agenten für die verschiedenen Betriebssystem finden Sie hier"
+    `/opt/openitc/check_mk/share/check_mk/agents/`
+
+**Verbinden Sie sich nun per SSH mit dem Remote Host**
+
+Der Checkmk Agent wird nicht als daemon ausgeführt, sondern durch `xinetd` ausgeführt.
+
+```
+apt-get install xinetd
+chmod +x /usr/local/bin/check_mk_agent
+```
+
+!!! danger "Sicherheitshinweis"
+    Standardmäßig verwendet Checkmk eine unverschlüsselte klartext Kommunikation!
+
+Als nächstes müssen Sie die folgende Konfiguration nach `/etc/xinetd.d/check_mk` kopieren:
+
+```
+service check_mk
+{
+    type           = UNLISTED
+    port           = 6556
+    socket_type    = stream
+    protocol       = tcp
+    wait           = no
+    user           = root
+    server         = /usr/local/bin/check_mk_agent
+
+    # configure the IP address(es) of your openITCOCKPIT server here:
+    #only_from      = 127.0.0.1 10.0.20.1 10.0.20.2
+
+    # Don't be too verbose. Don't log every check. This might be
+    # commented out for debugging. If this option is commented out
+    # the default options will be used for this service.
+    log_on_success =
+
+    disable        = no
+}
+```
+
+Um die neue Konfiguration zu aktivieren müssen Sie `xinetd` neu starten:
+
+```
+systemctl restart xinetd.service
+```
+
+Das ist alles was Sie auf dem Remote Host erledigen müssen. 
+
+### Ziel Host scannen um Checks automatisch erstellen zu können
+
+im Kontextmenü der Hosts wählen Sie die Option `Checkmk Erkennung`
+
+![checkmk discovery](/images/checkmk-discovery.png)
+
+Nutzen Sie die vorselektierte Option `Führe Remoteerkennung aus` und klicken Sie anschließend auf `Erkennung ausführen`.
+
+![checkmk remote discovery](/images/checkmk-remote-discovery.png)
+
+Sobald der Discovery Prozess abgeschlossen ist, können Sie alle Services die Sie überwachen möchten auswählen. Klicken Sie 'Speichern' um fortzufahren.
+
+![select checkmk services](/images/select-check-mk-services.png)
+
+Um die neue Konfiguration zu aktivieren, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
+
+Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
+
+![checkmk services openitcockpit](/images/checkmk-services-openitcockpit.png)
