@@ -335,7 +335,7 @@ Zuallererst müssen Sie den Checkmk Agenten von Ihrem openITCOCKPIT Server auf d
 
 `scp /opt/openitc/check_mk/share/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
 
-!!! tip "Alle Checkmk Agenten für die verschiedenen Betriebssystem finden Sie hier"
+!!! tip "Alle Checkmk Agenten für die verschiedenen Betriebssysteme finden Sie hier"
     `/opt/openitc/check_mk/share/check_mk/agents/`
 
 **Verbinden Sie sich nun per SSH mit dem Remote Host**
@@ -402,3 +402,115 @@ Um die neue Konfiguration zu aktivieren, müssen Sie eine [Aktualisierung der Mo
 Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
 
 ![checkmk services openitcockpit](/images/checkmk-services-openitcockpit.png)
+
+
+## Überwachung durch SNMP mit Checkmk
+
+Viele Geräte wie zum Beispiel Router, Switche, Sensoren oder Betriebssysteme können via SNMP (Simple Network Management Protocol). Bevor Sie mit diesem Guide fortfahren, stellen Sie sicher dass Sie den Teil [Monitoring mit Checkmk](#monitoring-mit-checkmk) gelesen haben. 
+
+### Versuchen Sie SNMP Daten des Zielgerätes zu bekommen
+
+Bevor Sie starten, überprüfen Sie bitte ob Ihr Monitoring Server in der lage ist, SNMP Daten des Zielgerätes abzufragen. Dazu können Sie das Programm `snmpwalk` nutzen. 
+
+In diesem Beispiel Fragen wie ein Ubuntu Linux, auf dem `snmpd` in der Version `2c` und der community `public` läuft ab.
+
+```
+snmpwalk -v2c -c public 172.16.166.103
+```
+
+Sie sollten eine Ähnliche ausgabe wie diese sehen:
+
+![snmp walk example](/images/snmpwalk_example.png)
+
+Sollte Ihr System nicht in der Lage sein sich mit dem Zielsystem zu verbinden, überprüfen Sie ihre Firewalleinstellungen oder ob Sie eine falsche SNMP Version nutzen.
+
+### Überwachen eines Linux Hosts durch SNMP via Checkmk
+
+Im Kontextmenü eines Host swählen Sie die Option `Checkmk Erkennung`
+
+![checkmk discovery snmp](/images/checkmk-discovery-snmp.png)
+
+Wählen Sie die `Führe SNMP-Erkennung aus` Option aus und klicken Sie anschließend auf `Erkennung ausführen`.
+
+![checkmk snmp discovery](/images/checkmk-snmp-discovery.png)
+
+Das System wir Sie nach den Benötigten SNMP Parametern befragen. Die SNMP Konfiguration wird pro Host gepeichert, Sie müssen diese daten also nicht nochmals eingeben. Klicken Sie auf `Speichern und SNMP Erkennung ausführen` um fortzufahren
+
+![checkmk snmp config](/images/checkmk-snmp-config.png)
+
+Sobald der Erkennungsprozess vollendet ist, können Sie alle gewünschten Services, welche Sie überwachen möchten, auswählen. Klicken Sie auf `Weiter` zum fortzufahren.
+
+![checkmk snmp result](/images/checkmk-snmp-result.png)
+
+Um die neue Konfiguration zu aktivieren, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
+
+Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
+
+![checkmk snmp servicess](/images/checkmk-snmp-services.png)
+
+## Fehlende Servicevorlagen für Checkmk erstellen.
+
+Abhängig von dem Gerät auf dem Sie ein Discovery durchführen möchten, ist es möglich, dass die `Optionen` auswahl box leer ist und der Informationstext `Bevor Sie die folgenden Dienste überwachen können, muss eine entsprechende Servicevorlage erstellt werden.` erscheint, gefolgt von einer Tabelle.
+
+In diesem Fall müssen Sie die fehlenden Servicevorlagen erstellen.
+
+![check mk snmp missing servicetemplates](/images/check-mk-snmp-missing-service-template.png)
+
+### Fehlende Servicevorlagen erstellen
+
+Öffnen Sie ein neues Browserfenster und navigieren Sie nach `Monitoring -> Vorlagen -> Servicevorlagen` und klicken Sie auf `+ Neu`.
+
+#### Erstelle eine Service vorlage für `hp_procurve_cpu`
+
+Es wird empfohlen den selben namen für eine Servicevorlage und nehmen wie es Checkmk nutzt (MK Check). In diesem Fall ist der MK Check `hp_procurve_cpu` also nutzen wir `CHECK_MK_HP_PROCURVE_CPU` als Servicevorlagen name. Setzten Sie `Checkmk templates` als Vorlagentyp. Deaktivieren Sie `Aktiviere aktive Prüfungen`, nutzen Sie `check_none` als Prüfungskommando und setzen Sie die `Parameter` aus der Tabelle als `ARG1` ein.
+
+Bestätigen Sie mit `Erstelle Servicevorlage`
+
+![create missing checkmk snmp servicetemplate](/images/create_missing_check_mk_snmp_service_template.png)
+
+Servicevorlagen Parameter Übersicht:
+
+| Parameter      | Wert                          |
+| ----------- | ------------------------------------ |
+| Template name | 	CHECK_MK_HP_PROCURVE_CPU  |
+| Service name | CHECK_MK_HP_PROCURVE_CPU |
+| Template type | Checkmk templates |
+| Enable active checks | No |
+| Check command | check_none |
+| ARG1 | `(80.0, 90.0)` |
+| Check period | 24x7 |
+| Max. number of check attempts | 1 |
+| Check interval | 60 |
+| Retry interval | 60 |
+
+Wiederholen Sie die Schritte für alle fehlenden Servicevorlagen.
+
+
+#### Servicevorlagen mit MK Checks verlinken
+
+Navigieren Sie nach `Check MK -> Mk Checks` und klicken Sie auf die Schaltfläche `+ Neu`. 
+
+Setzen Sie `hp_procurve_cpu` als Check name und wählen Sie die entsprechenden Servicevorlage `CHECK_MK_HP_PROCURVE_CPU` aus.
+
+![link servicetemplate to mk check](/images/link_check_mk_check_to_service_template.png)
+
+
+Wiederholen Sie dies für alle Servicevorlagen.
+
+![check_mk_mkchecks_to_servicetemplates](/images/check_mk_mkchecks_to_servicetemplates.jpg)
+
+### Services erstellen
+
+Nun sind Sie in der Lage die Services zu erstellen, die Sie überwachen möchten. Starten die das SNMP Discovery erneut und wählen Sie alle gewünschten Services aus der Liste aus.
+
+![checkmk create new snmp services](/images/checkmk-create-new-snmp-services.png)
+
+Um die neue Konfiguration zu aktivieren, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
+
+![checkmk snmp hp switch](/images/checkmk-snmp-hp-switch.png)
+
+### Überwachungsmethoden vermischen
+
+Sie können neben SNMP gleichzeitig den Checkmk Agenten nutzen. Dazu müssen Sie den Host neu scannen und wählen anschließend `Führen Remoteerkennung aus` aus um zusätzlich den Checkmk Agenten abzufragen.
+
+![checmk remote discovery](/images/checkmk-remote-discovery.png)
