@@ -311,7 +311,7 @@ Folgen Sie den Instruktionen
 
 Die Installation ist fertiggestellt, sobald Sie die folgende Nachricht sehen: `Installation done. Please reload your openITCOCKPIT web interface.`
 
-Navigieren Sie in Ihrem Webbrowser zurück und Drücken `Ctrl + R` oder `Cmd + R` um die Seite neu zu laden.
+Navigieren Sie in Ihrem Webbrowser zurück und Drücken `Strg + R` oder `Cmd + R` um die Seite neu zu laden.
 
 Das CheckmkModule sollte nun als installiert angezeigt werden.
 
@@ -607,3 +607,197 @@ Als erstes müssen Sie einen Host auswählen, auf dem Sie den Service erstellen 
 Ändern Sie den Servicenamen zu `CPU Load`, setzten Sie `check_load` als Kommando name ($ARG1$) und klicken Sie anschließend auf `Erstelle Service`.
 
 ![create nrpe service](/images/create-nrpe-service.png)
+
+wiederholen Sie diesen Schritt für alle NRPE Kommandos. Die Kommando namen sind in der `nrpe.cfg` auf dem Zielhost definiert. In diesem Fall haben wir die folgenden Standard Kommandos: 
+`check_users`, `check_load`, `check_vda1`, `check_zombie_procs` und `check_total_procs`.
+
+Sind alle Services erstellt, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
+
+Die neuen Services werden nun vom System Überwacht.
+
+![services monitored by nrpe](/images/services-monitored-by-nrpe.png)
+
+## Check by SSH
+
+SSH bietet eine einfache und sichere möglichkeit, Monitoring Plugins auf einem remote Host auszuführen.
+
+### SSH-Key auf dem openITCOCKPIT Server erstellen
+
+Wenn Sie bisher noch keinen SSH-Key für den Benutzer `nagios` haben, müssen Sie zuerst einen erstellen.
+
+```
+su nagios
+mkdir /var/lib/nagios/.ssh
+ssh-keygen
+```
+
+Danach sollten Sie den SSH Host Key im Zielsystem Importieren: `ssh <ziel-host>` und mit `yes` bestätigen.
+
+### SSH-Key auf dem Zielsystem Importieren
+
+Für dieses Beispiel benötigen Sie die Pakete `nagios-plugins` oder `monitoring-plugins` auf dem Ziel Host.
+
+```
+apt-get install nagios-plugins
+```
+
+Im nächsten Schritt erstellen wir einen neuen benutzer `monitoring` der für die Ausführung von Checks via SSH genutzt wird. 
+
+```
+addgroup --system monitoring
+adduser --system --shell /bin/bash monitoring
+adduser monitoring monitoring
+
+mkdir -p /home/monitoring/.ssh/
+chown monitoring:monitoring /home/monitoring -R
+
+touch /home/monitoring/.ssh/authorized_keys
+chmod 644 /home/monitoring/.ssh/authorized_keys
+```
+
+Jetzt kopieren Sie ihren **Public key** in die Datei `/home/monitoring/.ssh/authorized_keys`.
+
+
+### Checks erstellen
+
+Navigieren Sie nach `Monitoring -> Objekte -> Kommandos` und stellen Sie sicher dass das `check_by_ssh` Kommando existiert. Dies ist ein Standardkommando von openITCOCKPIT. Falls das Kommando nicht verfügbar ist, klicken Sie auf die Schaltfläche `+ Neu` um es zu erstellen.
+
+| Kommando definition      |                         |
+| ----------- | ------------------------------------ |
+| Command type | 	Service check command  |
+| Command name | `check_by_ssh` |
+| Command line | `$USER1$/check_by_ssh -H $HOSTADDRESS$ -l "$ARG1$" -C "$ARG2$"` |
+| Command arguemnt ($ARG1) | `Username` |
+| Command arguemnt ($ARG2) | `Command` |
+
+
+![check by ssh command](/images/check_by_ssh_command.png)
+
+Das `check_by_ssh` Plugin kann für die Ausführung von jeglichen Typen von Kommandos auf dem remote Host genutzt werden. Zum Ausführen von Check Plugins ist es nötig, dass der absolute Pfad zum Plugin gesetzt wird. Durch ein erstellen eines Makros kann man sich hier viel Arbeit sparen, indem dort der Plugin Pfad gespeichert wird.
+
+Navigieren Sie nach `Monitoring -> Objekte -> Benutzerdefinierte Makros` und klicken Sie auf die Schaltfläche `+ Neu`.
+
+| Makro definition      |                         |
+| ----------- | ------------------------------------ |
+| Makro name | `$USER2$` (or any other) |
+| Value | `/usr/lib/nagios/plugins` |
+| Description (optional) | `Path of monitoring-plugins on remote host used by check_by_ssh` |
+
+![user defined macro](/images/user-defined-macro.png)
+
+Navigieren Sie nach `Monitoring -> Services` und klicken Sie auf die Schaltfläche `+ Neu`.
+
+Wählen Sie ihren Host und die vordefinierte Servicevorlage `CHECK_BY_SSH`.
+
+| Servicevorlagen definition      |                         |
+| ----------- | ------------------------------------ |
+| Service name | `CHECK_BY_SSH` |
+| Service name | `CPU load` |
+| Check period | `24x7` |
+| Check command | `check_by_ssh` |
+| Username ($ARG1) | `monitoring` |
+| Command ($ARG1) | `$USER2$/check_load -w 15,10,5 -c 30,25,20` |
+
+Um fortzufahren klicken Sie auf `Erstelle Service`.
+
+`$USER2$` wird automatisch ersetzt mit dem Wert, der im vorhergehenden Makro gespeichert wurde.
+
+![cpu load by ssh](/images/cpu-load-by-ssh.png)
+
+Wiederholen Sie diesen Schritt für alle Services die Sie benötigen.
+
+Damit die neuen Änderungen wirksam werden, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
+
+Die neuen Services werden nun vom System Überwacht.
+
+![services monitored via SSH](/images/services-monitored-via-ssh.png)
+
+## Browser Push Benachrichtigungen einrichten
+
+Die meissten modernen Webbrowser wie Mozilla Firefox, Google Chrome oder Microsoft Edge bieten eine Benachrichtigungs API an. 
+
+openITCOCKPIT kann diese API nutzen um Host oder Service alarme zu Ihrem Browser zu senden.
+
+Beispiele:
+
+![browser notifications](/images/example_browser_notifications.png)
+
+### Voraussetzungen
+- Moderner Webbrowser
+- Manuelles setzen der Berechtigungen im Browser
+- openITCOCKPIT muss in einem Browser Tab geöffnet sein (Browser fenster kann im Hintergrund oder der Task Bar laufen)
+- ein Kontakt muss einem Benutzer zugewiesen sein
+- `Push-Benachrichtigungen an den Browser` muss in der Kontakt konfiguration aktiviert sein.
+- `push_notification.service` service muss auf dem openITCOCKPIT Server laufen. 
+
+### Push benachrichtigungen einrichten
+
+#### Browser Berechtigungen
+Bevor openITCOCKPIT Push Benachrichtungen an Ihren Webbrowser senden kann müssen Sie manuell die Berechtigung dafür erteilen. Dies ist ein Sicherheits feature aller Browser, um zu verhindern, dass wahllos irgendwelche Webseiten Spam Nachrichten senden können. Sie können diese Benachrichtigungen erlauben oder verwehren, wan immer Sie wollen.
+
+In diesem Beispiel zeigen wir den Prozess anhand des Mozilla Firefox.
+
+##### Berechtigung erteilen
+
+Klicken Sie auf das Benachrichtigungssymbol in der Browser Adressleiste und klicken Sie anschließend auf "Benachrichtigungen erlauben"
+
+![browser ask for permissions](/images/browser_ask_for_notification_permissions.png)
+
+!!! info
+    Wenn Sie die Berechtigung zu einem späteren Zeitpunkt wieder entfernen, deaktivieren Sie auch `Push-Benachrichtigungen an den Browser` in der Kontakt Konfiguration
+
+### Editieren oder neu erstellen eines Kontaktes
+
+Um Push Benachrichtigungen erhalten zu können, müssen Sie Ihr Benutzerkonto mit einem Kontakt der Monitoring Engine verknüpfen. Standardmäßig ist kein Kontakt zu keinem Benutzerkonto, dass in der openITCOCKPIt Oberfläche existiert, verlinkt.
+
+Navigieren Sie nach `Monitoring -> Objekte -> Kontakte` und wählen Sie den Kontakt, für den Sie die Push Benachrichtigungen aktivieren wollen, aus.
+
+Weisen Sie ihren Benutzer dem Kontakt zu und aktivieren die Option `Push-Benachrichtigungen an den Browser`.
+
+!!! info
+    Das Kommando `host-notify-by-browser-notification` und/oder `service-notify-by-browser-notification` wird automatisch ausgewählt.
+    Sollten die Kommandos fehlen, lesen Sie den [Troubleshooting](#troubleshooting) teil dieses Artikels
+
+Sie können auch verschiedene Benachrichtigungskommandos kombinieren wie zum Beispiel notify by email und browser notifications etc.
+
+![contact browser push notfications](/images/contact-browser-push-notifications.png)
+
+Nachdem Sie den Kontakt aktualisiert haben, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
+
+### Benachrichtiguns beispiele
+
+Jede Benachrichtigung beinhaltet ein Icon für einen Host oder Service. Der jeweilige status wird von der farbe des Icons dargestellt. Klickt man auf eine Benachrichtigung, so öffnet sich ein neuer Browser Tab und man wird direkt zu dem betreffenden Host oder Service weitergeleitet. Die Benachtichtigung verschwindet automatisch nach ein paar Sekunden.
+
+![browser notifications](/images/example_browser_notifications.png)
+
+*Hinweis: Das Benachrichtigungsdesign ist abhängig vom Betriebssystem des Benutzers. Benachrichtigungen sehen möglicherweise auf anderen Betriebssystemen anders aus. Es gibt keine möglichkeit den Stil zu verändern*
+
+### Troubleshooting
+
+- Laden Sie die Seite neu: `Strg + R` oder `Cmd + R`
+
+- Verbindungsprobleme. Wenn Ihr Browser die Verbindung zum openITCOCKPIT Server verliert, kann es möglich sein, dass Sie keine Push Benachrichtigungen mehr erhalten. Laden Sie die Seite neu um das Problem zu beheben.
+
+- `push_notification` Dienst läuft nicht. Dieser Hintergrundprozess muss laufen. Zudem kann auch die Web Server oder Reverse Proxy Konfiguration Probleme verursachen. Sie können die Entwicklerwerkzeuge Ihres Web Browsers nutzen um eventuelle Verbindungsfehler zu entdecken: Fehlermeldung: `push_notification` not running
+
+![push connection error](/images/push_connection_error.png)
+
+Erfolgreich verbunden:
+
+![push connection successful](/images/push_connection_successfully.png)
+
+Läuft der `push_notification` Dienst nicht, wird auf der Fehlerbeseitigungs Seite und in der Systemzustands anzeige eine Warnung erscheinen.
+
+![debug push notificcations](/images/debug-processes-push-notifications.jpg)
+
+- Manche Applikationen unterdrücken Browser Benachrichtigungen. Beispielsweise unter Microsoft Windows 7 in Kombination mit dem `Snipping Tool`. Ein Neu Laden der openITCOCKPIT Webseite behebt das Problem
+
+- macOS läuft möglicherweise im *Nicht Stören* Modus. Dies kann auch Automatisch geschehen beispielsweise beim Verbinden eines Beamers oder TV Bildschirm.
+
+![macos dnd](/images/macOS_dnd.png)
+
+- Zu viele Benachrichtigungen können auch ein unterdrücken der Benachrichtigungen auslösen. Versuchen Sie die anzahl der Push Benachrichtigungen zu reduzieren.
+
+- Überprüfen Sie Ihren Web Browser auf Updates.
+
+- Funktionieren die Benachrichtigungen im Internet Explorer? Nein.
