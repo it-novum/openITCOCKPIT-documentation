@@ -4,7 +4,7 @@ Sofortige Berichte in openITCOCKPIT sind eine Variante der Berichte, die als HTM
 
 ### Sofortigen Bericht erstellen
 
-Um einen Sofortigen bericht zu erstellen klicken Sie zunächst in der Sofortige Berichte Übersicht auf die Schaltfläche “Neu”.
+Um einen Sofortigen Bericht zu erstellen klicken Sie zunächst in der Sofortige Berichte Übersicht auf die Schaltfläche “Neu”.
 
 Anschließend wählen Sie im Formular einen Container aus, vergeben einen Namen und wählen den Objekttyp aus, der ausgewertet werden soll. 
 
