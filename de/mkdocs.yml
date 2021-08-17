@@ -23,6 +23,7 @@ nav:
   - 'Reporting': 'reporting.md'
   - 'Konfiguration': 
     - 'Container': 'configuration/container.md'
+    - 'Kommandos': 'configuration/commands.md'
     - 'Hosts und Services': 'configuration/hosts-services.md'
     - 'Benutzerverwaltung': 'configuration/usermanagement.md'
     - 'Makros': 'configuration/macros.md'

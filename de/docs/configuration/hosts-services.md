@@ -12,6 +12,40 @@ Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sei
 
 Nun gibt man einen Vorlagen typen an.
 
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+|Basiskonfiguration|
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
+| Vorlagenname | :fontawesome-solid-times: | Name der Vorlage |
+| Vorlagentyp | :fontawesome-solid-times: | Bestimmt den [Typ](#vorlagentypen) der Vorlage |
+| Beschreibung |  | Beschreibung der Hostvorlage. Wird als Beschreibung des Hosts weitervererbt |
+| Hostgruppen |  | Zuweisung ein oder mehrerer [Hostgruppen](#hostgruppen) |
+| Stichworte |  | Tags |
+| Priorität |  | Priorität zum filtern in Listen |
+| Prüfungskonfiguration |
+| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Aktiviere aktive Prüfungen |  | Bestimmt ob ein Host Aktiv oder Passiv geprüft werden soll |
+| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Hosts ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen |
+| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht |
+| Benachrichtigungskonfiguration |
+| Benachrichtigungszeitraum | :fontawesome-solid-times: | Besteimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
+| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
+| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
+| Optionen zu Hostbenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
+| Diverse Konfiguration |
+| Host URL |  | Host URL |
+| Notizen |  | Notizen zur Hostvorlage |
+| Flattererkennung aktiviert |  | ([Flap detection](#flap-detection)) Erkennung ob sich ein Host status in kurzer Zeit oft ändert |
+| Host-Makro-Konfiguration | | |
+| Prometheus-Exporters |
+| Exporters | | [Prometheus Exporter](#prometheus-exporters) |
+
+
+
+
 #### Vorlagentypen
 
 Es gibt in openITCOCKPIT mehrere Hostvorlagen typen. Diese unterscheiden eine Vorlage ob sie entweder für einen Generischen Host oder zum Beispiel für einen Ereigniskorrelations Host sind. 
@@ -22,23 +56,28 @@ Ein Prüfzeitraum ist ebenfalls eine Pflichtangabe ebenso wie ein Prüfungskomma
 
 anschließend werden verschiedene Prüfungsintervalle gesetzt.
 
+
 #### Intervalle
 
 Damit Benachrichtigung zu einem Host status gesendet werden können, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 1 Stunden und 2 Minuten eine Benachrichtigung gesendet wird. 
 
 Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden sowie mindestens ein Kontakt oder mindestens eine Kontaktgruppe.
 
+#### Flap detection
+
+Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
+
+
 #### Prometheus Exporters
 
-– Folgt –
-
+Zur [Überwachung des Hosts mit Prometheus](../monitoring/prometheus/#uberwachen-eines-hosts-mit-prometheus-in-openitcockpit), wählen Sie hier Ihren Prometheus Exporter aus.
 
 
 ## Servicevorlagen
 
 Servicevorlagen sind ein essenzieller Bestandteil in openITCOCKPIT. Sie bilden die Vorlage für Services und sind eine der Grundvoraussetzung zum erstellen dafür. 
 
-Ein Service leitet sich immer von einer Servicevorlage ab, kann aber die Werte, die in der Vorlage defniert wurden, überschreiben. 
+Ein Service leitet sich immer von einer Servicevorlage ab, kann aber die Werte, die in der Vorlage definiert wurden, überschreiben. 
 
 ### Servicevorlage erstellen
 
@@ -80,7 +119,7 @@ anschließend werden verschiedene Prüfungsintervalle gesetzt.
 
 #### Intervalle
 
-Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird. 
+Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird. 
 
 
 Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden. Im gegensatz zu den Hostvorlagen muss hier kein Kontakt oder Kontaktgruppe hinterlegt werden.
@@ -121,7 +160,7 @@ Sollte ein Service dieser Servicevorlagengruppe bereits auf einem der Hosts exis
 
 ### Host erstellen
 
-Um einen Host zu erstellen wählen Sie zunächst einen Contaner aus, in dem der Host erstellt werden soll. Bitte beachten Sie dass ein nachträgliches ändern des Containers für einen Host **_nicht möglich_** ist!
+Um einen Host zu erstellen wählen Sie zunächst einen Container aus, in dem der Host erstellt werden soll. Bitte beachten Sie dass ein nachträgliches ändern des Containers für einen Host **_nicht möglich_** ist!
 
 Danach wählen Sie eine Hostvorlage aus, von dem der neue Host abgeleitet werden soll. 
 
@@ -129,17 +168,62 @@ Sie können anschließend einen Host Namen und eine Host Adresse vergeben, oder 
 
 Beim Abspeichern haben Sie die möglichkeit direkt neue Services zum Host anzulegen. Diese können entweder über den openITCOCKPIT Agent, Checkmk oder den Klassischen weg des Manuellen erstellens erzeugt werden.
 
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+|Basiskonfiguration|
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
+| Geteilte Container |  | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
+| Hostvorlage | :fontawesome-solid-times: | [Hostvorlage](#hostvorlagen) von der der Host abgeleitet werden soll |
+| Host Name | :fontawesome-solid-times: | Name des Hosts |
+| DNS-Suche |  | Falls aktiviert, wird versucht den Host Namen oder Host Adresse aufzulösen |
+| Host Adresse | :fontawesome-solid-times: | IP Adresse oder FQDN des Hosts |
+| Beschreibung |  | Beschreibung der Hostvorlage. Wird als Beschreibung des Hosts weitervererbt |
+| Hostgruppen |  | Zuweisung ein oder mehrerer [Hostgruppen](#hostgruppen) |
+| Eltern-Host |  | Parent Host Beziehung |
+| Stichworte |  | Tags |
+| Priorität |  | Priorität zum filtern in Listen |
+| Satellit |  | Verfügbar wenn DistributeModule installiert ist. Auswahl des Satelliten |
+| Prüfungskonfiguration |
+| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Aktiviere aktive Prüfungen |  | Bestimmt ob ein Host Aktiv oder Passiv geprüft werden soll |
+| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Hosts ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen. Siehe [Intervalle](#intervalle) |
+| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde. Siehe [Intervalle](#intervalle) |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht. Siehe [Intervalle](#intervalle) |
+| Benachrichtigungskonfiguration |
+| Benachrichtigungszeitraum | :fontawesome-solid-times: | Besteimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
+| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
+| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
+| Optionen zu Hostbenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
+| Diverse Konfiguration |
+| Host URL |  | Host URL |
+| Notizen |  | Notizen zur Hostvorlage |
+| Flattererkennung aktiviert |  | ([Flap detection](#flap-detection)) Erkennung ob sich ein Host status in kurzer Zeit oft ändert |
+| Host-Makro-Konfiguration | | |
+| Prometheus-Exporters |
+| Exporters | | [Prometheus Exporter](#prometheus-exporters) |
+
+
 #### Geteilte Container
 
 Über die Geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben. Diese Option steht zudem auch in der Hostübersicht unter der Host bearbeitungsoption “Teilen” zur verfügung. 
 
-#### Benachrichtigungen
+#### Intervalle
 
-Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird. 
+Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird. 
+
+
+#### Flap detection
+
+Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
+
 
 #### Prometheus Exporters
 
-– Folgt – 
+Zur [Überwachung des Hosts mit Prometheus](../monitoring/prometheus/#uberwachen-eines-hosts-mit-prometheus-in-openitcockpit), wählen Sie hier Ihren Prometheus Exporter aus.
+
 
 
 ## Services

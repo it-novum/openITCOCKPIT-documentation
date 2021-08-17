@@ -24,6 +24,8 @@ Eine typische Alert-Regel wäre zum Beispiel
 
 Wenn die Metrik "belegter Arbeitsspeicher in %" für mehr als 15 Minuten über 80% ist, verschicke einen "Warning" Alert.
 
+#### Exporter
+
 Prometheus selber führt keine Plugins oder Checks aus. Auf dem zu überwachenden System müssen sogenannte [Exporter](https://prometheus.io/docs/instrumenting/exporters/) installiert werden.
 
 Die Exporter sind kleine Programme, welche einen Webserver bereitstellen über den die Metriken von Prometheus abgefragt werden können. Ähnlich wie bei Nagios gibt es [unzählige von der Community entwickelte Exporter](https://github.com/prometheus/prometheus/wiki/Default-port-allocations) um Linux, Windows, MySQL, Oracle DB, AWS, UniFi und alles nur erdenkliche überwachen zu können.
