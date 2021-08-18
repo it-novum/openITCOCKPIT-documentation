@@ -87,9 +87,43 @@ Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sei
 
 Nun gibt man einen Vorlagen typen an.
 
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+|Basiskonfiguration|
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
+| Vorlagenname | :fontawesome-solid-times: | Name der Vorlage |
+| Vorlagentyp | :fontawesome-solid-times: | Bestimmt den [Typ](#vorlagentypen) der Vorlage |
+| Servicename | :fontawesome-solid-times: | Standardname des Services wenn aus der Vorlage ein Service erstellt wird |
+| Beschreibung |  | Beschreibung der Servicevorlage. Wird als Beschreibung des Services weitervererbt |
+| Servicegruppen |  | Zuweisung ein oder mehrerer [Servicegruppen](#servicegruppen) |
+| Stichworte |  | Tags |
+| Priorität |  | Priorität zum filtern in Listen |
+| Prüfungskonfiguration |
+| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Aktiviere aktive Prüfungen |  | Bestimmt ob der Service Aktiv oder Passiv geprüft werden soll |
+| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Services ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen |
+| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Service in einen Hard State über geht |
+| Benachrichtigungskonfiguration |
+| Benachrichtigungszeitraum | :fontawesome-solid-times: | Besteimmt den Zeitraum in dem für einen Service Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Service versendet werden |
+| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Service erhalten |
+| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Service erhalten |
+| Optionen zu Servicebenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
+| Diverse Konfiguration |
+| Service URL |  | Service URL |
+| Notizen |  | Notizen zur Servicevorlage |
+| Flattererkennung aktiviert |  | ([Flap detection](#flap-detection)) Erkennung ob sich ein Service status in kurzer Zeit oft ändert |
+| Status flüchtig |  | Erzwingt Benachrichtigungen für jedes Nicht-OK Prüfergebnis |
+| Event Handler Konfiguration |
+| Ereignishandler | | Eventhandler Konfiguration des Service |
+| Service-Makro-Konfiguration | | |
+
+
 #### Vorlagentypen
 
-Es gibt in openITCOCKPIT mehrere Servicevorlagen typen. Diese unterscheiden eine Vorlage ob sie entweder für einen Generischen Service oder zum Beispiel für einen Ereigniskorrelations Service sind. 
+Es gibt in openITCOCKPIT mehrere Servicevorlagen typen. Diese unterscheiden eine Vorlage ob sie entweder für einen Generischen Service, Ereigniskorrelationen, Checkmk, Prometheus oder den openITCOCKPIT Agenten sind. 
 
 Services, welche über ein Modul oder den Agent erzeugt werden sind immer von dem entsprechendem Vorlagentyp.
 
@@ -130,6 +164,15 @@ Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum ange
 Servicevorlagengruppen sind Sammlungen von Servicevorlagen, die entweder selbst erstellt werden können oder aber über installierbare Module verfügbar sind. Über Module verfügbare Servicevorlagengruppen sind zum jeweiligen Themengebiet passend zusammengefasste Servicevorlagen. 
 
 Servicevorlagengruppen können zu einem Host oder einer Hostgruppe zugewiesen werden. Das bedeutet, dass für alle Servicevorlagen einer Servicevorlagengruppe die entsprechenden Services auf dem zugewiesenen Host oder Hostgruppe erstellt wird.
+
+### Servicevoelagengruppe erstellen
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Servicevorlagengruppe erstellt werden soll  |
+| Name | :fontawesome-solid-times: | Name der Servicevorlagengruppe |
+| Beschreibung |  | Beschreibung der Servicevorlagengruppe |
+| Servicevorlage | :fontawesome-solid-times: | Die [Servicevorlagen](#servicevorlagen) die zur Servicevorlagengruppe hinzugefügt werden sollen |
 
 ### Servicevorlagengruppen zuweisen
 
@@ -232,9 +275,52 @@ Zur [Überwachung des Hosts mit Prometheus](../monitoring/prometheus/#uberwachen
 
 Um einen Service zu erstellen klicken Sie in der Serviceübersicht zunächst auf die schaltfläche “Neu”. Im sich öffnenden Formular wählen Sie als erstes den Ziel Host aus, auf dem der Service erstellt werden soll. Anschließend wählen Sie eine Servicevorlage aus. Wenn nötig können Sie dem Service, abweichend vom Servicetemplate, einen Namen sowie eine Beschreibung geben. 
 
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+|Basiskonfiguration|
+| Host | :fontawesome-solid-times: | Der [Host](#hosts) auf dem der Service angelegt werden soll |
+| Servicevorlage | :fontawesome-solid-times: | Die [Servicevorlage](#servicevorlagen) von dem der Service abgeleitet werden soll |
+| Servicename | :fontawesome-solid-times: | Name des anzulegenden Service |
+| Beschreibung |  | Beschreibung des Services |
+| Servicegruppen |  | Zuweisung ein oder mehrerer [Servicegruppen](#servicegruppen) |
+| Stichworte |  | Tags |
+| Priorität |  | Priorität zum filtern in Listen |
+| Prüfungskonfiguration |
+| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Aktiviere aktive Prüfungen |  | Bestimmt ob der Service Aktiv oder Passiv geprüft werden soll |
+| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Services ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen. Siehe [Intervalle](#intervalle) |
+| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde. Siehe [Intervalle](#intervalle) |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Service in einen Hard State über geht. Siehe [Intervalle](#intervalle) |
+| Benachrichtigungskonfiguration |
+| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den [Zeitraum](../timeperiods/) in dem für einen Service Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Service versendet werden |
+| Vererbung deaktivieren |  | Deaktiviert die vererbung von Kontakten und Kontaktgruppen. Diese können dann für diesen Service einzeln gesetzt werden |
+| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Service erhalten |
+| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Service erhalten |
+| Optionen zu Servicebenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
+| Diverse Konfiguration |
+| Service URL |  | Service URL |
+| Notizen |  | Notizen zur Servicevorlage |
+| Flattererkennung aktiviert |  | ([Flap detection](#flap-detection)) Erkennung ob sich ein Service status in kurzer Zeit oft ändert |
+| Status flüchtig |  | Erzwingt Benachrichtigungen für jedes Nicht-OK Prüfergebnis |
+| Event Handler Konfiguration |
+| Ereignishandler | | Eventhandler Konfiguration des Service |
+| Service-Makro-Konfiguration | | |
+
+#### Intervalle
+
+Damit eine Benachrichtigung zu einem Service status gesendet werden kann, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der `CHECK_PING` vorlage ein Prüfungsintervall von 5 Minuten, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 7 Minuten eine Benachrichtigung gesendet wird. 
+
 #### Benachrichtigungen
 
 Die Benachrichtigungen für einen Service verhalten Sich genau wie die Benachrichtigungen für einen Host
+
+
+#### Flap detection
+
+Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
 
 
 ## Host und Service erstellung über Import Modul
@@ -312,6 +398,15 @@ Die zweite möglichkeit besteht darin, Hosts über ihr Hostvorlage hinzuzufügen
 
 Danach Speichert man und die Hostgruppe ist fertig erstellt.
 
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Hostgruppe erstellt werden soll  |
+| Name | :fontawesome-solid-times: | Name der Hostgruppe |
+| Beschreibung |  | Beschreibung der Hostgruppe |
+| Hostgruppen URL |  | URL der Hostgruppe |
+| Hosts |  | [Hosts](#hosts) die zur Hostgruppe hinzugefügt werden sollen |
+| Hostvorlagen | :fontawesome-solid-times: | Die [Hostvorlagen](#hostvorlagen) die zur Hostgruppe hinzugefügt werden sollen |
+
 ### Erweiterte Ansicht
 
 Um zur erweiterten Ansicht einer Hostgruppe zu kommen, klicken Sie in der Hostübersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die “Erweiterte Ansicht”.
@@ -338,6 +433,15 @@ Die erste ist das gezielte hinzufügen von einzelnen Services. Dazu wählen Sie 
 Die zweite Möglichkeit besteht darin, Services über ihr Servicevorlage hinzuzufügen. Dabei werden alle Services die von den gewählten Servicevorlagen abgeleitet sind automatisch in die Servicegruppe hinzugefügt. 
 
 Danach Speichert man und die Servicegruppe ist fertig erstellt.
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Servicegruppe erstellt werden soll  |
+| Name | :fontawesome-solid-times: | Name der Servicegruppe |
+| Beschreibung |  | Beschreibung der Servicegruppe |
+| Servicegruppen URL |  | URL der Servicegruppe |
+| Services |  | [Services](#services) die zur Hostgruppe hinzugefügt werden sollen |
+| Servicevorlage | :fontawesome-solid-times: | Die [Servicevorlagen](#servicevorlagen) die zur Servicegruppe hinzugefügt werden sollen |
 
 ### Erweiterte Ansicht
 
