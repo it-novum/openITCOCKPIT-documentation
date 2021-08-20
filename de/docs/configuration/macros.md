@@ -1,4 +1,4 @@
-# Benutzerdefinierte Makros
+## Benutzerdefinierte Makros
 
 Benutzerdefinierte Makros sind Variablen, die in openITCOCKPIT genutzt werden können um zum Beispiel Pfadangaben für Plugins oder Logindaten zu speichern. 
 
@@ -8,7 +8,7 @@ Es besteht die Möglichkeit Werte auszublenden, um z.B. Passwörter nicht direkt
 
 Es können bis zu 256 Makros gespeichert werden.
 
-# Standard Makros
+## Standard Makros
 
 
 | Makro                       | Beschreibung                                                                                                                                 |
