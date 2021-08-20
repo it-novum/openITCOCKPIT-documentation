@@ -8,138 +8,140 @@ Es besteht die Möglichkeit Werte auszublenden, um z.B. Passwörter nicht direkt
 
 Es können bis zu 256 Makros gespeichert werden.
 
+# Standard Makros
 
-| macro                       | description                                                                                                                                 |
+
+| Makro                       | Beschreibung                                                                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-|Host Macros|
-| $HOSTNAME$                  | The UUID of the host ("1284b927-2bd2-4737-a3da-c39854376ca2")                                                                               |
-| $HOSTDISPLAYNAME$           | The human name of the host ("srvstorage01")                                                                                                 |
-| $HOSTALIAS$                 | The human name of the host ("srvstorage01"), same as $HOSTDISPLAYNAME$                                                                      |
-| $HOSTADDRESS$               | Address or FQDN of the host. ("10.10.12.12")                                                                                                |
-| $HOSTSTATE$                 | Current host state as string ("UP", "DOWN", or "UNREACHABLE").                                                                              |
-| $HOSTSTATEID$               | Current host state as integer (0=UP, 1=DOWN, 2=UNREACHABLE).                                                                                |
-| $LASTHOSTSTATE$             | Last host state as string ("UP", "DOWN", or "UNREACHABLE").                                                                                 |
-| $LASTHOSTSTATEID$           | Last host state as integer (0=UP, 1=DOWN, 2=UNREACHABLE).                                                                                   |
-| $HOSTSTATETYPE$             | Current host state type as string ("SOFT" or "HARD").                                                                                       |
-| $HOSTATTEMPT$               | Current check attempt as integer                                                                                                            |
-| $MAXHOSTATTEMPTS$           | Max number of host check attempts.                                                                                                          |
-| $HOSTEVENTID$               | Number of state change events as unique number per host.                                                                                    |
-| $LASTHOSTEVENTID$           | Last unique host event number.                                                                                                              |
-| $HOSTPROBLEMID$             | Unique number of the current host problem state.                                                                                            |
-| $LASTHOSTPROBLEMID$         | Unique number of the last host problem state.                                                                                               |
-| $HOSTLATENCY$               | Delay between scheduled check time and actual check time as floating point. ("2.05")                                                        |
-| $HOSTEXECUTIONTIME$         | Plugin execution time as floating point. ("4.21").                                                                                          |
-| $HOSTDURATION$              | Time since last state change occured as string (HH MM SS)                                                                                   |
-| $HOSTDURATIONSEC$           | Time since last state change occured as integer in seconds.                                                                                 |
-| $HOSTDOWNTIME$              | If the host in a scheduled downtime, this value will be >= 1.                                                                               |
-| $HOSTPERCENTCHANGE$         | State change percentage as floating point. (This is used by the flap detection algorithm).                                                  |
-| $HOSTGROUPNAME$             | Contain the first host group of an host as string ("12403d1a-70c0-468b-ad8d-446fb8412205")                                                  |
-| $HOSTGROUPNAMES$            | A comma separated of all the host groups the host belongs to. ("12403d1a-70c0-468b-ad8d-446fb8412205,20a1bad7-60c1-433d-8e28-716cde8b8f04") |
-| $LASTHOSTCHECK$             | Unix timestamp (integer) of the last host check.                                                                                            |
-| $LASTHOSTSTATECHANGE$       | Unix timestamp (integer) of last host state change.                                                                                         |
-| $LASTHOSTUP$                | Unix timestamp (integer) of the last host UP state.                                                                                         |
-| $LASTHOSTDOWN$              | Unix timestamp (integer) of the last host DOWN state.                                                                                       |
-| $LASTHOSTUNREACHABLE$       | Unix timestamp (integer) of the last host UNREACHABLE state.                                                                                |
-| $HOSTOUTPUT$                | Output of host check plugin ("OK - 127.5.6.7: rta 0,054ms, lost 0% ").                                                                      |
-| $LONGHOSTOUTPUT$            | The long plugin output of current host check.                                                                                               |
-| $HOSTPERFDATA$              | Performance date output of current host check. ("rta=0.054000ms;100.000000;500.000000;0.000000 pl=0%;20;60;0")                              |
-| $HOSTCHECKCOMMAND$          | Contains the command UUID including used command arguments ("5a538ebc-03de-4ce6-8e32-665b841abde3!3000.0,80%!4000.0,90%;")                  |
-| $HOSTACTIONURL$             | Not implemented by openITCOCKPIT.                                                                                                           |
-| $HOSTNOTESURL$              | Not implemented by openITCOCKPIT.                                                                                                           |
-| $HOSTNOTES$                 | Uer defined notes for the host.                                                                                                             |
-| $TOTALHOSTSERVICES$         | Total number of services associated with the host.                                                                                          |
-| $TOTALHOSTSERVICESOK$       | Total number of services associated with the host in state OK.                                                                              |
-| $TOTALHOSTSERVICESWARNING$  | Total number of services associated with the host in state WARNING.                                                                         |
-| $TOTALHOSTSERVICESCRITICAL$ | Total number of services associated with the host in state CRITICAL.                                                                        |
-| $TOTALHOSTSERVICESUNKNOWN$  | Total number of services associated with the host in state UNKNOWN.                                                                         |
-|Host group macros|
-| $HOSTGROUPALIAS$     | The UUID of the host group ("fc11e1b9-9c0f-49d7-90b5-f283fe39a21d")                                                                     |
-| $HOSTGROUPMEMBERS$   | A comma separated list of the host group mebers as UUIDs ("c7176869-ffb7-4149-b960-bdbf9ae85968,f5e943f3-c46f-4f6d-8fc1-468774a72332"). |
-| $HOSTGROUPNOTES$     | Not implemented by openITCOCKPIT.                                                                                                       |
-| $HOSTGROUPNOTESURL$  | Not implemented by openITCOCKPIT.                                                                                                       |
-| $HOSTGROUPACTIONURL$ | Not implemented by openITCOCKPIT.                                                                                                       |
-|Servce Macros|
-| $SERVICEDESC$            | The UUID of the service ("bd19ce04-3209-4664-a146-bd1220e740bc")                                                                                  |
-| $SERVICEDESC$            | The human name of the service ("PING")                                                                                                            |
-| $SERVICESTATE$           | Current service state as string  ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                     |
-| $SERVICESTATEID$         | Current service state as integer (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN).                                                                        |
-| $LASTSERVICESTATE$       | Last service state as string ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                         |
-| $LASTSERVICESTATEID$     | Last service state as integer (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN).                                                                           |
-| $SERVICESTATETYPE$       | Current service state type as string ("SOFT" or "HARD").                                                                                          |
-| $SERVICEATTEMPT$         | Current check attempt as integer                                                                                                                  |
-| $MAXSERVICEATTEMPTS$     | Max number of service check attempts.                                                                                                             |
-| $SERVICEISVOLATILE$      | Is volatile as integer (0=NO, 1=YES)                                                                                                              |
-| $SERVICEEVENTID$         | Number of state change events as unique number per service.                                                                                       |
-| $LASTSERVICEEVENTID$     | Last unique service event number.                                                                                                                 |
-| $SERVICEPROBLEMID$       | Unique number of the current service problem state.                                                                                               |
-| $LASTSERVICEPROBLEMID$   | Unique number of the last service problem state.                                                                                                  |
-| $SERVICELATENCY$         | Delay between scheduled check time and actual check time as floating point. ("2.05")                                                              |
-| $SERVICEEXECUTIONTIME$   | Plugin execution time as floating point. ("4.21").                                                                                                |
-| $SERVICEDURATION$        | Time since last state change occured as string (HH MM SS)                                                                                         |
-| $SERVICEDURATIONSEC$     | Time since last state change occured as integer in seconds.                                                                                       |
-| $SERVICEDOWNTIME$        | If the service in a scheduled downtime, this value will be >= 1.                                                                                  |
-| $SERVICEPERCENTCHANGE$   | State change percentage as floating point. (This is used by the flap detection algorithm).                                                        |
-| $SERVICEGROUPNAME$       | Contain the first service group of an service as string ("6123eb90-a3eb-4895-b348-c464d9494d14")                                                  |
-| $SERVICEGROUPNAMES$      | A comma separated of all the service groups the service belongs to. ("6123eb90-a3eb-4895-b348-c464d9494d14,666b1caf-4c0f-45e8-9380-78f9e915b82d") |
-| $LASTSERVICECHECK$       | Unix timestamp (integer) of the last service check.                                                                                               |
-| $LASTSERVICESTATECHANGE$ | Unix timestamp (integer) of last service state change.                                                                                            |
-| $LASTSERVICEOK$          | Unix timestamp (integer) of the last service OK state.                                                                                            |
-| $LASTSERVICEWARNING$     | Unix timestamp (integer) of the last service WARNING state.                                                                                       |
-| $LASTSERVICECRITICAL$    | Unix timestamp (integer) of the last service CRITICAL state.                                                                                      |
-| $LASTSERVICEUNKNOWN$     | Unix timestamp (integer) of the last service UNKNOWN state.                                                                                       |
-| $SERVICEOUTPUT$          | Output of service check plugin ("OK - 127.5.6.7: rta 0,054ms, lost 0% ").                                                                         |
-| $LONGSERVICEOUTPUT$      | The long plugin output of current service check.                                                                                                  |
-| $SERVICEPERFDATA$        | Performance date output of current service check. ("rta=0.054000ms;100.000000;500.000000;0.000000 pl=0%;20;60;0")                                 |
-| $SERVICECHECKCOMMAND$    | Contains the command UUID including used command arguments ("5a538ebc-03de-4ce6-8e32-665b841abde3!3000.0,80%!4000.0,90%;")                        |
-| $SERVICEACTIONURL$       | Not implemented by openITCOCKPIT.                                                                                                                 |
-| $SERVICENOTESURL$        | Not implemented by openITCOCKPIT.                                                                                                                 |
-| $SERVICENOTES$           | Uer defined notes for the host.                                                                                                                   |
-|Service group macros|
-| $SERVICEGROUPALIAS$    | The UUID of the host group ("65c7692e-b322-4788-8232-97258b457f22")                                                                        |
-| $SERVICEGROUPMEMBERS$  | A comma separated list of the service group mebers as UUIDs ("0a9feda1-569e-40fe-a5a3-b2f389818301,ade06bfb-f9bd-4112-9537-2b3d286a6572"). |
-| $SERVICEGROUPNOTES$    | Not implemented by openITCOCKPIT.                                                                                                          |
-| $SERVICEGROUPNOTESURL$ | Not implemented by openITCOCKPIT.                                                                                                          |
-| $SERVICEGROUPNOTES$    | Not implemented by openITCOCKPIT.                                                                                                          |
-|Contact macros|
-| $CONTACTNAME$       | The UUID of the contact ("9595f7d6-2b79-4a7b-b7b8-414eec84c0b0")                                                                                  |
-| $CONTACTGROUPNAME$  | The human name of the contact ("info").                                                                                                           |
-| $CONTACTALIAS$      | The human name of the contact ("info"), same as $CONTACTGROUPNAME$                                                                                |
-| $CONTACTEMAIL$      | Email address of the contact. ("community@openitcockpit.io")                                                                                      |
-| $CONTACTPAGER$      | Pager number of the contact. ("004913456789")                                                                                                     |
-| $CONTACTGROUPNAMES$ | A comma separated of all the contact groups the contact belongs to. ("06e352a8-643d-4fa8-a7bd-9ff74ad0e112,4992c7ad-1bb4-465a-8fe4-a721461b69a2") |
-|Contact group macros|
-| $CONTACTGROUPALIAS$   | The UUID of the contact group ("06e352a8-643d-4fa8-a7bd-9ff74ad0e112")                                                                            |
-| $CONTACTGROUPMEMBERS$ | A comma separated of all the contacts belongs to the contact group. ("9595f7d6-2b79-4a7b-b7b8-414eec84c0b0,6de7d0f9-413e-41cc-b1e4-3289072b72c4") |
-|SUMMARY Macros (Notice: CPU intensive to calculate - use with care)|
-| $TOTALHOSTSUP$                   | Number of hosts in state UP.                                                                                              |
-| $TOTALHOSTSDOWN$                 | Number of hosts in state DOWN.                                                                                            |
-| $TOTALHOSTSUNREACHABLE$          | Number of hosts in state UNREACHABLE.                                                                                     |
-| $TOTALHOSTSDOWNUNHANDLED$        | Number of unhandled hosts. Unhandled hosts are in a DOWN state and not acknowledged or in a scheduled downtime.           |
-| $TOTALHOSTSUNREACHABLEUNHANDLED$ | Number of unhandled hosts. Unhandled hosts are in a UNREACHABLE state and not acknowledged or in a scheduled downtime.    |
-| $TOTALHOSTPROBLEMS$              | Number of hosts in a non UP state.                                                                                        |
-| $TOTALHOSTPROBLEMSUNHANDLED$     | Number of unhandled hosts. Unhandled hosts are in a non UP state and not acknowledged or in a scheduled downtime.         |
-| $TOTALSERVICESOK$                | Number of services in state OK.                                                                                           |
-| $TOTALSERVICESWARNING$           | Number of services in state WARNING.                                                                                      |
-| $TOTALSERVICESCRITICAL$          | Number of services in state CRITICAL.                                                                                     |
-| $TOTALSERVICESUNKNOWN$           | Number of services in state UNKNOWN.                                                                                      |
-| $TOTALSERVICESWARNINGUNHANDLED$  | Number of unhandled services. Unhandled services are in a WARNING state and not acknowledged or in a scheduled downtime.  |
-| $TOTALSERVICESCRITICALUNHANDLED$ | Number of unhandled services. Unhandled services are in a CRITICAL state and not acknowledged or in a scheduled downtime. |
-| $TOTALSERVICESUNKNOWNUNHANDLED$  | Number of unhandled services. Unhandled services are in a UNKNOWN state and not acknowledged or in a scheduled downtime.  |
-| $TOTALSERVICEPROBLEMS$           | Number of services in a non OK state.                                                                                     |
-| $TOTALSERVICEPROBLEMSUNHANDLED$  | Number of unhandled services. Unhandled services are in a non OK state and not acknowledged or in a scheduled downtime.   |
-|Notification macros|
-| $NOTIFICATIONTYPE$          | Notification type as string ("PROBLEM", "RECOVERY", "ACKNOWLEDGEMENT", "FLAPPINGSTART", "FLAPPINGSTOP", "FLAPPINGDISABLED", "DOWNTIMESTART", "DOWNTIMEEND", or "DOWNTIMECANCELLED"). |
-| $NOTIFICATIONRECIPIENTS$    | A comma separated of all the contacts for this notification. ("12403d1a-70c0-468b-ad8d-446fb8412205,20a1bad7-60c1-433d-8e28-716cde8b8f04")                                           |
-| $NOTIFICATIONISESCALATED$   | Is this an escalated notification (0=NO, 1=YES)                                                                                                                                      |
-| $NOTIFICATIONAUTHOR$        | openITCOCKPIT user name as string.                                                                                                                                                   |
-| $NOTIFICATIONAUTHORNAME$    | openITCOCKPIT user name as string.                                                                                                                                                   |
-| $NOTIFICATIONAUTHORALIAS$   | openITCOCKPIT user name as string.                                                                                                                                                   |
-| $NOTIFICATIONCOMMENT$       | Comment data of the notification.                                                                                                                                                    |
-| $HOSTNOTIFICATIONNUMBER$    | Number of send notifications for a host. If the host state goes to RECOVERY, the counter will be reset to 0.                                                                         |
-| $HOSTNOTIFICATIONID$        | Unique event number of the host notification.                                                                                                                                        |
-| $SERVICENOTIFICATIONNUMBER$ | Number of send notifications for a service. If the service state goes to OK, the counter will be reset to 0.                                                                         |
-| $SERVICENOTIFICATIONID$     | Unique event number of the service notification.                                                                                                                                     |
-|Date and time Macros|
-| $DATE$  | Current date as string (DD-MM-YYYY). |
-| $TIME$  | Current time as string (HH:MM:SS).   |
-| $TIMET$ | Current time as UNIX timestamp.      |
+|Host Makros|
+| $HOSTNAME$                  | UUID des Host ("1284b927-2bd2-4737-a3da-c39854376ca2")                                                                               |
+| $HOSTDISPLAYNAME$           | Lesbarer Name des Host ("srvstorage01")                                                                                                 |
+| $HOSTALIAS$                 | Lesbarer Name des Host ("srvstorage01"), dasselbe wie $HOSTDISPLAYNAME$                                                                      |
+| $HOSTADDRESS$               | Adresse oder FQDN des Host. ("10.10.12.12")                                                                                                |
+| $HOSTSTATE$                 | Aktueller Host Status als String ("UP", "DOWN", or "UNREACHABLE").                                                                              |
+| $HOSTSTATEID$               | Aktueller Host Status als Integer (0=UP, 1=DOWN, 2=UNREACHABLE).                                                                                |
+| $LASTHOSTSTATE$             | Letzter Host Status als String ("UP", "DOWN", or "UNREACHABLE").                                                                                 |
+| $LASTHOSTSTATEID$           | Letzter Host Status als Integer (0=UP, 1=DOWN, 2=UNREACHABLE).                                                                                   |
+| $HOSTSTATETYPE$             | Aktueller Host Status Typ als String ("SOFT" or "HARD").                                                                                       |
+| $HOSTATTEMPT$               | Aktueller Prüfversuch als Integer                                                                                                            |
+| $MAXHOSTATTEMPTS$           | Maximale anzahl der Prüfversuche                                                                                                          |
+| $HOSTEVENTID$               | Anzahl der Statuswechsel events als eindeutige nummer pro Host                                                                                    |
+| $LASTHOSTEVENTID$           | Letzte eindeutige Host event nummer                                                                                                              |
+| $HOSTPROBLEMID$             | Eindeutige nummer des aktuellen Host Problem Status                                                                                            |
+| $LASTHOSTPROBLEMID$         | Eindeutige nummer des letzten Host Problem Status                                                                                              |
+| $HOSTLATENCY$               | Verzögerung zwischen geplanter Prüfzeit und tatsächlicher Prüfzeit als Float. ("2.05")                                                        |
+| $HOSTEXECUTIONTIME$         | Plugin Ausführungszeit als Float. ("4.21").                                                                                          |
+| $HOSTDURATION$              | Zeit seit letztem Statuswechsel als String (HH MM SS)                                                                                   |
+| $HOSTDURATIONSEC$           | Zeit seit letztem Statuswechsel als Integer in Sekunden                                                                                  |
+| $HOSTDOWNTIME$              | Ist der Host in einer geplanten Wartungszeit, ist dieser wert >=1                                                                             |
+| $HOSTPERCENTCHANGE$         | Statuswechsel prozentual als Float (Wird von Flattererkennungs Algorithmus genutzt)                                                 |
+| $HOSTGROUPNAME$             | Beinhaltet die erste Hostgruppe eines Hosts als String ("12403d1a-70c0-468b-ad8d-446fb8412205")                                                 |
+| $HOSTGROUPNAMES$            | Kommaseparierte liste aller Hostgruppen denen ein Host angehört ("12403d1a-70c0-468b-ad8d-446fb8412205,20a1bad7-60c1-433d-8e28-716cde8b8f04")|
+| $LASTHOSTCHECK$             | Unix timestamp (Integer) des letzten host check.                                                                                            |
+| $LASTHOSTSTATECHANGE$       | Unix timestamp (Integer) des letzten Statuswechsel.                                                                                         |
+| $LASTHOSTUP$                | Unix timestamp (Integer) des letzten host UP Status.                                                                                         |
+| $LASTHOSTDOWN$              | Unix timestamp (Integer) des letzten host DOWN Status.                                                                                       |
+| $LASTHOSTUNREACHABLE$       | Unix timestamp (Integer) des letzten host UNREACHABLE Status.                                                                                |
+| $HOSTOUTPUT$                | Output des Host check plugin ("OK - 127.5.6.7: rta 0,054ms, lost 0% ").                                                                      |
+| $LONGHOSTOUTPUT$            | Long plugin output des aktuellen Host check.                                                                                               |
+| $HOSTPERFDATA$              | Performance data output des aktuellen Host check. ("rta=0.054000ms;100.000000;500.000000;0.000000 pl=0%;20;60;0")                              |
+| $HOSTCHECKCOMMAND$          | Enthält die Kommando UUID und die genutzten Kommando Argumente ("5a538ebc-03de-4ce6-8e32-665b841abde3!3000.0,80%!4000.0,90%;")                  |
+| $HOSTACTIONURL$             | Nicht Implementiert in openITCOCKPIT.                                                                                                           |
+| $HOSTNOTESURL$              | Nicht Implementiert in openITCOCKPIT.                                                                                                           |
+| $HOSTNOTES$                 | Benutzerdefinierte Notizen für einen Host.                                                                                                             |
+| $TOTALHOSTSERVICES$         | Gesamt Anzahl an Services die mit dem Host verbunden sind                                                                                         |
+| $TOTALHOSTSERVICESOK$       | Gesamt Anzahl an Services die mit dem Host verbunden sind im Status OK                                                                              |
+| $TOTALHOSTSERVICESWARNING$  | Gesamt Anzahl an Services die mit dem Host verbunden sind im Status WARNING                                                                        |
+| $TOTALHOSTSERVICESCRITICAL$ | Gesamt Anzahl an Services die mit dem Host verbunden sind im Status CRITICAL                                                                       |
+| $TOTALHOSTSERVICESUNKNOWN$  | Gesamt Anzahl an Services die mit dem Host verbunden sind im Status UNKNOWN                                                                        |
+|Hostgruppen Makros|
+| $HOSTGROUPALIAS$     | Die UUID der Hostgruppe ("fc11e1b9-9c0f-49d7-90b5-f283fe39a21d")                                                                     |
+| $HOSTGROUPMEMBERS$   | Kommaseparierte Liste der Hostgruppen Mitglieder als UUIDs ("c7176869-ffb7-4149-b960-bdbf9ae85968,f5e943f3-c46f-4f6d-8fc1-468774a72332"). |
+| $HOSTGROUPNOTES$     | Nicht Implementiert in openITCOCKPIT.                                                                                                       |
+| $HOSTGROUPNOTESURL$  | Nicht Implementiert in openITCOCKPIT.                                                                                                       |
+| $HOSTGROUPACTIONURL$ | Nicht Implementiert in openITCOCKPIT.                                                                                                       |
+|Service Makros|
+| $SERVICEDESC$            | Die UUID des Service ("bd19ce04-3209-4664-a146-bd1220e740bc")                                                                                  |
+| $SERVICEDESC$            | Lesbarer Nname des Service ("PING")                                                                                                            |
+| $SERVICESTATE$           | Aktueller Service Status als String  ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                     |
+| $SERVICESTATEID$         | Aktueller Service Status als Integer (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN).                                                                        |
+| $LASTSERVICESTATE$       | Letzter Service Status als String ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                         |
+| $LASTSERVICESTATEID$     | Letzter Service Status als Integer (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN).                                                                           |
+| $SERVICESTATETYPE$       | Aktueller Service Status typ als String ("SOFT" or "HARD").                                                                                          |
+| $SERVICEATTEMPT$         | Aktueller Prüfversuch als Integer.                                                                                                                  |
+| $MAXSERVICEATTEMPTS$     | Maximale Anzahl an Service Prüfversuchen                                                                                                             |
+| $SERVICEISVOLATILE$      | Ist Flüchtig als Integer (0=NO, 1=YES)                                                                                                             |
+| $SERVICEEVENTID$         | Anzahl der Statuswechsel events als eindeutige Nummer pro Service                                                                                      |
+| $LASTSERVICEEVENTID$     | Letzte eindeutige Service event Nummer                                                                                                                |
+| $SERVICEPROBLEMID$       | Eindeutige Nummer des aktuellen Service problem states                                                                                              |
+| $LASTSERVICEPROBLEMID$   | Eindeutige Nummer des letzten Service problem states                                                                                                |
+| $SERVICELATENCY$         | Verzögerung zwischen geplanter Prüfzeit und tatsächlicher Prüfzeit als Float. ("2.05")                                                              |
+| $SERVICEEXECUTIONTIME$   | Plugin Ausführungszeit als Float. ("4.21").                                                                                                |
+| $SERVICEDURATION$        | Zeit seit letzten Statuswechsel als String (HH MM SS)                                                                                         |
+| $SERVICEDURATIONSEC$     | Zeit seit letzten Statuswechsel als Integer in Sekunden.                                                                                       |
+| $SERVICEDOWNTIME$        | Ist der Service in einer geplanten Wartungszeit, ist dieser wert >= 1.                                                                                  |
+| $SERVICEPERCENTCHANGE$   | Statuswechsel prozentual als Float. (Wird von Flattererkennungs Algorithmus genutzt).                                                        |
+| $SERVICEGROUPNAME$       | Enthält die erste Servicegruppe eines Service als String ("6123eb90-a3eb-4895-b348-c464d9494d14")                                                  |
+| $SERVICEGROUPNAMES$      | Kommaseparierte Liste aller Servicegruppen der der Service angehört. ("6123eb90-a3eb-4895-b348-c464d9494d14,666b1caf-4c0f-45e8-9380-78f9e915b82d") |
+| $LASTSERVICECHECK$       | Unix timestamp (integer) des letzten Service check.                                                                                               |
+| $LASTSERVICESTATECHANGE$ | Unix timestamp (integer) des letzten Service Statuswechsel.                                                                                            |
+| $LASTSERVICEOK$          | Unix timestamp (integer) des letzten Service OK Status.                                                                                            |
+| $LASTSERVICEWARNING$     | Unix timestamp (integer) des letzten Service WARNING Status.                                                                                       |
+| $LASTSERVICECRITICAL$    | Unix timestamp (integer) des letzten Service CRITICAL Status.                                                                                      |
+| $LASTSERVICEUNKNOWN$     | Unix timestamp (integer) des letzten Service UNKNOWN Status.                                                                                       |
+| $SERVICEOUTPUT$          | Output des Service Prüf Plugin ("OK - 127.5.6.7: rta 0,054ms, lost 0% ").                                                                         |
+| $LONGSERVICEOUTPUT$      | Long plugin output des Aktuellen Service checks.                                                                                                  |
+| $SERVICEPERFDATA$        | Performance daten output des Aktuellen Service checks. ("rta=0.054000ms;100.000000;500.000000;0.000000 pl=0%;20;60;0")                                 |
+| $SERVICECHECKCOMMAND$    | Enthält die Kommando UUID sowie dessen Agrumente ("5a538ebc-03de-4ce6-8e32-665b841abde3!3000.0,80%!4000.0,90%;")                        |
+| $SERVICEACTIONURL$       | Nicht Implementiert in openITCOCKPIT.                                                                                                                 |
+| $SERVICENOTESURL$        | Nicht Implementiert in openITCOCKPIT.                                                                                                                 |
+| $SERVICENOTES$           | Benutzerdefinierte Notizen für den Service                                                                                                                   |
+|Servicegruppen Makros|
+| $SERVICEGROUPALIAS$    | UUID der Hostgruppe ("65c7692e-b322-4788-8232-97258b457f22")                                                                        |
+| $SERVICEGROUPMEMBERS$  | Kommaseparierte Liste der Servicegruppen Mitglieder als UUIDs ("0a9feda1-569e-40fe-a5a3-b2f389818301,ade06bfb-f9bd-4112-9537-2b3d286a6572"). |
+| $SERVICEGROUPNOTES$    | Nicht Implementiert in openITCOCKPIT.                                                                                                          |
+| $SERVICEGROUPNOTESURL$ | Nicht Implementiert in openITCOCKPIT.                                                                                                          |
+| $SERVICEGROUPNOTES$    | Nicht Implementiert in openITCOCKPIT.                                                                                                          |
+|Kontakt Makros|
+| $CONTACTNAME$       | UUID des Kontakt ("9595f7d6-2b79-4a7b-b7b8-414eec84c0b0")                                                                                  |
+| $CONTACTGROUPNAME$  | Lesbarer Name des Kontakt ("info").                                                                                                           |
+| $CONTACTALIAS$      | Lesbarer Name des Kontakt ("info"), same as $CONTACTGROUPNAME$                                                                                |
+| $CONTACTEMAIL$      | Email Adresse des Kontakt. ("community@openitcockpit.io")                                                                                      |
+| $CONTACTPAGER$      | Pager Nummer des Kontakt. ("004913456789")                                                                                                     |
+| $CONTACTGROUPNAMES$ | Kommaseparierte Liste aller Kontaktgruppen denen der Kontakt angehört. ("06e352a8-643d-4fa8-a7bd-9ff74ad0e112,4992c7ad-1bb4-465a-8fe4-a721461b69a2") |
+|Kontaktgruppen Makros|
+| $CONTACTGROUPALIAS$   | UUID der Kontaktgruppe ("06e352a8-643d-4fa8-a7bd-9ff74ad0e112")                                                                            |
+| $CONTACTGROUPMEMBERS$ | Kommasepariete Liste aller Kontakte die der Kontaktgruppe angehören. ("9595f7d6-2b79-4a7b-b7b8-414eec84c0b0,6de7d0f9-413e-41cc-b1e4-3289072b72c4") |
+|Zusammenfassungs Makros (INFO: CPU intensiv zu berechenen - mit Vorsicht nutzen!)|
+| $TOTALHOSTSUP$                   | Anzahl der Hosts im Status UP.                                                                                              |
+| $TOTALHOSTSDOWN$                 | Anzahl der Hosts im Status DOWN.                                                                                            |
+| $TOTALHOSTSUNREACHABLE$          | Anzahl der Hosts im Status UNREACHABLE.                                                                                     |
+| $TOTALHOSTSDOWNUNHANDLED$        | Anzahl der unbehandelten Hosts. Unbehandelte Hosts sind in einem DOWN Status und nicht bestätigt oder in einer geplanten Wartungszeit.           |
+| $TOTALHOSTSUNREACHABLEUNHANDLED$ | Anzahl der unbehandelten hosts. Unbehandelte Hosts sind in einem UNREACHABLE Status und nicht bestätigt oder in einer geplanten Wartungszeit.    |
+| $TOTALHOSTPROBLEMS$              | Anzahl der Hosts in einem nicht UP Status.                                                                                        |
+| $TOTALHOSTPROBLEMSUNHANDLED$     | Anzahl der unbehandelten Hosts. Unbehandelte Hosts sind in einem nicht UP Status und nicht bestätigt oder in einer geplanten Wartungszeit.         |
+| $TOTALSERVICESOK$                | Anzahl der Services im Status OK.                                                                                           |
+| $TOTALSERVICESWARNING$           | Anzahl der Services im Status WARNING.                                                                                      |
+| $TOTALSERVICESCRITICAL$          | Anzahl der Services im Status CRITICAL.                                                                                     |
+| $TOTALSERVICESUNKNOWN$           | Anzahl der Services im Status UNKNOWN.                                                                                      |
+| $TOTALSERVICESWARNINGUNHANDLED$  | Anzahl der unbehandelten Services. Unbehandelte Services sind in einem WARNING Status und nicht bestätigt oder in einer geplanten Wartungszeit.  |
+| $TOTALSERVICESCRITICALUNHANDLED$ | Anzahl der unbehandelten Services. Unbehandelte Services sind in einem CRITICAL Status und nicht bestätigt oder in einer geplanten Wartungszeit. |
+| $TOTALSERVICESUNKNOWNUNHANDLED$  | Anzahl der unbehandelten Services. Unbehandelte Services sind in einem UNKNOWN Status und nicht bestätigt oder in einer geplanten Wartungszeit.  |
+| $TOTALSERVICEPROBLEMS$           | Anzahl der Services in einem nicht OK Status.                                                                                     |
+| $TOTALSERVICEPROBLEMSUNHANDLED$  | Anzahl der unbehandelten Services. Unbehandelte Services sind in einem nicht OK Status und nicht bestätigt oder in einer geplanten Wartungszeit.   |
+|Benachrichtigungsmakros|
+| $NOTIFICATIONTYPE$          | Benachrichtigungstyp als String ("PROBLEM", "RECOVERY", "ACKNOWLEDGEMENT", "FLAPPINGSTART", "FLAPPINGSTOP", "FLAPPINGDISABLED", "DOWNTIMESTART", "DOWNTIMEEND", or "DOWNTIMECANCELLED"). |
+| $NOTIFICATIONRECIPIENTS$    | Kommaseparierte Liste aller Kontakte für diese Benachrichtigung. ("12403d1a-70c0-468b-ad8d-446fb8412205,20a1bad7-60c1-433d-8e28-716cde8b8f04")                                           |
+| $NOTIFICATIONISESCALATED$   | Ist diese Benachrichtigung eskaliert (0=NO, 1=YES)                                                                                                                                      |
+| $NOTIFICATIONAUTHOR$        | openITCOCKPIT Benutzername als String.                                                                                                                                                   |
+| $NOTIFICATIONAUTHORNAME$    | openITCOCKPIT Benutzername als String.                                                                                                                                                   |
+| $NOTIFICATIONAUTHORALIAS$   | openITCOCKPIT Benutzername als String.                                                                                                                                                   |
+| $NOTIFICATIONCOMMENT$       | Kommentar daten der Benachrichtigung.                                                                                                                                                    |
+| $HOSTNOTIFICATIONNUMBER$    | Anzahl der gesendeten Benachrichtigungen für einen Host. Geht der Host in einen RECOVERY Status über, wird der Zähler auf 0 zurückgesetzt.                                                                         |
+| $HOSTNOTIFICATIONID$        | Eindeutige Event Nummer der Host Benachrichtigung.                                                                                                                                        |
+| $SERVICENOTIFICATIONNUMBER$ | Anzahl der gesendeten Benachrichtigungen für einen Service. Geht der Service in einen OK Status über, wird der Zähler auf 0 zurückgesetzt.                                                                         |
+| $SERVICENOTIFICATIONID$     | Eindeutige Event Nummer der Service Benachrichtigung.                                                                                                                                     |
+|Datum und Zeit Makros|
+| $DATE$  | Aktuelles Datum als String (DD-MM-YYYY). |
+| $TIME$  | Aktuelle Zeit als String (HH:MM:SS).   |
+| $TIMET$ | Aktuelle Zeit als UNIX timestamp.      |
