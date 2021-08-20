@@ -265,7 +265,7 @@ Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurze
 
 #### Prometheus Exporters
 
-Zur [Überwachung des Hosts mit Prometheus](../monitoring/prometheus/#uberwachen-eines-hosts-mit-prometheus-in-openitcockpit), wählen Sie hier Ihren Prometheus Exporter aus.
+Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwachen-eines-hosts-mit-prometheus-in-openitcockpit), wählen Sie hier Ihren Prometheus Exporter aus.
 
 
 
