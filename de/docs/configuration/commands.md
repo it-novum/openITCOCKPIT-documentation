@@ -39,7 +39,7 @@ Benachrichtigungskommandos sind Kommandos, die von den Kontakten in openITCOCKPI
 
 ### Standardmakros und Benutzerdefinierte Makros
 
-Eine Übersicht über alle verfügbaren Standardmakros, die zb. in der Kommandozeile verwendet werden können finden sich beim Neu erstellen oder editieren eines Kommandos in der oberen leiste. Ebenfalls dort ist unter “$USERn$” auch eine Übersicht der [Benutzerdefinierten Makros](../macros/) zu finden.
+Eine Übersicht über alle verfügbaren [Standardmakros](../macros/#standard-makros), die zb. in der Kommandozeile verwendet werden können finden sich beim Neu erstellen oder editieren eines Kommandos in der oberen leiste. Ebenfalls dort ist unter “$USERn$” auch eine Übersicht der [Benutzerdefinierten Makros](../macros/) zu finden.
 
 ![default macros](/images/UserDefinedMacros-DefaultMacroOverview.png)
 
