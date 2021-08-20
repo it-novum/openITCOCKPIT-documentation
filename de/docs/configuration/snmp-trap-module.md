@@ -77,10 +77,6 @@ dann den Parameter -H anpassen. Normalerweise sollten die Systeme mit der IP Adr
     Da das Plugin nur Warning und Critical Traps überprüft (und diese dann auch aus der DB löscht), könnte man einen Cronjob einrichten, um normal/ok Traps aus der Tabelle zu löschen, damit diese immer aufgeräumt ist.
 
 
-### Anmerkung
-
-Da das Plugin nur Warning und Critical Traps überprüft (und diese dann auch aus der DB löscht), könnte man einen Cronjob einrichten, um normal/ok Traps aus der Tabelle zu löschen, damit diese immer aufgeräumt ist.
-
 **Tabelle aufräumen**
 
 ```plaintext
