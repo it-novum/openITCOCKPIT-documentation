@@ -1,4 +1,4 @@
-#img {
+img {
     /* Blurry chome image fix */
     image-rendering: -webkit-optimize-contrast;
 }
