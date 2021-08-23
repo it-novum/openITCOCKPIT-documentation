@@ -6,9 +6,8 @@ Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da d
 
 ## Verfügbare Einstellungen:
 
-|     |     |
-| --- | --- |
 | Schlüssel | Beschreibung |
+| --- | --- |
 | SUDO\_SERVER |  |
 | API\_KEY | API Schlüssel für die sudoserver socket API  |     
 | WEBSERVER |  |
