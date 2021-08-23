@@ -65,7 +65,7 @@ markdown_extensions:
     - admonition
 
 extra_css:
-  - css/oitc.css
+  - oitc.css
 
 plugins:
   - search
