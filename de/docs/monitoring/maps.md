@@ -53,37 +53,37 @@ Nun ist man im Karten editor angelangt und kann nun über das Seitenmenü versch
 
 ![](/images/mapmodule-mapeditorsidemenu.png)
 
-##### 1\. Items
+###### 1\. Items
 
 Items können Hosts, Services, Hostgruppen und Servicegruppen sein. Darüberhinaus können andere Karten verlinkt werden.
 
 Items werden mit Iconsets dargestellt. Eigene Iconsets können auch genutzt werden.
 
-##### 2\. Linien 
+###### 2\. Linien 
 
 Linien können Hosts, Services, Hostgruppen und Servicegruppen, Karten und einfache, Statuslose Linien sein.
 
-##### 3\. Zusammenfassungsstatuselement
+###### 3\. Zusammenfassungsstatuselement
 
 Das Zusammenfassungsstatuselement setzt sich aus mehreren überwachten Objekten zusammen.
 
 Dies kann je nach ausgewähltem Objekt ein Host und mindestens ein Service oder mehrere Hosts und mehrere Services sein.
 
-##### 4\. Gadgets
+###### 4\. Gadgets
 
 Gadgets sind unterschiedliche Anzeigeelemente. Dies können Graphen, Tachos, Ampeln o.ä. sein. 
 
 Der Unterschied zu den vorhergehenden Elemente ist, dass ein Gadget immer nur ein Service sein kann, da hier immer Performancedaten zu grunde liegen müssen.
 
-##### 5\. Hintergrundbild ändern
+###### 5\. Hintergrundbild ändern
 
 Hier können Sie Hintergrundbilder für Ihre Karten hochladen und auch wieder entfernen.
 
-##### 6\. Text hinzufügen
+###### 6\. Text hinzufügen
 
 Mit diesem Tool können sie Text in Ihre Karte einfügen.
 
-##### 7\. Icons
+###### 7\. Icons
 
 Hier können Sie Icons hochladen und auf Ihrer Karte platzieren. Der unterschied zu Items ist, dass diese Icons keinen Status anzeigen.
 
