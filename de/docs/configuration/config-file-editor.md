@@ -13,6 +13,7 @@ openITCOCKPIT Interface Konfigurationsdateien
 - `/opt/openitc/frontend/config/graphite.php`
 - `/opt/openitc/frontend/config/gearman.php`	
 
+
 Monitoring engine
 - `/opt/openitc/nagios/etc/nagios.cfg`
 
