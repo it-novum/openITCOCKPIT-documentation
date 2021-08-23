@@ -1,5 +1,3 @@
-Original
-
 ## PNG
 
 Original (1963x1219)
