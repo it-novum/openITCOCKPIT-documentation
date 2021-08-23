@@ -7,25 +7,32 @@ Eine Konfigurationsdatei kann auch auf seine Standardwerte wiederhergestellt wer
 Folgende Konfigurationsdateien können über den Konfigurationsdatei Editor bearbeitet werden:
 
 openITCOCKPIT Interface Konfigurationsdateien
-`/opt/openitc/frontend/config/after_export.php`
-`/opt/openitc/frontend/config/dbbackend.php` 	
-`/opt/openitc/frontend/config/perfdatabackend.php`
-`/opt/openitc/frontend/config/graphite.php`
-`/opt/openitc/frontend/config/gearman.php`	
+- `/opt/openitc/frontend/config/after_export.php`
+- `/opt/openitc/frontend/config/dbbackend.php` 	
+- `/opt/openitc/frontend/config/perfdatabackend.php`
+- `/opt/openitc/frontend/config/graphite.php`
+- `/opt/openitc/frontend/config/gearman.php`	
+
 Monitoring engine
-`/opt/openitc/nagios/etc/nagios.cfg`
+- `/opt/openitc/nagios/etc/nagios.cfg`
+
 Statusengine
-`/opt/openitc/etc/statusengine/Config/Statusengine.php`
-`/opt/openitc/etc/statusengine/config.yml`
+- `/opt/openitc/etc/statusengine/Config/Statusengine.php`
+- `/opt/openitc/etc/statusengine/config.yml`
+
 NSTA
-`/opt/openitc/etc/nsta/nsta.ini`
+- `/opt/openitc/etc/nsta/nsta.ini`
+
 Carbon und Whisper (Graphing)
-`/opt/openitc/docker/container/graphing/docker-compose.yml`
+- `/opt/openitc/docker/container/graphing/docker-compose.yml`
+
 PHP-FPM
-`/etc/php/7.4/fpm/pool.d/oitc.conf`
+- `/etc/php/7.4/fpm/pool.d/oitc.conf`
+
 SnmpTrapModule
-`/opt/openitc/etc/SnmpTrapModule/snmptrapd`
-`/opt/openitc/etc/SnmpTrapModule/snmptrapd.conf`
-`/opt/openitc/etc/SnmpTrapModule/snmptt.ini`
+- `/opt/openitc/etc/SnmpTrapModule/snmptrapd`
+- `/opt/openitc/etc/SnmpTrapModule/snmptrapd.conf`
+- `/opt/openitc/etc/SnmpTrapModule/snmptt.ini`
+
 PrometheusModule
-`/opt/openitc/frontend/plugins/PrometheusModule/config/prometheus_bridge.php`
+- `/opt/openitc/frontend/plugins/PrometheusModule/config/prometheus_bridge.php`
