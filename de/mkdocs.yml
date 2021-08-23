@@ -64,6 +64,9 @@ markdown_extensions:
           base_path: docs
     - admonition
 
+extra_css:
+  - css/oitc.css
+
 plugins:
   - search
 
