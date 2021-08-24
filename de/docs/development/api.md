@@ -23,3 +23,7 @@ Für den API Key muss nur eine Beschreibung vergeben werden. In dem Feld "API ke
 Zum Schluss muss nur noch auf Speichern gedrückt werden und der API-Key ist erstellt. 
 
 Die erstellten API-Keys können über die Liste “API keys” eingesehen werden.
+
+## API Dokumentation
+
+Die API Dokumentation finden Sie hier (openITCOCKPIT API Dokumentation)[https://openitcockpit.io/api/]
