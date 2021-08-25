@@ -23,6 +23,37 @@ mkdocs serve
 
 Open `http://XXX.XXX.XXX.XXX:8000/` with your Webbrowser
 
+## Setup local copy via Docker
+
+1. Clone this repository
+```
+git clone https://github.com/it-novum/openITCOCKPIT-documentation.git
+cd openITCOCKPIT-documentation/
+```
+
+2. Build Docker image
+```
+docker build . -t openitcockpit/mkdocs
+```
+
+3. Run Docker Contianer (German Docs)
+```
+docker run --rm -it -v "$PWD/de":/docs -w /docs -p 8000:8000 openitcockpit/mkdocs
+```
+
+3. Run Docker Contianer (English Docs)
+```
+docker run --rm -it -v "$PWD/en":/docs -w /docs -p 8000:8000 openitcockpit/mkdocs
+```
+
+4. Open in Web Browser
+```
+http://127.0.0.1:8000/
+```
+
+5. Edit the files
+
+You can edit the files with your favorite editor. Docker will copy changed files automatically into the container. No manual effort required.
 
 ## License
 ```
