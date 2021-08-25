@@ -36,12 +36,12 @@ cd openITCOCKPIT-documentation/
 docker build . -t openitcockpit/mkdocs
 ```
 
-3. Run Docker Contianer (German Docs [🇩🇪])
+3. Run Docker Container (German Docs [🇩🇪])
 ```
 docker run --rm -it -v "$PWD/de":/docs -w /docs -p 8000:8000 openitcockpit/mkdocs
 ```
 
-3. Run Docker Contianer (English Docs [🇺🇸])
+3. Run Docker Container (English Docs [🇺🇸])
 ```
 docker run --rm -it -v "$PWD/en":/docs -w /docs -p 8000:8000 openitcockpit/mkdocs
 ```
