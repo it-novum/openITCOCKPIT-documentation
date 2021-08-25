@@ -26,4 +26,4 @@ Die erstellten API-Keys können über die Liste “API keys” eingesehen werden
 
 ## API Dokumentation
 
-Die API Dokumentation finden Sie hier (openITCOCKPIT API Dokumentation)[https://openitcockpit.io/api/]
+Die API Dokumentation finden Sie hier [openITCOCKPIT API Dokumentation](https://openitcockpit.io/api/)
