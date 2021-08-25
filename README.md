@@ -11,11 +11,12 @@ apt-get install git python3 python3-pip
 
 pip install mkdocs
 pip install mkdocs-material
+pip install markdown-include
 ```
 
 ## Run Webserver
 ```
-cd German/
+cd de/
 
 mkdocs serve
 ```
