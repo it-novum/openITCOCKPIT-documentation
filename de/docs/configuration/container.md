@@ -3,9 +3,11 @@ Benutzer, Hosts, Karten, Kontakte, Servicevorlagen und alle weiteren Objekte in 
 
 Container entscheiden darüber, welche Objekte ein Benutzer sehen und bearbeiten darf.
 
-Der `root` Container ist der Standardcontainer der alle anschließenden Container enthält. Alles was in diesem angelegt wird, ist Global verfügbar.
+Der `root` Container ist der Standardcontainer. Alle weiteren Container, die am System erstellt werden, sind Untercontainer des Root-Containers.
 
 Die Container werden in der Container Übersicht in einer Baumstruktur dargestellt. Über diese Baumansicht ist es möglich, weitere Container vom Typ Mandant, Standort und Knoten hinzuzufügen und zu bearbeiten.
+
+![Container Übersicht](/images/configuration/containers-overview-tree.png)
 
 ### Containertypen
 
@@ -14,58 +16,67 @@ Folgende typen von Containern gibt es in openITCOCKPIT
 -   root
 -   Mandant
 -   Standort
--   Knoten - Generischer Container
+-   Knoten - generischer Container
 -   Kontaktgruppe
 -   Hostgruppe
 -   Servicegruppe
 -   Servicevorlagengruppe
 
-### Container Details
+### Root-Container
 
-Um eine Übersicht der Untercontainer sowie deren Inhalt zu bekommen, klickt man in der Container Übersicht auf “Zeige Details” eines Mandanten, Knoten oder Standort.
+Objekte die im Root-Container abgelegt werden, sind global für alle Benutzer am System sichtbar. Somit eigent sich der Root-Container
+ideal für Objekte, welche von unterschiedlichen Organisationseinheiten oder Mandanten genutzt werden sollen. Beispiele dafür sind der Zeitrum `24x7` oder die Servicevorlage `Ping`.
 
-Dort kann man zwischen zwei verschiedenen Ansichten auswählen. Die Container ansicht zeigt alle Untercontainer inklusive der Hosts des gewählten Containers an.
+!!! danger "Wichtig"
+    Objekte welche dem Root-Container zugewiesen wurden, können später nicht mehr in einen anderen Container verschoben werden!
 
-Die Container Karte hingegen zeigt eine logische Karte der Struktur des gewählten Containers.
+
+Benutzer, welche Schreibzugriff auf den Root-Container haben, sind globale Systemadministratoren. Sie können alle Objekte einsehen und bearbeiten.
+Globale Systemadministratoren sind mit einer goldenen Krone gekennzeichnet.
+![Root-Container Benutzer](/images/configuration/root-container-user.png){align=center}
 
 
 ## Mandanten
 
-Mandanten sind Spezifische Container in openITCOCKPIT die zur Strukturierung und Granularer Berechtigung dienen.
+Mandanten sind spezifische Container in openITCOCKPIT die zur Strukturierung und granularer Berechtigung dienen. Mandanten können nur als direkte Untercontainer des Root-Containers erstellt werden.
 
-Sie unterscheiden sich von normalen Containern darin, dass Sie neben dem Namen zusätzliche Eigenschaften enthalten.
+Objekte die einem Mandanten zugewiesen werden, können von allen Benutzern des Mandanten genutzt werden. Somit sind sie geeignet
+Kontakte, Kontaktgruppen, Servicevorlagen und Zeiträume, welche von der kompletten Organisation genutzt werden sollen, zu speichern.
 
-Diese sind
+Zu einem Mandanten können zusätzlich noch die folgenden Eigenschaften gespeichert werden:
+- Name
+- Beschreibung
+- Vor- und Nachname
+- Straße
+- Postleitzahl
+- Stadt
 
--   Beschreibung
--   Vorname
--   Nachname
--   Straße
--   Postleitzahl
--   Stadt
-
-Ein Mandant bildet die Grundlage für weitere Container vom Typ Standort oder einfache Knoten.
-
-### Details
-
-Um eine Übersicht der untercontainer sowie deren Inhalt zu bekommen, klickt man in der Mandanten Übersicht auf “Zeige Details” eines Mandanten.
-
-Dort kann man zwischen zwei verschiedenen Ansichten auswählen. Die Container ansicht zeigt alle Untercontainer inklusive der Hosts des gewählten Containers an.
-
-Die Container Karte hingegen zeigt eine logische Karte der Struktur des gewählten Containers.
+Ein Mandant bildet die Grundlage für weitere Container vom Typ Standort oder Knoten.
 
 
 ## Standorte
 
-Standorte sind Spezifische Container in openITCOCKPIT die zur Strukturierung und Granularer Berechtigung dienen.
+Standorte sind spezifische Container in openITCOCKPIT die zur Strukturierung und granularer Berechtigung dienen.
 
-Sie unterscheiden sich von normalen Containern darin, dass Sie neben dem Namen zusätzliche Eigenschaften enthalten.
+Sofern das _OpenStreetMap Module_ installiert ist, werden Hosts und Services anhand der Standorte automatisch auf einer Landkarte zusammengefasst.
 
-Diese sind
+Ein Standort hat die folgenden Eigenschaften:
+- Name
+- Beschreibung
+- Längen- und Breitengrad
+- Zeitzone
 
--   Beschreibung
--   Breitengrad
--   Längengrad
--   Zeitzone
 
-Standorte können, wenn die Breiten und Längengrad informationen angegeben sind, auch über ein Modul automatisiert auf einer Karte angezeigt werden.
+## Knoten
+
+Ein Container vom Type Knoten wird in der Regel zur Darstellung interner Strukturen und Abteilungen genutzt. Einem Knoten können dieselben Objekttypen wie einem Standort zugewiesen werden.
+
+## Containerverwaltung
+
+Über den Menüpunkt Containerverwaltung kann eine Liste aller Container aufgerufen werden. Es stehen verschiedene Darstellungsmöglichkeiten zur Verfügung.
+
+Über den Punkt `Zeige Details` kann eine detailierte Übersicht über den ausgewählten Container aufgerufen werden. Diese zeigt eine Liste von allen Objekten, welche sich im ausgewählten Container befindet.
+Zur besseren Übersicht kann der Container auch als ein Graph angezeigt werden.
+
+![Root-Container Benutzer](/images/configuration/container-graph.png){align=center}
+
