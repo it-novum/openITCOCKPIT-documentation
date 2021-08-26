@@ -1,3 +1,18 @@
+## Bootstrap
+
+### badges
+
+<span class="badge badge-success">+ New</span>
+
+<span class="badge badge-success"><i class="fa fa-retweet"></i> Refresh monitoring configuration</span>
+
+<span class="badge badge-primary">Continue</span>
+
+### keyboard keys
+
+Klicken sie auf <kbd><kbd>Objects</kbd> <i class="fa fa-arrow-right"></i> <kbd>Commands</kbd></kbd> und dann...
+
+
 ## PNG
 
 Original (1963x1219)
