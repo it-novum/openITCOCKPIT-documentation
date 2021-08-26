@@ -1,0 +1,1 @@
+../../de/docs/copyright_year.js

@@ -38,12 +38,12 @@ docker build . -t openitcockpit/mkdocs
 
 3. Run Docker Container (German Docs [🇩🇪])
 ```
-docker run --rm -it -v "$PWD/de":/docs -w /docs -p 8000:8000 openitcockpit/mkdocs
+docker run --rm -it -v "$PWD":/docs -w /docs/de -p 8000:8000 openitcockpit/mkdocs
 ```
 
 3. Run Docker Container (English Docs [🇺🇸])
 ```
-docker run --rm -it -v "$PWD/en":/docs -w /docs -p 8000:8000 openitcockpit/mkdocs
+docker run --rm -it -v "$PWD":/docs -w /docs/en -p 8000:8000 openitcockpit/mkdocs
 ```
 
 4. Open in Web Browser

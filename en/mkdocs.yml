@@ -10,16 +10,30 @@ nav:
     - 'Hosts': 'Frontend/02-hosts.md'
 
 extra_javascript:
+  - vendor/jquery-3.6.0.min.js
+  - vendor/featherlight-v.1.7.14/release/featherlight.min.js
   - copyright_year.js
+
 markdown_extensions:
     - toc:
         permalink: True
     - pymdownx.highlight
     - pymdownx.superfences
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
     - attr_list
     - def_list
     - markdown_include.include:
           base_path: docs
+    - admonition
+    - featherlight
+
+extra_css:
+  - bootstrap-selection.css
+  - vendor/font-awesome-4.7.0/css/font-awesome.min.css
+  - vendor/featherlight-v.1.7.14/release/featherlight.min.css
+  - oitc.css
 
 plugins:
   - search
@@ -27,7 +41,7 @@ plugins:
 #  Theme docs: https://squidfunk.github.io/mkdocs-material/getting-started/
 theme:
   name: material
-  language: en
+  language: de
   logo: images/logo/openitcockpit-light.png
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -44,8 +58,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-  features:
-    - navigation.expand
+
 
 
 copyright: Copyright &copy; 2016 - <span id="copyright-year">YYYY</span> it-novum GmbH
@@ -67,3 +80,4 @@ extra:
     - link: /en/
       name: en - English
       lang: en
+
