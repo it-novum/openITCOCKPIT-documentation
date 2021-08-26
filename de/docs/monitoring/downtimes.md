@@ -1,12 +1,12 @@
 ## Wartungszeiten
 
-Unter den Wartungszeiten können eine Reihe von Wartungszeiträumen für Host, Services, Hostgruppen und Container erstellt werden. 
+Unter den Wartungszeiten können eine Reihe von Wartungszeiträumen für Host, Services, Hostgruppen und Container erstellt werden.
 
 Wartungszeiten werden in den Reports nicht als Ausfälle angesehen.
 
 ### Host Wartungszeit
 
-Eine Host Wartungszeit ist ein Wartungszeitraum für einen einzelne Hosts oder einzelne Hosts und deren Services. 
+Eine Host Wartungszeit ist ein Wartungszeitraum für einen einzelne Hosts oder einzelne Hosts und deren Services.
 
 ### Service Wartungszeit
 
@@ -14,15 +14,15 @@ Eine Service Wartungszeit ist ein Wartungszeitraum für einen oder mehrere Servi
 
 ### Hostgruppen Wartungszeit
 
-Eine Hostgruppen Wartungszeit ist ähnlich wie ein Host Wartungszeitraum. Hier können jedoch ganze Hostgruppen sowie deren Services in eine Wartungszeit aufgenommen werden. 
+Eine Hostgruppen Wartungszeit ist ähnlich wie ein Host Wartungszeitraum. Hier können jedoch ganze Hostgruppen sowie deren Services in eine Wartungszeit aufgenommen werden.
 
 ### Container Wartungszeit
 
-Eine Container Wartungszeit ermöglicht es komplette Container in openITCOCKPIT in einen Wartungszeitraum einzutragen. Hierbei kann ausgewählt werden, ob nur der angegebene Container selbst oder zusätzlich rekursiv seine Kind Container mit in die Wartungszeit aufgenommen werden sollen 
+Eine Container Wartungszeit ermöglicht es komplette Container in openITCOCKPIT in einen Wartungszeitraum einzutragen. Hierbei kann ausgewählt werden, ob nur der angegebene Container selbst oder zusätzlich rekursiv seine Kind Container mit in die Wartungszeit aufgenommen werden sollen
 
 ### Wiederkehrende Wartungszeit
 
-Für alle oben genannten Wartungszeit-typen können wiederkehrende Wartungszeiten erstellt werden. Dazu muss die Option “Wiederkehrenden Wartungszeit” aktiviert sein. Anschließend hat man anstatt der Standardmäßigen "Von - Bis" Eingabefelder nun Ein feld für die Startzeit, die Dauer der Wartungszeit und an welchem Wochentag oder an welchem Tag des Monats die Wartungszeit stattfinden soll. 
+Für alle oben genannten Wartungszeit-typen können wiederkehrende Wartungszeiten erstellt werden. Dazu muss die Option “Wiederkehrenden Wartungszeit” aktiviert sein. Anschließend hat man anstatt der Standardmäßigen "Von - Bis" Eingabefelder nun Ein feld für die Startzeit, die Dauer der Wartungszeit und an welchem Wochentag oder an welchem Tag des Monats die Wartungszeit stattfinden soll.
 
 ### Wartungszeit Abbrechen
 
@@ -34,6 +34,6 @@ Möchte man mehrere Wartungszeiten abbrechen, so markiert man die entsprechenden
 
 ## Systemausfall
 
-Systemausfälle sind Ausfälle des openITCOCKPIT-Servers selbst. Sie müssen manuell erstellt werden. 
+Systemausfälle sind Ausfälle des openITCOCKPIT-Servers selbst. Sie müssen manuell erstellt werden.
 
 Zeitrahmen, die durch Systemausfälle definiert sind, werden bei der Berichtserstellung ignoriert.

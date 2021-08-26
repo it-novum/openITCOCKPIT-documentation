@@ -1,6 +1,6 @@
 ## Kontakte
 
-Kontakte werden in openITCOCKPIT genutzt um Benachrichtigungen zu versenden. Diese Benachrichtigungen können je nach im Kontakt konfiguriertem Kommando beispielsweise per E-Mail, Browser Push Benachrichtigung oder mit Erweiterungen auch über SMS, Chat Benachrichtigung oder ähnlichem versendet werden. 
+Kontakte werden in openITCOCKPIT genutzt um Benachrichtigungen zu versenden. Diese Benachrichtigungen können je nach im Kontakt konfiguriertem Kommando beispielsweise per E-Mail, Browser Push Benachrichtigung oder mit Erweiterungen auch über SMS, Chat Benachrichtigung oder ähnlichem versendet werden.
 
 ### Neuen Kontakt erstellen
 
@@ -8,7 +8,7 @@ Um einen neuen Kontakt zu erstellen, klicken Sie zunächst auf die Schaltfläche
 
 Danach wählen Sie im Formular einen oder mehrere Container aus in dem der Kontakt verfügbar sein soll und vergeben einen Namen sowie entweder eine E-Mail Adresse oder eine Telefonnummer.
 
-Anschließend wählen Sie die Benachrichtigungsmethode für den Host aus. Dazu wählen Sie die Zeitspanne und mindestens ein Kommando aus. 
+Anschließend wählen Sie die Benachrichtigungsmethode für den Host aus. Dazu wählen Sie die Zeitspanne und mindestens ein Kommando aus.
 
 Damit die Benachrichtigungen für den Kontakt auch versendet werden, muss die Option “Hostbenachrichtigung aktiviert” aktiv sein.
 
@@ -124,7 +124,7 @@ Anschließend erstellen Sie einen neuen [Incoming Webhook.](https://docs.matterm
 ![](/images/mattermost-webhooks.png)
 
 Sobald Sie auf "Save" klicken, wird Mattermost Ihnen eine Webhook URL anzeigen. For Example: [*http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte*](http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte). Kopieren Sie diese in eine Textdatei. Sie wird später noch benötigt.  
- 
+
 
 #### Selbst signierte Zertifikate oder private IP-Adressen
 
@@ -136,8 +136,8 @@ Wenn Sie private IP-Adressen verwenden, müssen Sie zuerst das Netzwerk oder die
 
 Lesen Sie auch: [Allow untrusted internal connections to](https://docs.mattermost.com/administration/config-settings.html#allow-untrusted-internal-connections-to)
 
-Bei der Verwendung von Selbst signierten Zertifikaten müssen Sie die Option*EnableInsecureOutgoingConnections* in Ihrer Mattermost's *config.json aktivieren.*  
- 
+Bei der Verwendung vonSelbst signierten Zertifikaten müssen Sie die Option*EnableInsecureOutgoingConnections* in Ihrer Mattermost's *config.json aktivieren.*  
+
 
 ```plaintext
 "EnableInsecureOutgoingConnections": true,
@@ -188,7 +188,7 @@ Unter "Systemkonfiguration → APIs → Slack" sind die Einstellungen für das S
 
 | Feld Name | Erforderliches Feld | Beschreibung |
 | --- | --- | --- |
-| Webhook URL | :warning:  | Definiert die Adresse des Slack-Servers, an den das Modul die Benachrichtigungen senden soll **Example**: [https://hooks.slack.com/services/](https://hooks.slack.com/services/)[...](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
+| Webhook URL | :warning:  | Definiert die Adresse des Slack-Servers, an den das Modul die Benachrichtigungen senden soll **Example**:[https://hooks.slack.com/services/](https://hooks.slack.com/services/)[...](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
 | OAuth Access Token | :warning: | Das Token erhält man von Slack für seinen Workspace Wird nur benötigt, wenn die Zwei-Wege Integration aktiviert ist |
 | Enable Two-Way Integration |     | Über die Zwei-Wege Integration ist es Slack möglich Acknowledgements für Host und Services an openITCOCKPIT zu senden Für diese Option ist es erforderlich, dass der openITCOCKPIT Server über das Internet erreichbar ist |
 | Request URL |     | Wird von openITCOCKPIT generiert und gibt die Webhook URL für Slack an Zuerst muss ein benutzerdefinierter API-Key) mit openITCOCKPIT erstellt werden |
@@ -375,7 +375,7 @@ Als Table muss 'Incident' ausgewählt werden.
 
 Der Wert für View entspricht dem Names der eben selbst definierten Incident View.
 
-Als Condition sollte 'Caller' → 'is' → 'openITCOCKPIT' definiert werden.
+Als Condition sollte 'Caller' → 'is'→ 'openITCOCKPIT' definiert werden.
 
 Der Wert für Caller entspricht dem Names des für openITCOCKPIT angelegten ServiceNow Benutzers.
 
@@ -510,7 +510,7 @@ Beim Installieren des Module sollten diese automatisch angelegt werden.
 
 Sollte die Two-Way Integration nicht funktionieren, sollte überprüft werden, ob das sog. **"full chained" Zertifikat** genutzt wird. (Wird mit LetsEncrypt automatisch erstellt)
 
-Um in ServiceNow den Debug Output des Business Rule Aufrufs zu erhalten, Beispielsweise beim ändern von Incidents, muss im Menü zu 'System Diagnostics' → 'Debug Business Rule' navigiert werden.
+Um in ServiceNow den Debug Output des Business Rule Aufrufs zu erhalten, Beispielsweise beim ändern von Incidents, muss im Menü zu 'System Diagnostics'→ 'Debug Business Rule' navigiert werden.
 
 Zum Aktivieren des Debug Modus muss auf den Link 'available here' und im sich darauf hin öffnenden Tab auf den Button 'Update' geklickt werden.
 
@@ -524,7 +524,7 @@ Die Debug Ausgabe sollte nun am Ende der Seite erscheinen.
 
 ### Benutzung
 
-Um Hosts / Services an ServiceNow anzubinden, muss dem jeweiligen 'Contact' der Hostcommand 'host-notify-by-servicenow' und der Servicecommand 'service-notify-by-servicenow' hinzugefügt werden.
+Um Hosts / Services an ServiceNow anzubinden, muss dem jeweiligen 'Contact' der Hostcommand'host-notify-by-servicenow' und der Servicecommand 'service-notify-by-servicenow' hinzugefügt werden.
 
 Alles Hosts / Services mit diesem Kontakt werden bei einer neuen Benachrichtigung als Incident an ServiceNow angebunden.
 
@@ -553,18 +553,18 @@ Beim Ändern des Incident State auf 'Closed' oder 'Resolved' wird zusätzlich de
 
 ### Was kann ich mit dem PagerDuty Modul tun?
 
-Mit Hilfe des PagerDuty Moduls kannst du Host- und Service-Benachrichtigungen von openITCOCKPIT direkt in einen PagerDuty Account bekommen.
+Mit Hilfe desPagerDuty Moduls kannst du Host- und Service-Benachrichtigungen von openITCOCKPIT direkt in einen PagerDuty Account bekommen.
 
 Im Gegensatz zu unserer E-Mail-Integration kann PagerDuty Tickets verschiedener Quellen strukturiert anzeigen und verwalten.
 
 Sobald auf einem Host oder Service ein Fehler auftritt, wird ein PagerDuty Ticket erstellt.  
- 
+
 
 Bei Verwendung der PagerDuty App können die Benachrichtigungen auch auf dem Smartphone empfangen werden. Mehrere Benachrichtigungen zu einem Host oder Service werden in einem Ticket zusammengefasst.
 
 Nach Konfiguration der Zwei-Wege Integration, werden Ticket Acknowledgements(Bestätigungen) auch wieder zurück ins openITCOCKPIT übertragen.
 
-Der Autor und ein Link zum Ticket werden in der Host / Service Acknowledgement Nachricht im openITCOCKPIT angezeigt.
+Der Autor und ein Link zum Ticket werden in der Host / ServiceAcknowledgement Nachricht im openITCOCKPIT angezeigt.
 
 Wenn der Host oder Service den Status Up oder Ok wiedererlangt, wird das PagerDuty Ticket automatisch geschlossen, sofern es noch geöffnet war.
 
@@ -572,7 +572,7 @@ Wenn der Host oder Service den Status Up oder Ok wiedererlangt, wird das PagerDu
 
 #### Was kann ich konfigurieren?
 
-Unter "Configuration / PagerDuty" sind die Einstellungen für das PagerDuty Modul zu finden.
+Unter "Configuration / PagerDuty" sind die Einstellungen für dasPagerDuty Modul zu finden.
 
 | Feld Name | Erforderliches Feld | Beschreibung |
 | --- | --- | --- |
@@ -591,8 +591,8 @@ Mit der einfachen Integration kann openITCOCKPIT Tickets in PagerDuty öffnen, e
 
 openITCOCKPIT kommuniziert mit PagerDuty über die API Version 2.
 
-Um dies zu tun, musst du zu erst einen API Key erstellen. Dazu navigierst du im PagerDuty Menü zum Punkt Configuration → Api Access.  
- 
+Um dies zu tun, musst du zu erst einenAPI Key erstellen. Dazu navigierst du im PagerDuty Menü zum Punkt Configuration → Api Access.  
+
 
 Klicke auf den "**Create New Api Key**" Button, gib eine Beschreibung ein, wähle API version 2 aus und bestätige mit "**Create Key**".
 
@@ -613,19 +613,19 @@ Hier ist es wichtig, dass als "Integration Type" aus der Auswahlbox ("Select a t
 ![](/images/pagerduty-addservice.png)
 
   
- 
+
 
 Die Option Incident Behavior muss auf "*Create incidents*" eingestellt werden!
 
 Klicke auf "**Add Service**" und kopiere den angezeigten "Integration Key".
 
-#### Zwei-Wege Integration
+#### Zwei-WegeIntegration
 
 Mit unserer Zwei-Wege Integration werden in PagerDuty erstellte Acknowledgements auch in dein openITCOCKPIT übertragen.
 
 Für die bidirektionale Integration muss ein Webhook erstellt werden.
 
-Navigiere zum Menüpunkt Configuration → Extensions.
+Navigiere zum Menüpunkt Configuration →Extensions.
 
 Klicke auf "**\+ New Extension**" und wähle "*Generic V2 Webhook*" aus.
 

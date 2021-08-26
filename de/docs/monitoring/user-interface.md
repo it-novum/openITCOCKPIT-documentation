@@ -109,7 +109,7 @@ Um Ihr Passwort zu ändern, können Sie dieses Formular nutzen. Dazu müssen Sie
 
 Der Browser bietet eine, für einen Benutzer sichtbare, Übersicht aller Container, deren Hosts sowie den Status der Host und Services.
 
-Die Darstellung des Host- und Servicestatus zeigt im Standard nur den Status der Hosts und Services an, die in dem aktuell gewählten Container liegen. 
+Die Darstellung des Host- und Servicestatus zeigt im Standard nur den Status der Hosts und Services an, die in dem aktuell gewählten Container liegen.
 
 Mit der Einstellung `Rekursiver Browser` in den Profileinstellungen wird der Gesamtstatus aller, für einen Benutzer, sichtbaren Hosts und Services angezeigt.
 

@@ -20,7 +20,7 @@ Für den API Key muss nur eine Beschreibung vergeben werden. In dem Feld "API ke
 
 ![generate new api key](/images/profile-newapikeypen.png)
 
-Zum Schluss muss nur noch auf Speichern gedrückt werden und der API-Key ist erstellt. 
+Zum Schluss muss nur noch auf Speichern gedrückt werden und der API-Key ist erstellt.
 
 Die erstellten API-Keys können über die Liste “API keys” eingesehen werden.
 

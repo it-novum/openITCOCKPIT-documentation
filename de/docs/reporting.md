@@ -6,11 +6,11 @@ Sofortige Berichte in openITCOCKPIT sind eine Variante der Berichte, die als HTM
 
 Um einen Sofortigen Bericht zu erstellen klicken Sie zunächst in der Sofortige Berichte Übersicht auf die Schaltfläche “Neu”.
 
-Anschließend wählen Sie im Formular einen Container aus, vergeben einen Namen und wählen den Objekttyp aus, der ausgewertet werden soll. 
+Anschließend wählen Sie im Formular einen Container aus, vergeben einen Namen und wählen den Objekttyp aus, der ausgewertet werden soll.
 
 Je nach gewähltem Objekttyp wählen Sie im darauffolgenden feld entweder Hosts, Hostgruppen, Services oder Servicegruppen aus, die ausgewertet werden sollen.
 
-Der Zeitraum gibt an wann die Auswertungszeiten stattfinden sollen. 
+Der Zeitraum gibt an wann die Auswertungszeiten stattfinden sollen.
 
 Der Reflektionszustand definiert ob entweder nur ein weicher und harter Zustand (hard state und soft state) oder nur ein harter Zustand berücksichtigt werden soll.
 
@@ -18,7 +18,7 @@ Sie haben die möglichkeit wartungszeiten im Bericht zu berücksichtigen, dazu w
 
 Ist die Option “Zusammenfassungsanzeige” ausgewählt, wird anstatt der Auflistung von einzelnen Hosts und deren Services nur eine Gesamte ansicht der Status von Host und Services angezeigt.
 
-Möchten Sie einen Bericht in einem Intervall von Tag, Woche, Monat oder Jahr automatisiert verschicken, so müssen Sie die Option “Sende E-Mail” aktivieren. 
+Möchten Sie einen Bericht in einem Intervall von Tag, Woche, Monat oder Jahr automatisiert verschicken, so müssen Sie die Option “Sende E-Mail” aktivieren.
 
 Dort können Sie einem oder mehreren Benutzern den Bericht schicken.
 
@@ -37,7 +37,7 @@ Danach bekommen Sie den Bericht im Browser angezeigt oder aber als Download zur 
 
 Der Aktuelle Statusbericht generiert einen Bericht im HTML oder PDF Format anhand von gewählten Services.
 
-Neben den Status Filter funktionen kann zusätzlich nach Bestätigungen, Wartungszeiten und dem Prüfungstyp gefiltert werden. 
+Neben den Status Filter funktionen kann zusätzlich nach Bestätigungen, Wartungszeiten und dem Prüfungstyp gefiltert werden.
 
 Der Generierte Bericht enthält neben dem Hoststatus der gewählten Services auch die verschiedenen Metriken (Performance Daten) der Services.
 
@@ -49,7 +49,7 @@ Wartungszeitberichte in openITCOCKPIT geben aufschluss darüber, welche Hosts od
 
 ### Wartungszeitbericht erstellen
 
-Um einen Wartungszeitbericht zu erstellen, klicken Sie im Hauptmenü auf den Punk “Wartungszeitberichte”. 
+Um einen Wartungszeitbericht zu erstellen, klicken Sie im Hauptmenü auf den Punk “Wartungszeitberichte”.
 
 Dort wählen Sie aus ob nur Hosts oder Host und Services ausgewertet werden sollen.
 
@@ -71,13 +71,13 @@ Um einen Autoreport zu erstellen, klciken Sie zunächst auf die Schaltfläche �
 
 Es öffnet sich der Autoreport Wizard, der Sie durch die Erstellung des Reports begleiten wird.
 
-Wählen Sie zu erst einen Container für den Report aus und vergeben einen Namen. 
+Wählen Sie zu erst einen Container für den Report aus und vergeben einen Namen.
 
 Danach wählen Sie einen Zeitraum aus der zur Auswertung dient.
 
-Der Bewertungszeitraum definiert den Zeitraum, ab wann ausgewertet werden soll. 
+Der Bewertungszeitraum definiert den Zeitraum, ab wann ausgewertet werden soll.
 
-Der Sendungsintervall definiert den Zeitraum, wann der Report versendet werden soll. 
+Der Sendungsintervall definiert den Zeitraum, wann der Report versendet werden soll.
 
 Danach geben Sie entweder eine Garantierte Verfügbarkeit in Prozent an oder die Maximale Anzahl von Ausfällen.
 
@@ -91,9 +91,9 @@ Um Zusätzlich auch Feiertage zu berücksichten, aktivieren Sie die Option “Be
 
 Damit der Bericht versendet werden kann, muss zudem noch mindestens ein Benutzer ausgewählt werden.
 
-Im nächsten Schritt wählen Sie die Hosts aus die in dem Bericht ausgewertet werden sollen. 
+Im nächsten Schritt wählen Sie die Hosts aus die in dem Bericht ausgewertet werden sollen.
 
-Es erscheint eine übersicht der Services aller gewählten Hosts. Hier können Sie auswählen wie diese ausgewertet werden sollen. 
+Es erscheint eine übersicht der Services aller gewählten Hosts. Hier können Sie auswählen wie diese ausgewertet werden sollen.
 
 Im letzten Schritt sehen Sie noch eine Übersicht der konfigurierten Einstellungen für den Bericht. Wenn alles passt, klicken Sie weiter auf “Fertig”
 
@@ -108,4 +108,4 @@ Im Hauptmenü unter Systemkonfiguration → System → Autoreport Globals lassen
 ![](/images/autoreportmodule-globalsinfo.png)
 
 
- Bitte Beachten Sie, dass die Optionen die Sie dort setzen sich auf alle über das Autoreport Modul generierten Berichte auswirkt!
+Bitte Beachten Sie, dass die Optionen die Sie dort setzen sich auf alle über das Autoreport Modul generierten Berichte auswirkt!

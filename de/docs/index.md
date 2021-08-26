@@ -10,7 +10,7 @@
 *Grafik: openITCOCKPIT installiert auf einem Raspberry Pi 4*
 
 ## Demo
-Sie möchten openITCOCKPIT unkompliziert ausprobieren? Gerne können Sie sich auf unserem [Demo System](https://demo.openitcockpit.io/) austoben. Dieses wird täglich um 17:00 Uhr zurückgesetzt.
+Sie möchten openITCOCKPIT unkompliziert ausprobieren? Gerne können Sie sich auf unserem [Demo System](https://demo.openitcockpit.io/) austoben. Dieses wird täglich zurückgesetzt.
 
 ## Sicherheit
 

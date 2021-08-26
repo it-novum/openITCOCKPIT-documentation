@@ -1,4 +1,4 @@
-Die Kommandos sind ein essenzieller Bestandteil von openITCOCKPIT. Diese definieren, wie und mit welchen Parametern ein Kommando skript aufgerufen werden soll. 
+Die Kommandos sind ein essenzieller Bestandteil von openITCOCKPIT. Diese definieren, wie und mit welchen Parametern ein Kommando skript aufgerufen werden soll.
 
 In openITCOCKPIT haben Sie die möglichkeit Service, Host, Benachrichtigungs und Ereignisbehandler (Eventhandler) kommandos zu definieren.
 
@@ -20,7 +20,7 @@ Wählen Sie Ihren Kommandotyp aus
 
 ### Service Prüfkommando
 
-Ein Service Prüfkommando ist ein Kommando, welches von der Monitoring engine ausgeführt wird. Diese art Kommandos werden i.d.R auf dem openITCOCKPIT Server unter dem pfad `/opt/openitc/nagios/libexec` abgelegt. 
+Ein Service Prüfkommando ist ein Kommando, welches von der Monitoring engine ausgeführt wird. Diese art Kommandos werden i.d.R auf dem openITCOCKPIT Server unter dem pfad `/opt/openitc/nagios/libexec` abgelegt.
 
 Über Argumente ($ARG1$ - $ARG32$) können beispielsweise Schwellwerte vom Service an das Kommando übergeben werden. Im Kommando selbst wird nur der Name für ein Argument vergeben. Den Wert erhält es durch einen Service.
 
@@ -35,7 +35,7 @@ Benachrichtigungskommandos sind Kommandos, die von den Kontakten in openITCOCKPI
 
 ### Ereignisbehandlerkommando (Eventhandler)
 
-– Folgt – 
+– Folgt –
 
 ### Standardmakros und Benutzerdefinierte Makros
 

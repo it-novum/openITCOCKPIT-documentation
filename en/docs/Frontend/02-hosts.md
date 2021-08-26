@@ -9,7 +9,7 @@ In der Hostübersicht findet man alle in openITCOCKPIT bekannten Hosts. Diese si
 
 #### Überwacht
 
-Unter dem Reiter “Überwacht” findet man alle aktuell überwachten Hosts die auch der Monitoring Engine bekannt sind. 
+Unter dem Reiter “Überwacht” findet man alle aktuell überwachten Hosts die auch der Monitoring Engine bekannt sind.
 
 #### Nicht überwacht
 
@@ -21,7 +21,7 @@ Deaktivierte Hosts werden beim ausführen von checks ignoriert. Sie können zu e
 
 #### Gelöscht
 
-Hier finden sich alle gelöschten hosts. zusätzlich wird hier angezeigt, ob die Performanche daten zu dem gelöschten Host bereits gelöscht wurden. 
+Hier finden sich alle gelöschten hosts. zusätzlich wird hier angezeigt, ob die Performanche daten zu dem gelöschten Host bereits gelöscht wurden.
 
 ## Host optionen
 
@@ -29,7 +29,7 @@ In der Hostübersicht befinden sich zahlreiche optionen um einen Host modifizier
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-options.png)
 
-### Teilen 
+### Teilen
 
 Hier kann der host in andere Container geteilt werden. Die Option entspricht den Geteilten Containern beim Host erstellen / editieren.
 
@@ -59,7 +59,7 @@ Hierüber kann die einrichtung für einen openITCOCKPIT Agent erfolgen. Es wird 
 
 ### Von Autoreport verwendeter Host
 
-Mit dieser Option können Sie feststellen ob ein Host in einem Autoreport verwendet wird. 
+Mit dieser Option können Sie feststellen ob ein Host in einem Autoreport verwendet wird.
 
 ### Checkmk Erkennung
 
@@ -67,13 +67,13 @@ Hierüber kann ein Checkmk discovery gestartet werden.
 
 ### Von der Ereigniskorrelation verwendeter Host
 
-Mit dieser Option können Sie feststellen ob ein Host in einem Ereigniskorrelation verwendet wird. 
+Mit dieser Option können Sie feststellen ob ein Host in einem Ereigniskorrelation verwendet wird.
 
 ## Host erstellen
 
 Um einen Host zu erstellen wählen Sie zunächst einen Contaner aus, in dem der Host erstellt werden soll. Bitte beachten Sie dass ein nachträgliches ändern des Containers für einen Host **_nicht möglich_** ist!
 
-Danach wählen Sie eine Hostvorlage aus, von dem der neue Host abgeleitet werden soll. 
+Danach wählen Sie eine Hostvorlage aus, von dem der neue Host abgeleitet werden soll.
 
 Sie können anschließend einen Host Namen und eine Host Adresse vergeben, oder aber Sie vergeben eine Host Adresse und lassen den Hostnamen über die DNS-Suche automatisch vervollständigen.
 
@@ -81,15 +81,15 @@ Beim Abspeichern haben Sie die möglichkeit direkt neue Services zum Host anzule
 
 ### Geteilte Container
 
-Über die Geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben. Diese Option steht zudem auch in der Hostübersicht unter der Host bearbeitungsoption “Teilen” zur verfügung. 
+Über die Geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben. Diese Option steht zudem auch in der Hostübersicht unter der Host bearbeitungsoption “Teilen” zur verfügung.
 
 ### Benachrichtigungen
 
-Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird. 
+Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird.
 
 ### Prometheus Exporters
 
-– Folgt – 
+– Folgt –
 
 # Host Browser
 
@@ -105,43 +105,43 @@ Die Navigationsleiste verlinkt zu verschiedenen Aktionen zu einem Host
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-browserresetchecktime.png)
 
- Hiermit wird die Prüfzeit des Hosts zurückgesetzt. Dies hat den selben effekt wie “Prüfzeitraum zurücksetzen” in den Statusinformationen
+Hiermit wird die Prüfzeit des Hosts zurückgesetzt. Dies hat den selben effekt wie “Prüfzeitraum zurücksetzen” in den Statusinformationen
 
 ### Objekt Dokumentation
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-browserdocumentation.png)
 
- Hier kann eine Dokumentation zum Host eingetrgen werden 
+Hier kann eine Dokumentation zum Host eingetrgen werden
 
 ### Benachrichtigungen
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-browsernotifications.png)
 
- Um eine Übersicht aller gesendeten Benachrichtigungen zum Host zu bekommen klicken Sie auf diese Schaltfläche 
+Um eine Übersicht aller gesendeten Benachrichtigungen zum Host zu bekommen klicken Sie auf diese Schaltfläche
 
 ### Verlaufshistorie
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-browsercheckhistory.png)
 
- Die Verlaufshistorie enthält das Ergebnis jeder überprüfung des Hosts mit Datum, Prüfversuch, Statustyp und der Ausgabe.
+Die Verlaufshistorie enthält das Ergebnis jeder überprüfung des Hosts mit Datum, Prüfversuch, Statustyp und der Ausgabe.
 
 ### Statushistorie
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-browserstatehistory.png)
 
- Die Statushistorie enthält die Ergebnisse wann der Host seinen Status gewechselt hat
+Die Statushistorie enthält die Ergebnisse wann der Host seinen Status gewechselt hat
 
 ### Bestätigungshistorie
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-browseracknowledgmenthistory.png)
 
- Die Bestätigungshistorie enthalt alle bestätigungen zum status des Hosts
+Die Bestätigungshistorie enthalt alle bestätigungen zum status des Hosts
 
 ### Host editieren
 
 ![](/openitcockpit-v4-dokumentation/attachments/hosts-browseredit.png)
 
- Hier kann der Host editiert werden
+Hier kann der Host editiert werden
 
 ### Mehr Aktionen
 
@@ -173,7 +173,7 @@ Beim Prüfzeitraum zurücksetzen wird die nächste überprüfung zum nächstmög
 
 ### Plane Wartung
 
-Über diese Option kann ein Wartungszeitraum für diesen Host eingerichtet werden. Hier gibt man an was genau in dem Wartungszeitraum enthalten sein soll, ein Kommentar zum Wartungszeitraum sowie die Zeitspanne von bis wann die Wartung stattfinden soll 
+Über diese Option kann ein Wartungszeitraum für diesen Host eingerichtet werden. Hier gibt man an was genau in dem Wartungszeitraum enthalten sein soll, ein Kommentar zum Wartungszeitraum sowie die Zeitspanne von bis wann die Wartung stattfinden soll
 
 #### Einzelne Hosts
 
@@ -201,11 +201,11 @@ Mit dem passiven Übertragen von Prüfergebnissen, erhält der Host den angegebe
 
 ### Deaktiviere Benachrichtigungen
 
-Mit dieser Option können Sie benachrichtigungen für den Host oder den Host und seine Services vorübergehend deaktivieren 
+Mit dieser Option können Sie benachrichtigungen für den Host oder den Host und seine Services vorübergehend deaktivieren
 
 ### Benutzerdefinierte Hostbenachrichtigung senden
 
-Um eine Benutzerdefinierte Hostbenachrichtigung zu senden wählen Sie diese Option. Hier kann ausgewählt werden ob das senden der nachricht erzwungen werden soll. Hierbei wird der Benachrichtigungszeitraum sowie die deaktivierten Benachrichtigungen für den Host ignoriert. Zudem kann man auswählen ob die Benachrichtigung auch an die Eskalationskontakte gesendet werden soll. 
+Um eine Benutzerdefinierte Hostbenachrichtigung zu senden wählen Sie diese Option. Hier kann ausgewählt werden ob das senden der nachricht erzwungen werden soll. Hierbei wird der Benachrichtigungszeitraum sowie die deaktivierten Benachrichtigungen für den Host ignoriert. Zudem kann man auswählen ob die Benachrichtigung auch an die Eskalationskontakte gesendet werden soll.
 
 ## Geräte informationen
 
@@ -219,6 +219,6 @@ Die Zeitleiste gibt eine genaue Übersicht über den Host, was wann passiert ist
 
 ## Grafana
 
-Unter dem Reiter “Grafana” finden Sie das Grafana dashboard zu diesem Host. 
+Unter dem Reiter “Grafana” finden Sie das Grafana dashboard zu diesem Host.
 
 Hier werden alle verfügbaren graphen zu den Services des Hosts dargestellt

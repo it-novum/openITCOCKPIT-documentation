@@ -6,7 +6,7 @@ Diese Bietet eine Serviceerkennung für Hosts an und kann direkt über das Host 
 
 ### Checkmk Erkennung (Discovery)
 
-Wenn Sie einen Host anlegen, können Sie direkt nach dem Speichern eine Checkmk Serviceerkennung Starten. Dies erreichen Sie über den button “Speicher und Checkmk Erkennung ausführen” im Host erstellen Formular. 
+Wenn Sie einen Host anlegen, können Sie direkt nach dem Speichern eine Checkmk Serviceerkennung Starten. Dies erreichen Sie über den button “Speicher und Checkmk Erkennung ausführen” im Host erstellen Formular.
 
 Sie können anschließend den gewünschten Checkmk Agenten aus einer Liste auswählen. Diese Agenten können entweder die vorgefertigten “Führe Remoteerkennung aus” und “Führe SNMP Erkennung aus” oder aber auch selbst definierte sein.
 

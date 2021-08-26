@@ -6,7 +6,7 @@ Prometheus ist ein Open-Source Monitoring System, welches ursprünglich bei [Sou
 
 Im Gegensatz zu Nagios gibt es bei Prometheus keinen Status der über einen Exitcode oder ähnliches erzeugt wird. Prometheus ist ein Monitoring-System welches ausschließlich zum Erfassen und überwachen von Metriken geschaffen wurde. Auf deutsch: Es verarbeitet nur Zahlen.
 
-Der Status ergibt sich aus Bedingungen und Abfragen gegen die Metriken mit [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).
+Der Status ergibt sich aus Bedingungen und Abfragen gegen die Metriken mit[PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
 Eine typische Alert-Regel wäre zum Beispiel
 
@@ -38,11 +38,11 @@ Zusätzlich müssen auf dem zu Überwachenden System die entsprechenden Exporter
 
 #### Anlegen eines Exporters in openITCOCKPIT
 
-Um einen Prometheus Exporter in openITCOCKPIT anzulegen, klicken Sie im Hauptmenü Monitoring → Prometheus → Exporters. 
+Um einen Prometheus Exporter in openITCOCKPIT anzulegen, klicken Sie im Hauptmenü Monitoring → Prometheus → Exporters.
 
-In der Übersicht klicken Sie auf die Schaltfläche “Neu”. 
+In der Übersicht klicken Sie auf die Schaltfläche “Neu”.
 
-Im Formular geben Sie zunächst einen Container und einen Namen für den Exporter an. 
+Im Formular geben Sie zunächst einen Container und einen Namen für den Exporter an.
 
 Der Scrape-Intervall definiert den Zeitabstand in dem Prometheus Daten vom Exporter anfordert.
 
@@ -70,7 +70,7 @@ Dort wird am ende des Formulars die Konfiguration des Prometheus Exporters darge
 
 Hat man seinen Host entsprechend bearbeitet, speichert man ihn ab.
 
-Danach sollte ein Export der Konfiguration stattfinden. 
+Danach sollte ein Export der Konfiguration stattfinden.
 
 ##### Metriken, Services und Benachrichtigungen
 
@@ -82,7 +82,7 @@ Es werden alle durch den Exporter verfügbaren Metriken aufgelistet. Alle diese 
 
 ###### Benachrichtigungen
 
-Um Benachrichtigungen zu den Metriken einzurichten, muss ein oder mehrere Services aus den Metriken erstellt werden. 
+Um Benachrichtigungen zu den Metriken einzurichten, muss ein oder mehrere Services aus den Metriken erstellt werden.
 
 Dazu wählt man die entsprechende Metrik aus und erstellt die passende PromQL Abfrage.
 
@@ -97,9 +97,9 @@ Die Einzelnen "Services" findet mann dann unter Monitoring → Prometheus → Ab
 
 ![](/images/prometheus-alertrules.png)
 
-Auf einem Host selbst kann man dann nicht mehr erkennen, durch was ein Service überwacht wird. 
+Auf einem Host selbst kann man dann nicht mehr erkennen, durch was ein Service überwacht wird.
 
-Deshalb haben wir den `Service type` eingeführt. Prometheus Services sind dabei auch ganz normale Nagios Services. Im Hintergrund läuft ein openITCOCKPIT Dienst `systemctl status prometheus_bridge.service`   
+Deshalb haben wir den `Service type` eingeführt. Prometheus Services sind dabei auch ganz normale Nagios Services. Im Hintergrund läuft ein openITCOCKPIT Dienst `systemctl status prometheus_bridge.service`  
 welche alle 15 Sekunden den Status von Prometheus abfragt und dann passiv an Naemon übergibt. Somit macht also Prometheus das Monitoring, und Naemon verschickt dann Benachrichtigungen damit wir weiterhin Features wie Downtimes und Acknowledgements haben und so ist es auch möglich Prometheus einfach in EVKs, Autoreports und allem anderen zu nutzen.
 
 #### Troubleshooting

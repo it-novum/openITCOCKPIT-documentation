@@ -15,7 +15,7 @@ Was sich grundsätzlich geändert hat:
 
 Seit openITCOCKPIT Version 4 stehen pakete für das SNMPTrapModule bereit
 
-Dies kann einfach über die Kommandozeile installiert werden 
+Dies kann einfach über die Kommandozeile installiert werden
 
 ```plaintext
 apt install openitcockpit-module-snmptrap

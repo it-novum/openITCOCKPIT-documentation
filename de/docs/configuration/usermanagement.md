@@ -1,6 +1,6 @@
 ## Benutzer verwalten
 
-Benutzer in openITCOCKPIT werden hier verwaltet. 
+Benutzer in openITCOCKPIT werden hier verwaltet.
 
 In der Übersichtsseite findet man neben der Tabellarischen auflistung aller in openITCOCKPIT vorhandenen Benutzer auch die möglichkeit das Passwort eines Benutzers zurückzusetzen.
 
@@ -10,7 +10,7 @@ Um einen neuen Benutzer anzulegen klicken Sie auf die Schaltfläche “Neuer Lok
 
 Im sich nun öffnenden Formular wählen Sie zunächst die entsprechenden Container / Container Rollen aus, auf die der Benutzer zugriff haben soll.
 
-Sie können auch Container und Container Rollen auswählen. Hierbei ist zu beachten, dass Einzeln zugewiesene Container die Berechtigungen von Containerrollen überschreiben. Dies beutet, wenn ein Benutzer über eine Container Rolle lese und schreibrechte besitzt, kann dieses recht über den einzeln ausgewählten Container verändert werden. Dies hat den Vorteil, dass Berechtigungen für einzelne Container nicht in einer komplett neuen Containerrolle definiert werden müssen. 
+Sie können auch Container und Container Rollen auswählen. Hierbei ist zu beachten, dass Einzeln zugewiesene Container die Berechtigungen von Containerrollen überschreiben. Dies beutet, wenn ein Benutzer über eine Container Rolle lese und schreibrechte besitzt, kann dieses recht über den einzeln ausgewählten Container verändert werden. Dies hat den Vorteil, dass Berechtigungen für einzelne Container nicht in einer komplett neuen Containerrolle definiert werden müssen.
 
 ![container roles](/images/manageusers-containerroles.png)
 
@@ -47,7 +47,7 @@ Um eine Neue Benutzerrolle anzulegen klicken Sie auf die schaltfläche “Neu”
 
 Dort Vergeben Sie einen Namen und eine Beschreibung für die Neue Benutzerrolle.
 
-Weiter unten im Formular können Sie die entsprechenden Rechte vergeben. Die rechte können granular für einzelne Seiten und aktionen vergeben werden oder aber über die Schaltfläche “Massenaktionen” mehrere gleichzeitig. 
+Weiter unten im Formular können Sie die entsprechenden Rechte vergeben. Die rechte können granular für einzelne Seiten und aktionen vergeben werden oder aber über die Schaltfläche “Massenaktionen” mehrere gleichzeitig.
 
 Dort können dann entweder alle rechte, Index, Neu, Editier oder Lösch rechte vergeben werden, wobei Index, Neu Editieren und Löschen nacheinander angeklickt werden können um für jede Seite diese zu aktivieren.
 
@@ -63,7 +63,7 @@ Eine Benutzer Container Rolle kann für die Berechtigung von Benutzern verwendet
 
 ### Benutzer Container Rolle erstellen
 
-Beim erstellen einer Benutzer Container Rolle, vergibt man einen Namen und wählt die gewünschten Container aus. 
+Beim erstellen einer Benutzer Container Rolle, vergibt man einen Namen und wählt die gewünschten Container aus.
 
 ![containerroles add](/images/usercontainerroles-add.png)
 

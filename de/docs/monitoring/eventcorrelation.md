@@ -2,7 +2,7 @@
 
 Das Ereigniskorrelationsmodul in openITCOCKPIT ist eine sehr hilfreiche Komponente, wenn es darum geht, aus verschiedenen Services einen einzigen Gesamtstatus zu bekommen.
 
-Eine Ereigniskorrelation ist ein Virtueller Host, der Virtuelle Services hat. 
+Eine Ereigniskorrelation ist ein Virtueller Host, der Virtuelle Services hat.
 
 Beim Erstellen einer Ereigniskorrelation wird daher ein Host erstellt, der von einer Hostvorlage vom Typ “EVC Template” abgeleitet wird.
 
@@ -12,7 +12,7 @@ Diesen Virtuellen Host ist nachher in der Host Übersicht genau so sichtbar wie 
 
 Nachdem der Host für die Ereigniskorrelation erstell wurden kann man die Ereigniskorrelation selbst bearbeiten.
 
-In einer neuen Ereigniskorrelation ist Grundsätzlich anfangs eine einzige Ebene Sichtbar. Auf dieser Ebene klickt man auf die Schaltfläche “Neuer vService”. 
+In einer neuen Ereigniskorrelation ist Grundsätzlich anfangs eine einzige Ebene Sichtbar. Auf dieser Ebene klickt man auf die Schaltfläche “Neuer vService”.
 
 Mehrere Services können durch Logische Operatoren miteinander verbunden werden. Dabei wird nach einem Logischen Operator immer ein Virtueller Service (vService) erstellt, der den Status, der aus den Services und dem Operator resultiert, annimmt.
 

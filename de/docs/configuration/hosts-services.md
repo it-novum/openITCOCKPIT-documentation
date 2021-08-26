@@ -1,14 +1,14 @@
 ## Hostvorlagen
 
-Hostvorlagen sind ein essenzieller Bestandteil in openITCOCKPIT. Sie bilden die Vorlage für Hosts und sind eine der Grundvoraussetzung zum erstellen dafür. 
+Hostvorlagen sind ein essenzieller Bestandteil in openITCOCKPIT. Sie bilden die Vorlage für Hosts und sind eine der Grundvoraussetzung zum erstellen dafür.
 
-Ein Host leitet sich immer von einer Hostvorlage ab, kann aber die Werte, die in der Vorlage definiert wurden, überschreiben. 
+Ein Host leitet sich immer von einer Hostvorlage ab, kann aber die Werte, die in der Vorlage definiert wurden, überschreiben.
 
 ### Hostvorlage erstellen
 
 Um eine Hostvorlage zu erstellen, klicken Sie zunächst in der Hostvorlagen Übersicht auf die Schaltfläche “Neu”.
 
-Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sein soll und vergibt einen Namen. 
+Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sein soll und vergibt einen Namen.
 
 Nun gibt man einen Vorlagen typen an.
 
@@ -48,18 +48,18 @@ Nun gibt man einen Vorlagen typen an.
 
 #### Vorlagentypen
 
-Es gibt in openITCOCKPIT mehrere Hostvorlagen typen. Diese unterscheiden eine Vorlage ob sie entweder für einen Generischen Host oder zum Beispiel für einen Ereigniskorrelations Host sind. 
+Es gibt in openITCOCKPIT mehrere Hostvorlagen typen. Diese unterscheiden eine Vorlage ob sie entweder für einen Generischen Host oder zum Beispiel für einen Ereigniskorrelations Host sind.
 
-Ein normaler Host wird i.d.R. immer als Generischer Host angelegt. 
+Ein normaler Host wird i.d.R. immer als Generischer Host angelegt.
 
-Ein Prüfzeitraum ist ebenfalls eine Pflichtangabe ebenso wie ein Prüfungskommando. Ein Standardprüfungskommando für einen Host ist beispielsweise “check-host-alive”. Für dieses Kommando können hier auch direkt Argumente übergeben werden. 
+Ein Prüfzeitraum ist ebenfalls eine Pflichtangabe ebenso wie ein Prüfungskommando. Ein Standardprüfungskommando für einen Host ist beispielsweise “check-host-alive”. Für dieses Kommando können hier auch direkt Argumente übergeben werden.
 
 anschließend werden verschiedene Prüfungsintervalle gesetzt.
 
 
 #### Intervalle
 
-Damit Benachrichtigung zu einem Host status gesendet werden können, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 1 Stunden und 2 Minuten eine Benachrichtigung gesendet wird. 
+Damit Benachrichtigung zu einem Host status gesendet werden können, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 1 Stunden und 2 Minuten eine Benachrichtigung gesendet wird.
 
 Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden sowie mindestens ein Kontakt oder mindestens eine Kontaktgruppe.
 
@@ -75,15 +75,15 @@ Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwac
 
 ## Servicevorlagen
 
-Servicevorlagen sind ein essenzieller Bestandteil in openITCOCKPIT. Sie bilden die Vorlage für Services und sind eine der Grundvoraussetzung zum erstellen dafür. 
+Servicevorlagen sind ein essenzieller Bestandteil in openITCOCKPIT. Sie bilden die Vorlage für Services und sind eine der Grundvoraussetzung zum erstellen dafür.
 
-Ein Service leitet sich immer von einer Servicevorlage ab, kann aber die Werte, die in der Vorlage definiert wurden, überschreiben. 
+Ein Service leitet sich immer von einer Servicevorlage ab, kann aber die Werte, die in der Vorlage definiert wurden, überschreiben.
 
 ### Servicevorlage erstellen
 
 Um eine Servicevorlage zu erstellen, klicken Sie zunächst in der Servicevorlagen Übersicht auf die Schaltfläche “Neu”.
 
-Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sein soll und vergibt einen Namen. 
+Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sein soll und vergibt einen Namen.
 
 Nun gibt man einen Vorlagen typen an.
 
@@ -123,7 +123,7 @@ Nun gibt man einen Vorlagen typen an.
 
 #### Vorlagentypen
 
-Es gibt in openITCOCKPIT mehrere Servicevorlagen typen. Diese unterscheiden eine Vorlage ob sie entweder für einen Generischen Service, Ereigniskorrelationen, Checkmk, Prometheus oder den openITCOCKPIT Agenten sind. 
+Es gibt in openITCOCKPIT mehrere Servicevorlagen typen. Diese unterscheiden eine Vorlage ob sie entweder für einen Generischen Service, Ereigniskorrelationen, Checkmk, Prometheus oder den openITCOCKPIT Agenten sind.
 
 Services, welche über ein Modul oder den Agent erzeugt werden sind immer von dem entsprechendem Vorlagentyp.
 
@@ -145,7 +145,7 @@ Vorlage für einen Prometheus Service. Verfügbar über PrometheusModule
 
 ##### Agent Vorlagen
 
-Vorlage für einen openITCOCKPIT Agent Service. 
+Vorlage für einen openITCOCKPIT Agent Service.
 
 Ein Prüfzeitraum ist ebenfalls eine Pflichtangabe ebenso wie ein Prüfungskommando.
 
@@ -153,7 +153,7 @@ anschließend werden verschiedene Prüfungsintervalle gesetzt.
 
 #### Intervalle
 
-Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird. 
+Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird.
 
 
 Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden. Im gegensatz zu den Hostvorlagen muss hier kein Kontakt oder Kontaktgruppe hinterlegt werden.
@@ -161,7 +161,7 @@ Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum ange
 
 ## Servicevorlagengruppen
 
-Servicevorlagengruppen sind Sammlungen von Servicevorlagen, die entweder selbst erstellt werden können oder aber über installierbare Module verfügbar sind. Über Module verfügbare Servicevorlagengruppen sind zum jeweiligen Themengebiet passend zusammengefasste Servicevorlagen. 
+Servicevorlagengruppen sind Sammlungen von Servicevorlagen, die entweder selbst erstellt werden können oder aber über installierbare Module verfügbar sind. Über Module verfügbare Servicevorlagengruppen sind zum jeweiligen Themengebiet passend zusammengefasste Servicevorlagen.
 
 Servicevorlagengruppen können zu einem Host oder einer Hostgruppe zugewiesen werden. Das bedeutet, dass für alle Servicevorlagen einer Servicevorlagengruppe die entsprechenden Services auf dem zugewiesenen Host oder Hostgruppe erstellt wird.
 
@@ -176,19 +176,19 @@ Servicevorlagengruppen können zu einem Host oder einer Hostgruppe zugewiesen we
 
 ### Servicevorlagengruppen zuweisen
 
-Es gibt in openITCOCKPIT drei verschiedene Möglichkeiten Servicevorlagengruppen zuzuweisen. 
+Es gibt in openITCOCKPIT drei verschiedene Möglichkeiten Servicevorlagengruppen zuzuweisen.
 
 ![](/images/servicetemplategroups-allocate.png)
 
 #### Zuweisen zu Host
 
-Hier wird die aktuelle Servicevorlagengruppe zu einem einzelnen Host zugewiesen. Beim auswählen des Hosts werden alle zu erstellenden Services aufgelistet und können auch über die Auswahlbox abgewählt werden. 
+Hier wird die aktuelle Servicevorlagengruppe zu einem einzelnen Host zugewiesen. Beim auswählen des Hosts werden alle zu erstellenden Services aufgelistet und können auch über die Auswahlbox abgewählt werden.
 
 Sollte ein Service dieser Servicevorlagengruppe bereits auf dem Zielhost existieren, so wird dieser standardmäßig nicht zusätzlich erstellt, es sei denn man markiert diesen wieder in der Liste.
 
 ![](/images/servicetemplategroups-allocatetohost.png)
 
-#### Einer Hostgruppe zuweisen 
+#### Einer Hostgruppe zuweisen
 
 Hier wird die aktuelle Servicevorlage zu den Hosts einer Hostgruppe zugewiesen. Beim auswählen der Hostgruppe werden alle zugehörigen Hosts sowie die zu erstellenden Services für jeden einzelnen Host aufgelistet. Es besteht ebenso die möglichkeit einzelnen Services abzuwählen.
 
@@ -205,7 +205,7 @@ Sollte ein Service dieser Servicevorlagengruppe bereits auf einem der Hosts exis
 
 Um einen Host zu erstellen wählen Sie zunächst einen Container aus, in dem der Host erstellt werden soll. Bitte beachten Sie dass ein nachträgliches ändern des Containers für einen Host **_nicht möglich_** ist!
 
-Danach wählen Sie eine Hostvorlage aus, von dem der neue Host abgeleitet werden soll. 
+Danach wählen Sie eine Hostvorlage aus, von dem der neue Host abgeleitet werden soll.
 
 Sie können anschließend einen Host Namen und eine Host Adresse vergeben, oder aber Sie vergeben eine Host Adresse und lassen den Hostnamen über die DNS-Suche automatisch vervollständigen.
 
@@ -251,11 +251,11 @@ Beim Abspeichern haben Sie die möglichkeit direkt neue Services zum Host anzule
 
 #### Geteilte Container
 
-Über die Geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben. Diese Option steht zudem auch in der Hostübersicht unter der Host bearbeitungsoption “Teilen” zur verfügung. 
+Über die Geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben. Diese Option steht zudem auch in der Hostübersicht unter der Host bearbeitungsoption “Teilen” zur verfügung.
 
 #### Intervalle
 
-Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird. 
+Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird.
 
 
 #### Flap detection
@@ -273,7 +273,7 @@ Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwac
 
 ### Service erstellen
 
-Um einen Service zu erstellen klicken Sie in der Serviceübersicht zunächst auf die schaltfläche “Neu”. Im sich öffnenden Formular wählen Sie als erstes den Ziel Host aus, auf dem der Service erstellt werden soll. Anschließend wählen Sie eine Servicevorlage aus. Wenn nötig können Sie dem Service, abweichend vom Servicetemplate, einen Namen sowie eine Beschreibung geben. 
+Um einen Service zu erstellen klicken Sie in der Serviceübersicht zunächst auf die schaltfläche “Neu”. Im sich öffnenden Formular wählen Sie als erstes den Ziel Host aus, auf dem der Service erstellt werden soll. Anschließend wählen Sie eine Servicevorlage aus. Wenn nötig können Sie dem Service, abweichend vom Servicetemplate, einen Namen sowie eine Beschreibung geben.
 
 
 | Feld | Erforderlich | Beschreibung |
@@ -311,7 +311,7 @@ Um einen Service zu erstellen klicken Sie in der Serviceübersicht zunächst auf
 
 #### Intervalle
 
-Damit eine Benachrichtigung zu einem Service status gesendet werden kann, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der `CHECK_PING` vorlage ein Prüfungsintervall von 5 Minuten, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 7 Minuten eine Benachrichtigung gesendet wird. 
+Damit eine Benachrichtigung zu einem Service status gesendet werden kann, wird in der Servicekonfiguration mit einem Prüfung und Wiederholungsintervall sowie einer Maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der `CHECK_PING` vorlage ein Prüfungsintervall von 5 Minuten, ein Wiederholungsintervall von 1 Minute und eine Maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 7 Minuten eine Benachrichtigung gesendet wird.
 
 #### Benachrichtigungen
 
@@ -333,27 +333,27 @@ Host Standardeinstellungen definieren beispielsweise welcher Container und Diens
 
 Zunächst muss ein Container ausgewählt werden, in den die Daten Importiert werden sollen und vergeben einen Namen für die Standardeinstellung.
 
-Anschließend setzen Sie die Einstellungen, die den Importierten Hosts automatisch zugewiesen werden sollen. 
+Anschließend setzen Sie die Einstellungen, die den Importierten Hosts automatisch zugewiesen werden sollen.
 
-Dies betrifft die Hostvorlage, Geteilte Container und ob die Hosts auf dem Mastersystem oder auf einem Satelliten erstellt werden sollen. 
+Dies betrifft die Hostvorlage, Geteilte Container und ob die Hosts auf dem Mastersystem oder auf einem Satelliten erstellt werden sollen.
 
-Zusätzlich haben Sie die Möglichkeit Servicevorlagengruppen-Übereinstimmungen zu tätigen. 
+Zusätzlich haben Sie die Möglichkeit Servicevorlagengruppen-Übereinstimmungen zu tätigen.
 
 Dazu wählen Sie zuerst das Feld zu Übereinstimmung aus. Dort können Sie zwischen Host Name, Beschreibung, Adresse und Software auswählen.
 
-Danach geben Sie den Regulären Ausdruck an, der mit dem Zuvor ausgewählten Feld übereinstimmen muss. 
+Danach geben Sie den Regulären Ausdruck an, der mit dem Zuvor ausgewählten Feld übereinstimmen muss.
 
 Anschließend geben Sie die gewünschte Servicevorlagengruppe an.
 
 ### Importer
 
-Ein Importer stellt die Grundlage für das Importieren von Hosts. Hier wird die Datenquelle sowie die Konfiguration der Datenquellenzuordnung definiert. Die Voraussetzung für einen Importer sind Host-Standardeinstellungen. Diese müssen vor dem Erstellen des Importers erstellt werden. 
+Ein Importer stellt die Grundlage für das Importieren von Hosts. Hier wird die Datenquelle sowie die Konfiguration der Datenquellenzuordnung definiert. Die Voraussetzung für einen Importer sind Host-Standardeinstellungen. Diese müssen vor dem Erstellen des Importers erstellt werden.
 
 Als Datenquelle folgende zur verfügung:
 
 ###### CSV mit Header
 
-Hier hat die CSV Datei, die man Importieren möchte einen Header. Das bedeutet, dass die Spalten in der Tabelle mit Überschriften gekennzeichnet ist. Pflichtvoraussetzung für den Import ist hier ein Trennzeichen, Eindeutige Kennung, Hostname und Host Adresse. 
+Hier hat die CSV Datei, die man Importieren möchte einen Header. Das bedeutet, dass die Spalten in der Tabelle mit Überschriften gekennzeichnet ist. Pflichtvoraussetzung für den Import ist hier ein Trennzeichen, Eindeutige Kennung, Hostname und Host Adresse.
 
 ![](/images/importmopdule-csvwithheader.png)
 
@@ -371,11 +371,11 @@ Die Host-Standardeinstellungen müssen bei der Erstellung des Importers gesetzt 
 
 ![](/images/importmodule-editimporter.png)
 
-### Importierte Host 
+### Importierte Host
 
 ![](/images/importmodule-importhostoverview.png)
 
-In der Liste werden alle neuen oder bereits in das Monitoring aufgenommenen Host angezeigt. Alle bevorstehende Änderungen für Services, falls welche vorhanden sind, werden entsprechend angezeigt. Die Vollständigkeit der Eintragen werden mit verschiedenen Wettersymbolen angezeigt. Die Daten können über das Editieren des zu importierenden Hosts können jederzeit ergänzt werden. Falls bestimmt Host nicht in das Monitoring aufgenommen werden sollen, können manuell gelöscht werden. Beim der Synchronisierung mit dem Monitoring werden alle Host, die alle benötigen Felder besitzen, inclusive dazu gehörigen Services in die Konfigurationstabelle aufgenommen. Nun muss nur noch exportiert werden und alle Konfigurationsobjekte werden überwacht.
+In der Liste werden alle neuen oder bereits in das Monitoring aufgenommenen Host angezeigt. Alle bevorstehende Änderungen für Services, falls welche vorhanden sind, werden entsprechend angezeigt. Die Vollständigkeit der Eintragen werden mit verschiedenen Wettersymbolen angezeigt. Die Daten können über das Editieren des zu importierenden Hosts können jederzeit ergänzt werden. Falls bestimmt Host nicht in das Monitoring aufgenommen werden sollen, können manuell gelöscht werden. Beim der Synchronisierung mit dem Monitoring werden alle Host, die alle benötigen Felder besitzen, inclusive dazu gehörigen Services in die Konfigurationstabelleaufgenommen. Nun muss nur noch exportiert werden und alle Konfigurationsobjekte werden überwacht.
 
 Im oberen Bereich unter dem Punkt "Import Starten" werden alle auf dem System verfügbaren Importer aufgelistet. Nach dem Klicken auf einen dieser Importers öffnet sich das passende Modal. Im unteren Beispiel ist das ein CSV Importer.
 
@@ -392,9 +392,9 @@ Dort wählen Sie einen Container aus und vergeben einen Namen für die Hostgrupp
 
 Um Hosts einer Hostgruppe hinzuzufügen, haben Sie in diesem Formular zwei möglichkeiten.
 
-Die erste ist das gezielte hinzufügen von einzelnen Hosts. Dazu wählen Sie die entsprechenden Hosts aus der Liste “Hosts” aus. 
+Die erste ist das gezielte hinzufügen von einzelnen Hosts. Dazu wählen Sie die entsprechenden Hosts aus der Liste “Hosts” aus.
 
-Die zweite möglichkeit besteht darin, Hosts über ihr Hostvorlage hinzuzufügen. Dabei werden alle Hosts die von den gewählten Hostvorlagen abgeleitet sind automatisch in die Hostgruppe hinzugefügt. 
+Die zweite möglichkeit besteht darin, Hosts über ihr Hostvorlage hinzuzufügen. Dabei werden alle Hosts die von den gewählten Hostvorlagen abgeleitet sind automatisch in die Hostgruppe hinzugefügt.
 
 Danach Speichert man und die Hostgruppe ist fertig erstellt.
 
@@ -411,7 +411,7 @@ Danach Speichert man und die Hostgruppe ist fertig erstellt.
 
 Um zur erweiterten Ansicht einer Hostgruppe zu kommen, klicken Sie in der Hostübersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die “Erweiterte Ansicht”.
 
-Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält. 
+Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält.
 
 Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispiel die Prüfzeit zurückzusetzen, Geplante Wartungszeiten zu erstellen, Hoststatus zu bestätigen oder Benachrichtigungen zu aktivieren / deaktivieren.
 
@@ -428,9 +428,9 @@ Dort wählt man einen Container aus und vergibt einen Namen für die Servicegrup
 
 Um Services einer Servicegruppe hinzuzufügen, haben Sie in diesem Formular zwei möglichkeiten:
 
-Die erste ist das gezielte hinzufügen von einzelnen Services. Dazu wählen Sie die entsprechenden Hosts aus der Liste “Services” aus. 
+Die erste ist das gezielte hinzufügen von einzelnen Services. Dazu wählen Sie die entsprechenden Hosts aus der Liste “Services” aus.
 
-Die zweite Möglichkeit besteht darin, Services über ihr Servicevorlage hinzuzufügen. Dabei werden alle Services die von den gewählten Servicevorlagen abgeleitet sind automatisch in die Servicegruppe hinzugefügt. 
+Die zweite Möglichkeit besteht darin, Services über ihr Servicevorlage hinzuzufügen. Dabei werden alle Services die von den gewählten Servicevorlagen abgeleitet sind automatisch in die Servicegruppe hinzugefügt.
 
 Danach Speichert man und die Servicegruppe ist fertig erstellt.
 
@@ -447,6 +447,6 @@ Danach Speichert man und die Servicegruppe ist fertig erstellt.
 
 Um zur erweiterten Ansicht einer Servicegruppe zu kommen, klicken Sie in der Serviceübersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die “Erweiterte Ansicht”.
 
-Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält. 
+Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält.
 
 Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispiel die Prüfzeit zurückzusetzen, Geplante Wartungszeiten zu erstellen, Servicestatus zu bestätigen oder Benachrichtigungen zu aktivieren / deaktivieren.

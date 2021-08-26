@@ -1,15 +1,15 @@
 ## Status Karte
 
-Die Statuskarte ist eine automatisch erstellte Karte, die alle Hosts mitsamt ihrem Status auf einer Karte darstellt. 
+Die Statuskarte ist eine automatisch erstellte Karte, die alle Hosts mitsamt ihrem Status auf einer Karte darstellt.
 
-Mit einem Klick auf einen Host wird ein popup angezeigt, welches den Status der Services anzeigt. 
+Mit einem Klick auf einen Host wird ein popup angezeigt, welches den Status der Services anzeigt.
 
 Parent-Child Beziehungen können angezeigt werden bei einem klick auf “Eltern-Kind-Beziehungen berücksichtigen”
 
 
 ## Automatische Karte
 
-Eine Automatische Karte zeigt Host und Services anhand eines selbst definierteren Filters an. 
+Eine Automatische Karte zeigt Host und Services anhand eines selbst definierteren Filters an.
 
 ### Automap erstellen
 
@@ -17,9 +17,9 @@ Um eine Automap zu erstellen, klicken Sie zunächst auf die Schaltfläche “Neu
 
 Im Formular wählen Sie einen Container aus und vergeben einen Namen.
 
-Sie können zusätzlich das Feld Rekursiv auswählen. Dies bewirkt dass auch Hosts unterhalb des gewählten Containers berücksichtigt werden. 
+Sie können zusätzlich das Feld Rekursiv auswählen. Dies bewirkt dass auch Hosts unterhalb des gewählten Containers berücksichtigt werden.
 
-Anschließend setzen Sie die Filter fest, nach denen entschieden wird, welche Host und Services angezeigt werden sollen. 
+Anschließend setzen Sie die Filter fest, nach denen entschieden wird, welche Host und Services angezeigt werden sollen.
 
 Die Filter bestehen aus jeweils einem Regulären Ausdruck für den Host und Service Filter.
 
@@ -29,13 +29,13 @@ Anschließend legen Sie fest, welcher Status angezeigt werden darf und wie die D
 ## Map Modul
 
 
-Das Map Modul oder Karten Modul ist eine frei verfügbare Erweiterung in openITCOCKPIT. Es bietet die möglichkeit die überwachten Objekte visuell darzustellen und dies mit eigenen Hintergründen zu versehen. So kann beispielsweise eine Geländekarte oder eine Server Rack direkt mit überwachten Objekten oder unterkarten versehen werden. 
+Das Map Modul oder Karten Modul ist eine frei verfügbare Erweiterung in openITCOCKPIT. Es bietet die möglichkeit die überwachten Objekte visuell darzustellen und dies mit eigenen Hintergründen zu versehen. So kann beispielsweise eine Geländekarte oder eine Server Rack direkt mit überwachten Objekten oder unterkarten versehen werden.
 
 ### Karte erstellen
 
 Eine Karte benötigt, bevor Sie visuell bearbeitet werden kann zunächst einige Informationen
 
-Hier wählt man zuerst mindestens einen Container aus, in dem die Karte verfügbar sein soll. 
+Hier wählt man zuerst mindestens einen Container aus, in dem die Karte verfügbar sein soll.
 
 Danach vergibt man einen Karten Namen sowie einen Titel.
 
@@ -59,7 +59,7 @@ Items können Hosts, Services, Hostgruppen und Servicegruppen sein. Darüberhina
 
 Items werden mit Iconsets dargestellt. Eigene Iconsets können auch genutzt werden.
 
-- 2\. Linien 
+- 2\. Linien
 
 Linien können Hosts, Services, Hostgruppen und Servicegruppen, Karten und einfache, Statuslose Linien sein.
 
@@ -71,7 +71,7 @@ Dies kann je nach ausgewähltem Objekt ein Host und mindestens ein Service oder 
 
 - 4\. Gadgets
 
-Gadgets sind unterschiedliche Anzeigeelemente. Dies können Graphen, Tachos, Ampeln o.ä. sein. 
+Gadgets sind unterschiedliche Anzeigeelemente. Dies können Graphen, Tachos, Ampeln o.ä. sein.
 
 Der Unterschied zu den vorhergehenden Elemente ist, dass ein Gadget immer nur ein Service sein kann, da hier immer Performancedaten zu grunde liegen müssen.
 
@@ -89,9 +89,9 @@ Hier können Sie Icons hochladen und auf Ihrer Karte platzieren. Der unterschied
 
 ##### Eigene Items / Iconsets
 
-Um ein eigenes Iconset hochzuladen, müssen Sie alle erforderlichen Icons in ein ZIP-Archiv komprimieren.   
-Alle Symbole müssen PNG-Bilder sein.   
-Benötigte Icons: 
+Um ein eigenes Iconset hochzuladen, müssen Sie alle erforderlichen Icons in ein ZIP-Archiv komprimieren.  
+Alle Symbole müssen PNG-Bilder sein.  
+Benötigte Icons:
 
 | Icon | Beschreibung |
 | --- | --- |
@@ -120,7 +120,7 @@ Es gibt in openITCOCKPIT zwei mögliche Karten ansichten für das Karten Modul. 
 
 ![](/images/mapmodule-viewmap.png)
 
-Um zur Vollbild ansicht zu gelangen öffnet man in der Kartenübersicht das Menü der entsprechenden Karte (1) und wählt anschließend “im Vollbild anzeigen” (2) aus 
+Um zur Vollbild ansicht zu gelangen öffnet man in der Kartenübersicht das Menü der entsprechenden Karte (1) und wählt anschließend “im Vollbild anzeigen” (2) aus
 
 Diese Ansicht eigent sich beispielsweise zum Anzeigen auf einem TV-Gerät.
 
@@ -128,7 +128,7 @@ Diese Ansicht eigent sich beispielsweise zum Anzeigen auf einem TV-Gerät.
 
 ### Rotationen
 
-Karten Rotationen wechseln eine selbst bestimmte Anzahl von Karten in einem Intervall durch. 
+Karten Rotationen wechseln eine selbst bestimmte Anzahl von Karten in einem Intervall durch.
 
 ### Rotation erstellen
 
@@ -140,7 +140,7 @@ Im Formular wählen Sie die entpsrechenden Container aus und vergeben einen Name
 
 Danach legen Sie das Rotationsintervall fest. Dies bestimmt die Zeit in Sekunden, die eine Karte sichtbar ist, bevor sie durch die nächste ausgewechselt wird.
 
-Zum Schluss wählen Sie noch die Karten aus die Rotiert werden sollen. 
+Zum Schluss wählen Sie noch die Karten aus die Rotiert werden sollen.
 
 ### Rotation anzeigen
 
