@@ -2,3 +2,14 @@ img {
     /* Blurry image chrome workaround */
     image-rendering: -webkit-optimize-contrast;
 }
+
+
+[data-md-color-scheme="slate"] .featherlight .featherlight-content {
+    background: #2e303e;
+}
+
+[data-md-color-scheme="slate"] .featherlight .featherlight-close-icon {
+    background: rgba(255,255,255,.3);
+    color: #fff;
+}
+
