@@ -1,105 +1,97 @@
 ## Dashboards
 
-Das Dashboard ist die Startseite in openITCOCKPIT. 
+Das Dashboard ist die Startseite in openITCOCKPIT.
 
-Nach der Installation findet man hier ein Default Dashboard, dass verschiedene Widgets anzeigt. 
+Das Dashboard ist die Startseite von openITCOCKPIT und besteht im Standard aus nur einem <span class="badge badge-default">Default</span> Tab.
 
-### Dashboard Hinzufügen
+### Dashboard hinzufügen
 
-Um ein neues Dashboard hinzuzufügen, klickt man auf das “+” Symbol im oberen rechten Rand des Dashboards
+Um neue Tabs hinzuzufügen, klickt man auf das <span class="badge badge-success">+</span> Symbol im oberen rechten Rand des Dashboards
 
 ![](/images/dashboards-newdashboard.png)
 
-Danach öffnet sich ein Popup fenster in dem man die Wahl hat ein neues Dashboard, oder aus den geteilten Dashboards ein neues zu erstellen. 
+Dies öffnet folgendes Fenster:
 
 ![](/images/dashboards-newdashboardpopup.png)
 
-### Dashboard Teilen
+Zum Erstellen eines leeren, neuen Tabs muss im oberen Bereich ein Name für den Tab angegeben werden und anschließend auf den <span class="badge badge-primary">Erstellen neuen Tab</span> Button geklickt werden.
 
-Es gibt in openITCOCKPIT die möglichkeit Dashboards zu teilen. Dazu klickt man zu erst auf den nach unten zeigenden Pfeil (1) an einem Dashboard Tab und danach auf “Starte Teilen”. 
+Zum Erstellen eines Tabs aus einer Vorlage wählt man einen freigegebenen Tab aus der Liste und klickt anschließend auf <span class="badge badge-primary">Erstelle von geteiltem Tab</span>.
+
+Erstellt man einen Tab aus einer Vorlage und an dieser Vorlage ändert sich etwas, erscheint beim nächsten Aufruf des Tabs folgender Dialog.
+
+![](/images/dashboards-sharing-update.png)
+
+Man kann nun auswählen, ob man seinen Tab aktualisieren möchte, oder auch nicht.
+
+### Dashboard teilen
+
+Es gibt in openITCOCKPIT die möglichkeit Tabs zu teilen. Dazu klickt man zuerst auf den nach unten zeigenden Pfeil (1) an einem Dashboard Tab und danach auf <span class="badge badge-default">Starte Teilen</span>.
 
 Die geteilten Dashboards stehen dann anderen Benutzern in openITCOCKPIT zur Verfügung.
 
 ![](/images/dashboards-sharing.png)
 
-Wenn ein Dashboard bereits geteilt ist, dann steht in der Auswahlliste “Stoppe Teilen”. Darüber kann das Teilen des Dashboard Tabs wieder gestoppt werden.
+Wenn ein Dashboard bereits geteilt ist, dann steht in der Auswahlliste <span class="badge badge-default">Stoppe Teilen</span>. Darüber kann das Teilen des Dashboard Tabs wieder gestoppt werden.
 
 ### Dashboard Rotation
 
 Eine Dashboard Rotation bewirkt, dass alle vorhandenen Dashboard Tabs in einem vom Benutzer, zwischen 10 Sekunden und 15 minuten, festgelegten Intervall nacheinander angezeigt werden.
 
-Im zusammenspiel mit der Vollbildansicht der Dashboards kann dies nützlich sein um openITCOCKPIT beispielsweise auf einem TV anzuzeigen.
+Im Zusammenspiel mit der Vollbildansicht der Dashboards kann dies nützlich sein um openITCOCKPIT beispielsweise auf einem TV anzuzeigen.
 
-### Dashboard Löschen
+### Dashboard löschen
 
-Um ein Dashboard zu löschen, klicken Sie  zu erst auf den nach unten zeigenden Pfeil (1) an einem Dashboard Tab und danach auf Löschen (2).
+Um ein Dashboard zu löschen, klicken Sie zuerst auf den nach unten zeigenden Pfeil (1) an einem Dashboard Tab und danach auf <span class="badge badge-danger">Löschen</span> (2).
 
 ![](/images/dashboards-delete.png)
 
-### Widget Hinzufügen 
+### Widget hinzufügen
 
-Um ein neues Widget auf einem Dashboard hinzuzufügen, klicken Sie auf die Schaltfläche “Widget hinzufügen”
+Um ein neues Widget auf einem Dashboard hinzuzufügen, klicken Sie auf die Schaltfläche <span class="badge badge-success">Widget hinzufügen</span>
 
 ![](/images/dashboards-addwidget.png)
 
-Anschließend öffnet sich eine Auswahlliste mit allen verfügbaren Widgets. 
+Anschließend öffnet sich eine Auswahlliste mit allen verfügbaren Widgets.
 
-Nach dem man das entsprechende Widget hinzugefügt hat, muss dies gegebenenfalls noch Konfigurieren.
+Nach dem man das entsprechende Widget hinzugefügt hat, muss dies gegebenenfalls noch konfiguriert werden.
 
 ![](/images/dashboard-widgetconfig.png)
 
-Nach dem Speichern der Widget Konfiguration wird das Widget mit Inhalt angezeigt. 
+Nach dem Speichern der Widget-Konfiguration wird das Widget mit Inhalt angezeigt.
 
 #### Widgets
 
 ##### Willkommen
 ![welcome widget](/images/dashboard-welcomewidget.png)
 
-- Beschreibung
-
-Zeigt eine eine die Gesamtanzahl, der für einen Benutzer sichtbaren, überwachten Hosts und Services an. Zudem wird die Benutzer Zeitzone, openITCOCKPIT Version und die Edition angezeigt.
-
-- Konfiguration
-
+Zeigt eine die Gesamtanzahl, der für einen Benutzer sichtbaren, überwachten Hosts und Services an. Zudem wird die Benutzerzeitzone, openITCOCKPIT Version und die Edition angezeigt.
 
 ##### Übergeordnete Ausfälle
 ![parent outages widget](/images/dashboard-parentoutageswidget.png)
 
-- Beschreibung
-
 Zeigt eine Liste aller nicht erreichbaren verknüpften Eltern Objekte.
-
-- Konfiguration
-
 
 ##### Host/Service Kreisdiagramm (180)
 ![hosts services piecharts](/images/dashboard-host-services-piecharts.png)
 
-- Beschreibung
-
-Zeigt (je nach auswahl) halbes oder ganzes Tortendiagramm aller Hosts oder Services und deren Status. Beim Klick auf die Statusfarbe unter dem Diagramm öffnet sich eine Liste mit den Hosts oder Services im ausgewählten Status.
-
-- Konfiguration
+Zeigt (je nach Auswahl) halbes oder ganzes Tortendiagramm aller Hosts oder Services und deren Status. Beim Klick auf die Statusfarbe unter dem Diagramm öffnet sich eine Liste mit den Hosts oder Services im ausgewählten Status.
 
 ##### Ampel
 ![traffic light widget](/images/dashboard-trafficlightwidget.png)
 
-- Beschreibung
-
 Zeigt die Statusfarbe eines Services an
 
-- Konfiguration
+###### Konfiguration
 
 Es muss ein Service ausgewählt werden, dessen Status angezeigt werden soll. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Geschwindigkeitsmesser (Tacho Widget)
 ![Tacho widget](/images/dashboard-tachowidget.png)
 
-- Beschreibung
-
 Zeigt den wert eines Performance Datensatzes eines Services an. Schwellwerte werden zusätzlich farblich markiert.
 
-- Konfiguration
+###### Konfiguration
 
 Es muss ein Service, sowie ein Performance Datensatz ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
@@ -107,123 +99,103 @@ Es muss ein Service, sowie ein Performance Datensatz ausgewählt werden. Zur Kon
 ##### Notiz
 ![notice widget](/images/dashboard-noticewidget.png)
 
-- Beschreibung
-
 Das Notiz Widget kann Text, HTML oder Markdown anzeigen.
 
-- Konfiguration
+###### Konfiguration
 
 Es kann Text, HTML oder Markdown in das Textfeld eingefügt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Host/Service in Wartungszeit
 ![host service downtime widget](/images/dashboard-hostservicedowntimewidget.png)
 
-- Beschreibung 
 
 Das Host bzw. Service in Wartungszeit Widget zeigt Host bzw. Services an, die sich in einer Wartungszeit befinden. 
 
-- Konfiguration
+###### Konfiguration
 
-Über die Konfiguration besteht die möglichkeit nach Hosts bzw. Services und dem Wartungszeit Kommentar zu Filtern. Darüberhinaus können die anzuzeigenden Wartungszeiten über verschiedene Optionen ein oder ausgeblendet werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Über die Konfiguration besteht die möglichkeit nach Hosts bzw. Services und dem Wartungszeitkommentar zu filtern. Darüber hinaus können die anzuzeigenden Wartungszeiten über verschiedene Optionen ein- oder ausgeblendet werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 
 ##### Hoststatus/Servicestatus Liste
 ![host service status lists](/images/dashboard-hostservicestatuslists.png)
 
-- Beschreibung
+Zeigt eine filterbare Liste mit Hosts bzw. Services an. Diese Listen enthalten den Status, aktuelle Wartungszeiten, Bestätigungen, sowie seit wann der Status eingetreten ist und den Host- bzw. Serviceoutput. Die Liste kann in einem benutzerdefinierten Intervall automatisch scrollen.
 
-Zeigt eine Filterbare Liste mit Hosts bzw. Services an. Diese Listen enthalten den Status, aktuelle Wartungszeiten, Bestätigungen, sowie den Status seit und den Host bzw. Service Output. Die Liste kann in einem Benutzerdefinierten Intervall automatisch scrollen.
+###### Konfiguration
 
-- Konfiguration
-
-Host bzw. Service Status Listen können nach Hostname bzw Host und Servicename sowie nach Output gefiltert werden. Darüberhinaus stehen verschiedene Optionen, bspw. um nach dem Status, Wartungszeiten oder Status Bestätigungen zu Filtern, zur verfügung. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
-
+Host bzw. Service Status Listen können nach Hostname bzw Host und Servicename sowie nach Output gefiltert werden. Darüber hinaus stehen verschiedene Optionen, beispielsweise um nach dem Status, Wartungszeiten oder Statusbestätigungen zu filtern, zur Verfügung. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Hoststatus/Servicestatus Übersicht
 ![host servicestatus overview](/images/dashboard-hostservicestatusoverview.png)
 
-- Beschreibung
+Das Host- bzw. Servicestatusübersicht-Widget zeigt die Anzahl der Hosts bzw. Services in einem bestimmten Status (beispielsweise UP/OK) an.
 
-Das Host bzw. Servicestatus Übersichts Widget zeigt die Anzahl der Hosts bzw. Services in einem bestimmten Status (bspw. OK/UP) an.
-
-- Konfiguration
+###### Konfiguration
 
 Die Host bzw. Servicestatus Übersicht zeigt immer nur die Anzahl der Hosts bzw. Services in dem gewählten Status an. Diese auswahl kann über die Konfiguration des Widgets getroffen werden. Zudem kann auch nach dem Host bzw. Host und Servicenamen gefiltert werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Automatische Karte
 ![autmap widget](/images/dashboard-automapwidget.png)
 
-- Beschreibung
+Das Widget zeigt [Automatischen Karte](../maps/#automatische-karte) an
 
-Das Automatische Karte Widget zeigt Karten der [Automatischen Karte](../maps/#automatische-karte) an
+###### Konfiguration
 
-- Konfiguration
-
-Die Automatische Karte muss voher über die [Automatischen Karten](../maps/#automatische-karte) erstellt werden. Danach kann eine Karte in der Widget Konfiguration ausgewählt werden. Zusätzlich hat man die möglichkeit auszuwählen, wieviele Elemente auf einer "Seite" im Widget dargestellt werden sollen. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Die automatische Karte muss vorher über die [Automatischen Karten](../maps/#automatische-karte) erstellt werden. Danach kann eine Karte in der Widget Konfiguration ausgewählt werden. Zusätzlich hat man die Möglichkeit auszuwählen, wie viele Elemente auf einer `Seite im Widget dargestellt werden sollen. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Autoreport Übersicht
 ![Autoreport overview widget](/images/dashboard-autoreportoverviewwidget.png)
 
-- Beschreibung
+Das Widget zeigt eine Verfügbarkeitsanzeige eines zuvor erstellen [Autoreports](../../reporting/#autoreports) an. 
 
-Das Autoreport Übersicht Widget zeigt eine Verfügbarkeits anzeige eines zuvor erstellen [Autoreports](../../reporting/#autoreports) an. 
+###### Konfiguration
 
-- Konfiguration
-
-Das Autoreport Übersicht Widget setzt einen zuvor erstellten [Autoreports](../../reporting/#autoreports) voraus. Dieser Report kann anschließend in der Konfigurationsoberfläche des Widgets ausgewählt werden. Zudem sind Optionen zur Anzeige der Verfügbarkeit, Log daten sowie die Dynamische Farbgestaltung verfügbar. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Das Widget setzt einen zuvor erstellten [Autoreports](../../reporting/#autoreports) voraus. Dieser Report kann anschließend in der Konfigurationsoberfläche des Widgets ausgewählt werden. Zudem sind Optionen zur Anzeige der Verfügbarkeit, Logdaten sowie die dynamische Farbgestaltung verfügbar. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Grafana (automatisch generiert)
-- Beschreibung
 
-Grafana Automasch generiert zeigt automatisch generierte Grafana Dashboards an.
+Das Widget zeigt automatisch generierte Grafana Dashboards an.
 
-- Konfiguration
+###### Konfiguration
 
-Benutzerdefiniert Grafana Dashboards können über die Konfigurationsfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Automatisch generierte Grafana Dashboards können über den Hostnamen in der Konfigurationsfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Grafana (benutzerdefiniert)
 ![grafana userdefined](/images/dashboard-grafanauserdefinedwidget.png)
 
-- Beschreibung
+Das Widget zeigt benutzerdefinierte [Grafana Dashboards](../graphing/#grafana) an.
 
-Das Grafana (benutzerdefiniert) widget zeigt benutzerdefinierte [Grafana Dashboards](../graphing/#grafana) an.
+###### Konfiguration
 
-- Konfiguration
-
-Benutzerdefinierte Grafana Dashboards müssen vorher über das [Grafana Modul](../graphing/#grafana) erstellt werden. Anschließend kann ein Dashboard über die Widget Konfigurationsoberfläche aufgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Benutzerdefinierte Grafana Dashboards müssen vorher über das [Grafana Modul](../graphing/#grafana) erstellt werden. Anschließend kann ein Dashboard über die Widget Konfigurationsoberfläche ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Karte (MapModul)
 ![Map module widget](/images/dashboard-mapmodulewidget.png)
 
-- Beschreibung
+Das Karten Widget zeigt eine Karte, die über das [MapModul](../maps/#map-modul) erstellt wurde, an. 
 
-Das Karten Widget zeigt eine Karte die über das [MapModul](../maps/#map-modul) erstellt wurde an. 
-
-- Konfiguration
+###### Konfiguration
 
 Eine Karte muss voher über das [MapModul](../maps/#map-modul) erstellt werden. Anschließend kann die Karte über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Ereigniskorrelation
 ![evk widget](/images/dashboard-evkwidget.png)
 
-- Beschreibung
+Das Widget zeigt eine zuvor erstelle [Ereigniskorrelation](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation) an.
 
-Das Ereigniskorrelations Widget zeigt eine zuvor erstelle [Ereigniskorrelation](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation) an.
+###### Konfiguration
 
-- Konfiguration
+Eine Ereigniskorrelation muss vorher über das [EventcorrelationModule](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation) erstellt werden. Anschließend kann die Ereigniskorrelation über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
-Eine Ereigniskorrelation muss voher über das [EventcorrelationModule](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation) erstellt werden. Anschließend kann die Ereiginskorrelation über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+### Widget löschen
 
-
-### Widget Löschen
-
-Im ein widget zu löschen, klicken Sie einfach auf das “x” Symbol des entsprechenden Widgets. 
+Um ein Widget zu löschen, klicken Sie einfach auf das <span class="badge badge-danger">x</span> Symbol des entsprechenden Widgets.
 
 ![delete widget](/images/dashboards-widgetdelete.png)
 
 
 ### Standard wiederherstellen
 
-Um den Standard eines Dashboard tabs wiederherzustellen, klicken Sie in der Liste zum hinzufügen von Dashboard Widgets auf die Schaltfläche `Standard wiederherstellen`.
+Um den Standard eines Dashboard Tabs wiederherzustellen, klicken Sie in der Liste zum Hinzufügen von Dashboard Widgets auf die Schaltfläche <span class="badge badge-default">Standard wiederherstellen</span>.
 
 ![restore default](/images/dashboard-restoredefault.png)
