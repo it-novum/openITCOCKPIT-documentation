@@ -1,6 +1,6 @@
 ## Beginners Guide
 
-Dieser Guide zeigt das Grundlegende Konzept hinter openITCOCKPIT auf und hilft bei der Überwachung Ihres ersten Hosts. 
+Dieser Guide zeigt das grundlegende Konzept hinter openITCOCKPIT auf und hilft bei der Überwachung Ihres ersten Hosts. 
 Er richtet sich an neue Benutzer, die grade mit der Benutzung von openITCOCKPIT angefangen haben.
 
 
@@ -36,7 +36,7 @@ Wenn Ihr openITCOCKPIT hinter einem Proxy Server läuft, müssen Sie zuvor den P
 Zu aller erst müssen Sie sich mit unserem "Container" basiertem Berechtigungskonzept vertraut machen. Alle Objekte wie Benutzer, Hosts, Kontakte, Vorlagen etc. sind an Container gebunden.
 
 !!! danger "Berechtigungen können ein sehr komplexes Thema werden"
-    Es wird dringen geraten, dieses teil nicht zu überspringen!
+    Es wird dringen geraten, diesen Teil nicht zu überspringen!
 
 ### /root Container
 Der "/root" Container ist etwas speziell. Alle Objekte die diesem Container zugeordnet sind, sind **global für alle Benutzer sichtbar!** Dieser Container ist für gewöhnliche Objekte wie zum Beispiel die "Ping" Servicevorlage oder der Zeitabschnitt "24x7" gedacht.
@@ -50,9 +50,9 @@ Globale Administratoren sind mit einer Krone über Ihrem Benutzernamen gekennzei
 
 
 ### Container Baum
-Container fungieren wie ein Baum. der "/root" Container ist immer die "Wurzel" aller nachfolgender Container. Die nächste Ebene im Baum könnte ein "Mandant" sein. Mandanten können Abteilungen Ihres Unternehmens oder sogar völlig Unterschiedliche Unternehmen sein. Innerhalb eines Mandanten können sie "Knoten" (Nodes) erstellen. Dies kann hilfreich sein um komplette Firmenstrukturen in Ihrem Monitoring System abzubilden. 
+Container fungieren wie ein Baum. der "/root" Container ist immer die "Wurzel" aller nachfolgender Container. Die nächste Ebene im Baum könnte ein "Mandant" sein. Mandanten können Abteilungen Ihres Unternehmens oder sogar völlig unterschiedliche Unternehmen sein. Innerhalb eines Mandanten können sie "Knoten" (Nodes) erstellen. Dies kann hilfreich sein um komplette Firmenstrukturen in Ihrem Monitoring System abzubilden. 
 
-Diesm Beispiel folgend würde eine Container Baum Struktur so aussehen: `/root/Mandant/Knoten/`.
+Diesem Beispiel folgend würde eine Container Baum Struktur so aussehen: `/root/Mandant/Knoten/`.
 
 Um dies zu veranschaulichen, erstellen wir einen Mandanten mit dem Namen "Demo Tenant" unter `Verwaltung -> Containerverwaltung -> Mandanten`
 
@@ -75,15 +75,15 @@ Unser Container Baum sieht nun so aus:
 
 Benutzer können Sie zu verschiedenen Ebenen im Container Baum zuweisen.
 
-- Wenn Sie einen Benutzer dem Container `/root/` zuweisen, so wird dieser Benutzer ein Globaler Administrator und hat ***Zugriff auf alle Objekte aller Mandanten**
+- Wenn Sie einen Benutzer dem Container `/root/` zuweisen, so wird dieser Benutzer ein globaler Administrator und hat ***Zugriff auf alle Objekte aller Mandanten**
 - Wenn Sie einen Benutzer dem Container `/root/Demo Tenant` zuweisen, hat der Benutzer Zugriff auf alle Objekte innerhalb des Mandanten **sowie aller Untercontainer**
 - Wenn Sie einen Benutzer den Container `/root/Demo Tenant/Team Developers` Zuweisen, hat der Benutzer Zugriff auf alle Objekte innerhalb des "Team Developers" Container **sowie all seinen Untercontainern**
 
-Zudem ist es möglich, allen Benutzern Lese und Schreibrechte auf jeden Container zu geben. Dazu navigieren Sie zu `Verwaltung -> Benutzerverwaltung -> Verwalte Benutzer` und erstellen einen neuen Benutzer. Sie können nun alle Container, auf die der Benutzer zugriff bekommen soll, auswählen und Lese sowie Schreibrechte für jeden einzelnen Container vergeben.
+Zudem ist es möglich, allen Benutzern Lese- und Schreibrechte auf jeden Container zu geben. Dazu navigieren Sie zu `Verwaltung -> Benutzerverwaltung -> Verwalte Benutzer` und erstellen einen neuen Benutzer. Sie können nun alle Container, auf die der Benutzer Zugriff bekommen soll, auswählen und Lese- sowie Schreibrechte für jeden einzelnen Container vergeben.
 
 ![User container permissions](/images/openITCOCKPIT-user-container-permissions.png)
 
-Das Container basierte Berechtigungskonzept kann sehr komplex werden, aber bietet die größtmögliche Flexibilität und ermöglicht granulare Berechtigungsmöglchkeiten.
+Das containerbasierte Berechtigungskonzept kann sehr komplex werden, aber bietet die größtmögliche Flexibilität und ermöglicht granulare Berechtigungsmöglichkeiten.
 
 !!! note 
     Mit openITCOCKPIT v4 können Container Berechtigungen auch in "Benutzer Container Rollen" abgebildet werden.
@@ -91,17 +91,17 @@ Das Container basierte Berechtigungskonzept kann sehr komplex werden, aber biete
 
 ## Den ersten Host erstellen
 
-In der Welt von openITCOCKPIT v4 ist ein "Host" das grundlegendste Element. Im normalfall nutz openITCOCKPIT ein "ICMP check" zur Überprüfung Ihres Hosts. Jeder Host stellt verschiedenste Dienste zur verfügung wie zum Beispiel E-Mail, DHCP, DNS, web server, load balancer etc. Um ein Sinnvolles Monitoring aufzubauen benötigen Sie "Services" in openITCOCKPIT. Da openITCOCKPIT im Hintergrund Nagios oder Naemon nutzt, sind tausendene frei verfügbare Plugins zum überwachen ihrer kritischen Dienste und Infrastruktur verfügbar. 
+In der Welt von openITCOCKPIT v4 ist ein "Host" das grundlegendste Element. Im Normalfall nutzt openITCOCKPIT ein "ICMP Check" zur Überprüfung Ihres Hosts. Jeder Host stellt verschiedenste Dienste zur Verfügung, wie zum Beispiel E-Mail, DHCP, DNS, web server, load balancer etc. Um ein sinnvolles Monitoring aufzubauen benötigen Sie "Services" in openITCOCKPIT. Da openITCOCKPIT im Hintergrund Nagios oder Naemon nutzt, sind tausendene frei verfügbare Plugins zum Überwachen ihrer kritischen Dienste und Infrastruktur verfügbar. 
 
 ### Host- und Servicevorlagen
 
-In openITCOCKPIT haben Sie die möglichkeit Host und Servicevorlagen zu erstellen. Diese definieren Standardwerte, wie zum Beispiel Host oder Servicegruppen, Kontakte, Benachrichtigungsoptionen und so weiter, die als Vorlage genutzt werden, sobald Sie einen Host oder Service erstellen möchten.
+In openITCOCKPIT haben Sie die Möglichkeit Host und Servicevorlagen zu erstellen. Diese definieren Standardwerte, wie zum Beispiel Host- oder Servicegruppen, Kontakte, Benachrichtigungsoptionen und so weiter, die als Vorlage genutzt werden, sobald Sie einen Host oder Service erstellen möchten.
 
 openITCOCKPIT wird bereits mit einer vorgefertigten Auswahl an Vorlagen ausgeliefert.
 
 ### Den ersten Host erstellen - diesmal wirklich :)
 
-In diesem Beispiel werden wir ein *Ubuntu Focal* Linux system mit den Diensten *NGINX*, *PHP-FPM* und *MySQL* überwachen.
+In diesem Beispiel werden wir ein *Ubuntu Focal* Linux System mit den Diensten *NGINX*, *PHP-FPM* und *MySQL* überwachen.
 
 Um Ihren ersten Host zu erstellen, navigieren Sie nach `Monitoring -> Hosts` und klicken dort auf die Schaltfläche "+ Neu"
 
@@ -124,19 +124,19 @@ Wählen Sie die "Ping" Servicevorlage und klicken Sie auf `Erstelle Service`
 
 ![crate service](/images/openITCOCKPIT-Create-Service.png)
 
-Der neu erstellte Service wird nun in der Liste angezeigt, da er nur erstellt wurde aber noch nicht zur Monitoring Engine "Exportiert" wurde.
+Der neu erstellte Service wird nun in der "Nicht überwacht" Liste angezeigt, da er nur erstellt wurde aber noch nicht zur Monitoring Engine "Exportiert" wurde.
 
 ![service not monitored](/images/service-not-monitored.png)
 
 ### Aktualisieren der Überwachungskonfiguration
 
-Immer wenn ein neues Objekt, welches für die Monitoring Engine relevant ist erstellt wird - dazu zählen Beispielsweise Hosts, Services, Kontakte, Kontaktgruppen etc. muss ein Aktualisieren der Überwachungskonfiguration erfolgen.
+Immer wenn ein neues Objekt, welches für die Monitoring Engine relevant ist, erstellt wird - dazu zählen beispielsweise Hosts, Services, Kontakte, Kontaktgruppen etc. muss ein Aktualisieren der Überwachungskonfiguration erfolgen.
 
 Sie finden diese Option in der oberen rechten Ecke `Aktualisieren Sie die Überwachungskonfiguration`
 
 ![export button](/images/openITCOCKPIT-Refresh-Monitoring-Config.png)
 
-openITCOCKPIT wird im Hintergrund alle nötigen Konfigurationsdateien für Sie erstellen, validieren und die Monitoring Engine neu Laden. Klicken Sie auf die Schaltfläche ":fontawesome-solid-rocket: Starte Aktualisierung" um mit dem Export zu starten.
+openITCOCKPIT wird im Hintergrund alle nötigen Konfigurationsdateien für Sie erstellen, validieren und die Monitoring Engine neu laden. Klicken Sie auf die Schaltfläche ":fontawesome-solid-rocket: Starte Aktualisierung" um mit dem Export zu starten.
 
 ![export done](/images/openITCOCKPIT-Refresh-Monitoring-Config-Done.png)
 
@@ -149,19 +149,19 @@ Einen Ping Request an einen Host zu senden ist eine gute Idee, aber kein wirklic
 
 ## Monitoring mit dem openITCOCKPIT Agent
 
-Überwachen von grundlegenden Parametern eines Hosts sollte keine schwierige oder lästige Aufgabe sein. Der [openITCOCKPIT Monitoring Agent](https://openitcockpit.io/download_agent/) ist für Windows, Linux und macOS verfügbar und in der Lage metriken wie CPU, Arbeitsspeicher, Festplattenauslastung, Netzwerkstatus, Temperaturen etc. Out-of-the-box zu sammeln.
+Überwachen von grundlegenden Parametern eines Hosts sollte keine schwierige oder lästige Aufgabe sein. Der [openITCOCKPIT Monitoring Agent](https://openitcockpit.io/download_agent/) ist für Windows, Linux und macOS verfügbar und in der Lage Metriken wie CPU, Arbeitsspeicher, Festplattenauslastung, Netzwerkstatus, Temperaturen etc. Out-of-the-box zu sammeln.
 
 Damit der openITCOCKPIT Monintoring Agent anpass- und erweiterbar ist, ist er zu 100% mit der Nagios Plugin API kompatibel. Daher ist keine zusätzliche software wie NRPE oder check_by_ssh nötig um Plugins auf dem Zielsystem auszuführen. 
 
 Die Kommunikation ist standardmäßig verschlüsselt durch HTTPS.
 
-### Herunterladen und installieren des openITCOCKPIT Monitoring Agent
+### Herunterladen und Installieren des openITCOCKPIT Monitoring Agent
 
-Bevor Sie anfangen Installieren Sie den openITCOCKPIT Monitoring Agent auf dem gewünschten Zielsystem, dass Sie überwachen möchten.
+Bevor Sie anfangen, installieren Sie den openITCOCKPIT Monitoring Agent auf dem gewünschten Zielsystem, dass Sie überwachen möchten.
 
-Um den Agent herunterzuladen empfehlen wir Ihnen die [offizielle Download seite](https://openitcockpit.io/download_agent/)
+Um den Agent herunterzuladen empfehlen wir Ihnen die [offizielle Download Seite](https://openitcockpit.io/download_agent/)
 
-Der Quellcode ist über das GitHub repository verfügbar: :fontawesome-brands-github: https://github.com/it-novum/openitcockpit-agent-go
+Der Quellcode ist über das GitHub Repository verfügbar: :fontawesome-brands-github:  [https://github.com/it-novum/openitcockpit-agent-go](https://github.com/it-novum/openitcockpit-agent-go)
 
 ### Überwachen eines Hosts mit dem openITCOCKPIT Monitoring Agent
 
@@ -186,7 +186,7 @@ Beide Modi sind einfach einzurichten. Für dieses Tutorial nutzen wir den **Pull
 Der zweite Schritt ist grundsätzlich ein grafischer Konfigurations Generator um die Konfigurationsdatei des openITCOCKPIT Monitoring Agent zu modifizieren. Sie müssen nur das Betriebssystem auswählen, welches Sie überachen möchten und klicken auf die Schaltfläche "Weiter".
 
 !!! info "Verbindungstyp: Auto-TLS"
-    Es wird nachdrücklich Empfohlen, Auto-TLS als Verbindungstyp auszuwählen. Dies sichert und verschlüsselt die Verbindung zischen dem openITCOCKPIT Server und dem openITCOCKPIT Monitoring Agent automatisch.
+    Es wird nachdrücklich empfohlen, Auto-TLS als Verbindungstyp auszuwählen. Dies sichert und verschlüsselt die Verbindung zwischen dem openITCOCKPIT Server und dem openITCOCKPIT Monitoring Agent automatisch.
     Mehr Informationen über die Sicherheit des openITCOCKPIT Monitoring Agent finden Sie in der [Dokumentation](https://github.com/it-novum/openitcockpit-agent-go/wiki/Agent-Overview)
 
 
@@ -199,18 +199,18 @@ Für dieses Tutorial können Sie mit der Standardkonfiguration fortfahren. Zum n
 ![agent install config](/images/agent-install-config.png)
 
 
-Der openITCOCKPIT Server wird sich zu dem openITCOCKPIT Monitoring Agent auf dem Zielsystem verbinden und ein TLS Zertifikatsaustasch vollziehen. Für jeden openITCOCKPIT Monitoring Agent wird ein einzigartiges Zertifikat generiert. Dieses Zertifikat wird für Authentifizierungs und Verschlüsselungszwecke benötigt.
+Der openITCOCKPIT Server wird sich zu dem openITCOCKPIT Monitoring Agent auf dem Zielsystem verbinden und ein TLS Zertifikatsaustasch vollziehen. Für jeden openITCOCKPIT Monitoring Agenten wird ein einzigartiges Zertifikat generiert. Dieses Zertifikat wird für Authentifizierungs- und Verschlüsselungszwecke benötigt.
 
 Klicken Sie auf "Weiter" um fortzufahren.
 
 ![cert exchange](/images/certificate-exchange.png)
 
-Das System wird grundlegende health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die die gewünschten ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
+Das System wird grundlegende Health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die die gewünschten ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
 
 
 ![create services](/images/agent-create-services.png)
 
-Der Letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
+Der letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
 Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
 
 ![services create successfully](/images/agent-services-created-successfully.png)
@@ -221,9 +221,9 @@ Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services 
 ![agent services monitored](/images/agent-services-monitored.png)
 
 
-### Bestimmen des Host status (optional)
+### Bestimmen des Hoststatus (optional)
 
-Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden um den Host status zu bestimmen. Anstelle eines Pings ist es möglich die Ergebnisse des openITCOCKPIT Monitoring Agent zum bestimmen des Hoststatus zu verwenden. Für weitere Informationen können Sie die Dokumentation nutzen https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status 
+Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden, um den Hoststatus zu bestimmen. Anstelle eines Pings ist es möglich die Ergebnisse des openITCOCKPIT Monitoring Agenten zum Bestimmen des Hoststatus zu verwenden. Für weitere Informationen können Sie die Dokumentation nutzen [https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status](https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status) 
 
 
 ### Push Modus
@@ -232,7 +232,7 @@ Wählen Sie den Push Modus um fortzufahren.
 
 ![agent push or pull use push](/images/agent-push-or-pull-use-push.png)
 
-Der zweite Schritt ist grundsätzlich ein grafischer Konfigurations Generator um die Konfigurationsdatei des openITCOCKPIT Monitoring Agent zu modifizieren. Sie müssen nur das Betriebssystem auswählen, welches Sie überachen möchten und klicken auf die Schaltfläche "Weiter".
+Der zweite Schritt ist grundsätzlich ein grafischer Konfigurationsgenerator, um die Konfigurationsdatei des openITCOCKPIT Monitoring Agenten zu modifizieren. Sie müssen nur das Betriebssystem auswählen, welches Sie überachen möchten und klicken auf die Schaltfläche "Weiter".
 
 
 Setzen Sie die öffentliche IP Adresse oder FQDN Ihres openITCOCKPIT Servers im Feld `openITCOCKPIT Server Adresse` und tragen den API-Key, welchen der Agent nutzen soll in das Feld `openITCOCKPIT API Schlüssel` 
@@ -257,14 +257,14 @@ Jeder Agent sendet eine eindeutige Kennung an den openITCOCKPIT Server. Um unaut
 
 ![host to agent mapping](/images/map-host-to-agent.png)
 
-Das System wird grundlegende health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die die gewünschten ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
+Das System wird grundlegende Health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die die gewünschten ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
 
-!!! info
-    Da der Agent im Push Modus Arbeitet, ist es möglich dass openITCOCKPIT bisher noch keine Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf :fontawesome-solid-arrow-left: um auf den Vorhergehenden Schritt zuzückzukehren, warten 30 Sekunden und klicken anschließend wieder auf die Schaltfläche `Nächster`.
+!!! Info den meisten Fällen
+    Da der Agent im Push Modus Arbeitet, ist es möglich dass openITCOCKPIT bisher noch keine Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf :fontawesome-solid-arrow-left: um auf den vorhergehenden Schritt zurückzukehren, warten 30 Sekunden und klicken anschließend wieder auf die Schaltfläche `Nächster`.
 
 ![create services push](/images/agent-create-services-push.png)
 
-Der Letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
+Der letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
 Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
 
 ![services created push export](/images/agent-services-created-successfully-push.png)
@@ -274,16 +274,16 @@ Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services 
 
 ![agent services monitored push](/images/agent-services-monitored-push.png)
 
-### Bestimmen des Host status (optional, aber empfohlen)
+### Bestimmen des Hoststatus (optional, aber empfohlen)
 
-Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden um den Host status zu bestimmen.
-In den meissten fällen ist es nicht möglich einen Ping zum Zielsystem zu senden, wenn der Push Modus genutzt wird.
+Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden um den Hoststatus zu bestimmen.
+In den meisten Fällen ist es nicht möglich einen Ping zum Zielsystem zu senden, wenn der Push Modus genutzt wird.
 
 Bearbeiten Sie den Host und wählen die Hostvorlage `openITCOCKPIT Agent - Push` aus und speichern diesen ab. Vergessen Sie nicht anschließend die Monitoring Engine Konfiguration zu aktualisieren (Export). 
 
 openITCOCKPIT wird nun den Timestamp der zuletzt empfangenen Nachricht des openITCOCKPIT Monitoring Agents auswerten um zu bestimmen ob der Host verfügbar ist oder nicht.
 
-Für weitere Informationen können Sie die Dokumentation nutzen https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status 
+Für weitere Informationen können Sie die Dokumentation nutzen [https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status](https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status) 
 
 ![agent push host status](/images/agent-push-host-status.png)
 
@@ -298,7 +298,7 @@ Die Checkmk Erweiterung für openITCOCKPIT wird als Modul ausgeliefert. Diese Mo
 
 
 !!! info "openITCOCKPIT Community Lizenz wird benötigt"
-    Um Zugriff auf die Community Module zu erhalten, wird eine Registrierung ihrer openITCOCKPIT Instanz mit der **kostenlosen** Community Lizenz vorrausgesetzt.
+    Um Zugriff auf die Community Module zu erhalten, wird eine Registrierung Ihrer openITCOCKPIT Instanz mit der **kostenlosen** Community Lizenz vorrausgesetzt.
 
 
 Navigieren sie nach `Verwaltung -> Systemwerkzeuge -> Paketmanager` und installieren Sie das *CheckmkModule*
@@ -325,11 +325,11 @@ Navigieren Sie nach `Verwaltung -> Benutzerverwaltung -> Verwalte Benutzerrollen
 
 ![checkmk userrole permissions grant](/images/checkmk-user-roles-permissions.png)
 
-Neue Berechtigungen werden nicht automatisch gewährt (ausgenommen Benutzer der `Administrator` Benutzerrolle). Dies hat den Hintergrund dass nicht jeder Benutzer Module nutzen kann, die beispielsweise nur zu Test oder Evaluierungszwecken installiert wurden. 
+Neue Berechtigungen werden nicht automatisch gewährt (ausgenommen Benutzer der `Administrator` Benutzerrolle). Dies hat den Hintergrund, dass nicht jeder Benutzer Module nutzen kann, die beispielsweise nur zu Test- oder Evaluierungszwecken installiert wurden. 
 
 ### Checkmk Agent auf dem Zielsystem installieren
 
-Wie bereits angesprochen, nutzen wir den Checkmk Agent um das Remote System zu überwachen. 
+Wie bereits angesprochen, nutzen wir den Checkmk Agenten um das Remote System zu überwachen. 
 
 Zuallererst müssen Sie den Checkmk Agenten von Ihrem openITCOCKPIT Server auf das Zielsystem kopieren:
 

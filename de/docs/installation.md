@@ -49,7 +49,7 @@ Die eigentliche Installation wird durch folgenden Befehl ausgeführt:
 apt-get install openitcockpit
 ```
 
-Im Anschluss muss noch die Grundkonfiguration durchgeführt werden. In diesem Schritt wird zum Beispiel der erste Benutzer für die Weboberfläche erstellt. Im Anschluss erfolgt die Restliche Konfiguration über das openITCOCKPIT Webinterface.
+Im Anschluss muss noch die Grundkonfiguration durchgeführt werden. In diesem Schritt wird zum Beispiel der erste Benutzer für die Weboberfläche erstellt. Im Anschluss erfolgt die restliche Konfiguration über das openITCOCKPIT Webinterface.
 
 ```
 /opt/openitc/frontend/SETUP.sh
@@ -57,9 +57,9 @@ Im Anschluss muss noch die Grundkonfiguration durchgeführt werden. In diesem Sc
 
 ## Registrierung der openITCOCKPIT Community Edition
 
-Dieser Schritt ist freiwillig und optional. Der Funktionsumfang von openITCOCKPIT kann durch Module erweitert werden. Einige stehen kostenlos zur Verfügung. Um Zugriff auf dei Communitymodule zu erhalten, muss zuerst der openITCOCKPIT Community Schlüssel eingegeben werden. Rufen Sie dazu `System -> Registration` auf und fügen Sie folgenden Key ein: `e5aef99e-817b-0ff5-3f0e-140c1f342792`. 
+Dieser Schritt ist freiwillig und optional. Der Funktionsumfang von openITCOCKPIT kann durch Module erweitert werden. Einige stehen kostenlos zur Verfügung. Um Zugriff auf die Communitymodule zu erhalten, muss zuerst der openITCOCKPIT Community Schlüssel eingegeben werden. Rufen Sie dazu `System -> Registration` auf und fügen Sie folgenden Schlüssel ein: `e5aef99e-817b-0ff5-3f0e-140c1f342792`. 
 
-Es werden keine weiteren Angeben benötigt.
+Es werden keine weiteren Angaben benötigt.
 
 ![Valid license](images/openITCOCKPIT-v4-valid-license.png){ align=center }
 
@@ -81,4 +81,3 @@ Die Konfiguration des Webservers wird automatisch durchgeführt. Die phpMyAdmin 
 - 2 CPU Kerne (x86-64 oder arm64)
 - 2 GB RAM
 - 20 GB freier Festplattenspeicher
-
