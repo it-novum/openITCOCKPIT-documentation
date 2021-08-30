@@ -12,6 +12,7 @@ apt-get install git python3 python3-pip
 pip install mkdocs
 pip install mkdocs-material
 pip install markdown-include
+pip install git+https://github.com/it-novum/mkdocs-featherlight.git
 ```
 
 ## Run Webserver

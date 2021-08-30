@@ -6,7 +6,7 @@ Prometheus ist ein Open-Source Monitoring System, welches ursprünglich bei [Sou
 
 Im Gegensatz zu Nagios gibt es bei Prometheus keinen Status der über einen Exitcode oder ähnliches erzeugt wird. Prometheus ist ein Monitoring-System welches ausschließlich zum Erfassen und überwachen von Metriken geschaffen wurde. Auf deutsch: Es verarbeitet nur Zahlen.
 
-Der Status ergibt sich aus Bedingungen und Abfragen gegen die Metriken mit[PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).
+Der Status ergibt sich aus Bedingungen und Abfragen gegen die Metriken mit [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
 Eine typische Alert-Regel wäre zum Beispiel
 
