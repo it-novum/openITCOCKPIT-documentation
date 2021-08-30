@@ -136,7 +136,7 @@ Wenn Sie private IP-Adressen verwenden, müssen Sie zuerst das Netzwerk oder die
 
 Lesen Sie auch: [Allow untrusted internal connections to](https://docs.mattermost.com/administration/config-settings.html#allow-untrusted-internal-connections-to)
 
-Bei der Verwendung vonSelbst signierten Zertifikaten müssen Sie die Option*EnableInsecureOutgoingConnections* in Ihrer Mattermost's *config.json aktivieren.*  
+Bei der Verwendung von Selbst signierten Zertifikaten müssen Sie die Option*EnableInsecureOutgoingConnections* in Ihrer Mattermost's *config.json aktivieren.*  
 
 
 ```plaintext
@@ -375,7 +375,7 @@ Als Table muss 'Incident' ausgewählt werden.
 
 Der Wert für View entspricht dem Names der eben selbst definierten Incident View.
 
-Als Condition sollte 'Caller' → 'is'→ 'openITCOCKPIT' definiert werden.
+Als Condition sollte 'Caller' → 'is' → 'openITCOCKPIT' definiert werden.
 
 Der Wert für Caller entspricht dem Names des für openITCOCKPIT angelegten ServiceNow Benutzers.
 
@@ -510,7 +510,7 @@ Beim Installieren des Module sollten diese automatisch angelegt werden.
 
 Sollte die Two-Way Integration nicht funktionieren, sollte überprüft werden, ob das sog. **"full chained" Zertifikat** genutzt wird. (Wird mit LetsEncrypt automatisch erstellt)
 
-Um in ServiceNow den Debug Output des Business Rule Aufrufs zu erhalten, Beispielsweise beim ändern von Incidents, muss im Menü zu 'System Diagnostics'→ 'Debug Business Rule' navigiert werden.
+Um in ServiceNow den Debug Output des Business Rule Aufrufs zu erhalten, Beispielsweise beim ändern von Incidents, muss im Menü zu 'System Diagnostics' → 'Debug Business Rule' navigiert werden.
 
 Zum Aktivieren des Debug Modus muss auf den Link 'available here' und im sich darauf hin öffnenden Tab auf den Button 'Update' geklickt werden.
 
@@ -553,7 +553,7 @@ Beim Ändern des Incident State auf 'Closed' oder 'Resolved' wird zusätzlich de
 
 ### Was kann ich mit dem PagerDuty Modul tun?
 
-Mit Hilfe desPagerDuty Moduls kannst du Host- und Service-Benachrichtigungen von openITCOCKPIT direkt in einen PagerDuty Account bekommen.
+Mit Hilfe des PagerDuty Moduls kannst du Host- und Service-Benachrichtigungen von openITCOCKPIT direkt in einen PagerDuty Account bekommen.
 
 Im Gegensatz zu unserer E-Mail-Integration kann PagerDuty Tickets verschiedener Quellen strukturiert anzeigen und verwalten.
 
@@ -564,7 +564,7 @@ Bei Verwendung der PagerDuty App können die Benachrichtigungen auch auf dem Sma
 
 Nach Konfiguration der Zwei-Wege Integration, werden Ticket Acknowledgements(Bestätigungen) auch wieder zurück ins openITCOCKPIT übertragen.
 
-Der Autor und ein Link zum Ticket werden in der Host / ServiceAcknowledgement Nachricht im openITCOCKPIT angezeigt.
+Der Autor und ein Link zum Ticket werden in der Host / Service Acknowledgement Nachricht im openITCOCKPIT angezeigt.
 
 Wenn der Host oder Service den Status Up oder Ok wiedererlangt, wird das PagerDuty Ticket automatisch geschlossen, sofern es noch geöffnet war.
 
@@ -572,7 +572,7 @@ Wenn der Host oder Service den Status Up oder Ok wiedererlangt, wird das PagerDu
 
 #### Was kann ich konfigurieren?
 
-Unter "Configuration / PagerDuty" sind die Einstellungen für dasPagerDuty Modul zu finden.
+Unter "Configuration / PagerDuty" sind die Einstellungen für das PagerDuty Modul zu finden.
 
 | Feld Name | Erforderliches Feld | Beschreibung |
 | --- | --- | --- |
@@ -591,7 +591,7 @@ Mit der einfachen Integration kann openITCOCKPIT Tickets in PagerDuty öffnen, e
 
 openITCOCKPIT kommuniziert mit PagerDuty über die API Version 2.
 
-Um dies zu tun, musst du zu erst einenAPI Key erstellen. Dazu navigierst du im PagerDuty Menü zum Punkt Configuration → Api Access.  
+Um dies zu tun, musst du zu erst einen API Key erstellen. Dazu navigierst du im PagerDuty Menü zum Punkt Configuration → Api Access.  
 
 
 Klicke auf den "**Create New Api Key**" Button, gib eine Beschreibung ein, wähle API version 2 aus und bestätige mit "**Create Key**".
@@ -619,7 +619,7 @@ Die Option Incident Behavior muss auf "*Create incidents*" eingestellt werden!
 
 Klicke auf "**Add Service**" und kopiere den angezeigten "Integration Key".
 
-#### Zwei-WegeIntegration
+#### Zwei-Wege Integration
 
 Mit unserer Zwei-Wege Integration werden in PagerDuty erstellte Acknowledgements auch in dein openITCOCKPIT übertragen.
 
