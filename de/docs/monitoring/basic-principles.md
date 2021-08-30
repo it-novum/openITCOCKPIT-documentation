@@ -21,7 +21,7 @@ Dies erledigt der Export für uns. Der Export erledigt allerdings nicht nur das.
 - Ausführen von post export Aufgaben
 - Verifizieren der neuen Naemon Konfiguration
 - Naemon anweisen seine Konfiguration neu einzulesen
-- (OPTIONAL) Neue Konfiguration auf Satellitensysteme übertragen
+- (OPTIONAL) neue Konfiguration auf Satellitensysteme übertragen
 - `after Export` Aufgaben ausführen
 - (OPTIONAL) Prometheus Konfiguration verifizieren
 - (OPTIONAL) Prometheus neu starten

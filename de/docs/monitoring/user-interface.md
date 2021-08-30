@@ -1,7 +1,7 @@
 ## User Interface
 
 ### Das Interface im Überblick
-Das Layout des User Interface teilt sich in zwei Bereiche auf. Den Navigationsbereich (1. Blau) und den Inhaltsbereich (2. Rot)
+Das Layout des User-Interface teilt sich in zwei Bereiche auf. Den Navigationsbereich (1. Blau) und den Inhaltsbereich (2. Rot)
 Der Navigationsbereich von openITCOCKPIT bleibt immer gleich, wohingegen der Inhalt der ausgewählten Seite immer im Inhaltsbereich (2) angezeigt wird.
 
 ![user-interface](/images/user-interface.png)
@@ -15,7 +15,7 @@ Die obere Navigationsleiste beinhaltet neben einer Suche (2) und der Uhrzeit (7)
 
 1. Schaltfläche zum Ein-/Ausklappen des Hauptmenüs
 2. Suchleiste mit der Möglichkeit nach Hosts, Services, UUIDs und IP-Adressen zu suchen.
-3. Subscription Badge - Nur sichtbar bei unregistrieren und Community Editionen.
+3. Subscription Badge - nur sichtbar bei unregistrierten und Community Editionen.
 4. [Systemzustand (System Health)](#system-health) 
 5. [Export](../basic-principles/#export) Schaltfläche
 6. Zeigt an, ob eine neue openITCOCKPIT Version verfügbar ist. Nur sichtbar, wenn dies der Fall ist.
@@ -27,12 +27,12 @@ Die obere Navigationsleiste beinhaltet neben einer Suche (2) und der Uhrzeit (7)
 ##### System health
 Die System health Anzeige gibt einen schnellen Überblick auf den Zustand des openITCOCKPIT Servers. 
 Hier werden Warnungen und kritische Zustände, wie beispielsweise mangelnder Festplattenspeicher, kritische Arbeitsspeicherauslastung sowie nicht laufenden Dienste, angezeigt.
-Ist die Anzeige leer und in der Farbe grün dargestellt, ist mit dem Server alles in Ordnung (siehe screenshot). 
+Ist die Anzeige leer und in der Farbe Grün dargestellt, ist mit dem Server alles in Ordnung (siehe screenshot). 
 
 ![system health](/images/system-health.png)
 
 ##### System Uhrzeiten
-Das User Interface ist in der Lage zwei verschiedene Uhrzeiten anzuzeigen. 
+Das User-Interface ist in der Lage zwei verschiedene Uhrzeiten anzuzeigen. 
 
 ![user server time](/images/user-servertime.png)
 
@@ -55,7 +55,7 @@ Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
 
 
 #### Seitenmenü Button
-Der Seitenmenü Button ist immer um unteren rechten Bildrand zu sehen und enthält zwei Funktionen, die auf jeder Seite in openITCOCKPIT anwendbar sind. 
+Der Seitenmenü-Button ist immer um unteren rechten Bildrand zu sehen und enthält zwei Funktionen, die auf jeder Seite in openITCOCKPIT anwendbar sind. 
 
 - :fontawesome-solid-expand: stellt die Seite im Vollbildmodus dar.
 - :fontawesome-solid-arrow-up: Scrollt automatisch an den Anfang der aktuellen Seite.
@@ -69,7 +69,7 @@ In der Profil-Übersicht haben Sie die Möglichkeit Anpassungen an Ihrem eigenen
 
 #### Profil Informationen
 
-Neben den Änderungsmöglichkeiten Ihres Namens, E-Mail Adresse und Telefonnummer, können Sie verschiedene Einstellungen treffen, die die Darstellung von Listen, Browser Darstellungen und weiteres verändern.
+Neben den Änderungsmöglichkeiten Ihres Namens, E-Mail-Adresse und Telefonnummer, können Sie verschiedene Einstellungen treffen, die die Darstellung von Listen, Browser Darstellungen und weiteres verändern.
 
 ![Profil Information edit](/images/profile-information.png)
 
@@ -87,7 +87,7 @@ Neben den Änderungsmöglichkeiten Ihres Namens, E-Mail Adresse und Telefonnumme
 
 #### Profilbild
 
-Um ein Profilbild hochzuladen, können Sie das gewünschte Bild einfach per Drag and Drop in das dafür vorgesehene Feld ziehen. Das Hochladen und Speichern geschieht anschließend automatisch.
+Um ein Profilbild hochzuladen, können Sie das gewünschte Bild einfach per Drag-and-drop in das dafür vorgesehene Feld ziehen. Das Hochladen und Speichern geschieht anschließend automatisch.
 
 ![Profile picture](/images/profile-image.png)
 
@@ -139,7 +139,7 @@ Hier kann eine Dokumentation zum Host eingetragen werden
 
 ![](/images/hosts-browsernotifications.png)
 
-Um eine Übersicht aller gesendeten Benachrichtigungen zum Host zu bekommen klicken Sie auf diese Schaltfläch
+Um eine Übersicht aller gesendeten Benachrichtigungen zum Host zu bekommen, klicken Sie auf diese Schaltfläche
 
 #### Verlaufshistorie
 
@@ -219,7 +219,7 @@ Je nach Benachrichtigungseinstellungen werden Benachrichtigungen für einen Host
 
 #### Passive Übertragung eines Prüfergebnisses
 
-Mit dem passiven Übertragen von Prüfergebnissen, erhält der Host den angegebenen Status mit Kommentar. Ist `Auf harten Zustand zwingen` angehakt, so wird der Hoststatustyp gleich auf `HARD` gesetzt und die Anzahl der Prüfversuche ignoriert.
+Mit dem passiven Übertragen von Prüfergebnissen erhält der Host den angegebenen Status mit Kommentar. Ist `Auf harten Zustand zwingen` angehakt, so wird der Hoststatustyp gleich auf `HARD` gesetzt und die Anzahl der Prüfversuche ignoriert.
 
 #### Deaktiviere Benachrichtigungen
 

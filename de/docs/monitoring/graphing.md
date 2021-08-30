@@ -6,7 +6,7 @@ Grafana ist ein Tool, dass automatisiert Graphen von Services in openITCOCKPIT e
 
 ### Konfiguration
 
-Damit die erstellung von Graphen funktioniert, muss die Schnittstelle Konfiguriert sein.
+Damit die erstellung von Graphen funktioniert, muss die Schnittstelle konfiguriert sein.
 
 #### Lokales Grafana (Docker Container)
 
@@ -27,12 +27,12 @@ Damit die erstellung von Graphen funktioniert, muss die Schnittstelle Konfigurie
 
 Um ein benutzerdefiniertes Grafana Dashboard zu erstellen, öffnen Sie im Hauptmenü unter Berichte → Grafana die Benutzerdefinierte Grafana Dashboard Übersicht.
 
-Anschließend klicken Sie auf die Schaltfläche “Neu”.
+Anschließend klicken Sie auf die Schaltfläche "Neu".
 
 Danach wählen Sie einen Container aus und vergeben einen Namen für das Dashboard.
 
-Im nächsten Schritt konfigurieren Sie die Metriken die Sie anzeigen wollen und klicken danach auf die Schaltfläche “Synchronisiere mit Grafana”.
+Im nächsten Schritt konfigurieren Sie die Metriken, die Sie anzeigen wollen und klicken danach auf die Schaltfläche "Synchronisiere mit Grafana".
 
-Danach können Sie zurück zur Übersicht wechseln und dann im Menü des Dashboards auf “Anzeigen” klicken.
+Danach können Sie zurück zur Übersicht wechseln und dann im Menü des Dashboards auf "Anzeigen" klicken.
 
 Benutzerdefinierte Grafana Dashboards können auch als widget im Dashboard der openITCOCKPIT Startseite angezeigt werden.

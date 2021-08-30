@@ -1,27 +1,27 @@
 ## Kontakte
 
-Kontakte werden in openITCOCKPIT genutzt um Benachrichtigungen zu versenden. Diese Benachrichtigungen können je nach im Kontakt konfiguriertem Kommando beispielsweise per E-Mail, Browser Push Benachrichtigung oder mit Erweiterungen auch über SMS, Chat Benachrichtigung oder ähnlichem versendet werden.
+Kontakte werden in openITCOCKPIT genutzt, um Benachrichtigungen zu versenden. Diese Benachrichtigungen können je nach im Kontakt konfiguriertem Kommando beispielsweise per E-Mail, Browser Push-Benachrichtigung oder mit Erweiterungen auch über SMS, Chat Benachrichtigung oder ähnlichem versendet werden.
 
 ### Neuen Kontakt erstellen
 
-Um einen neuen Kontakt zu erstellen, klicken Sie zunächst auf die Schaltfläche “Neu”.
+Um einen neuen Kontakt zu erstellen, klicken Sie zunächst auf die Schaltfläche "Neu".
 
-Danach wählen Sie im Formular einen oder mehrere Container aus in dem der Kontakt verfügbar sein soll und vergeben einen Namen sowie entweder eine E-Mail Adresse oder eine Telefonnummer.
+Danach wählen Sie im Formular einen oder mehrere Container aus in dem der Kontakt verfügbar sein soll und vergeben einen Namen sowie entweder eine E-Mail-Adresse oder eine Telefonnummer.
 
 Anschließend wählen Sie die Benachrichtigungsmethode für den Host aus. Dazu wählen Sie die Zeitspanne und mindestens ein Kommando aus.
 
-Damit die Benachrichtigungen für den Kontakt auch versendet werden, muss die Option “Hostbenachrichtigung aktiviert” aktiv sein.
+Damit die Benachrichtigungen für den Kontakt auch versendet werden, muss die Option "Hostbenachrichtigung aktiviert" aktiv sein.
 
-mit den “Optionen zu Hostbenachrichtigungen” können Sie noch auswählen wann eine Benachrichtigung erfolgen soll.
+mit den "Optionen zu Hostbenachrichtigungen" können Sie noch auswählen, wann eine Benachrichtigung erfolgen soll.
 
 Die Konfiguration zur Servicebenachrichtigung erfolgt nach demselben Schema.
 
 
 ## Kontaktgruppen
-Kontaktgruppen sind Sammlungen von Kontakten. Sie dienen zur Vereinfachung der Massenhaften Zuweisung von Kontakten an verschiedenste Objekte. 
-Kontaktgruppen können meist anstatt einzelner Kontakte wie zum Beispiel beim erstellen von Host, Services, Eskalationen, Abhängigkeiten oder Vorlagen ausgewählt werden. 
+Kontaktgruppen sind Sammlungen von Kontakten. Sie dienen zur Vereinfachung der massenhaften Zuweisung von Kontakten an verschiedenste Objekte. 
+Kontaktgruppen können meist anstatt einzelner Kontakte wie zum Beispiel beim Erstellen von Host, Services, Eskalationen, Abhängigkeiten oder Vorlagen ausgewählt werden. 
 
-### Ist meine Kontaktgruppe in verwendung ?
+### Ist meine Kontaktgruppe in verwendung?
 mit der Funktion "Verwendet von" (Used By) ist es möglich eine Übersicht über die Verwendung der jeweiligen Kontaktgruppe zu bekommen. 
 ![contactgroup used by list item](/images/contactgroups-usedbylistitem.png)
 
@@ -30,8 +30,8 @@ mit der Funktion "Verwendet von" (Used By) ist es möglich eine Übersicht über
 Benachrichtigungseskalationen können verwendet werden, um eine oder mehrere Benutzergruppen im Notfall zu benachrichtigen. Wenn ein Host oder Dienst eskaliert, werden Kontakte, Kontaktgruppen und Benachrichtigungsoptionen durch die Eskalation überschrieben. Sie funktionieren für Hosts gleichermaßen wie für Services.
 
 ### Wann werden Benachrichtigungen eskaliert?
-Benachrichtigungen werden nur dann eskaliert, wenn mindestens eine Eskalationsdefinition mit der betreffenden Benachrichtigung übereinstimmt. In einer Eskalation wird ein "Bereich" definiert, ab wann Benachrichtigungen eskaliert werden sollen. Dieser Bereich wird bestimmt durch die Erste Benachrichtigung (Ab der wievielten Benachrichtigung greift die Eskalation) und die Letzte Benachrichtigung (Ab der wievielten Benachrichtigung greift wieder die Standardmäßig definierten Benachrichtigungsoptionen des Objekts)
-Ist ein Eskalationszeitraum definiert, so greift die Eskalationsdefinition nur innerhalb des angegebenem [Zeitabschnittes](../configuration/timeperiods/).
+Benachrichtigungen werden nur dann eskaliert, wenn mindestens eine Eskalationsdefinition mit der betreffenden Benachrichtigung übereinstimmt. In einer Eskalation wird ein "Bereich" definiert, ab wann Benachrichtigungen eskaliert werden sollen. Dieser Bereich wird bestimmt durch die Erste Benachrichtigung (Ab der wievielten Benachrichtigung greift die Eskalation) und die letzte Benachrichtigung (Ab der wievielten Benachrichtigung greift wieder die Standardmäßig definierten Benachrichtigungsoptionen des Objekts)
+ist ein Eskalationszeitraum definiert, so greift die Eskalationsdefinition nur innerhalb des angegebenem [Zeitabschnittes](../configuration/timeperiods/).
 Über die Eskalationsoptionen kann ausgewählt werden für welche Zustände eine Eskalation angestoßen werden soll. Dies sind für Hosts die Zustände:
 - Wiederherstellung (Recovery)
 - Nicht verfügbar (Down)
@@ -50,21 +50,21 @@ Die Felder Kontakte und Kontaktgruppen definieren die Kontakte, die im Eskalatio
 
 
 ## Host / Service Abhängigkeiten
-Abhängigkeiten sind eine Möglichkeit Benachrichtigungen und Überprüfungs Ausführungen für bestimmte Objekte anhand von Statusinformationen Abhängiger Objekte zu unterdrücken. 
+Abhängigkeiten sind eine Möglichkeit Benachrichtigungen und Überprüfungsausführungen für bestimmte Objekte anhand von Statusinformationen abhängiger Objekte zu unterdrücken. 
 In openITCOCKPIT ist es möglich Abhängigkeiten für Hosts und Hostgruppen sowie Services und Servicegruppen zu definieren. 
 
 Dies funktioniert folgendermaßen:
 Bevor Naemon einen Servicecheck ausführt oder eine Benachrichtigung sendet, wird der Host oder der Service nach Abhängigkeiten überprüft. Ist keine Abhängigkeit definiert, so wird der Check ausgeführt und die Benachrichtigung ganz normal versendet. Ist eine Abhängigkeit definiert, wird jede Abhängigkeit wie folgt überprüft:
 
 1. Der Status des abhängigen Hosts oder Services wird geholt.
-2. Dieser Status wird abgeglichen mit den Ausführungs oder Benachrichtigungsfehlerkriterien (Je nach dem was zu diesem Zeitpunkt relevant ist) 
-3. Wenn dieser Status mit einen der ausgewählten Fehlerkriterien übereinstimmt, gilt die Abhängigkeit als fehlgeschlagen und Naemon wird die weitere Überprüfung der Abhängigkeiten abbrechen.
+2. Dieser Status wird abgeglichen mit den Ausführungs oder Benachrichtigungsfehlerkriterien (Je nachdem was zu diesem Zeitpunkt relevant ist) 
+3. Wenn dieser Status mit einem der ausgewählten Fehlerkriterien übereinstimmt, gilt die Abhängigkeit als fehlgeschlagen und Naemon wird die weitere Überprüfung der Abhängigkeiten abbrechen.
 4. Wenn dieser Status nicht mit einer der ausgewählten Fehlerkriterien übereinstimmt, gilt die Abhängigkeit als bestanden und Naemon wird die nächste Abhängigkeit überprüfen
 
-Diese Schleife wird solange ausgeführt, bis entweder alle Abhängigen Host oder Services die Überprüfung bestanden haben oder eine Abhängigkeit fehlschlägt.  
+Diese Schleife wird so lange ausgeführt, bis entweder alle Abhängigen Host oder Services die Überprüfung bestanden haben oder eine Abhängigkeit fehlschlägt.  
 
 !!! info
-    Solange nicht anders Konfiguriert, wird Naemon den aktuellsten hard state der abhängigen Host oder Services für die überprüfung nutzen. 
+    Solange nicht anders konfiguriert, wird Naemon den aktuellsten hard state der abhängigen Hosts oder Services für die überprüfung nutzen. 
 
 #### Ausführungsfehlerkriterien
 Diese Art der Abhängigkeiten werden genutzt, um aktive Überprüfungen (active checks) zu temporär auszusetzen. 
@@ -73,26 +73,26 @@ Schlägt eine Abhängigkeitsüberprüfung fehl, so wird Naemon die Überprüfung
 
 #### Benachrichtigungsfehlerkriterien
 Wenn alle Abhängigkeitsüberprüfungen für einen Host oder Service erfolgreich sind, werden Benachrichtigungen ganz normal versendet. 
-Schlägt eine Abhängigkeitsüberprüfung fehl, werden die Benachrichtigungen für den (abhängigen) Host oder Service temporär unterdrückt. Wenn alle Abhängigkeiten die Überprüfung (zu einem späteren Zeitpunkt) bestehen, wird das senden der Benachrichtigungen für den (abhängigen) Host oder Service ganz normal fortgesetzt.
+Schlägt eine Abhängigkeitsüberprüfung fehl, werden die Benachrichtigungen für den (abhängigen) Host oder Service temporär unterdrückt. Wenn alle Abhängigkeiten die Überprüfung (zu einem späteren Zeitpunkt) bestehen, wird das Senden der Benachrichtigungen für den (abhängigen) Host oder Service ganz normal fortgesetzt.
 
 #### Abhängigkeitsvererbung
-Abhängigkeiten werden nicht automatisch vererbt. Dies bedeutet, wenn ein Host oder Service (A) eine Abhängigkeit (B) besitzt und diese Abhängigkeit wiederum auch Abhängigkeiten (C) besitzt, so ist A standardmäßig nicht von C abhängig. Um die Abhängigkeit zu aktivieren muss die Option "Erbt Elternteil" (inherits parent) aktiviert werden
+Abhängigkeiten werden nicht automatisch vererbt. Dies bedeutet, wenn ein Host oder Service (A) eine Abhängigkeit (B) besitzt und diese Abhängigkeit wiederum auch Abhängigkeiten (C) besitzt, so ist A standardmäßig nicht von C abhängig. Um die Abhängigkeit zu aktivieren, muss die Option "Erbt Elternteil" (inherits parent) aktiviert werden
 
 ### Host Abhängigkeiten
 Host Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Service Abhängigkeiten.
 
 1. Ein Host kann Abhängigkeiten zu einem oder mehreren Hosts haben.
 2. Host Abhängigkeiten werden Standardmäßig nicht vererbt (Über Option vererbbar).
-3. Host Abhängigkeiten können zum unterdrücken von Benachrichtigungen und Check Ausführungen genutzt werden.
+3. Host Abhängigkeiten können zum Unterdrücken von Benachrichtigungen und Check Ausführungen genutzt werden.
 4. Host Abhängigkeiten sind, wenn konfiguriert, nur innerhalb von [Zeitabschnitten](../configuration/timeperiods/) gültig.
 
 ### Service Abhängigkeiten
 Service Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Host Abhängigkeiten.
 
 1. Ein Service kann Abhängigkeiten zu einem oder mehreren Services haben.
-2. Ein Service kann Abhängigkeiten zu Services haben die nicht in verbindung mit dem selben Host stehen.
+2. Ein Service kann Abhängigkeiten zu Services haben, die nicht in verbindung mit demselben Host stehen.
 3. Service Abhängigkeiten werden Standardmäßig nicht vererbt (über Option vererbbar).
-4. Service Abhängigkeiten können zum unterdrücken von Benachrichtigungen und Check Ausführungen genutzt werden.
+4. Service Abhängigkeiten können zum Unterdrücken von Benachrichtigungen und Check Ausführungen genutzt werden.
 5. Service Abhängigkeiten sind, wenn konfiguriert, nur innerhalb von [Zeitabschnitten](../configuration/timeperiods/) gültig.
 
 
@@ -111,7 +111,7 @@ Unter "API Mattermost" können Sie die Konfiguration finden.
 | Feld Name | Erforderliches Feld | Beschreibung |
 | --- | --- | --- |
 | Webhook URL | :warning: | Definiert die Adresse des Mattermost Servers, welcher genutzt werden soll. **Example**: [http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte](http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte) |
-| Enable Two-Way Integration |     | Über die Zwei-Wege-Integration kann Mattermost Acknowledgements an openITCOCKPIT Senden. Ohne werden nur Alarma an Mattermost geschickt. |
+| Enable Two-Way Integration |     | Über die Zwei-Wege-Integration kann Mattermost Acknowledgements an openITCOCKPIT Senden. Ohne werden nur Alarme an Mattermost geschickt. |
 | openITCOCKPIT API Key |     | Dieser API-Key wird von Mattermost genutzt um die Acknowledgements an openITCOCKPIT zu schicken. Zuerst muss ein benutzerdefinierter API-Key mit openITCOCKPIT erstellt werden |
 | Use Proxy Server |     | Ob der konfigurierte HTTP Proxy genutzt werden soll oder nicht. |
 
@@ -153,7 +153,7 @@ Lesen Sie auch: [Enable Insecure Outgoing Connections](https://docs.mattermost.c
 
 ### Kommandos
 
-Für die Benachrichtigung müssen die folgendes Kommandos genutzt werden.
+Für die Benachrichtigung müssen die folgenden Kommandos genutzt werden.
 
 Diese sollten bei der Installation des Moduls automatisch erstellt werden sein.
 
@@ -178,7 +178,7 @@ Service:
 
 ### Was kann ich mit dem Slack Modul tun?
 
-Mit Hilfe des Slack Moduls kannst du Benachrichtigungen von openITCOCKPIT direkt in einen Channel deines Slack Workspace bekommen.
+Mithilfe des Slack Moduls kannst du Benachrichtigungen von openITCOCKPIT direkt in einen Channel deines Slack Workspace bekommen.
 
 ![](/images/slack-chatnotification.png)
 
@@ -200,7 +200,7 @@ openITCOCKPIT kommuniziert mit Slack über die Slack WebAPI und sendet als App N
 
 Gehe zum Erstellen der App auf die Webseite [https://api.slack.com/apps?new\_app=1](https://api.slack.com/apps?new_app=1)
 
-Bestimme einen eigenen App Name und wähle deinen eigenen Slack Workspace aus.
+Bestimme eine eigene App Name und wähle deinen eigenen Slack Workspace aus.
 
 ![](/images/slack-createapp.png)
 
@@ -212,7 +212,7 @@ Wähle einen Channel, in welchen die Nachrichten von openITCOCKPIT gepostet werd
 
 ![](/images/slack-identity.png)
 
-Kopiere die eben erstellte Webhook URL und füge diese im openITCOCKPIT -> Administration -> Slack ein.
+Kopiere die eben erstellte Webhook URL und füge diese im `openITCOCKPIT -> Administration -> Slack` ein.
 
 ![](/images/slack-copywebhookurl.png)
 
@@ -226,7 +226,7 @@ openITCOCKPIT muss in diesem Fall von extern erreichbar sein.
 
 Gehe dazu auf der Webseite der Slack API links im Menü auf "OAuth & Permissions", füge unten auf der Seite das Recht "users:read" hinzu und speichere die Änderungen.
 
-Gegebenfalls muss der Webhook neu installiert werden. Folge dazu den Anweisungen am oberen Rand der Slack API Webseite.
+Gegebenenfalls muss der Webhook neu installiert werden. Folge dazu den Anweisungen am oberen Rand der Slack API Webseite.
 
 Ist dies der Fall, muss ebenfalls die neue Webhook URL im openITCOCKPIT aktualisiert werden.
 
@@ -260,7 +260,7 @@ Danach speichern und exportieren.
 
 ### Kommandos
 
-Für die Benachrichtigung müssen die folgendes Kommandos genutzt werden.
+Für die Benachrichtigung müssen die folgenden Kommandos genutzt werden.
 
 Host:
 
@@ -282,7 +282,7 @@ Service:
 
 ## Axios Assyst
 
-Das Axios Assyst Modul bietet eine Schnittstelle zum Axios Assyst Ticketsystem. Diese SOAP Schnittstelle bietet die möglichkeit Tickets in Assyst zu eröffnen und bei einem Grünen Status des entsprechendne Host oder Services, das Ticket automatisiert wieder zu Schließen. Zudem können Benachrichtigungen von openITCOCKPIT direkt in Assyst bestätigt werden.
+Das Axios Assyst Modul bietet eine Schnittstelle zum Axios Assyst Ticketsystem. Diese SOAP Schnittstelle bietet die möglichkeit Tickets in Assyst zu eröffnen und bei einem Grünen Status des entsprechenden Host oder Services, das Ticket automatisiert wieder zu schließen. Zudem können Benachrichtigungen von openITCOCKPIT direkt in Assyst bestätigt werden.
 
 
 
@@ -325,7 +325,7 @@ Danach muss die Role über **Save** gespeichert und der Benutzer über **Update*
 
 Um URLs zu Hosts und Services aus openITCOCKPIT im ServiceNow Incident anzeigen zu können, muss eine eigene Incident View erstellt werden.
 
-Dazu öffnet man zu erst ein beliebiges Incident (Menü → Incidents → All → Klick auf Incident ID), drückt auf den Menübutton oben links und navigiert zu dem Punkt Configure → Form Design.
+Dazu öffnet man zuerst ein beliebiges Incident (Menü → Incidents → All → Klick auf Incident ID), drückt auf den Menübutton oben links und navigiert zu dem Punkt Configure → Form Design.
 
 Auf dieser Seite sollten oben links die Tabelle 'Incident' und die Ansicht 'Default view' ausgewählt sein.
 
@@ -341,11 +341,11 @@ Auch hier sollte der Name 'openITCOCKPIT' gewählt und mit OK bestätigt werden.
 
 Nun sollte im Dropdown die neue View ausgewählt sein.
 
-Auf der linken Seite gibt man im Tab 'Field Types' den Filter 'URL' ein. Es sollte ein Objekt für ein neues URL Feld erscheinen.
+Auf der linken Seite gibt man im Tab 'Field Types' den Filter 'URL' ein. Es sollte ein Objekt für ein neues URL-Feld erscheinen.
 
 ![](/images/servicenow-newurlfield.png)
 
-**Das URL Objekt** wird per Drag & Drop auf die rechte Seite an die gewünschte Stelle in die Boxen gezogen.
+**Das URL-Objekt** wird per Drag-and-drop auf die rechte Seite an die gewünschte Stelle in die Boxen gezogen.
 
 Dies muss 2x zum Erstellen der Felder 'Host URL' und 'Service URL' getan werden.
 
@@ -355,7 +355,7 @@ Empfohlene Konfiguration:
 
 ![](/images/servicenow-incidentfieldtype.png)
 
-Nach den Hinzufügen der zwei URL Objekte müssen diese über das Zahnrad auf der rechten Seite editiert werden.
+Nach dem Hinzufügen der zwei URL Objekte müssen diese über das Zahnrad auf der rechten Seite editiert werden.
 
 Für das Label 'Host URL' muss der Name 'u\_host\_url' und für das Label 'Service URL' der Name 'u\_service\_url' gewählt werden.
 
@@ -490,9 +490,9 @@ Der Wert der Variable 'openITCOCKPIT\_apikey' muss einem selbst generierten, gü
 
 ### Kommandos
 
-Für die Benachrichtigung müssen die folgendes Kommandos genutzt werden.
+Für die Benachrichtigung müssen die folgenden Kommandos genutzt werden.
 
-Beim Installieren des Module sollten diese automatisch angelegt werden.
+Beim Installieren des Moduls sollten diese automatisch angelegt werden.
 
 **Host Notification Command**
 
@@ -510,7 +510,7 @@ Beim Installieren des Module sollten diese automatisch angelegt werden.
 
 Sollte die Two-Way Integration nicht funktionieren, sollte überprüft werden, ob das sog. **"full chained" Zertifikat** genutzt wird. (Wird mit LetsEncrypt automatisch erstellt)
 
-Um in ServiceNow den Debug Output des Business Rule Aufrufs zu erhalten, Beispielsweise beim ändern von Incidents, muss im Menü zu 'System Diagnostics' → 'Debug Business Rule' navigiert werden.
+Um in ServiceNow den Debug Output des Business Rule Aufrufs zu erhalten, Beispielsweise beim Ändern von Incidents, muss im Menü zu 'System Diagnostics' → 'Debug Business Rule' navigiert werden.
 
 Zum Aktivieren des Debug Modus muss auf den Link 'available here' und im sich darauf hin öffnenden Tab auf den Button 'Update' geklickt werden.
 
@@ -544,7 +544,7 @@ Updates eines von openITCOCKPIT erstellten Incidents (über ServiceNow) bewirken
 
 Dabei werden die Incident Felder 'State' und 'Updated By' neben der Incident 'Number' übermittelt.
 
-Beim Ändern des Incident State auf 'Closed' oder 'Resolved' wird zusätzlich der 'Resolution Code', die 'Resolution Notes', sowie die System ID des 'Resolved By' Benutzers an openITCOCKPIT übertragen.
+Beim Ändern des Incident State auf 'Closed' oder 'Resolved' wird zusätzlich der 'Resolution Code', die 'Resolution Notes', sowie die System-ID des 'Resolved By' Benutzers an openITCOCKPIT übertragen.
 
 ![](/images/servicenow-schema2.png)
 
@@ -553,7 +553,7 @@ Beim Ändern des Incident State auf 'Closed' oder 'Resolved' wird zusätzlich de
 
 ### Was kann ich mit dem PagerDuty Modul tun?
 
-Mit Hilfe des PagerDuty Moduls kannst du Host- und Service-Benachrichtigungen von openITCOCKPIT direkt in einen PagerDuty Account bekommen.
+Mithilfe des PagerDuty Moduls kannst du Host- und Service-Benachrichtigungen von openITCOCKPIT direkt in einen PagerDuty Account bekommen.
 
 Im Gegensatz zu unserer E-Mail-Integration kann PagerDuty Tickets verschiedener Quellen strukturiert anzeigen und verwalten.
 
@@ -562,7 +562,7 @@ Sobald auf einem Host oder Service ein Fehler auftritt, wird ein PagerDuty Ticke
 
 Bei Verwendung der PagerDuty App können die Benachrichtigungen auch auf dem Smartphone empfangen werden. Mehrere Benachrichtigungen zu einem Host oder Service werden in einem Ticket zusammengefasst.
 
-Nach Konfiguration der Zwei-Wege Integration, werden Ticket Acknowledgements(Bestätigungen) auch wieder zurück ins openITCOCKPIT übertragen.
+Nach Konfiguration der Zwei-Wege Integration werden Ticket Acknowledgements(Bestätigungen) auch wieder zurück ins openITCOCKPIT übertragen.
 
 Der Autor und ein Link zum Ticket werden in der Host / Service Acknowledgement Nachricht im openITCOCKPIT angezeigt.
 
@@ -591,7 +591,7 @@ Mit der einfachen Integration kann openITCOCKPIT Tickets in PagerDuty öffnen, e
 
 openITCOCKPIT kommuniziert mit PagerDuty über die API Version 2.
 
-Um dies zu tun, musst du zu erst einen API Key erstellen. Dazu navigierst du im PagerDuty Menü zum Punkt Configuration → Api Access.  
+Um dies zu tun, musst du zuerst einen API Key erstellen. Dazu navigierst du im PagerDuty Menü zum Punkt Configuration → Api Access.  
 
 
 Klicke auf den "**Create New Api Key**" Button, gib eine Beschreibung ein, wähle API version 2 aus und bestätige mit "**Create Key**".
@@ -606,7 +606,7 @@ Da der API Key nicht erneut angezeigt werden kann, sollte dieser sofort gespeich
 
 Anschließend muss ein neuer Service angelegt werden.
 
-Navigiere zum Menüpunkt Configuration → Services und klicke auf “**\+ New Service**”.
+Navigiere zum Menüpunkt Configuration → Services und klicke auf "**\+ New Service**".
 
 Hier ist es wichtig, dass als "Integration Type" aus der Auswahlbox ("Select a tool") "**openITCOCKPIT**" ausgewählt wird.
 
@@ -629,7 +629,7 @@ Navigiere zum Menüpunkt Configuration →Extensions.
 
 Klicke auf "**\+ New Extension**" und wähle "*Generic V2 Webhook*" aus.
 
-Kopiere die Webhook URL aus den openITCOCKPIT PagerDuty Einstellungen in das URL Feld und ersetze "*YOUR\_API\_KEY\_HERE*" mit einem neuen API Key.
+Kopiere die Webhook URL aus den openITCOCKPIT PagerDuty Einstellungen in das URL-Feld und ersetze "*YOUR\_API\_KEY\_HERE*" mit einem neuen API Key.
 
 Wenn dein System hinter einem Proxy ist, musst du den Hostnamen eventuell manuell anpassen.
 

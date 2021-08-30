@@ -4,7 +4,7 @@
 
 Prometheus ist ein Open-Source Monitoring System, welches ursprünglich bei [SoundCloud](https://soundcloud.com/) entwickelt wurde. Heute ist es ein eigenständiges Projekt, welches unabhängig von einer Firma entwickelt wird.
 
-Im Gegensatz zu Nagios gibt es bei Prometheus keinen Status der über einen Exitcode oder ähnliches erzeugt wird. Prometheus ist ein Monitoring-System welches ausschließlich zum Erfassen und überwachen von Metriken geschaffen wurde. Auf deutsch: Es verarbeitet nur Zahlen.
+Im Gegensatz zu Nagios gibt es bei Prometheus keinen Status der über einen Exitcode oder ähnliches erzeugt wird. Prometheus ist ein Monitoring-System welches ausschließlich zum Erfassen und überwachen von Metriken geschaffen wurde. Auf Deutsch: Es verarbeitet nur Zahlen.
 
 Der Status ergibt sich aus Bedingungen und Abfragen gegen die Metriken mit [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
@@ -22,7 +22,7 @@ Eine typische Alert-Regel wäre zum Beispiel
     description: "RAM on {{$labels.instance}} has been at 80% for 15 minutes."
 ```
 
-Wenn die Metrik "belegter Arbeitsspeicher in %" für mehr als 15 Minuten über 80% ist, verschicke einen "Warning" Alert.
+Wenn die Metrik "belegter Arbeitsspeicher in %" für mehr als 15 Minuten über 80 % ist, verschicke einen "Warning" Alert.
 
 #### Exporter
 
@@ -34,21 +34,21 @@ Die Exporter sind kleine Programme, welche einen Webserver bereitstellen über d
 
 Um Prometheus mit openITCOCKPIT nutzen zu können, benötigen Sie eine Enterprise Lizenz, sowie das PrometheusModule.
 
-Zusätzlich müssen auf dem zu Überwachenden System die entsprechenden Exporter Installiert sein. Eine Liste mit verfügbaren Exportern gibt es auf der [Webseite von Prometheus](https://prometheus.io/docs/instrumenting/exporters/)
+Zusätzlich müssen auf dem zu überwachenden System die entsprechenden Exporter installiert sein. Eine Liste mit verfügbaren Exportern gibt es auf der [Webseite von Prometheus](https://prometheus.io/docs/instrumenting/exporters/)
 
 #### Anlegen eines Exporters in openITCOCKPIT
 
 Um einen Prometheus Exporter in openITCOCKPIT anzulegen, klicken Sie im Hauptmenü Monitoring → Prometheus → Exporters.
 
-In der Übersicht klicken Sie auf die Schaltfläche “Neu”.
+In der Übersicht klicken Sie auf die Schaltfläche "Neu".
 
 Im Formular geben Sie zunächst einen Container und einen Namen für den Exporter an.
 
-Der Scrape-Intervall definiert den Zeitabstand in dem Prometheus Daten vom Exporter anfordert.
+Das Scrape-Intervall definiert den Zeitabstand in dem Prometheus Daten vom Exporter anfordert.
 
 Das Scrape-Zeitlimit definiert wie lange Prometheus auf die Antwort des Exporters wartet.
 
-Das Feld Service ist eine Beschreibung die Prometheus als Tag zu den Metriken hinzufügt. Dies dient zur Unterscheidung wenn zwei oder mehr Exporter den selben Namen für Metriken nutzen.
+Das Feld Service ist eine Beschreibung die Prometheus als Tag zu den Metriken hinzufügt. Dies dient zur Unterscheidung, wenn zwei oder mehr Exporter denselben Namen für Metriken nutzen.
 
 Metrik-Pfad definiert die URL auf der der Exporter des zu überwachenden Hosts die Metriken bereitstellt. Dieser Pfad ist in der Regel immer `/metrics` .
 
@@ -60,11 +60,11 @@ Manche Exporter benötigen Spezielle YAML Konfigurationen (bspw. Blackbox, SNMP 
 
 #### Überwachen eines Hosts mit Prometheus in openITCOCKPIT
 
-Wie schon bei den Voraussetzungen beschrieben, muss ein entsprechender Exporter auf dem zu überwachenden Host Installiert und in openITCOCKPIT angelegt worden sein (nur falls dieser von den bereits standardmäßig verfügbaren Exportern in openITCOCKPIT abweicht).
+Wie schon bei den Voraussetzungen beschrieben, muss ein entsprechender Exporter auf dem zu überwachenden Host installiert und in openITCOCKPIT angelegt worden sein (nur falls dieser von den bereits standardmäßig verfügbaren Exportern in openITCOCKPIT abweicht).
 
-Um einen Host mit Prometheus zu überwachen muss entweder ein neuer Host erstellt oder ein bestehender editiert werden.
+Um einen Host mit Prometheus zu überwachen, muss entweder ein neuer Host erstellt oder ein bestehender editiert werden.
 
-Dort wird am ende des Formulars die Konfiguration des Prometheus Exporters dargestellt.
+Dort wird am Ende des Formulars die Konfiguration des Prometheus Exporters dargestellt.
 
 ![](/images/select-prometheus-exporters.png)
 
@@ -93,7 +93,7 @@ Prometheus bietet auch die Möglichkeit mehrere Metriken miteinander zu verrechn
 
 Weitere Beispiele dafür findet man unter der "PromQL hilfe" (oben rechts) als Modal. Die UUID ist dabei immer die vom aktuellen Host, sodas man die Beispiele einfach Kopieren und Einfügen kann.
 
-Die Einzelnen "Services" findet mann dann unter Monitoring → Prometheus → Abfrage → Alarmregeln. Hier sind dann alle Queries pro Host aufgelistet. Wenn man mit der Maus über den Graph geht, bekommt man den bekannten oITC Popover-Graph, der dann die Abfrage an Prometheus schickt und die aktuellen Werte Anzeigt:
+Die Einzelnen "Services" findet mann dann unter Monitoring → Prometheus → Abfrage → Alarmregeln. Hier sind dann alle Queries pro Host aufgelistet. Wenn man mit der Maus über den Graphen geht, bekommt man den bekannten oITC Popover-Graph, der dann die Abfrage an Prometheus schickt und die aktuellen Werte anzeigt:
 
 ![](/images/prometheus-alertrules.png)
 

@@ -1,6 +1,8 @@
-Cron Jobs in openITCOCKPIT bieten die möglichkeit PHP skripte in einem Zeitlich definierten abstand auszuführen. Diese PHP scripte (sog. Tasks) sind beispielsweise bestandteil des openITCOCKPIT Kerns oder Modulen
+Cron Jobs in openITCOCKPIT bieten die möglichkeit PHP skripte in einem Zeitlich definierten abstand auszuführen. Diese
+PHP scripte (sog. Tasks) sind beispielsweise bestandteil des openITCOCKPIT Kerns oder Modulen
 
-Beim erstellen eines neuen Cron Job wählt man unter “Plugin” zuerst den ort des auszuführenden Tasks aus. Hat man dies gemacht, werden die verfügbaren Tasks in der nächsten Dropdown liste angezeigt.
+Beim Erstellen eines neuen Cron Job wählt man unter "Plugin" zuerst den ort des auszuführenden Tasks aus. Hat man dies
+gemacht, werden die verfügbaren Tasks in der nächsten Dropdown liste angezeigt.
 
 |     |     |
 | --- | --- |

@@ -4,14 +4,14 @@ Dieser Guide zeigt das grundlegende Konzept hinter openITCOCKPIT auf und hilft b
 Er richtet sich an neue Benutzer, die grade mit der Benutzung von openITCOCKPIT angefangen haben.
 
 
-Sollten Sie Ihr openITCOCKPIT noch nicht Installiert haben, können Sie entweder unsere [Installationsanleitung](../installation/) in dieser Dokumentation nutzen oder aber den [Downloadbereich unserer Webseite](https://openitcockpit.io/download/#download) besuchen.
+Sollten Sie Ihr openITCOCKPIT noch nicht installiert haben, können Sie entweder unsere [Installationsanleitung](../installation/) in dieser Dokumentation nutzen oder aber den [Downloadbereich unserer Webseite](https://openitcockpit.io/download/#download) besuchen.
 
 ![openitcockpit-login](/images/openitcockpit-login.png)
 
 
-## Registierung Ihres openITCOCKPITs
+## Registrierung Ihres openITCOCKPITs
 
-Damit Sie Zugriff auf alle frei verfügbaren Community Module haben, müssen Sie Ihr openITCOCKPIT Registrieren. Dazu navigieren Sie zu `Systemkonfiguration -> System -> Registrierung` und tragen den Community Lizenzschlüssel ein. 
+Damit Sie Zugriff auf alle frei verfügbaren Community Module haben, müssen Sie Ihr openITCOCKPIT Registrieren. Dazu navigieren Sie zu `Systemkonfiguration -> System -> Registrierung` und tragen den Community-Lizenzschlüssel ein. 
 
 !!! note "openITCOCKPIT 4.x Community Lizenz"
     ```
@@ -27,7 +27,7 @@ Damit Sie Zugriff auf alle frei verfügbaren Community Module haben, müssen Sie
 
 openITCOCKPIT wird den eingegebenen Lizenzschlüssel mit dem Repository Server abgleichen. Dementsprechend ist eine Internetverbindung für den Verifikationsprozess nötig. Ist die Verifizierung erfolgreich, haben Sie Zugriff auf alle frei verfügbaren Module.
 
-Wenn Ihr openITCOCKPIT hinter einem Proxy Server läuft, müssen Sie zuvor den Proxy Server in openITCOCKPIT einrichten. Dazu navigieren sie nach `Systemkonfiguration -> System -> Proxy einstellungen`.
+Wenn Ihr openITCOCKPIT hinter einem Proxyserver läuft, müssen Sie zuvor den Proxyserver in openITCOCKPIT einrichten. Dazu navigieren sie nach `Systemkonfiguration -> System -> Proxy einstellungen`.
 
 ![Proxy settings](/images/openITCOCKPIT-Proxy-Settings.png)
 
@@ -39,7 +39,7 @@ Zu aller erst müssen Sie sich mit unserem "Container" basiertem Berechtigungsko
     Es wird dringen geraten, diesen Teil nicht zu überspringen!
 
 ### /root Container
-Der "/root" Container ist etwas speziell. Alle Objekte die diesem Container zugeordnet sind, sind **global für alle Benutzer sichtbar!** Dieser Container ist für global häufig verwendete Objekte wie zum Beispiel die "Ping" Servicevorlage oder der Zeitabschnitt "24x7" gedacht.
+Der "/root" Container ist etwas speziell. Alle Objekte, die diesem Container zugeordnet sind, sind **global für alle Benutzer sichtbar!** dieser Container ist für global häufig verwendete Objekte wie zum Beispiel die "Ping" Servicevorlage oder der Zeitabschnitt "24x7" gedacht.
 
 Wenn Sie dem "/root" Container einen Host zuweisen, ist es **später nicht mehr möglich die Containerzuweisung zu verändern!**
 
@@ -50,9 +50,9 @@ Globale Administratoren sind mit einer Krone über Ihrem Benutzernamen gekennzei
 
 
 ### Container Baum
-Container fungieren wie ein Baum. der "/root" Container ist immer die "Wurzel" aller nachfolgender Container. Die nächste Ebene im Baum könnte ein "Mandant" sein. Mandanten können Abteilungen Ihres Unternehmens oder sogar völlig unterschiedliche Unternehmen sein. Innerhalb eines Mandanten können sie "Knoten" (Nodes) erstellen. Dies kann hilfreich sein um komplette Firmenstrukturen in Ihrem Monitoring System abzubilden. 
+Container fungieren wie ein Baum. der "/root" Container ist immer die "Wurzel" aller nachfolgender Container. Die nächste Ebene im Baum könnte ein "Mandant" sein. Mandanten können Abteilungen Ihres Unternehmens oder sogar völlig unterschiedliche Unternehmen sein. Innerhalb eines Mandanten können sie "Knoten" (Nodes) erstellen. Dies kann hilfreich sein, um komplette Firmenstrukturen in Ihrem Monitoring System abzubilden. 
 
-Diesem Beispiel folgend würde eine Container Baum Struktur so aussehen: `/root/Mandant/Knoten/`.
+Diesem Beispiel folgend würde eine Container-Baum-Struktur so aussehen: `/root/Mandant/Knoten/`.
 
 Um dies zu veranschaulichen, erstellen wir einen Mandanten mit dem Namen "Demo Tenant" unter `Verwaltung -> Containerverwaltung -> Mandanten`
 
@@ -91,7 +91,7 @@ Das containerbasierte Berechtigungskonzept kann sehr komplex werden, aber bietet
 
 ## Den ersten Host erstellen
 
-In der Welt von openITCOCKPIT v4 ist ein "Host" das grundlegendste Element. Im Normalfall nutzt openITCOCKPIT ein "ICMP Check" zur Überprüfung Ihres Hosts. Jeder Host stellt verschiedenste Dienste zur Verfügung, wie zum Beispiel E-Mail, DHCP, DNS, web server, load balancer etc. Um ein sinnvolles Monitoring aufzubauen benötigen Sie "Services" in openITCOCKPIT. Da openITCOCKPIT im Hintergrund Nagios oder Naemon nutzt, sind tausendene frei verfügbare Plugins zum Überwachen Ihrer kritischen Dienste und Infrastruktur verfügbar. 
+In der Welt von openITCOCKPIT v4 ist ein "Host" das grundlegendste Element. Im Normalfall nutzt openITCOCKPIT ein "ICMP Check" zur Überprüfung Ihres Hosts. Jeder Host stellt verschiedenste Dienste zur Verfügung, wie zum Beispiel E-Mail, DHCP, DNS, web server, load balancer etc. Um ein sinnvolles Monitoring aufzubauen, benötigen Sie "Services" in openITCOCKPIT. Da openITCOCKPIT im Hintergrund Nagios oder Naemon nutzt, sind tausende frei verfügbare Plugins zum Überwachen Ihrer kritischen Dienste und Infrastruktur verfügbar. 
 
 ### Host- und Servicevorlagen
 
@@ -103,11 +103,11 @@ openITCOCKPIT wird bereits mit einer vorgefertigten Auswahl an Vorlagen ausgelie
 
 In diesem Beispiel werden wir ein *Ubuntu Focal* Linux System mit den Diensten *NGINX*, *PHP-FPM* und *MySQL* überwachen.
 
-Um Ihren ersten Host zu erstellen, navigieren Sie nach `Monitoring -> Hosts` und klicken dort auf die Schaltfläche "+ Neu"
+Um Ihren ersten Host zu erstellen, navigieren Sie nach `Monitoring -> Hosts` und klicken dort auf die Schaltfläche "+ Neu".
 
-openITCOCKPIT wird ein paar grundlegende Fragen über den neuen Host stellen, wie zum Beispiel den Namen, IP Adresse oder FQDN, welche Kontakte im Fehlerfall benachrichtigt werden sollen und so weiter.
+openITCOCKPIT wird ein paar grundlegende Fragen über den neuen Host stellen, wie zum Beispiel den Namen, IP-Adresse oder FQDN, welche Kontakte im Fehlerfall benachrichtigt werden sollen und so weiter.
 
-Um das Ganze so einfach wie möglich zu halten, wählen wir als Container "/root" aus, sodass der neue Host für alle Benutzer auf dem System sichtbar ist. Als Hostvorlagen wählen wir "default host" aus. Durch die Hostvorlage müssen wir nur noch den Hostnamen und die IP Adresse eintragen.
+Um das Ganze so einfach wie möglich zu halten, wählen wir als Container "/root" aus, sodass der neue Host für alle Benutzer auf dem System sichtbar ist. Als Hostvorlagen wählen wir "default host" aus. Durch die Hostvorlage müssen wir nur noch den Hostnamen und die IP-Adresse eintragen.
 
 ![create host](/images/openITCOCKPIT-Create-Host.png)
 
@@ -118,13 +118,13 @@ Danach Scrollen Sie an das Ende der Seite, klicken auf: fontawesome-solid-chevro
 Mit dieser Abkürzung können wir direkt den ersten Service auf unserem neuen Host erstellen.
 
 !!! info "Haben Sie auf Erstelle Host geklickt?"
-    Kein Problem. Navigieren Sie zu `Services` und klicken Sie "+ Neu"
+    Kein Problem. Navigieren Sie zu `Services` und klicken Sie "+ Neu".
 
 Wählen Sie die "Ping" Servicevorlage und klicken Sie auf `Erstelle Service`
 
 ![crate service](/images/openITCOCKPIT-Create-Service.png)
 
-Der neu erstellte Service wird nun in der "Nicht überwacht" Liste angezeigt, da er nur erstellt wurde, aber noch nicht zur Monitoring Engine "Exportiert" wurde.
+Der neu erstellte Service wird nun in der "Nicht überwacht" Liste angezeigt, da er nur erstellt wurde, aber noch nicht zur Monitoring-Engine "Exportiert" wurde.
 
 ![service not monitored](/images/service-not-monitored.png)
 
@@ -151,7 +151,7 @@ Einen Ping Request an einen Host zu senden ist eine gute Idee, aber kein wirklic
 
 Überwachen von grundlegenden Parametern eines Hosts sollte keine schwierige oder lästige Aufgabe sein. Der [openITCOCKPIT Monitoring Agent](https://openitcockpit.io/download_agent/) ist für Windows, Linux und macOS verfügbar und in der Lage Metriken wie CPU, Arbeitsspeicher, Festplattenauslastung, Netzwerkstatus, Temperaturen etc. Out-of-the-box zu sammeln.
 
-Damit der openITCOCKPIT Monintoring Agent anpass- und erweiterbar ist, ist er zu 100% mit der Nagios Plugin API kompatibel. Daher ist keine zusätzliche Software wie NRPE oder check_by_ssh nötig, um Plugins auf dem Zielsystem auszuführen. 
+Damit der openITCOCKPIT Monintoring Agent anpass-und-erweiterbar ist, ist er zu 100 % mit der Nagios Plugin API kompatibel. Daher ist keine zusätzliche Software wie NRPE oder check_by_ssh nötig, um Plugins auf dem Zielsystem auszuführen. 
 
 Die Kommunikation ist standardmäßig verschlüsselt durch HTTPS.
 
@@ -159,13 +159,13 @@ Die Kommunikation ist standardmäßig verschlüsselt durch HTTPS.
 
 Bevor Sie anfangen, installieren Sie den openITCOCKPIT Monitoring Agenten auf dem gewünschten Zielsystem, dass Sie überwachen möchten.
 
-Um den Agent herunterzuladen empfehlen wir Ihnen die [offizielle Download Seite](https://openitcockpit.io/download_agent/)
+Um den Agenten herunterzuladen empfehlen wir Ihnen die [offizielle Download Seite](https://openitcockpit.io/download_agent/)
 
 Der Quellcode ist über das GitHub Repository verfügbar: :fontawesome-brands-github:  [https://github.com/it-novum/openitcockpit-agent-go](https://github.com/it-novum/openitcockpit-agent-go)
 
 ### Überwachen eines Hosts mit dem openITCOCKPIT Monitoring Agent
 
-Im Kontextmenü der Hosts wählen Sie die Option :fontawesome-solid-user-secret: openITCOCKPIT Agent Entdeckung
+Im Kontextmenü der Hosts wählen Sie die Option:fontawesome-solid-user-secret: openITCOCKPIT Agent Entdeckung
 
 ![select agent discovery](/images/select-agent-discovery.png)
 
@@ -175,7 +175,7 @@ Ein Wizard basierender Konfigurationsprozess wird Sie durch alle Schritte beglei
 Im ersten Schritt müssen Sie entscheiden, ob Sie Ihren Host im Push oder Pull Modus überwachen möchten.
 
 - Im **Pull** Modus verbindet sich der openITCOCKPIT **Server** regelmäßig via HTTPS auf dem Port `3333` **zu dem Agenten** und holt die Überprüfungsergebnisse ab
-- im **Push** Modus verbindet sich der openITCOCKPIT Monitoring **Agent** regelmäßig und "Schiebt" seine Überprüfungsergebnisse via HTTPS auf dem Port 443 **zu dem** openITCOCKPIT **Server**. Perfekt wenn Ihr Zielsystem hinter einer NAT ist.
+- im **Push** Modus verbindet sich der openITCOCKPIT Monitoring **Agent** regelmäßig und "Schiebt" seine Überprüfungsergebnisse via HTTPS auf dem Port 443 **zu dem** openITCOCKPIT **Server**. Perfekt, wenn Ihr Zielsystem hinter einer NAT ist.
 
 ### Pull Modus
 
@@ -183,7 +183,7 @@ Beide Modi sind einfach einzurichten. Für dieses Tutorial nutzen wir den **Pull
 
 ![push or pull](/images/agent-push-or-pull.png)
 
-Der zweite Schritt ist grundsätzlich ein grafischer Konfigurationsgenerator, um die Konfigurationsdatei des openITCOCKPIT Monitoring Agent zu modifizieren. Sie müssen nur das Betriebssystem auswählen, welches Sie überachen möchten und klicken auf die Schaltfläche "Weiter".
+Der zweite Schritt ist grundsätzlich ein grafischer Konfigurationsgenerator, um die Konfigurationsdatei des openITCOCKPIT Monitoring Agent zu modifizieren. Sie müssen nur das Betriebssystem auswählen, welches Sie überwachen möchten und klicken auf die Schaltfläche "Weiter".
 
 !!! info "Verbindungstyp: Auto-TLS"
     Es wird nachdrücklich empfohlen, Auto-TLS als Verbindungstyp auszuwählen. Dies sichert und verschlüsselt die Verbindung zwischen dem openITCOCKPIT Server und dem openITCOCKPIT Monitoring Agent automatisch.
@@ -192,7 +192,7 @@ Der zweite Schritt ist grundsätzlich ein grafischer Konfigurationsgenerator, um
 
 ![pull config](/images/agent-basic-pull-configuration.png)
 
-Im dritten Schritt wird Ihnen gezeigt wo Sie den openITCOCKPIT Monitoring Agent [herunterladen](https://openitcockpit.io/download_agent/) und die Konfigurationsdatei ablegen können.
+Im dritten Schritt wird Ihnen gezeigt, wo Sie den openITCOCKPIT Monitoring Agent [herunterladen](https://openitcockpit.io/download_agent/) und die Konfigurationsdatei ablegen können.
 
 Für dieses Tutorial können Sie mit der Standardkonfiguration fortfahren. Zum nächsten Schritt klicken Sie auf die Schaltfläche "Weiter".
 
@@ -210,13 +210,13 @@ Das System wird grundlegende Health Metriken wie CPU, Arbeitsspeicher und SWAP s
 
 ![create services](/images/agent-create-services.png)
 
-Der letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
+Der letzte Schritt erinnert Sie daran die Monitoring-Konfiguration zu aktualisieren. 
 Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
 
 ![services create successfully](/images/agent-services-created-successfully.png)
 
 
-Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
+Ein paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
 
 ![agent services monitored](/images/agent-services-monitored.png)
 
@@ -235,12 +235,12 @@ Wählen Sie den Push Modus um fortzufahren.
 Der zweite Schritt ist grundsätzlich ein grafischer Konfigurationsgenerator, um die Konfigurationsdatei des openITCOCKPIT Monitoring Agenten zu modifizieren. Sie müssen nur das Betriebssystem auswählen, welches Sie überwachen möchten und klicken auf die Schaltfläche "Weiter".
 
 
-Setzen Sie die öffentliche IP Adresse oder FQDN Ihres openITCOCKPIT Servers im Feld `openITCOCKPIT Server Adresse` und tragen den API-Key, welchen der Agent nutzen soll in das Feld `openITCOCKPIT API Schlüssel` 
+Setzen Sie die öffentliche IP-Adresse oder FQDN Ihres openITCOCKPIT Servers im Feld `openITCOCKPIT Server Adresse` und tragen den API-Key, welchen der Agent nutzen soll in das Feld `openITCOCKPIT API Schlüssel` 
 
 Klicken Sie auf die Schalfläche `Nächster` um fortzufahren
 
 !!! danger "Sicherheitshinweis!"
-    Es wird dringend empfohlen einen neuen Benutzer mit sehr wenigen Berechtigungen zu erstellen und einen API-Key für unprivilgierte Benutzer zu verwenden.
+    Es wird dringend empfohlen einen neuen Benutzer mit sehr wenigen Berechtigungen zu erstellen und einen API-Key für unprivilegierte Benutzer zu verwenden.
     Um Check Ergebnisse zu übertragen sind keine speziellen Berechtigungen über Benutzerrollen nötig.
 
 
@@ -249,34 +249,34 @@ Klicken Sie auf die Schalfläche `Nächster` um fortzufahren
 
 Im dritten Schritt wird Ihnen gezeigt, wo Sie den openITCOCKPIT Monitoring Agenten [herunterladen](https://openitcockpit.io/download_agent/) und die Konfigurationsdatei ablegen können.
 
-Kopieren Sie die angezeigte Konfigurationsdatei an den angegebenen Pfad und starten Sie den openITCOCKPIT Monitoring Agent Dienst neu. Die Kommandos und Dateipfade hängen vom genutzen Betriebssystem ab. Klicken Sie auf `Nächster` um fortzufahren.
+Kopieren Sie die angezeigte Konfigurationsdatei an den angegebenen Pfad und starten Sie den openITCOCKPIT Monitoring Agent Dienst neu. Die Kommandos und Dateipfade hängen vom genutzten Betriebssystem ab. Klicken Sie auf `Nächster` um fortzufahren.
 
 ![agent config push](/images/agent-install-config-push.png)
 
-Jeder Agent sendet eine eindeutige Kennung an den openITCOCKPIT Server. Um unauthorisierte Agenten daran zu hindern Check Ergebnisse zu übertragen, müssen alle im Push Modus arbeitenden Agenten manuell zu einem Host zugewiesen werden. Klicken Sie auf `Nächster` um fortzufahren.
+Jeder Agent sendet eine eindeutige Kennung an den openITCOCKPIT Server. Um unautorisierte Agenten daran zu hindern Check Ergebnisse zu übertragen, müssen alle im Push Modus arbeitenden Agenten manuell zu einem Host zugewiesen werden. Klicken Sie auf `Nächster` um fortzufahren.
 
 ![host to agent mapping](/images/map-host-to-agent.png)
 
 Das System wird grundlegende Health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die gewünschten Services ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
 
 !!! Info den meisten Fällen
-    Da der Agent im Push Modus Arbeitet, ist es möglich dass openITCOCKPIT bisher noch keine Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf :fontawesome-solid-arrow-left: um auf den vorhergehenden Schritt zurückzukehren, warten 30 Sekunden und klicken anschließend wieder auf die Schaltfläche `Nächster`.
+    Da der Agent im Push Modus arbeitet, ist es möglich, dass openITCOCKPIT bisher noch keine Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf :fontawesome-solid-arrow-left: um auf den vorhergehenden Schritt zurückzukehren, warten 30 Sekunden und klicken anschließend wieder auf die Schaltfläche `Nächster`.
 
 ![create services push](/images/agent-create-services-push.png)
 
-Der letzte Schritt erinnert Sie daran die Monitoring Konfiguration zu aktualisieren. 
+Der letzte Schritt erinnert Sie daran die Monitoring-Konfiguration zu aktualisieren. 
 Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
 
 ![services created push export](/images/agent-services-created-successfully-push.png)
 
 
-Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
+Ein paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
 
 ![agent services monitored push](/images/agent-services-monitored-push.png)
 
 ### Bestimmen des Hoststatus (optional, aber empfohlen)
 
-Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden um den Hoststatus zu bestimmen.
+Standardmäßig wird openITCOCKPIT einen Ping zum Zielsystem senden, um den Hoststatus zu bestimmen.
 In den meisten Fällen ist es nicht möglich einen Ping zum Zielsystem zu senden, wenn der Push Modus genutzt wird.
 
 Bearbeiten Sie den Host und wählen die Hostvorlage `openITCOCKPIT Agent - Push` aus und speichern diesen ab. Vergessen Sie nicht anschließend die Monitoring Engine Konfiguration zu aktualisieren (Export). 
@@ -444,13 +444,13 @@ Sobald der Erkennungsprozess vollendet ist, können Sie alle gewünschten Servic
 
 Um die neue Konfiguration zu aktivieren, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
 
-Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
+Ein paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann immer es möglich ist.
 
-![checkmk snmp servicess](/images/checkmk-snmp-services.png)
+![checkmk snmp services](/images/checkmk-snmp-services.png)
 
 ## Fehlende Servicevorlagen für Checkmk erstellen.
 
-Abhängig von dem Gerät auf dem Sie ein Discovery durchführen möchten, ist es möglich, dass die `Optionen` Auswahlbox leer ist und der Informationstext `Bevor Sie die folgenden Dienste überwachen können, muss eine entsprechende Servicevorlage erstellt werden.` erscheint, gefolgt von einer Tabelle.
+Abhängig von dem Gerät, auf dem Sie ein Discovery durchführen möchten, ist es möglich, dass die `Optionen` Auswahlbox leer ist und der Informationstext `Bevor Sie die folgenden Dienste überwachen können, muss eine entsprechende Servicevorlage erstellt werden.` erscheint, gefolgt von einer Tabelle.
 
 In diesem Fall müssen Sie die fehlenden Servicevorlagen erstellen.
 
@@ -462,7 +462,7 @@ In diesem Fall müssen Sie die fehlenden Servicevorlagen erstellen.
 
 #### Erstelle eine Servicevorlage für `hp_procurve_cpu`
 
-Es wird empfohlen den selben Namen für eine Servicevorlage und nehmen wie es Checkmk nutzt (MK Check). In diesem Fall ist der MK Check `hp_procurve_cpu` also nutzen wir `CHECK_MK_HP_PROCURVE_CPU` als Servicevorlagen name. Setzten Sie `Checkmk templates` als Vorlagentyp. Deaktivieren Sie `Aktiviere aktive Prüfungen`, nutzen Sie `check_none` als Prüfungskommando und setzen Sie die `Parameter` aus der Tabelle als `ARG1` ein.
+Es wird empfohlen denselben Namen für eine Servicevorlage und nehmen wie es Checkmk nutzt (MK Check). In diesem Fall ist der MK Check `hp_procurve_cpu` also nutzen wir `CHECK_MK_HP_PROCURVE_CPU` als Servicevorlagen name. Setzten Sie `Checkmk templates` als Vorlagentyp. Deaktivieren Sie `Aktiviere aktive Prüfungen`, nutzen Sie `check_none` als Prüfungskommando und setzen Sie die `Parameter` aus der Tabelle als `ARG1` ein.
 
 Bestätigen Sie mit `Erstelle Servicevorlage`
 
@@ -490,7 +490,7 @@ Wiederholen Sie die Schritte für alle fehlenden Servicevorlagen.
 
 Navigieren Sie nach `Check MK -> Mk Checks` und klicken Sie auf die Schaltfläche `+ Neu`. 
 
-Setzen Sie `hp_procurve_cpu` als Check name und wählen Sie die entsprechenden Servicevorlage `CHECK_MK_HP_PROCURVE_CPU` aus.
+Setzen Sie `hp_procurve_cpu` als Check name und wählen Sie die entsprechende Servicevorlage `CHECK_MK_HP_PROCURVE_CPU` aus.
 
 ![link servicetemplate to mk check](/images/link_check_mk_check_to_service_template.png)
 
@@ -535,7 +535,7 @@ Es wird empfohlen das `check_nrpe` Plugin in den Standard Plugin Ordner von open
 ln -s /usr/lib/nagios/plugins/check_nrpe /opt/openitc/nagios/libexec/check_nrpe
 ```
 
-Um das neue Plugin nutzen zu können, müssen Sie ein neues Kommando unter `Objekte -> Kommandos` erstellen. Dazu Klicken dort auf die Schaltfläche `+ Neu`.
+Um das neue Plugin nutzen zu können, müssen Sie ein neues Kommando unter `Objekte -> Kommandos` erstellen. Dazu klicken dort auf die Schaltfläche `+ Neu`.
 
 | Kommando definition      |                         |
 | ----------- | ------------------------------------ |
@@ -574,7 +574,7 @@ apt-get install nagios-plugins nagios-nrpe-server
 
 Öffnen Sie die Datei `/etc/nagios/nrpe.cfg` mit einem beliebigen Editor
 
-Suchen Sie nach `allowed_hosts` und fügen Sie die IP Adresse Ihres openITCOCKPIT Servers hinzu.
+Suchen Sie nach `allowed_hosts` und fügen Sie die IP-Adresse Ihres openITCOCKPIT Servers hinzu.
 
 ```
 allowed_hosts=127.0.0.1,::1,172.16.166.154
@@ -602,7 +602,7 @@ systemctl restart nagios-nrpe-server.service
 
 Navigieren Sie nach `Monitoring -> Services` und klicken Sie auf die Schaltfläche `+ Neu`.
 
-Als erstes müssen Sie einen Host auswählen, auf dem Sie den Service erstellen möchten und wählen anschließend die `CHECK_BY_NRPE_SIMPLE` Servicevorlage aus. Das System wird nun alle vordefinierten Werte der Servicevorlage laden.
+Als Erstes müssen Sie einen Host auswählen, auf dem Sie den Service erstellen möchten und wählen anschließend die `CHECK_BY_NRPE_SIMPLE` Servicevorlage aus. Das System wird nun alle vordefinierten Werte der Servicevorlage laden.
 
 Ändern Sie den Servicenamen zu `CPU Load`, setzten Sie `check_load` als Kommandoname ($ARG1$) und klicken Sie anschließend auf `Erstelle Service`.
 
@@ -667,8 +667,8 @@ Navigieren Sie nach `Monitoring -> Objekte -> Kommandos` und stellen Sie sicher,
 | Command type | 	Service check command  |
 | Command name | `check_by_ssh` |
 | Command line | `$USER1$/check_by_ssh -H $HOSTADDRESS$ -l "$ARG1$" -C "$ARG2$"` |
-| Command arguemnt ($ARG1) | `Username` |
-| Command arguemnt ($ARG2) | `Command` |
+| Command argument ($ARG1) | `Username` |
+| Command argument ($ARG2) | `Command` |
 
 
 ![check by ssh command](/images/check_by_ssh_command.png)
@@ -708,11 +708,11 @@ Wiederholen Sie diesen Schritt für alle Services die Sie benötigen.
 
 Damit die neuen Änderungen wirksam werden, müssen Sie eine [Aktualisierung der Monitoring Konfiguration durchführen](#aktualisieren-der-uberwachungskonfiguration)
 
-Die neuen Services werden nun vom System Überwacht.
+Die neuen Services werden nun vom System überwacht.
 
 ![services monitored via SSH](/images/services-monitored-via-ssh.png)
 
-## Browser Push Benachrichtigungen einrichten
+## Browser Push-Benachrichtigungen einrichten
 
 Die meisten modernen Webbrowser wie Mozilla Firefox, Google Chrome oder Microsoft Edge bieten eine Benachrichtigung-API an. 
 
@@ -739,12 +739,12 @@ In diesem Beispiel zeigen wir den Prozess anhand des Mozilla Firefox.
 
 ##### Berechtigung erteilen
 
-Klicken Sie auf das Benachrichtigungssymbol in der Browser Adressleiste und klicken Sie anschließend auf "Benachrichtigungen erlauben"
+Klicken Sie auf das Benachrichtigungssymbol in der Browser Adressleiste und klicken Sie anschließend auf "Benachrichtigungen erlauben".
 
 ![browser ask for permissions](/images/browser_ask_for_notification_permissions.png)
 
 !!! info
-    Wenn Sie die Berechtigung zu einem späteren Zeitpunkt wieder entfernen, deaktivieren Sie auch `Push-Benachrichtigungen an den Browser` in der Kontakt Konfiguration
+    Wenn Sie die Berechtigung zu einem späteren Zeitpunkt wieder entfernen, deaktivieren Sie auch `Push-Benachrichtigungen an den Browser` in der Kontakt-Konfiguration
 
 ### Editieren oder Neuerstellen eines Kontaktes
 
@@ -766,7 +766,7 @@ Nachdem Sie den Kontakt aktualisiert haben, müssen Sie eine [Aktualisierung der
 
 ### Benachrichtigunsbeispiele
 
-Jede Benachrichtigung beinhaltet ein Icon für einen Host oder Service. Der jeweilige Status wird von der Farbe des Icons dargestellt. Klickt man auf eine Benachrichtigung, so öffnet sich ein neuer Browser-Tab und man wird direkt zu dem betreffenden Host oder Service weitergeleitet. Die Benachtichtigung verschwindet automatisch nach ein paar Sekunden.
+Jede Benachrichtigung beinhaltet ein Icon für einen Host oder Service. Der jeweilige Status wird von der Farbe des Icons dargestellt. Klickt man auf eine Benachrichtigung, so öffnet sich ein neuer Browser-Tab und man wird direkt zu dem betreffenden Host oder Service weitergeleitet. Die Benachrichtigung verschwindet automatisch nach ein paar Sekunden.
 
 ![browser notifications](/images/example_browser_notifications.png)
 
@@ -778,7 +778,7 @@ Jede Benachrichtigung beinhaltet ein Icon für einen Host oder Service. Der jewe
 
 - Verbindungsprobleme. Wenn Ihr Browser die Verbindung zum openITCOCKPIT Server verliert, kann es möglich sein, dass Sie keine Push-Benachrichtigungen mehr erhalten. Laden Sie die Seite neu um das Problem zu beheben.
 
-- `push_notification` Dienst läuft nicht. Dieser Hintergrundprozess muss laufen. Zudem kann auch die Web Server oder Reverse Proxy Konfiguration Probleme verursachen. Sie können die Entwicklerwerkzeuge Ihres Web Browsers nutzen um eventuelle Verbindungsfehler zu entdecken: Fehlermeldung: `push_notification` not running
+- `push_notification` Dienst läuft nicht. Dieser Hintergrundprozess muss laufen. Zudem kann auch die Webserver oder Reverse Proxy Konfiguration Probleme verursachen. Sie können die Entwicklerwerkzeuge Ihres Webbrowsers nutzen, um eventuelle Verbindungsfehler zu entdecken: Fehlermeldung: `push_notification` not running
 
 ![push connection error](/images/push_connection_error.png)
 
@@ -786,7 +786,7 @@ Erfolgreich verbunden:
 
 ![push connection successful](/images/push_connection_successfully.png)
 
-Läuft der `push_notification` Dienst nicht, wird auf der Fehlerbeseitigungs Seite und in der Systemzustandsanzeige eine Warnung erscheinen.
+Läuft der `push_notification` Dienst nicht, wird auf der Fehlerbeseitigungs-Seite und in der Systemzustandsanzeige eine Warnung erscheinen.
 
 ![debug push notificcations](/images/debug-processes-push-notifications.jpg)
 
@@ -798,14 +798,14 @@ Läuft der `push_notification` Dienst nicht, wird auf der Fehlerbeseitigungs Sei
 
 - Zu viele Benachrichtigungen können auch ein Unterdrücken der Benachrichtigungen auslösen. Versuchen Sie die Anzahl der Push-Benachrichtigungen zu reduzieren.
 
-- Überprüfen Sie Ihren Web Browser auf Updates.
+- Überprüfen Sie Ihren Webbrowser auf Updates.
 
 - Funktionieren die Benachrichtigungen im Internet Explorer? Nein.
 
 
-## Email Benachrichtigungen einrichten
+## E-Mail Benachrichtigungen einrichten
 
-Eine Standard Benachrichtigungsmethode, die Sie definitiv auf Ihrem System einrichten sollten, ist `notify-by-email`. Die meissten Unternehmen besitzen bereits eigene Mail Server. Um die Dinge einfach zu halten, wird dieses Tutorial Ihnen zeigen, wie Sie einen vorhandenen Mail Server als Relay Host nutzen können.
+Eine Standard Benachrichtigungsmethode, die Sie definitiv auf Ihrem System einrichten sollten, ist `notify-by-email`. Die meisten Unternehmen besitzen bereits eigene Mail Server. Um die Dinge einfach zu halten, wird dieses Tutorial Ihnen zeigen, wie Sie einen vorhandenen Mail-Server als Relay Host nutzen können.
 
 ### Postfix Mail Server installieren
 
@@ -815,7 +815,7 @@ Wir empfehlen Postfix als Ebene zwischen Ihrem vorhandenen Mail Server und dem M
 apt-get install postfix
 ```
 
-Nun setzen wir die IP Adresse des vorhandenen Mail Servers in der Datei `/etc/postfix/main.cf`.
+Nun setzen wir die IP-Adresse des vorhandenen Mail Servers in der Datei `/etc/postfix/main.cf`.
 
 ```
 relayhost = 192.168.1.1
@@ -827,7 +827,7 @@ Um die Konfiguration zu aktivieren, starten Sie Postfix neu
 systemctl restart postfix
 ```
 
-### Email Konfiguration für openITCOCKPIT setzen
+### E-Mail Konfiguration für openITCOCKPIT setzen
 
 Die Mail Konfiguration für openITCOCKPIT wird in der Datei `/opt/openitc/frontend/config/email.php` gesetzt.
 
@@ -885,7 +885,7 @@ Möchten Sie die Absenderadresse der E-Mails ändern, navigieren Sie nach `Syste
 
 #### Neuen Kontakt erstellen
 
-Um das neue Mail System zu überprüfen, erstellen wir nun einen neuen Kontakt mit Ihrer E-Mail Adresse.
+Um das neue Mail System zu überprüfen, erstellen wir nun einen neuen Kontakt mit Ihrer E-Mail-Adresse.
 
 ![create new contact](/images/openITCOCKPIT-create-new-contact.png)
 
@@ -897,7 +897,7 @@ Um die neue Konfiguration zu aktivieren, müssen Sie eine [Aktualisierung der Mo
 
 ### E-Mail Benachrichtigung Testen
 
-Wählen Sie den Host oder Service, dem Sie den Kontakt zugewiesen haben aus. In diesem Beispiel haben wir den Kontakt dem Service `Ping` zugewiesen. Klicken Sie nun auf die Schaltfläche `Benutzerdefinierte Servicebenachrichtigung senden`. Belassen Sie die voreingestellten Einstellungen so wie Sie sind und klicken auf die Schalfläche `Speichern`
+Wählen Sie den Host oder Service, dem Sie den Kontakt zugewiesen haben aus. In diesem Beispiel haben wir den Kontakt dem Service `Ping` zugewiesen. Klicken Sie nun auf die Schaltfläche `Benutzerdefinierte Servicebenachrichtigung senden`. Belassen Sie die voreingestellten Einstellungen so wie Sie sind und klicken auf die Schaltfläche `Speichern`
 
 ![submit custom notifications](/images/openITCOCKPIT-submit-custom-service-notification.png)
 
@@ -905,7 +905,7 @@ Wählen Sie den Host oder Service, dem Sie den Kontakt zugewiesen haben aus. In 
 
 ![Service notification](/images/openITCOCKPIT-service-notification.png)
 
-### E-Mail nicht angekommen ? 
+### E-Mail nicht angekommen? 
 
 Führen Sie den Befehl `oitc debug --tailf` aus um mehr Informationen aus den Logs zu bekommen
 

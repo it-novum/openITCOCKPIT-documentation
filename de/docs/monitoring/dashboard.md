@@ -32,13 +32,13 @@ Die geteilten Dashboards stehen dann anderen Benutzern in openITCOCKPIT zur Verf
 
 ![](/images/dashboards-sharing.png)
 
-Wenn ein Dashboard bereits geteilt ist, dann steht in der Auswahlliste <span class="badge badge-default">Stoppe Teilen</span>. Darüber kann das Teilen des Dashboard Tabs wieder gestoppt werden.
+Wenn ein Dashboard bereits geteilt ist, dann steht in der Auswahlliste <span class="badge badge-default">Stoppe Teilen</span>. Darüber kann das Teilen des Dashboard-Tabs wieder gestoppt werden.
 
 ### Dashboard Rotation
 
-Eine Dashboard Rotation bewirkt, dass alle vorhandenen Dashboard Tabs in einem vom Benutzer, zwischen 10 Sekunden und 15 minuten, festgelegten Intervall nacheinander angezeigt werden.
+Eine Dashboard-Rotation bewirkt, dass alle vorhandenen Dashboard Tabs in einem vom Benutzer, zwischen 10 Sekunden und 15 minuten, festgelegten Intervall nacheinander angezeigt werden.
 
-Im Zusammenspiel mit der Vollbildansicht der Dashboards kann dies nützlich sein um openITCOCKPIT beispielsweise auf einem TV anzuzeigen.
+Im Zusammenspiel mit der Vollbildansicht der Dashboards kann dies nützlich sein, um openITCOCKPIT beispielsweise auf einem TV anzuzeigen.
 
 ### Dashboard löschen
 
@@ -89,17 +89,17 @@ Es muss ein Service ausgewählt werden, dessen Status angezeigt werden soll. Zur
 ##### Geschwindigkeitsmesser (Tacho Widget)
 ![Tacho widget](/images/dashboard-tachowidget.png)
 
-Zeigt den wert eines Performance Datensatzes eines Services an. Schwellwerte werden zusätzlich farblich markiert.
+Zeigt den wert eines Performance-Datensatzes eines Services an. Schwellwerte werden zusätzlich farblich markiert.
 
 ###### Konfiguration
 
-Es muss ein Service, sowie ein Performance Datensatz ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Es muss ein Service, sowie ein Performance-Datensatz ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 
 ##### Notiz
 ![notice widget](/images/dashboard-noticewidget.png)
 
-Das Notiz Widget kann Text, HTML oder Markdown anzeigen.
+Das Notiz-Widget kann Text, HTML oder Markdown anzeigen.
 
 ###### Konfiguration
 
@@ -167,7 +167,7 @@ Das Widget zeigt benutzerdefinierte [Grafana Dashboards](../graphing/#grafana) a
 
 ###### Konfiguration
 
-Benutzerdefinierte Grafana Dashboards müssen vorher über das [Grafana Modul](../graphing/#grafana) erstellt werden. Anschließend kann ein Dashboard über die Widget Konfigurationsoberfläche ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Benutzerdefinierte Grafana Dashboards müssen vorher über das [Grafana Modul](../graphing/#grafana) erstellt werden. Anschließend kann ein Dashboard über die Widget-Konfigurationsoberfläche ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Karte (MapModul)
 ![Map module widget](/images/dashboard-mapmodulewidget.png)

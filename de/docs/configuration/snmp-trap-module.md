@@ -1,6 +1,6 @@
 ## Funktionsweise
 
-Die Funktionsweise des SnmpTrapModule aus openITCOCKPIT v4 ist im Grunde die selbe, wie für die Snmp Trap Installation für die v3.
+Die Funktionsweise des SnmpTrapModule aus openITCOCKPIT v4 ist im Grunde dieselbe, wie für die Snmp Trap Installation für die v3.
 
 Was sich grundsätzlich geändert hat:
 
@@ -27,7 +27,7 @@ Die Traps werden vom snmptrapd angenommen und an den snmptthandler übergeben. D
 
 in der snmptt Datenbank gespeichert werden. Zum Schluss werden die Traps mit dem Plugin check\_snmptraps.pl in der Datenbank geprüft, verarbeitet und gelöscht.
 
-In den Logfiles in /var/log/snmptt/ kann eingesehen werden welche Traps verarbeitet werden konnten oder unbekannt sind. Zusätzlich kann das debugging deaktiviert werden:
+In den Logfiles in /var/log/snmptt/, kann eingesehen werden welche Traps verarbeitet werden konnten oder unbekannt sind. Zusätzlich kann das debugging deaktiviert werden:
 
 **vim /etc/snmp/snmptt.ini**
 
@@ -65,9 +65,9 @@ snmptrap -Ci -v 3 -a SHA -A traptest1 -x AES -X traptest2 -l authPriv -u traprec
 
 ### Aufruf
 
-Idealerweise kann hier mal in der Tabelle SNMPTT nachgeguckt werden ob der Host der die Traps sendet in der Spalte Hostname mit Adresse oder Name auftaucht. Jenachdem
+Idealerweise kann hier mal in der Tabelle SNMPTT nachgeguckt werden, ob der Host der die Traps sendet in der Spalte Hostname mit Adresse oder Name auftaucht. Jenachdem
 
-dann den Parameter -H anpassen. Normalerweise sollten die Systeme mit der IP Adresse in der DB landen.
+dann den Parameter -H anpassen. Normalerweise sollten die Systeme mit der IP-Adresse in der DB landen.
 
 ```plaintext
 /opt/openitc/nagios/libexec/check_snmptraps.pl -H localhost -c -m
