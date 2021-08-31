@@ -273,7 +273,7 @@ Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwac
 
 ### Service erstellen
 
-Um einen Service zu erstellen, klicken Sie in der Serviceübersicht zunächst auf die schaltfläche "Neu". Im sich öffnenden Formular wählen Sie als Erstes den Ziel-Host aus, auf dem der Service erstellt werden soll. Anschließend wählen Sie eine Servicevorlage aus. Wenn nötig können Sie dem Service, abweichend vom Servicetemplate, einen Namen sowie eine Beschreibung geben.
+Um einen Service zu erstellen, klicken Sie in der Serviceübersicht zunächst auf die Schaltfläche "Neu". Im sich öffnenden Formular wählen Sie als Erstes den Ziel-Host aus, auf dem der Service erstellt werden soll. Anschließend wählen Sie eine Servicevorlage aus. Wenn nötig können Sie dem Service, abweichend vom Servicetemplate, einen Namen sowie eine Beschreibung geben.
 
 
 | Feld | Erforderlich | Beschreibung |
