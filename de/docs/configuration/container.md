@@ -1,3 +1,5 @@
+# Container
+
 Container sind eine Kernkomponente von openITCOCKPIT und _die_ zentrale Berechtigungskomponente für Objekte. Benutzer,
 Hosts, Karten, Kontakte, Servicevorlagen und alle weiteren Objekte in openITCOCKPIT müssen einem Container zugewiesen
 werden.
@@ -32,12 +34,49 @@ Root-Container ideal für Objekte, welche von unterschiedlichen Organisationsein
 sollen. Beispiele dafür sind der Zeitraum `24x7` oder die Servicevorlage `Ping`.
 
 !!! danger "Wichtig"
-Objekte, welche dem Root-Container zugewiesen wurden, können später nicht mehr in einen anderen Container verschoben
-werden!
+    Objekte, welche dem Root-Container zugewiesen wurden, können später nicht mehr in einen anderen Container verschoben
+    werden!
+
 
 Benutzer, welche Schreibzugriff auf den Root-Container haben, sind globale Systemadministratoren. Sie können alle
 Objekte einsehen und bearbeiten. Globale Systemadministratoren sind mit einer goldenen Krone gekennzeichnet.
 ![Root-Container Benutzer](/images/configuration/root-container-user.png){align=center}
+
+### Berechtigungen über Container
+
+Container entscheiden darüber, welche Object ein Benutzer sehen und bearbeiten kann. Einem Benutzer können mehrere Container zugewiesen werden.
+Wenn der Benutzer nur lesenden Zugriff auf den Container bekommen soll, muss die `read` Option gesetzt werden.
+Für schreibenden Zugriff `read/write`.
+
+![Benutzer Container](/images/configuration/user-containers.png){align=center}
+
+Container Berechtigungen können auch in `Container Rollen` zusammengefasst werden. So müssen die Berechtigungen nicht für alle Benutzer manuell erstellt und angepasst werden.
+
+In diesem Beispiel gehen wir von folgender Container Struktur aus:
+```
+root
+└── Demo Tenant (Mandant)
+    ├── Team Data Center (Knoten)
+    │   ├── Berlin (Standort)
+    │   └── Fulda (Standort)
+    └── Team Developers (Knoten)
+        └── Fulda (Standort)
+```
+
+openITCOCKPIT zeigt die Container immer als einen Pfad an:
+```
+/root/Demo Tenant/Team Data Center/Berlin
+/root/Demo Tenant/Team Data Center/Fulda
+/root/Demo Tenant/Team Developers/Fulda
+```
+
+Die Container Berechtigungen werden dabei immer von rechts nach links aufgelöst.
+
+- Ein Benutzer der dem Container `/root` zugewiesen wird, wird automatisch ein globaler Systemadministrator und kann alle Objete sehen und Bearbeiten.
+- Wird ein Benutzer `/root/Demo Tenant` zugewiesen, so kann der Benutzer alle Objekte des Mandanten inklusive aller Untercontainer des Mandanten sehen. 
+- Wird ein Benutzer `/root/Demo Tenant/Team Developers` zugewiesen, so kann der Benutzer Objekte des Mandanten, sowie des Containers "Team Developers" und aller Untercontainer sehen. 
+- Wird ein Benutzer `/root/Demo Tenant/Team Developers/Fulda` zugewiesen, so kann der Benutzer Objekte des Mandanten, sowie des Containers "Fulda" und aller Untercontainer sehen.
+
 
 ## Mandanten
 
