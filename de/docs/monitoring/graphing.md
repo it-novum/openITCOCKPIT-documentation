@@ -10,9 +10,8 @@ Damit die erstellung von Graphen funktioniert, muss die Schnittstelle konfigurie
 
 #### Lokales Grafana (Docker Container)
 
-|     |     |
-| --- | --- |
 | Feld | Wert (Default) |
+| --- | --- |
 | Grafana URL | grafana.docker |
 | Grafana API Schlüssel | hier muss ein API Key von Grafana eingefügt werden. Diesen kann man über die Grafana oberfläche erzeugen |
 | Grafana Präfix | openitcockpit |

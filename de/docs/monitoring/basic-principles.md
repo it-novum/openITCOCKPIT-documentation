@@ -30,12 +30,16 @@ Services Können folgende Status annehmen:
 | 2 | Rot | CRITICAL | KRITISCH |
 | 3 | Grau | UNKNOWN | UNBEKANNT |
 
+Neben den Status für Host und Services gibt es noch den blauen Status. Der blaue Status kann sowohl von einem Host als
+auch von einem Service angenommen werden und signalisiert, dass das Objekt in openITCOCKPIT angelegt wurde, aber noch
+nicht von der Monitoring Engine überwacht wird. Um dies zu ändern, muss ein [Export](#export) erfolgen. 
+
 ## Export
 
 ### Was ist ein Export?
 
 openITCOCKPIT und die Monitoring Engine (Naemon) haben zwei voneinander getrennte Konfigurationen. Dies führt dazu, dass
-neu eingetragen Objekte in openITCOCKPIT nicht automatisch überwacht werden beziehungsweise der Monitoring Engine 
+neu eingetragen Objekte in openITCOCKPIT nicht automatisch überwacht werden beziehungsweise der Monitoring Engine
 (vorerst) nicht bekannt sind.
 
 - Naemon speichert seine Objekte als `.cfg` Dateien unter `/opt/openitc/nagios/etc/config/`.

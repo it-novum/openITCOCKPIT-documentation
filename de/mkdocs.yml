@@ -21,7 +21,7 @@ nav:
     - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
   - 'Alerting / Benachrichtigungen': 'alerting.md'
   - 'Reporting': 'reporting.md'
-  - 'Konfiguration': 
+  - 'Konfiguration':
     - 'Container': 'configuration/container.md'
     - 'Kommandos': 'configuration/commands.md'
     - 'Hosts und Services': 'configuration/hosts-services.md'
@@ -47,6 +47,7 @@ nav:
     - 'Logging': 'additional/logs.md'
     - 'Theming und CI': 'additional/theming.md'
     - 'Troubleshooting': 'additional/troubleshooting.md'
+    - 'Support': 'additional/support.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
@@ -97,7 +98,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-    
+
 
 
 copyright: Copyright &copy; 2016 - <span id="copyright-year">YYYY</span> it-novum GmbH
