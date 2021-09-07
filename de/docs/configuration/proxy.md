@@ -7,3 +7,9 @@ Dort setzen Sie anhand des Ports, der IP-Adresse oder dem Hostnamen den Proxyser
 Beachten Sie, dass der Proxyserver nur dann verwendet wird, wenn die Option `Aktiviere Proxy` aktiviert ist.
 
 ![Proxy einstellungen](/images/proxy-settings.png)
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| IP-Adresse | :fontawesome-solid-times: | IP-Adresse oder Hostname des Proxy |
+| Port | :fontawesome-solid-times: | Port des Proxy Servers |
+| Aktiviere Proxy |  | Ist diese Option Aktiviert wird der Proxy verwendet |

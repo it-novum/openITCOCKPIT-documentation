@@ -15,7 +15,7 @@ in der Satelliten Übersicht klicken Sie anschließend auf die Schaltfläche "Ne
 Anschließend wählen Sie einen Container aus, vergeben einen Namen für den Satelliten und tragen die IP adresse oder Hostname in das Feld "IP-Adresse" ein.
 
 Satelliten können in drei verschiedenen Sychronisationsmodi betrieben werden:
-
+### Synchronisationsmethoden
 ##### HTTPS-Pull
 
 Das Mastersystem ruft regelmäßig Prüfergebnisse vom Satelliten ab und pusht Konfigurationsänderungen.
@@ -39,6 +39,31 @@ Im SSH Modus wird ein Benutzername, Port sowie der Private Key Path für die Ver
 Zudem muss noch der Remote Port des auf dem Satelliten laufenden Gearman angegeben werden.
 
 für alle Synchronisationsmethoden steht im letzten Schritt der erstellung noch die Möglichkeit zum Einstellen der Zeitzone sowie die Synchronisation der Zeit zur verfügung.
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | [Container](../container/) in dem der Satellit erstellt werden soll  |
+| Satellitenname | :fontawesome-solid-times: | Name des zu erstellenden Satelliten |
+| IP-Adresse | :fontawesome-solid-times: | IP-Adresse oder Hostname des Satelliten. Diese Adresse wird für die gesamte Kommunikation zwischen der Master-Instanz und dem Satellitensystem verwendet |
+| Synchronisationsmethode | :fontawesome-solid-times: | [Synchronisationsmethode](#synchronisationsmethoden) die die Art der Datenübertragung bestimmt |
+| Zeitzone | :fontawesome-solid-times: | Zeitzone des Satelliten |
+| Zeitsynchronisation |  |  Legt fest, ob Sie die Systemuhr des Master-Servers mit dem Satellitensystem synchronisieren möchten. Hinweis: Es wird nicht empfohlen, diese Option zu aktivieren. Bitte verwenden Sie nach Möglichkeit einen NTP-Server.  |
+| HTTPS PULL-Modus |
+| URL | :fontawesome-solid-times: | Satellit URL |
+| Überprüfe das Zertifikat |  | nur valide Zertifikate werden akzeptiert |
+| Aktiviere Proxy |  | Bestimmt ob der weiter unten eingetragene Proxy für die verbindung mit dem Satellitensystem genutzt werden soll |
+| Proxy URL |  | Proxy Server URL |
+| API Schlüssel | :fontawesome-solid-times: | API Key Authentifizierung für den Satellit |
+| Intervall |  | Zeitintervall in Sekunden, in welchem das Mastersystem die Prüfergebnisse aufnimmt |
+| Timeout |  | Zeitlimit in Sekunden, das definiert, wann der Satellit als OFFLINE markiert werden soll. |
+| HTTPS PUSH-Modus |
+| API Schlüssel | :fontawesome-solid-times: | API Key Authentifizierung für den Satellit |
+| Timeout |  | Zeitlimit in Sekunden, das definiert, wann der Satellit als OFFLINE markiert werden soll. |
+| SSH |
+| Anmelden | :fontawesome-solid-times: | Benutzer mit dem sich über SSH auf dem Satellitensystem angemeldet werden soll |
+| Port | :fontawesome-solid-times: | SSH-Port des Remote-Computers. |
+| PrivateKeyPath | :fontawesome-solid-times: | Wir verwenden einen Standardpfad zum privaten Schlüssel, wenn dieses Feld leer bleibt |
+| RemotePort |  | Gearman-Port der Remote-Maschine. |
 
 ## Host auf einem Satelliten erstellen
 

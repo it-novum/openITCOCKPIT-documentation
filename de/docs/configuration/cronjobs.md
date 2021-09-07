@@ -4,9 +4,9 @@ PHP scripte (sog. Tasks) sind beispielsweise bestandteil des openITCOCKPIT Kerns
 Beim Erstellen eines neuen Cron Job wählt man unter "Plugin" zuerst den ort des auszuführenden Tasks aus. Hat man dies
 gemacht, werden die verfügbaren Tasks in der nächsten Dropdown liste angezeigt.
 
-|     |     |
-| --- | --- |
-| Plugin | Ort des auszuführenden Tasks |
-| Task | Welcher Task soll ausgeführt werden |
-| Interval | In welchem Intervall in minuten soll der Task ausgeführt werden |
-| Enabled | Soll der Task ausgeführt werden, so muss diese checkbox aktiviert werden |
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Erweiterung | :fontawesome-solid-times: | Ort des auszuführenden Tasks |
+| Aufgaben | :fontawesome-solid-times: | Welcher Task soll ausgeführt werden |
+| Intervall |  | In welchem Intervall in minuten soll der Task ausgeführt werden |
+| Aktiviert |  | Soll der Task ausgeführt werden, so muss diese checkbox aktiviert werden |
