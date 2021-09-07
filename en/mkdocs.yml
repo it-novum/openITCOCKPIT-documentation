@@ -2,6 +2,7 @@ site_name: openITCOCKPIT 4
 site_url: http://mkdocs.oitc.itn:8000/en/
 repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
 repo_name: GitHub
+edit_uri: https://github.com/it-novum/openITCOCKPIT-documentation/blob/main/en/docs/
 dev_addr: 0.0.0.0:8000
 
 nav:
