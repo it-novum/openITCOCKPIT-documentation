@@ -14,3 +14,11 @@ Bei den Zeitbereichen können über die Schaltfläche "Hinzufügen" neue Bereich
 
 ![timeperiod new](/images/timeperiod-new.png)
 
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | [Container](../container/), für den der Zeitabschnitt sichtbar sein soll |
+| Name | :fontawesome-solid-times: | Name des Zeitabschnittes |
+| Beschreibung |  | Beschreibung des Zeitabschnittes |
+| Kalender | :fontawesome-solid-times: | [Kalender](../calendar/) |
+

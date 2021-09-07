@@ -32,8 +32,8 @@ Root-Container ideal für Objekte, welche von unterschiedlichen Organisationsein
 sollen. Beispiele dafür sind der Zeitraum `24x7` oder die Servicevorlage `Ping`.
 
 !!! danger "Wichtig"
-Objekte, welche dem Root-Container zugewiesen wurden, können später nicht mehr in einen anderen Container verschoben
-werden!
+    Objekte, welche dem Root-Container zugewiesen wurden, können später nicht mehr in einen anderen Container verschoben
+    werden!
 
 Benutzer, welche Schreibzugriff auf den Root-Container haben, sind globale Systemadministratoren. Sie können alle
 Objekte einsehen und bearbeiten. Globale Systemadministratoren sind mit einer goldenen Krone gekennzeichnet.
@@ -48,35 +48,49 @@ Objekte, die einem Mandanten zugewiesen werden, können von allen Benutzern des 
 geeignet Kontakte, Kontaktgruppen, Servicevorlagen und Zeiträume, welche von der kompletten Organisation genutzt werden
 sollen, zu speichern.
 
-Zu einem Mandanten können zusätzlich noch die folgenden Eigenschaften gespeichert werden:
-
-- Name
-- Beschreibung
-- Vor- und Nachname
-- Straße
-- Postleitzahl
-- Stadt
-
 Ein Mandant bildet die Grundlage für weitere Container vom Typ Standort oder Knoten.
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Name | :fontawesome-solid-times: | Name des zu erstellenden Mandanten |
+| Beschreibung |  | Beschreibung des Mandanten |
+| Vorname |  | Vorname des Mandanten |
+| Nachname |  | Nachname des Mandanten |
+| Straße |  | Straße des Mandanten |
+| Postleitzahl |  | Postleitzahl des Mandanten |
+| Stadt |  | Stadt des Mandanten |
+
+
 
 ## Standorte
 
 Standorte sind spezifische Container in openITCOCKPIT die zur Strukturierung und granularer Berechtigung dienen.
 
-Sofern das _OpenStreetMap Module_ installiert ist, werden Hosts und Services anhand der Standorte automatisch auf einer
+Sofern das `OpenStreetMapModule` installiert ist, werden Hosts und Services anhand der Standorte automatisch auf einer
 Landkarte zusammengefasst.
 
-Ein Standort hat die folgenden Eigenschaften:
 
-- Name
-- Beschreibung
-- Längen- und Breitengrad
-- Zeitzone
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | Elterncontainer des zu erstellenden Standortes |
+| Name | :fontawesome-solid-times: | Name des zu erstellenden Standortes |
+| Beschreibung |  | Beschreibung des Standortes |
+| Breitengrad |  | Breitengrad des Standortes. Die Zahl muss zwischen -90 und 90 Grad sein |
+| Längengrad |  | Längengrad des Standortes. Die Zahl muss zwischen -180 und 180 Grad sein|
+| Zeitzone |  | Zeitzone des Standortes |
 
-## Knoten
+## Knoten (Nodes)
 
 Ein Container vom Type Knoten wird in der Regel zur Darstellung interner Strukturen und Abteilungen genutzt. Einem
-Knoten können dieselben Objekttypen wie einem Standort zugewiesen werden.
+Knoten können dieselben Objekttypen wie einem Standort zugewiesen werden. Ein Knoten setzt einen Mandanten voraus.
+
+Knoten werden über die Baumansicht unter `Verwaltung -> Containerverwaltung -> Container` erstellt. Hier können zudem 
+auch [Mandanten](#mandanten) und [Standorte](#standorte) erstellt werden.
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Name | :fontawesome-solid-times: | Name des zu erstellenden Knotens |
+
 
 ## Containerverwaltung
 

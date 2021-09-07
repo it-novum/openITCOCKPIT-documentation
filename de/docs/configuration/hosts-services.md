@@ -1,16 +1,12 @@
 ## Hostvorlagen
 
-Hostvorlagen sind ein essenzieller Bestandteil in openITCOCKPIT. Sie bilden die Vorlage für Hosts und sind eine der Grundvoraussetzung zum Erstellen dafür.
-
-Ein Host leitet sich immer von einer Hostvorlage ab, kann aber die Werte, die in der Vorlage definiert wurden, überschreiben.
+Hostvorlagen bilden die Grundvoraussetzung für Hosts. Wird ein Host erstellt, so muss dort eine Hostvorlage
+angegeben werden. Alle Werte, die in der Hostvorlage definiert werden, werden dann automatisch an den Host vererbt,
+können aber bei Bedarf einzeln überschrieben werden.
 
 ### Hostvorlage erstellen
 
-Um eine Hostvorlage zu erstellen, klicken Sie zunächst in der Hostvorlagen Übersicht auf die Schaltfläche "Neu".
-
-Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sein soll und vergibt einen Namen.
-
-Nun gibt man einen Vorlagen typen an.
+Um eine Hostvorlage zu erstellen, klicken Sie in der Hostvorlagen Übersicht auf die Schaltfläche "Neu".
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
@@ -43,9 +39,6 @@ Nun gibt man einen Vorlagen typen an.
 | Prometheus-Exporters |
 | Exporters | | [Prometheus Exporter](#prometheus-exporters) |
 
-
-
-
 #### Vorlagentypen
 
 Es gibt in openITCOCKPIT mehrere Hostvorlagen typen. Diese unterscheiden eine Vorlage, ob sie entweder für einen generischen Host oder zum Beispiel für einen Ereigniskorrelations-Host sind.
@@ -55,7 +48,6 @@ Ein normaler Host wird i.d.R. immer als generischer Host angelegt.
 Ein Prüfzeitraum ist ebenfalls eine Pflichtangabe ebenso wie ein Prüfungskommando. Ein Standardprüfungskommando für einen Host ist beispielsweise "check-host-alive". Für dieses Kommando können hier auch direkt Argumente übergeben werden.
 
 anschließend werden verschiedene Prüfungsintervalle gesetzt.
-
 
 #### Intervalle
 
@@ -67,25 +59,19 @@ Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum ange
 
 Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
 
-
 #### Prometheus Exporters
 
 Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwachen-eines-hosts-mit-prometheus-in-openitcockpit), wählen Sie hier Ihren Prometheus Exporter aus.
 
-
 ## Servicevorlagen
 
-Servicevorlagen sind ein essenzieller Bestandteil in openITCOCKPIT. Sie bilden die Vorlage für Services und sind eine der Grundvoraussetzung zum Erstellen dafür.
-
-Ein Service leitet sich immer von einer Servicevorlage ab, kann aber die Werte, die in der Vorlage definiert wurden, überschreiben.
+Servicevorlagen bilden die Grundvoraussetzung für Services. Wird ein Service erstellt, so muss dort eine Servicevorlage
+angegeben werden. Alle Werte, die in der Servicevorlage definiert werden, werden dann automatisch an den Service vererbt,
+können aber bei Bedarf einzeln überschrieben werden.
 
 ### Servicevorlage erstellen
 
-Um eine Servicevorlage zu erstellen, klicken Sie zunächst in der Servicevorlagen Übersicht auf die Schaltfläche "Neu".
-
-Anschließend wählen Sie einen Container aus, in dem die Vorlage verfügbar sein soll und vergibt einen Namen.
-
-Nun gibt man einen Vorlagen typen an.
+Um eine Servicevorlage zu erstellen, klicken Sie in der Servicevorlagen Übersicht auf die Schaltfläche "Neu".
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
@@ -119,7 +105,6 @@ Nun gibt man einen Vorlagen typen an.
 | Event Handler Konfiguration |
 | Ereignishandler | | Eventhandler Konfiguration des Service |
 | Service-Makro-Konfiguration | | |
-
 
 #### Vorlagentypen
 
@@ -155,9 +140,7 @@ anschließend werden verschiedene Prüfungsintervalle gesetzt.
 
 Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem Prüfung-und-Wiederholungsintervall sowie einer maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird.
 
-
 Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden. Im gegensatz zu den Hostvorlagen muss hier kein Kontakt oder Kontaktgruppe hinterlegt werden.
-
 
 ## Servicevorlagengruppen
 
@@ -203,20 +186,29 @@ Sollte ein Service dieser Servicevorlagengruppe bereits auf einem der Hosts exis
 
 ### Host erstellen
 
-Um einen Host zu erstellen, wählen Sie zunächst einen Container aus, in dem der Host erstellt werden soll. Bitte beachten Sie, dass ein nachträgliches Ändern des Containers für einen Host **_nicht möglich_** ist!
+Um einen Host zu erstellen, klicken Sie in der Hostübersicht zunächst auf die Schaltfläche "Neu". Im Sich öffnenden
+Formular wählen Sie zunächst einen Container und eine Hostvorlage, von dem der neue Host abgeleitet werden soll, aus. Danach erscheinen alle weiteren Felder, die für 
+den Host relevant sind. 
 
-Danach wählen Sie eine Hostvorlage aus, von dem der neue Host abgeleitet werden soll.
+!!! danger
+    Bitte beachten Sie, dass ein nachträgliches Ändern des Containers für einen Host **nicht möglich** ist!
 
-Sie können anschließend einen Host Namen und eine Host-Adresse vergeben, oder aber Sie vergeben eine Host-Adresse und lassen den Hostnamen über die DNS-Suche automatisch vervollständigen.
+Sie können anschließend einen Host Namen und eine Host-Adresse vergeben, oder aber Sie vergeben eine Host-Adresse und 
+lassen den Hostnamen über die DNS-Suche automatisch vervollständigen.
 
-Beim Abspeichern haben Sie die möglichkeit direkt neue Services zum Host anzulegen. Diese können entweder über den openITCOCKPIT Agent, Checkmk oder den Klassischen weg des Manuellen erstellens erzeugt werden.
+Alle von der Hostvorlage vererbten Werte können bei Bedarf für den zu erstellenden Host überschrieben werden.
+Möchten Sie die Werte der vorlage wiederherstellen, siehe
+[Host oder Service Feld auf Standardwert zurücksetzen](#host-oder-service-feld-auf-standardwert-zurucksetzen)
+
+Beim Abspeichern haben Sie die möglichkeit direkt neue Services zum Host anzulegen. Diese können entweder über den 
+openITCOCKPIT Agent, Checkmk oder den Klassischen weg des Manuellen erstellens erzeugt werden.
 
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
 |Basiskonfiguration|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
-| Geteilte Container |  | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem der Host erstellt werden soll |
+| Geteilte Container |  | [Container](../container/#container) in dem der Host zusätzlich sichtbar sein soll |
 | Hostvorlage | :fontawesome-solid-times: | [Hostvorlage](#hostvorlagen) von der der Host abgeleitet werden soll |
 | Host Name | :fontawesome-solid-times: | Name des Hosts |
 | DNS-Suche |  | Falls aktiviert, wird versucht den Host Namen oder Host Adresse aufzulösen |
@@ -273,7 +265,13 @@ Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwac
 
 ### Service erstellen
 
-Um einen Service zu erstellen, klicken Sie in der Serviceübersicht zunächst auf die Schaltfläche "Neu". Im sich öffnenden Formular wählen Sie als Erstes den Ziel-Host aus, auf dem der Service erstellt werden soll. Anschließend wählen Sie eine Servicevorlage aus. Wenn nötig können Sie dem Service, abweichend vom Servicetemplate, einen Namen sowie eine Beschreibung geben.
+Um einen Service zu erstellen, klicken Sie in der Serviceübersicht zunächst auf die Schaltfläche "Neu". Im sich 
+öffnenden Formular wählen Sie als Erstes den Ziel-Host aus, auf dem der Service erstellt werden soll. Anschließend 
+wählen Sie eine Servicevorlage aus. Danach erscheinen alle weiteren Felder, die für den Service relevant sind.  
+
+Alle von der Servicevorlage vererbten Werte können bei Bedarf für den zu erstellenden Service überschrieben werden.
+Möchten Sie die Werte der vorlage wiederherstellen, siehe 
+[Host oder Service Feld auf Standardwert zurücksetzen](#host-oder-service-feld-auf-standardwert-zurucksetzen)  
 
 
 | Feld | Erforderlich | Beschreibung |
@@ -322,6 +320,17 @@ Die Benachrichtigungen für einen Service verhalten sich genau wie die Benachric
 
 Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
 
+## Host oder Service Feld auf Standardwert zurücksetzen
+Hosts und Services erben Ihre werte immer von einer Host oder Servicevorlage. All diese Werte können im Host oder 
+Service Formular überschrieben werden.
+
+Von der Host oder Servicevorlage geerbte werte werden mit einer grünen Schaltfläche hinter dem Eingabefeld dargestellt.
+In diesem Fall stimmen die werte mit dem der Vorlage überein. 
+
+Ist der ein vererbter Wert überschrieben worden, wird die Schaltfläche rot dargestellt. Eine wiederherstellung mit dem
+Wert der Vorlage ist möglich, indem Sie auf die rote Schaltfläche (1) hinter dem Eingabefeld klicken.
+
+![restore value from template](/images/restorevaluefromtemplate.png)
 
 ## Host und Service erstellung über Import Modul
 
