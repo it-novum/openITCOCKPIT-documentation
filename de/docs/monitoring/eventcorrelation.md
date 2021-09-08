@@ -43,3 +43,24 @@ Min ist ein Operator, der zusätzlich noch eine Zahl als Angabe benötigt. Diese
 ![](/images/EVC-min2Operator.png)
 
 Da die virtuellen Services wie echte Services auf dem System behandelt werden, ist es möglich, dass die Services die man zu einer Verknüpfung hinzufügen möchte, auch virtuelle Services aus einer anderen Ereigniskorrelation sein können.
+
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+|Basiskonfiguration|
+| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem der Host erstellt werden soll |
+| Hostvorlage | :fontawesome-solid-times: | [Hostvorlage](#hostvorlagen) von der der Host abgeleitet werden soll |
+| Host Name / Name der Korrelation | :fontawesome-solid-times: | Name des Hosts bzw. Name der zu erstellenden Ereigniskorrelation |
+| Beschreibung |  | Beschreibung der Hostvorlage. Wird als Beschreibung des Hosts weitervererbt |
+| Priorität |  | Priorität zum filtern in Listen |
+| Prüfungskonfiguration |
+| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen. Siehe [Intervalle](#intervalle) |
+| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde. Siehe [Intervalle](#intervalle) |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht. Siehe [Intervalle](#intervalle) |
+| Benachrichtigungskonfiguration |
+| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
+| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
+| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
+| Optionen zu Hostbenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |

@@ -25,6 +25,14 @@ Die Filter bestehen aus jeweils einem regulären Ausdruck für den Host und Serv
 
 Anschließend legen Sie fest, welcher Status angezeigt werden darf und wie die Darstellung erfolgen soll. Im rechten unteren Bildrand sehen Sie eine Vorschau zu den gewählten Anzeigeoptionen.
 
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | Container in dem die Automatische Karte erstellt werden soll |
+| Name | :fontawesome-solid-times: | Name der Automatischen Karte |
+| Beschreibung |  | Beschreibung der Automatischen Karte |
+| Host RegEx | :fontawesome-solid-times: | Host Filter als Regulärer Ausdruck |
+| Service RegEx | :fontawesome-solid-times: | Service Filter als Regulärer Ausdruck |
+
 
 ## Map Modul
 
@@ -40,6 +48,14 @@ Hier wählt man zuerst mindestens einen Container aus, in dem die Karte verfügb
 Danach vergibt man einen Kartennamen sowie einen Titel.
 
 Das Feld Aktualisierungsintervall legt fest, in welchem Intervall in Sekunden eine Karte in der Kartenansicht aktualisiert werden soll.
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | Container in dem die Karte erstellt werden soll |
+| Satellit |  | Satellitensystem auf dem die Karte erstellt werden soll |
+| Kartenname | :fontawesome-solid-times: | Name der Karte |
+| Kartentitel | :fontawesome-solid-times: | Titel der Karte |
+| Aktualisierungsintervall | :fontawesome-solid-times: | Bestimmt das Intervall in Sekunden, in dem die Karte Ihre Elemente aktualisiert |
 
 ### Karte bearbeiten
 
@@ -142,6 +158,13 @@ Danach legen Sie das Rotationsintervall fest. Dies bestimmt die Zeit in Sekunden
 
 Zum Schluss wählen Sie noch die Karten aus die Rotiert werden sollen.
 
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | Container in dem die Rotation erstellt werden soll |
+| Rotationsname | :fontawesome-solid-times: | Name der Rotation |
+| Rotationsintervall | :fontawesome-solid-times: | Das Intervall in dem die gewählten Karten rotieren sollen |
+| Karten | :fontawesome-solid-times: | Karten die rotieren sollen |
+
 ### Rotation anzeigen
 
 Um eine vorhandene Rotation anzuzeigen, gibt es wie im Kartenmodul auch zwei Ansichtsmodi.
@@ -167,9 +190,10 @@ Unter "Systemkonfiguration → APIs → OpenStreetMap" sind die Einstellungen f�
 
 Die Filter "Location status" und "Empty Locations" sind Standard Einstellungen und können über die Filteroption in der OpenStreetMap Ansicht temporär angepasst werden.
 
-| Feld Name | Erforderliches Feld | Beschreibung |
+| Feld Name | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| Server address | :warning: | Ist die volle Adresse des OpenStreetMap Tile Servers, über welchen das Modul die Map Daten versucht abzurufen. **Beispiel**: [http://10.10.10.20/osm\_tiles/{z}/{x}/{y}.png](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
-| Map update interval | :warning: | Intervall in Sekunden, mit dem die Map in der Ansicht aktualisiert wird (Standard: 30) |
-| Location status |     | Definiert die Standard Zustände der Locations, die in der Ansicht angezeigt werden sollen |
-| Empty locations |     | Die Option "Hide empty locations" verhindert, dass leere Locations in der OpenStreetMap Ansicht angezeigt werden. |
+| Server Adresse | :fontawesome-solid-times: | Ist die volle Adresse des OpenStreetMap Tile Servers, über welchen das Modul die Map Daten versucht abzurufen. **Beispiel**: [http://10.10.10.20/osm\_tiles/{z}/{x}/{y}.png](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
+| Kartenaktualisierungsintervall | :fontawesome-solid-times: | Intervall in Sekunden, mit dem die Map in der Ansicht aktualisiert wird (Standard: 30) |
+| Standorte mit Status anzeigen |     | Definiert die Standard Zustände der Locations, die in der Ansicht angezeigt werden sollen |
+| Leere oder nicht überwachte Standorte |     | Die Option "Leere oder nicht überwachte Standorte" verhindert, dass leere Locations in der OpenStreetMap Ansicht angezeigt werden. |
+| Erweiterte Einstellungen | |  |
