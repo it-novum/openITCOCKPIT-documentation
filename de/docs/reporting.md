@@ -36,6 +36,24 @@ die Option "Sende E-Mail" aktivieren.
 
 Dort können Sie einem oder mehreren Benutzern den Bericht schicken.
 
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | Container in dem der Sofortige Bericht erstellt werden soll |
+| Name | :fontawesome-solid-times: | Name des Sofortigen Berichts |
+| Typ | :fontawesome-solid-times: | Objekttyp der ausgewertet werden soll. Hostgruppen, Hosts, Servicegruppen und Services sind möglich  |
+| Typ-Objekte | :fontawesome-solid-times: | Abhängig vom gewählten Typ müssen im nächsten Feld entweder Hosts, Hostgruppen, Services oder Servicegruppen ausgewählt werden |
+| Auswertung | :fontawesome-solid-times: | Welche Objekte ausgewertet werden -> Nur Hosts, Hosts und Services oder nur Services |
+| Zeitraum | :fontawesome-solid-times: | [Zeitraum](../configuration/timeperiods/) der Berücksichtigt werden soll |
+| Reflexionszustand | :fontawesome-solid-times: | Der auszuwertende Statustyp. Hard-State oder Soft und Hard-State |
+| Berücksichtige Wartungszeiten |  | Bestimmt ob Wartungszeiten berücksichtigt werden sollen |
+| Zusammenfassungsanzeige |  | Bestimmt ob anstelle der Auflistungen von einzelnen Hosts eine Gesamtansicht der Status von Host und Services angezeigt wird |
+| Sende E-Mail |
+| Sendungsintervall | :fontawesome-solid-times: | Sendungsintervall: TAG, WOCHE, MONAT, JAHR |
+| Benutzer zum Senden | :fontawesome-solid-times: | Benutzer an den der Bericht gesendet werden soll |
+
+
+
 ### Sofortigen Bericht generieren
 
 Wenn Sie einen "Sofortigen Bericht" erstellt haben, klicken Sie auf das Menü des entsprechenden "Sofortigen Bericht" (1)
@@ -58,6 +76,11 @@ werden.
 Der generierte Bericht enthält neben dem Hoststatus der gewählten Services auch die verschiedenen Metriken (Performance
 Daten) der Services.
 
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Services | :fontawesome-solid-times: | Services die ausgewertet werden sollen |
+| Berichtsformat | :fontawesome-solid-times: | Berichtsformat HTML oder PDF |
+
 ## Wartungszeitberichte
 
 Wartungszeitberichte in openITCOCKPIT geben aufschluss darüber, welche Hosts oder welche Hosts und Services sich wann in
@@ -76,6 +99,16 @@ Der Zeitraum definiert, welche Wartungszeiten berücksichtigt werden sollen.
 
 Der Reflexionszustand definiert, ob entweder nur ein weicher und harter Zustand (hard state und soft state) oder nur ein
 harter Zustand berücksichtigt werden soll.
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Auswertung | :fontawesome-solid-times: | Hosts oder Hosts inklusive Services |
+| Berichtsformat | :fontawesome-solid-times: | Berichtsformat HTML oder PDF |
+| Zeitraum | :fontawesome-solid-times: | [Zeitraum](../configuration/timeperiods/) der berücksichtigt werden soll |
+| Von |  | Start Zeitraum der Auswertung |
+| Bis |  | End Zeitraum der Auswertung |
+| Reflexionszustand | :fontawesome-solid-times: | Der auszuwertende Statustyp. Hard-State oder Soft und Hard-State |
+| Dynamische Farbe |  | Je nach Ausfall werden verschiedene Farben angezeigt |
 
 ## Autoreports
 
@@ -128,6 +161,35 @@ Bericht".
 Dort wählen Sie dann das Ausgabeformat aus und den Zeitraum der Ausgewertet werden soll. Nach dem Klick auf "Generiere
 Bericht" bekommen Sie entweder den Report als PDF zum Download angeboten oder aber direkt im Browser in der HTML Version
 angezeigt.
+
+#### Berichtskonfiguration
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Container | :fontawesome-solid-times: | Container in dem der Autoreport erstellt werden soll |
+| Berichtsname | :fontawesome-solid-times: | Name des Autoreports |
+| Berichtsbeschreibung |  | Beschreibung des Autoreports |
+| Setze Start |  | Startdatum des Berichts soll definiert werden |
+| Startdatum |  | Startdatum des Berichts. Kann nur bearbeitet werden wenn "Setze Start" aktiviert wurde |
+| Zeitraum | :fontawesome-solid-times: | [Zeitraum](../configuration/timeperiods/) der berücksichtigt werden soll |
+| Bewertungszeitraum | :fontawesome-solid-times: | Tag, Woche, Monat, Quartal oder Jahr |
+| Sendungsintervall | :fontawesome-solid-times: | Täglich, Wöchentlich, Monatlich, Vierteljährlich, Jährlich oder niemals |
+| Garantierte Verfügbarkeit | :fontawesome-solid-times: | Verfügbarkeit in Prozent. Es muss entweder "Garantierte Verfügbarkeit" oder "Maximale Anzahl von Ausfällen" angegeben sein |
+| Maximale Anzahl von Ausfällen | :fontawesome-solid-times: | Maximale Anzahl von Ausfällen. Es muss entweder "Garantierte Verfügbarkeit" oder "Maximale Anzahl von Ausfällen" angegeben sein |
+| Graph |  | Graph in Prozent oder Stunden |
+| Reflexionszustand | :fontawesome-solid-times: | Der auszuwertende Statustyp. Hard-State oder Soft und Hard-State |
+| Berücksichtige Wartungszeiten |  | Wartungszeiten zählen nicht als Ausfälle, wenn aktiviert |
+| Betrachte Feiertage |  | Feiertage werden berücksichtigt |
+| Kalender |  | Kalender mit Feiertagen. Nur konfigurierbar, wenn "Betrachte Feiertage" aktiviert ist |
+| Benutzer |  | Benutzer an den der Bericht gesendet wird |
+
+#### Host- und Servicekonfiguration
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Hosts | :fontawesome-solid-times: | Hosts die ausgewertet werden sollen |
+| Service RegEx |  | Filter für Services als Regulärer Ausdruck |
+
 
 ### Autoreport Globals
 
