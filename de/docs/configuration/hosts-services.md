@@ -459,3 +459,44 @@ Um zur erweiterten Ansicht einer Servicegruppe zu kommen, klicken Sie in der Ser
 Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält.
 
 Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispiel die Prüfzeit zurückzusetzen, geplante Wartungszeiten zu erstellen, Servicestatus zu bestätigen oder Benachrichtigungen zu aktivieren / deaktivieren.
+
+
+## Parent-Child Beziehungen
+
+Die Monitoring Engine ist in der Lage zu bestimmen, ob ein Host in einem NICHT VERFÜGBAR (DOWN) oder NICHT ERREICHBAR (UNREACHABLE) Status ist.
+Diese Status sind sehr verschieden und können dabei helfen, einer schnellen bestimmung des (Netzwerk-)Problems beizutragen.
+
+### Parent-Child Beziehungen definieren
+
+Damit die Monitoring Engine in der Lage ist zwischen NICHT VERFÜGBAR und NICHT ERREICHBAR zu unterscheiden, muss 
+definiert werden, wie die Hosts untereinander verbunden sind. Dazu muss der Pfad, den die Datenpakete, von der 
+Monitoring Engine ausgehend nehmen, verfolgt werden. Jedes Switch, Router oder Server, den das Datenpaket dabei 
+passiert, wird dabei als "Hop" bezeichnet. Jeder "Hop" muss als Parent-Child Beziehung definiert werden.
+
+
+Eine Parent-Child beziehung in openITCOCKPIT zu definieren ist dabei sehr einfach. Ausgehend davon, dass alle Hosts 
+(Switche, Router, Server etc.), die auf dem Weg zum Zielhost dazwischen sind, bereits im Monitoring aufgenommen worden 
+sind, wird die Beziehung in der Host Konfiguration eingetragen. Dazu editieren Sie ihren gewünschten Host und tragen den
+Entsprechenden Parent Host im Feld `Eltern-Host` ein. 
+
+![parent host definition](/images/hosts-parenthost.png)
+
+
+Beispiel:
+
+```
+webserver01 <--> Switch01 <--> openITCOCKPIT01
+webserver02 <----^
+webserver03 <----^
+```
+
+Die Webserver 01-03 stehen hinter einem Switch. Fällt der Switch aus bedeutet dies nicht, dass die Webserver auch ausgefallen 
+sind. Ohne Parent-Child Beziehung sind alle Webserver nun in einem NICHT VERFÜGBAR Status, da der Weg zu diesen Hosts 
+durch das ausgefallenen Switch (NICHT VERFÜGBAR) blockiert ist. 
+
+Bei einer Parent-Child Beziehung werden die Webserver nun als NICHT ERREICHBAR angezeigt, da die Monitoring Engine die
+Webserver nicht erreichen kann. Das Switch hingegen verbleibt im Status NICHT VERFÜGBAR. 
+
+
+
+ 
