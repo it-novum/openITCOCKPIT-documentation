@@ -49,6 +49,7 @@ nav:
     - 'Theming und CI': 'additional/theming.md'
     - 'Troubleshooting': 'additional/troubleshooting.md'
     - 'Support': 'additional/support.md'
+    - 'Passwörter zurücksetzen': 'additional/reset-passwords.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
