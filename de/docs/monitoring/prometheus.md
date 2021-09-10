@@ -1,6 +1,6 @@
-## Prometheus
+# Überwachung mit Prometheus <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
-### Was ist Prometheus?
+## Was ist Prometheus?
 
 Prometheus ist ein Open-Source Monitoring System, welches ursprünglich bei [SoundCloud](https://soundcloud.com/) entwickelt wurde. Heute ist es ein eigenständiges Projekt, welches unabhängig von einer Firma entwickelt wird.
 
@@ -24,19 +24,19 @@ Eine typische Alert-Regel wäre zum Beispiel
 
 Wenn die Metrik "belegter Arbeitsspeicher in %" für mehr als 15 Minuten über 80 % ist, verschicke einen "Warning" Alert.
 
-#### Exporter
+### Exporter
 
 Prometheus selber führt keine Plugins oder Checks aus. Auf dem zu überwachenden System müssen sogenannte [Exporter](https://prometheus.io/docs/instrumenting/exporters/) installiert werden.
 
 Die Exporter sind kleine Programme, welche einen Webserver bereitstellen über den die Metriken von Prometheus abgefragt werden können. Ähnlich wie bei Nagios gibt es [unzählige von der Community entwickelte Exporter](https://github.com/prometheus/prometheus/wiki/Default-port-allocations) um Linux, Windows, MySQL, Oracle DB, AWS, UniFi und alles nur erdenkliche überwachen zu können.
 
-#### Voraussetzung
+### Voraussetzung
 
 Um Prometheus mit openITCOCKPIT nutzen zu können, benötigen Sie eine Enterprise Lizenz, sowie das PrometheusModule.
 
 Zusätzlich müssen auf dem zu überwachenden System die entsprechenden Exporter installiert sein. Eine Liste mit verfügbaren Exportern gibt es auf der [Webseite von Prometheus](https://prometheus.io/docs/instrumenting/exporters/)
 
-#### Anlegen eines Exporters in openITCOCKPIT
+### Anlegen eines Exporters in openITCOCKPIT
 
 Um einen Prometheus Exporter in openITCOCKPIT anzulegen, klicken Sie im Hauptmenü Monitoring → Prometheus → Exporters.
 
@@ -58,7 +58,7 @@ Manche Exporter benötigen Spezielle YAML Konfigurationen (bspw. Blackbox, SNMP 
 
 ![](/images/prometheusmodule-exportersedit.png)
 
-#### Überwachen eines Hosts mit Prometheus in openITCOCKPIT
+### Überwachen eines Hosts mit Prometheus in openITCOCKPIT
 
 Wie schon bei den Voraussetzungen beschrieben, muss ein entsprechender Exporter auf dem zu überwachenden Host installiert und in openITCOCKPIT angelegt worden sein (nur falls dieser von den bereits standardmäßig verfügbaren Exportern in openITCOCKPIT abweicht).
 
@@ -72,7 +72,7 @@ Hat man seinen Host entsprechend bearbeitet, speichert man ihn ab.
 
 Danach sollte ein Export der Konfiguration stattfinden.
 
-##### Metriken, Services und Benachrichtigungen
+#### Metriken, Services und Benachrichtigungen
 
 Im nächsten Schritt Navigiert man im Hauptmenü nach Monitoring → Prometheus → Abfrage und wählt dort seinen Host aus der Auswahlliste aus.
 
@@ -80,7 +80,7 @@ Es werden alle durch den Exporter verfügbaren Metriken aufgelistet. Alle diese 
 
 ![](/images/prometheus-queries.png)
 
-###### Benachrichtigungen
+##### Benachrichtigungen
 
 Um Benachrichtigungen zu den Metriken einzurichten, muss ein oder mehrere Services aus den Metriken erstellt werden.
 
@@ -102,7 +102,7 @@ Auf einem Host selbst kann man dann nicht mehr erkennen, durch was ein Service �
 Deshalb haben wir den `Service type` eingeführt. Prometheus Services sind dabei auch ganz normale Nagios Services. Im Hintergrund läuft ein openITCOCKPIT Dienst `systemctl status prometheus_bridge.service`  
 welche alle 15 Sekunden den Status von Prometheus abfragt und dann passiv an Naemon übergibt. Somit macht also Prometheus das Monitoring, und Naemon verschickt dann Benachrichtigungen damit wir weiterhin Features wie Downtimes und Acknowledgements haben und so ist es auch möglich Prometheus einfach in EVKs, Autoreports und allem anderen zu nutzen.
 
-#### Troubleshooting
+### Troubleshooting
 
 Für Prometheus müssen folgende Dienste laufen
 

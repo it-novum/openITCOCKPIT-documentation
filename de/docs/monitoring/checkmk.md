@@ -1,11 +1,11 @@
-## Checkmk
+# Überwachung mit Checkmk <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
-openITCOCKPIT bietet mit dem modul CheckmkModule eine Integration von Checkmk an.
+openITCOCKPIT bietet mit dem CheckmkModule eine Integration von Checkmk an.
 
-Diese Bietet eine Serviceerkennung für Hosts an und kann direkt über das "Host hinzufügen Formular", oder aber bei einem
+Diese bietet eine Serviceerkennung für Hosts an und kann direkt über das "Host hinzufügen Formular", oder aber bei einem
 bestehenden Host über die Host-Übersichtsseite gestartet werden.
 
-### Checkmk Erkennung (Discovery)
+## Checkmk Erkennung (Discovery)
 
 Wenn Sie einen Host anlegen, können Sie direkt nach dem Speichern eine Checkmk Serviceerkennung Starten. Dies erreichen
 Sie über den button "Speicher und Checkmk Erkennung ausführen" im Host erstellen Formular.
@@ -13,7 +13,7 @@ Sie über den button "Speicher und Checkmk Erkennung ausführen" im Host erstell
 Sie können anschließend den gewünschten Checkmk Agenten aus einer Liste auswählen. Diese Agenten können entweder die
 vorgefertigten "Führe Remoteerkennung aus" und "Führe SNMP Erkennung aus" oder aber auch selbst definierte sein.
 
-### Checkmk Agent erstellen
+## Checkmk Agent erstellen
 
 Um einen Checkmk Agenten zu erstellen, Navigieren Sie im Hauptmenü nach Checkmk → Checkmk Agenten
 

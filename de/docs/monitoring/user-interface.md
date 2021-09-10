@@ -1,4 +1,4 @@
-## User Interface
+# User Interface
 
 ### Das Interface im Überblick
 Das Layout des User-Interface teilt sich in zwei Bereiche auf. Den Navigationsbereich (1. Blau) und den Inhaltsbereich (2. Rot)

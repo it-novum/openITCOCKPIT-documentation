@@ -1,3 +1,5 @@
+# Verteiltes Monitoring und Satelliten <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
+
 Das Distribute Modul ermöglicht ein verteiltes Monitoring mit Satellitensystemen. Die Satellitensysteme sind keine vollwertigen openITCOCKPIT instanzen, sondern werden über spezielle Pakete installiert.
 
 Die Satelliten überwachen Ihre Systeme eigenständig und, je nach Synchronisationseinstellungen, werden die Ergebnisse an das Mastersystem (openITCOCKPIT) geschickt oder von diesem abgeholt.

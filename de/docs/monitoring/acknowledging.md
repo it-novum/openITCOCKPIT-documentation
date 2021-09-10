@@ -1,3 +1,5 @@
+# Acknowledging
+
 Acknowledgement - Status bestätigen: unterdrückt temporär Statusbenachrichtigungen
 
 Für Host und Services werden im falle eines nicht UP/OK Status, je nach Konfiguration, Benachrichtigungen versendet.

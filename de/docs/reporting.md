@@ -110,7 +110,7 @@ harter Zustand berücksichtigt werden soll.
 | Reflexionszustand | :fontawesome-solid-times: | Der auszuwertende Statustyp. Hard-State oder Soft und Hard-State |
 | Dynamische Farbe |  | Je nach Ausfall werden verschiedene Farben angezeigt |
 
-## Autoreports
+## Autoreports <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 Das Autoreport-Modul in openITCOCKPIT ist ein konfigurierbarer Report, der automatisiert versendet werden kann. Ein
 Report enthält die Ausfalldauer, maximal zulässige Ausfalldauer, sowie die Verfügbarkeit der gewählten Hosts und
