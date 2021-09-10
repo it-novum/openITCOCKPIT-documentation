@@ -1,8 +1,24 @@
 # Verteiltes Monitoring und Satelliten <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
-Das Distribute Modul ermöglicht ein verteiltes Monitoring mit Satellitensystemen. Die Satellitensysteme sind keine vollwertigen openITCOCKPIT instanzen, sondern werden über spezielle Pakete installiert.
+Das Distribute Modul ermöglicht ein verteiltes Monitoring mit Satellitensystemen, welche als autarke Einheit entferne Standorte überwachen können.
+Dies erleichtert das Pflegen von Firewall-Regeln, da nur noch eine Verbindung zwischen dem openITCOCKPIT Monitoring Server
+und den Satelliten bestehen muss, nicht jedoch zu den zu überwachenden Systemen.
+Zusätzlich kann das verteilte Monitoring auch zur Lastverteilung genutzt werden.
 
-Die Satelliten überwachen Ihre Systeme eigenständig und, je nach Synchronisationseinstellungen, werden die Ergebnisse an das Mastersystem (openITCOCKPIT) geschickt oder von diesem abgeholt.
+Die Verwaltung der Satelliten Systeme und der zu überwachenden Hosts erfolgt zentral vom openITCOCKPIT Server.
+
+Im Falle eines Verbindungsabbruches zwischen Satellite und openITCOCKPIT Server speichern die Satelliten die Prüfergebnisse zwischen.
+Sobald die Verbindung wiederhergestellt ist, verarbeitet der openITCOCKPIT Server die gespeicherten Daten, um eine konsistente Historie
+sicherzustellen.
+
+openITCOCKPIT bietet eine spezielle und optionale Weboberfläche für Satelliten Systeme an.
+Somit haben Administrator und Benutzer an entfernte Standorten ihre lokale IT immer im Blick, auch wenn die Verbindung
+zum zentralen openITCOCKPIT Server unterbrochen ist.
+
+Die Satellitensysteme werden über spezielle Pakete installiert und
+überwachen ihre Systeme eigenständig. Je nach Synchronisationseinstellungen, werden die Ergebnisse an das Mastersystem (openITCOCKPIT) geschickt oder von diesem abgeholt.
+
+![openITCOCKPIT Satellite Web Interface](/images/openitcockpit-sattelite-interface.png)
 
 ## Voraussetzung
 
@@ -10,37 +26,110 @@ Für die Nutzung des Distribute Modul ist eine Enterprise Lizenz nötig.
 
 ## Satelliten in openITCOCKPIT anlegen
 
-Um einen Satelliten in openITCOCKPIT anzulegen, klicken Sie im Hauptmenü auf Systemkonfiguration → System → Satelliten.
-
+Um einen Satelliten in openITCOCKPIT anzulegen, klicken Sie im Hauptmenü auf
+<kbd><kbd>System</kbd> <i class="fa fa-arrow-right"></i> <kbd>Satelliten</kbd></kbd>
 in der Satelliten Übersicht klicken Sie anschließend auf die Schaltfläche "Neu".
 
-Anschließend wählen Sie einen Container aus, vergeben einen Namen für den Satelliten und tragen die IP adresse oder Hostname in das Feld "IP-Adresse" ein.
+Anschließend wählen Sie einen Container aus, vergeben einen Namen für den Satelliten und tragen die IP-Adresse oder Hostname in das Feld "IP-Adresse" ein.
 
-Satelliten können in drei verschiedenen Sychronisationsmodi betrieben werden:
+Satelliten können in drei verschiedenen Synchronisationsmethoden betrieben werden.
+
+## NSTA
+
+Für die Kommunikation zwischen Master und Satellite ist der Dienst `nsta` verantwortlich. Der Verbindungsstatus kann unter
+<kbd><kbd>System</kbd> <i class="fa fa-arrow-right"></i> <kbd>Satelliten Status</kbd></kbd>
+eingesehen werden.
+
+
+![openITCOCKPIT Satellite Status](/images/openitcockpit-sattelite-status.png)
+
+Das Logfile des NSTA kann über den Befehl `journalctl --follow -u nsta` eingesehen werden.
+
 ### Synchronisationsmethoden
-##### HTTPS-Pull
+
+#### HTTPS-Pull
 
 Das Mastersystem ruft regelmäßig Prüfergebnisse vom Satelliten ab und pusht Konfigurationsänderungen.
 
-Hier muss die URL des Satelliten, sowie die weiteren Parameter des HTTP(s) aufrufs angegeben werden. Zudem kann ausgewählt werden, ob das SSL Zertifikat überprüft wird und ob der Proxy aktiviert werden soll.
+Kommunikationsweg ausgehend: openITCOCKPIT Server stellt eine Verbindung zum Satelliten her.
 
-Danach muss ein API Schlüssel erstellt und eingetragen werden und das Intervall in sekunden in welchem das Mastersystem die Prüfergebnisse aufnimmt.
+Hier muss die IP-Adresse des Satelliten, sowie die weiteren Parameter des HTTPS Aufrufs angegeben werden. Zudem kann ausgewählt werden, ob das SSL Zertifikat überprüft wird und ob ein HTTP-Proxy genutzt werden soll.
+Der Angezeigte API Schlüssel wir vom Mastersystem genutzt, um sich am Satellitensystem zu authentifizieren.
 
-##### HTTPS-Push
+![openITCOCKPIT Satellite via HTTPS Pull](/images/satellites-https-pull.png)
 
-Das Satellitensystem überträgt die Prüfergebnisse an das Master-System und sucht regelmäßig nach Konfigurationsänderungen.
 
-Hierfür muss lediglich ein API Schlüssel eingetragen werden.
+Auf dem Satellitensystem wird die Kommunikation vom NSTA verwaltet.
+Deshalb muss dort die Konfiguration `/opt/openitc/etc/nsta/nsta.ini` angepasst werden:
+```ini
+[nsta]
+satellite-id=ADD_YOUR_SATELLITE_ID_HERE
+api-key=ADD_YOUR_API_KEY_HERE
+mode=https_pull
+```
 
-##### SSH
+Um die Änderungen zu übernehmen, muss der NSTA Dienst neugestartet werden.
+```
+systemctl restart nsta
+```
+
+Anschließend findet die Kommunikation über eine verschlüsselte HTTPS Verbindung statt.
+
+
+#### HTTPS-Push
+
+Das Satellitensystem überträgt die Prüfergebnisse an das Mastersystem und sucht regelmäßig nach Konfigurationsänderungen.
+
+Kommunikationsweg eingehend: Satelliten stellt eine Verbindung zum openITCOCKPIT Server her.
+
+Bei der Konfiguration muss hierfür lediglich ein API Schlüssel eingetragen werden.
+Dieser wird vom Satellitensystem genutzt, um sich am Mastersystem zu authentifizieren.
+
+![openITCOCKPIT Satellite via HTTPS Push](/images/satellites-https-push.png)
+
+
+Auf dem Satellitensystem wird die Kommunikation vom NSTA verwaltet.
+Deshalb muss dort die Konfiguration `/opt/openitc/etc/nsta/nsta.ini` angepasst werden:
+```ini
+[nsta]
+mode=https_push
+satellite-id=ADD_YOUR_SATELLITE_ID_HERE
+api-key=ADD_YOUR_API_KEY_HERE
+endpoint=https://demo.openitcockpit.io
+insecure-https=true
+```
+
+Um die Änderungen zu übernehmen, muss der NSTA Dienst neugestartet werden.
+```
+systemctl restart nsta
+```
+
+Anschließend findet die Kommunikation über eine verschlüsselte HTTPS Verbindung statt.
+
+
+#### SSH
 
 Das Mastersystem erstellt einen SSH-Tunnel zum Satellitensystem, ruft die Prüfergebnisse ab und überträgt Konfigurationsänderungen.
 
-Im SSH Modus wird ein Benutzername, Port sowie der Private Key Path für die Verbindung benötigt. Es muss vorher ein SSH Key austausch für den angegebenen Benutzer vom Mastersystem zum Satelliten stattgefunden haben.
+Kommunikationsweg ausgehend: openITCOCKPIT Server stellt eine Verbindung zum Satelliten her.
 
-Zudem muss noch der Remote Port des auf dem Satelliten laufenden Gearman angegeben werden.
+Im SSH Modus wird ein Benutzername, Port sowie der Private Key Path für die Verbindung benötigt.
+Der Austausch der SSH-Keys für den angegebenen Benutzer vom Mastersystem zum Satelliten muss im Vorfeld durchgeführt werden.
 
-für alle Synchronisationsmethoden steht im letzten Schritt der erstellung noch die Möglichkeit zum Einstellen der Zeitzone sowie die Synchronisation der Zeit zur verfügung.
+Zudem kann noch der Remote Port des auf dem Satelliten laufenden Gearman angegeben werden.
+
+![openITCOCKPIT Satellite via SSH](/images/satellites-ssh.png)
+
+
+Anschließend findet die Kommunikation über eine verschlüsselte SSH Verbindung statt.
+
+Für alle Synchronisationsmethoden steht im letzten Schritt der Erstellung noch
+die Möglichkeit zum Einstellen der Zeitzone sowie die Synchronisation der Systemzeit zur verfügung.
+
+Wenn SSH zur Übertragung genutzt wird, wird der NSTA auf dem Satellitensystem nicht benötigt.
+
+
+#### Alle Optionen
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
@@ -68,7 +157,36 @@ für alle Synchronisationsmethoden steht im letzten Schritt der erstellung noch 
 | RemotePort |  | Gearman-Port der Remote-Maschine. |
 
 ## Host auf einem Satelliten erstellen
+Bei der Erstellung eines Hosts kann das Satellitensystem, welches die Prüfungen ausführen soll, aus einer Dropdown-Liste ausgewählt werden.
+openITCOCKPIt verwaltet im Hintergrund alle nötigen Konfigurationsänderungen selbstständig.
 
-Um einen Host auf einem Satelliten zu erstellen, erstellen Sie wie gewohnt einen Host. Der einzige Unterschied darin, dass nun im Feld "Satellit" nicht mehr das Mastersystem, sondern der gewünschte Satellit ausgewählt wird.
+Hosts können zu jedem Zeitpunkt vom Mastersystem auf einen Satelliten und zurück verschoben werden.
+
 
 ![](/images/host-satellite.png)
+
+## State is no longer current
+
+Das openITCOCKPIT Mastersystem fürt in regelmäßigen Abständen einen sogenannten Freshness Check durch. Dabei prüft das System, ob alle
+Satellitensysteme ihre Prüfergebnisse zu den erwarteten Zeitpunkten übermittelt haben.
+
+Der Status "State is no longer current" ist in der Regel auf einen der folgenden Punkte zurückzuführen:
+- Unterschiedliche Systemzeiten von Mastersystem und Satellit. NTP-Server nutzen oder Synchronisation der Systemzeit über NSTA aktivieren.
+- Die Verbindung zwischen Mastersystem und Satellit ist unterbrochen
+- Satellitensystem ist überlastet
+
+## Satelliten Frontend aktivieren
+
+Die Weboberfläche der Satellitensysteme ist optional und im standard nicht aktiviert. Zum Aktivieren müssen die folgenden zwei
+Befehle auf dem Satelliten ausgeführt werden:
+```
+touch /opt/openitc/etc/frontend/enable_web_interface
+/opt/openitc/frontend/UPDATE.sh
+```
+
+Im Anschluss kann der erste Benutzer erstellt werden.
+```
+sudo -u www-data /opt/openitc/frontend/bin/cake user --username admin --password admin1234
+```
+
+Alle weiteren Benutzer können dann über die Weboberfläche erstellt und verwaltet werden.
