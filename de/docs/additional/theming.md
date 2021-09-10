@@ -1,3 +1,5 @@
+# Theming und CI <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
+
 ## Design Modul
 
 Um das Erscheinungsbild von openITCOCKPIT zu verändern, können Sie über den eingebauten Paketmanager von openITCOCKPIT das DesignModule installieren.

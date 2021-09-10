@@ -1,27 +1,26 @@
-## Ich brauche Hilfe!
+# Support
 
-Sie brauchen Hilfe beim Einrichten, haben Fragen oder Verbesserungsvorschläge?
+## Professioneller Support
 
-### Community Support
+Um professionellen Support zu erhalten, ist eine Subskription erforderlich. Weitere Informationen zum professionellen
+Support und den verfügbaren Lizenzen erhalten Sie auf der Webseite der
+[it-novum.com](https://it-services.it-novum.com/monitoring-zukunft/openitcockpit-enterprise-subscription/)
+
+## Community Support
 
 Community Support erhalten Sie in unserem [Discord Channel](#discord) oder auf [Reddit](#reddit)
 
-#### Discord
+### Discord
 
 Um unserem Discord Channel beizutreten, klicken Sie bitte den folgenden Link
 [ :fontawesome-brands-discord: Join openITCOCKPIT Discord Channel](https://discord.gg/G8KhxKuQ9G)
 
-#### Reddit
+### Reddit
 
 Auf Reddit können Sie Diskussionen und Fragen
 Stellen [ :fontawesome-brands-reddit: openITCOCKPIT Reddit Channel](https://www.reddit.com/r/openitcockpit/)
 
-### Professioneller Support
 
-Um professionellen Support zu erhalten, ist eine Subskription erforderlich. Weitere Informationen zum professionellen
-Support und den verfügbaren Lizenzen erhalten Sie auf
-unserer [Community Webseite](https://openitcockpit.io/#Subscription) oder
-auf [it-novum.com](https://it-services.it-novum.com/monitoring-zukunft/openitcockpit-enterprise-subscription/)
 
 ## Ich habe einen Fehler gefunden!
 

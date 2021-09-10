@@ -34,7 +34,7 @@ Anschließend legen Sie fest, welcher Status angezeigt werden darf und wie die D
 | Service RegEx | :fontawesome-solid-times: | Service Filter als Regulärer Ausdruck |
 
 
-## Map Modul
+## Map Modul <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 
 Das Map Modul oder Karten Modul ist eine frei verfügbare Erweiterung in openITCOCKPIT. Es bietet die möglichkeit die überwachten Objekte visuell darzustellen und dies mit eigenen Hintergründen zu versehen. So kann beispielsweise eine Geländekarte oder eine Server Rack direkt mit überwachten Objekten oder unterkarten versehen werden.
@@ -178,7 +178,7 @@ Wenn Sie die Rotation im Vollbild modus anschauen möchten, klicken Sie wieder z
 ![](/images/mapmodule-rotationviewfullscreen.png)
 
 
-## OpenStreetMap
+## OpenStreetMap <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
 ### Was kann ich mit dem OpenStreetMap Modul tun?
 

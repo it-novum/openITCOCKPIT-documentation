@@ -1,4 +1,4 @@
-# Ereigniskorrelationsmodul (Eventcorrelation)
+# Ereigniskorrelation (Eventcorrelation) <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 Das Ereigniskorrelationsmodul in openITCOCKPIT ist eine sehr hilfreiche Komponente, wenn es darum geht, aus verschiedenen Services einen einzigen Gesamtstatus zu bekommen.
 

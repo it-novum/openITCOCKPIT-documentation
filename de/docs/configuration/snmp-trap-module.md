@@ -1,3 +1,5 @@
+# SNMP Traps <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
+
 ## Funktionsweise
 
 Die Funktionsweise des SnmpTrapModule aus openITCOCKPIT v4 ist im Grunde dieselbe, wie für die Snmp Trap Installation für die v3.

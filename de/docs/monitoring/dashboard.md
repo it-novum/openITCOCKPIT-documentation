@@ -1,4 +1,4 @@
-## Dashboards
+# Dashboard
 
 Das Dashboard ist die Startseite in openITCOCKPIT.
 

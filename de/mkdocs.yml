@@ -20,7 +20,9 @@ nav:
     - 'Überwachung mit Checkmk': 'monitoring/checkmk.md'
     - 'Karten': 'monitoring/maps.md'
     - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
-  - 'Alerting / Benachrichtigungen': 'alerting.md'
+  - 'Alerting / Benachrichtigungen':
+    - 'Benachrichtigungen': 'alerting/alerting.md'
+    - 'E-Mail Layouts anpassen': 'alerting/email-layouts.md'
   - 'Reporting': 'reporting.md'
   - 'Konfiguration':
     - 'Container': 'configuration/container.md'
