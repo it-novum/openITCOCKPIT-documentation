@@ -1,15 +1,59 @@
+# Makros
+
+Makros sind Variablen, die in openITCOCKPIT genutzt werden können um zum Beispiel Pfadangaben zu Checkplugins oder Logindaten zu speichern.
+
+Makros beginnen und enden immer mit einem $-Zeichen.
+
 ## Benutzerdefinierte Makros
 
-Benutzerdefinierte Makros sind Variablen, die in openITCOCKPIT genutzt werden können um zum Beispiel Pfadangaben für Plugins oder Logindaten zu speichern.
+Benutzerdefinierte Makros sind der mit Abstand am häufigsten verwendete Type von Makros in openITCOCKPIT.
+Der Name der Makros ist immer `USER` gefolgt von einer Zahl, zum Beispiel `$USER1$`
 
-Es besteht die Möglichkeit Werte auszublenden, um z.B. Passwörter nicht direkt sichtbar zu machen. Dazu wählt man entweder beim Erstellen oder editieren von einem Makro die Option "Wert verstecken" an oder klickt auf der Übersichtsseite die Schaltfläche
+Dieser Makro Type wird häuft zum Speichern von Pfadangaben, Kennwörter und SNMP Communities genutzt.
 
-![](/images/userdefinedmacros-hidevalue.png)
 
-Es können bis zu 256 Makros gespeichert werden.
+Es besteht die Möglichkeit Werte auszublenden, um z.B. Passwörter nicht direkt sichtbar zu machen. Dazu wählt man entweder beim Erstellen oder editieren von einem Makro die Option "Wert verstecken" an oder klickt auf der Übersichtsseite die Schaltfläche.
+![](/images/UserDefinedMacros-hideValue.png)
+
+![Overview about User defined macros](/images/UserDefinedMacros-Overview.png)
+
+!!! info
+    Es können bis zu 256 benutzerdefinierte Makros gespeichert werden.
+
+## Kontakt Makros
+Kontakt Makros können bei Kontakten hinterlegt werden Logindaten für ein Ticketsystem, oder andere Anwendungsfälle, zu speichern.
+
+Die Makros folgen immer dem Aufbau `$_CONTACT<macro-name>$ `
+
+![Contact Macros](/images/contact-macros.png)
+
+## Host Makros
+
+Host Makros können zum einen direkt in einer Hostvorlage, oder bei einem einzelnen Host hinterlegt werden. In der Regel wird dies genutzt,
+um SNMP Communities oder andere Zugangsdaten zu speichern, welche nur für einen Host relevant sind.
+
+Die Makros folgen immer dem Aufbau `$_HOST<macro-name>$ `
+
+Makros welche von der Hostvorlage vererbt wurden, werden in grüner Farbe dargestellt. Blau bedeutet das Makro wurde direkt im Host konfiguriert.
+![Host Macros](/images/host-macros.png)
+
+Host Makros stehen sowohl beim Ausführen des Host-Checks, also auch beim Ausführen von Service-Checks des Hosts zur Verfügung.
+
+## Service Makros
+
+Service Makros können zum einen direkt in einer Servicevorlage, oder bei einem einzelnen Service hinterlegt werden. In der Regel wird dies genutzt,
+um Zugangsdaten zu speichern, welche nur für einen Service relevant sind.
+
+Die Makros folgen immer dem Aufbau `$_SERVICE<macro-name>$ `
+
+Makros welche von der Servicevorlage vererbt wurden, werden in grüner Farbe dargestellt. Blau bedeutet das Makro wurde direkt im Service konfiguriert.
+
+Service Makros stehen nur beim Ausführen des Service-Checks zur Verfügung.
+
 
 ## Standard Makros
 
+Neben den Makros die vom Benutzer selbst definiert werden können, stellt das System eine Reihe von standard Markos zur Verfügung.
 
 | Makro                       | Beschreibung                                                                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
