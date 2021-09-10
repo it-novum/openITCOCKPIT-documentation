@@ -1,19 +1,23 @@
-## Grundlagen
+# Systemeinstellungen
 
-Die Systemeinstellungen definieren grundlegende Einstellungen an openITCOCKPIT.
+Die Systemeinstellungen definieren grundlegende Einstellungen an openITCOCKPIT und sind unter
+<kbd><kbd>System</kbd> <i class="fa fa-arrow-right"></i> <kbd>Systemeinstellungen</kbd></kbd>
+zu finden.
 
-Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da dies im schlimmsten fall zum kompletten Ausfall des Monitorings führen kann!
+!!! danger
+    Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden,
+    da dies im schlimmsten Fall zum kompletten Ausfall des Monitorings führen kann!
 
-## Verfügbare Einstellungen:
+## Verfügbare Einstellungen
 
 | Schlüssel | Beschreibung |
 | --- | --- |
-| SUDO\_SERVER |  |
+| **SUDO\_SERVER** |  |
 | API\_KEY | API Schlüssel für die sudoserver socket API  |     
-| WEBSERVER |  |
+| **WEBSERVER** |  |
 | USER | Benutzername für den Webserver |
 | GROUP | Benutzergruppe für den Webserver |
-| MONITORING |  |
+| **MONITORING** |  |
 | USER | Der Benutzername ihres Monitoring Systems |
 | GROUP | Die Benutzergruppe ihres Monitoring Systems |
 | FROM\_ADDRESS | Absender E-Mail adresse für Benachrichtigungen |
@@ -38,10 +42,10 @@ Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da d
 | QUERY_HANDLER | Pfad des query handler auf dem Monitoring System |
 | HOST_CHECK_ACTIVE_DEFAULT | Ist diese Option aktiviert, ist bei neuen Hostvorlagen die option `Aktiviere aktive Prüfungen` standardmäßig aktiviert |
 | SERVICE_CHECK_ACTIVE_DEFAULT | Ist diese Option aktiviert, ist bei neuen Servicevorlagen die option `Aktiviere aktive Prüfungen` standardmäßig aktiviert |
-| SYSTEM |  |
+| **SYSTEM** |  |
 | ADDRESS | Die IP Adresse oder FQDN des openITCOCKPIT Servers |
 | ANONYMOUS_STATISTICS | Ist diese Option aktiviert, werden anonymisierte Daten an die Entwickler von openITCOCKPIT weitergegeben. [Weitere Informationen]() |
-| FRONTEND | |
+| **FRONTEND** | |
 | SYSTEMNAME | Der Name Ihres openITCOCKPIT Systems |
 | SHOW_EXPORT_RUNNING | Ist diese Option aktiviert, werden laufende Exports im Kopfbereich von openITCOCKPIT angezeigt |
 | MASTER_INSTANCE | Der Name der openITCOCKPIT Hauptinstanz |
@@ -71,13 +75,13 @@ Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da d
 | SSO.AUTH_PROVIDER | Hier kann ausgewählt werden, welcher Authentifizierungs Provider vom System genutzt werden soll |
 | SSO.FORCE_USER_TO_LOGINPAGE | Automatische weiterleitung auf die Login Seite des oAuth Servers, wenn der Benutzer nicht eingeloggt ist |
 | REPLACE_PASSWORD_IN_OBJECT_MACROS | Wenn diese Option aktiviert ist, werden Passwörter in `$_HOST...` und `$_SERVICE...` in den Host und Serviceübersichten Übersetzt|
-| CHECK_MK |  |
+| **CHECK_MK** |  |
 | BIN | Pfad zur Check_mk binary |
 | MATCH | Diese Services werden nicht durch Check_mk komprimiert. Regulärer Ausdruck |
 | ETC | Pfad zu den Check_mk Konfigurationsdateien |
 | VAR | Pfad zu den Check_mk Variablen Dateien |
 | ACTIVE_CHECK | Name der Check_mk active check Servicevorlage |
-| ARCHIVE ||
+| **ARCHIVE** ||
 | AGE.SERVICECHECKS | Zeit in Wochen wie lange Service check ergebnisse gespeichert werden sollen |
 | AGE.HOSTCHECKS | Zeit in Wochen wie lange Host check ergebnisse gespeichert werden sollen |
 | AGE.STATEHISTORIES | Zeit in Wochen wie lange `State change events` gespeichert werden sollen |
@@ -85,7 +89,7 @@ Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da d
 | AGE.NOTIFICATIONS | Zeit in Wochen wie lange Benachrichtigungen gespeichert werden sollen. Sollte mit `AGE.CONTACTNOTIFICATIONS` und `AGE.CONTACTNOTIFICATIONMETHODS` gleich gehalten werden |
 | AGE.CONTACTNOTIFICATIONS | Zeit in Wochen wie lange Kontakt Benachrichtungen gespeichert werden sollen. Sollte mit `AGE.NOTIFICATIONS` und `AGE.CONTACTNOTIFICATIONMETHODS` gleich gehalten werden |
 | AGE.CONTACTNOTIFICATIONMETHODS | Zeit in Wochen wie lange Kontakt Benachrichtigungsmethoden gespeichert werden sollen. Sollte mit `AGE.CONTACTNOTIFICATIONS` und `AGE.NOTIFICATIONS` gleich gehalten werden |
-| INIT |  |
+| **INIT** |  |
 | SUDO_SERVER_STATUS | Kommandozeilenbefehl um den Status des `SUDO_SERVER` Dienst abzufragen |
 | GEARMAN_WORKER_STATUS | Kommandozeilenbefehl um den Status des `GEARMAN_WORKER` Dienst abzufragen |
 | OITC_CMD_STATUS | Kommandozeilenbefehl um den Status der `OITC_CMD` abzufragen |
@@ -105,6 +109,6 @@ Diese Einstellungen sollten nur von erfahrenen Benutzern verändert werden, da d
 | NSTA_STATUS | Kommandozeilenbefehl um den Status des `NSTA` Dienst abzufragen |
 | SNMPTRAPD_RESTART | Kommandozeilenbefehl um den `SNMPTRAPD` Dienst neu zu starten |
 | SNMPTT_RESTART | Kommandozeilenbefehl um den `SNMPTT` Dienst neu zu starten |
-| TICKET_SYSTEM ||
+| **TICKET_SYSTEM** ||
 | URL | Link zum Ticket System |
 

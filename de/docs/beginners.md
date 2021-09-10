@@ -86,12 +86,12 @@ Zudem ist es möglich, allen Benutzern Lese- und Schreibrechte auf jeden Contain
 Das containerbasierte Berechtigungskonzept kann sehr komplex werden, aber bietet die größtmögliche Flexibilität und ermöglicht granulare Berechtigungsmöglichkeiten.
 
 !!! note 
-    Mit openITCOCKPIT v4 können Container Berechtigungen auch in "Benutzer Container Rollen" abgebildet werden.
+    Seit openITCOCKPIT 4 können Container Berechtigungen auch in "Benutzer Container Rollen" abgebildet werden.
 
 
 ## Den ersten Host erstellen
 
-In der Welt von openITCOCKPIT v4 ist ein "Host" das grundlegendste Element. Im Normalfall nutzt openITCOCKPIT ein "ICMP Check" zur Überprüfung Ihres Hosts. Jeder Host stellt verschiedenste Dienste zur Verfügung, wie zum Beispiel E-Mail, DHCP, DNS, web server, load balancer etc. Um ein sinnvolles Monitoring aufzubauen, benötigen Sie "Services" in openITCOCKPIT. Da openITCOCKPIT im Hintergrund Nagios oder Naemon nutzt, sind tausende frei verfügbare Plugins zum Überwachen Ihrer kritischen Dienste und Infrastruktur verfügbar. 
+In der Welt von openITCOCKPIT ist ein "Host" das grundlegendste Element. Im Normalfall nutzt openITCOCKPIT ein "ICMP Check" zur Überprüfung Ihres Hosts. Jeder Host stellt verschiedenste Dienste zur Verfügung, wie zum Beispiel E-Mail, DHCP, DNS, web server, load balancer etc. Um ein sinnvolles Monitoring aufzubauen, benötigen Sie "Services" in openITCOCKPIT. Da openITCOCKPIT im Hintergrund Nagios oder Naemon nutzt, sind tausende frei verfügbare Plugins zum Überwachen Ihrer kritischen Dienste und Infrastruktur verfügbar. 
 
 ### Host- und Servicevorlagen
 
