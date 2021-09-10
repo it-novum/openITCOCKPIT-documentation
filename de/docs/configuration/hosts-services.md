@@ -484,19 +484,19 @@ Entsprechenden Parent Host im Feld `Eltern-Host` ein.
 
 Beispiel:
 
-```
-webserver01 <--> Switch01 <--> openITCOCKPIT01
-webserver02 <----^
-webserver03 <----^
-```
+![parent-child-allup](/images/parent-child-all-up.png)
 
 Die Webserver 01-03 stehen hinter einem Switch. Fällt der Switch aus bedeutet dies nicht, dass die Webserver auch ausgefallen 
 sind. Ohne Parent-Child Beziehung sind alle Webserver nun in einem NICHT VERFÜGBAR Status, da der Weg zu diesen Hosts 
-durch das ausgefallenen Switch (NICHT VERFÜGBAR) blockiert ist. 
+durch das ausgefallenen Switch (NICHT VERFÜGBAR) blockiert ist.
+
+Ohne Parent-Child Beziehung:
+![no parent child relation](/images/no-parent-child-all-down.png)
 
 Bei einer Parent-Child Beziehung werden die Webserver nun als NICHT ERREICHBAR angezeigt, da die Monitoring Engine die
-Webserver nicht erreichen kann. Das Switch hingegen verbleibt im Status NICHT VERFÜGBAR. 
+Webserver nicht erreichen kann. Das Switch hingegen verbleibt im Status NICHT VERFÜGBAR.
 
-
+Mit Parent-Child Beziehung:
+![with parent child relation](/images/with-parent-child-unreachable.png)
 
  
