@@ -52,6 +52,7 @@ nav:
     - 'Troubleshooting': 'additional/troubleshooting.md'
     - 'Support': 'additional/support.md'
     - 'Passwörter zurücksetzen': 'additional/reset-passwords.md'
+    - 'Graphing Backend': 'additional/graphing-backend.md'
     - 'Upgrade v3.x zu v4.x': 'additional/upgradev3-v4.md'
 
 extra_javascript:
