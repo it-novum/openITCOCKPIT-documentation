@@ -2,7 +2,8 @@
 
 openITCOCKPIT bietet eine Integration von Grafana, die über das Modul GrafanaModule installierbar ist.
 
-Grafana ist ein Tool, dass automatisiert Graphen von Services in openITCOCKPIT erstellt und die möglichkeit bietet, eigene Graphen Dashboards zu erstellen.
+Grafana ist ein Tool, dass automatisiert Graphen von Services in openITCOCKPIT erstellt und die möglichkeit bietet, 
+eigene Graphen Dashboards zu erstellen.
 
 ### Konfiguration
 
