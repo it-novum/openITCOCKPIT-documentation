@@ -1,4 +1,4 @@
-# ServiceNow
+# ServiceNow <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
 ## Voraussetzungen
 

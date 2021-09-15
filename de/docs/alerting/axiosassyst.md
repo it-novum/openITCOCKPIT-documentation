@@ -1,4 +1,4 @@
-# Axios Assyst
+# Axios Assyst <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 Das Axios Assyst Modul bietet eine Schnittstelle zum Axios Assyst Ticketsystem. Diese SOAP Schnittstelle bietet die
 möglichkeit Tickets in Assyst zu eröffnen und bei einem Grünen Status des entsprechenden Host oder Services, das Ticket

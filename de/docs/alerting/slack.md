@@ -1,4 +1,4 @@
-# Slack
+# Slack <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
 ## Was kann ich mit dem Slack Modul tun?
 

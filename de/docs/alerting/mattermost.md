@@ -1,4 +1,4 @@
-# Mattermost
+# Mattermost <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 ## Was kann ich mit dem Mattermost Modul tun?
 
