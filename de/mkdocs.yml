@@ -22,6 +22,11 @@ nav:
     - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
   - 'Alerting / Benachrichtigungen':
     - 'Benachrichtigungen': 'alerting/alerting.md'
+    - 'Axios Assyst': 'alerting/axiosassyst.md'
+    - 'Mattermost': 'alerting/mattermost.md'
+    - 'PagerDuty': 'alerting/pagerduty.md'
+    - 'Slack': 'alerting/slack.md'
+    - 'ServiceNow': 'alerting/servicenow.md'
     - 'E-Mail Layouts anpassen': 'alerting/email-layouts.md'
   - 'Reporting': 'reporting.md'
   - 'Konfiguration':
