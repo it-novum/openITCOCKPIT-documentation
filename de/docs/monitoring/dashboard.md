@@ -146,11 +146,11 @@ Die automatische Karte muss vorher über die [Automatischen Karten](../maps/#aut
 ##### Autoreport Übersicht
 ![Autoreport overview widget](/images/dashboard-autoreportoverviewwidget.png)
 
-Das Widget zeigt eine Verfügbarkeitsanzeige eines zuvor erstellen [Autoreports](../../reporting/#autoreports) an. 
+Das Widget zeigt eine Verfügbarkeitsanzeige eines zuvor erstellen [Autoreports](../../reporting/#autoreports-ce) an. 
 
 ###### Konfiguration
 
-Das Widget setzt einen zuvor erstellten [Autoreports](../../reporting/#autoreports) voraus. Dieser Report kann anschließend in der Konfigurationsoberfläche des Widgets ausgewählt werden. Zudem sind Optionen zur Anzeige der Verfügbarkeit, Logdaten sowie die dynamische Farbgestaltung verfügbar. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Das Widget setzt einen zuvor erstellten [Autoreports](../../reporting/#autoreports-ce) voraus. Dieser Report kann anschließend in der Konfigurationsoberfläche des Widgets ausgewählt werden. Zudem sind Optionen zur Anzeige der Verfügbarkeit, Logdaten sowie die dynamische Farbgestaltung verfügbar. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Grafana (automatisch generiert)
 
@@ -172,20 +172,20 @@ Benutzerdefinierte Grafana Dashboards müssen vorher über das [Grafana Modul](.
 ##### Karte (MapModul)
 ![Map module widget](/images/dashboard-mapmodulewidget.png)
 
-Das Karten Widget zeigt eine Karte, die über das [MapModul](../maps/#map-modul) erstellt wurde, an. 
+Das Karten Widget zeigt eine Karte, die über das [MapModul](../maps/#map-modul-ce) erstellt wurde, an. 
 
 ###### Konfiguration
 
-Eine Karte muss voher über das [MapModul](../maps/#map-modul) erstellt werden. Anschließend kann die Karte über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Eine Karte muss voher über das [MapModul](../maps/#map-modul-ce) erstellt werden. Anschließend kann die Karte über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Ereigniskorrelation
 ![evk widget](/images/dashboard-evkwidget.png)
 
-Das Widget zeigt eine zuvor erstelle [Ereigniskorrelation](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation) an.
+Das Widget zeigt eine zuvor erstelle [Ereigniskorrelation](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation-ce) an.
 
 ###### Konfiguration
 
-Eine Ereigniskorrelation muss vorher über das [EventcorrelationModule](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation) erstellt werden. Anschließend kann die Ereigniskorrelation über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Eine Ereigniskorrelation muss vorher über das [EventcorrelationModule](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation-ce) erstellt werden. Anschließend kann die Ereigniskorrelation über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ### Widget löschen
 
