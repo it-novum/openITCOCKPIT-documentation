@@ -2,14 +2,40 @@
 
 ## Design Modul
 
-Um das Erscheinungsbild von openITCOCKPIT zu verändern, können Sie über den eingebauten Paketmanager von openITCOCKPIT das DesignModule installieren.
+Das Erscheinungsbild von openITCOCKPIT kann mithilfe des DesignModule, welches über den integrierten
+Paketmanager von openITCOCKPIT installiert werden kann, nach Bedarf angepasst werden.
 
-Der Designeditor bietet die möglichkeit das komplette Erscheinungsbild von openITCOCKPIT zu verändern. Dazu gehören auch die Logos, die im gesamten System verwendet werden.
+Über den Designeditor lassen sich die Farben der Weboberfläche, sowie die vom System verwenden Logos
+anpassen. Dafür sind keine Programmierkenntnisse erforderlich.
 
-Um ein Vorgefertigtes dunkles Theme zu nutzen, können Sie auf die Schaltfläche "Dunkles Thema" klicken.
+![Modify the openITCOCKPIT theme](/images/openitcockpit-design-editor.png)
+
+Neben dem standard mäßig genutzten hellen Theme, bietet openITCOCKPIT auch ein dunkles Theme.
+Dieses ist vorkonfiguriert und lässt sich über die Schaltfläche "Dunkles Thema" im Designeditor laden.
+Zum Anwenden klicken Sie im Anschluss auf "Stil aktualisieren".
+
+![Default openITCOCKPIT dark theme](/images/openitcockpit-dark-theme.png)
 
 ### Design Exportieren / Importieren
 
-Um ein Design zu exportieren, müssen Sie zunächst das Design verändern und abspeichern. Danach scrollen Sie nach ganz unten im Design Editor. Dort finden Sie eine Schaltfläche "Exportieren Sie das aktuell gespeicherte Design". Damit bekommen Sie das aktuelle Design im json format zum Download zur Verfügung gestellt.
+Eigene Designs können exportiert und auf einem anderen openITCOCKPIT Systemen importiert werden.
 
-Um ein exportiertes Design wieder zu importieren, klicken Sie auf die Schaltfläche "Importieren" und Laden die entsprechende json datei hoch.
+Um ein Design exportieren zu können, muss zunächst ein eigenes Design erstellt und abgespeichert werden.
+Danach scrollen Sie im Design Editor nach ganz unten. Dort finden Sie eine Schaltfläche
+"Exportieren Sie das aktuell gespeicherte Design". Damit bekommen Sie das aktuelle Design als eine .json-Datei zum Download zur Verfügung gestellt.
+
+Um ein exportiertes Design wieder zu importieren, klicken Sie auf die Schaltfläche "Importieren" und laden die entsprechende .json-Datei hoch.
+
+Über diese Methode können Sie zum Beispiel unser [Halloween Thema für openITCOCKPIT](https://github.com/it-novum/oitc-halloween-theme) laden.
+
+![Halloween theme for openITCOCKPIT](/images/openitcockpit-Halloween-login.jpg)
+
+### Eigenes CSS
+
+Für komplette Gestaltungsfreiheit besteht die Möglichkeit, eigene CSS-Regeln zu hinterlegen. Somit können alle Abstände, Farben und
+Schriftarten nach Bedarf angepasst werden.
+
+!!! tip
+    Das Erstellen von CSS-Regeln erfordert Kenntnisse von Cascading Style Sheets und sollte nur von erfahrenen Benutzern
+    eingerichtet werden.
+
