@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build docker image') {
             when {
-                branch 'master'
+                branch 'main'
                 not {
                     changeRequest()
                 }
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build and deploy') {
             when {
-                branch 'master'
+                branch 'main'
                 not {
                     changeRequest()
                 }
