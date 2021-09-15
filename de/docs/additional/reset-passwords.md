@@ -15,7 +15,7 @@ oitc reset_password --print
 
 ![reset password](/images/oitc_reset_password.png)
 
-Das System ziegt eine Liste aller Benutzer, bei denen das Zurücksetzen des Passwortes möglich ist. 
+Das System zeigt eine Liste aller Benutzer, bei denen das Zurücksetzen des Passwortes möglich ist. 
 Mit der `--print` Option wird das Passwort auf dem Terminal angezeigt. Zusätzlich dazu bekommt der Benutzer eine E-Mail
 mit dem neuen Passwort zugesendet.
 
