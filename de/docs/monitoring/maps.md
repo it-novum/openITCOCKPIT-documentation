@@ -1,3 +1,5 @@
+# Karten
+
 ## Status Karte
 
 Die Statuskarte ist eine automatisch erstellte Karte, die alle Hosts mitsamt ihrem Status auf einer Karte darstellt.

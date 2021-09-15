@@ -1,3 +1,5 @@
+# Hosts und Services
+
 ## Hostvorlagen
 
 Hostvorlagen bilden die Grundvoraussetzung für Hosts. Wird ein Host erstellt, so muss dort eine Hostvorlage

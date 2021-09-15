@@ -1,3 +1,5 @@
+# Grundlegende Prinzipien
+
 ## Was sind Hosts und Services?
 
 In openITCOCKPIT dreht sich alles um Hosts und Services. Hosts sind in der Regel physikalische Geräte wie beispielsweise

@@ -1,3 +1,5 @@
+# Reporting
+
 openITCOCKPIT ist in der Lage Berichte (Reports) zu generieren. Diese Berichte können unterschiedlichste Daten wie zum
 Beispiel Wartungszeiten, Ausfälle, Verfügbarkeiten und den aktuellen Status einzelner Host und Services beinhalten.
 

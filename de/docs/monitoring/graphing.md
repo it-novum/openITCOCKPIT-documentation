@@ -1,3 +1,5 @@
+# Graphing
+
 ## Grafana
 
 openITCOCKPIT bietet eine Integration von Grafana, die über das Modul GrafanaModule installierbar ist.
