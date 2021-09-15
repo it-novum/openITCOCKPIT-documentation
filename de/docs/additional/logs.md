@@ -1,3 +1,5 @@
+# Logging
+
 ## Änderungsprotokoll
 
 Das Änderungsprotokoll beinhaltet alle in openITCOCKPIT vorgenommen Änderungen, welche sich auf folgende Objekttypen bezieht:

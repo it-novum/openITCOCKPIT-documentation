@@ -1,3 +1,5 @@
+# Benachrichtigung / Alerting
+
 openITCOCKPIT bietet eine vielzahl von Benachrichtigungsmethoden an. Neben der gängigsten Methode,
 der [E-Mail Benachrichtigung](/beginners/#e-mail-benachrichtigungen-einrichten), gibt es viele weitere, die bereits out-of-the-box oder durch
 die Installation von Modulen in openITCOCKPIT verfügbar sind. Einige Beispiele dafür
