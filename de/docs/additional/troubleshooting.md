@@ -2,7 +2,7 @@
 
 ## Ich habe einen Host erstellt, finde ihn aber nicht in der Host-liste
 
-Ein neu erstellter Host wird nicht in der Host-liste angezeigt. Neu erstellte Hosts finden Sie in der Host-liste unter
+Ein neu erstellter Host wird nicht in der Hostliste angezeigt. Neu erstellte Hosts finden Sie in der Hostliste unter
 dem Reiter `Nicht überwacht`. Dies bedeutet, dass der Host zwar in openITCOCKPIT existiert, der Monitoring Engine aber
 nicht bekannt ist.
 
@@ -11,32 +11,32 @@ durchführen, damit der Host überwacht wird.
 
 ## sudo_server
 
-- Fehlermeldung:
-
+**Fehlermeldung**
+  
 Englisch:
-
 ```
 Attention! Lost connection to SudoServer. External commands may not work. Please try to reload this page
 ```
 
 Deutsch:
-
 ```
 Achtung! Verbindung zum SudoServer verloren. Externe Befehle funktionieren möglicherweise nicht. Bitte versuche diese Seite neu zu laden.
 ```
 
-- Problem:
 
-sudo_server.service läuft nicht oder die Weboberfläche hat die Verbindung verloren.
 
-- Lösung:
+**Problem**
+
+`sudo_server.service` läuft nicht oder die Weboberfläche hat die Verbindung verloren.
+
+**Lösung**
 
 Laden Sie die Webseite neu.
 
-Ist das Problem immer noch vorhanden, starten Sie den sudo_server
+Ist das Problem immer noch vorhanden, starten Sie den Dienst sudo_server neu.
 
 ```
-systemctl start sudo_server.service
+systemctl restart sudo_server.service
 ```
 
 Sollte das Problem weiterhin bestehen, können Sie sich [mit uns in Verbindung setzen](../support/#ich-brauche-hilfe).
@@ -45,7 +45,7 @@ Sollte das Problem weiterhin bestehen, können Sie sich [mit uns in Verbindung s
 
 ### Interface Informationen (Informationen zur Schnittstelle)
 
-Über die Interface informationen bekommen Sie eine Übersicht Ihres openITCOCKPIT Servers. Hier werden informationen zur
+Über die Interfaceinformationen bekommen Sie eine Übersicht Ihres openITCOCKPIT Servers. Hier werden Informationen zur
 genutzten Version und Edition angezeigt. Darüber hinaus werden hier auch Informationen zur verwendeten Monitoring Engine
 sowie deren Pfade zur Konfiguration, den Backups und dem Command Interface bereitgestellt.
 
@@ -64,8 +64,9 @@ Im SQL Query Log werden alle SQL Queries angezeigt, die in der SQL Datenbank von
 
 ![querylog](/images/debugging-sqlquerylog.png)
 
-!!! tip Damit das logging der SQL Queries gelingt, muss die Option `'log' => true` in der
-Datei `/opt/openitc/frontend/config/datasource.php` gesetzt werden!
+!!! tip
+    Damit das logging der SQL Queries gelingt, muss die Option `'log' => true` in der
+    Datei `/opt/openitc/frontend/config/datasource.php` gesetzt werden!
 
 ### Server Informationen
 
@@ -93,11 +94,16 @@ Siehe [System Health anzeige](../../monitoring/user-interface/#system-health)
 
 ## Wo finde ich welche Logdateien?
 
-### Nagios Log
+### Naemon Log
+
+Die Logdatei der Monitoring Engine Naemon finden Sie unter
 
 ```
 /opt/openitc/nagios/var/nagios.log
 ```
+
+Es wird Empfohlen die Logdatei mit dem Befehl `oitc debug --tailf` zu betrachten, da hierbei die Unix-Timestamps und UUIDs
+ersetzt werden, was die Lesbarkeit der Protokolldatei deutlich erhöht.
 
 ### openITCOCKPIT Web Frontend
 
