@@ -22,6 +22,8 @@ nav:
     - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
   - 'Alerting / Benachrichtigungen':
     - 'Benachrichtigungen': 'alerting/alerting.md'
+    - 'E-Mail Benachrichtigungen': 'beginners/#e-mail-benachrichtigungen-einrichten'
+    - 'Push Benachrichtigungen': 'beginners/#browser-push-benachrichtigungen-einrichten'
     - 'Axios Assyst': 'alerting/axiosassyst.md'
     - 'Mattermost': 'alerting/mattermost.md'
     - 'PagerDuty': 'alerting/pagerduty.md'
