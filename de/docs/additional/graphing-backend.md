@@ -234,7 +234,7 @@ Navigieren Sie nach `Systemkonfiguration -> APIs -> Grafana`
 Konfigurationsschlüssel|Wert|Beschreibung|
 |---|---|---|
 |Grafana URL|xxx.xxx.xxx.xxx| Adresse des externen Grafana Server |
-|Grafana API Schlüssel|Zufalls-generiert|Es muss ein [Grafana API Schlüssel](#grafana-api-schlüssel-erzeugen) mit "Editor" Berechtigungen erzeugt werden|
+|Grafana API Schlüssel|Zufalls-generiert|Es muss ein [Grafana API Schlüssel](#grafana-api-schlussel-erzeugen) mit "Editor" Berechtigungen erzeugt werden|
 |Grafana Prefix|openitcockpit|Präfix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
 |Verbindung über HTTPS herstellen|Ja/Nein|Bestimmt ob HTTPS zu Verbindungsherstellung genutzt werden soll.|
 |Benutze Proxy|Ja/Nein|Bestimmt ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll.|

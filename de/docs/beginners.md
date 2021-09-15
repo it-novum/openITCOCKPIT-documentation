@@ -211,7 +211,7 @@ Das System wird grundlegende Health Metriken wie CPU, Arbeitsspeicher und SWAP s
 ![create services](/images/agent-create-services.png)
 
 Der letzte Schritt erinnert Sie daran die Monitoring-Konfiguration zu aktualisieren. 
-Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
+Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-uberwachungskonfiguration)
 
 ![services create successfully](/images/agent-services-created-successfully.png)
 
@@ -265,7 +265,7 @@ Das System wird grundlegende Health Metriken wie CPU, Arbeitsspeicher und SWAP s
 ![create services push](/images/agent-create-services-push.png)
 
 Der letzte Schritt erinnert Sie daran die Monitoring-Konfiguration zu aktualisieren. 
-Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-überwachungskonfiguration)
+Bitte klicken auf [Aktualisieren der Überwachungskonfiguration](#aktualisieren-der-uberwachungskonfiguration)
 
 ![services created push export](/images/agent-services-created-successfully-push.png)
 

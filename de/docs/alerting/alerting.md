@@ -200,8 +200,8 @@ Host Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Service Abh�
 | Hostgruppen | | Hostgruppen von denen eine Abhängigkeit erstellt werden soll |
 | Abhängige Hostgruppen | | Hostgruppen die eine Abhängigkeit zu den gewählten Hosts / Hostgruppen haben |
 | Zeitraum |  | [Zeitraum](../configuration/timeperiods/) in dem die Abhängigkeit gültig ist |
-| Erbt Elternteil |  | [Vererbung der Abhängigkeit](#abhängigkeitsvererbung) |
-| Ausführungsfehlerkriterien |  | Siehe [Ausführungsfehlerkriterien](#ausführungsfehlerkriterien) |
+| Erbt Elternteil |  | [Vererbung der Abhängigkeit](#abhangigkeitsvererbung) |
+| Ausführungsfehlerkriterien |  | Siehe [Ausführungsfehlerkriterien](#ausfuhrungsfehlerkriterien) |
 | Kriterien für Benachrichtigungsfehler |  | Siehe [Benachrichtigungsfehlerkriterien](#benachrichtigungsfehlerkriterien) |
 
 ### Service Abhängigkeiten
@@ -223,8 +223,8 @@ Service Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Host Abh�
 | Servicegruppen | | Servicegruppen von denen eine Abhängigkeit erstellt werden soll |
 | Abhängige Servicegruppen | | Servicegruppen die eine Abhängigkeit zu den gewählten Services / Servicegruppen haben |
 | Zeitraum |  | [Zeitraum](../configuration/timeperiods/) in dem die Abhängigkeit gültig ist |
-| Erbt Elternteil |  | [Vererbung der Abhängigkeit](#abhängigkeitsvererbung) |
-| Ausführungsfehlerkriterien |  | Siehe [Ausführungsfehlerkriterien](#ausführungsfehlerkriterien) |
+| Erbt Elternteil |  | [Vererbung der Abhängigkeit](#abhangigkeitsvererbung) |
+| Ausführungsfehlerkriterien |  | Siehe [Ausführungsfehlerkriterien](#ausfuhrungsfehlerkriterien) |
 | Kriterien für Benachrichtigungsfehler |  | Siehe [Benachrichtigungsfehlerkriterien](#benachrichtigungsfehlerkriterien) |
 
 
