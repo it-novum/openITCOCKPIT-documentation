@@ -2,18 +2,24 @@ pipeline {
     agent any
 
     stages {
-        when {
-            branch 'master'
-            not {
-                changeRequest()
-            }
-        }
         stage('Build docker image') {
+            when {
+                branch 'master'
+                not {
+                    changeRequest()
+                }
+            }
             steps {
                 sh "docker build . -t openitcockpit/mkdocs"
             }
         }
         stage('Build and deploy') {
+            when {
+                branch 'master'
+                not {
+                    changeRequest()
+                }
+            }
             steps {
                 sh 'docker run --rm -it -v "$PWD":/docs -w /docs/de -p 8000:8000 openitcockpit/mkdocs /usr/bin/mkdocs build'
                 sh 'docker run --rm -it -v "$PWD":/docs -w /docs/en -p 8000:8000 openitcockpit/mkdocs /usr/bin/mkdocs build'
