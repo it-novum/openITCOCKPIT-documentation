@@ -111,7 +111,7 @@ Um das Ganze so einfach wie möglich zu halten, wählen wir als Container "/root
 
 ![create host](/images/openITCOCKPIT-Create-Host.png)
 
-Danach Scrollen Sie an das Ende der Seite, klicken auf: fontawesome-solid-chevron-down: rechts von der Schaltfläche "Erstelle Host" und wählen `Speichern und Service erstellen` aus.
+Danach Scrollen Sie an das Ende der Seite, klicken auf :fontawesome-solid-chevron-down: rechts von der Schaltfläche "Erstelle Host" und wählen `Speichern und Service erstellen` aus.
 
 ![create service](/images/create-host-and-service.png)
 

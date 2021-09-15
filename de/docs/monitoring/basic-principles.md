@@ -19,7 +19,7 @@ Hosts können die folgenden Status annehmen:
 
 | Statuscode | Farbe | Status (English) | Status (Deutsch) |
 |---|---|---|---|
-| 0 | Grün | OK | OK |
+| 0 | Grün | UP | ERREICHBAR |
 | 1 | Rot | DOWN | NICHT VERFÜGBAR |
 | 2 | Grau | UNREACHABLE | NICHT ERREICHBAR |
 
