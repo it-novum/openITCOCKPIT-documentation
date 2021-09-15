@@ -1,3 +1,8 @@
 .idea
 .vscode
 .DS_Store
+
+# Static Website build files
+de/site
+en/site/
+htdocs
