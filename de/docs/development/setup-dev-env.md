@@ -50,7 +50,7 @@ Setzen Sie ein neues Passwort für den root Benutzer mit dem Kommando *passwd*
 passwd
 ```
 
-### Aktivieren des root Benutzers zum einloggen über SSH (optional)
+### Aktivieren des root Benutzers zum Einloggen über SSH (optional)
 
 Öffnen Sie die Datei `/etc/ssh/sshd_config` und ändern Sie die folgende Zeile
 ```
@@ -191,10 +191,10 @@ Als Entwickler möchten Sie die Entwicklungsfeatures von openITCOCKPIT aktiviere
 der Fehlermeldungen im Browser, aktivierung globaler PHP Methoden wie `dd($var)` und `debug($var)` sowie das Laden von
 unkomprimiertem CSS und JavaScript
 
-Stellen Sie sicher dass Sie alle Kommandos als `root` Benutzer ausführen (`sudo su`).
+Stellen Sie sicher, dass Sie alle Kommandos als `root` Benutzer ausführen (`sudo su`).
 
 !!! danger
-    Seien Sie sich im Klaren darüber, dass das Aktivieren des debug Modus Datenlecks und dem verlust von Sensitiven 
+    Seien Sie sich im Klaren darüber, dass das Aktivieren des debug Modus zu Datenlecks und dem verlust von sensitiven 
     Informationen führen kann.
 
 ```bash
@@ -207,7 +207,7 @@ systemctl restart nginx
 
 ## Start Hacking
 ### Dateizugriff über ein Remote System (IDE) (optional)
-Ihre Entwicklungsumgebung (bspw. PHPStorm, Visual Studio Code etc.) wird in der Regel nicht auf dem selben System laufen, 
+Ihre Entwicklungsumgebung (bspw. PHPStorm, Visual Studio Code etc.) wird in der Regel nicht auf demselben System laufen, 
 auf dem auch openITCOCKPIT läuft. 
 
 Es gibt drei gängige wege, um Zugriff auf den Quellcode über ihre IDE zu erlangen: NFS, SMB und SSH
@@ -260,7 +260,7 @@ sudo umount ~/openitcockpit-frontend
 
 #### SMB (Windows, Linux und macOS clients)
 
-Als erstes müssen Sie den SMB daemon auf ihrem openITCOCKPIT Server einrichten.
+Als Erstes müssen Sie den SMB daemon auf ihrem openITCOCKPIT Server einrichten.
 ```bash
 sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
 ```
@@ -319,21 +319,21 @@ sudo systemctl restart smbd
 
 ##### SMB Freigabe auf einem Windows client mounten
 
-1. Öffnen Sie den Windows Explorer und klicken Sie auf "Netzlaufwerk Verbinden"
+1. Öffnen Sie den Windows Explorer und klicken Sie auf "Netzlaufwerk Verbinden".
 
 ![map network drive](/images/map-network-drive.png)
 
 2. Fügen Sie ihre SMB Freigabe als Netzlaufwerk hinzu.
 
-Stellen Sie sicher dass Sie die Option "Anmelden mit anderen Anmeldeinformationen herstellen" ausgewählt haben.
+Stellen Sie sicher, dass Sie die Option "Anmelden mit anderen Anmeldeinformationen herstellen" ausgewählt haben.
 
 ![map network drive path](/images/map-network-drive-path.png)
 
-3. Nutzen Sie den `www-data` Benutzer und das Passwort, welches Sie eben gesetzt hatten
+3. Nutzen Sie den `www-data` Benutzer und das Passwort, welches Sie eben gesetzt hatten.
 
 ![smb credentials](/images/windows-smb-credentials.png)
 
-4. Nun können Sie die Dateien durchsuchen
+4. Nun können Sie die Dateien durchsuchen.
 
 ![browse through files](/images/windows-browse-smb-share.png)
 
@@ -344,16 +344,16 @@ Hilfe: <https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-networ
 
 ##### SMB Freigabe auf einem macOS client mounten
 
-1. Öffnen Sie den "Finder" und drücken Sie `CMD+k`
+1. Öffnen Sie den "Finder" und drücken Sie `CMD+k`.
 
 ![connect to smb](/images/connect-to-smb.png)
 
 
-2. Nutzen Sie den `www-data` Benutzer und das Passwort, welches Sie eben gesetzt hatten
+2. Nutzen Sie den `www-data` Benutzer und das Passwort, welches Sie eben gesetzt hatten.
 
 ![set username and password](/images/username-and-password.png)
 
-3. Nun können Sie die Dateien durchsuchen
+3. Nun können Sie die Dateien durchsuchen.
 
 ![browse smb](/images/browse-smb.png)
 
