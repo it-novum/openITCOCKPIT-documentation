@@ -35,7 +35,7 @@ sollen. Beispiele dafür sind der Zeitraum `24x7` oder die Servicevorlage `Ping`
 
 !!! danger "Wichtig"
     Objekte, welche dem Root-Container zugewiesen wurden, können später nicht mehr in einen anderen Container verschoben
-    werden!
+    werden! Wir empfehlen die nutzung von Mandanten Container.
 
 Benutzer, welche Schreibzugriff auf den Root-Container haben, sind globale Systemadministratoren. Sie können alle
 Objekte einsehen und bearbeiten. Globale Systemadministratoren sind mit einer goldenen Krone gekennzeichnet.
