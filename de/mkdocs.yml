@@ -59,7 +59,12 @@ nav:
   - 'Development':
     - 'API': 'development/api.md'
     - 'Entwicklungsumgebung einrichten': 'development/setup-dev-env.md'
-    - 'Ein neues Modul erstellen': 'development/create-module.md'
+    - 'Ein neues Modul erstellen':
+      - 'Einleitung': 'development/create-new-module/introduction.md'
+      - 'Modul erstellen': 'development/create-new-module/bake-module.md'
+      - 'Hello World': 'development/create-new-module/hello-world.md'
+      - 'Datenbankzugriff': 'development/create-new-module/database.md'
+      - 'Additionalplugin_database': 'development/create-new-module/additionalplugin-database.md'
     - 'Ein neues Check Plugin erstellen': 'development/new-check-plugin.md'
     - 'Bug Report': 'development/bug-report.md'
   - 'Weitere Artikel':

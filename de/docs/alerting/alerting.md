@@ -1,9 +1,9 @@
 # Benachrichtigung / Alerting
 
 openITCOCKPIT bietet eine vielzahl von Benachrichtigungsmethoden an. Neben der gängigsten Methode,
-der [E-Mail Benachrichtigung](/beginners/#e-mail-benachrichtigungen-einrichten), gibt es viele weitere, die bereits out-of-the-box oder durch
+der [E-Mail Benachrichtigung](../../beginners/setup-email-notifications/#e-mail-benachrichtigungen-einrichten), gibt es viele weitere, die bereits out-of-the-box oder durch
 die Installation von Modulen in openITCOCKPIT verfügbar sind. Einige Beispiele dafür
-sind [Browser Push Benachrichtigungen](/beginners/#browser-push-benachrichtigungen-einrichten),
+sind [Browser Push Benachrichtigungen](../../beginners/setup-browser-push-notifications/#browser-push-benachrichtigungen-einrichten),
 [PagerDuty](../pagerduty/#pagerduty-ce), Messaging Dienste wie [Mattermost](../mattermost/#mattermost-ce), [Slack](../slack/#slack-ee) und Ticketsysteme
 wie [AxiosAssyst](../axiosassyst/#axios-assyst-ce)
 oder [ServiceNow](../servicenow/#servicenow-ee).
@@ -158,8 +158,9 @@ normal versendet. Ist eine Abhängigkeit definiert, wird jede Abhängigkeit wie 
 Diese Schleife wird so lange ausgeführt, bis entweder alle Abhängigen Host oder Services die Überprüfung bestanden haben
 oder eine Abhängigkeit fehlschlägt.
 
-!!! info Solange nicht anders konfiguriert, wird Naemon den aktuellsten hard state der abhängigen Hosts oder Services
-für die überprüfung nutzen.
+!!! info 
+   Solange nicht anders konfiguriert, wird Naemon den aktuellsten hard state der abhängigen Hosts oder Services
+   für die überprüfung nutzen.
 
 #### Ausführungsfehlerkriterien
 
