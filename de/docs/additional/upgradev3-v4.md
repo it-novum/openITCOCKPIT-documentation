@@ -1,6 +1,6 @@
 
 
-# Upgrade openITCOCKPIT v3.x zu openITCOCKPIT v4.x
+# Upgrade openITCOCKPIT 3 zu openITCOCKPIT 4
 
 ![oitc upgrade v3 - v4](/images/oitc_autobahn.png)
 

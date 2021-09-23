@@ -41,9 +41,29 @@ Benachrichtigungskommandos sind Kommandos, die von den Kontakten in openITCOCKPI
 Benachrichtigungskommandos sind in openITCOCKPIT in der Regel php Skripte welche entweder im Kern oder in
 installierbaren Modulen enthalten sind.
 
-### Ereignisbehandlerkommando (Eventhandler)
+### Ereignisbehandlerkommando (Event Handler)
 
-– Folgt –
+Event Handler Kommandos definieren optionale System Kommandos (Skripte oder ausführbare Dateien) welche immer dann laufen,
+wenn ein Host oder ein Service seinen Status ändert.
+
+Eine Nutzungsmöglichkeit besteht darin, Nagios Proaktiv Probleme lösen zu lassen, bevor jemand benachrichtigt wird.
+
+Beispiele:
+
+- Neustarten eines fehlgeschlagenen Dienstes
+- Ein "Trouble Ticket" in einem Ticketsystem eröffnen
+- Event informationen in die Datenbank zu loggen
+- etc.
+
+#### Wann werden Event Handler ausgeführt? 
+
+Event Handler werden ausgeführt, wenn ein Host oder Service:
+
+- in einem SOFT Problemstatus ist
+- geht zunächst ein einen HARD Problemstatus
+- Erholt sich anfänglich von einem SOFT- oder HARD-Problemstatus
+
+Weitere Informationen zu Event Handler finden Sie in der [Offiziellen Naemon Dokumentation](https://www.naemon.org/documentation/usersguide/eventhandlers.html).
 
 ### Standardmakros und Benutzerdefinierte Makros
 
@@ -59,7 +79,7 @@ In der Kommandozeile steckt die eigentliche "Magie" der Kommandos. Hier wird der
 Prüf Skript (check script) kann Übergabeparameter wie zum Beispiel Hostadresse, Schwellwerte oder
 Konfigurationsparameter erwarten. Diese werden dann über Variablen, sogenannte [Argumente](#argumente)
 und [Makros](#standardmakros-und-benutzerdefinierte-makros) übergeben. Argumente werden in den optionalen
-Argumente-Feldern (am unteren Ende des Kommando erstellen / bearbeiten Formulars) definiert und können dann als Variable
+Argumente-Feldern (am unteren Ende des "Kommando erstellen" / "Kommando bearbeiten" Formulars) definiert und können dann als Variable
 innerhalb des Kommandozeilenbefehls eingefügt werden.
 
 ![macros and args](/images/commands-commandline-macros-args.png)
