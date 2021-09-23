@@ -111,6 +111,7 @@ theme:
   name: material
   language: de
   logo: images/logo/openitcockpit-light.png
+  favicon: images/favicon/favicon.png
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: blue
