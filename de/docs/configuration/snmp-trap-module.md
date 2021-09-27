@@ -1,27 +1,26 @@
 # SNMP Traps <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
 ## Installation
+
 Zur installation des SNMPTrapModule führen Sie folgendes Kommando aus:
+
 ```bash
 apt install openitcockpit-module-snmptrap
 ```
 
-## Funktionsweise / Debugging
+## Funktionsweise
 
 Die Traps werden vom snmptrapd angenommen und an den snmptthandler übergeben. Dieser legt im Ordner /var/spool/snmptt
-spool Dateien ab welche wiederum vom snmptt Daemon verarbeitet / übersetzt und in der snmptt Datenbank gespeichert 
-werden. Zum Schluss werden die Traps mit dem Plugin check\_snmptraps.pl in der Datenbank geprüft, verarbeitet und 
-gelöscht.
+spool Dateien ab welche wiederum vom snmptt Daemon verarbeitet / übersetzt und in der Datenbank gespeichert werden. Zum
+Schluss werden die Traps mit dem Plugin check_snmptraps.pl in der Datenbank geprüft und verarbeitet. Ein Cronjob befreit
+die Datenbank regelmäßig von altlasten (Löschen von veralteten snmptraps)
 
-In den Logfiles in /var/log/snmptt/, kann eingesehen werden welche Traps verarbeitet werden konnten oder unbekannt sind.
-Zusätzlich kann das debugging deaktiviert werden:
+In der Logdatei `/var/log/snmptt/snmptt.debug`, kann eingesehen werden welche Traps verarbeitet werden konnten oder
+unbekannt sind. Zusätzlich kann das debugging deaktiviert werden.
 
-`vim /etc/snmp/snmptt.ini`
-
-```plaintext
-DEBUGGING = 1
-DEBUGGING_FILE = /var/log/snmptt/snmptt.debug
-```
+Dazu Navigieren Sie
+nach `Systemkonfiguration -> System -> Konfigurationsdatei Editor`
+und wählen die Datei `/opt/openitc/etc/SnmpTrapModule/snmptt.ini` aus. Dort setzen Sie den Wert `debugging` auf `1`.
 
 ## Test
 
