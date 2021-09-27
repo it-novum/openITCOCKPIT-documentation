@@ -7,8 +7,6 @@ dev_addr: 0.0.0.0:8000
 
 nav:
   - 'About openITCOCKPIT': 'index.md'
-  - Frontend:
-    - 'Hosts': 'Frontend/02-hosts.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
