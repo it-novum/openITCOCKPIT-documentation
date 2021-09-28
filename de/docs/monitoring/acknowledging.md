@@ -24,7 +24,7 @@ werden so lange keine Benachrichtigungen versendet, bis der Service wieder einen
 ### Notify
 
 Die Notify Option sendet eine Benachrichtigung an alle Kontakte des Host oder Service mit der Information, dass das
-aktuelle Host oder Service Problem bestätigt wurde.
+aktuelle Host-oder-Service Problem bestätigt wurde.
 
 ## Host Status bestätigen
 

@@ -68,7 +68,7 @@ api-key=ADD_YOUR_API_KEY_HERE
 mode=https_pull
 ```
 
-Um die Änderungen zu übernehmen, muss der NSTA Dienst neugestartet werden.
+Um die Änderungen zu übernehmen, muss der NSTA Dienst neu gestartet werden.
 ```
 systemctl restart nsta
 ```
@@ -99,7 +99,7 @@ endpoint=https://demo.openitcockpit.io
 insecure-https=true
 ```
 
-Um die Änderungen zu übernehmen, muss der NSTA Dienst neugestartet werden.
+Um die Änderungen zu übernehmen, muss der NSTA Dienst neu gestartet werden.
 ```
 systemctl restart nsta
 ```
@@ -167,7 +167,7 @@ Hosts können zu jedem Zeitpunkt vom Mastersystem auf einen Satelliten und zurü
 
 ## State is no longer current
 
-Das openITCOCKPIT Mastersystem fürt in regelmäßigen Abständen einen sogenannten Freshness Check durch. Dabei prüft das System, ob alle
+Das openITCOCKPIT Mastersystem führt in regelmäßigen Abständen einen sogenannten Freshness Check durch. Dabei prüft das System, ob alle
 Satellitensysteme ihre Prüfergebnisse zu den erwarteten Zeitpunkten übermittelt haben.
 
 Der Status "State is no longer current" ist in der Regel auf einen der folgenden Punkte zurückzuführen:

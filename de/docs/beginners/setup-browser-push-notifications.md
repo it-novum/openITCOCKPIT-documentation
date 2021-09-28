@@ -22,7 +22,7 @@ Beispiele:
 
 ### Browser Berechtigungen
 
-Bevor openITCOCKPIT Push-Benachrichtungen an Ihren Webbrowser senden kann, müssen Sie manuell die Berechtigung dafür
+Bevor openITCOCKPIT Push-Benachrichtigungen an Ihren Webbrowser senden kann, müssen Sie manuell die Berechtigung dafür
 erteilen. Dies ist ein Sicherheitsfeature aller Browser, um zu verhindern, dass wahllos irgendwelche Webseiten
 Spamnachrichten senden können. Sie können diese Benachrichtigungen erlauben oder verwehren, wann immer Sie wollen.
 
@@ -30,8 +30,8 @@ In diesem Beispiel zeigen wir den Prozess anhand des Mozilla Firefox.
 
 #### Berechtigung erteilen
 
-Klicken Sie auf das Benachrichtigungssymbol in der Browser Adressleiste und klicken Sie anschließend auf "
-Benachrichtigungen erlauben".
+Klicken Sie auf das Benachrichtigungssymbol in der Browser Adressleiste und klicken Sie anschließend auf 
+"Benachrichtigungen erlauben".
 
 ![browser ask for permissions](/images/browser_ask_for_notification_permissions.png)
 
@@ -94,7 +94,7 @@ Erfolgreich verbunden:
 Läuft der `push_notification` Dienst nicht, wird auf der Fehlerbeseitigungs-Seite und in der Systemzustandsanzeige eine
 Warnung erscheinen.
 
-![debug push notificcations](/images/debug-processes-push-notifications.jpg)
+![debug push notifications](/images/debug-processes-push-notifications.jpg)
 
 - Manche Anwendungen unterdrücken Browser Benachrichtigungen. Beispielsweise unter Microsoft Windows 7 in Kombination
   mit dem `Snipping Tool`. Ein Neuladen der openITCOCKPIT Webseite behebt das Problem

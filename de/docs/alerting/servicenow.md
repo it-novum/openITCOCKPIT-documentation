@@ -22,8 +22,8 @@ Die Angabe folgender Parameter ist nötig:
 - Active: (true)
 - Passwort
 
-Der Benutzer sollte **keinen Nachnamen** haben und die User ID sowie der Vorname sollten keine Leerzeichen (
-Sonderzeichen) enthalten!
+Der Benutzer sollte **keinen Nachnamen** haben und die User ID sowie der Vorname sollten keine Leerzeichen 
+(Sonderzeichen) enthalten!
 
 Nachdem der Benutzer gespeichert wurde, muss dieser erneut editiert werden.
 
@@ -166,8 +166,8 @@ Der 'Caller' und 'Updated by' Wert entspricht dem Namen des angelegten Benutzers
 
 ![](/images/servicenow-businessrule.png)
 
-Im Tab '**Advanced**' muss folgender Quellcode in das 'Script' Feld eingefügt werden (es wird an dieser Stelle keine '
-Condition' benötigt):
+Im Tab '**Advanced**' muss folgender Quellcode in das 'Script' Feld eingefügt werden (es wird an dieser Stelle keine 
+'Condition' benötigt):
 
 Der Wert der Variable 'openITCOCKPIT\_url' muss der extern erreichbaren eigenen openITCOCKPIT URL entsprechen.
 
@@ -246,8 +246,8 @@ genutzt wird. (Wird mit LetsEncrypt automatisch erstellt)
 Um in ServiceNow den Debug Output des Business Rule Aufrufs zu erhalten, Beispielsweise beim Ändern von Incidents, muss
 im Menü zu 'System Diagnostics' → 'Debug Business Rule' navigiert werden.
 
-Zum Aktivieren des Debug Modus muss auf den Link 'available here' und im sich darauf hin öffnenden Tab auf den Button '
-Update' geklickt werden.
+Zum Aktivieren des Debug Modus muss auf den Link 'available here' und im sich darauf hin öffnenden Tab auf den Button 
+'Update' geklickt werden.
 
 ![](/images/servicenow-debugbusinessrule.png)
 
@@ -259,7 +259,7 @@ Die Debug Ausgabe sollte nun am Ende der Seite erscheinen.
 
 ## Benutzung
 
-Um Hosts / Services an ServiceNow anzubinden, muss dem jeweiligen 'Contact' der Hostcommand'host-notify-by-servicenow'
+Um Hosts / Services an ServiceNow anzubinden, muss dem jeweiligen 'Contact' der Hostcommand 'host-notify-by-servicenow'
 und der Servicecommand 'service-notify-by-servicenow' hinzugefügt werden.
 
 Alles Hosts / Services mit diesem Kontakt werden bei einer neuen Benachrichtigung als Incident an ServiceNow angebunden.
@@ -267,7 +267,7 @@ Alles Hosts / Services mit diesem Kontakt werden bei einer neuen Benachrichtigun
 Beim Update des Incidents durch einen beliebigen Benutzer, der nicht openITCOCKPIT ist, wird ein Acknowledgement für den
 Host / Service erstellt, solange dieser noch nicht wieder im Up / Ok State ist.
 
-Hierbei wird in der Acknowledgementnachricht die ServiceNow Incident Nummer (mit Verlinkung) angezeigt.
+Hierbei wird in der Acknowledgement Nachricht die ServiceNow Incident Nummer (mit Verlinkung) angezeigt.
 
 Schematische Darstellung möglicher Interaktionen mit ServiceNow:
 

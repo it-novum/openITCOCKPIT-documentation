@@ -91,7 +91,7 @@ Um fortzufahren klicken Sie auf `Erstelle Service`.
 Wiederholen Sie diesen Schritt für alle Services die Sie benötigen.
 
 Damit die neuen Änderungen wirksam werden, müssen Sie
-eine [Aktualisierung der Monitoring Konfiguration durchführen](../create-first-host/#aktualisieren-der-uberwachungskonfiguration)
+eine [Aktualisierung der Monitoring-Konfiguration durchführen](../create-first-host/#aktualisieren-der-uberwachungskonfiguration)
 
 Die neuen Services werden nun vom System überwacht.
 

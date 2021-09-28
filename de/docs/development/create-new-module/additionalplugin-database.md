@@ -32,7 +32,7 @@ return [
 ```
 
 ### Definieren der Table::bindCoreAssociations Methode
-Nun müssen Sie die `bindCoreAssociations()` Methode in ihrer Plugin table Klasse erstellen.
+Nun müssen Sie die `bindCoreAssociations()` Methode in ihrer Plugin-table Klasse erstellen.
 
 Innerhalb dieser Methode können Sie Tabellen associations definieren, die normalerweise in der core `HostsTable` Klasse
 definiert worden wären.

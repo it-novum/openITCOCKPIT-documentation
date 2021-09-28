@@ -54,7 +54,7 @@ Die Datei `docker-compose.yml` ist in folgendem Ordner zu finden:
 
 ### Carbon-C-Relay
 
-Das Carbon-C-Relay ist ein Load-Balancer für mehrere Carbon-Cache instanzen.
+Das Carbon-C-Relay ist ein Load-Balancer für mehrere Carbon-Cache-Instanzen.
 
 Der Standard `LINE_RECEIVER_PORT` (Plaintext Protokoll basierend auf TCP) ist `2003` und wird auf `127.0.0.1:2003` 
 geöffnet.
@@ -66,7 +66,7 @@ Die Konfigurationsdatei wird automatisch unter `/opt/openitc/etc/carbon/carbon-c
 
 ### Carbon-Cache Instanzen
 
-Die Carbon-Cache Instanzen schreiben und lesen daten aus den Whisper Dateien.
+Die Carbon-Cache-Instanzen schreiben und lesen daten aus den Whisper Dateien.
 
 Der Standard Whisper Pfad auf dem openITCOCKPIT server ist `/var/lib/graphite/whisper`. 
 
@@ -238,7 +238,7 @@ Konfigurationsschlüssel|Wert|Beschreibung|
 |Grafana Prefix|openitcockpit|Präfix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
 |Verbindung über HTTPS herstellen|Ja/Nein|Bestimmt ob HTTPS zu Verbindungsherstellung genutzt werden soll.|
 |Benutze Proxy|Ja/Nein|Bestimmt ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll.|
-|SSL-Zertifikat ignorieren|Ja/Nein|Selbstsignierten Zertifikaten wird vertraut|
+|SSL-Zertifikat ignorieren|Ja/Nein|Selbst signierten Zertifikaten wird vertraut|
 |Dashboard Stil|hell|Hell oder Dunkler Stil von Grafana nutzen|
 |Hostgruppe|*leer*|Ist dieser Wert gesetzt, werden Grafana-Dashboards für alle Hosts der angegebenen Hostgruppe(n) generiert (Wenn leer wird für alle Hosts ein Dashboard generiert)|
 |Hostgruppen (ausgeschlossen)|*leer*|Wenn gesetzt werden **keine** Grafana-Dashboards für die Hosts in den angegebenen Hostgruppen erstellt|
@@ -300,7 +300,7 @@ Mit dem Parameter `--limit 1` wird nur eine einzelne Datei verarbeitet. Sie soll
 ![convert test](/images/converttest.JPG)
 
 In diesem Beispiel wurde der Service mit der UUID `b123beaf-0575-4ec4-b353-328df2fba0e3` migriert. Im nächsten Schritt 
-öffnen Sie die openITCOCKPIT Weboberfläche und sichen nach dieser UUID. Stellen Sie sicher, dass der Graph die migrierten
+öffnen Sie die openITCOCKPIT Weboberfläche und suchen nach dieser UUID. Stellen Sie sicher, dass der Graph die migrierten
 Performance-daten beinhaltet.
 
 #### Migration durchführen
@@ -326,7 +326,7 @@ sudo /usr/local/bin/rrd2whisper -help
 
 ### Fehlerfall 
 
-Im falle, dass die Migration fehlgeschlagen oder andere unerwartete Fehler erscheinen, können Sie die Migration erneut
+Für den Fall, dass die Migration fehlgeschlagen oder andere unerwartete Fehler erscheinen, können Sie die Migration erneut
 starten. Jede erfolgreich verarbeitete `.rrd` Datei wird mit `.ok` markiert, somit werden keine einträge doppelt migriert.
 
 ```bash

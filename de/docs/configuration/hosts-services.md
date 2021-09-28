@@ -28,7 +28,7 @@ Um eine Hostvorlage zu erstellen, klicken Sie in der Hostvorlagen Übersicht auf
 | Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
 | Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht |
 | Benachrichtigungskonfiguration |
-| Benachrichtigungszeitraum | :fontawesome-solid-times: | Besteimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
+| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
 | Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
 | Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
 | Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
@@ -43,27 +43,41 @@ Um eine Hostvorlage zu erstellen, klicken Sie in der Hostvorlagen Übersicht auf
 
 #### Vorlagentypen
 
-Es gibt in openITCOCKPIT mehrere Hostvorlagen typen. Diese unterscheiden eine Vorlage, ob sie entweder für einen generischen Host oder zum Beispiel für einen Ereigniskorrelations-Host sind.
+Es gibt in openITCOCKPIT mehrere Hostvorlagen typen. Diese unterscheiden eine Vorlage, ob sie entweder für einen 
+generischen Host oder zum Beispiel für einen Ereigniskorrelations-Host sind.
 
 Ein normaler Host wird i.d.R. immer als generischer Host angelegt.
 
-Ein Prüfzeitraum ist ebenfalls eine Pflichtangabe ebenso wie ein Prüfungskommando. Ein Standardprüfungskommando für einen Host ist beispielsweise "check-host-alive". Für dieses Kommando können hier auch direkt Argumente übergeben werden.
+Ein Prüfzeitraum ist ebenfalls eine Pflichtangabe ebenso wie ein Prüfungskommando. Ein Standardprüfungskommando für 
+einen Host ist beispielsweise "check-host-alive". Für dieses Kommando können hier auch direkt Argumente übergeben 
+werden.
 
 anschließend werden verschiedene Prüfungsintervalle gesetzt.
 
 #### Intervalle
 
-Damit Benachrichtigung zu einem Host status gesendet werden können, wird in der Hostkonfiguration mit einem Prüfungs-und-Wiederholungsintervall sowie einer maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Stunden, ein Wiederholungsintervall von 1 Minute und eine maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 1 Stunden und 2 Minuten eine Benachrichtigung gesendet wird.
+Damit Benachrichtigung zu einem Host status gesendet werden können, wird in der Host-Konfiguration mit einem 
+Prüfungs-und-Wiederholungsintervall sowie einer maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen 
+beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein 
+Prüfungsintervall von 1 Stunden, ein Wiederholungsintervall von 1 Minute und eine maximale Anzahl von Prüfversuchen von 
+3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 1 Stunden und 2 Minuten eine Benachrichtigung 
+gesendet wird.
 
-Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden sowie mindestens ein Kontakt oder mindestens eine Kontaktgruppe.
+Ebenso wie bei dem Prüfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden sowie mindestens ein 
+Kontakt oder mindestens eine Kontaktgruppe.
 
 #### Flap detection
 
-Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
+Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann 
+verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. 
+Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung
+versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine 
+"flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
 
 #### Prometheus Exporters
 
-Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwachen-eines-hosts-mit-prometheus-in-openitcockpit), wählen Sie hier Ihren Prometheus Exporter aus.
+Zur [Überwachung des Hosts mit Prometheus](../../monitoring/prometheus/#uberwachen-eines-hosts-mit-prometheus-in-openitcockpit), 
+wählen Sie hier Ihren Prometheus Exporter aus.
 
 ## Servicevorlagen
 
@@ -94,7 +108,7 @@ Um eine Servicevorlage zu erstellen, klicken Sie in der Servicevorlagen Übersic
 | Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
 | Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Service in einen Hard State über geht |
 | Benachrichtigungskonfiguration |
-| Benachrichtigungszeitraum | :fontawesome-solid-times: | Besteimmt den Zeitraum in dem für einen Service Benachrichtigungen versendet werden. |
+| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den Zeitraum in dem für einen Service Benachrichtigungen versendet werden. |
 | Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Service versendet werden |
 | Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Service erhalten |
 | Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Service erhalten |
@@ -110,7 +124,8 @@ Um eine Servicevorlage zu erstellen, klicken Sie in der Servicevorlagen Übersic
 
 #### Vorlagentypen
 
-Es gibt in openITCOCKPIT mehrere Servicevorlagen typen. Diese unterscheiden eine Vorlage, ob sie entweder für einen generischen Service, Ereigniskorrelationen, Checkmk, Prometheus oder den openITCOCKPIT Agenten sind.
+Es gibt in openITCOCKPIT mehrere Servicevorlagen typen. Diese unterscheiden eine Vorlage, ob sie entweder für einen 
+generischen Service, Ereigniskorrelationen, Checkmk, Prometheus oder den openITCOCKPIT Agenten sind.
 
 Services, welche über ein Modul oder den Agenten erzeugt werden, sind immer von dem entsprechendem Vorlagentyp.
 
@@ -140,15 +155,24 @@ anschließend werden verschiedene Prüfungsintervalle gesetzt.
 
 #### Intervalle
 
-Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem Prüfung-und-Wiederholungsintervall sowie einer maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird.
+Damit Benachrichtigung zu einem Service status gesendet werden können, wird in der Servicekonfiguration mit einem 
+Prüfung-und-Wiederholungsintervall sowie einer maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen 
+beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist als Standardwert ein 
+Prüfungsintervall von 1 Minute, ein Wiederholungsintervall von 1 Minute und eine maximale Anzahl von Prüfversuchen von 3
+angegeben. Dies kann im schlimmsten fall dazu führen, dass nach 3 Minuten eine Benachrichtigung gesendet wird.
 
-Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden. Im gegensatz zu den Hostvorlagen muss hier kein Kontakt oder Kontaktgruppe hinterlegt werden.
+Ebenso wie bei dem Püfungszeitraum muss auch ein Benachrichtigungszeitraum angegeben werden. Im gegensatz zu den 
+Hostvorlagen muss hier kein Kontakt oder Kontaktgruppe hinterlegt werden.
 
 ## Servicevorlagengruppen
 
-Servicevorlagengruppen sind Sammlungen von Servicevorlagen, die entweder selbst erstellt werden können oder aber über installierbare Module verfügbar sind. Über Module verfügbare Servicevorlagengruppen sind zum jeweiligen Themengebiet passend zusammengefasste Servicevorlagen.
+Servicevorlagengruppen sind Sammlungen von Servicevorlagen, die entweder selbst erstellt werden können oder aber über 
+installierbare Module verfügbar sind. Über Module verfügbare Servicevorlagengruppen sind zum jeweiligen Themengebiet 
+passend zusammengefasste Servicevorlagen.
 
-Servicevorlagengruppen können zu einem Host oder einer Hostgruppe zugewiesen werden. Das bedeutet, dass für alle Servicevorlagen einer Servicevorlagengruppe die entsprechenden Services auf dem zugewiesenen Host oder Hostgruppe erstellt wird.
+Servicevorlagengruppen können zu einem Host oder einer Hostgruppe zugewiesen werden. Das bedeutet, dass für alle 
+Servicevorlagen einer Servicevorlagengruppe die entsprechenden Services auf dem zugewiesenen Host oder Hostgruppe 
+rstellt wird.
 
 ### Servicevorlagengruppe erstellen
 
@@ -167,21 +191,28 @@ Es gibt in openITCOCKPIT drei verschiedene Möglichkeiten Servicevorlagengruppen
 
 #### Zuweisen zu Host
 
-Hier wird die aktuelle Servicevorlagengruppe zu einem einzelnen Host zugewiesen. Beim Auswählen des Hosts werden alle zu erstellenden Services aufgelistet und können auch über die Auswahlbox abgewählt werden.
+Hier wird die aktuelle Servicevorlagengruppe zu einem einzelnen Host zugewiesen. Beim Auswählen des Hosts werden alle zu
+erstellenden Services aufgelistet und können auch über die Auswahlbox abgewählt werden.
 
-Sollte ein Service dieser Servicevorlagengruppe bereits auf dem Zielhost existieren, so wird dieser standardmäßig nicht zusätzlich erstellt, es sei denn man markiert diesen wieder in der Liste.
+Sollte ein Service dieser Servicevorlagengruppe bereits auf dem Zielhost existieren, so wird dieser standardmäßig nicht 
+zusätzlich erstellt, es sei denn man markiert diesen wieder in der Liste.
 
 ![](/images/servicetemplategroups-allocatetohost.png)
 
 #### Einer Hostgruppe zuweisen
 
-Hier wird die aktuelle Servicevorlage zu den Hosts einer Hostgruppe zugewiesen. Beim Auswählen der Hostgruppe werden alle zugehörigen Hosts sowie die zu erstellenden Services für jeden einzelnen Host aufgelistet. Es besteht ebenso die möglichkeit einzelnen Services abzuwählen.
+Hier wird die aktuelle Servicevorlage zu den Hosts einer Hostgruppe zugewiesen. Beim Auswählen der Hostgruppe werden 
+alle zugehörigen Hosts sowie die zu erstellenden Services für jeden einzelnen Host aufgelistet. Es besteht ebenso die 
+möglichkeit einzelnen Services abzuwählen.
 
-Sollte ein Service dieser Servicevorlagengruppe bereits auf einem der Hosts existieren, so wird dieser standardmäßig nicht zusätzlich erstellt, es sei denn man markiert diesen wieder in der Liste.
+Sollte ein Service dieser Servicevorlagengruppe bereits auf einem der Hosts existieren, so wird dieser standardmäßig
+nicht zusätzlich erstellt, es sei denn man markiert diesen wieder in der Liste.
 
 #### Zuordnen zur passenden Hostgruppe
 
-"Zuordnen zur passenden Hostgruppe" erstellt Services auf den Hosts einer Hostgruppe die denselben Namen trägt. Der Name der Hostgruppe muss gleich der Name der Servicevorlagengruppe sein. Hier hat man nicht mehr die Möglichkeit die Services an und abzuwählen wie bei den anderen zwei Methoden.
+"Zuordnen zur passenden Hostgruppe" erstellt Services auf den Hosts einer Hostgruppe die denselben Namen trägt. Der 
+Name der Hostgruppe muss gleich der Name der Servicevorlagengruppe sein. Hier hat man nicht mehr die Möglichkeit die 
+Services an und abzuwählen wie bei den anderen zwei Methoden.
 
 
 ## Hosts
@@ -189,8 +220,8 @@ Sollte ein Service dieser Servicevorlagengruppe bereits auf einem der Hosts exis
 ### Host erstellen
 
 Um einen Host zu erstellen, klicken Sie in der Hostübersicht zunächst auf die Schaltfläche "Neu". Im Sich öffnenden
-Formular wählen Sie zunächst einen Container und eine Hostvorlage, von dem der neue Host abgeleitet werden soll, aus. Danach erscheinen alle weiteren Felder, die für 
-den Host relevant sind. 
+Formular wählen Sie zunächst einen Container und eine Hostvorlage, von dem der neue Host abgeleitet werden soll, aus. 
+Danach erscheinen alle weiteren Felder, die für den Host relevant sind. 
 
 !!! danger
     Bitte beachten Sie, dass ein nachträgliches Ändern des Containers für einen Host **nicht möglich** ist!
@@ -245,16 +276,27 @@ openITCOCKPIT Agent, Checkmk oder den Klassischen weg des Manuellen erstellens e
 
 #### Geteilte Container
 
-Über die geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben. Diese Option steht zudem auch in der Hostübersicht unter der Host bearbeitungsoption "Teilen" zur verfügung.
+Über die geteilten Container ist es möglich Hosts in anderen Containern "sichtbar" zu machen. Dies ist nützlich um 
+Benutzern welche keine Berechtigung auf den ursprünglichen Container des Hosts haben, trotzdem zugang zum Host zu geben.
+Diese Option steht zudem auch in der Host-Übersicht unter der Host bearbeitungsoption "Teilen" zur verfügung.
 
 #### Intervalle
 
-Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Hostkonfiguration mit einem Prüfung-und-Wiederholungsintervall sowie einer maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine maximale Anzahl von Prüfversuchen von 3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung gesendet wird.
+Damit eine Benachrichtigung zu einem Host status gesendet werden kann, wird in der Host-Konfiguration mit einem 
+Prüfung-und-Wiederholungsintervall sowie einer maximalen Anzahl an Prüfversuchen gearbeitet. Diese Einstellungen 
+beeinflussen die Zeit, wann eine Benachrichtigung gesendet wird. Beispielsweise ist bei der default host vorlage ein 
+Prüfungsintervall von 2 Stunden, ein Wiederholungsintervall von 1 Minute und eine maximale Anzahl von Prüfversuchen von 
+3 angegeben. Dies kann im schlimmsten fall dazu führen, dass erst nach 2 Stunden und 2 Minuten eine Benachrichtigung 
+gesendet wird.
 
 
 #### Flap detection
 
-Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
+Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann 
+verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist 
+diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung 
+versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine 
+"flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
 
 
 #### Prometheus Exporters
@@ -323,10 +365,10 @@ Die Benachrichtigungen für einen Service verhalten sich genau wie die Benachric
 Flapping ("flattern") tritt auf, wenn sich ein Host oder Service status in kurzer Zeit oft ändert. Dies kann verschiedene Gründe haben wie Beispielsweise Netzwerkprobleme, problematische Services oder Konfigurationsprobleme. Ist diese Option aktiviert, so wird, wenn ein Flapping des Status erkannt wurde, eine "flapping start" Benachrichtigung versendet und weitere Benachrichtigungen unterdrückt. Ist kein Flapping des Status mehr vorhanden, wird eine "flapping stop" Benachrichtigung versendet und weitere Benachrichtigungen zu dem Host werden wieder normal versendet.
 
 ## Host oder Service Feld auf Standardwert zurücksetzen
-Hosts und Services erben Ihre werte immer von einer Host oder Servicevorlage. All diese Werte können im Host oder 
+Hosts und Services erben Ihre werte immer von einer Host-oder-Servicevorlage. All diese Werte können im Host oder 
 Service Formular überschrieben werden.
 
-Von der Host oder Servicevorlage geerbte werte werden mit einer grünen Schaltfläche hinter dem Eingabefeld dargestellt.
+Von der Host-oder-Servicevorlage geerbte werte werden mit einer grünen Schaltfläche hinter dem Eingabefeld dargestellt.
 In diesem Fall stimmen die werte mit dem der Vorlage überein. 
 
 Ist der ein vererbter Wert überschrieben worden, wird die Schaltfläche rot dargestellt. Eine wiederherstellung mit dem
@@ -338,39 +380,44 @@ Wert der Vorlage ist möglich, indem Sie auf die rote Schaltfläche (1) hinter d
 
 ### Host-Standardeinstellungen
 
-Host Standardeinstellungen definieren beispielsweise welcher Container und Dienste den Importierten Hosts zugewiesen werden sollen. Dies ist abhängig von der Import Quelle.
+Host Standardeinstellungen definieren beispielsweise welcher Container und Dienste den importierten Hosts zugewiesen werden sollen. Dies ist abhängig von der Import-Quelle.
 
 ![](/images/importmodule-hostdefaults.png)
 
-Zunächst muss ein Container ausgewählt werden, in den die Daten Importiert werden sollen und vergeben einen Namen für die Standardeinstellung.
+Zunächst muss ein Container ausgewählt werden, in den die Daten importiert werden sollen und vergeben einen Namen für die Standardeinstellung.
 
-Anschließend setzen Sie die Einstellungen, die den Importierten Hosts automatisch zugewiesen werden sollen.
+Anschließend setzen Sie die Einstellungen, die den importierten Hosts automatisch zugewiesen werden sollen.
 
-Dies betrifft die Hostvorlage, Geteilte Container und ob die Hosts auf dem Mastersystem oder auf einem Satelliten erstellt werden sollen.
+Dies betrifft die Hostvorlage, geteilte Container und ob die Hosts auf dem Mastersystem oder auf einem Satelliten erstellt werden sollen.
 
 Zusätzlich haben Sie die Möglichkeit Servicevorlagengruppen-Übereinstimmungen zu tätigen.
 
 Dazu wählen Sie zuerst das Feld zu Übereinstimmung aus. Dort können Sie zwischen Host Name, Beschreibung, Adresse und Software auswählen.
 
-Danach geben Sie den Regulären Ausdruck an, der mit dem Zuvor ausgewählten Feld übereinstimmen muss.
+Danach geben Sie den regulären Ausdruck an, der mit dem Zuvor ausgewählten Feld übereinstimmen muss.
 
 Anschließend geben Sie die gewünschte Servicevorlagengruppe an.
 
 ### Importer
 
-Ein Importer stellt die Grundlage für das Importieren von Hosts. Hier wird die Datenquelle sowie die Konfiguration der Datenquellenzuordnung definiert. Die Voraussetzung für einen Importer sind Host-Standardeinstellungen. Diese müssen vor dem Erstellen des Importers erstellt werden.
+Ein Importer stellt die Grundlage für das Importieren von Hosts. Hier wird die Datenquelle sowie die Konfiguration der 
+Datenquellenzuordnung definiert. Die Voraussetzung für einen Importer sind Host-Standardeinstellungen. Diese müssen vor 
+dem Erstellen des Importers erstellt werden.
 
 Als Datenquelle folgende zur verfügung:
 
 ###### CSV mit Header
 
-Hier hat die CSV Datei, die man Importieren möchte einen Header. Das bedeutet, dass die Spalten in der Tabelle mit Überschriften gekennzeichnet ist. Pflichtvoraussetzung für den Import ist hier ein Trennzeichen, Eindeutige Kennung, Hostname und Host Adresse.
+Hier hat die CSV Datei, die man Importieren möchte einen Header. Das bedeutet, dass die Spalten in der Tabelle mit 
+Überschriften gekennzeichnet ist. Pflichtvoraussetzung für den Import ist hier ein Trennzeichen, eindeutige Kennung, 
+Hostname und Host Adresse.
 
 ![](/images/importmopdule-csvwithheader.png)
 
 ###### CSV ohne Header
 
-Der Unterschied zwischen einer CSV mit Header und einer ohne Header besteht darin, dass die Spalten bei einer CSV ohne Header nicht mit überschriften versehen sind. Hier muss also mit der Nummerierung der Spalten gearbeitet werden.
+Der Unterschied zwischen einer CSV mit Header und einer ohne Header besteht darin, dass die Spalten bei einer CSV ohne 
+Header nicht mit überschriften versehen sind. Hier muss also mit der Nummerierung der Spalten gearbeitet werden.
 
 ![](/images/importmodule-csvwithoutheader.png)
 
@@ -378,7 +425,8 @@ A = 0, B = 1, C = 2, D = 3
 
 ##### Zuweisung von Host-Standardeinstellungen
 
-Die Host-Standardeinstellungen müssen bei der Erstellung des Importers gesetzt werden. Dies Sorgt dafür, dass den Importierten Hosts Standardeinstellungen zugewiesen werden.
+Die Host-Standardeinstellungen müssen bei der Erstellung des Importers gesetzt werden. Dies Sorgt dafür, dass den 
+importierten Hosts Standardeinstellungen zugewiesen werden.
 
 ![](/images/importmodule-editimporter.png)
 
@@ -386,9 +434,17 @@ Die Host-Standardeinstellungen müssen bei der Erstellung des Importers gesetzt 
 
 ![](/images/importmodule-importhostoverview.png)
 
-In der Liste werden alle neuen oder bereits in das Monitoring aufgenommenen Host angezeigt. Alle bevorstehende Änderungen für Services, falls welche vorhanden sind, werden entsprechend angezeigt. Die Vollständigkeit der Eintragen werden mit verschiedenen Wettersymbolen angezeigt. Die Daten können über das Editieren des zu importierenden Hosts können jederzeit ergänzt werden. Falls bestimmt Host nicht in das Monitoring aufgenommen werden sollen, können manuell gelöscht werden. Beim der Synchronisierung mit dem Monitoring werden alle Host, die alle benötigen Felder besitzen, inclusive dazu gehörigen Services in die Konfigurationstabelleaufgenommen. Nun muss nur noch exportiert werden und alle Konfigurationsobjekte werden überwacht.
+In der Liste werden alle neuen oder bereits in das Monitoring aufgenommenen Host angezeigt. 
+Alle bevorstehende Änderungen für Services, falls welche vorhanden sind, werden entsprechend angezeigt. 
+Die Vollständigkeit der Einträge werden mit verschiedenen Wettersymbolen angezeigt. 
+Die Daten können über das Editieren des zu importierenden Hosts können jederzeit ergänzt werden. 
+Falls bestimmt Host nicht in das Monitoring aufgenommen werden sollen, können manuell gelöscht werden. 
+Bei der Synchronisierung mit dem Monitoring werden alle Host, die alle benötigen Felder besitzen, inklusive 
+dazugehörigen Services in die Konfigurationstabelle aufgenommen. Nun muss nur noch exportiert werden und alle
+Konfigurationsobjekte werden überwacht.
 
-Im oberen Bereich unter dem Punkt "Import Starten" werden alle auf dem System verfügbaren Importer aufgelistet. Nach dem Klicken auf einen dieser Importers öffnet sich das passende Modal. Im unteren Beispiel ist das ein CSV Importer.
+Im oberen Bereich unter dem Punkt "Import Starten" werden alle auf dem System verfügbaren Importer aufgelistet. Nach dem
+Klicken auf einen dieser Importers öffnet sich das passende Modal. Im unteren Beispiel ist das ein CSV Importer.
 
 ![](/images/importmodule-uploadcsv.png)
 
@@ -403,9 +459,11 @@ Dort wählen Sie einen Container aus und vergeben einen Namen für die Hostgrupp
 
 Um Hosts einer Hostgruppe hinzuzufügen, haben Sie in diesem Formular zwei möglichkeiten.
 
-Die erste ist das gezielte hinzufügen von einzelnen Hosts. Dazu wählen Sie die entsprechenden Hosts aus der Liste "Hosts" aus.
+Die erste ist das gezielte hinzufügen von einzelnen Hosts. Dazu wählen Sie die entsprechenden Hosts aus der Liste 
+"Hosts" aus.
 
-Die zweite möglichkeit besteht darin, Hosts über ihr Hostvorlage hinzuzufügen. Dabei werden alle Hosts die von den gewählten Hostvorlagen abgeleitet sind automatisch in die Hostgruppe hinzugefügt.
+Die zweite möglichkeit besteht darin, Hosts über ihr Hostvorlage hinzuzufügen. Dabei werden alle Hosts die von den 
+gewählten Hostvorlagen abgeleitet sind automatisch in die Hostgruppe hinzugefügt.
 
 Danach Speichert man und die Hostgruppe ist fertig erstellt.
 
@@ -420,7 +478,7 @@ Danach Speichert man und die Hostgruppe ist fertig erstellt.
 
 ### Erweiterte Ansicht
 
-Um zur erweiterten Ansicht einer Hostgruppe zu kommen, klicken Sie in der Hostübersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die "Erweiterte Ansicht".
+Um zur erweiterten Ansicht einer Hostgruppe zu kommen, klicken Sie in der Host-Übersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die "Erweiterte Ansicht".
 
 Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält.
 
@@ -456,17 +514,21 @@ Danach Speichert man und die Servicegruppe ist fertig erstellt.
 
 ### Erweiterte Ansicht
 
-Um zur erweiterten Ansicht einer Servicegruppe zu kommen, klicken Sie in der Serviceübersicht auf den Pfeil nach unten neben dem Zahnradsymbol. Dort wählen Sie die "Erweiterte Ansicht".
+Um zur erweiterten Ansicht einer Servicegruppe zu kommen, klicken Sie in der Serviceübersicht auf den Pfeil nach unten 
+neben dem Zahnradsymbol. Dort wählen Sie die "Erweiterte Ansicht".
 
 Danach erscheint eine Übersichtsseite, die alle Hosts der gewählten Hostgruppe enthält.
 
-Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispiel die Prüfzeit zurückzusetzen, geplante Wartungszeiten zu erstellen, Servicestatus zu bestätigen oder Benachrichtigungen zu aktivieren / deaktivieren.
+Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispiel die Prüfzeit zurückzusetzen, geplante
+Wartungszeiten zu erstellen, Servicestatus zu bestätigen oder Benachrichtigungen zu aktivieren / deaktivieren.
 
 
 ## Parent-Child Beziehungen
 
-Die Monitoring Engine ist in der Lage zu bestimmen, ob ein Host in einem NICHT VERFÜGBAR (DOWN) oder NICHT ERREICHBAR (UNREACHABLE) Status ist.
-Diese Status sind sehr verschieden und können dabei helfen, einer schnellen bestimmung des (Netzwerk-)Problems beizutragen.
+Die Monitoring Engine ist in der Lage zu bestimmen, ob ein Host in einem NICHT VERFÜGBAR (DOWN) oder NICHT ERREICHBAR 
+(UNREACHABLE) Status ist.
+Diese Status sind sehr verschieden und können dabei helfen, einer schnellen bestimmung des (Netzwerk-)Problems 
+beizutragen.
 
 ### Parent-Child Beziehungen definieren
 

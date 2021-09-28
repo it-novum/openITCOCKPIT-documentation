@@ -72,7 +72,7 @@ zu finden.
 | DISABLE_LOGIN_ANIMATION | Animationen auf der Login Seite werden Deaktiviert. Dies kann sehr nützlich bei Fernzugriffen  sein |
 | REPLACE_USER_MACROS | Wenn diese Option aktiviert ist, werden die Benutzerdefinierten Makros `$USERn$` in der Kommandozeile der Host und Service status Übersichten übersetzt |
 | ENABLE_IFRAME_IN_DASHBOARDS | Wenn aktiviert ist das Webseiten Widget im Dashboard verfügbar. Mit diesem können drittanbieter webseiten eingebunden werden |
-| SSO.AUTH_PROVIDER | Hier kann ausgewählt werden, welcher Authentifizierungs Provider vom System genutzt werden soll |
+| SSO.AUTH_PROVIDER | Hier kann ausgewählt werden, welcher Authentifizierungs-Provider vom System genutzt werden soll |
 | SSO.FORCE_USER_TO_LOGINPAGE | Automatische weiterleitung auf die Login Seite des oAuth Servers, wenn der Benutzer nicht eingeloggt ist |
 | REPLACE_PASSWORD_IN_OBJECT_MACROS | Wenn diese Option aktiviert ist, werden Passwörter in `$_HOST...` und `$_SERVICE...` in den Host und Serviceübersichten Übersetzt|
 | **CHECK_MK** |  |

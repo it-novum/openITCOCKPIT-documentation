@@ -52,8 +52,8 @@ Um Acknowledgements für Hosts und Services im Slack durchführen zu können, ak
 
 openITCOCKPIT muss in diesem Fall von extern erreichbar sein.
 
-Gehe dazu auf der Webseite der Slack API links im Menü auf "OAuth & Permissions", füge unten auf der Seite das Recht "
-users:read" hinzu und speichere die Änderungen.
+Gehe dazu auf der Webseite der Slack API links im Menü auf "OAuth & Permissions", füge unten auf der Seite das Recht 
+"users:read" hinzu und speichere die Änderungen.
 
 Gegebenenfalls muss der Webhook neu installiert werden. Folge dazu den Anweisungen am oberen Rand der Slack API
 Webseite.

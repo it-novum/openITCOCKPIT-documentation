@@ -166,8 +166,8 @@ oder eine Abhängigkeit fehlschlägt.
 
 Diese Art der Abhängigkeiten werden genutzt, um aktive Überprüfungen (active checks) zu temporär auszusetzen. Sollten
 alle Abhängigkeitsüberprüfungen für einen Host oder Service erfolgreich sein, wird Host oder Services ganz normal
-überprüft. Schlägt eine Abhängigkeitsüberprüfung fehl, so wird Naemon die Überprüfung (Host-/Servicecheck) für den (
-abhängigen) Host oder Service temporär überspringen. Wenn alle Abhängigkeiten die Überprüfung (zu einem späteren
+überprüft. Schlägt eine Abhängigkeitsüberprüfung fehl, so wird Naemon die Überprüfung (Host-/Servicecheck) für den 
+(abhängigen) Host oder Service temporär überspringen. Wenn alle Abhängigkeiten die Überprüfung (zu einem späteren
 Zeitpunkt) bestehen, wird die Ausführung der Überprüfung (Host-/Servicecheck) ganz normal fortgesetzt.
 
 #### Benachrichtigungsfehlerkriterien

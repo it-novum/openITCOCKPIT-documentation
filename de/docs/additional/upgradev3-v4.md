@@ -91,7 +91,7 @@ mysqldump --defaults-extra-file=/etc/mysql/debian.cnf --databases openitcockpit 
 ### Schritt 3 - Führen Sie den openITCOCKPIT v4 Kompatibilitätscheck aus
 
 !!! danger "Hinweis für Benutzer des i-doit und discovery Moduls"
-    Die Module `openitcockpit-module-discovery` und `openitcockpit-module-idoit` sind in openITCOCKPIT 4 **nicht verfügbar**
+    Die Module `openitcockpit-module-discovery` und `openitcockpit-module-idoit` sind in openITCOCKPIT 4 **nicht verfügbar**.
     Sollten Sie diese Module in benutzung haben, sollten Sie aktuell noch **nicht** auf openITCOCKPIT 4 aktualisieren!
 
 Um sicherzustellen, dass ihr System in der lage ist auf openITCOCKPIT 4.x aktualisiert werden zu können, stellen wir ein
@@ -109,7 +109,7 @@ curl -s https://raw.githubusercontent.com/it-novum/openITCOCKPIT/development/bin
 **Es wurden bisher keine änderungen an ihrem System vorgenommen!**
 
 !!! danger "Achtung!"
-    Fahren Sie nicht mit der aktualisierung fort, solange Sie noch Fehler oder Warnungen durch das Kompatibilitätscheck
+    Fahren Sie nicht mit der aktualisierung fort, solange Sie noch Fehler oder Warnungen durch den Kompatibilitätscheck
     bekommen!
 
 
@@ -265,7 +265,7 @@ UPDATE users SET is_active = 1 WHERE users.email= 'user@example.com';
 
 ##### Warnungen und Abhängigkeitsprobleme während des Aktualisierungsprozesses
 
-Währen des Aktualisierungsprozesses werden Sie ähnliche Nachrichten wie diese sehen:
+Während des Aktualisierungsprozesses werden Sie ähnliche Nachrichten wie diese sehen:
 
 ```bash
 Unpacking openitcockpit-module-distribute (4.0.4-20200721154853bionic) over (3.7.3-1ubuntu16.04) ...
@@ -369,7 +369,7 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 Ist die Weboberfläche von openITCOCKPIT im Browser nicht sichtbar.
 
-Es müssen die Folgenden Kommandos ausgeführt werden: 
+Es müssen die folgenden Kommandos ausgeführt werden: 
 
 ```bash
 apt-get install -f

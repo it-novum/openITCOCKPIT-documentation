@@ -92,7 +92,7 @@ Schwellwerten eines Service Prüfkommandos) werden anschließend in der Servicev
 entsprechenden Prüfkommandos übergeben. So kann ein Kommando von mehreren Vorlagen mit unterschiedlichen Schwellwerten
 genutzt werden.
 
-Argumente in der Kommando Konfiguration:
+Argumente in der Kommando-Konfiguration:
 
 ![command args](/images/commandargs.png)
 

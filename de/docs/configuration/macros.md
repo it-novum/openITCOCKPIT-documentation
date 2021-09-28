@@ -78,7 +78,7 @@ Neben den Makros die vom Benutzer selbst definiert werden können, stellt das Sy
 | $HOSTDURATION$              | Zeit seit letztem Statuswechsel als String (HH MM SS)                                                                                   |
 | $HOSTDURATIONSEC$           | Zeit seit letztem Statuswechsel als Integer in Sekunden                                                                                  |
 | $HOSTDOWNTIME$              | Ist der Host in einer geplanten Wartungszeit, ist dieser wert >=1                                                                             |
-| $HOSTPERCENTCHANGE$         | Statuswechsel prozentual als Float (Wird von Flattererkennungs Algorithmus genutzt)                                                 |
+| $HOSTPERCENTCHANGE$         | Statuswechsel prozentual als Float (Wird von Flattererkennungs-Algorithmus genutzt)                                                 |
 | $HOSTGROUPNAME$             | Beinhaltet die erste Hostgruppe eines Hosts als String ("12403d1a-70c0-468b-ad8d-446fb8412205")                                                 |
 | $HOSTGROUPNAMES$            | Kommaseparierte liste aller Hostgruppen denen ein Host angehört ("12403d1a-70c0-468b-ad8d-446fb8412205,20a1bad7-60c1-433d-8e28-716cde8b8f04")|
 | $LASTHOSTCHECK$             | Unix timestamp (Integer) des letzten host check.                                                                                            |
@@ -106,7 +106,7 @@ Neben den Makros die vom Benutzer selbst definiert werden können, stellt das Sy
 | $HOSTGROUPACTIONURL$ | Nicht Implementiert in openITCOCKPIT.                                                                                                       |
 |Service Makros|
 | $SERVICEDESC$            | Die UUID des Service ("bd19ce04-3209-4664-a146-bd1220e740bc")                                                                                  |
-| $SERVICEDESC$            | Lesbarer Nname des Service ("PING")                                                                                                            |
+| $SERVICEDESC$            | Lesbarer Name des Service ("PING")                                                                                                            |
 | $SERVICESTATE$           | Aktueller Service Status als String  ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                     |
 | $SERVICESTATEID$         | Aktueller Service Status als Integer (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN).                                                                        |
 | $LASTSERVICESTATE$       | Letzter Service Status als String ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                         |

@@ -11,7 +11,7 @@ openITCOCKPIT Kern klein und flexibel zu halten.
 
 !!! info "openITCOCKPIT Community Lizenz wird benötigt"
     Um Zugriff auf die Community Module zu erhalten, wird eine Registrierung Ihrer openITCOCKPIT Instanz mit der **
-    kostenlosen** Community Lizenz vorrausgesetzt.
+    kostenlosen** Community Lizenz vorausgesetzt.
 
 Navigieren sie nach `Verwaltung -> Systemwerkzeuge -> Paketmanager` und installieren Sie das *CheckmkModule*
 
@@ -67,7 +67,7 @@ chmod +x /usr/local/bin/check_mk_agent
 !!! danger "Sicherheitshinweis"
     Standardmäßig verwendet Checkmk eine unverschlüsselte klartext Kommunikation!
 
-Als nächstes müssen Sie die folgende Konfiguration nach `/etc/xinetd.d/check_mk` kopieren:
+Als Nächstes müssen Sie die folgende Konfiguration nach `/etc/xinetd.d/check_mk` kopieren:
 
 ```
 service check_mk
@@ -92,13 +92,13 @@ service check_mk
 }
 ```
 
-Um die neue Konfiguration zu aktivieren müssen Sie `xinetd` neu starten:
+Um die neue Konfiguration zu aktivieren, müssen Sie `xinetd` neu starten:
 
 ```
 systemctl restart xinetd.service
 ```
 
-Das ist alles was Sie auf dem Remote Host erledigen müssen.
+Das ist alles, was Sie auf dem Remote Host erledigen müssen.
 
 ## Zielhost scannen, um Checks automatisch erstellen zu können
 
@@ -118,7 +118,7 @@ Sie `Speichern` um fortzufahren.
 Um die neue Konfiguration zu aktivieren, müssen Sie
 eine [Aktualisierung der Monitoring Konfiguration durchführen](../create-first-host/#aktualisieren-der-uberwachungskonfiguration)
 
-Ein Paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann
+Ein paar Sekunden später wird das Monitoring System die ausgewählten Services überwachen und Graphen generieren, wann
 immer es möglich ist.
 
 ![checkmk services openitcockpit](/images/checkmk-services-openitcockpit.png)
@@ -126,7 +126,7 @@ immer es möglich ist.
 # Überwachung durch SNMP mit Checkmk
 
 Viele Geräte wie zum Beispiel Router, Switche, Sensoren oder Betriebssysteme können via SNMP (Simple Network Management
-Protocol) überwacht werden. Bevor Sie mit diesem Guide fortfahren, stellen Sie sicher dass Sie den
+Protocol) überwacht werden. Bevor Sie mit diesem Guide fortfahren, stellen Sie sicher, dass Sie den
 Teil [Monitoring mit Checkmk](#monitoring-mit-checkmk) gelesen haben.
 
 ## Versuchen Sie SNMP Daten des Zielgerätes zu bekommen
@@ -144,8 +144,8 @@ Sie sollten eine ähnliche Ausgabe wie diese sehen:
 
 ![snmp walk example](/images/snmpwalk_example.png)
 
-Sollte Ihr System nicht in der Lage sein sich mit dem Zielsystem zu verbinden, überprüfen Sie ihre Firewalleinstellungen
-oder, ob Sie eine falsche SNMP Version nutzen.
+Sollte Ihr System nicht in der Lage sein sich mit dem Zielsystem zu verbinden, überprüfen Sie ihre Firewall 
+Einstellungen oder, ob Sie eine falsche SNMP Version nutzen.
 
 ## Überwachen eines Linux Hosts durch SNMP via Checkmk
 
@@ -157,7 +157,7 @@ Wählen Sie die `Führe SNMP-Erkennung aus` Option aus und klicken Sie anschlie�
 
 ![checkmk snmp discovery](/images/checkmk-snmp-discovery.png)
 
-Das System wird Sie nach den benötigten SNMP Parametern befragen. Die SNMP Konfiguration wird pro Host gepeichert, Sie
+Das System wird Sie nach den benötigten SNMP Parametern befragen. Die SNMP Konfiguration wird pro Host gespeichert, Sie
 müssen diese Daten also nicht nochmals eingeben. Klicken Sie auf `Speichern und SNMP Erkennung ausführen` um
 fortzufahren
 
@@ -250,4 +250,4 @@ eine [Aktualisierung der Monitoring Konfiguration durchführen](../create-first-
 Sie können neben SNMP gleichzeitig den Checkmk Agenten nutzen. Dazu müssen Sie den Host neu scannen und wählen
 anschließend `Führen Remoteerkennung aus` aus um zusätzlich den Checkmk Agenten abzufragen.
 
-![checmk remote discovery](/images/checkmk-remote-discovery.png)
+![checkmk remote discovery](/images/checkmk-remote-discovery.png)

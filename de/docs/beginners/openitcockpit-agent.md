@@ -5,7 +5,7 @@ Der [openITCOCKPIT Monitoring Agent](https://openitcockpit.io/download_agent/) i
 verfügbar und in der Lage Metriken wie CPU, Arbeitsspeicher, Festplattenauslastung, Netzwerkstatus, Temperaturen etc.
 Out-of-the-box zu sammeln.
 
-Damit der openITCOCKPIT Monintoring Agent anpass-und-erweiterbar ist, ist er zu 100 % mit der Nagios Plugin API
+Damit der openITCOCKPIT Monitoring Agent anpassbar sowie erweiterbar ist, ist er zu 100 % mit der Nagios Plugin API
 kompatibel. Daher ist keine zusätzliche Software wie NRPE oder check_by_ssh nötig, um Plugins auf dem Zielsystem
 auszuführen.
 
@@ -68,8 +68,8 @@ Schaltfläche "Weiter".
 ![agent install config](/images/agent-install-config.png)
 
 Der openITCOCKPIT Server wird sich zu dem openITCOCKPIT Monitoring Agent auf dem Zielsystem verbinden und ein TLS
-Zertifikatsaustasch vollziehen. Für jeden openITCOCKPIT Monitoring Agenten wird ein einzigartiges Zertifikat generiert.
-Dieses Zertifikat wird für Authentifizierungs- und Verschlüsselungszwecke benötigt.
+Zertifikatsaustausch vollziehen. Für jeden openITCOCKPIT Monitoring Agenten wird ein einzigartiges Zertifikat generiert.
+Dieses Zertifikat wird für Authentifizierungs und Verschlüsselungszwecke benötigt.
 
 Klicken Sie auf "Weiter" um fortzufahren.
 
@@ -111,7 +111,7 @@ möchten und klicken auf die Schaltfläche "Weiter".
 Setzen Sie die öffentliche IP-Adresse oder FQDN Ihres openITCOCKPIT Servers im Feld `openITCOCKPIT Server Adresse` und
 tragen den API-Key, welchen der Agent nutzen soll in das Feld `openITCOCKPIT API Schlüssel`
 
-Klicken Sie auf die Schalfläche `Nächster` um fortzufahren
+Klicken Sie auf die Schaltfläche `Nächster` um fortzufahren
 
 !!! danger "Sicherheitshinweis!"
     Es wird dringend empfohlen einen neuen Benutzer mit sehr wenigen Berechtigungen zu erstellen und einen API-Key für
@@ -140,9 +140,9 @@ können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchte
 ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
 
 !!! Info 
-    den meisten Fällen Da der Agent im Push Modus arbeitet, ist es möglich, dass openITCOCKPIT bisher noch keine
-    Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf :
-    fontawesome-solid-arrow-left: um auf den vorhergehenden Schritt zurückzukehren, warten 30 Sekunden und klicken
+    Da der Agent im Push Modus arbeitet, ist es möglich, dass openITCOCKPIT bisher noch keine
+    Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf 
+    :fontawesome-solid-arrow-left: um auf den vorhergehenden Schritt zurückzukehren, warten 30 Sekunden und klicken
     anschließend wieder auf die Schaltfläche `Nächster`.
 
 ![create services push](/images/agent-create-services-push.png)

@@ -22,10 +22,10 @@ Das Backup and Restore Tool von openITCOCKPIT erstellt eine Sicherung der MySQL 
 alle Hosts und Services welche überwacht werden, alle Benutzer und Kontakte.
 
 !!! danger
-    Um Speicherplatz zu sparen, werden keine historischen Tabellen gesichert. Diese müssten durch ein seperates Backup gesichert werden.
+    Um Speicherplatz zu sparen, werden keine historischen Tabellen gesichert. Diese müssten durch ein separates Backup gesichert werden.
 
 
-## Backup von Performancdaten
+## Backup von Performancedaten
 
 Neben der MySQL Datenbank speichert openITCOCKPIT Performancedaten zur Erstellung von Graphen.
 Diese Daten werden unter `/var/lib/graphite/whisper/openitcockpit/` abgelegt.

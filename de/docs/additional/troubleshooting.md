@@ -2,7 +2,7 @@
 
 ## Ich habe einen Host erstellt, finde ihn aber nicht in der Host-liste
 
-Ein neu erstellter Host wird nicht in der Hostliste angezeigt. Neu erstellte Hosts finden Sie in der Hostliste unter
+Ein neu erstellter Host wird nicht in der Host-liste angezeigt. Neu erstellte Hosts finden Sie in der Host-liste unter
 dem Reiter `Nicht überwacht`. Dies bedeutet, dass der Host zwar in openITCOCKPIT existiert, der Monitoring Engine aber
 nicht bekannt ist.
 
@@ -45,8 +45,8 @@ Sollte das Problem weiterhin bestehen, können Sie sich [mit uns in Verbindung s
 
 ### Interface Informationen (Informationen zur Schnittstelle)
 
-Über die Interfaceinformationen bekommen Sie eine Übersicht Ihres openITCOCKPIT Servers. Hier werden Informationen zur
-genutzten Version und Edition angezeigt. Darüber hinaus werden hier auch Informationen zur verwendeten Monitoring Engine
+Über die Interface-Informationen bekommen Sie eine Übersicht Ihres openITCOCKPIT Servers. Hier werden Informationen zur
+genutzten Version und Edition angezeigt. Darüber hinaus werden hier auch Informationen zur verwendeten Monitoring-Engine
 sowie deren Pfade zur Konfiguration, den Backups und dem Command Interface bereitgestellt.
 
 ![interface info](/images/debugging-interfaceinfo.png)
@@ -102,7 +102,7 @@ Die Logdatei der Monitoring Engine Naemon finden Sie unter
 /opt/openitc/nagios/var/nagios.log
 ```
 
-Es wird Empfohlen die Logdatei mit dem Befehl `oitc debug --tailf` zu betrachten, da hierbei die Unix-Timestamps und UUIDs
+Es wird empfohlen die Logdatei mit dem Befehl `oitc debug --tailf` zu betrachten, da hierbei die Unix-Timestamps und UUIDs
 ersetzt werden, was die Lesbarkeit der Protokolldatei deutlich erhöht.
 
 ### openITCOCKPIT Web Frontend

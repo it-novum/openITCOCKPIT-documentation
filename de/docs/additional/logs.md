@@ -37,4 +37,4 @@ Das Benachrichtigungsprotokoll zeigt alle versendeten Benachrichtigungen zu Host
 
 ## Protokolleinträge
 
-Protokolleinträge liefert Informationen zur Datenverabeitung durch Statusengine
+Protokolleinträge liefert Informationen zur Datenverarbeitung durch Statusengine

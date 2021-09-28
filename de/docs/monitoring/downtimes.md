@@ -74,7 +74,7 @@ in die Wartungszeit aufgenommen werden sollen
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
 | Host | :fontawesome-solid-times: | Container, für die eine Wartungszeit erstellt werden soll |
-| Rekursives Nachschlagen von Containern |  | Ist diese Option Aktiviert, so werden auch die Kindcontainer des angegebenen Containers in die Wartungszeit mit aufgenommen |
+| Rekursives Nachschlagen von Containern |  | Ist diese Option Aktiviert, so werden auch die Kind-Container des angegebenen Containers in die Wartungszeit mit aufgenommen |
 | Wartungszeitraum für | :fontawesome-solid-times: | Hier kann festgelegt werden, ob nur für den Host oder den Host inklusive seiner Services eine Wartungszeit erstellt werden soll. |
 | Kommentar |  | Kommentar für die zu erstellende Wartungszeit |
 | Wiederkehrende Wartungszeit |  | Wird diese Option aktiviert, so kann eine Startzeit, Dauer, Wochentage oder Tag des Monats für die Wiederkehrende Wartungszeit gesetzt werden. |
@@ -89,10 +89,10 @@ in die Wartungszeit aufgenommen werden sollen
 
 ### Wiederkehrende Wartungszeit
 
-Für alle oben genannten Wartungszeit-typen können wiederkehrende Wartungszeiten erstellt werden. Dazu muss die Option "
-Wiederkehrenden Wartungszeit" aktiviert sein. Anschließend hat man anstatt der Standardmäßigen "Von - Bis" Eingabefelder
-nun Ein feld für die Startzeit, die Dauer der Wartungszeit und an welchem Wochentag oder an welchem Tag des Monats die
-Wartungszeit stattfinden soll.
+Für alle oben genannten Wartungszeit-typen können wiederkehrende Wartungszeiten erstellt werden. Dazu muss die Option 
+"Wiederkehrenden Wartungszeit" aktiviert sein. Anschließend hat man anstatt der Standardmäßigen "Von - Bis" 
+Eingabefelder nun Ein feld für die Startzeit, die Dauer der Wartungszeit und an welchem Wochentag oder an welchem Tag 
+des Monats die Wartungszeit stattfinden soll.
 
 ### Wartungszeit Abbrechen
 

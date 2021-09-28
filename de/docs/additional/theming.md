@@ -22,9 +22,9 @@ Eigene Designs können exportiert und auf einem anderen openITCOCKPIT Systemen i
 
 Um ein Design exportieren zu können, muss zunächst ein eigenes Design erstellt und abgespeichert werden.
 Danach scrollen Sie im Design Editor nach ganz unten. Dort finden Sie eine Schaltfläche
-"Exportieren Sie das aktuell gespeicherte Design". Damit bekommen Sie das aktuelle Design als eine .json-Datei zum Download zur Verfügung gestellt.
+"Exportieren Sie das aktuell gespeicherte Design". Damit bekommen Sie das aktuelle Design als eine `.json` Datei zum Download zur Verfügung gestellt.
 
-Um ein exportiertes Design wieder zu importieren, klicken Sie auf die Schaltfläche "Importieren" und laden die entsprechende .json-Datei hoch.
+Um ein exportiertes Design wieder zu importieren, klicken Sie auf die Schaltfläche "Importieren" und laden die entsprechende `.json` Datei hoch.
 
 Über diese Methode können Sie zum Beispiel unser [Halloween Thema für openITCOCKPIT ](https://github.com/it-novum/oitc-halloween-theme) laden.
 
@@ -36,6 +36,6 @@ Für komplette Gestaltungsfreiheit besteht die Möglichkeit, eigene CSS-Regeln z
 Schriftarten nach Bedarf angepasst werden.
 
 !!! tip
-    Das Erstellen von CSS-Regeln erfordert Kenntnisse von Cascading Style Sheets und sollte nur von erfahrenen Benutzern
+    Das Erstellen von CSS-Regeln erfordert Kenntnisse von Cascading Stylesheets und sollte nur von erfahrenen Benutzern
     eingerichtet werden.
 

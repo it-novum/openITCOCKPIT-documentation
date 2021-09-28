@@ -92,7 +92,7 @@ Um ein Benutzerpasswort zurückzusetzen, klicken sie auf der Übersichtsseite au
 
 ![reset password](/images/manageusers-resetpassword.png)
 
-Der Benutzer bekommt eine E-Mail mit einem neuen Zufalls generiertem Passwort, mit dem er sich auf dem System anmelden
+Der Benutzer bekommt eine E-Mail mit einem neuen Zufallsgenerierten Passwort, mit dem er sich auf dem System anmelden
 kann.
 
 ## Benutzer Rollen verwalten
@@ -110,8 +110,8 @@ Dort Vergeben Sie einen Namen und eine Beschreibung für die neue Benutzerrolle.
 Weiter unten im Formular können Sie die entsprechenden Rechte vergeben. Die rechte können granular für einzelne Seiten
 und aktionen vergeben werden oder aber über die Schaltfläche "Massenaktionen" mehrere gleichzeitig.
 
-Dort können dann entweder alle rechte, Index, Neu, Editier oder Lösch rechte vergeben werden, wobei Index, Neu Editieren
-und Löschen nacheinander angeklickt werden können, um für jede Seite diese zu aktivieren.
+Dort können dann entweder alle rechte, "Index", "Neu", "Editier" oder "Lösch" rechte vergeben werden, wobei Index, Neu, Editieren
+und Löschen nacheinander angeklickt werden können, um diese einzeln für jede Seite zu aktivieren.
 
 ![userrole bulk actions](/images/manageuserroles-bulkactions.png)
 
@@ -122,7 +122,7 @@ und Löschen nacheinander angeklickt werden können, um für jede Seite diese zu
 
 ## Benutzer Container Rollen
 
-Benutzer Container Rollen sind Sammlungen von Containernberechtigungen, die zur für Benutzer in openITCOCKPIT genutzt
+Benutzer Container Rollen sind Sammlungen von Containerberechtigungen, die zur für Benutzer in openITCOCKPIT genutzt
 werden können.
 
 Eine Benutzer-Container-Rolle kann für die Berechtigung von Benutzern verwendet werden. Hierzu muss eine neue

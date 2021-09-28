@@ -38,7 +38,7 @@ die Einheit 973 MiB genutzt.
 
 ## Grafana
 
-[Grafana](https://grafana.com/) ist ein sehr beliebtes Open-Source Tool zum Erstellen von eigenen Dashboards. Grafana
+[Grafana](https://grafana.com/) ist ein sehr beliebtes Open-Source-Tool zum Erstellen von eigenen Dashboards. Grafana
 biete dabei eine Vielzahl von Darstellungsmöglichkeiten neben Graphen.
 
 Grafana wird bei jeder Installation von openITCOCKPIT automatisch über das GrafanaModule mit installiert und steht somit
@@ -77,7 +77,7 @@ Das Hinzufügen von Metriken erfolgt über die Auswahl der entsprechenden Metrik
 
 In diesem Schritt kann auch die gewünschte Farbe der Kurve gewählt werden.
 
-Über die Panel Optionen kann der Titel sowie die Einheit des Graphen definiert werden.
+Über die Panel-Optionen kann der Titel sowie die Einheit des Graphen definiert werden.
 
 Wenn alle Metriken hinzugefügt wurden, kann über die Schaltfläche "Synchronisiere mit Grafana" das Dashboard gespeichert werden.
 Wählen Sie über das Hauptmenü erneut Berichte → Grafana. Mit einem Klick auf das gewünschte Grafana Dashboard, kann dieses

@@ -11,7 +11,7 @@ Parent-Child Beziehungen können angezeigt werden bei einem klick auf "Eltern-Ki
 
 ## Automatische Karte
 
-Eine automatische Karte zeigt Host und Services anhand eines selbst definierteren Filters an.
+Eine automatische Karte zeigt Host und Services anhand eines selbst definierten Filters an.
 
 ### Automap erstellen
 
@@ -73,7 +73,7 @@ Nun ist man im Karten editor angelangt und kann nun über das Seitenmenü versch
 
 - 1\. Items
 
-Items können Hosts, Services, Hostgruppen und Servicegruppen sein. Darüberhinaus können andere Karten verlinkt werden.
+Items können Hosts, Services, Hostgruppen und Servicegruppen sein. Darüber hinaus können andere Karten verlinkt werden.
 
 Items werden mit Iconsets dargestellt. Eigene Iconsets können auch genutzt werden.
 
@@ -140,7 +140,7 @@ Es gibt in openITCOCKPIT zwei mögliche Karten ansichten für das Karten Modul. 
 
 Um zur Vollbild ansicht zu gelangen, öffnet man in der Kartenübersicht das Menü der entsprechenden Karte (1) und wählt anschließend "im Vollbild anzeigen" (2) aus
 
-Diese Ansicht eigent sich beispielsweise zum Anzeigen auf einem TV-Gerät.
+Diese Ansicht eignet sich beispielsweise zum Anzeigen auf einem TV-Gerät.
 
 ![](/images/mapmodule-viewmapfullscreen.png)
 

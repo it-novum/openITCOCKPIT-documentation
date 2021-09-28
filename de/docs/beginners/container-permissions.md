@@ -68,7 +68,7 @@ Container vergeben.
 
 ![User container permissions](/images/openITCOCKPIT-user-container-permissions.png)
 
-Das containerbasierte Berechtigungskonzept kann sehr komplex werden, aber bietet die größtmögliche Flexibilität und
+Das Container-basierte Berechtigungskonzept kann sehr komplex werden, aber bietet die größtmögliche Flexibilität und
 ermöglicht granulare Berechtigungsmöglichkeiten.
 
 !!! note 

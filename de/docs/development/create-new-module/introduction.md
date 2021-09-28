@@ -4,7 +4,7 @@ Für diesen Artikel benötigen Sie eine openITCOCKPIT Entwicklungsumgebung. Lese
 openITCOCKPIT Entwicklungsumgebung zu erstellen](../../setup-dev-env/#openitcockpit-entwicklungsumgebung-erstellen)
 
 Dieser Artikel enthält die Best-Practices, um neue Features in openITCOCKPIT über ein eigenes Modul hinzuzufügen.
-Die Entwicklung eines eigenen Moduls stellt sicher, dass ihr System aktualisier-und-wartbar durch unsere Experten
+Die Entwicklung eines eigenen Moduls stellt sicher, dass ihr System durch unsere Experten aktualisierbar sowie wartbar 
 bleibt.
 
 ## Einstieg in die Entwicklung

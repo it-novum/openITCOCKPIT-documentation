@@ -32,7 +32,7 @@ cp /opt/openitc/frontend/src/Template/email/text/notification_service.php /opt/o
 !!! warning
     Wichtig ist, das die Datei mit `_host.php` bzw. `_service.php` enden muss. Der Dateiname darf nur aus Buchstaben, Zahlen, Bindestrichen und Unterstrichen bestehen.
 
-Um eine Test E-Mail zu versenden, kann der Befehl `oitc` genutzt werden.
+Um eine Test-E-Mail zu versenden, kann der Befehl `oitc` genutzt werden.
 ```
 oitc nagios_notification -v --type Host --notificationtype PROBLEM --hostname c36b8048-93ce-4385-ac19-ab5c90574b77 --hoststate down --hostaddress 127.0.0.1 --hostoutput "Test E-Mail" --contactmail <email address> --layout custom_layout_notification
 ```
@@ -55,7 +55,7 @@ Im Anschluss nutzt openITCOCKPIT das eigene Layout als Vorlage für E-Mails.
 ![custom email layout](/images/alerting/openitcockpit-custom-email-layout.png)
 
 ## Html und Text E-Mails
-Über den Paramter `--format` kann angegeben werden, welche Art von E-Mail verschickt wird.
+Über den Parameter `--format` kann angegeben werden, welche Art von E-Mail verschickt wird.
 
 | Format | Beschreibung |
 |------|------------|
@@ -63,7 +63,7 @@ Im Anschluss nutzt openITCOCKPIT das eigene Layout als Vorlage für E-Mails.
 | `html` | Versendet nur eine Html E-Mail         |
 | `text`   | Versendet nur eine Text E-Mail         |
 
-Über den Parameter `--no-attachments` können alle E-Mail Anhänge wie Logos und Graphen deaktiviert werden um Speicherplatz zu sparen.
+Über den Parameter `--no-attachments` können alle E-Mail Anhänge wie Logos und Graphen deaktiviert werden, um Speicherplatz zu sparen.
 
 ## E-Mail Logo ändern
 Das verwendete Logo kann über das [Design Module](/additional/theming/) geändert werden.

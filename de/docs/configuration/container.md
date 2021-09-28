@@ -71,7 +71,7 @@ openITCOCKPIT zeigt die Container immer als einen Pfad an:
 
 Die Container Berechtigungen werden dabei immer von rechts nach links aufgelöst.
 
-- Ein Benutzer der dem Container `/root` zugewiesen wird, wird automatisch ein globaler Systemadministrator und kann alle Objete sehen und Bearbeiten.
+- Ein Benutzer, der dem Container `/root` zugewiesen wird, wird automatisch ein globaler Systemadministrator und kann alle Objekte sehen und Bearbeiten.
 - Wird ein Benutzer `/root/Demo Tenant` zugewiesen, so kann der Benutzer alle Objekte des Mandanten inklusive aller Untercontainer des Mandanten sehen. 
 - Wird ein Benutzer `/root/Demo Tenant/Team Developers` zugewiesen, so kann der Benutzer Objekte des Mandanten, sowie des Containers "Team Developers" und aller Untercontainer sehen. 
 - Wird ein Benutzer `/root/Demo Tenant/Team Developers/Fulda` zugewiesen, so kann der Benutzer Objekte des Mandanten, sowie des Containers "Fulda" und aller Untercontainer sehen.

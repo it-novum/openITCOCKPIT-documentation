@@ -135,7 +135,7 @@ Das Host- bzw. Servicestatusübersicht-Widget zeigt die Anzahl der Hosts bzw. Se
 Die Host bzw. Servicestatus Übersicht zeigt immer nur die Anzahl der Hosts bzw. Services in dem gewählten Status an. Diese auswahl kann über die Konfiguration des Widgets getroffen werden. Zudem kann auch nach dem Host bzw. Host und Servicenamen gefiltert werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Automatische Karte
-![autmap widget](/images/dashboard-automapwidget.png)
+![automap widget](/images/dashboard-automapwidget.png)
 
 Das Widget zeigt [Automatischen Karte](../maps/#automatische-karte) an
 
@@ -176,7 +176,7 @@ Das Karten Widget zeigt eine Karte, die über das [MapModul](../maps/#map-modul-
 
 ###### Konfiguration
 
-Eine Karte muss voher über das [MapModul](../maps/#map-modul-ce) erstellt werden. Anschließend kann die Karte über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
+Eine Karte muss vorher über das [MapModul](../maps/#map-modul-ce) erstellt werden. Anschließend kann die Karte über die Konfigurationsoberfläche des Widgets ausgewählt werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
 ##### Ereigniskorrelation
 ![evk widget](/images/dashboard-evkwidget.png)

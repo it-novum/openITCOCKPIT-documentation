@@ -1,8 +1,10 @@
 # User Interface
 
 ### Das Interface im Überblick
-Das Layout des User-Interface teilt sich in zwei Bereiche auf. Den Navigationsbereich (1. Blau) und den Inhaltsbereich (2. Rot)
-Der Navigationsbereich von openITCOCKPIT bleibt immer gleich, wohingegen der Inhalt der ausgewählten Seite immer im Inhaltsbereich (2) angezeigt wird.
+Das Layout des User-Interface teilt sich in zwei Bereiche auf. Den Navigationsbereich (1. Blau) und den Inhaltsbereich 
+(2. Rot)
+Der Navigationsbereich von openITCOCKPIT bleibt immer gleich, wohingegen der Inhalt der ausgewählten Seite immer im 
+Inhaltsbereich (2) angezeigt wird.
 
 ![user-interface](/images/user-interface.png)
 
@@ -11,7 +13,8 @@ Der Navigationsbereich von openITCOCKPIT bleibt immer gleich, wohingegen der Inh
 #### Obere Navigationsleiste
 ![top nav bar](/images/layout-header-explaination.png)
 
-Die obere Navigationsleiste beinhaltet neben einer Suche (2) und der Uhrzeit (7) weitere Kurzlinks zu verschiedenen Aktionen
+Die obere Navigationsleiste beinhaltet neben einer Suche (2) und der Uhrzeit (7) weitere Kurzlinks zu verschiedenen 
+Aktionen
 
 1. Schaltfläche zum Ein-/Ausklappen des Hauptmenüs
 2. Suchleiste mit der Möglichkeit nach Hosts, Services, UUIDs und IP-Adressen zu suchen.
@@ -26,7 +29,8 @@ Die obere Navigationsleiste beinhaltet neben einer Suche (2) und der Uhrzeit (7)
 
 ##### System health
 Die System health Anzeige gibt einen schnellen Überblick auf den Zustand des openITCOCKPIT Servers. 
-Hier werden Warnungen und kritische Zustände, wie beispielsweise mangelnder Festplattenspeicher, kritische Arbeitsspeicherauslastung sowie nicht laufenden Dienste, angezeigt.
+Hier werden Warnungen und kritische Zustände, wie beispielsweise mangelnder Festplattenspeicher, kritische 
+Arbeitsspeicherauslastung sowie nicht laufenden Dienste, angezeigt.
 Ist die Anzeige leer und in der Farbe Grün dargestellt, ist mit dem Server alles in Ordnung (siehe screenshot). 
 
 ![system health](/images/system-health.png)
@@ -42,9 +46,12 @@ Anpassungen der Benutzerzeitzone können im [Profil](#profil-informationen) vorg
 #### Hauptmenü
 ![main menu](/images/main-menu.png)
 
-Das Hauptmenü in openITCOCKPIT bietet neben der Liste mit allen Menüeinträgen auch die Möglichkeit das Menü zu durchsuchen (1). Dazu muss nur einmal auf die Schaltfläche :fontawesome-solid-angle-down: geklickt werden. Dies erleichtert das Finden von Einträgen im Menü enorm.
+Das Hauptmenü in openITCOCKPIT bietet neben der Liste mit allen Menüeinträgen auch die Möglichkeit das Menü zu 
+durchsuchen (1). Dazu muss nur einmal auf die Schaltfläche :fontawesome-solid-angle-down: geklickt werden. Dies 
+erleichtert das Finden von Einträgen im Menü enorm.
 
-Darunter befindet sich die Anzeige Ihres Benutzernamens. Die goldene Krone signalisiert, dass Administrator-Rechte zu diesem Benutzer vorhanden sind. Durch einen Klick auf den Benutzernamen gelangt man in das [Benutzerprofil](#profil).
+Darunter befindet sich die Anzeige Ihres Benutzernamens. Die goldene Krone signalisiert, dass Administrator-Rechte zu 
+diesem Benutzer vorhanden sind. Durch einen Klick auf den Benutzernamen gelangt man in das [Benutzerprofil](#profil).
 
 Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
 
@@ -55,7 +62,8 @@ Unterhalb des Hauptmenüs befinden sich weitere Schaltflächen (3):
 
 
 #### Seitenmenü Button
-Der Seitenmenü-Button ist immer um unteren rechten Bildrand zu sehen und enthält zwei Funktionen, die auf jeder Seite in openITCOCKPIT anwendbar sind. 
+Der Seitenmenü-Button ist immer um unteren rechten Bildrand zu sehen und enthält zwei Funktionen, die auf jeder Seite 
+in openITCOCKPIT anwendbar sind. 
 
 - :fontawesome-solid-expand: stellt die Seite im Vollbildmodus dar.
 - :fontawesome-solid-arrow-up: Scrollt automatisch an den Anfang der aktuellen Seite.
@@ -69,7 +77,8 @@ In der Profil-Übersicht haben Sie die Möglichkeit Anpassungen an Ihrem eigenen
 
 #### Profil Informationen
 
-Neben den Änderungsmöglichkeiten Ihres Namens, E-Mail-Adresse und Telefonnummer, können Sie verschiedene Einstellungen treffen, die die Darstellung von Listen, Browser Darstellungen und weiteres verändern.
+Neben den Änderungsmöglichkeiten Ihres Namens, E-Mail-Adresse und Telefonnummer, können Sie verschiedene Einstellungen 
+treffen, die die Darstellung von Listen, Browser Darstellungen und weiteres verändern.
 
 ![Profil Information edit](/images/profile-information.png)
 
@@ -87,35 +96,45 @@ Neben den Änderungsmöglichkeiten Ihres Namens, E-Mail-Adresse und Telefonnumme
 
 #### Profilbild
 
-Um ein Profilbild hochzuladen, können Sie das gewünschte Bild einfach per Drag-and-drop in das dafür vorgesehene Feld ziehen. Das Hochladen und Speichern geschieht anschließend automatisch.
+Um ein Profilbild hochzuladen, können Sie das gewünschte Bild einfach per Drag-and-drop in das dafür vorgesehene Feld 
+ziehen. Das Hochladen und Speichern geschieht anschließend automatisch.
 
 ![Profile picture](/images/profile-image.png)
 
 #### Passwort ändern
 
 !!! info
-    Diese Option steht nur bei lokalen Benutzern zur verfügung. Benutzer die über LDAP hinzugefügt wurden, müssen Ihr Passwort über das Betriebssystem oder ein LDAP-Account-Manager-Tool ändern.
+    Diese Option steht nur bei lokalen Benutzern zur verfügung. Benutzer die über LDAP hinzugefügt wurden, müssen Ihr 
+    Passwort über das Betriebssystem oder ein LDAP-Account-Manager-Tool ändern.
 
-Um Ihr Passwort zu ändern, können Sie dieses Formular nutzen. Dazu müssen Sie Ihr altes Passwort bereithalten und ein neues Passwort vergeben. Die Voraussetzungen für das neue Passwort sind mindestens 6 alphanumerische Zeichen sowie mindestens eine Ziffer.
+Um Ihr Passwort zu ändern, können Sie dieses Formular nutzen. Dazu müssen Sie Ihr altes Passwort bereithalten und ein 
+neues Passwort vergeben. Die Voraussetzungen für das neue Passwort sind mindestens 6 alphanumerische Zeichen sowie 
+mindestens eine Ziffer.
 
 ![Profile change password](/images/profile-changepassword.png)
 
 #### API-Keys
-Über Ihr Profil können Sie API-Keys erstellen, welche zur Authentifizierung mit der openITCOCKPIT API genutzt werden. Wie sie einen API-Key erstellen erfahren sie in einem [gesonderten Artikel](../../development/api/#api-keys)
+Über Ihr Profil können Sie API-Keys erstellen, welche zur Authentifizierung mit der openITCOCKPIT API genutzt werden. 
+Wie sie einen API-Key erstellen erfahren sie in einem [gesonderten Artikel](../../development/api/#api-keys)
 
 
 
 ## Browser
 
-Der Browser bietet eine, für einen Benutzer sichtbare, Übersicht aller Container, deren Hosts sowie den Status der Host und Services.
+Der Browser bietet eine, für einen Benutzer sichtbare, Übersicht aller Container, deren Hosts sowie den Status der Host 
+und Services.
 
-Die Darstellung des Host- und Servicestatus zeigt im Standard nur den Status der Hosts und Services an, die in dem aktuell gewählten Container liegen.
+Die Darstellung des Host- und Servicestatus zeigt im Standard nur den Status der Hosts und Services an, die in dem 
+aktuell gewählten Container liegen.
 
-Mit der Einstellung `Rekursiver Browser` in den Profileinstellungen wird der Gesamtstatus aller, für einen Benutzer, sichtbaren Hosts und Services angezeigt.
+Mit der Einstellung `Rekursiver Browser` in den Profileinstellungen wird der Gesamtstatus aller, für einen Benutzer, 
+sichtbaren Hosts und Services angezeigt.
 
 ## Host Browser
 
-Der Host Browser gibt eine Übersicht über den aktuellen Zustand des Host sowie seiner Services. Zudem bekommt man detaillierte Status- und Geräteinformationen, eine Zeitleiste sowie bei entsprechend installierten Modulen noch mehr Zusatzinformationen zum Host.
+Der Host Browser gibt eine Übersicht über den aktuellen Zustand des Host sowie seiner Services. Zudem bekommt man 
+detaillierte Status- und Geräteinformationen, eine Zeitleiste sowie bei entsprechend installierten Modulen noch mehr 
+Zusatzinformationen zum Host.
 
 ### Navigationsleiste
 
@@ -175,7 +194,11 @@ Hier gelangt man zu einer Übersicht aller vorhandenen Services zu dem Host
 
 ##### Servicevorlagengruppe zuordnen
 
-Sie können in openITCOCKPIT Servicevorlagengruppen erstellen, die eine Reihe von Servicevorlagen enthalten. Diese Gruppen können dann über diese Option einem Host zugewiesen werden. Im sich öffnenden Formular können Sie die entsprechende Servicevorlagengruppe und zusätzlich die zu erstellenden Services auswählen. Dies hat den Vorteil, dass die passenden Services für einen Host sehr schnell erstellt werden können. Damit die Änderungen wirksam werden, muss die Konfiguration anschließend exportiert werden.
+Sie können in openITCOCKPIT Servicevorlagengruppen erstellen, die eine Reihe von Servicevorlagen enthalten. Diese 
+Gruppen können dann über diese Option einem Host zugewiesen werden. Im sich öffnenden Formular können Sie die 
+entsprechende Servicevorlagengruppe und zusätzlich die zu erstellenden Services auswählen. Dies hat den Vorteil, dass 
+die passenden Services für einen Host sehr schnell erstellt werden können. Damit die Änderungen wirksam werden, muss die
+Konfiguration anschließend exportiert werden.
 
 #### openITCOCKPIT Agent Discovery
 
@@ -187,15 +210,22 @@ Hierüber kann ein Checkmk discovery gestartet werden.
 
 ### Statusinformationen
 
-Die Statusinformationen enthalten für den Status relevante Daten. Diese beinhalten neben den Prüfungsparametern und Benachrichtigungseinstellungen eine Leiste die den Status des aktuellen Hosts anzeigt. Diese Leiste ist in der aktuellen Statusfarbe eingefärbt und enthält Informationen, die Aufschluss geben, seit wann der Host in diesem Status ist, wann die letzte Überprüfung war, wann die nächste Überprüfung ist und den Statustyp. Darüber hinaus gibt es hier die Möglichkeit verschiedene Aktionen durchzuführen.
+Die Statusinformationen enthalten für den Status relevante Daten. Diese beinhalten neben den Prüfungsparametern und 
+Benachrichtigungseinstellungen eine Leiste die den Status des aktuellen Hosts anzeigt. Diese Leiste ist in der aktuellen
+Statusfarbe eingefärbt und enthält Informationen, die Aufschluss geben, seit wann der Host in diesem Status ist, wann 
+die letzte Überprüfung war, wann die nächste Überprüfung ist und den Statustyp. Darüber hinaus gibt es hier die 
+Möglichkeit verschiedene Aktionen durchzuführen.
 
 #### Prüfzeitraum zurücksetzen
 
-Beim Prüfzeitraum zurücksetzen wird die nächste Überprüfung zum nächstmöglichen Zeitpunkt ausgeführt (in der Regel sofort). Dies kann entweder nur für den Host selbst oder aber auch für den Host und seine Services ausgewählt werden.
+Beim Prüfzeitraum zurücksetzen wird die nächste Überprüfung zum nächstmöglichen Zeitpunkt ausgeführt (in der Regel 
+sofort). Dies kann entweder nur für den Host selbst oder aber auch für den Host und seine Services ausgewählt werden.
 
 #### Plane Wartung
 
-Über diese Option kann ein Wartungszeitraum für diesen Host eingerichtet werden. Hier gibt man an was genau in dem Wartungszeitraum enthalten sein soll, ein Kommentar zum Wartungszeitraum sowie die Zeitspanne von und bis wann die Wartung stattfinden soll
+Über diese Option kann ein Wartungszeitraum für diesen Host eingerichtet werden. Hier gibt man an was genau in dem 
+Wartungszeitraum enthalten sein soll, ein Kommentar zum Wartungszeitraum sowie die Zeitspanne von und bis wann die 
+Wartung stattfinden soll
 
 ##### Einzelne Hosts
 
@@ -207,35 +237,49 @@ Bei dieser Option wird der Host selbst, sowie seine Services in ein Wartungsfens
 
 ##### Hosts und abhängige Hosts (ausgelöst)
 
-Bei dieser Option wird der Host selbst, sowie abhängige Hosts in ein Wartungsfenster eingetragen. Hier wird der Start der Wartungszeit durch den Start einer anderen geplanten Host-Wartungszeit ausgelöst.
+Bei dieser Option wird der Host selbst, sowie abhängige Hosts in ein Wartungsfenster eingetragen. Hier wird der Start 
+der Wartungszeit durch den Start einer anderen geplanten Host-Wartungszeit ausgelöst.
 
 ##### Hosts und abhängige Hosts (nicht ausgelöst)
 
-Bei dieser Option wird der Host selbst, sowie abhängige Hosts in ein Wartungsfenster eingetragen. Hier startet und stopped die Wartungszeit genau zu den Zeiten, die Sie bei der Planung festgelegt haben.
+Bei dieser Option wird der Host selbst, sowie abhängige Hosts in ein Wartungsfenster eingetragen. Hier startet und 
+stoppt die Wartungszeit genau zu den Zeiten, die Sie bei der Planung festgelegt haben.
 
 #### Bestätige Hoststatus
 
-Je nach Benachrichtigungseinstellungen werden Benachrichtigungen für einen Host in einem Intervall versendet. Diese Benachrichtigungen können unterbunden werden, indem man den Hoststatus bestätigt. Hier besteht auch die Option den Status für den Host sowie dessen Services zu bestätigen. Die Option `Sticky lässt die Bestätigung so lange bestehen, bis der Host wieder im Status `UP` ist.
+Je nach Benachrichtigungseinstellungen werden Benachrichtigungen für einen Host in einem Intervall versendet. Diese 
+Benachrichtigungen können unterbunden werden, indem man den Hoststatus bestätigt. Hier besteht auch die Option den 
+Status für den Host sowie dessen Services zu bestätigen. Die Option `Sticky` lässt die Bestätigung so lange bestehen, 
+bis der Host wieder im Status `UP` ist.
 
 #### Passive Übertragung eines Prüfergebnisses
 
-Mit dem passiven Übertragen von Prüfergebnissen erhält der Host den angegebenen Status mit Kommentar. Ist `Auf harten Zustand zwingen` angehakt, so wird der Hoststatustyp gleich auf `HARD` gesetzt und die Anzahl der Prüfversuche ignoriert.
+Mit dem passiven Übertragen von Prüfergebnissen erhält der Host den angegebenen Status mit Kommentar. Ist 
+`Auf harten Zustand zwingen` angehakt, so wird der Hoststatustyp gleich auf `HARD` gesetzt und die Anzahl der 
+Prüfversuche ignoriert.
 
 #### Deaktiviere Benachrichtigungen
 
-Mit dieser Option können Sie Benachrichtigungen für den Host oder den Host und seine Services vorübergehend deaktivieren.
+Mit dieser Option können Sie Benachrichtigungen für den Host oder den Host und seine Services vorübergehend 
+deaktivieren.
 
 #### Benutzerdefinierte Hostbenachrichtigung senden
 
-Wählen Sie diese Option, um eine benutzerdefinierte Hostbenachrichtigung zu senden. Hier kann ausgewählt werden, ob das Senden der Nachricht erzwungen werden soll. Hierbei wird der Benachrichtigungszeitraum sowie die deaktivierten Benachrichtigungen für den Host ignoriert. Zudem kann man auswählen, ob die Benachrichtigung auch an die Eskalationskontakte gesendet werden soll.
+Wählen Sie diese Option, um eine benutzerdefinierte Hostbenachrichtigung zu senden. Hier kann ausgewählt werden, ob das 
+Senden der Nachricht erzwungen werden soll. Hierbei wird der Benachrichtigungszeitraum sowie die deaktivierten 
+Benachrichtigungen für den Host ignoriert. Zudem kann man auswählen, ob die Benachrichtigung auch an die 
+Eskalationskontakte gesendet werden soll.
 
 ### Geräte informationen
 
-In den Geräteinformationen finden Sie Eigenschaften zu dem Host. Diese bestehen aus der IP-Adresse / Hostnamen, die UUID, welche den Host im openITCOCKPIT genau identifiziert sowie Berechtigungsinformationen und weitere Eigenschaften.
+In den Geräteinformationen finden Sie Eigenschaften zu dem Host. Diese bestehen aus der IP-Adresse / Hostnamen, die 
+UUID, welche den Host im openITCOCKPIT genau identifiziert sowie Berechtigungsinformationen und weitere Eigenschaften.
 
 ### Zeitleiste
 
-Die Zeitleiste gibt eine genaue Übersicht über den Host, was und wann passiert ist. Sie enthält Informationen, wann ein Hoststatus bestätigt, Wartungszeiten eingetragen, Benachrichtigungen gesendet worden sind und wann der Host, welchen Status hatte.
+Die Zeitleiste gibt eine genaue Übersicht über den Host, was und wann passiert ist. Sie enthält Informationen, wann ein 
+Hoststatus bestätigt, Wartungszeiten eingetragen, Benachrichtigungen gesendet worden sind und wann der Host, welchen 
+Status hatte.
 
 ![](/images/hosts-browsertimeline.png)
 
@@ -248,7 +292,9 @@ Hier werden alle verfügbaren Graphen zu den Services des Hosts dargestellt
 
 ## Service Browser
 
-Der Service Browser gibt eine Übersicht über den aktuellen Zustand des Services. Zudem werden hier Status- und Serviceinformationen, eine Zeitleiste sowie bei entsprechend installierten Modulen, noch mehr Zusatzinformationen, angezeigt.
+Der Service Browser gibt eine Übersicht über den aktuellen Zustand des Services. Zudem werden hier Status- und 
+Serviceinformationen, eine Zeitleiste sowie bei entsprechend installierten Modulen, noch mehr Zusatzinformationen, 
+angezeigt.
 
 ### Navigationsleiste
 
@@ -260,7 +306,8 @@ Die Navigationsleiste verlinkt zu verschiedenen Aktionen zu einem Service.
 
 ![](/images/hosts-browserresetchecktime.png)
 
-Hiermit wird die Prüfzeit des Services zurückgesetzt. Dies hat denselben Effekt wie `Prüfzeitraum zurücksetzen` in den Statusinformationen
+Hiermit wird die Prüfzeit des Services zurückgesetzt. Dies hat denselben Effekt wie `Prüfzeitraum zurücksetzen` in den 
+Statusinformationen
 
 #### Objekt Dokumentation
 
@@ -278,7 +325,8 @@ Klicken Sie auf diese Schaltfläche, um eine Übersicht aller gesendeten Benachr
 
 ![](/images/hosts-browsercheckhistory.png)
 
-Die Verlaufshistorie enthält das Ergebnis jeder Überprüfung des Services mit Datum, Prüfversuch, Statustyp und der Ausgabe
+Die Verlaufshistorie enthält das Ergebnis jeder Überprüfung des Services mit Datum, Prüfversuch, Statustyp und der 
+Ausgabe
 
 #### Statushistorie
 
@@ -314,7 +362,11 @@ Hier gelangt man zu einer Übersicht aller vorhandenen Services desselben Hosts
 
 ### Status Informationen
 
-Die Statusinformationen enthalten für den Status relevante Daten. Diese beinhalten neben den Prüfungsparametern und Benachrichtigungseinstellungen eine Leiste, die den Status des aktuellen Services anzeigt. Diese Leiste ist in der aktuellen Statusfarbe eingefärbt und enthält Informationen, die Aufschluss geben, seit wann der Service in diesem Status ist, wann die letzte Überprüfung war, wann die nächste Überprüfung ist und den Statustyp. Darüber hinaus gibt es hier die Möglichkeit andere verschiedene Aktionen durchzuführen.
+Die Statusinformationen enthalten für den Status relevante Daten. Diese beinhalten neben den Prüfungsparametern und 
+Benachrichtigungseinstellungen eine Leiste, die den Status des aktuellen Services anzeigt. Diese Leiste ist in der 
+aktuellen Statusfarbe eingefärbt und enthält Informationen, die Aufschluss geben, seit wann der Service in diesem Status
+ist, wann die letzte Überprüfung war, wann die nächste Überprüfung ist und den Statustyp. Darüber hinaus gibt es hier 
+die Möglichkeit andere verschiedene Aktionen durchzuführen.
 
 #### Prüfzeit zurücksetzen
 
@@ -322,11 +374,14 @@ Beim Prüfzeit zurücksetzen wird die nächste überprüfung zum nächstmöglich
 
 #### Plane Wartung
 
-Über diese Option kann ein Wartungszeitraum für diesen Service eingerichtet werden. Hier gibt man ein Kommentar zum Wartungszeitraum an sowie die Zeitspanne von bis wann die Wartung stattfinden soll
+Über diese Option kann ein Wartungszeitraum für diesen Service eingerichtet werden. Hier gibt man ein Kommentar zum 
+Wartungszeitraum an sowie die Zeitspanne von bis wann die Wartung stattfinden soll
 
 #### Passive Übertragung eines Prüfergebnisses
 
-Mit dem passiven Übertragen von Prüfergebnissen erhält der Service den angegebenen Status mit Kommentar. Ist `Auf harten Zustand zwingen` angehakt, so wird der Servicestatustyp gleich auf `HARD` gesetzt und die Anzahl der Prüfversuche ignoriert.
+Mit dem passiven Übertragen von Prüfergebnissen erhält der Service den angegebenen Status mit Kommentar. Ist 
+`Auf harten Zustand zwingen` angehakt, so wird der Servicestatustyp gleich auf `HARD` gesetzt und die Anzahl der 
+Prüfversuche ignoriert.
 
 #### Aktiviere die Flattererkennung (Flapping)
 
@@ -338,15 +393,20 @@ Mit dieser Option können Sie Benachrichtigungen für den Service vorübergehend
 
 #### Benutzerdefinierte Servicebenachrichtigung senden
 
-Wählen Sie diese Option, um eine Benutzerdefinierte Servicebenachrichtigung zu senden. Hier kann ausgewählt werden, ob das Senden der Nachricht erzwungen werden soll. Hierbei wird der Benachrichtigungszeitraum sowie die deaktivierten Benachrichtigungen für den Service ignoriert. Zudem kann man auswählen, ob die Benachrichtigung auch an die Eskalationskontakte gesendet werden soll.
+Wählen Sie diese Option, um eine Benutzerdefinierte Servicebenachrichtigung zu senden. Hier kann ausgewählt werden, ob 
+das Senden der Nachricht erzwungen werden soll. Hierbei wird der Benachrichtigungszeitraum sowie die deaktivierten Benachrichtigungen für den Service ignoriert. Zudem kann man auswählen, ob die Benachrichtigung auch an die Eskalationskontakte gesendet werden soll.
 
 ### Service Informationen
 
-In den Service Informationen finden Sie Eigenschaften zu dem Service. Diese bestehen aus der IP-Adresse/Hostname des Hosts, die UUIDs welche den Host und Service im openITCOCKPIT genau identifiziert sowie Berechtigungsinformationen und weitere Eigenschaften.
+In den Service Informationen finden Sie Eigenschaften zu dem Service. Diese bestehen aus der IP-Adresse/Hostname des 
+Hosts, die UUIDs welche den Host und Service im openITCOCKPIT genau identifiziert sowie Berechtigungsinformationen und 
+weitere Eigenschaften.
 
 ### Zeitleiste
 
-Die Zeitleiste gibt eine genaue Übersicht über den Service, was und wann passiert ist. Sie enthält informationen wann ein Servicestatus bestätigt, Wartungszeiten eingetragen, Benachrichtigungen gesendet worden sind und wann der Service welchen Status hatte.
+Die Zeitleiste gibt eine genaue Übersicht über den Service, was und wann passiert ist. Sie enthält informationen wann 
+ein Servicestatus bestätigt, Wartungszeiten eingetragen, Benachrichtigungen gesendet worden sind und wann der Service 
+welchen Status hatte.
 
 Darüber hinaus ist zudem der Hoststatus enthalten.
 

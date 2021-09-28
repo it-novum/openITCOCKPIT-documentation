@@ -54,7 +54,7 @@ vergeben wir `CHECK_BY_NRPE_SIMPLE`
 
 ## NRPE-Server auf dem Zielsystem installieren
 
-Um NRPE nutzen zu können, wird `nagios-nrpe-server` auf dem remote Host vorrausgesetzt. Stellen Sie eine SSH Verbindung
+Um NRPE nutzen zu können, wird `nagios-nrpe-server` auf dem remote Host vorausgesetzt. Stellen Sie eine SSH Verbindung
 mit dem remote Host her und installieren Sie das folgende Paket:
 
 ```
