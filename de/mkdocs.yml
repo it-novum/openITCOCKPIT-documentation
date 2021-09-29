@@ -15,6 +15,7 @@ nav:
     - 'Monitoring mit dem openITCOCKPIT Agent': 'beginners/openitcockpit-agent.md'
     - 'Monitoring mit Checkmk': 'beginners/monitoring-checkmk.md'
     - 'Monitoring durch NRPE': 'beginners/monitoring-nrpe.md'
+    - 'Monitoring mit Prometheus': 'monitoring/prometheus/#uberwachung-mit-prometheus-ee'
     - 'Check by SSH': 'beginners/check-by-ssh.md'
     - 'Browser Push-Benachrichtigungen einrichten': 'beginners/setup-browser-push-notifications.md'
     - 'E-Mail Benachrichtigungen einrichten': 'beginners/setup-email-notifications.md'
@@ -26,7 +27,8 @@ nav:
     - 'Downtimes': 'monitoring/downtimes.md'
     - 'Graphing': 'monitoring/graphing.md'
     - 'Überwachung mit Prometheus': 'monitoring/prometheus.md'
-    - 'Überwachung mit Checkmk': 'monitoring/checkmk.md'
+    - 'Überwachung mit Checkmk': 'beginners/monitoring-checkmk/#monitoring-mit-checkmk-ce'
+    - 'Monitoring mit NRPE': 'beginners/monitoring-nrpe/#monitoring-durch-nrpe'
     - 'Karten': 'monitoring/maps.md'
     - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
   - 'Alerting / Benachrichtigungen':
