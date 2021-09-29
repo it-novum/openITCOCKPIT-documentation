@@ -22,9 +22,10 @@ Aktionen
 4. [Systemzustand (System Health)](#system-health) 
 5. [Export](../basic-principles/#export) Schaltfläche
 6. Zeigt an, ob eine neue openITCOCKPIT Version verfügbar ist. Nur sichtbar, wenn dies der Fall ist.
-7. Aktuelle [(Server)Uhrzeit](#system-uhrzeiten)
-8. Sprachauswahlbox
-9. Log-out
+7. Zeigt die [Meldung des Tages](#meldung-des-tages) an
+8. Aktuelle [(Server)Uhrzeit](#system-uhrzeiten)
+9. Sprachauswahlbox
+10. Log-out
 
 
 ##### System health
@@ -34,6 +35,20 @@ Arbeitsspeicherauslastung sowie nicht laufenden Dienste, angezeigt.
 Ist die Anzeige leer und in der Farbe Grün dargestellt, ist mit dem Server alles in Ordnung (siehe screenshot). 
 
 ![system health](/images/system-health.png)
+
+##### Meldung des Tages
+
+Um alle Benutzer oder ausgewählte Benutzergruppen gleichzeitig über ein bestimmtes Ereigniss informieren zu können, besteht im openITCOCKPIT die Möglichkeit eine `Meldung des Tages` zu erstellen. 
+Diese Meldung wird immer nach dem Einloggen automatisch eingeblendet. 
+
+![message of the day](/images/message-otd-modal.png)
+
+
+Zusätzlich kann die `Medlung des Tages` über das Klicken auf den Menüpunkt (7) eingeblendet werden.
+
+![message of the day](/images/message-of-the-day.png)
+
+Die [Konfiguration](../../configuration/usermanagement/#meldung-des-tages-erstellen) der `Meldung des Tages` findet man als separaten Punkt unter Benutzerverwaltung 
 
 ##### System Uhrzeiten
 Das User-Interface ist in der Lage zwei verschiedene Uhrzeiten anzuzeigen. 

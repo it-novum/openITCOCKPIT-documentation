@@ -141,3 +141,27 @@ Benutzer Container Rolle verwendet werden.
 |---|---|---|
 | Rollenname | :fontawesome-solid-times: | Name der Benutzer Container Rolle |
 | Container | :fontawesome-solid-times: | [Container](../container/), welche der Benutzer Container Rolle zugewiesen werden sollen  |
+
+
+### Meldung des Tages erstellen
+
+
+| Feld | Erforderlich | Beschreibung |
+|---|---|---|
+| Title | :fontawesome-solid-times: | Pflichtfeld - Der Title wird ganz oben angezeigt und wird als Überschrift verwendet |
+| Description | | Hier erhält Benutzer die Möglichkeit eine kurze Beschreibung für die Meldung des Tages zu hinterlegen |
+| Datum | :fontawesome-solid-times: | Pflichtfeld -Das Datum wird für das Anzeigen des Meldung des Tages verwendet |
+| Ablaufdauer | | Optionales Pflichtfeld - mit dem Setzen der Ablaufdauer wird die Meldung des Tages nur vorübergehend angezeigt  |
+| Filter für Benutzergruppe| | Hier kann die Sichtbarkeit für Meldung des Tages für bestimmte Gruppen eingeschränkt werden |
+| Benachrichtigung für Benutzer | | Wenn aktiv, werden betroffene Benutzer per Email benachrichtigt |
+| Style | :fontawesome-solid-times: | Folgende Style-Eigenschaften stehen zur Auswahl: <span class="badge badge-info" title="info">info</span> <span class="badge badge-primary" title="primary">primary</span> <span class="badge badge-success" title="success">success</span> <span class="badge badge-warning" title="warning">warning</span> <span class="badge badge-danger" title="danger">danger</span>|
+| Text | :fontawesome-solid-times: | Text für die Meldung des Tages |
+
+Durch die Styleauswahl kann der Benutzer eine visuelle Informationswichtigkeit beziehungsweise Informationsart verdeutlichen.
+
+![message of the day](/images/configuration/message-otd-styles.png)
+
+Für das Erstellen des Textes steht ein WYSISYG Editor mit rudimentären Funktionen, wie Textfarbe, -größe und -ausrichtung und ähnliches, zur Verfügung. Mithilfe des Editors kann der eingegebene Text formatiert werden. 
+Alle Änderungen werden sofort im Vorschaufenster angezeigt.  
+
+![wysiwyg text editor](/images/configuration/message-otd-wysiwyg.png)
