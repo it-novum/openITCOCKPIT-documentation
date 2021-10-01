@@ -1,0 +1,1 @@
+/de/docs/beginners/check-by-ssh.md

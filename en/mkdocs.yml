@@ -1,12 +1,82 @@
 site_name: openITCOCKPIT 4
-site_url: http://mkdocs.oitc.itn:8000/en/
+site_url: http://mkdocs.oitc.itn:8000/
 repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
-repo_name: GitHub
 edit_uri: https://github.com/it-novum/openITCOCKPIT-documentation/blob/main/en/docs/
+repo_name: GitHub
 dev_addr: 0.0.0.0:8000
 
 nav:
   - 'About openITCOCKPIT': 'index.md'
+  - 'Installation': 'installation.md'
+  - 'Beginners Guide':
+      - 'Beginners Guide': 'beginners/beginners.md'
+      - 'Container permissions': 'beginners/container-permissions.md'
+      - 'Create your first host': 'beginners/create-first-host.md'
+      - 'Monitoring through openITCOCKPIT Agent': 'beginners/openitcockpit-agent.md'
+      - 'Monitoring through Checkmk': 'beginners/monitoring-checkmk.md'
+      - 'Monitoring through NRPE': 'beginners/monitoring-nrpe.md'
+      - 'Monitoring through Prometheus': 'monitoring/prometheus/#uberwachung-mit-prometheus-ee'
+      - 'Check by SSH': 'beginners/check-by-ssh.md'
+      - 'Setup browser push notifications': 'beginners/setup-browser-push-notifications.md'
+      - 'Setup Email notifications': 'beginners/setup-email-notifications.md'
+  - 'Monitoring':
+      - 'Basic Principles': 'monitoring/basic-principles.md'
+      - 'User Interface': 'monitoring/user-interface.md'
+      - 'Dashboard': 'monitoring/dashboard.md'
+      - 'Acknowledging' : 'monitoring/acknowledging.md'
+      - 'Downtimes': 'monitoring/downtimes.md'
+      - 'Graphing': 'monitoring/graphing.md'
+      - 'Monitoring through Prometheus': 'monitoring/prometheus.md'
+      - 'Monitoring through Checkmk': 'beginners/monitoring-checkmk/#monitoring-mit-checkmk-ce'
+      - 'Monitoring through NRPE': 'beginners/monitoring-nrpe/#monitoring-durch-nrpe'
+      - 'Maps': 'monitoring/maps.md'
+      - 'Eventcorrelation': 'monitoring/eventcorrelation.md'
+  - 'Alerting / Notifications':
+      - 'Notifications': 'alerting/alerting.md'
+      - 'Setup Email notifications': 'beginners/setup-email-notifications/#e-mail-benachrichtigungen-einrichten'
+      - 'Setup browser push notifications': 'beginners/setup-browser-push-notifications/#browser-push-benachrichtigungen-einrichten'
+      - 'Axios Assyst': 'alerting/axiosassyst.md'
+      - 'Mattermost': 'alerting/mattermost.md'
+      - 'PagerDuty': 'alerting/pagerduty.md'
+      - 'Slack': 'alerting/slack.md'
+      - 'ServiceNow': 'alerting/servicenow.md'
+      - 'Custom Email Layouts': 'alerting/email-layouts.md'
+  - 'Reporting': 'reporting.md'
+  - 'Configuration':
+      - 'Container': 'configuration/container.md'
+      - 'Commands': 'configuration/commands.md'
+      - 'Hosts and Services': 'configuration/hosts-services.md'
+      - 'User management': 'configuration/usermanagement.md'
+      - 'Macros': 'configuration/macros.md'
+      - 'Timeperiods' : 'configuration/timeperiods.md'
+      - 'Calendar': 'configuration/calendar.md'
+      - 'Cronjobs': 'configuration/cronjobs.md'
+      - 'Packagemanager': 'configuration/packagemanager.md'
+      - 'Backup & Restore': 'configuration/backup-restore.md'
+      - 'Config file editor': 'configuration/config-file-editor.md'
+      - 'Proxy': 'configuration/proxy.md'
+      - 'Systemsettings': 'configuration/systemsettings.md'
+      - 'Distribute monitoring and satellites': 'configuration/distribute-module.md'
+      - 'SNMP Traps': 'configuration/snmp-trap-module.md'
+  - 'Development':
+      - 'API': 'development/api.md'
+      - 'Setup development system': 'development/setup-dev-env.md'
+      - 'Creating a new Module':
+          - 'Introduction': 'development/create-new-module/introduction.md'
+          - 'Create Module': 'development/create-new-module/bake-module.md'
+          - 'Hello World': 'development/create-new-module/hello-world.md'
+          - 'Database access': 'development/create-new-module/database.md'
+          - 'Additionalplugin_database': 'development/create-new-module/additionalplugin-database.md'
+      - 'Create a new check plugin': 'development/new-check-plugin.md'
+  - 'Additional reading':
+      - 'Logging': 'additional/logs.md'
+      - 'Theming and CI': 'additional/theming.md'
+      - 'Troubleshooting': 'additional/troubleshooting.md'
+      - 'Support': 'additional/support.md'
+      - 'Reset Passwords': 'additional/reset-passwords.md'
+      - 'Graphing Backend': 'additional/graphing-backend.md'
+      - 'Upgrade v3.x to v4.x': 'additional/upgradev3-v4.md'
+      - 'Running openITCOCKPIT behind a reverse proxy': 'additional/behind-reverse-proxy.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
@@ -14,19 +84,19 @@ extra_javascript:
   - copyright_year.js
 
 markdown_extensions:
-    - toc:
-        permalink: True
-    - pymdownx.highlight
-    - pymdownx.superfences
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-    - attr_list
-    - def_list
-    - markdown_include.include:
-          base_path: docs
-    - admonition
-    - featherlight
+  - toc:
+      permalink: True
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - def_list
+  - markdown_include.include:
+      base_path: docs
+  - admonition
+  - featherlight
 
 extra_css:
   - bootstrap-selection.css
@@ -40,8 +110,9 @@ plugins:
 #  Theme docs: https://squidfunk.github.io/mkdocs-material/getting-started/
 theme:
   name: material
-  language: de
+  language: en
   logo: images/logo/openitcockpit-light.png
+  favicon: images/favicon/favicon.png
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: blue

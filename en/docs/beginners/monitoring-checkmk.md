@@ -1,0 +1,1 @@
+/de/docs/beginners/monitoring-checkmk.md

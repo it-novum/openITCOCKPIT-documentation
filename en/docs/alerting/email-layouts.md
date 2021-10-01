@@ -1,0 +1,1 @@
+/de/docs/alerting/email-layouts.md

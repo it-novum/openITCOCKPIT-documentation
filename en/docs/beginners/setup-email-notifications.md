@@ -1,0 +1,1 @@
+/de/docs/beginners/setup-email-notifications.md
