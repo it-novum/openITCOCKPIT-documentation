@@ -1,0 +1,1 @@
+/de/docs/development/new-check-plugin.md
