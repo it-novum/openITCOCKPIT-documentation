@@ -1,0 +1,1 @@
+/de/docs/beginners/openitcockpit-agent.md

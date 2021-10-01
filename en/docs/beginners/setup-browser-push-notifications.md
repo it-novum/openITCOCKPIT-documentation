@@ -1,0 +1,1 @@
+/de/docs/beginners/setup-browser-push-notifications.md
