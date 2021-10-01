@@ -1,0 +1,1 @@
+/de/docs/configuration/distribute-module.md
