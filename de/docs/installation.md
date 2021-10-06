@@ -77,7 +77,7 @@ Die Konfiguration des Webservers wird automatisch durchgeführt. Die phpMyAdmin 
 
 ## Systemanforderungen
 
-- Ubuntu Linux 64 bit (20.04 LTS "Focal" und 18.04 LTS "Bionic"), Debian Linux 64 bit (10 "Buster")
+- Ubuntu Linux 64 bit (20.04 LTS "Focal" und 18.04 LTS "Bionic"), Debian Linux 64 bit (11 "Bullseye") und Debian Linux 64 bit (10 "Buster")
 - 2 CPU Kerne (x86-64 oder arm64)
 - 2 GB RAM
-- 20 GB freier Festplattenspeicher
+- 40 GB freier Festplattenspeicher

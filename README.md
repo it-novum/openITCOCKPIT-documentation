@@ -1,4 +1,4 @@
-# [Proof of Concept] openITCOCKPIT-documentation
+# [Work in progress] openITCOCKPIT-documentation
 
 This repository contains the documentation of [openITCOCKPIT](https://github.com/it-novum/openITCOCKPIT)
 in German and English language.
