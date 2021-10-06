@@ -1,35 +1,35 @@
-# About openITCOCKPIT EN
+# About openITCOCKPIT
 
-## Was ist openITCOCKPIT? 
+## What is openITCOCKPIT? 
 
-[openITCOCKPIT](https://openitcockpit.io/) ist ein Monitoring Tool basieren auf Nagios, Naemon und Prometheus. 
+[openITCOCKPIT](https://openitcockpit.io/) is an open source monitoring suite based on Nagios, Naemon and Prometheus
 
 
 ![openITCOCKPIT](images/raspberrypi.jpg){ align=center }
 
-*Grafik: openITCOCKPIT installiert auf einem Raspberry Pi 4*
+*Grafik: openITCOCKPIT installed on a Raspberry Pi 4*
 
 ## Demo
-Sie möchten openITCOCKPIT unkompliziert ausprobieren? Gerne können Sie sich auf unserem [Demo System](https://demo.openitcockpit.io/) austoben. Dieses wird täglich um 17:00 Uhr zurückgesetzt.
+Would you like to try out openITCOCKPIT? You are welcome to play around on our [demo system](https://demo.openitcockpit.io/). The demo system gets reset on a regular base.
 
-## Sicherheit
+## Security
 
-Bitte melden Sie eventuelle Schwachstellen und Sicherheitslücken in openITCOCKPIT oder Software, die von openITCOCKPIT genutzt wird unter: [security@openitcockpit.io](mailto:security@openitcockpit.io)
+Please send security vulnerabilities found in openITCOCKPIT or software that is used by openITCOCKPIT to: [security@openitcockpit.io](mailto:security@openitcockpit.io)
 
-Alle bekannten Schwachstellen sind hier einsehbar: [https://openitcockpit.io/security/](https://openitcockpit.io/security/)
+All disclosed vulnerabilities are listed here: [https://openitcockpit.io/security/](https://openitcockpit.io/security/)
 
 ## Support
-Professionelle Unterstützung und Support wird durch die [it-novum GmbH](https://it-services.it-novum.com/support-2/) angeboten.
+Commercial support and remote hands are available by [it-novum GmbH](https://it-services.it-novum.com/support-2/).
 
 ### Community
 
-* Offizieller [Discord Server](https://discord.gg/G8KhxKuQ9G)
-* [#openitcockpit](https://web.libera.chat/#openitcockpit) IRC Kanal auf Libera Chat
+* Official [Discord server](https://discord.gg/G8KhxKuQ9G)
+* [#openitcockpit](https://web.libera.chat/#openitcockpit) IRC channel on Libera Chat
 
 
-## Lizenz
+## License
 
-openITCOCKPIT und die Dokumentation stehen unter einer dualen Lizenz:
+openITCOCKPIT and the documentation are dual licensed:
 
 ```
 Copyright (C) 2015-2020  it-novum GmbH
@@ -58,3 +58,4 @@ under the terms of the openITCOCKPIT Enterprise Edition licence agreement.
 Licence agreement and licence key will be shipped with the order
 confirmation.
 ```
+
