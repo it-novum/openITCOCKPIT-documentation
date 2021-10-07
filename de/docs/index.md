@@ -2,7 +2,7 @@
 
 ## Was ist openITCOCKPIT? 
 
-[openITCOCKPIT](https://openitcockpit.io/) ist ein Monitoring Tool basieren auf Nagios, Naemon und Prometheus. 
+[openITCOCKPIT](https://openitcockpit.io/) ist ein Monitoring Tool basierend auf Nagios, Naemon und Prometheus. 
 
 
 ![openITCOCKPIT](images/raspberrypi.jpg){ align=center }
@@ -14,7 +14,7 @@ Sie möchten openITCOCKPIT unkompliziert ausprobieren? Gerne können Sie sich au
 
 ## Sicherheit
 
-Bitte melden Sie eventuelle Schwachstellen und Sicherheitslücken in openITCOCKPIT oder Software, die von openITCOCKPIT genutzt wird unter: [security@openitcockpit.io](mailto:security@openitcockpit.io)
+Bitte melden Sie eventuelle Schwachstellen und Sicherheitslücken in openITCOCKPIT oder in der Software, die von openITCOCKPIT genutzt wird unter: [security@openitcockpit.io](mailto:security@openitcockpit.io)
 
 Alle bekannten Schwachstellen sind hier einsehbar: [https://openitcockpit.io/security/](https://openitcockpit.io/security/)
 
