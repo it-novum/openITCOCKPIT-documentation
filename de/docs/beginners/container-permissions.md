@@ -4,7 +4,7 @@ Zu aller erst müssen Sie sich mit unserem "Container" basiertem Berechtigungsko
 Benutzer, Hosts, Kontakte, Vorlagen etc. sind an Container gebunden.
 
 !!! danger "Berechtigungen können ein sehr komplexes Thema werden"
-    Es wird dringen geraten, diesen Teil nicht zu überspringen!
+    Es wird dringend geraten, diesen Teil nicht zu überspringen!
 
 ## /root Container
 
