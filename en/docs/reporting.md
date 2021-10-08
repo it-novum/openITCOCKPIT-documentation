@@ -45,6 +45,7 @@ If you want to send a report automatically at an interval of day, week, month or
 
 When you have created an "Instant Report", click on the menu of the corresponding "Instant Report" (1) and then on the "Generate" button (2).
 
+![](/images/instantreports-generate.png)
 
 
 In the form that opens, you then enter the format in which the report is to be generated and the time period to be considered.
@@ -174,7 +175,7 @@ Then select the output format and the time period to be evaluated. After clickin
 
 In the main menu under System Configuration → System → Autoreport Globals, various standard settings for the autoreports can be set. Descriptions of the individual options can be found directly in the table under the "Info Button".
 
-[](/images/autoreportmodule-globalsinfo.png)
+![](/images/autoreportModule-globalsinfo.png)
 
 Please note that the options you set there affect all reports generated via the Autoreport module.
 will be affected!

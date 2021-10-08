@@ -199,7 +199,7 @@ Im Hauptmenü unter Systemkonfiguration → System → Autoreport Globals lassen
 den Autoreports einstellen. Beschreibungen zu den einzelnen Optionen finden sich direkt in der Tabelle unter dem "Info
 Button".
 
-![](/images/autoreportmodule-globalsinfo.png)
+![](/images/autoreportModule-globalsinfo.png)
 
 Bitte Beachten Sie, dass die Optionen die Sie dort setzen sich auf alle über das Autoreport-Modul generierten Berichte
 auswirkt!
