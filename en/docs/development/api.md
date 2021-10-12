@@ -2,7 +2,7 @@
 
 ### API Keys
 
-!!! warning "Authentifizierung"
+!!! warning "Authentication"
     We recommend the usage of API Keys as authentication method against the API
 
 
