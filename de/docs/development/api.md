@@ -8,7 +8,7 @@
 
 
 
-Um einen API-Key zu erstellen, müssen Sie die einstellungen zu Ihrem Profil öffnen. Dazu klicken Sie in openITCOCKPIT auf Ihren Namen.
+Um einen API-Key zu erstellen, müssen Sie die Einstellungen zu Ihrem Profil öffnen. Dazu klicken Sie in openITCOCKPIT auf Ihren Namen.
 
 ![apikey profile](/images/profile.png)
 
