@@ -173,6 +173,33 @@ immer es möglich ist.
 
 ![checkmk snmp services](/images/checkmk-snmp-services.png)
 
+### Beschreibung für SNMP Interfaces nutzen
+
+Abhängig vom zu überwachenden Gerät ist es empfehlenswert, anstelle des Index als Identifier für die Netzwerk-Interfaces,
+die SNMP Beschreibung (_description_) oder den Alias zu verwenden.
+
+Im Standard werden Interfaces über den Index überwacht. Dies lässt sich leicht am den Namen des Interfaces erkennen.
+![Checkmk network interfaces monitored by Index](/images/checkmk-snmp-interface-index.png)
+
+Wenn anstelle des Index die Beschreibung des Interfaces genutzt werden soll, muss dafür eine neue Checkmk Regel erstellt werden.
+
+Erstellen Sie dafür die Datei
+`/opt/openitc/check_mk/etc/check_mk/conf.d/wato/interface_description_rule.mk`
+mit folgendem Inhalt:
+```
+globals().setdefault('inventory_if_rules', [])
+
+inventory_if_rules = [
+{'id': '35a60268-6aa0-4fb8-8fed-ba51e6b1d1e3', 'value': {'discovery_single': (True, {'item_appearance': 'descr', 'pad_portnumbers': True}), 'matching_conditions': (True, {})}, 'condition': {}},
+] + inventory_if_rules
+```
+
+Neu erstellte Interface Checks werden nun die Beschreibung verwenden.
+
+![Checkmk network interfaces monitored by description](/images/checkmk-snmp-interface-description.png)
+
+Wenn anstelle der Beschreibung (_description_) der Alias verwendet werden soll, müssen Sie `'item_appearance': 'alias'` setzen.
+
 ## Fehlende Servicevorlagen für Checkmk erstellen.
 
 Abhängig von dem Gerät, auf dem Sie ein Discovery durchführen möchten, ist es möglich, dass die `Optionen` Auswahlbox
