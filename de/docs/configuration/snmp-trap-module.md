@@ -5,7 +5,7 @@
 Zur installation des SNMPTrapModule führen Sie folgendes Kommando aus:
 
 ```bash
-apt install openitcockpit-module-snmptrap
+apt-get install openitcockpit-module-snmp-trap
 ```
 
 ## Funktionsweise
