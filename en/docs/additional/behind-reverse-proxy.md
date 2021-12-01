@@ -1,7 +1,8 @@
 # Run openITCOCKPIT behind a reverse proxy
 
-!!! hint In order to run openITCOCKPIT behind a reverse proxy, you **do not have to make any
-adjustments** to the web server configuration of openITCOCKPIT!
+!!! hint 
+    In order to run openITCOCKPIT behind a reverse proxy, you **do not have to make any
+    adjustments** to the web server configuration of openITCOCKPIT!
 
 This documentation describes how to run openITCOCKPIT behind an Nginx or Apache2 reverse proxy.
 
