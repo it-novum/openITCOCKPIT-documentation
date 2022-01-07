@@ -11,7 +11,7 @@ zu finden.
 ## Verfügbare Einstellungen
 
 | Schlüssel | Beschreibung |
-| --- | --- |
+| -- | --- |
 | **SUDO\_SERVER** |  |
 | API\_KEY | API Schlüssel für die sudoserver socket API  |     
 | **WEBSERVER** |  |
@@ -59,6 +59,7 @@ zu finden.
 | LDAP.PASSWORD | Passwort für den `LDAP.USERNAME` |
 | LDAP.SUFFIX | Domainsuffix |
 | LDAP.USE_TLS | Wenn aktiviert, wird TLS Verschlüsselung anstatt Klartext für die LDAP verbindung genutzt |
+| LDAP.GROUP_QUERY | LDAP Filter um zu steuern, welche LDAP-Gruppen in die openITCOCKPIT Datenbank importiert werden sollen. |
 | SSO.CLIENT_ID | Client ID welche vom SSO Server generiert wurde |
 | SSO.CLIENT_SECRET | Client Secret welcher vom SSO Server generiert wurde |
 | SSO.AUTH_ENDPOINT | Authorisierungs Endpunkt des SSO Servers |

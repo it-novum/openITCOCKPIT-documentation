@@ -1,0 +1,1 @@
+/de/docs/configuration/ldap-integration.md
