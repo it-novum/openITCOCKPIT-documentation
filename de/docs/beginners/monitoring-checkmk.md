@@ -202,12 +202,9 @@ Wenn anstelle der Beschreibung (_description_) der Alias verwendet werden soll, 
 
 ## Fehlende Servicevorlagen für Checkmk erstellen.
 
-Abhängig von dem Gerät, auf dem Sie ein Discovery durchführen möchten, ist es möglich, dass die `Optionen` Auswahlbox
-leer ist und der
-Informationstext `Bevor Sie die folgenden Dienste überwachen können, muss eine entsprechende Servicevorlage erstellt werden.`
-erscheint, gefolgt von einer Tabelle.
-
-In diesem Fall müssen Sie die fehlenden Servicevorlagen erstellen.
+Abhängig von dem Gerät, auf dem Sie ein Discovery durchführen wollen, kann es vorkommen, dass das Auswahlfeld `Optionen` 
+leer ist und der Hinweistext `Bevor Sie die folgenden Dienste überwachen können, muss eine entsprechende Servicevorlage erstellt werden.`
+gefolgt von einer Tabelle erscheint. Ist dies der fall, so müssen Sie die fehlenden Servicevorlagen erstellen.
 
 ![check mk snmp missing servicetemplates](/images/check-mk-snmp-missing-service-template.png)
 
