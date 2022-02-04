@@ -21,8 +21,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'docker run --rm -v "$PWD":/docs -w /docs/de openitcockpit/mkdocs /usr/bin/mkdocs build'
-                sh 'docker run --rm -v "$PWD":/docs -w /docs/en openitcockpit/mkdocs /usr/bin/mkdocs build'
+                sh 'docker run --rm --user 111:116 -v "$PWD":/docs -w /docs/de openitcockpit/mkdocs /usr/bin/mkdocs build'
+                sh 'docker run --rm --user 111:116 -v "$PWD":/docs -w /docs/en openitcockpit/mkdocs /usr/bin/mkdocs build'
                 sh 'mkdir -p htdocs/en'
                 sh 'cp -r de/site/. htdocs/'
                 sh 'cp -r en/site/. htdocs/en'
