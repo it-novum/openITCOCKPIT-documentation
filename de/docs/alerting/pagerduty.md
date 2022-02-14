@@ -1,4 +1,4 @@
-# PagerDuty <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
+# PagerDuty <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
 ## Was kann ich mit dem PagerDuty Modul tun?
 
