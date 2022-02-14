@@ -43,7 +43,7 @@ echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/sta
 apt-get update
 ```
 
-## Installation von openITCOCKPIT
+## Installing openITCOCKPIT
 The actual installation is carried out by executing the following command:
 ```
 apt-get install openitcockpit
