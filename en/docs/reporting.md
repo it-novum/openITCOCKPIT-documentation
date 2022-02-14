@@ -1,30 +1,33 @@
 # Reporting
 
-openITCOCKPIT is able to generate situational reports. These reports can include a wide range of data such as: maintenance times, outages, availability and the current status of individual hosts and services. 
+As you would expect, openITCOCKPIT includes a reporting function. These reports can contain a wide variety of data such as maintenance times, failures, downtimes and the current status of individual hosts and services.
 
-## Instant Reports
+## Instant reports
 
-Instant Reports in openITCOCKPIT are a variant of reports that can be generated as HTML or PDF and optionally be sent at a user-defined interval.
+Instant reports in openITCOCKPIT are a reporting function that can be generated as HTML or PDF files and optionally sent at a user-defined interval.
 
-Instant Reports contain a summary of the status of hosts, services, host groups or service groups, depending on the selection.
+Instant reports also contain a summary of the status of hosts, services, host groups or service groups, depending on the options selected.
 
-### Create a Instant Reports
+### Generating an instant report
 
-To create an "Instant Report", first click on the "New" button in the "Instant Reports" overview.
+To generate an instant report, first click the “New” button in the “Instant Reports” overview.
 
-Then select a container in the form, assign a name and select the object type to be evaluated.
+Then select a container, assign a name and then select the object type to be evaluated.
 
-Depending on the selected object type, select either hosts, host groups, service or service groups to be evaluated in the following field.
+Depending on the object type selected, you can then select either hosts, host groups, services or service groups you would like to report on.
 
-The period specifies when the evaluation times should take place.
+The time range indicates the period of time over which the evaluation should take place.
 
-The reflection state defines whether either only a soft and hard state (hard state or soft state) or only a hard state should be considered.
+The reflection state defines whether either both a hard and soft state or only a hard state should be taken into account.
 
-You have the option to include maintenance times in the report by selecting the option "Include maintenance times".
+You have the option to take maintenance times into account in your reporting by selecting the “Include downtimes” option.
 
-If the "Summary Display" option is selected, instead of listing individual hosts and their services, only an overall view of the status of the host and services is displayed.
+If the option “Display summary ” is selected, instead of listing individual hosts and their services, only an overview of the status of the host and its services will be displayed.
 
-If you want to send a report automatically at an interval of day, week, month or year, you must activate the option "Send e-mail".There you can send the report to one or more users.
+If you want to automatically send a report every day, week, month or year, the “Send email” option must be activated.
+
+Once this option has been enabled, you can send reports to one or more users.
+
 
 | Field                      | Required                  | Description                                                  |
 | -------------------------- | ------------------------- | ------------------------------------------------------------ |
@@ -41,53 +44,44 @@ If you want to send a report automatically at an interval of day, week, month or
 | Sending Interval           | :fontawesome-solid-times: | Sending interval: DAY, WEEK, MONTH, YEAR                     |
 | User(s) to send            | :fontawesome-solid-times: | User(s) to whom the report is to be sent                     |
 
-### Generate a Instant Report
+### Generate the Report
 
-When you have created an "Instant Report", click on the menu of the corresponding "Instant Report" (1) and then on the "Generate" button (2).
+When you have created an “Instant Report”, click on the menu of the corresponding “Instant Report” (1)
+and then on the “Generate” button (2).
 
 ![](/images/instantreports-generate.png)
 
-
-In the form that opens, you then enter the format in which the report is to be generated and the time period to be considered.
-
+In the form that opens, choose the report format and the period you want the report to cover.
 The report will then be displayed in the browser or made available for download.
 
+## Current state report
 
+The “Current State Report” generates a report in HTML or PDF format based on the services selected.
 
-## Current Status Report
+In addition to the status filter functions, you can also filter according to confirmations, maintenance times and the type of test used.
 
-
-
-The "Current Status Report" generates a report in HTML or PDF format based on selected services.
-
-In addition to the status filter functions, it is also possible to filter by confirmations, maintenance times and the inspection type.
-
-The generated report contains the host status of the selected services as well as the various metrics (performance data) of the services.
+The generated report also contains the host status of the selected services as well as the various metrics (performance data) of the services.
 
 | Field         | Required                  | Description                       |
 | ------------- | ------------------------- | --------------------------------- |
 | Services      | :fontawesome-solid-times: | Services that are to be evaluated |
 | Report format | :fontawesome-solid-times: | Report or Format HTML or PDF      |
 
-## Maintenance Time Reports
+## Downtime reports
 
+Downtime reports in openITCOCKPIT provide information about which hosts or which hosts and services were undergoing maintenance and when. This is displayed visually using a calendar and diagrams system.
 
+### Creating a downtime report
 
-Maintenance time reports in openITCOCKPIT provide information about which hosts or which hosts and services were in a maintenance time and when. This is displayed visually using a calendar and diagrams.
+To create a downtime report, click on “Downtime reports” in the main menu.
 
-### Create a Maintenance Time Report
+There you can select whether only hosts or hosts and services should be evaluated.
 
+You can choose from two report formats: an HTML report that is displayed in the browser or a PDF report that can be downloaded.
 
+The period defines which downtimes should be taken into account.
 
-To create a maintenance time report, click on the item "Maintenance time reports" in the main menu.
-
-There you select whether only hosts or hosts and services are to be evaluated.
-
-For the report format, you have the choice between an HTML report that is displayed in the browser or a PDF report that is offered for download.
-
-The time period defines which maintenance times are to be taken into account.
-
-The reflection state defines whether either only a soft and hard state (hard state and soft state) or only a hard state should be taken into account.
+The reflection state defines whether either both a soft and hard state or only a hard state should be taken into account.
 
 | Field            | Required                  | Description                                                  |
 | ---------------- | ------------------------- | ------------------------------------------------------------ |
@@ -99,49 +93,47 @@ The reflection state defines whether either only a soft and hard state (hard sta
 | Reflection State | :fontawesome-solid-times: | The type of state to be evaluated. Hard state or soft and hard state |
 | Dynamic Colour   |                           | If there is an error, different colours are shown            |
 
-## Autoreports CE
+## Autoreports CE <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
-The auto report module in openITCOCKPIT is a configurable report that can be sent automatically. A report contains the downtime, maximum permissible downtime and the availability of the selected hosts and services.
+The autoreport module in openITCOCKPIT is a configurable report that can be sent out automatically. Reports contain the length of downtime, the maximum permissible downtime and the availability of the hosts and services that have been selected.
 
-### Create an Autoreport 
+### Creating an autoreport
 
+To create an autoreport, first click on the “New” button in the autoreports overview.
 
+The autoreport Wizard opens and will guide you through the steps for creating a report.
 
-To create an auto report, first click on the "New" button in the auto reports overview.
+First select a container for the report and then assign a name to it.
 
-The Auto report Wizard opens and guides you through the creation of the report.
+Then select a period to use for the evaluation.
 
-First select a container for the report and assign a name.
+The evaluation period defines when the evaluation should begin.
 
-Then select a time period for the evaluation.
+The send interval defines how often the report should be sent.
 
-The evaluation period defines the period of time from which the report is to be evaluated.
+You can then enter either the guaranteed availability (as a percentage) or the maximum number of outages you're willing to accept.
 
-The sending interval defines the period when the report is to be sent.
+The graphs displayed can be given either in percent or hours. This is defined by making the appropriate selection in the “Graph” field.
 
-After that, you either enter a guaranteed availability in percent or the maximum number of failures.
+The reflection state defines whether either both a soft and hard state or only a hard state should be taken into account.
 
-The displayed graphs can be shown either in percent or in hours. To specify this, you must make a selection in the "Graph" field.
+So that maintenance times are not displayed as downtimes in the report, you can activate the “Consider downtimes” option.
 
-The reflection state defines whether either only a soft and hard state (hard state and soft state) or only a hard state should be taken into account.
+To account for public holidays, you will need to activate the option “View public holidays” and then select a calendar.
 
-To prevent maintenance times from being displayed as failures in the report, you can activate the option "Consider maintenance times".
+At least one user must also be selected so that the report can be sent out.
 
-In order to additionally consider public holidays, activate the option "Consider public holidays" and then select a calendar.
+Now select the hosts to be evaluated in the report.
 
-In order for the report to be sent, at least one user must also be selected.
+An overview of the services for all the selected hosts will appear. Here you can choose how the selected items should be evaluated.
 
-In the next step, select the hosts that are to be evaluated in the report.
+In the last step you will see an overview of the settings you have configured for the report. If you are satisfied with all your selections, click "Done" and the configuration will be complete.
 
-An overview of the services of all selected hosts appears. Here you can select how they are to be evaluated.
+The report will now automatically be sent at the specified time. However, you also have the option of generating the report directly as a PDF or HTML file. To do this, click on the “Generate report” option in the menu for the corresponding report.
 
-In the last step you will see an overview of the configured settings for the report. If everything fits, click on "Done".
+From here you can select the output format and the time range to be evaluated. After clicking on “Generate report” you will either be offered the option to download the report as a PDF file or have it displayed directly in the browser as an HTML file.
 
-The report will now be sent automatically at the specified time. You also have the option of generating the report directly as a PDF or HTML file. To do this, click on "Generate Report" in the menu of the corresponding report.
-
-Then select the output format and the time period to be evaluated. After clicking on "Generate report", you will either be offered the report as a PDF for download or it will be displayed directly in the browser in the HTML version.
-
-#### Report Configuration
+#### Report configuration
 
 | Field                      | Required                  | Description                                                  |
 | -------------------------- | ------------------------- | ------------------------------------------------------------ |
@@ -171,11 +163,10 @@ Then select the output format and the time period to be evaluated. After clickin
 | Hosts         | :fontawesome-solid-times: | Hosts that are to be evaluated            |
 | Service RegEx |                           | Filter for services as regular expression |
 
-### Autoreport Globals
+### Autoreport global settings
 
-In the main menu under System Configuration → System → Autoreport Globals, various standard settings for the autoreports can be set. Descriptions of the individual options can be found directly in the table under the "Info Button".
+Various standard settings for the autoreports can be set in the main menu under System configuration → System → Autoreport global settings. Descriptions of the individual options can be found directly in the table under the “Info" button.
 
 ![](/images/autoreportModule-globalsinfo.png)
 
-Please note that the options you set there affect all reports generated via the Autoreport module.
-will be affected!
+Please note that the options you select will affect all reports generated by the autoreport module!
