@@ -1,6 +1,6 @@
 # Installation
 
-The installation of openITCOCKPIT is done via the package manager of the Linux distribution.
+openITCOCKPIT is installed via the package manager of your respective Linux distribution.
 
 ## Supported operating systems
 
@@ -13,9 +13,9 @@ The installation of openITCOCKPIT is done via the package manager of the Linux d
 ## arm64 / Raspberry Pi
 openITCOCKPIT and all components are also available for arm64 processors and the Raspberry Pi.
 
-The installation does not differ from a 64-bit system with AMD or Intel processor. If you want to use a Raspberry Pi, the [64-bit version of Raspberry Pi OS](https://downloads.raspberrypi.org/raspios_arm64/images/) must be used.
+The installation is the same as for a 64-bit system with an AMD or Intel processor. If you want to use a Raspberry Pi system, the [64-Bit Version von Raspberry Pi OS](https://downloads.raspberrypi.org/raspios_arm64/images/) must be used.
 
-## Include repository
+## Adding the repository
 ### Ubuntu
 
 ```
@@ -43,41 +43,41 @@ echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/sta
 apt-get update
 ```
 
-## Installing openITCOCKPIT
-The actual installation is performed by the following command:
+## Installation von openITCOCKPIT
+The actual installation is carried out by executing the following command:
 ```
 apt-get install openitcockpit
 ```
 
-After this, the basic configuration has to be done. In this step, for example, the first user for the web interface is created. Afterwards the rest of the configuration is done via the openITCOCKPIT web interface.
+You will now need to perform  the basic configuration. During this process, for example, the first user for the web interface will be created. The rest of the configuration is then carried out via the openITCOCKPIT web interface.
 
 ```
 /opt/openitc/frontend/SETUP.sh
 ```
 
-## Registration of the openITCOCKPIT Community Edition
+## Registering the openITCOCKPIT Community Edition
 
-This step is voluntary and optional. The functionality of openITCOCKPIT can be extended by modules. Some of them are available for free. To get access to the community modules you have to enter the openITCOCKPIT community key first. To do this, call 'System -> Registration' and insert the following key: 'e5aef99e-817b-0ff5-3f0e-140c1f342792'. 
+This step is optional and voluntary. You can expand your openITCOCKPIT installation's range of functions through the addition of modules. Several are available for free. In order to gain access to the community modules, you must first enter the openITCOCKPIT community key. To do this, click on `System -> Registration` and insert the following key: `e5aef99e-817b-0ff5-3f0e-140c1f342792`. 
 
-No further information is needed.
+No further information is required.
 
 ![Valid license](/images/openITCOCKPIT-v4-valid-license.png){ align=center }
 
-After successful activation the community modules are available under 'System Tools -> Package Manager'.
+After being successfully activated, the community modules will be available under `System Tools -> Package Manager`.
 
-## Installation of phpMyAdmin
+## Installing phpMyAdmin
 
-This step is optional. openITCOCKPIT uses a MySQL database. Normally the end user has no contact points with the database. Experienced users can install the tool `phpMyAdmin` to manage the database.
+This step is optional and voluntary. The openITCOCKPIT system uses a MySQL database. Generally speaking, end users will not directly interact with the database. Experienced users, however, can install the `phpMyAdmin` tool for managing the database.
 
 ```
 apt-get install phpmyadmin
 ```
 
-The configuration of the web server will be done automatically. The phpMyAdmin interface can be reached afterwards via `https://xxx.xxx.xxx.xxx/phpmyadmin`.
+The web server will be configured automatically. The phpMyAdmin interface can then be reached via `https://xxx.xxx.xxx.xxx/phpmyadmin`.
 
 ## System requirements
 
-- Ubuntu Linux 64 bit (20.04 LTS "Focal" and 18.04 LTS "Bionic"), Debian Linux 64 bit (11 "Bullseye") and Debian Linux 64 bit (10 "Buster")
+- Ubuntu Linux 64 bit (20.04 LTS “Focal” and 18.04 LTS “Bionic”), Debian Linux 64 bit (11 “Bullseye”) and Debian Linux 64 bit (10 “Buster”)
 - 2 CPU cores (x86-64 or arm64)
 - 2 GB RAM
-- 40 GB free hard disk space
+- 40 GB of free hard disk space
