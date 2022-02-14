@@ -5,17 +5,17 @@
 Das Graphing Backend von openITCOCKPIT läuft auf verschiedenen Docker Containern. Wir nutzen [Docker Compose](https://docs.docker.com/compose/)
 um die Container zu verwalten. Alle Container können mittels `systemd` kontrolliert werden.
 
-Graphing Backen starten:
+Graphing Backend starten:
 ```bash
 systemctl start openitcockpit-graphing.service
 ```
 
-Graphing Backen stoppen:
+Graphing Backend stoppen:
 ```bash
 systemctl stop openitcockpit-graphing.service
 ```
 
-Graphing Backen Status:
+Graphing Backend Status:
 ```bash
 systemctl status openitcockpit-graphing.service
 ```
@@ -26,7 +26,7 @@ systemctl status openitcockpit-graphing.service
 
 Sie können den Status der Container auch durch das Docker CLI abfragen
 
-Graphing Backen Status:
+Graphing Backend Status:
 ```bash
 docker container ps
 ```
