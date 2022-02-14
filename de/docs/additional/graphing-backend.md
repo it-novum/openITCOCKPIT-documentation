@@ -105,7 +105,7 @@ Das Speicherschema ist `/var/lib/graphite/whisper/<prefix>/<$HOSTNAME$>/<$SERVIC
 
 ![whisper file location](/images/whisper-location.png)
 
-Sie können das openITCOCKPIT Debugging Tool nutzen um die UUIDs durch Host und Servicenamen zu ersetzen.
+Sie können das openITCOCKPIT Debugging Tool nutzen, um die UUIDs durch Host und Servicenamen zu ersetzen.
 
 ```bash 
 ls -la /var/lib/graphite/whisper/openitcockpit/ | oitc debug -s
@@ -150,7 +150,7 @@ Navigieren Sie dazu nach `Systemkonfiguration -> System -> Konfigurationsdatei E
 |---|---|---|
 |graphite_port|2003|Carbon-Cache Server Adresse (Offener `LINE_RECEIVER_PORT` des Carbon-C-Relay)|
 |graphite_address|127.0.0.1|Carbon-Cache Server Adresse (Offene Adresse des Carbon-C-Relay)|
-|graphite_prefix|openitcockpit|Präfix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
+|graphite_prefix|openitcockpit|Präfix, welches zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
 
 ### Performance-daten in mitgeliefertem Graphite lesen
 
@@ -162,7 +162,7 @@ Navigieren Sie dazu nach `Systemkonfiguration -> System -> Konfigurationsdatei E
 |Konfigurationsschlüssel|Standardwert|Beschreibung|
 |---|---|---|
 |graphite_web_host|127.0.0.1|Adresse des Graphite-Web server, welche openITCOCKPIT nutzt um daten der Whisper Dateien abzufragen|
-|graphite_prefix|openitcockpit|Prefix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
+|graphite_prefix|openitcockpit|Prefix, welches zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
 |graphite_web_port|8888|Port des Graphite-Web Server|
 |use_https|No|Bestimmt ob HTTPS zur Verbindungserstellung genutzt werden soll. Nicht benötigt bei lokal laufenden Graphite-Web Instanzen|
 |use_proxy|No|Bestimmt ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll. Nicht benötigt bei lokal laufenden Graphite-Web Instanzen|
@@ -181,7 +181,7 @@ Konfigurationsschlüssel|Standardwert|Beschreibung|
 |---|---|---|
 |Grafana URL|grafana.docker|Adresse des Grafana Servers. `grafana.docker` wird automatisch zum ausgelieferten Grafana aufgelöst. |
 |Grafana API Schlüssel|Zufalls-generiert|Gespeichert unter `/opt/openitc/etc/grafana/api_key`. Nutzen Sie den Wert aus dieser Datei.|
-|Grafana Prefix|openitcockpit|Präfix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
+|Grafana Prefix|openitcockpit|Präfix, welches zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
 |Verbindung über HTTPS herstellen|Ja|Bestimmt ob HTTPS zu Verbindungsherstellung genutzt werden soll.|
 |Benutze Proxy|Nein|Bestimmt ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll.|
 |SSL-Zertifikat ignorieren|Ja|Selbstsignierten Zertifikaten wird vertraut|
@@ -189,10 +189,9 @@ Konfigurationsschlüssel|Standardwert|Beschreibung|
 |Hostgruppe|*leer*|Ist dieser Wert gesetzt, werden Grafana-Dashboards für alle Hosts der angegebenen Hostgruppe(n) generiert (Wenn leer wird für alle Hosts ein Dashboard generiert)|
 |Hostgruppen (ausgeschlossen)|*leer*|Wenn gesetzt werden **keine** Grafana-Dashboards für die Hosts in den angegebenen Hostgruppen erstellt|
 
-## Externen Graphite und Grafana Server nutzen (experten)
+## Externen Graphite und Grafana Server nutzen (Experten)
 
-Um die Systemauslastung auf verschiedene Nodes zu verteilen, haben Sie die möglichkeit externe System zum Speichern von
-Performance-daten zu konfigurieren.
+Um die Systemauslastung auf verschiedene Nodes zu verteilen, haben Sie die Möglichkeit, externe Systeme zum Speichern von Performancedaten zu konfigurieren.
 
 ### Performance-daten in externem Graphite speichern
 Navigieren Sie dazu nach `Systemkonfiguration -> System -> Konfigurationsdatei Editor` und wählen Sie die Datei
@@ -204,7 +203,7 @@ Navigieren Sie dazu nach `Systemkonfiguration -> System -> Konfigurationsdatei E
 |---|---|---|
 |graphite_port|2003|Standard `LINE_RECEIVER_PORT` von Graphite)|
 |graphite_address|xxx.xxx.xxx.xxx|Hostname oder IP-Adresse des Externen Graphite Server|
-|graphite_prefix|openitcockpit|Präfix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
+|graphite_prefix|openitcockpit|Präfix, welches zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
 
 ### Performance-daten von extern lesen (openITCOCKPIT selbst)
 
@@ -216,10 +215,10 @@ Navigieren Sie dazu nach `Systemkonfiguration -> System -> Konfigurationsdatei E
 |Konfigurationsschlüssel|Wert|Beschreibung|
 |---|---|---|
 |graphite_web_host|xxx.xxx.xxx.xxx|Hostname oder IP-Adresse des Externen Graphite-Web Server|
-|graphite_prefix|openitcockpit|Prefix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
+|graphite_prefix|openitcockpit|Prefix, welches zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>)|
 |graphite_web_port|80|Port des Externen Graphite-Web Server|
-|use_https|Yes/No|Bestimmt ob HTTPS zur Verbindungserstellung genutzt werden soll.|
-|use_proxy|Yes/No|Bestimmt ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll.|
+|use_https|Yes/No|Bestimmt, ob HTTPS zur Verbindungserstellung genutzt werden soll.|
+|use_proxy|Yes/No|Bestimmt, ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll.|
 
 Im nächsten Schritt öffnen Sie die `perfdatabackend.php` Konfigurationsdatei und stellen sicher, dass das ausgewählte
 Backend `Whisper` ist.
@@ -235,13 +234,13 @@ Konfigurationsschlüssel|Wert|Beschreibung|
 |---|---|---|
 |Grafana URL|xxx.xxx.xxx.xxx| Adresse des externen Grafana Server |
 |Grafana API Schlüssel|Zufalls-generiert|Es muss ein [Grafana API Schlüssel](#grafana-api-schlussel-erzeugen) mit "Editor" Berechtigungen erzeugt werden|
-|Grafana Prefix|openitcockpit|Präfix, welcher zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
-|Verbindung über HTTPS herstellen|Ja/Nein|Bestimmt ob HTTPS zu Verbindungsherstellung genutzt werden soll.|
-|Benutze Proxy|Ja/Nein|Bestimmt ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll.|
+|Grafana Prefix|openitcockpit|Präfix, welches zu jeder Metrik in Carbon angehängt wird (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
+|Verbindung über HTTPS herstellen|Ja/Nein|Bestimmt, ob HTTPS zu Verbindungsherstellung genutzt werden soll.|
+|Benutze Proxy|Ja/Nein|Bestimmt, ob der [Proxy Server](../../configuration/proxy/) genutzt werden soll.|
 |SSL-Zertifikat ignorieren|Ja/Nein|Selbst signierten Zertifikaten wird vertraut|
 |Dashboard Stil|hell|Hell oder Dunkler Stil von Grafana nutzen|
 |Hostgruppe|*leer*|Ist dieser Wert gesetzt, werden Grafana-Dashboards für alle Hosts der angegebenen Hostgruppe(n) generiert (Wenn leer wird für alle Hosts ein Dashboard generiert)|
-|Hostgruppen (ausgeschlossen)|*leer*|Wenn gesetzt werden **keine** Grafana-Dashboards für die Hosts in den angegebenen Hostgruppen erstellt|
+|Hostgruppen (ausgeschlossen)|*leer*|Wenn gesetzt, werden **keine** Grafana-Dashboards für die Hosts in den angegebenen Hostgruppen erstellt|
 
 #### Grafana API Schlüssel erzeugen
 ![new grafana api key](/images/Create-new-Grafana-API-Key.png)
@@ -319,7 +318,7 @@ sudo /usr/local/bin/rrd2whisper
 Die Ausgabe der Migration wird nach `/var/log/rrd2whisper.log` geloggt.
 
 
-Nutzen Sie den Parameter `--help` um alle Optionen sehen zu können.
+Nutzen Sie den Parameter `--help`, um alle Optionen sehen zu können.
 ```bash
 sudo /usr/local/bin/rrd2whisper -help
 ```
