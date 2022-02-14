@@ -2,24 +2,24 @@
 
 ## What is openITCOCKPIT? 
 
-[openITCOCKPIT](https://openitcockpit.io/) is an open source monitoring suite based on Nagios, Naemon and Prometheus
+[openITCOCKPIT](https://openitcockpit.io/) is a monitoring tool based on Nagios, Naemon and Prometheus. 
 
 
 ![openITCOCKPIT](images/raspberrypi.jpg){ align=center }
 
-*Grafik: openITCOCKPIT installed on a Raspberry Pi 4*
+*Graphic: openITCOCKPIT installed on a Raspberry Pi 4*
 
 ## Demo
-Would you like to try out openITCOCKPIT? You are welcome to play around on our [demo system](https://demo.openitcockpit.io/). The demo system gets reset on a regular base.
+Would you like to try out openITCOCKPIT in a relaxed environment? You're welcome to have a go on our [demo system](https://demo.openitcockpit.io/). It's reset on a daily basis.
 
 ## Security
 
-Please send security vulnerabilities found in openITCOCKPIT or software that is used by openITCOCKPIT to: [security@openitcockpit.io](mailto:security@openitcockpit.io)
+If you believe you have found any vulnerabilities or security issues in openITCOCKPIT or in the software used by openITCOCKPIT, please report these to: [security@openitcockpit.io](mailto:security@openitcockpit.io)
 
-All disclosed vulnerabilities are listed here: [https://openitcockpit.io/security/](https://openitcockpit.io/security/)
+All known vulnerabilities can be viewed here: [https://openitcockpit.io/security/](https://openitcockpit.io/security/)
 
 ## Support
-Commercial support and remote hands are available by [it-novum GmbH](https://it-services.it-novum.com/support-2/).
+Professional assistance and support is provided by [it-novum GmbH](https://it-services.it-novum.com/support-2/) angeboten.
 
 ### Community
 
@@ -27,9 +27,9 @@ Commercial support and remote hands are available by [it-novum GmbH](https://it-
 * [#openitcockpit](https://web.libera.chat/#openitcockpit) IRC channel on Libera Chat
 
 
-## License
+## Licence
 
-openITCOCKPIT and the documentation are dual licensed:
+openITCOCKPIT and its accompanying documentation are covered under a dual licence agreement:
 
 ```
 Copyright (C) 2015-2020  it-novum GmbH
@@ -58,4 +58,3 @@ under the terms of the openITCOCKPIT Enterprise Edition licence agreement.
 Licence agreement and licence key will be shipped with the order
 confirmation.
 ```
-
