@@ -1,21 +1,22 @@
-# Run openITCOCKPIT behind a reverse proxy
+# Using openITCOCKPIT behind a reverse proxy
 
-!!! hint 
-    In order to run openITCOCKPIT behind a reverse proxy, you **do not have to make any
-    adjustments** to the web server configuration of openITCOCKPIT!
+!!! hint
+    hint To be able to use openITCOCKPIT behind a reverse proxy, **no adjustments** have to be made to the openITCOCKPIT web server configuration!
 
-This documentation describes how to run openITCOCKPIT behind an Nginx or Apache2 reverse proxy.
 
-In the sample configurations shown, you must replace the following values with your values
+This documentation describes how openITCOCKPIT can be run behind an Nginx or Apache2 reverse proxy.
 
-| Value                                        | Description                                                       |
-| -------------------------------------------- | ----------------------------------------------------------------- |
-| openitcockpit.example.org                    | Subdomain which is used to access the openITCOCKPIT web frontend. |
-| /etc/ssl/certs/ssl-cert-snakeoil{.pem\|.key} | File path to the used TLS certificate to enable HTTPS             |
-| 207.154.223.22                               | Public IPv4 address of the reverse proxy                          |
-| 157.230.114.24                               | Internal IPv4 Address of openITCOCKPIT server                     |
+You will need to replace the values in the example configurations below with your own values.
 
-## Nginx as reverse proxy
+
+| Value                                         | Description                                                                 |
+| -------------------------------------------- | ---------------------------------------------------------------------------- |
+| openitcockpit.example.org                    | Subdomain used to call up the openITCOCKPIT web front end.  |
+| /etc/ssl/certs/ssl-cert-snakeoil{.pem\|.key} | File path to the TLS certificate used to activate HTTPS                |
+| 207.154.223.22                               | Public IPv4 address of the reverse proxy                                   |
+| 157.230.114.24                               | Internal IPv4 address of the openITCOCKPIT server                                |
+
+## Nginx as a reverse proxy
 
 Copy the following configuration to `/etc/nginx/sites-available/openitcockpit-proxy`
 
@@ -30,37 +31,38 @@ server {
 }
 
 server {
+
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     server_name  openitcockpit.example.org;
 
     server_tokens off;
-
+    
     # Set the IP Address or FQDN of your openITCOCKPIT Monitoring Server here
     set $oitcserver 157.230.114.24;
-
+    
     # Set the TLS certificate you like to use - for example Let’s Encrypt
     ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
     ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-
+    
     # Proxy openITCOCKPIT HTTP requests
     location / {
         proxy_pass https://$oitcserver;
         proxy_ssl_verify off;
-
+        
         proxy_set_header Host      $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
-
+    
     # Proxy Web Socket Connections
     location ~ ^/(sudo_server|push_notifications|nsta)$ {
         proxy_pass https://$oitcserver;
         proxy_ssl_verify off;
-
+        
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
+        
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
@@ -68,9 +70,8 @@ server {
 }
 ```
 
-Please make sure that you have customized all IP addresses.
-
-Finally, the new configuration must be activated.
+Please make sure you have amended all IP addresses to reflect your actual system values.
+Finally, your new configuration must be activated:
 
 ```plaintext
 ln -s /etc/nginx/sites-available/openitcockpit-proxy /etc/nginx/sites-enabled/openitcockpit-proxy
@@ -80,9 +81,10 @@ ln -s /etc/nginx/sites-available/openitcockpit-proxy /etc/nginx/sites-enabled/op
 systemctl restart nginx
 ```
 
-openITCOCKPIT should now be accessible via the reverse proxy.
+openITCOCKPIT should now be accessible via your reverse proxy.
 
-## Apache2 as Reverse Proxy
+
+## Apache2 as a reverse proxy
 
 Copy the following configuration to `/etc/apache2/sites-available/openitcockpit-proxy.conf`
 
@@ -131,12 +133,13 @@ Copy the following configuration to `/etc/apache2/sites-available/openitcockpit-
   ProxyPassReverse / https://openitcockpit.example.org/
   # If you use an ip address for external access
   #ProxyPassReverse / https://207.154.223.22/
+
 </VirtualHost>
 ```
 
-Please make sure that you have customized all IP addresses.
 
-To activate the new configuration, the required Apache modules must first be loaded.
+Please make sure you have amended all IP addresses to reflect your actual system values.
+To activate the new configuration, the required Apache modules must be loaded first.
 
 ```plaintext
 a2enmod http2
@@ -148,7 +151,7 @@ a2enmod headers
 a2enmod rewrite
 ```
 
-Finally, the new configuration must be activated.
+Finally, your new configuration must be activated:
 
 ```plaintext
 a2ensite openitcockpit-proxy
@@ -157,3 +160,4 @@ a2ensite openitcockpit-proxy
 ```plaintext
 systemctl restart apache2
 ```
+
