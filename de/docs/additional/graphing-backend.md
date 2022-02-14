@@ -84,7 +84,7 @@ Die Konfigurationsdatei wird automatisch unter `/opt/openitc/etc/carbon/local_se
 ### Grafana
 
 [Grafana](../../monitoring/graphing/#grafana) ist ein mächtiges und einfach zu benutzendes Tool um Graphen Dashboards zu
-erstellen. Es wird von openITCOCKPIT him hintergrund durch die API genutzt.
+erstellen. Es wird von openITCOCKPIT im Hintergrund durch die API genutzt.
 
 Die Grafana Weboberfläche kann durch die URL `https://<openITCOCKPIT-adresse>/grafana/` erreicht werden.
 
