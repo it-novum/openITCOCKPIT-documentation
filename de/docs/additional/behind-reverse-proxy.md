@@ -81,7 +81,7 @@ ln -s /etc/nginx/sites-available/openitcockpit-proxy /etc/nginx/sites-enabled/op
 systemctl restart nginx
 ```
 
-openITCOCKPIT sollten jetzt über den Reverse Proxy erreichbar sein.
+openITCOCKPIT sollte jetzt über den Reverse Proxy erreichbar sein.
 
 
 ## Apache2 als Reverse Proxy
