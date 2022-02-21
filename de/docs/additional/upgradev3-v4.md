@@ -37,7 +37,7 @@ openITCOCKPIT unterstützt kein Debian Stretch. Bei einer aktualisierung auf ope
 
 ### System vorbereiten
 
-Wenn Sie Ubuntu Xenial verwenden, müssen Sie das `lxd` Paket entfernen, da dies möglicherweise fehler beim Upgrade auf Ubuntu Bionic und openITCOCKPIT v4 verursachen könnte.
+Wenn Sie Ubuntu Xenial verwenden, müssen Sie das `lxd` Paket entfernen, da dies möglicherweise Fehler beim Upgrade auf Ubuntu Bionic und openITCOCKPIT v4 verursachen könnte.
 ```bash
 #only run on Ubuntu Xenial!
 apt-get remove lxd
@@ -161,13 +161,13 @@ deb http://security.debian.org/ buster/updates main contrib non-free
 **Führen Sie die Kommandos aus ihrem Kompatibilitätscheck-Skript aus um ihre openITCOCKPIT Installation zu aktualisieren**
 
 Während der aktualisierung werden Sie möglicherweise gefragt, ob Sie einige Konfigurationsdateien mit neueren Versionen
-überschreiben möchten. Diese Konfigurationsdateien gehören dem Betriebssystem an, Sie können aso wählen, ob Sie Ihre
+überschreiben möchten. Diese Konfigurationsdateien gehören dem Betriebssystem an, Sie können also wählen, ob Sie Ihre
 Version oder die neuere Version haben möchten. Dies hat keine Auswirkung auf die openITCOCKPIT aktualisierung.
 
-##### Ubuntu Xenial und Debian Stretch nutzer
+##### Ubuntu Xenial und Debian Stretch Nutzer
 
 Die openITCOCKPIT aktualisierung wird zusätzlich auch ihre Distribution aktualisieren (Ubuntu Xenial auf Ubuntu Bionic
-und Debian Stretch auf Debian Buster). Haben Sie eigene Software oder drittanbieter repositories eingebunden, müssen Sie
+und Debian Stretch auf Debian Buster). Haben Sie eigene Software oder Drittanbieter-Repositories eingebunden, müssen Sie
 zudem sicherstellen, dass diese Kompatibel mit Ubuntu Bionic oder Debian Buster ist.
 
 ### Schritt 4 - Benutzerpasswörter zurücksetzen
@@ -183,7 +183,7 @@ Um das Passwort eines einzelnen Benutzers zurückzusetzen, können Sie das folge
 oitc reset_password --print --enable
 ```
 
-Das System wird ein neues, Zufalls-generiertes Passwort erzeugen und an die E-Mail-Adresse des Benutzers senden.
+Das System wird ein neues, zufallsgeneriertes Passwort erzeugen und an die E-Mail-Adresse des Benutzers senden.
 
 `--print` zeigt das neue Passwort zusätzlich im Terminal an.
 
@@ -201,7 +201,7 @@ Um alle lokalen Benutzerpasswörter zurückzusetzen, können Sie folgendes Komma
 oitc update3_to4 --reset-all-passwords
 ```
 
-Das System wird neue, Zufalls-generierte Passwörter für jeden Benutzer erzeugen und an die jeweilige E-Mail-Adresse des
+Das System wird neue, zufallsgenerierte Passwörter für jeden Benutzer erzeugen und an die jeweilige E-Mail-Adresse des
 Benutzers senden.
 
 ### Schritt 5 - Browser Cache leeren
@@ -233,14 +233,14 @@ Speziell bei einer aktualisierung von Ubuntu Xenial oder Debian Stretch wird ein
 
 #### Betriebssystem aktualisieren
 
-**Zunächst müssen alle System updated installiert werden**
+**Zunächst müssen alle Systemupdates installiert werden**
 
 ```bash
 apt-get update
 apt-get dist-upgrade
 ```
 
-**Danach führen Sie das openITCOCKPIT Satelliten checklisten skript aus und folgen den Anweisungen**
+**Danach führen Sie das openITCOCKPIT Satelliten Checklisten Skript aus und folgen den Anweisungen**
 
 ```bash
 curl -s https://raw.githubusercontent.com/it-novum/openITCOCKPIT/development/bin/scripts/oitcSat3to4.sh | sudo /bin/bash
@@ -341,10 +341,9 @@ sind nötig, falls Sie ihre Performance Graphen in der neueren Version nutzen m�
 
 #### Table nagios servicechecks is 36626 MB but /var/lib/mysql only has 16316 MB free disk space
 
-Während des Aktualisierungsprozess werden alle MySQL Tabellen von UTF8 auf UTF8mb4 konvertiert. Dieser Prozess benötigt
-einigen Festplatten speicherplatz. Bitte Ignorieren Sie diese Fehler nicht.
+Während des Aktualisierungsprozess werden alle MySQL Tabellen von UTF8 auf UTF8mb4 konvertiert. Dieser Prozess benötigt einigen Festplattenspeicherplatz. Bitte Ignorieren Sie diese Fehler nicht.
 
-#### openITCOCKPIT v4 aktualisierung von Ubuntu Xenial 16.04 auf Bionic 18.04 schlägt fehl durch lxd Paket
+#### openITCOCKPIT v4 Aktualisierung von Ubuntu Xenial 16.04 auf Bionic 18.04 schlägt fehl durch lxd Paket
 
 Wenn die Aktualisierung von Ubuntu Xenial fehlschlägt durch das `lxd` Paket und folgender Fehler erscheint: 
 
