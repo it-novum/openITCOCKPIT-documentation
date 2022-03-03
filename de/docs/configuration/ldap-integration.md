@@ -2,7 +2,7 @@
 
 openITCOCKPIT kann für die Benutzerauthentifizierung mit einem LDAP Server verbunden werden. Primär wird dabei die
 Verwendung von
-_Microsoft Active Directory_ empfohlen und unterstützt. Die Nutzung eines _Open LDAP Servers_ ist ebenfalls möglich,
+_Microsoft Active Directory_ empfohlen und unterstützt. Die Nutzung eines _OpenLDAP Servers_ ist ebenfalls möglich,
 jedoch können dann einige Funktionen nur eingeschränkt oder gar nicht zur Verfügung stehen.
 
 ## LDAP Authentifizierung
@@ -59,7 +59,7 @@ Dies kann auch als Test genutzt werden um zu überprüfen, ob die Verbindung mit
 
 **Es wird empfohlen mindestendes einen lokalen Administrator-Benutzer zu erstellen, damit im Falle eines Ausfalls des LDAP-Servers weiterhin eine Zugriffsmöglichkeit auf openITCOCKPIT besteht.**
 
-!!! info
+!!! important
     Für openITCOCKPIT ist es erforderlich, dass die Felder:
      
     Microsoft AD: `'samaccountname', 'mail', 'sn', 'givenname'`
@@ -70,6 +70,9 @@ Dies kann auch als Test genutzt werden um zu überprüfen, ob die Verbindung mit
     Sobald openITCOCKPIT Benutzer ausblendet, wird dies mit der Zeile `2022-01-07 15:42:06 warning: Dropped 51/100 AD/LDAP users due to missing required fields. [samaccountname, mail, sn, givenname]` in der Logdatei `/opt/openitc/frontend/logs/error.log` angezeigt.
 
 ## Importieren von Gruppen
+!!! info
+    Requires openITCOCKPIT ≥ 4.4.0
+
 
 openITCOCKPIT importiert automatisch alle 24 Stunden alle verfügbaren LDAP Gruppen und speichert diese in der Datenbank.
 
