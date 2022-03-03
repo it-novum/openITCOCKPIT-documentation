@@ -1,4 +1,4 @@
-# LDAP Integration
+**# LDAP Integration
 
 openITCOCKPIT kann für die Benutzerauthentifizierung mit einem LDAP Server verbunden werden. Primär wird dabei die
 Verwendung von
@@ -7,7 +7,7 @@ jedoch können dann einige Funktionen nur eingeschränkt oder gar nicht zur Verf
 
 ## LDAP Authentifizierung
 
-Um eine Authentifizierung gegen LDPA zu aktivieren, müssen Sie zuerst
+Um eine Authentifizierung gegen LDAP zu aktivieren, müssen Sie zuerst
 unter `Systemkonfiguration -> System -> `[`Systemeinstellungen`](/configuration/systemsettings/)
 die Daten Ihres LDAP-Servers hinterlegen.
 
@@ -25,7 +25,7 @@ Es wird die Verwendung von _Microsoft Active Directory_ empfohlen.
 | LDAP.BASEDN      | Die zu durchsuchende Base-DN                                                                                                  | DC=ad,DC=example,DC=com                                                |
 | LDAP.USERNAME    | Benutzername (sAMAccountName) welcher von openITCOCKPIT genutzt werden soll                                                   | ldap_search                                                            |
 | LDAP.PASSWORD    | Password des Benutzers                                                                                                        |                                                                        |
-| LDAP.SUFFIX      | Der zu verwendente Suffix                                                                                                     | @ad.example.com                                                        |
+| LDAP.SUFFIX      | Der zu verwendende Suffix                                                                                                     | @ad.example.com                                                        |
 | LDAP.USE_TLS     | Plain = Klartext, StartTLS = versucht eine verschlüsselte Verbindung zu nutzen, TLS = erzwingt eine verschlüsselte Verbindung | StartTLS                                                               |
 | LDAP.GROUP_QUERY | LDAP Filter zum Filtern von Benutzergruppen                                                                                   | ObjectClass=Group                                                      |
 
@@ -43,7 +43,7 @@ Es wird die Verwendung von _Microsoft Active Directory_ empfohlen.
 | LDAP.BASEDN      | Die zu durchsuchende Base-DN                                                                                                  | `dc=example,dc=com`                           |
 | LDAP.USERNAME    | Benutzername (als DN), die von openITCOCKPIT genutzt werden soll                                                              | `uid=ldap_search,ou=people,dc=example,dc=com` |
 | LDAP.PASSWORD    | Password des Benutzers                                                                                                        |                                               |
-| LDAP.SUFFIX      | Der zu verwendente Suffix                                                                                                     | `<leer>`                                      |
+| LDAP.SUFFIX      | Der zu verwendende Suffix                                                                                                     | `<leer>`                                      |
 | LDAP.USE_TLS     | Plain = Klartext, StartTLS = versucht eine verschlüsselte Verbindung zu nutzen, TLS = erzwingt eine verschlüsselte Verbindung | `Plain`                                       |
 | LDAP.GROUP_QUERY | LDAP Filter zum Filtern von Benutzergruppen                                                                                   | `ObjectClass=posixGroup`                      |
 
@@ -71,7 +71,7 @@ Dies kann auch als Test genutzt werden um zu überprüfen, ob die Verbindung mit
 
 ## Importieren von Gruppen
 !!! info
-    Requires openITCOCKPIT ≥ 4.4.0
+    Benötigt openITCOCKPIT ≥ 4.4.0
 
 
 openITCOCKPIT importiert automatisch alle 24 Stunden alle verfügbaren LDAP Gruppen und speichert diese in der Datenbank.
@@ -121,7 +121,7 @@ _User Container Rollen_ entscheiden Benutzer Rollen darüber, welche Aktionen vo
 
 ### Importieren eines LDAP-Benutzers mit automatischer Gruppenzuweisung (Beispiel)
 In diesem Beispiel wird ein neuer Benutzer über LDAP importiert. Das System hat dabei die User Container Rollen und die Benutzer Rolle automatisch dem Benutzer zugewiesen.
-![Import a new LDAP-User and automatically assign user container roles and a user role](/images/import-ldap-user-auto-assign-groups.png)
+![Import a new LDAP-User and automatically assign user container roles and a user role](/images/import-ldap-user-auto-assign-groups.png)**
 
 
 
