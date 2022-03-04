@@ -115,7 +115,7 @@ Klicke auf der Kontaktseite auf das Zahnrad auf der rechten Seite.
 ![](/images/contacts-editcontact.png)
 
 Bearbeite den Kontakt, über den PagerDuty benachrichtigt werden soll, füge den Befehl "*host-notify-by-pagerduty*" zu
-den Host Commands hinzu und "*service-notify-by-pagerduty*" den Service Commands.
+den Host Commands hinzu und "*service-notify-by-pagerduty*" zu den Service Commands.
 
 ![](/images/contacts-pagerdutynotifications.png)
 
