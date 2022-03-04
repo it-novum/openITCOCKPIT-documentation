@@ -14,7 +14,7 @@ Für die Benachrichtigungen von Hosts und Services werden jeweils unterschiedlic
 
 ```sh
 # Für HTML E-Mails
-cp /opt/openitc/frontend/src/Template/email/html/notification_host.php /opt/openitc/frontend/src/Template/email/html/custom_layout_notification_host.php
+cp /opt/openitc/frontend/src/Template/email/HTML/notification_host.php /opt/openitc/frontend/src/Template/email/HTML/custom_layout_notification_host.php
 
 # Für Plain Text E-Mails
 cp /opt/openitc/frontend/src/Template/email/text/notification_host.php /opt/openitc/frontend/src/Template/email/text/custom_layout_notification_host.php
@@ -23,14 +23,14 @@ cp /opt/openitc/frontend/src/Template/email/text/notification_host.php /opt/open
 **Services**
 ```sh
 # Für HTML E-Mails
-cp /opt/openitc/frontend/src/Template/email/html/notification_service.php /opt/openitc/frontend/src/Template/email/html/custom_layout_notification_service.php
+cp /opt/openitc/frontend/src/Template/email/HTML/notification_service.php /opt/openitc/frontend/src/Template/email/HTML/custom_layout_notification_service.php
 
 # Für Plain Text E-Mails
 cp /opt/openitc/frontend/src/Template/email/text/notification_service.php /opt/openitc/frontend/src/Template/email/text/custom_layout_notification_service.php
 ```
 
 !!! warning
-    Wichtig ist, das die Datei mit `_host.php` bzw. `_service.php` enden muss. Der Dateiname darf nur aus Buchstaben, Zahlen, Bindestrichen und Unterstrichen bestehen.
+    Wichtig ist, dass die Datei mit `_host.php` bzw. `_service.php` enden muss. Der Dateiname darf nur aus Buchstaben, Zahlen, Bindestrichen und Unterstrichen bestehen.
 
 Um eine Test-E-Mail zu versenden, kann der Befehl `oitc` genutzt werden.
 ```
@@ -54,20 +54,16 @@ Im Anschluss nutzt openITCOCKPIT das eigene Layout als Vorlage für E-Mails.
 
 ![custom email layout](/images/alerting/openitcockpit-custom-email-layout.png)
 
-## Html und Text E-Mails
+## HTML und Text E-Mails
 Über den Parameter `--format` kann angegeben werden, welche Art von E-Mail verschickt wird.
 
 | Format | Beschreibung |
 |------|------------|
-| `both`   | Versendet eine Html + Text E-Mail. Der Client kann entscheiden, welches Format angezeigt wird. |
-| `html` | Versendet nur eine Html E-Mail         |
-| `text`   | Versendet nur eine Text E-Mail         |
+| `both`   | Versendet eine HTML + Text E-Mail. Der Client kann entscheiden, welches Format angezeigt wird. |
+| `html` | Versendet nur eine HTML E-Mail |
+| `text`   | Versendet nur eine Text E-Mail |
 
 Über den Parameter `--no-attachments` können alle E-Mail Anhänge wie Logos und Graphen deaktiviert werden, um Speicherplatz zu sparen.
 
 ## E-Mail Logo ändern
 Das verwendete Logo kann über das [Design Module](/additional/theming/) geändert werden.
-
-
-
-
