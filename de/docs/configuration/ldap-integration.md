@@ -1,4 +1,4 @@
-**# LDAP Integration
+# LDAP Integration
 
 openITCOCKPIT kann für die Benutzerauthentifizierung mit einem LDAP Server verbunden werden. Primär wird dabei die
 Verwendung von
