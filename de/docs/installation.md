@@ -8,7 +8,10 @@ Die Installation von openITCOCKPIT erfolgt über den Paketmanager der Linux-Dist
     - Focal (20.04)
     - Bionic (18.04)
 - Debian
+    - Bullseye (11)
     - Buster (10)
+- Enterprise Linux
+    - Red Hat 8
 
 ## arm64 / Raspberry Pi
 openITCOCKPIT und alle Komponenten stehen auch für arm64 Prozessoren und den Raspberry Pi zur Verfügung.
