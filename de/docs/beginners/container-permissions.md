@@ -55,7 +55,7 @@ Unser Container Baum sieht nun so aus:
 Benutzer können Sie zu verschiedenen Ebenen im Container Baum zuweisen.
 
 - Wenn Sie einen Benutzer dem Container `/root/` zuweisen, so wird dieser Benutzer ein globaler Administrator und
-  hat ***Zugriff auf alle Objekte aller Mandanten**
+  hat **Zugriff auf alle Objekte aller Mandanten**
 - Wenn Sie einen Benutzer dem Container `/root/Demo Tenant` zuweisen, hat der Benutzer Zugriff auf alle Objekte
   innerhalb des Mandanten **sowie aller Untercontainer**
 - Wenn Sie einen Benutzer den Container `/root/Demo Tenant/Team Developers` Zuweisen, hat der Benutzer Zugriff auf alle
