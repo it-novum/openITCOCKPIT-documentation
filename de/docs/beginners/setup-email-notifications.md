@@ -103,13 +103,13 @@ Belassen Sie die voreingestellten Einstellungen so wie Sie sind und klicken auf 
 
 ![submit custom notifications](/images/openITCOCKPIT-submit-custom-service-notification.png)
 
-Überprüfen Sie nun Ihr Postfach auf neue E-Mails
+Überprüfen Sie nun Ihr Postfach auf neue E-Mails.
 
 ![Service notification](/images/openITCOCKPIT-service-notification.png)
 
 ## E-Mail nicht angekommen?
 
-Führen Sie den Befehl `oitc debug --tailf` aus um mehr Informationen aus den Logs zu bekommen
+Führen Sie den Befehl `oitc debug --tailf` aus, um mehr Informationen aus den Logs zu bekommen.
 
 ```
 [31.01.2018 - 12:22:51] SERVICE NOTIFICATION: Demo Contact[376a2dcf-ba7c-40be-b5ef-1b46c59a85cf];My first Linux host[c963e9f2-a1cb-43f6-8ad6-0babe02294c9];Ping[80ff370a-deff-4b8b-a37c-677a22d2e7a6];CUSTOM (OK);service-notify-by-cake[a517bbb6-f299-4b57-9865-a4e0b70597e4];PING OK - Packet loss = 0%, RTA = 0.28 ms;John Doe;test notification
