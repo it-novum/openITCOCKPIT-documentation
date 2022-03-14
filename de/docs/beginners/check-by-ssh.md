@@ -45,7 +45,7 @@ Navigieren Sie nach `Monitoring -> Objekte -> Kommandos` und stellen Sie sicher,
 existiert. Dies ist ein Standardkommando von openITCOCKPIT. Falls das Kommando nicht verfügbar ist, klicken Sie auf die
 Schaltfläche `+ Neu` um es zu erstellen.
 
-| Kommando definition      |                         |
+| Kommando-Definition      |                         |
 | ----------- | ------------------------------------ |
 | Command type |    Service check command  |
 | Command name | `check_by_ssh` |
@@ -61,7 +61,7 @@ Makros mit dem Plugin Pfad, kann man sich hier viel Arbeit sparen.
 
 Navigieren Sie nach `Monitoring -> Objekte -> Benutzerdefinierte Makros` und klicken Sie auf die Schaltfläche `+ Neu`.
 
-| Makro definition      |                         |
+| Makro-Definition      |                         |
 | ----------- | ------------------------------------ |
 | Makro name | `$USER2$` (or any other) |
 | Value | `/usr/lib/nagios/plugins` |
@@ -73,7 +73,7 @@ Navigieren Sie nach `Monitoring -> Services` und klicken Sie auf die Schaltfläc
 
 Wählen Sie ihren Host und die vordefinierte Servicevorlage `CHECK_BY_SSH`.
 
-| Servicevorlagen definition      |                         |
+| Servicevorlagen-Definition      |                         |
 | ----------- | ------------------------------------ |
 | Service name | `CHECK_BY_SSH` |
 | Service name | `CPU load` |
@@ -82,7 +82,7 @@ Wählen Sie ihren Host und die vordefinierte Servicevorlage `CHECK_BY_SSH`.
 | Username ($ARG1) | `monitoring` |
 | Command ($ARG1) | `$USER2$/check_load -w 15,10,5 -c 30,25,20` |
 
-Um fortzufahren klicken Sie auf `Erstelle Service`.
+Um fortzufahren, klicken Sie auf `Erstelle Service`.
 
 `$USER2$` wird automatisch ersetzt mit dem Wert, der im vorhergehenden Makro gespeichert wurde.
 
