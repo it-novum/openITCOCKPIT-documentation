@@ -56,7 +56,7 @@ Weisen Sie ihren Benutzer dem Kontakt zu und aktivieren die Option `Push-Benachr
     Artikels
 
 Sie können auch verschiedene Benachrichtigungskommandos kombinieren, wie zum Beispiel `notify by email` und `browser
-notifications etc.
+notifications` etc.
 
 ![contact browser push notfications](/images/contact-browser-push-notifications.png)
 
