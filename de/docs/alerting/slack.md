@@ -17,7 +17,7 @@ Unter "Systemkonfiguration → APIs → Slack" sind die Einstellungen für das S
 Example**:[https://hooks.slack.com/services/](https://hooks.slack.com/services/)[...](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
 | OAuth Access Token | :warning: | Das Token erhält man von Slack für seinen Workspace Wird nur benötigt, wenn die Zwei-Wege Integration aktiviert ist |
 | Enable Two-Way Integration |     | Über die Zwei-Wege Integration ist es Slack möglich Acknowledgements für Host und Services an openITCOCKPIT zu senden Für diese Option ist es erforderlich, dass der openITCOCKPIT Server über das Internet erreichbar ist |
-| Request URL |     | Wird von openITCOCKPIT generiert und gibt die Webhook URL für Slack an Zuerst muss ein benutzerdefinierter API-Key) mit openITCOCKPIT erstellt werden |
+| Request URL |     | Wird von openITCOCKPIT generiert und gibt die Webhook URL für Slack an. Zuerst muss ein benutzerdefinierter API-Key mit openITCOCKPIT erstellt werden. |
 | Use Proxy Server |     | Gibt an, ob der konfigurierte Proxy verwendet werden soll |
 
 ## Einrichtung
