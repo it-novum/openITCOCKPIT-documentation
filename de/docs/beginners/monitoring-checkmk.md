@@ -13,7 +13,7 @@ openITCOCKPIT Kern klein und flexibel zu halten.
     Um Zugriff auf die Community Module zu erhalten, wird eine Registrierung Ihrer openITCOCKPIT Instanz mit der **
     kostenlosen** Community Lizenz vorausgesetzt.
 
-Navigieren sie nach `Verwaltung -> Systemwerkzeuge -> Paketmanager` und installieren Sie das *CheckmkModule*
+Navigieren Sie nach `Verwaltung -> Systemwerkzeuge -> Paketmanager` und installieren Sie das *CheckmkModule*
 
 ![packagemanager install checkmk](/images/package-manager-install-checkmk.png)
 
@@ -102,11 +102,11 @@ Das ist alles, was Sie auf dem Remote Host erledigen müssen.
 
 ### Zielhost scannen, um Checks automatisch erstellen zu können
 
-im Kontextmenü der Hosts wählen Sie die Option `Checkmk Erkennung`
+Im Kontextmenü der Hosts wählen Sie die Option `Checkmk Erkennung`.
 
 ![checkmk discovery](/images/checkmk-discovery.png)
 
-Nun wählen Sie den Checkmk Agent zur Erkennung nutzen. Als Datasource wählen Sie `Checkmk Agent`aus. 
+Nun wählen Sie den Checkmk Agent zur Erkennung nutzen. Als Datasource wählen Sie `Checkmk Agent` aus. 
 
 ![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
 
@@ -285,14 +285,13 @@ Kommandozeilenbefehl verweist auf ein Checkmk Skript auf dem openITCOCKPIT Serve
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem der Checkmk Agent installiert werden soll |
+| Container | :fontawesome-solid-times: | Container, in dem der Checkmk Agent installiert werden soll |
 | Name | :fontawesome-solid-times: | Name des Checkmk Agenten |
 | Beschreibung |  | Beschreibung des Checkmk Agenten |
 | Kommandozeile | :fontawesome-solid-times: | Kommandozeilenbefehl für das Checkmk Agenten Skript |
 
 ### Checkmk Agenten herunterladen
 
-Checkmk Agenten können Sie ganz einfach über openITCOCKPIT Herunterladen, indem Sie nach `Monitoring -> Checkmk -> Checkmk-Agenten`
-Navigieren und dort auf den Reiter `Agent downloads`
+Checkmk Agenten können Sie ganz einfach über openITCOCKPIT herunterladen, indem Sie nach `Monitoring -> Checkmk -> Checkmk-Agenten` navigieren und dort auf den Reiter `Agent downloads` gehen.
 
 ![checkmk downloads](/images/checkmk-agent-downloads.png)
