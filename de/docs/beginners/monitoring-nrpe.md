@@ -24,7 +24,7 @@ ln -s /usr/lib/nagios/plugins/check_nrpe /opt/openitc/nagios/libexec/check_nrpe
 Um das neue Plugin nutzen zu können, müssen Sie ein neues Kommando unter `Objekte -> Kommandos` erstellen. Dazu klicken
 dort auf die Schaltfläche `+ Neu`.
 
-| Kommando definition      |                         |
+| Kommando-Definition      |                         |
 | ----------- | ------------------------------------ |
 | Command type |    Service check command  |
 | Command name | `check_nrpe_simple` |
@@ -36,10 +36,10 @@ dort auf die Schaltfläche `+ Neu`.
 Um das `check_nrpe` Plugin zu nutzen, müssen Sie zudem eine neue Servicevorlage erstellen. Dazu navigieren Sie
 nach `Monitoring -> Vorlagen -> Servicevorlagen` und klicken auf die Schaltfläche `+ Neu`.
 
-Setzen Sie den Container auf `/root` damit die Servicevorlage für alle Nutzer des Systems sichtbar wird. Als Name
+Setzen Sie den Container auf `/root`, damit die Servicevorlage für alle Nutzer des Systems sichtbar wird. Als Name
 vergeben wir `CHECK_BY_NRPE_SIMPLE`
 
-| Servicevorlagen definition      |                         |
+| Servicevorlagen-Definition      |                         |
 | ----------- | ------------------------------------ |
 | Template name | `CHECK_BY_NRPE_SIMPLE` |
 | Template Type | `Generic templates` |
@@ -72,7 +72,7 @@ allowed_hosts=127.0.0.1,::1,172.16.166.154
 Die Standardkonfiguration kommt mit vordefinierten Basischecks. Wir nutzen diese Beispielchecks nun.
 
 In der Standardkonfiguration wird der Check die Festplatte `/dev/hda1` überprüfen, welche es auf den meisten Systemen
-nicht mehr gibt. In unserem fall ersetzen wir dies durch `/dev/vda1`.
+nicht mehr gibt. In unserem Fall ersetzen wir dies durch `/dev/vda1`.
 
 ```
 command[check_users]=/usr/lib/nagios/plugins/check_users -w 5 -c 10
