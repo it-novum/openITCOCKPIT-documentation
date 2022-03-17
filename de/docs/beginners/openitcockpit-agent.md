@@ -100,7 +100,7 @@ nutzen [https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-
 
 ## Push Modus
 
-Wählen Sie den Push Modus um fortzufahren.
+Wählen Sie den Push Modus, um fortzufahren.
 
 ![agent push or pull use push](/images/agent-push-or-pull-use-push.png)
 
@@ -109,9 +109,9 @@ openITCOCKPIT Monitoring Agenten zu modifizieren. Sie müssen nur das Betriebssy
 möchten und klicken auf die Schaltfläche "Weiter".
 
 Setzen Sie die öffentliche IP-Adresse oder FQDN Ihres openITCOCKPIT Servers im Feld `openITCOCKPIT Server Adresse` und
-tragen den API-Key, welchen der Agent nutzen soll in das Feld `openITCOCKPIT API Schlüssel`
+tragen den API-Key, welchen der Agent nutzen soll in das Feld `openITCOCKPIT API Schlüssel`.
 
-Klicken Sie auf die Schaltfläche `Nächster` um fortzufahren
+Klicken Sie auf die Schaltfläche `Nächster`, um fortzufahren.
 
 !!! danger "Sicherheitshinweis!"
     Es wird dringend empfohlen einen neuen Benutzer mit sehr wenigen Berechtigungen zu erstellen und einen API-Key für
@@ -124,31 +124,30 @@ Im dritten Schritt wird Ihnen gezeigt, wo Sie den openITCOCKPIT Monitoring
 Agenten [herunterladen](https://openitcockpit.io/download_agent/) und die Konfigurationsdatei ablegen können.
 
 Kopieren Sie die angezeigte Konfigurationsdatei an den angegebenen Pfad und starten Sie den openITCOCKPIT Monitoring
-Agent Dienst neu. Die Kommandos und Dateipfade hängen vom genutzten Betriebssystem ab. Klicken Sie auf `Nächster` um
+Agent Dienst neu. Die Kommandos und Dateipfade hängen vom genutzten Betriebssystem ab. Klicken Sie auf `Nächster`, um
 fortzufahren.
 
 ![agent config push](/images/agent-install-config-push.png)
 
 Jeder Agent sendet eine eindeutige Kennung an den openITCOCKPIT Server. Um unautorisierte Agenten daran zu hindern Check
 Ergebnisse zu übertragen, müssen alle im Push Modus arbeitenden Agenten manuell zu einem Host zugewiesen werden. Klicken
-Sie auf `Nächster` um fortzufahren.
+Sie auf `Nächster`, um fortzufahren.
 
 ![host to agent mapping](/images/map-host-to-agent.png)
 
 Das System wird grundlegende Health Metriken wie CPU, Arbeitsspeicher und SWAP standardmäßig sammeln. Zusätzlich dazu
 können Sie weitere Prozesse und Dienste auswählen, die Sie überwachen möchten. Haben Sie die gewünschten Services
-ausgewählt, klicken Sie auf "Fertig" um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
+ausgewählt, klicken Sie auf "Fertig", um das openITCOCKPIT Monitoring Agent Setup abzuschließen.
 
 !!! Info 
     Da der Agent im Push Modus arbeitet, ist es möglich, dass openITCOCKPIT bisher noch keine
     Daten empfangen hat und daher keine Services anzeigen kann. Sollte dies der Fall sein, so klicken Sie auf 
-    :fontawesome-solid-arrow-left: um auf den vorhergehenden Schritt zurückzukehren, warten 30 Sekunden und klicken
+    :fontawesome-solid-arrow-left:, um auf den vorhergehenden Schritt zurückzukehren, warten 30 Sekunden und klicken
     anschließend wieder auf die Schaltfläche `Nächster`.
 
 ![create services push](/images/agent-create-services-push.png)
 
-Der letzte Schritt erinnert Sie daran die Monitoring-Konfiguration zu aktualisieren. Bitte klicken
-auf [Aktualisieren der Überwachungskonfiguration](../create-first-host/#aktualisieren-der-uberwachungskonfiguration)
+Der letzte Schritt erinnert Sie daran die Monitoring-Konfiguration zu aktualisieren. Bitte klicken Sie auf [Aktualisieren der Überwachungskonfiguration](../create-first-host/#aktualisieren-der-uberwachungskonfiguration)
 
 ![services created push export](/images/agent-services-created-successfully-push.png)
 
@@ -172,4 +171,3 @@ Für weitere Informationen können Sie die Dokumentation
 nutzen [https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status](https://github.com/it-novum/openitcockpit-agent-go/wiki/Determining-the-host-status)
 
 ![agent push host status](/images/agent-push-host-status.png)
-
