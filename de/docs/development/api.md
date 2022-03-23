@@ -172,7 +172,7 @@ if __name__ == '__main__':
 openITCOCKPIT bietet zwei unterschiedliche Methoden, Daten geordnet als Listen abzufragen.
 #### Scroll Modus (empfohlen)
 
-Wir empfohlen den Scroll-Modus für alle API Anfragen auf `/index` Endpunkte und für Suchanfragen.
+Wir empfehlen den Scroll-Modus für alle API Anfragen auf `/index` Endpunkte und für Suchanfragen.
 
 Im Scroll-Modus enthält die Antwort keine genaue Zählung, wie viele Objekte in der Datenbank für die angegebenen Filter gefunden wurden. Dies verkürzt die Antwortzeit der API deutlich.
 
