@@ -61,6 +61,7 @@ nav:
     - 'SNMP Traps': 'configuration/snmp-trap-module.md'
   - 'Development':
     - 'API': 'development/api.md'
+    - 'Datenbankschema': 'development/database-schema.md'
     - 'Entwicklungsumgebung einrichten': 'development/setup-dev-env.md'
     - 'Ein neues Modul erstellen':
       - 'Einleitung': 'development/create-new-module/introduction.md'
