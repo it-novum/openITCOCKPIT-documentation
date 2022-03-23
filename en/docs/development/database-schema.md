@@ -1,4 +1,4 @@
-# Datenbankschema
+# Database schema
 
 !!! Danger "Danger"
 
