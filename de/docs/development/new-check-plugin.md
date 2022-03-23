@@ -5,8 +5,8 @@ Sie [diesen Guide um sich eine openITCOCKPIT Entwicklungsumgebung zu erstellen](
 
 openITCOCKPIT nutzt ein Plugin basiertes system um den Status von Hosts und Services zu überprüfen. Die Plugin API ist
 zu 100 % kompatibel mit der [Nagios](https://nagios-plugins.org/doc/guidelines.html)
-, [Naemon](https://www.naemon.org/documentation/usersguide/pluginapi.html)
-, [Shinken](https://www.naemon.org/documentation/usersguide/pluginapi.html)
+, [Naemon](https://www.naemon.io/documentation/usersguide/pluginapi.html)
+, [Shinken](https://www.naemon.io/documentation/usersguide/pluginapi.html)
 und [Icinga 1.x](https://icinga.com/docs/icinga1/latest/en/pluginapi.html) Plugin API. Standardmäßig wird openITCOCKPIT
 mit einem standardset an Plugins zum grundlegenden Überprüfen von Netzwerk features wie Ports, laufende Prozesse, CPU
 Auslastung und so weiter.

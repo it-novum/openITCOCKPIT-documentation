@@ -63,7 +63,7 @@ Event Handler werden ausgeführt, wenn ein Host oder Service:
 - geht zunächst ein einen HARD Problemstatus
 - Erholt sich anfänglich von einem SOFT- oder HARD-Problemstatus
 
-Weitere Informationen zu Event Handler finden Sie in der [Offiziellen Naemon Dokumentation](https://www.naemon.org/documentation/usersguide/eventhandlers.html).
+Weitere Informationen zu Event Handler finden Sie in der [Offiziellen Naemon Dokumentation](https://www.naemon.io/documentation/usersguide/eventhandlers.html).
 
 ### Standardmakros und Benutzerdefinierte Makros
 
