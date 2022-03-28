@@ -13,7 +13,13 @@ Scrollen Sie in den Profileinstellungen bis zu dem Punkt "API-Keys" und klicken 
 
 ![new api key](/images/profile-newapikey.png)
 
-Für den API Key muss nur eine Beschreibung vergeben werden. In dem Feld "API key (nur lesbar)" wird der API Key erzeugt und kann dort herauskopiert werden. Auf wunsch kann man über die Schaltfläche "Generiere neuen API-Key" einen neuen Schlüssel generieren lassen.
+Für den API Key muss nur eine Beschreibung vergeben werden. In dem Feld "API key (nur lesbar)" wird der API Key erzeugt und kann dort herauskopiert werden.
+
+Um Anmeldungen (beispielsweise mit der Mobilen Website) zu erleichtern, wird zusätzlich ein QR-Code generiert,
+der den aktuellen API Key enthält. Dieser kann mit dem Smartphone gescannt werden.
+
+Auf wunsch kann man über die Schaltfläche "Generiere neuen API-Key" einen neuen Schlüssel generieren lassen.
+
 
 ![generate new api key](/images/profile-newapikeypen.png)
 
@@ -22,7 +28,7 @@ Zum Schluss muss nur noch auf Speichern gedrückt werden und der API-Key ist ers
 Die erstellten API-Keys können über die Liste "API keys" eingesehen werden.
 
 ### Beispiele
-Die folgenden Beispiel zeigen, wie man mit unterschiedlichen Programmiersprachen eine HTTP POST Anfrage an die openITCOCKPIT API senden kann.
+Die folgenden Beispiele zeigen, wie man mit unterschiedlichen Programmiersprachen eine HTTP POST Anfrage an die openITCOCKPIT API senden kann.
 
 #### PHP
 ```sh

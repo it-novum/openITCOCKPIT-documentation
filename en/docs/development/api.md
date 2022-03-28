@@ -14,7 +14,12 @@ In the profile settings scroll down until you find the "API-Key" Section and cli
 ![new api key](/images/profile-newapikey.png)
 
 You need to specify a description for the key. 
-In the "API-Key (read only)" field you can see the generated key. If you need to regenerate or rotate the key you can use the button "Generate new key" 
+In the "API-Key (read only)" field you can see the generated key.
+
+In order to facilitate authentication (e.g. with the mobile website) a QR code, containing the current 
+API key is also generated. This can be scanned with a smartphone
+
+If you need to regenerate or rotate the key you can use the button "Generate new key" 
 
 ![generate new api key](/images/profile-newapikeypen.png)
 
