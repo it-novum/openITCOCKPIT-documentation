@@ -14,7 +14,7 @@ Im Feld `Ihre Server-URL` geben Sie bitte die URL oder IP-Adresse Ihres openITCO
 
 #### Erstellung des API Keys
 Um sich einloggen zu können, müssen Sie zunächst einen API Key zur nutzung der Mobile webseite auf
-Ihrem openITCOCKPIT System erstellen ([siehe API Key erstellen](../development/api/#api-keys)). Zum einfacheren 
+Ihrem openITCOCKPIT System erstellen ([siehe API Key erstellen](../../development/api/#api-keys)). Zum einfacheren 
 übertragen des API Keys auf das Mobile endgerät, scannen Sie einfach den QR-Code mit einem entsprechendem
 QR-Code Scanner und kopieren sie den API-Key. Den kopierten Key können Sie einfach im Feld `Ihr Api-Key` einfügen.
 
@@ -34,7 +34,7 @@ Mit einem klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefi
 
 #### Prüfzeit zurücksetzen (Reset Check time) <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter 
-`Aktionen`. Danach klicken Sie die Schaltfläche "Prüfzeit zurücksetzen". Die Aktion wird sofort ausgeführt und benötigt
+`Aktionen`. Danach klicken Sie die Schaltfläche `Prüfzeit zurücksetzen`. Die Aktion wird sofort ausgeführt und benötigt
 keine weiteren Informationen.
 
 Weitere informationen zu [Prüfzeitraum zurücksetzen](../../monitoring/user-interface/#prufzeitraum-zurucksetzen)
@@ -44,7 +44,7 @@ Weitere informationen zu [Prüfzeitraum zurücksetzen](../../monitoring/user-int
 
 #### Wartungszeitraum planen (Downtime) <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
-Danach klicken Sie die Schaltfläche "Plane Wartung".
+Danach klicken Sie die Schaltfläche `Plane Wartung`.
 
 Danach verfahren Sie wie im Abschnitt [Wartungszeit erstellen](#wartungszeit-erstellen) beschrieben.
 
@@ -56,7 +56,7 @@ Weitere Informationen zu [Plane Wartung](../../monitoring/user-interface/#plane-
 
 #### Status bestätigen (Acknowledgement) <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
-Danach klicken Sie die Schaltfläche "Status bestätigen".
+Danach klicken Sie die Schaltfläche `Status bestätigen`.
 
 Haben Sie einen Host ausgewählt, so haben Sie die möglichkeit den Status für den Host oder den Host und seine Services
 zu bestätigen.
@@ -65,27 +65,27 @@ Weitere Informationen zu [Hoststatus bestätigen](../../monitoring/user-interfac
 
 #### Flattererkennung ein/ausschalten (Flapping) <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
-Danach klicken Sie die Schaltfläche "Aktiviere Flattererkennung".
+Danach klicken Sie die Schaltfläche `Aktiviere Flattererkennung`.
 
 Weitere Informationen zu [Flap Detection](../../configuration/hosts-services/#flap-detection)
 
 
 #### Benachrichtigungen ein/ausschalten (Notifications) <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
-Danach klicken Sie die Schaltfläche "Benachrichtigungen ein/ausschalten".
+Danach klicken Sie die Schaltfläche `Benachrichtigungen ein/ausschalten`.
 
 Mit dieser Option können Sie Benachrichtigungen für den Host oder den Host und seine Services vorübergehend deaktivieren.
 Ist ein Service ausgewählt, so wird entsprechend nur die Benachrichtigungen für den Service vorübergehend deaktiviert.
 
 #### Passive Übertragung eines Prüfergebnisses (Passive transfer check result) <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Service aus der Service Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
-Danach klicken Sie die Schaltfläche "Passive Übertragung eines Prüfergebnisses".
+Danach klicken Sie die Schaltfläche `Passive Übertragung eines Prüfergebnisses`.
 
 Weitere Informationen zu [Passive Übertragung eines Prüfergebnisses für Services](../../monitoring/user-interface/#passive-ubertragung-eines-prufergebnisses_1)
 
 #### Benutzerdefinierte Benachrichtigung senden (Send custom service notification) <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Service aus der Service Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
-Danach klicken Sie die Schaltfläche "Benutzerdefinierte Benachrichtigung senden".
+Danach klicken Sie die Schaltfläche `Benutzerdefinierte Benachrichtigung senden`.
 
 Weitere Informationen zu [Benutzerdefinierte Benachrichtigung senden](../../monitoring/user-interface/#benutzerdefinierte-servicebenachrichtigung-senden)
 
