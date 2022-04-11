@@ -97,7 +97,7 @@ Objekte aus und klicken auf die Schaltfläche `Aktionen`. Die ausgewählte aktio
 angewandt. 
 
 #### Host und Service Wartungszeiten (Downtimes)
-Eine Übersicht aller aktuell laufenden, geplanten, vergangenen sowie wiederkehrenden Wartungszeiten finden Sie 
+Eine Übersicht aller Wartungszeiten sowie wiederkehrenden Wartungszeiten finden Sie 
 im Menü unter den Punkten `Host Wartungszeiten` und `Service Wartungszeiten`. 
 
 ![downtimes host current filled](/images/mobile-website/downtimes-host-current-filled.png){ width="300" }
@@ -159,18 +159,18 @@ Bei hosts ist lediglich noch die Option zum Setzen der downtimes auf dessen Serv
 ##### Wartungszeit abbrechen
 
 Wartungszeiten können über die Mobile Webseite auch abgebrochen werden. Dazu suchen Sie die entsprechende Wartungszeit aus 
-den Listen `Aktuell` oder `Geplant` aus und klicken auf das Abfalleimer Symbol. 
+der Liste aus und klicken auf das Papierkorb-Symbol. 
 
-![downtime service select cancel](/images/mobile-website/downtime-service-select-cancel.png){ width="300" }
+![downtime host select cancel](/images/mobile-website/downtimes-host-select-cancel.png){ width="300" }
 
 Es erscheint ein Popup, welches zur bestätigung der Löschung auffordert.
 
-![downtime service cancel overlay](/images/mobile-website/downtime-service-cancel.png){ width="300" }
+![downtime host cancel overlay](/images/mobile-website/downtime-host-cancel.png){ width="300" }
 
 Wiederkehrende Wartungszeiten können abgebrochen werden, indem auf die entsprechende Wiederkehrende Wartungszeit geklickt 
 wird und danach `Downtime abbrechen`. 
 
-![downtime service cancel recurring overlay](/images/mobile-website/downtime-service-cancel-recurring-downtime.png){ width="300" }
+![downtime host cancel recurring overlay](/images/mobile-website/downtime-host-cancel-recurring-downtime.png){ width="300" }
 
 ## Customization
 

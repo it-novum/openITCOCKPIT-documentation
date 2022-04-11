@@ -93,7 +93,7 @@ be checkboxes displayed for every list item. Now you can select the desired obje
 The selected action will be executed for all selected objects.
 
 #### Host and Service downtimes
-Current, planned, past and recurring host and service downtimes are also displayed in the mobile website. For a downtime
+Downtimes and recurring downtimes are also displayed in the mobile website. For a downtime
 overview please navigate in the menu to `Host downtimes` or `Service downtimes`.
 
 ![downtimes host current filled](/images/mobile-website/downtimes-host-current-filled.png){ width="300" }
@@ -107,7 +107,7 @@ downtimes for its services too.
 
     ###### Create downtime
 
-    To crate a downtime, navigate in the menu to `Host downtimes` or `Service downtimes`. After that click on the button
+    To create a downtime, navigate in the menu to `Host downtimes` or `Service downtimes`. After that click on the button
     `New`.
 
     Now select the desired hosts or services from the selectbox. The field `Downtime type` is only available for host
@@ -151,18 +151,18 @@ downtimes for its services too.
 ##### Cancel downtime
 
 Downtimes can also be cancelled with the mobile website. Therefor you need to select the desired downtime from the list
-`current` or `planned` and click on the bin icon.
+ and click on the bin icon.
 
-![downtime service select cancel](/images/mobile-website/downtime-service-select-cancel.png){ width="300" }
+![downtime service select cancel](/images/mobile-website/downtimes-host-select-cancel.png){ width="300" }
 
 A popup which prompt you to confirm the cancellation will be displayed.
 
-![downtime service cancel overlay](/images/mobile-website/downtime-service-cancel.png){ width="300" }
+![downtime service cancel overlay](/images/mobile-website/downtime-host-cancel.png){ width="300" }
 
 Recurring downtimes can be cancelled if you select the desired recurring downtime from the `recurring` tab and click 
 on `Cancel downtime` in the information popup.
 
-![downtime service cancel recurring overlay](/images/mobile-website/downtime-service-cancel-recurring-downtime.png){ width="300" }
+![downtime service cancel recurring overlay](/images/mobile-website/downtime-host-cancel-recurring-downtime.png){ width="300" }
 
 ## Customization
 
