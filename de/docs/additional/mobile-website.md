@@ -2,6 +2,43 @@
 
 ## Installation
 
+Die Mobile Webseite ist so konzipiert, dass Sie auf einem eigenen Server betrieben werden kann.  
+
+Um eine Instanz der Mobilen Webseite zu erzeugen, benötigen Sie eine openITCOCKPIT Enterprise Lizenz, welche Sie 
+berechtigt, die Mobile Webseite zu installieren. Bitte Kontaktieren Sie uns über unser [Sales-Kontaktformular](https://it-services.it-novum.com/)
+
+Sind die voraussetzungen dafür geschaffen, benötigen Sie auf ihrem neuen System Docker. 
+
+### Authentifizierung und herunterladen des Images
+Bevor Sie das Docker image herunterladen können, müssen Sie sich bei unserer Docker Registry anmelden:
+
+```bash
+docker login https://cr.openitcockpit.io
+```
+
+Der Befehl fordert Sie auf, einen Benutzernamen sowie ein Passwort einzugeben. 
+Als Benutzername geben Sie bitte die E-Mail-Adresse ein, welche mit Ihrem openITCOCKPIT Enterprise Lizenzschlüssel 
+registriert ist. Als Passwort geben Sie Ihren Lizenzschlüssel ein.
+
+Nach erfolgreicher Authentifizierung können Sie das Docker image herunterladen:
+
+```bash
+docker pull cr.openitcockpit.io/openitcockpit-mobile
+```
+
+### Docker container starten
+Den Container können Sie mit folgendem Befehl starten:
+
+```bash
+docker run --rm -it -p 4443:443 -p 8898:80 --name mobile cr.openitcockpit.io/openitcockpit-mobile
+```
+
+Danach können Sie die Seite mit Ihrem Mobilen Endgerät öffnen:
+
+```text
+https://<hostname oder IP adresse>:4443
+```
+
 ## Benutzung
 
 ![login](/images/mobile-website/login-screen.png){ width="300" }
@@ -48,9 +85,9 @@ Danach klicken Sie die Schaltfläche `Plane Wartung`.
 
 Danach verfahren Sie wie im Abschnitt [Wartungszeit erstellen](#wartungszeit-erstellen) beschrieben.
 
-Hier können keine Wiederkehrenden Wartungszeiten eingerichtet
-werden. Wie Sie eine Wiederkehrende Wartungszeit einrichten können wird im abschnitt 
-[Wiederkehrende Wartungszeit erstellen](#wiedekehrende-wartungszeit-erstellen) erläutert.
+Hier können keine wiederkehrenden Wartungszeiten eingerichtet
+werden. Wie Sie eine wiederkehrende Wartungszeit einrichten können, wird im Abschnitt 
+[wiederkehrende Wartungszeit erstellen](#wiedekehrende-wartungszeit-erstellen) erläutert.
 
 Weitere Informationen zu [Plane Wartung](../../monitoring/user-interface/#plane-wartung)
 
@@ -81,7 +118,7 @@ Ist ein Service ausgewählt, so wird entsprechend nur die Benachrichtigungen fü
 Wählen Sie den gewünschten Service aus der Service Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
 Danach klicken Sie die Schaltfläche `Passive Übertragung eines Prüfergebnisses`.
 
-Weitere Informationen zu [Passive Übertragung eines Prüfergebnisses für Services](../../monitoring/user-interface/#passive-ubertragung-eines-prufergebnisses_1)
+Weitere Informationen zu [passive Übertragung eines Prüfergebnisses für Services](../../monitoring/user-interface/#passive-ubertragung-eines-prufergebnisses_1)
 
 #### Benutzerdefinierte Benachrichtigung senden (Send custom service notification) <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Service aus der Service Liste aus und klicken Sie anschließend auf den Reiter `Aktionen`.
@@ -167,7 +204,7 @@ Es erscheint ein Popup, welches zur bestätigung der Löschung auffordert.
 
 ![downtime host cancel overlay](/images/mobile-website/downtime-host-cancel.png){ width="300" }
 
-Wiederkehrende Wartungszeiten können abgebrochen werden, indem auf die entsprechende Wiederkehrende Wartungszeit geklickt 
+Wiederkehrende Wartungszeiten können abgebrochen werden, indem auf die entsprechende wiederkehrende Wartungszeit geklickt 
 wird und danach `Downtime abbrechen`. 
 
 ![downtime host cancel recurring overlay](/images/mobile-website/downtime-host-cancel-recurring-downtime.png){ width="300" }

@@ -2,6 +2,43 @@
 
 ## Installation
 
+The Mobile Website is designed to run on its own server.
+
+To create an instance of the Mobile Website you need an openITCOCKPIT Enterprise License, which entitles you to install
+the Mobile Website. Please contact us via our [sales contact form](https://it-services.it-novum.com/)
+
+Once the requirements are met, you will need Docker on your new system.
+
+### Authentifizierung und herunterladen des Images
+Before you can download the Docker image, you must register with our Docker Registry:
+
+```bash
+docker login https://cr.openitcockpit.io
+```
+
+The command prompts you to enter a username as well as a password.
+As username please enter the e-mail address which is registered with your openITCOCKPIT Enterprise license key. As 
+password enter your license key.
+
+After successful authentication you can download the Docker image:
+
+```bash
+docker pull cr.openitcockpit.io/openitcockpit-mobile
+```
+
+### Docker container starten
+You can start the container with the following command:
+
+```bash
+docker run --rm -it -p 4443:443 -p 8898:80 --name mobile cr.openitcockpit.io/openitcockpit-mobile
+```
+
+After that you can open the page with your mobile device:
+
+```text
+https://<hostname oder IP adresse>:4443
+```
+
 ## Usage
 
 ![login](/images/mobile-website/login-screen.png){ width="300" }
