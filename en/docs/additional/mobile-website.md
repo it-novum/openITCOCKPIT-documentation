@@ -9,7 +9,7 @@ the Mobile Website. Please contact us via our [sales contact form](https://it-se
 
 Once the requirements are met, you will need Docker on your new system.
 
-### Authentifizierung und herunterladen des Images
+### Authentication and downloading the image
 Before you can download the Docker image, you must register with our Docker Registry:
 
 ```bash
@@ -26,7 +26,7 @@ After successful authentication you can download the Docker image:
 docker pull cr.openitcockpit.io/openitcockpit-mobile
 ```
 
-### Docker container starten
+### Starting the Docker container
 You can start the container with the following command:
 
 ```bash
