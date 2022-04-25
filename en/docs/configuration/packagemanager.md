@@ -7,7 +7,7 @@ The openITCOCKPIT package manager allows modules to be installed in openITCOCKPI
 A valid licence is required to use the package manager. To gain access to the free modules you need to have at least a community licence which you can find on the [openitcockpit.io website](https://openitcockpit.io/download_server/). This licence must be entered in openITCOCKPIT.
 Access to the server's console must also be provided.
 
-## Installation von Modulen
+## Installing modules
 
 Installing modules is simple. The overview page of the package manager lists the different modules that are available. To install a single, individual module, click on the "Install" button for that module. A window will then open and display the commands required for managing packages for the particular operating system hosting the openITCOCKPIT server.
 
