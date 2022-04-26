@@ -22,7 +22,7 @@ To finalize the creation click on "Save". Afterward, the API-Key is created.
 
 The generated API-Keys can be viewed over the list "API Keys"
 
-### Beispiele
+### Examples
 The following examples show how to send a HTTP POST request to the openITCOCKPIT API with different programming languages. 
 
 #### PHP
