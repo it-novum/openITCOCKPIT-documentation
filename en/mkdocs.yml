@@ -79,6 +79,7 @@ nav:
       - 'Graphing Backend': 'additional/graphing-backend.md'
       - 'Upgrade v3.x to v4.x': 'additional/upgradev3-v4.md'
       - 'Running openITCOCKPIT behind a reverse proxy': 'additional/behind-reverse-proxy.md'
+      - 'Mobile Website': 'additional/mobile-website.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
@@ -90,6 +91,8 @@ markdown_extensions:
       permalink: True
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
