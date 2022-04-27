@@ -106,7 +106,7 @@ Neben den Makros die vom Benutzer selbst definiert werden können, stellt das Sy
 | $HOSTGROUPACTIONURL$ | Nicht Implementiert in openITCOCKPIT.                                                                                                       |
 |Service Makros|
 | $SERVICEDESC$            | Die UUID des Service ("bd19ce04-3209-4664-a146-bd1220e740bc")                                                                                  |
-| $SERVICEDESC$            | Lesbarer Name des Service ("PING")                                                                                                            |
+| $SERVICEDISPLAYNAME$            | Lesbarer Name des Service ("PING")                                                                                                            |
 | $SERVICESTATE$           | Aktueller Service Status als String  ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                     |
 | $SERVICESTATEID$         | Aktueller Service Status als Integer (0=OK, 1=WARNING, 2=CRITICAL, 3=UNKNOWN).                                                                        |
 | $LASTSERVICESTATE$       | Letzter Service Status als String ("OK", "WARNING", "UNKNOWN", or "CRITICAL").                                                                         |

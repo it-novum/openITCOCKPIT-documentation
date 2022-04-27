@@ -13,8 +13,8 @@ gemacht, werden die verfügbaren Tasks in der nächsten Dropdown liste angezeigt
 |---|---|---|
 | Erweiterung | :fontawesome-solid-times: | Ort des auszuführenden Tasks |
 | Aufgaben | :fontawesome-solid-times: | Welcher Task soll ausgeführt werden |
-| Intervall |  | In welchem Intervall in minuten soll der Task ausgeführt werden |
-| Aktiviert |  | Soll der Task ausgeführt werden, so muss diese checkbox aktiviert werden |
+| Intervall |  | In welchem Intervall in Minuten soll der Task ausgeführt werden |
+| Aktiviert |  | Soll der Task ausgeführt werden, so muss diese Checkbox aktiviert werden |
 
 ## Systemd Timer
 Anders als der Name vermuten lässt, werden die Cronjobs von openITCOCKPIT nicht über den `cron Daemon` ausgeführt, sondern
