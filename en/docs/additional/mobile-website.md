@@ -53,7 +53,7 @@ You are now being asked to enter the server URL or IP-Address of your openITCOCK
 
 #### API Key creation
 
-To be able to log in into the mobile website it is required to [crate an API key](../../development/api/#api-keys) first.
+To be able to log in into the mobile website it is required to [create an API key](../../development/api/#api-keys) first.
 For easier transfer of the API key to the mobile device you can scan the QR-Code which is displayed in the API key 
 creation overlay in openITCOCKPIT. Copy the displayed key and paste it in the field `Your api-key`.
 
@@ -73,7 +73,7 @@ host or service list.
 Select the desired host or service from the list and click on the `Actions` tab. After that click on the 
 `Reset check time` button. The action will be executed immediately and does not require any further information.
 
-More information regarding [Reset check time](../../monitoring/user-interface/#prufzeitraum-zurucksetzen)
+More information regarding [Reset check time](../../monitoring/user-interface/#resetting-the-check-time_1)
 
 ![host details actions](/images/mobile-website/hosts-details-actions.png){ width="250" }
 
@@ -87,7 +87,7 @@ After that proceed as it is described in [Create downtime](#create-downtime)
 In this action you are not able to create recurring downtimes. Crating recurring downtimes is described in the
 [Create recurring downtime](#create-recurring-downtime) section
 
-More information regarding [Schedule Maintenance](../../monitoring/user-interface/#plane-wartung)
+More information regarding [Schedule Maintenance](../../monitoring/user-interface/#planned-maintenance)
 
 #### Acknowledgement state <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Select the desired host or service from the list and click on the `Actions` tab. After that click on the
@@ -96,7 +96,7 @@ Select the desired host or service from the list and click on the `Actions` tab.
 If you selected a host you have the possibility to acknowledge the state not only for the host but for the services
 too.
 
-More information regarding [acknowledge state](../../monitoring/user-interface/#bestatige-hoststatus)
+More information regarding [acknowledge state](../../monitoring/user-interface/#acknowledge-host-status)
 
 #### Enable/Disable Flapping <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Select the desired host or service from the list and click on the `Actions` tab. After that click on the
@@ -115,13 +115,13 @@ services
 Select the desired host or service from the list and click on the `Actions` tab. After that click on the
 `Passive transfer check result` button.
 
-More information regarding [passive transfer check result for services](../../monitoring/user-interface/#passive-ubertragung-eines-prufergebnisses_1)
+More information regarding [passive transfer check result for services](../../monitoring/user-interface/#passive-transfer-of-check-results)
 
 #### Send custom service notification <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Select the desired host or service from the list and click on the `Actions` tab. After that click on the
 `Send custom service notification` button.
 
-More information regarding [send custom service notification](../../monitoring/user-interface/#benutzerdefinierte-servicebenachrichtigung-senden)
+More information regarding [send custom service notification](../../monitoring/user-interface/#send-user-defined-host-notifications)
 
 #### Massactions
 Massactions are available for nearly all functions. To execute an action simultaneously on multiple hosts and / or 

@@ -220,13 +220,13 @@ With this option, the host itself, as well as any dependent hosts, is entered in
 
 With this option, the host itself, as well as any dependent hosts, is entered into a maintenance window. Here, the maintenance time starts and stops exactly at the times you set in your maintenance plan.
 
-#### Confirming host statuses
+#### Acknowledge host status
 
 Depending on the notification settings, notifications for a host are sent at a pre-determined interval. These notifications can be stopped by confirming the host status. You can also confirm the status for the host and its services here. The `Sticky` option retains the confirmation until the host once again returns to an `UP` status.
 
-#### Passive transmission of check results
+#### Passive transfer of check results
 
-Using the passive transmission of check results, the host receives the specified status with comments. If `Force to hard state` is ticked, the host status type is immediately set to `HARD` and the number of check attempts is ignored.
+Using the passive transfer of check results, the host receives the specified status with comments. If `Force to hard state` is ticked, the host status type is immediately set to `HARD` and the number of check attempts is ignored.
 
 #### Disable notifications
 
