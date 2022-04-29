@@ -37,7 +37,7 @@ To confirm an individual service status, navigate to `Monitoring -> Services` an
 
 ![ack service status in browser](/images/servicebrowser-ackstatus.png)
 
-There you can leave a comment and set the [Sticky](#klebrig-sticky) and [Notify](#notify) options.
+There you can leave a comment and set the [Sticky](#sticky) and [Notify](#notify) options.
 
 ![ack service](/images/ackservice.png)
 

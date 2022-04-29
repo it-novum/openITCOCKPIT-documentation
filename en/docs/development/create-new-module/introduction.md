@@ -1,6 +1,6 @@
 # Creating a new openITCOCKPIT module
 
-For this article you will need an openITCOCKPIT development environment. Read [guide on how to create an openITCOCKPIT development environment.](../../setup-dev-env/#openitcockpit-entwicklungsumgebung-erstellen)
+For this article you will need an openITCOCKPIT development environment. Read [guide on how to create an openITCOCKPIT development environment.](../../setup-dev-env/#creating-an-openitcockpit-development-environment)
 
 This article contains the best practices for adding new features to openITCOCKPIT by creating a custom module. Developing your own module ensures that your system remains updatable and maintainable by our experts.
 

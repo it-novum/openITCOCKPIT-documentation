@@ -88,7 +88,7 @@ Now we assign the contact to a host or service.
 
 ![assign contact to service](/images/openITCOCKPIT-assign-contact-to-service.png)
 
-To enable the new configuration, you must update [the monitoring configuration](../create-first-host/#aktualisieren-der-uberwachungskonfiguration).
+To enable the new configuration, you must update [the monitoring configuration](../create-first-host/#updating-the-monitoring-configuration).
 
 ## Test email notifications
 

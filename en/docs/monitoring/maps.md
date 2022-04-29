@@ -28,11 +28,11 @@ You can now determine which status will be displayed as well as how it should be
 
 | Field | Required | Description |
 |---|---|---|
-| Container	| :fontawesome-solid-times:	| Container in which the automap is to be created |
-| Name | :fontawesome-solid-times: | Name of the automap |
+| Container	| :fontawesome-solid-xmark:	| Container in which the automap is to be created |
+| Name | :fontawesome-solid-xmark: | Name of the automap |
 | Description | | Description of the automap |
-| Host regex | :fontawesome-solid-times: | Host filters as regular expressions |
-| Service regex	| :fontawesome-solid-times:	| Service filters as regular expressions |
+| Host regex | :fontawesome-solid-xmark: | Host filters as regular expressions |
+| Service regex	| :fontawesome-solid-xmark:	| Service filters as regular expressions |
 
 
 ## Map Module <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
@@ -51,11 +51,11 @@ The Update Interval field defines the interval in seconds during which a map is 
 
 | Field | Required | Description |
 |---|---|---|
-| Container	| :fontawesome-solid-times:	| Container in which the map is to be created |
+| Container	| :fontawesome-solid-xmark:	| Container in which the map is to be created |
 | Satellite | | Satellite system on which the map is to be created |
-| Map name | :fontawesome-solid-times: | Map name |
-| Map title | :fontawesome-solid-times: |	Map title |
-| Update interval	| :fontawesome-solid-times: |	Determines the interval in seconds during which the map will update your elements |
+| Map name | :fontawesome-solid-xmark: | Map name |
+| Map title | :fontawesome-solid-xmark: |	Map title |
+| Update interval	| :fontawesome-solid-xmark: |	Determines the interval in seconds during which the map will update your elements |
 
 ### Editing maps
 
@@ -107,21 +107,21 @@ Here you can upload icons and place them in your map. The difference here to ite
 
 To upload your own icon set, you must first compress all the required icons into a ZIP archive. All icons must be PNG images. Required icons:
 
-| Icon | Beschreibung |
-| --- | --- |
-| up.png | Host status up |
-| down.png | Host status down |
-| unreachable.png | Host Status unreachable |
-| ack.png | Confirmed host status |
-| downtime.png | Host downtime |
-| downtime\_ack.png | Host confirmed and in downtime |
-| error.png |     |
-| ok.png | Service status ok |
-| warning.png | Service status warning |
-| critical.png | Service status critical |
-| unknown.png | Service status unknown |
-| sack.png | Confirmed service status |
-| sdowntime.png | Service downtime |
+| Icon               | Beschreibung                      |
+|--------------------|-----------------------------------|
+| up.png             | Host status up                    |
+| down.png           | Host status down                  |
+| unreachable.png    | Host Status unreachable           |
+| ack.png            | Confirmed host status             |
+| downtime.png       | Host downtime                     |
+| downtime\_ack.png  | Host confirmed and in downtime    |
+| error.png          |                                   |
+| ok.png             | Service status ok                 |
+| warning.png        | Service status warning            |
+| critical.png       | Service status critical           |
+| unknown.png        | Service status unknown            |
+| sack.png           | Confirmed service status          |
+| sdowntime.png      | Service downtime                  |
 | sdowntime\_ack.png | Service confirmed and in downtime |
 
 The following colour guidelines can be used for this purpose.
@@ -156,12 +156,12 @@ You can now set the rotation interval. This determines the time in seconds that 
 
 Finally, select the maps to be rotated.
 
-| Field | Required | Description |
-|---|---|---|
-| Container	| :fontawesome-solid-times:	| Container in which the rotation is to be created |
-| Rotation name	| :fontawesome-solid-times:	| Name of the rotation |
-| Rotation interval	| :fontawesome-solid-times:	| The interval at which the selected maps should be rotated |
-| Maps | :fontawesome-solid-times: | Maps that should be rotated |
+| Field              | Required                   | Description                                               |
+|--------------------|----------------------------|-----------------------------------------------------------|
+| Container	         | :fontawesome-solid-xmark:	 | Container in which the rotation is to be created          |
+| Rotation name	     | :fontawesome-solid-xmark:	 | Name of the rotation                                      |
+| Rotation interval	 | :fontawesome-solid-xmark:	 | The interval at which the selected maps should be rotated |
+| Maps               | :fontawesome-solid-xmark:  | Maps that should be rotated                               |
 
 ### Display rotations
 
@@ -189,10 +189,10 @@ The settings for the OpenStreetMap module can be found under "System configurati
 
 The filters "Location Status" and "Empty Locations" are default settings and can be temporarily adjusted using the filter option in the OpenStreetMap view.
 
-| Name Field | Required | Description |
-| --- | --- | --- |
-| Server address | :fontawesome-solid-times: | Is the full address of the OpenStreetMap tile server which the module uses to attempt to retrieve map data. **Example**:  [http://10.10.10.20/osm\_tiles/{z}/{x}/{y}.png](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
-| Map update interval	| :fontawesome-solid-times:	| Interval in seconds during which the map view is updated (default: 30) |
-| Show locations with status | | Defines the default status of the locations to be displayed in the view |
-| Empty or unmonitored locations | | The option "Empty or unmonitored locations" prevents empty locations from being displayed in the OpenStreetMap view. |
-| Advanced settings | | |
+| Name Field                     | Required                   | Description                                                                                                                                                                                                                         |
+|--------------------------------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Server address                 | :fontawesome-solid-xmark:  | Is the full address of the OpenStreetMap tile server which the module uses to attempt to retrieve map data. **Example**:  [http://10.10.10.20/osm\_tiles/{z}/{x}/{y}.png](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
+| Map update interval	           | :fontawesome-solid-xmark:	 | Interval in seconds during which the map view is updated (default: 30)                                                                                                                                                              |
+| Show locations with status     |                            | Defines the default status of the locations to be displayed in the view                                                                                                                                                             |
+| Empty or unmonitored locations |                            | The option "Empty or unmonitored locations" prevents empty locations from being displayed in the OpenStreetMap view.                                                                                                                |
+| Advanced settings              |                            |                                                                                                                                                                                                                                     |

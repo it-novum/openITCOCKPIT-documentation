@@ -35,20 +35,20 @@ Die Konfiguration zur Servicebenachrichtigung erfolgt nach demselben Schema.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem der Kontakt erstellt werden soll |
-| Name | :fontawesome-solid-times: | Name des Kontakts |
+| Container | :fontawesome-solid-xmark: | Container in dem der Kontakt erstellt werden soll |
+| Name | :fontawesome-solid-xmark: | Name des Kontakts |
 | Beschreibung |  | Das Intervall in dem die gewählten Karten rotieren sollen |
-| E-Mail | :fontawesome-solid-times: | E-Mail Adresse des Kontakts. Entweder E-Mail Adresse, Telefonnummer oder beides muss gegeben sein |
-| Telefon | :fontawesome-solid-times: | Telefonnummer des Kontakts. Entweder E-Mail Adresse, Telefonnummer oder beides muss gegeben sein |
+| E-Mail | :fontawesome-solid-xmark: | E-Mail Adresse des Kontakts. Entweder E-Mail Adresse, Telefonnummer oder beides muss gegeben sein |
+| Telefon | :fontawesome-solid-xmark: | Telefonnummer des Kontakts. Entweder E-Mail Adresse, Telefonnummer oder beides muss gegeben sein |
 | Benutzer | | Benutzer des Kontakts.  Für Browser-Benachrichtigungen muss dem Kontakt ein Benutzer zugewiesen werden. Die Benutzer-ID ist automatisch als Kontaktmakro $_CONTACTOITCUSERID$ verfügbar.  |
 | Host-Benachrichtigung |
-| Hostzeitspanne | :fontawesome-solid-times: | [Zeitraum](../configuration/timeperiods/) in dem Benachrichtigt werden soll |
-| Hostkommando | :fontawesome-solid-times: | Kommando, welches zum benachrichtigen verwendet werden soll |
+| Hostzeitspanne | :fontawesome-solid-xmark: | [Zeitraum](../configuration/timeperiods/) in dem Benachrichtigt werden soll |
+| Hostkommando | :fontawesome-solid-xmark: | Kommando, welches zum benachrichtigen verwendet werden soll |
 | Hostbenachrichtigung aktiviert |  | Aktiviert die Benachrichtigungen für Hosts mit diesem Kontakt |
 | Push-Benachrichtigungen an den Browser |  | Aktiviert die Push-Benachrichtigungen über den Browser |
 | Servicebenachrichtigungen |  |  |
-| Servicezeitspanne | :fontawesome-solid-times: | [Zeitraum](../configuration/timeperiods/) in dem Benachrichtigt werden soll |
-| Servicekommando | :fontawesome-solid-times: | Kommando, welches zum benachrichtigen verwendet werden soll |
+| Servicezeitspanne | :fontawesome-solid-xmark: | [Zeitraum](../configuration/timeperiods/) in dem Benachrichtigt werden soll |
+| Servicekommando | :fontawesome-solid-xmark: | Kommando, welches zum benachrichtigen verwendet werden soll |
 | Servicebenachrichtigung aktiviert |  | Aktiviert die Benachrichtigungen für Services mit diesem Kontakt |
 | Push-Benachrichtigungen an den Browser |  | Aktiviert die Push-Benachrichtigungen über den Browser |
 
@@ -61,10 +61,10 @@ Services, Eskalationen, Abhängigkeiten oder Vorlagen ausgewählt werden.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem die Kontaktgruppe erstellt werden soll |
-| Name | :fontawesome-solid-times: | Name der Kontaktgruppe |
+| Container | :fontawesome-solid-xmark: | Container in dem die Kontaktgruppe erstellt werden soll |
+| Name | :fontawesome-solid-xmark: | Name der Kontaktgruppe |
 | Beschreibung |  | Beschreibung der Kontaktgruppe |
-| Kontakte | :fontawesome-solid-times: | Kontakte, die zu dieser Kontaktgruppe hinzugefügt werden sollen |
+| Kontakte | :fontawesome-solid-xmark: | Kontakte, die zu dieser Kontaktgruppe hinzugefügt werden sollen |
 
 ### Ist meine Kontaktgruppe in Verwendung?
 
@@ -106,34 +106,34 @@ Die Felder Kontakte und Kontaktgruppen definieren die Kontakte, die im Eskalatio
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem die Eskalation erstellt werden soll |
-| Hosts | :fontawesome-solid-times: | Hosts die eskaliert werden sollen |
+| Container | :fontawesome-solid-xmark: | Container in dem die Eskalation erstellt werden soll |
+| Hosts | :fontawesome-solid-xmark: | Hosts die eskaliert werden sollen |
 | Ausgeschlossene Hosts |  | Hosts die nicht eskaliert werden sollen |
 | Hostgruppen | | Hostgruppen die eskaliert werden sollen |
 | Ausgeschlossene Hostgruppen | | Hostgruppen die nicht eskaliert werden sollen |
-| Erste Benachrichtigung | :fontawesome-solid-times: |  Die Anzahl der Benachrichtigungen, die vor der Eskalationsregel übergeben wurden, überschreibt die Benachrichtigungseinstellungen.  |
-| Letzte Benachrichtigung | :fontawesome-solid-times: |  Wenn die Anzahl der letzten Benachrichtigungen erreicht ist, wird die Benachrichtigungsregel deaktiviert und die Benachrichtigungsoptionen des Hosts oder Services werden erneut verwendet.  |
-| Benachrichtigungsintervall | :fontawesome-solid-times: | In welchem Abstand erfolgen die Eskalationsbenachrichtigungen |
+| Erste Benachrichtigung | :fontawesome-solid-xmark: |  Die Anzahl der Benachrichtigungen, die vor der Eskalationsregel übergeben wurden, überschreibt die Benachrichtigungseinstellungen.  |
+| Letzte Benachrichtigung | :fontawesome-solid-xmark: |  Wenn die Anzahl der letzten Benachrichtigungen erreicht ist, wird die Benachrichtigungsregel deaktiviert und die Benachrichtigungsoptionen des Hosts oder Services werden erneut verwendet.  |
+| Benachrichtigungsintervall | :fontawesome-solid-xmark: | In welchem Abstand erfolgen die Eskalationsbenachrichtigungen |
 | Eskalationszeitraum |  | [Zeitabschnitte](../configuration/timeperiods/) in dem die Eskalationsbenachrichtigungen versendet werden  |
-| Kontakte | :fontawesome-solid-times: | Eskalationskontakt. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
-| Kontaktgruppen | :fontawesome-solid-times: | Eskalationskontaktgruppe. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
+| Kontakte | :fontawesome-solid-xmark: | Eskalationskontakt. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
+| Kontaktgruppen | :fontawesome-solid-xmark: | Eskalationskontaktgruppe. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
 | Eskalationsoptionen |  | Für welche Zustände wird die Eskalation aktiviert |
 
 ### Serviceeskalation erstellen
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem die Eskalation erstellt werden soll |
-| Services | :fontawesome-solid-times: | Services, die eskaliert werden sollen |
+| Container | :fontawesome-solid-xmark: | Container in dem die Eskalation erstellt werden soll |
+| Services | :fontawesome-solid-xmark: | Services, die eskaliert werden sollen |
 | Ausgeschlossene Services |  | Services, die nicht eskaliert werden sollen |
 | Servicegruppen | | Servicegruppen, die eskaliert werden sollen |
 | Ausgeschlossene Servicegruppen | | Servicegruppen, die nicht eskaliert werden sollen |
-| Erste Benachrichtigung | :fontawesome-solid-times: |  Die Anzahl der Benachrichtigungen, die vor der Eskalationsregel übergeben wurden, überschreibt die Benachrichtigungseinstellungen.  |
-| Letzte Benachrichtigung | :fontawesome-solid-times: |  Wenn die Anzahl der letzten Benachrichtigungen erreicht ist, wird die Benachrichtigungsregel deaktiviert und die Benachrichtigungsoptionen des Hosts oder Services werden erneut verwendet.  |
-| Benachrichtigungsintervall | :fontawesome-solid-times: | In welchem Abstand erfolgen die Eskalationsbenachrichtigungen |
+| Erste Benachrichtigung | :fontawesome-solid-xmark: |  Die Anzahl der Benachrichtigungen, die vor der Eskalationsregel übergeben wurden, überschreibt die Benachrichtigungseinstellungen.  |
+| Letzte Benachrichtigung | :fontawesome-solid-xmark: |  Wenn die Anzahl der letzten Benachrichtigungen erreicht ist, wird die Benachrichtigungsregel deaktiviert und die Benachrichtigungsoptionen des Hosts oder Services werden erneut verwendet.  |
+| Benachrichtigungsintervall | :fontawesome-solid-xmark: | In welchem Abstand erfolgen die Eskalationsbenachrichtigungen |
 | Eskalationszeitraum |  | [Zeitabschnitte](../configuration/timeperiods/), in dem die Eskalationsbenachrichtigungen versendet werden  |
-| Kontakte | :fontawesome-solid-times: | Eskalationskontakt. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
-| Kontaktgruppen | :fontawesome-solid-times: | Eskalationskontaktgruppe. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
+| Kontakte | :fontawesome-solid-xmark: | Eskalationskontakt. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
+| Kontaktgruppen | :fontawesome-solid-xmark: | Eskalationskontaktgruppe. Es muss entweder mindestens ein Kontakt oder eine Kontaktgruppe ausgewählt werden |
 | Eskalationsoptionen |  | Für welche Zustände wird die Eskalation aktiviert |
 
 ## Host / Service Abhängigkeiten
@@ -195,9 +195,9 @@ Host Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Service Abh�
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container, in dem die Hostabhängigkeit erstellt werden soll |
-| Hosts | :fontawesome-solid-times: | Hosts, von denen eine Abhängigkeit erstellt werden soll |
-| Abhängige Hosts | :fontawesome-solid-times: | Hosts, die eine Abhängigkeit zu den gewählten Hosts haben |
+| Container | :fontawesome-solid-xmark: | Container, in dem die Hostabhängigkeit erstellt werden soll |
+| Hosts | :fontawesome-solid-xmark: | Hosts, von denen eine Abhängigkeit erstellt werden soll |
+| Abhängige Hosts | :fontawesome-solid-xmark: | Hosts, die eine Abhängigkeit zu den gewählten Hosts haben |
 | Hostgruppen | | Hostgruppen, von denen eine Abhängigkeit erstellt werden soll |
 | Abhängige Hostgruppen | | Hostgruppen, die eine Abhängigkeit zu den gewählten Hosts / Hostgruppen haben |
 | Zeitraum |  | [Zeitraum](../configuration/timeperiods/), in dem die Abhängigkeit gültig ist |
@@ -218,9 +218,9 @@ Service Abhängigkeiten unterscheiden sich in ihrer Funktion nicht von Host Abh�
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container, in dem die Serviceabhängigkeit erstellt werden soll |
-| Services | :fontawesome-solid-times: | Services, von denen eine Abhängigkeit erstellt werden soll |
-| Abhängige Services | :fontawesome-solid-times: | Services, eine Abhängigkeit zu den gewählten Services haben |
+| Container | :fontawesome-solid-xmark: | Container, in dem die Serviceabhängigkeit erstellt werden soll |
+| Services | :fontawesome-solid-xmark: | Services, von denen eine Abhängigkeit erstellt werden soll |
+| Abhängige Services | :fontawesome-solid-xmark: | Services, eine Abhängigkeit zu den gewählten Services haben |
 | Servicegruppen | | Servicegruppen, von denen eine Abhängigkeit erstellt werden soll |
 | Abhängige Servicegruppen | | Servicegruppen, die eine Abhängigkeit zu den gewählten Services / Servicegruppen haben |
 | Zeitraum |  | [Zeitraum](../configuration/timeperiods/), in dem die Abhängigkeit gültig ist |

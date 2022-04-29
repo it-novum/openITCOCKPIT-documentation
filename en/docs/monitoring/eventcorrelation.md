@@ -44,22 +44,22 @@ The "MIN" operator also requires a number as a specifier. This number indicates 
 
 Since virtual services are treated like real services by the system, it is possible to add services to a link that are also virtual services from another event correlation.
 
-| Field | Required | Description |
-|---|---|---|
-|Basic configuration|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in which the host is to be created |
-| Host templates | :fontawesome-solid-times: | [Hostvorlage](#hostvorlagen) in which the host is to be created |
-| Host name / name of the correlation | :fontawesome-solid-times: | Name of the host or event correlation to be created |
-| Description |  | Description of the host template. Will be inherited as the host description |
-| Priority |  | Priority for filtering in lists |
-| Checking configuration |
-| Checking period | :fontawesome-solid-times: | Defines the [period](../timeperiods/) in which checks should take place |
-| Checking interval | :fontawesome-solid-times: | Defines the interval at which checks should take place. See [intervals](#intervalle) |
-| Repeat interval | :fontawesome-solid-times: | Defines the waiting period before a new check takes place after a non-UP status has been reached. See [intervals](#intervalle) |
-| Max. number of checking attempts | :fontawesome-solid-times: | Determines the number of attempts to check a host before it transitions to a hard state. See [Intervalle](#intervalle) |
-| Notification configuration |
-| Notification period | :fontawesome-solid-times: | Determines the time period in which notifications are sent for a host |
-| Notification interval | :fontawesome-solid-times: | Defines the interval for notifications sent to this host |
-| Contacts | :fontawesome-solid-times: | One or more contacts who will receive notifications about this host |
-| Contact groups | :fontawesome-solid-times: | One or more contact groups that will receive notifications about this host |
-| Host notification options |  | Defines the statuses that must be reached before notifications are sent |
+| Field                               | Required                  | Description                                                                                                                   |
+|-------------------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Basic configuration                 |
+| Container                           | :fontawesome-solid-xmark: | [Container](../../configuration/container/#container) in which the host is to be created                                      |
+| Host templates                      | :fontawesome-solid-xmark: | [Host template](../../configuration/hosts-services/#host-templates) in which the host is to be created                        |
+| Host name / name of the correlation | :fontawesome-solid-xmark: | Name of the host or event correlation to be created                                                                           |
+| Description                         |                           | Description of the host template. Will be inherited as the host description                                                   |
+| Priority                            |                           | Priority for filtering in lists                                                                                               |
+| Checking configuration              |
+| Checking period                     | :fontawesome-solid-xmark: | Defines the [timeperiod](../../configuration/timeperiods/#time-periods) in which checks should take place                     |
+| Checking interval                   | :fontawesome-solid-xmark: | Defines the interval at which checks should take place. See [intervals](../../configuration/hosts-services/#intervals_2)      |
+| Repeat interval                     | :fontawesome-solid-xmark: | Defines the waiting period before a new check takes place after a non-UP status has been reached. See [intervals](../../configuration/hosts-services/#intervals_2) |
+| Max. number of checking attempts    | :fontawesome-solid-xmark: | Determines the number of attempts to check a host before it transitions to a hard state. See [Intervalle](../../configuration/hosts-services/#intervals_2)        |
+| Notification configuration          |
+| Notification period                 | :fontawesome-solid-xmark: | Determines the time period in which notifications are sent for a host                                                         |
+| Notification interval               | :fontawesome-solid-xmark: | Defines the interval for notifications sent to this host                                                                      |
+| Contacts                            | :fontawesome-solid-xmark: | One or more contacts who will receive notifications about this host                                                           |
+| Contact groups                      | :fontawesome-solid-xmark: | One or more contact groups that will receive notifications about this host                                                    |
+| Host notification options           |                           | Defines the statuses that must be reached before notifications are sent                                                       |

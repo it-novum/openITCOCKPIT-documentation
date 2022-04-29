@@ -33,13 +33,13 @@ Zudem kann man hier dem Benutzer schon API Keys für die API-Key authentifizieru
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container Rollen | :fontawesome-solid-times: | [Benutzercontainerrolle](#benutzer-container-rollen). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
-| Container | :fontawesome-solid-times: | [Container](../container/). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
-| Benutzer Rolle | :fontawesome-solid-times: | [Benutzer Rollen](#benutzerrollen-verwalten) |
-| ist aktiv | :fontawesome-solid-times: | Bestimmt ob ein Benutzer sich in openITCOCKPIT anmelden kann oder nicht |
-| E-Mail Adresse | :fontawesome-solid-times: | E-Mail Adresse des Benutzers |
-| Vorname | :fontawesome-solid-times: | Vorname des Benutzers |
-| Nachname | :fontawesome-solid-times: | Nachname des Benutzers |
+| Container Rollen | :fontawesome-solid-xmark: | [Benutzercontainerrolle](#benutzer-container-rollen). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
+| Container | :fontawesome-solid-xmark: | [Container](../container/). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
+| Benutzer Rolle | :fontawesome-solid-xmark: | [Benutzer Rollen](#benutzerrollen-verwalten) |
+| ist aktiv | :fontawesome-solid-xmark: | Bestimmt ob ein Benutzer sich in openITCOCKPIT anmelden kann oder nicht |
+| E-Mail Adresse | :fontawesome-solid-xmark: | E-Mail Adresse des Benutzers |
+| Vorname | :fontawesome-solid-xmark: | Vorname des Benutzers |
+| Nachname | :fontawesome-solid-xmark: | Nachname des Benutzers |
 | Unternehmen |  | Unternehmenszugehörigkeit des Benutzers |
 | Positions des Unternehmens |  | Position des Unternehmens |
 | Telefonnummer |  | Telefonnummer des Benutzers |
@@ -47,11 +47,11 @@ Zudem kann man hier dem Benutzer schon API Keys für die API-Key authentifizieru
 | Statuszeichen im Menü anzeigen |  | Blendet die [Statusinformationen](../../monitoring/user-interface/#profil-informationen) im Webseiten Header ein |
 | Rekursiver Browser |  | Bestimmt ob im Browser die [Rekursive Ansicht](../../monitoring/user-interface/#profil-informationen) angezeigt werden soll |
 | Tab Rotationsintervall |  | Tab Rotationsintervall im Dashboard |
-| Datumsformat | :fontawesome-solid-times: | Format des für den Benutzer angezeigten Datums in openITCOCKPIT |
-| Zeitzone | :fontawesome-solid-times: | Zeitzone des Benutzers |
-| Sprache der Benutzeroberfläche | :fontawesome-solid-times: | Sprache der Benutzeroberfläche für den Benutzer |
-| Neues Passwort | :fontawesome-solid-times: | Anmeldepasswort für den Benutzer |
-| Bestätige Neues Passwort | :fontawesome-solid-times: | Anmeldepasswort für den Benutzer |
+| Datumsformat | :fontawesome-solid-xmark: | Format des für den Benutzer angezeigten Datums in openITCOCKPIT |
+| Zeitzone | :fontawesome-solid-xmark: | Zeitzone des Benutzers |
+| Sprache der Benutzeroberfläche | :fontawesome-solid-xmark: | Sprache der Benutzeroberfläche für den Benutzer |
+| Neues Passwort | :fontawesome-solid-xmark: | Anmeldepasswort für den Benutzer |
+| Bestätige Neues Passwort | :fontawesome-solid-xmark: | Anmeldepasswort für den Benutzer |
 
 
 ### Neuen Benutzer anlegen (Active Directory / LDAP)
@@ -65,13 +65,13 @@ da sich der neue Benutzer mit seinen LDAP zugangsdaten einloggt.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container Rollen | :fontawesome-solid-times: | [Benutzercontainerrolle](#benutzer-container-rollen). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
-| Container | :fontawesome-solid-times: | [Container](../container/). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
-| Benutzer Rolle | :fontawesome-solid-times: | [Benutzer Rollen](#benutzer-rollen-verwalten) |
-| ist aktiv | :fontawesome-solid-times: | Bestimmt ob ein Benutzer sich in openITCOCKPIT anmelden kann oder nicht |
-| SAM-Account-Name | :fontawesome-solid-times: | Benutzer, der Importiert werden soll |
-| DN | :fontawesome-solid-times: | Wird vom LDAP Server Importiert |
-| E-Mail Adresse | :fontawesome-solid-times: | E-Mail Adresse des Benutzers. Wird vom LDAP Server Importiert |
+| Container Rollen | :fontawesome-solid-xmark: | [Benutzercontainerrolle](#benutzer-container-rollen). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
+| Container | :fontawesome-solid-xmark: | [Container](../container/). Optionales Pflichtfeld - Entweder Container, Container Rollen oder beides muss ausgewählt sein |
+| Benutzer Rolle | :fontawesome-solid-xmark: | [Benutzer Rollen](#benutzer-rollen-verwalten) |
+| ist aktiv | :fontawesome-solid-xmark: | Bestimmt ob ein Benutzer sich in openITCOCKPIT anmelden kann oder nicht |
+| SAM-Account-Name | :fontawesome-solid-xmark: | Benutzer, der Importiert werden soll |
+| DN | :fontawesome-solid-xmark: | Wird vom LDAP Server Importiert |
+| E-Mail Adresse | :fontawesome-solid-xmark: | E-Mail Adresse des Benutzers. Wird vom LDAP Server Importiert |
 | Vorname |  | Vorname des Benutzers. Wird vom LDAP Server Importiert |
 | Nachname |  | Nachname des Benutzers. Wird vom LDAP Server Importiert |
 | Unternehmen |  | Unternehmenszugehörigkeit des Benutzers |
@@ -81,9 +81,9 @@ da sich der neue Benutzer mit seinen LDAP zugangsdaten einloggt.
 | Statuszeichen im Menü anzeigen |  | Blendet die [Statusinformationen](../../monitoring/user-interface/#profil-informationen) im Webseiten Header ein |
 | Rekursiver Browser |  | Bestimmt ob im Browser die [Rekursive Ansicht](../../monitoring/user-interface/#profil-informationen) angezeigt werden soll |
 | Tab Rotationsintervall |  | Tab Rotationsintervall im Dashboard |
-| Datumsformat | :fontawesome-solid-times: | Format des für den Benutzer angezeigten Datums in openITCOCKPIT |
-| Zeitzone | :fontawesome-solid-times: | Zeitzone des Benutzers |
-| Sprache der Benutzeroberfläche | :fontawesome-solid-times: | Sprache der Benutzeroberfläche für den Benutzer |
+| Datumsformat | :fontawesome-solid-xmark: | Format des für den Benutzer angezeigten Datums in openITCOCKPIT |
+| Zeitzone | :fontawesome-solid-xmark: | Zeitzone des Benutzers |
+| Sprache der Benutzeroberfläche | :fontawesome-solid-xmark: | Sprache der Benutzeroberfläche für den Benutzer |
 
 
 ### Benutzerpasswort zurücksetzen
@@ -117,7 +117,7 @@ und Löschen nacheinander angeklickt werden können, um diese einzeln für jede 
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Name | :fontawesome-solid-times: | Name der Benutzer Rolle |
+| Name | :fontawesome-solid-xmark: | Name der Benutzer Rolle |
 | Beschreibung |  | Beschreibung der Benutzer Rolle |
 
 ## Benutzer Container Rollen
@@ -139,8 +139,8 @@ Benutzer Container Rolle verwendet werden.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Rollenname | :fontawesome-solid-times: | Name der Benutzer Container Rolle |
-| Container | :fontawesome-solid-times: | [Container](../container/), welche der Benutzer Container Rolle zugewiesen werden sollen  |
+| Rollenname | :fontawesome-solid-xmark: | Name der Benutzer Container Rolle |
+| Container | :fontawesome-solid-xmark: | [Container](../container/), welche der Benutzer Container Rolle zugewiesen werden sollen  |
 
 
 ### Meldung des Tages erstellen
@@ -148,14 +148,14 @@ Benutzer Container Rolle verwendet werden.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Title | :fontawesome-solid-times: | Pflichtfeld - Der Title wird ganz oben angezeigt und wird als Überschrift verwendet |
+| Title | :fontawesome-solid-xmark: | Pflichtfeld - Der Title wird ganz oben angezeigt und wird als Überschrift verwendet |
 | Description | | Hier erhält Benutzer die Möglichkeit eine kurze Beschreibung für die Meldung des Tages zu hinterlegen |
-| Datum | :fontawesome-solid-times: | Pflichtfeld -Das Datum wird für das Anzeigen des Meldung des Tages verwendet |
+| Datum | :fontawesome-solid-xmark: | Pflichtfeld -Das Datum wird für das Anzeigen des Meldung des Tages verwendet |
 | Ablaufdauer | | Optionales Pflichtfeld - mit dem Setzen der Ablaufdauer wird die Meldung des Tages nur vorübergehend angezeigt  |
 | Filter für Benutzergruppe| | Hier kann die Sichtbarkeit für Meldung des Tages für bestimmte Gruppen eingeschränkt werden |
 | Benachrichtigung für Benutzer | | Wenn aktiv, werden betroffene Benutzer per Email benachrichtigt |
-| Style | :fontawesome-solid-times: | Folgende Style-Eigenschaften stehen zur Auswahl: <span class="badge badge-info" title="info">info</span> <span class="badge badge-primary" title="primary">primary</span> <span class="badge badge-success" title="success">success</span> <span class="badge badge-warning" title="warning">warning</span> <span class="badge badge-danger" title="danger">danger</span>|
-| Text | :fontawesome-solid-times: | Text für die Meldung des Tages |
+| Style | :fontawesome-solid-xmark: | Folgende Style-Eigenschaften stehen zur Auswahl: <span class="badge badge-info" title="info">info</span> <span class="badge badge-primary" title="primary">primary</span> <span class="badge badge-success" title="success">success</span> <span class="badge badge-warning" title="warning">warning</span> <span class="badge badge-danger" title="danger">danger</span>|
+| Text | :fontawesome-solid-xmark: | Text für die Meldung des Tages |
 
 Durch die Styleauswahl kann der Benutzer eine visuelle Informationswichtigkeit beziehungsweise Informationsart verdeutlichen.
 

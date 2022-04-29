@@ -127,7 +127,7 @@ immer es möglich ist.
 
 Viele Geräte wie zum Beispiel Router, Switche, Sensoren oder Betriebssysteme können via SNMP (Simple Network Management
 Protocol) überwacht werden. Bevor Sie mit diesem Guide fortfahren, stellen Sie sicher, dass Sie den
-Teil [Monitoring mit Checkmk](#monitoring-mit-checkmk) gelesen haben.
+Teil [Monitoring mit Checkmk](#monitoring-mit-checkmk-ce) gelesen haben.
 
 ### SNMP Daten des Zielgerätes bekommen
 
@@ -285,10 +285,10 @@ Kommandozeilenbefehl verweist auf ein Checkmk Skript auf dem openITCOCKPIT Serve
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container, in dem der Checkmk Agent installiert werden soll |
-| Name | :fontawesome-solid-times: | Name des Checkmk Agenten |
+| Container | :fontawesome-solid-xmark: | Container, in dem der Checkmk Agent installiert werden soll |
+| Name | :fontawesome-solid-xmark: | Name des Checkmk Agenten |
 | Beschreibung |  | Beschreibung des Checkmk Agenten |
-| Kommandozeile | :fontawesome-solid-times: | Kommandozeilenbefehl für das Checkmk Agenten Skript |
+| Kommandozeile | :fontawesome-solid-xmark: | Kommandozeilenbefehl für das Checkmk Agenten Skript |
 
 ### Checkmk Agenten herunterladen
 

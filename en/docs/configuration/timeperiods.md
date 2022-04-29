@@ -17,9 +17,9 @@ You can add new ranges via the "Add" button. These define the days of the week w
 ![timeperiod new](/images/timeperiod-new.png)
 
 
-| Field | Required | Description |
-|---|---|---|
-| Container | :fontawesome-solid-times: | [Container](../container/)for which the time period is to be visible |
-| Name | :fontawesome-solid-times: | Name of the time period |
-| Description |  | Description of the time period |
-| Calendar | :fontawesome-solid-times: | [Calendar](../calendar/) |
+| Field       | Required                  | Description                                                           |
+|-------------|---------------------------|-----------------------------------------------------------------------|
+| Container   | :fontawesome-solid-xmark: | [Container](../container/) for which the time period is to be visible |
+| Name        | :fontawesome-solid-xmark: | Name of the time period                                               |
+| Description |                           | Description of the time period                                        |
+| Calendar    | :fontawesome-solid-xmark: | [Calendar](../calendar/)                                              |

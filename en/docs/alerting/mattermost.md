@@ -10,13 +10,13 @@ This module offers the possibility of setting up a two-way integration of Matter
 
 You can find the configuration under "API Mattermost".
 
-| Name field | Required field | Description |
-| --- | --- | --- |
-| Webhook URL | :warning: | Defines the address of the Mattermost server to be used. **
-Example**: [http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte](http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte) |
-| Enable Two-Way Integration |     | Mattermost can send acknowledgements to openITCOCKPIT using the two-way integration feature. If this is not enabled, only alerts will be sent to Mattermost. |
-| openITCOCKPIT API Key |     | This API key is used by Mattermost to send acknowledgements to openITCOCKPIT. First a custom, user-defined API key has to be created with openITCOCKPIT |
-| Use Proxy Server |     | Decide whether the configured HTTP proxy should be used or not. |
+| Name field                                                                                                                | Required field | Description                                                                                                                                                  |
+|---------------------------------------------------------------------------------------------------------------------------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Webhook URL                                                                                                               | :warning:      | Defines the address of the Mattermost server to be used. **                                                                                                  |
+| Example**: [http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte](http://192.168.122.1/hooks/1nmqus1wsfr988e81sr8whqrte) |                |                                                                                                                                                              |
+| Enable Two-Way Integration                                                                                                |                | Mattermost can send acknowledgements to openITCOCKPIT using the two-way integration feature. If this is not enabled, only alerts will be sent to Mattermost. |
+| openITCOCKPIT API Key                                                                                                     |                | This API key is used by Mattermost to send acknowledgements to openITCOCKPIT. First a custom, user-defined API key has to be created with openITCOCKPIT      |
+| Use Proxy Server                                                                                                          |                | Decide whether the configured HTTP proxy should be used or not.                                                                                              |
 
 ## Mattermost configuration
 

@@ -133,11 +133,11 @@ The host or service status overview only shows the number of hosts or services i
 ##### Automap
 ![automap widget](/images/dashboard-automapwidget.png)
 
-The widget displays the [automap](../maps/#automatische-karte) an
+The widget displays the [automap](../maps/#automap) an
 
 ###### Configuration
 
-The automap must be created beforehand using the [automap](../maps/#automatische-karte) function. Once this has been done, a map can be selected in the widget configuration. In addition, you can select how many elements are to be displayed on one page in the widget. The widget configuration interface can be accessed via the gear symbol in the upper right area of the widget.
+The automap must be created beforehand using the [automap](../maps/#automap) function. Once this has been done, a map can be selected in the widget configuration. In addition, you can select how many elements are to be displayed on one page in the widget. The widget configuration interface can be accessed via the gear symbol in the upper right area of the widget.
 
 ##### Autoreport overview
 ![Autoreport overview widget](/images/dashboard-autoreportoverviewwidget.png)
@@ -168,20 +168,20 @@ Custom Grafana dashboards must be created beforehand using the [Grafana module](
 ##### Map (MapModule)
 ![Map module widget](/images/dashboard-mapmodulewidget.png)
 
-The map widget displays a map created using the [MapModule](../maps/#map-modul-ce).
+The map widget displays a map created using the [MapModule](../maps/#map-module-ce).
 
 ###### Configuration
 
-A map must be created beforehand using the [MapModule](../maps/#map-modul-ce) The map can then be selected using the widget configuration interface. The widget configuration interface can be accessed via the gear symbol in the upper right area of the widget.
+A map must be created beforehand using the [MapModule](../maps/#map-module-ce) The map can then be selected using the widget configuration interface. The widget configuration interface can be accessed via the gear symbol in the upper right area of the widget.
 
 ##### Event correlation
 ![evk widget](/images/dashboard-evkwidget.png)
 
-The widget displays a previously created [event correlation](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation-ce).
+The widget displays a previously created [event correlation](../eventcorrelation/#event-correlation-ce).
 
 ###### Configuration
 
-An event correlation must be created beforehand via the [EventCorrelationModule](../eventcorrelation/#ereigniskorrelationsmodul-eventcorrelation-ce). The event correlation can then be selected using the widget configuration interface. The widget configuration interface can be accessed via the gear symbol in the upper right area of the widget.
+An event correlation must be created beforehand via the [EventCorrelationModule](../eventcorrelation/#event-correlation-ce). The event correlation can then be selected using the widget configuration interface. The widget configuration interface can be accessed via the gear symbol in the upper right area of the widget.
 
 ### Deleting widgets
 

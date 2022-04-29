@@ -50,7 +50,7 @@ It is recommended to use _Microsoft Active Directory_.
 ## Importing of users
 
 Before an LDAP-user is able to login to the openITCOCKPIT interface, it is required to import the user first.
-This is done under `User management -> Manage Users -> `[`Import from LDAP`](/configuration/usermanagement/#neuen-benutzer-anlegen-active-directory-ldap)
+This is done under `User management -> Manage Users -> `[`Import from LDAP`](/configuration/usermanagement/#create-new-user-active-directory-ldap)
 
 ![Import LDAP User](/images/import-ldap-user.png)
 
