@@ -2,17 +2,20 @@
 
 First of all, you will need to familiarise yourself with our "container" based authorisation system. All objects like users, hosts, contacts, templates etc. are bound to containers.
 
-!!! danger Permissions can become a very complex topic! - We strongly advise you not to skip this section!
+!!! danger 
+    Permissions can become a very complex topic! - We strongly advise you not to skip this section!
 
 ## /root Container
 
-The "/root" container is a rather special entity. All objects assigned to this container are **globally visible to all users!** This means this container is intended for global, frequently used objects such as the "ping" service template or the "24x7" assignment period.
+The "/root" container is a rather special entity. All objects assigned to this container are **globally visible to all users!** This means this container is intended for global, frequently used objects such as the "ping" service template or the "24x7" timeperiod.
 
 If you assign a host to the "/root" container, it is **not possible to change the container assignment later!**
 
 Users assigned to the "/root" container automatically become **global administrators** with full privileges to all objects.
 
-Global admins are marked by a crown above their username: ![global admin crown](/images/openITCOCKPIT-global-administrator.png)
+Global admins are marked by a crown above their username: 
+
+![global admin crown](/images/openITCOCKPIT-global-administrator.png)
 
 ## Container tree
 

@@ -109,30 +109,30 @@ If SSH is used for transmitting data, having NSTA on the satellite system is not
 
 #### All Options
 
-| Field | Required | Description |
-|---|---|---|
-| Containers | :fontawesome-solid-times: | [Container](../container/) in which the satellite is to be created |
-| Satellite name | :fontawesome-solid-times: | Name of the satellite to be created |
-| IP adress | :fontawesome-solid-times: | IP address or hostname of the satellite. This address is used for all communications between the master instance and the satellite system |
-| Synchronisation method | :fontawesome-solid-times: | [Synchronisation method](#synchronisationsmethoden) used to determine the data transfer type |
-| Time zone | :fontawesome-solid-times: | The time zone for the satellite |
-| Zeitsynchronisation |  |  Specifies whether you want to synchronise the master server's system clock with the satellite system. Note: It is not recommended that this option be enabled. Please use an NTP server if possible instead. |
-| HTTPS PULL mode |
-| URL | :fontawesome-solid-times: | Satellite URL |
-| Check certificate |  | Only valid certificates will be accepted |
-| Aktiviere Proxy |  | Determines whether the proxy entered below should be used to connect to the satellite system |
-| Proxy URL |  | Proxy URL |
-| API key | :fontawesome-solid-times: | API key authentication for the satellite |
-| Interval |  | Time interval in seconds in which the master system records the check results |
-| Timeout |  | Timeout in seconds. This defines when the satellite should be marked as OFFLINE. |
-| HTTPS PUSH mode |
-| API key | :fontawesome-solid-times: | API key authentication for the satellite |
-| Timeout |  | Timeout in seconds. This defines when the satellite should be marked as OFFLINE. |
-| SSH |
-| Sign in | :fontawesome-solid-times: | User to be used for logging into the satellite system via SSH |
-| Port | :fontawesome-solid-times: | SSH port remote computer |
-| PrivateKeyPath | :fontawesome-solid-times: | We use a default private key path if this field is left blank |
-| RemotePort |  | Gearman port remote machine |
+| Field                  | Required                  | Description                                                                                                                                                                                                 |
+|------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Containers             | :fontawesome-solid-xmark: | [Container](../container/) in which the satellite is to be created                                                                                                                                          |
+| Satellite name         | :fontawesome-solid-xmark: | Name of the satellite to be created                                                                                                                                                                         |
+| IP adress              | :fontawesome-solid-xmark: | IP address or hostname of the satellite. This address is used for all communications between the master instance and the satellite system                                                                   |
+| Synchronisation method | :fontawesome-solid-xmark: | [Synchronisation method](#synchronisation-methods) used to determine the data transfer type                                                                                                                 |
+| Time zone              | :fontawesome-solid-xmark: | The time zone for the satellite                                                                                                                                                                             |
+| Zeitsynchronisation    |                           | Specifies whether you want to synchronise the master server's system clock with the satellite system. Note: It is not recommended that this option be enabled. Please use an NTP server if possible instead. |
+| HTTPS PULL mode        |
+| URL                    | :fontawesome-solid-xmark: | Satellite URL                                                                                                                                                                                               |
+| Check certificate      |                           | Only valid certificates will be accepted                                                                                                                                                                    |
+| Aktiviere Proxy        |                           | Determines whether the proxy entered below should be used to connect to the satellite system                                                                                                                |
+| Proxy URL              |                           | Proxy URL                                                                                                                                                                                                   |
+| API key                | :fontawesome-solid-xmark: | API key authentication for the satellite                                                                                                                                                                    |
+| Interval               |                           | Time interval in seconds in which the master system records the check results                                                                                                                               |
+| Timeout                |                           | Timeout in seconds. This defines when the satellite should be marked as OFFLINE.                                                                                                                            |
+| HTTPS PUSH mode        |
+| API key                | :fontawesome-solid-xmark: | API key authentication for the satellite                                                                                                                                                                    |
+| Timeout                |                           | Timeout in seconds. This defines when the satellite should be marked as OFFLINE.                                                                                                                            |
+| SSH                    |
+| Sign in                | :fontawesome-solid-xmark: | User to be used for logging into the satellite system via SSH                                                                                                                                               |
+| Port                   | :fontawesome-solid-xmark: | SSH port remote computer                                                                                                                                                                                    |
+| PrivateKeyPath         | :fontawesome-solid-xmark: | We use a default private key path if this field is left blank                                                                                                                                               |
+| RemotePort             |                           | Gearman port remote machine                                                                                                                                                                                 |
 
 ## Creating a host on a satellite
 

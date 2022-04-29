@@ -13,25 +13,25 @@ Um eine Hostvorlage zu erstellen, klicken Sie in der Hostvorlagen Übersicht auf
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
 |Basiskonfiguration|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
-| Vorlagenname | :fontawesome-solid-times: | Name der Vorlage |
-| Vorlagentyp | :fontawesome-solid-times: | Bestimmt den [Typ](#vorlagentypen) der Vorlage |
+| Container | :fontawesome-solid-xmark: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
+| Vorlagenname | :fontawesome-solid-xmark: | Name der Vorlage |
+| Vorlagentyp | :fontawesome-solid-xmark: | Bestimmt den [Typ](#vorlagentypen) der Vorlage |
 | Beschreibung |  | Beschreibung der Hostvorlage. Wird als Beschreibung des Hosts weitervererbt |
 | Hostgruppen |  | Zuweisung ein oder mehrerer [Hostgruppen](#hostgruppen) |
 | Stichworte |  | Tags |
 | Priorität |  | Priorität zum filtern in Listen |
 | Prüfungskonfiguration |
-| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Prüfungszeitraum | :fontawesome-solid-xmark: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
 | Aktiviere aktive Prüfungen |  | Bestimmt ob ein Host Aktiv oder Passiv geprüft werden soll |
-| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Hosts ausgeführt werden soll |
-| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen |
-| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
-| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht |
+| Prüfungskommando | :fontawesome-solid-xmark: | Das [Kommando](../commands/), welches zur Überprüfung des Hosts ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-xmark: | Definiert in welchem Intervall Prüfungen stattfinden sollen |
+| Wiederholungsintervall | :fontawesome-solid-xmark: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-xmark: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht |
 | Benachrichtigungskonfiguration |
-| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
-| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
-| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
-| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
+| Benachrichtigungszeitraum | :fontawesome-solid-xmark: | Bestimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-xmark: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
+| Kontakte | :fontawesome-solid-xmark: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
+| Kontaktgruppen | :fontawesome-solid-xmark: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
 | Optionen zu Hostbenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
 | Diverse Konfiguration |
 | Host URL |  | Host URL |
@@ -92,26 +92,26 @@ Um eine Servicevorlage zu erstellen, klicken Sie in der Servicevorlagen Übersic
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
 |Basiskonfiguration|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
-| Vorlagenname | :fontawesome-solid-times: | Name der Vorlage |
-| Vorlagentyp | :fontawesome-solid-times: | Bestimmt den [Typ](#vorlagentypen) der Vorlage |
-| Servicename | :fontawesome-solid-times: | Standardname des Services wenn aus der Vorlage ein Service erstellt wird |
+| Container | :fontawesome-solid-xmark: | [Container](../container/#container) in dem die Vorlage erstellt werden soll |
+| Vorlagenname | :fontawesome-solid-xmark: | Name der Vorlage |
+| Vorlagentyp | :fontawesome-solid-xmark: | Bestimmt den [Typ](#vorlagentypen) der Vorlage |
+| Servicename | :fontawesome-solid-xmark: | Standardname des Services wenn aus der Vorlage ein Service erstellt wird |
 | Beschreibung |  | Beschreibung der Servicevorlage. Wird als Beschreibung des Services weitervererbt |
 | Servicegruppen |  | Zuweisung ein oder mehrerer [Servicegruppen](#servicegruppen) |
 | Stichworte |  | Tags |
 | Priorität |  | Priorität zum filtern in Listen |
 | Prüfungskonfiguration |
-| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Prüfungszeitraum | :fontawesome-solid-xmark: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
 | Aktiviere aktive Prüfungen |  | Bestimmt ob der Service Aktiv oder Passiv geprüft werden soll |
-| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Services ausgeführt werden soll |
-| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen |
-| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
-| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Service in einen Hard State über geht |
+| Prüfungskommando | :fontawesome-solid-xmark: | Das [Kommando](../commands/), welches zur Überprüfung des Services ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-xmark: | Definiert in welchem Intervall Prüfungen stattfinden sollen |
+| Wiederholungsintervall | :fontawesome-solid-xmark: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-xmark: | Bestimmt die Anzahl der Prüfversuche, bevor ein Service in einen Hard State über geht |
 | Benachrichtigungskonfiguration |
-| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den Zeitraum in dem für einen Service Benachrichtigungen versendet werden. |
-| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Service versendet werden |
-| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Service erhalten |
-| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Service erhalten |
+| Benachrichtigungszeitraum | :fontawesome-solid-xmark: | Bestimmt den Zeitraum in dem für einen Service Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-xmark: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Service versendet werden |
+| Kontakte | :fontawesome-solid-xmark: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Service erhalten |
+| Kontaktgruppen | :fontawesome-solid-xmark: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Service erhalten |
 | Optionen zu Servicebenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
 | Diverse Konfiguration |
 | Service URL |  | Service URL |
@@ -178,10 +178,10 @@ rstellt wird.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Servicevorlagengruppe erstellt werden soll  |
-| Name | :fontawesome-solid-times: | Name der Servicevorlagengruppe |
+| Container | :fontawesome-solid-xmark: | [Container](../container/#container) in dem die Servicevorlagengruppe erstellt werden soll  |
+| Name | :fontawesome-solid-xmark: | Name der Servicevorlagengruppe |
 | Beschreibung |  | Beschreibung der Servicevorlagengruppe |
-| Servicevorlage | :fontawesome-solid-times: | Die [Servicevorlagen](#servicevorlagen) die zur Servicevorlagengruppe hinzugefügt werden sollen |
+| Servicevorlage | :fontawesome-solid-xmark: | Die [Servicevorlagen](#servicevorlagen) die zur Servicevorlagengruppe hinzugefügt werden sollen |
 
 ### Servicevorlagengruppen zuweisen
 
@@ -240,12 +240,12 @@ openITCOCKPIT Agent, Checkmk oder den Klassischen weg des Manuellen erstellens e
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
 |Basiskonfiguration|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem der Host erstellt werden soll |
+| Container | :fontawesome-solid-xmark: | [Container](../container/#container) in dem der Host erstellt werden soll |
 | Geteilte Container |  | [Container](../container/#container) in dem der Host zusätzlich sichtbar sein soll |
-| Hostvorlage | :fontawesome-solid-times: | [Hostvorlage](#hostvorlagen) von der der Host abgeleitet werden soll |
-| Host Name | :fontawesome-solid-times: | Name des Hosts |
+| Hostvorlage | :fontawesome-solid-xmark: | [Hostvorlage](#hostvorlagen) von der der Host abgeleitet werden soll |
+| Host Name | :fontawesome-solid-xmark: | Name des Hosts |
 | DNS-Suche |  | Falls aktiviert, wird versucht den Host Namen oder Host Adresse aufzulösen |
-| Host Adresse | :fontawesome-solid-times: | IP Adresse oder FQDN des Hosts |
+| Host Adresse | :fontawesome-solid-xmark: | IP Adresse oder FQDN des Hosts |
 | Beschreibung |  | Beschreibung der Hostvorlage. Wird als Beschreibung des Hosts weitervererbt |
 | Hostgruppen |  | Zuweisung ein oder mehrerer [Hostgruppen](#hostgruppen) |
 | Eltern-Host |  | Parent Host Beziehung |
@@ -253,17 +253,17 @@ openITCOCKPIT Agent, Checkmk oder den Klassischen weg des Manuellen erstellens e
 | Priorität |  | Priorität zum filtern in Listen |
 | Satellit |  | Verfügbar wenn DistributeModule installiert ist. Auswahl des Satelliten |
 | Prüfungskonfiguration |
-| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Prüfungszeitraum | :fontawesome-solid-xmark: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
 | Aktiviere aktive Prüfungen |  | Bestimmt ob ein Host Aktiv oder Passiv geprüft werden soll |
-| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Hosts ausgeführt werden soll |
-| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen. Siehe [Intervalle](#intervalle) |
-| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde. Siehe [Intervalle](#intervalle) |
-| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht. Siehe [Intervalle](#intervalle) |
+| Prüfungskommando | :fontawesome-solid-xmark: | Das [Kommando](../commands/), welches zur Überprüfung des Hosts ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-xmark: | Definiert in welchem Intervall Prüfungen stattfinden sollen. Siehe [Intervalle](#intervalle) |
+| Wiederholungsintervall | :fontawesome-solid-xmark: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde. Siehe [Intervalle](#intervalle) |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-xmark: | Bestimmt die Anzahl der Prüfversuche, bevor ein Host in einen Hard State über geht. Siehe [Intervalle](#intervalle) |
 | Benachrichtigungskonfiguration |
-| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
-| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
-| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
-| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
+| Benachrichtigungszeitraum | :fontawesome-solid-xmark: | Bestimmt den Zeitraum in dem für einen Host Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-xmark: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Host versendet werden |
+| Kontakte | :fontawesome-solid-xmark: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Host erhalten |
+| Kontaktgruppen | :fontawesome-solid-xmark: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Host erhalten |
 | Optionen zu Hostbenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
 | Diverse Konfiguration |
 | Host URL |  | Host URL |
@@ -321,26 +321,26 @@ Möchten Sie die Werte der vorlage wiederherstellen, siehe
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
 |Basiskonfiguration|
-| Host | :fontawesome-solid-times: | Der [Host](#hosts) auf dem der Service angelegt werden soll |
-| Servicevorlage | :fontawesome-solid-times: | Die [Servicevorlage](#servicevorlagen) von dem der Service abgeleitet werden soll |
-| Servicename | :fontawesome-solid-times: | Name des anzulegenden Service |
+| Host | :fontawesome-solid-xmark: | Der [Host](#hosts) auf dem der Service angelegt werden soll |
+| Servicevorlage | :fontawesome-solid-xmark: | Die [Servicevorlage](#servicevorlagen) von dem der Service abgeleitet werden soll |
+| Servicename | :fontawesome-solid-xmark: | Name des anzulegenden Service |
 | Beschreibung |  | Beschreibung des Services |
 | Servicegruppen |  | Zuweisung ein oder mehrerer [Servicegruppen](#servicegruppen) |
 | Stichworte |  | Tags |
 | Priorität |  | Priorität zum filtern in Listen |
 | Prüfungskonfiguration |
-| Prüfungszeitraum | :fontawesome-solid-times: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
+| Prüfungszeitraum | :fontawesome-solid-xmark: | Definition, in welchem [Zeitraum](../timeperiods/) Prüfungen stattfinden sollen |
 | Aktiviere aktive Prüfungen |  | Bestimmt ob der Service Aktiv oder Passiv geprüft werden soll |
-| Prüfungskommando | :fontawesome-solid-times: | Das [Kommando](../commands/), welches zur Überprüfung des Services ausgeführt werden soll |
-| Prüfungsintervall | :fontawesome-solid-times: | Definiert in welchem Intervall Prüfungen stattfinden sollen. Siehe [Intervalle](#intervalle) |
-| Wiederholungsintervall | :fontawesome-solid-times: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde. Siehe [Intervalle](#intervalle) |
-| Max. Anzahl der Prüfversuche | :fontawesome-solid-times: | Bestimmt die Anzahl der Prüfversuche, bevor ein Service in einen Hard State über geht. Siehe [Intervalle](#intervalle) |
+| Prüfungskommando | :fontawesome-solid-xmark: | Das [Kommando](../commands/), welches zur Überprüfung des Services ausgeführt werden soll |
+| Prüfungsintervall | :fontawesome-solid-xmark: | Definiert in welchem Intervall Prüfungen stattfinden sollen. Siehe [Intervalle](#intervalle) |
+| Wiederholungsintervall | :fontawesome-solid-xmark: | Definiert den Wartezeitraum bevor eine neue Prüfung stattfindet, nachdem ein nicht UP status erreicht wurde. Siehe [Intervalle](#intervalle) |
+| Max. Anzahl der Prüfversuche | :fontawesome-solid-xmark: | Bestimmt die Anzahl der Prüfversuche, bevor ein Service in einen Hard State über geht. Siehe [Intervalle](#intervalle) |
 | Benachrichtigungskonfiguration |
-| Benachrichtigungszeitraum | :fontawesome-solid-times: | Bestimmt den [Zeitraum](../timeperiods/) in dem für einen Service Benachrichtigungen versendet werden. |
-| Benachrichtigungsintervall | :fontawesome-solid-times: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Service versendet werden |
+| Benachrichtigungszeitraum | :fontawesome-solid-xmark: | Bestimmt den [Zeitraum](../timeperiods/) in dem für einen Service Benachrichtigungen versendet werden. |
+| Benachrichtigungsintervall | :fontawesome-solid-xmark: | Definiert den Zeitlichen Abstand von Benachrichtigungen, die zu diesem Service versendet werden |
 | Vererbung deaktivieren |  | Deaktiviert die vererbung von Kontakten und Kontaktgruppen. Diese können dann für diesen Service einzeln gesetzt werden |
-| Kontakte | :fontawesome-solid-times: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Service erhalten |
-| Kontaktgruppen | :fontawesome-solid-times: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Service erhalten |
+| Kontakte | :fontawesome-solid-xmark: | Ein oder mehrere Kontakte die Benachrichtigungen zu diesem Service erhalten |
+| Kontaktgruppen | :fontawesome-solid-xmark: | Ein oder mehrere Kontaktgruppen die Benachrichtigungen zu diesem Service erhalten |
 | Optionen zu Servicebenachrichtigungen |  | Definiert die Status die Erreicht werden müssen, damit benachrichtigt wird |
 | Diverse Konfiguration |
 | Service URL |  | Service URL |
@@ -469,12 +469,12 @@ Danach Speichert man und die Hostgruppe ist fertig erstellt.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Hostgruppe erstellt werden soll  |
-| Name | :fontawesome-solid-times: | Name der Hostgruppe |
+| Container | :fontawesome-solid-xmark: | [Container](../container/#container) in dem die Hostgruppe erstellt werden soll  |
+| Name | :fontawesome-solid-xmark: | Name der Hostgruppe |
 | Beschreibung |  | Beschreibung der Hostgruppe |
 | Hostgruppen URL |  | URL der Hostgruppe |
 | Hosts |  | [Hosts](#hosts) die zur Hostgruppe hinzugefügt werden sollen |
-| Hostvorlagen | :fontawesome-solid-times: | Die [Hostvorlagen](#hostvorlagen) die zur Hostgruppe hinzugefügt werden sollen |
+| Hostvorlagen | :fontawesome-solid-xmark: | Die [Hostvorlagen](#hostvorlagen) die zur Hostgruppe hinzugefügt werden sollen |
 
 ### Erweiterte Ansicht
 
@@ -505,12 +505,12 @@ Danach Speichert man und die Servicegruppe ist fertig erstellt.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | [Container](../container/#container) in dem die Servicegruppe erstellt werden soll  |
-| Name | :fontawesome-solid-times: | Name der Servicegruppe |
+| Container | :fontawesome-solid-xmark: | [Container](../container/#container) in dem die Servicegruppe erstellt werden soll  |
+| Name | :fontawesome-solid-xmark: | Name der Servicegruppe |
 | Beschreibung |  | Beschreibung der Servicegruppe |
 | Servicegruppen URL |  | URL der Servicegruppe |
 | Services |  | [Services](#services) die zur Hostgruppe hinzugefügt werden sollen |
-| Servicevorlage | :fontawesome-solid-times: | Die [Servicevorlagen](#servicevorlagen) die zur Servicegruppe hinzugefügt werden sollen |
+| Servicevorlage | :fontawesome-solid-xmark: | Die [Servicevorlagen](#servicevorlagen) die zur Servicegruppe hinzugefügt werden sollen |
 
 ### Erweiterte Ansicht
 

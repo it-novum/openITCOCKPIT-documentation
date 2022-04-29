@@ -90,7 +90,7 @@ Ein Mandant bildet die Grundlage für weitere Container vom Typ Standort oder Kn
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Name | :fontawesome-solid-times: | Name des zu erstellenden Mandanten |
+| Name | :fontawesome-solid-xmark: | Name des zu erstellenden Mandanten |
 | Beschreibung |  | Beschreibung des Mandanten |
 | Vorname |  | Vorname des Mandanten |
 | Nachname |  | Nachname des Mandanten |
@@ -110,8 +110,8 @@ Landkarte zusammengefasst.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Elterncontainer des zu erstellenden Standortes |
-| Name | :fontawesome-solid-times: | Name des zu erstellenden Standortes |
+| Container | :fontawesome-solid-xmark: | Elterncontainer des zu erstellenden Standortes |
+| Name | :fontawesome-solid-xmark: | Name des zu erstellenden Standortes |
 | Beschreibung |  | Beschreibung des Standortes |
 | Breitengrad |  | Breitengrad des Standortes. Die Zahl muss zwischen -90 und 90 Grad sein |
 | Längengrad |  | Längengrad des Standortes. Die Zahl muss zwischen -180 und 180 Grad sein|
@@ -127,7 +127,7 @@ auch [Mandanten](#mandanten) und [Standorte](#standorte) erstellt werden.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Name | :fontawesome-solid-times: | Name des zu erstellenden Knotens |
+| Name | :fontawesome-solid-xmark: | Name des zu erstellenden Knotens |
 
 
 ## Containerverwaltung

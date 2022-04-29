@@ -1,28 +1,37 @@
 # Creating a New openITCOCKPIT Check Plugin
 
-For this article you will need an openITCOCKPIT development environment. Read [this guide to create an openITCOCKPIT development environment.](../../setup-dev-env/#openitcockpit-entwicklungsumgebung-erstellen)
+For this article you will need an openITCOCKPIT development environment.
+Read [this guide to create an openITCOCKPIT development environment.](../../setup-dev-env/#creating-an-openitcockpit-development-environment)
 
-openITCOCKPIT uses a plugin-based system to check the status of hosts and services. The plugin API is 100% compatible with the [Nagios](https://nagios-plugins.org/doc/guidelines.html)
+openITCOCKPIT uses a plugin-based system to check the status of hosts and services. The plugin API is 100% compatible
+with the [Nagios](https://nagios-plugins.org/doc/guidelines.html)
 , [Naemon](https://www.naemon.io/documentation/usersguide/pluginapi.html)
 , [Shinken](https://www.naemon.io/documentation/usersguide/pluginapi.html)
-and [Icinga 1.x](https://icinga.com/docs/icinga1/latest/en/pluginapi.html) plugin API. By default, openITCOCKPIT comes with a standard set of plugins for the basic checking of network features such as ports, running processes, CPU usage, etc.
+and [Icinga 1.x](https://icinga.com/docs/icinga1/latest/en/pluginapi.html) plugin API. By default, openITCOCKPIT comes
+with a standard set of plugins for the basic checking of network features such as ports, running processes, CPU usage,
+etc.
 
 In some cases, it will be practical to write your own specialised plugin(s) for in-depth monitoring.
 
-Plugins for openITCOCKPIT can be developed in all programming languages. From a simple bash script to a complex Python or C binary - everything is possible. For some languages such as [Perl](https://github.com/monitoring-plugins/monitoring-plugin-perl)
-or [Python](https://pypi.org/project/nagiosplugin/) , there are even helper classes that speed up and simplify development.
+Plugins for openITCOCKPIT can be developed in all programming languages. From a simple bash script to a complex Python
+or C binary - everything is possible. For some languages such
+as [Perl](https://github.com/monitoring-plugins/monitoring-plugin-perl)
+or [Python](https://pypi.org/project/nagiosplugin/) , there are even helper classes that speed up and simplify
+development.
 
 ## Plugin overview
 
 To be compatible with openITCOCKPIT, a plugin must meet the following minimum requirements:
 
--	The script or binary must be executable
--	Must "exit" with a valid return value (see [Return Codes](#return-codes))
--	Must return at least one line of text (plugin output) to STDOUT.
+- The script or binary must be executable
+- Must "exit" with a valid return value (see [Return Codes](#return-codes))
+- Must return at least one line of text (plugin output) to STDOUT.
 
 ## Plugin paths
 
-The standard plugins that are delivered with openITCOCKPIT are located in the folder `/opt/openitc/nagios/libexec`. It is recommended (but not necessary) to create a separate folder for your own plugins, for example `/opt/openitc/my_checks/`.
+The standard plugins that are delivered with openITCOCKPIT are located in the folder `/opt/openitc/nagios/libexec`. It
+is recommended (but not necessary) to create a separate folder for your own plugins, for
+example `/opt/openitc/my_checks/`.
 
 ## Return codes
 
@@ -56,7 +65,8 @@ echo "This is the minimum plugin output"
 exit 0
 ```
 
-openITCOCKPIT supports [BBCode](https://en.wikipedia.org/wiki/BBCode) for controlling the style of embedded hyperlinks in the plugin output.
+openITCOCKPIT supports [BBCode](https://en.wikipedia.org/wiki/BBCode) for controlling the style of embedded hyperlinks
+in the plugin output.
 
 ```bash
 echo "This is [b]bold text[/b]"
@@ -66,7 +76,8 @@ echo "This is [b]bold text[/b]"
 
 Performance data is used by openITCOCKPIT to create graphs for the user interface, for notifications and Grafana.
 
-Performance data is separated from the plugin output by a "pipe" symbol |. This is optional as not every plugin provides performance data.
+Performance data is separated from the plugin output by a "pipe" symbol |. This is optional as not every plugin provides
+performance data.
 
 The format for the performance data is as follows:
 
@@ -74,14 +85,12 @@ The format for the performance data is as follows:
 'label'=value[UOM];[warn];[crit];[min];[max]
 ```
 
-1.	A space-separated list of label/value pairs
-2.	If the label contains a space, the label must be enclosed in single quotes (').
-3.	Numerical values must be given in US format (`10.5` instead of `10,5`).
-4.	Optional unit of measurement (e.g.: `s`, `ms`, `kg` etc.)
-    1.	Optional WARNING threshold
-    2.	Optional CRITICAL threshold
-    3.	Optional minimum threshold
-    4.	Optional maximum threshold
+1. A space-separated list of label/value pairs
+2. If the label contains a space, the label must be enclosed in single quotes (').
+3. Numerical values must be given in US format (`10.5` instead of `10,5`).
+4. Optional unit of measurement (e.g.: `s`, `ms`, `kg` etc.)
+   1. Optional WARNING threshold 2. Optional CRITICAL threshold 3. Optional minimum threshold 4. Optional maximum
+   threshold
 
 |Example plugin output|Legend|
 |---|---|

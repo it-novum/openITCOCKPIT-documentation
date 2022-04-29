@@ -13,18 +13,18 @@ Eine Host-Wartungszeit ist ein Wartungszeitraum für einen einzelnen Hosts oder 
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Hosts | :fontawesome-solid-times: | Hosts, für die eine Wartungszeit erstellt werden soll |
-| Wartungszeitraum für | :fontawesome-solid-times: | Hier kann festgelegt werden, ob nur für den Host oder den Host inklusive seiner Services eine Wartungszeit erstellt werden soll. |
+| Hosts | :fontawesome-solid-xmark: | Hosts, für die eine Wartungszeit erstellt werden soll |
+| Wartungszeitraum für | :fontawesome-solid-xmark: | Hier kann festgelegt werden, ob nur für den Host oder den Host inklusive seiner Services eine Wartungszeit erstellt werden soll. |
 | Kommentar |  | Kommentar für die zu erstellende Wartungszeit |
 | Wiederkehrende Wartungszeit |  | Wird diese Option aktiviert, so kann eine Startzeit, Dauer, Wochentage oder Tag des Monats für die Wiederkehrende Wartungszeit gesetzt werden. |
 | Einzelne Wartungszeit |
-| Von | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
-| Bis | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
+| Von | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
+| Bis | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
 | Wiederkehrende Wartungszeit |
-| Startzeit | :fontawesome-solid-times: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
-| Dauer | :fontawesome-solid-times: | Dauer der Wiederkehrenden Wartungszeit |
-| Wochentage | :fontawesome-solid-times: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
-| Tag des Monats | :fontawesome-solid-times: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
+| Startzeit | :fontawesome-solid-xmark: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
+| Dauer | :fontawesome-solid-xmark: | Dauer der Wiederkehrenden Wartungszeit |
+| Wochentage | :fontawesome-solid-xmark: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
+| Tag des Monats | :fontawesome-solid-xmark: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
 
 ### Service Wartungszeit
 
@@ -33,17 +33,17 @@ unterschiedlichen Hosts sein.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Services | :fontawesome-solid-times: | Services, für die eine Wartungszeit erstellt werden soll |
+| Services | :fontawesome-solid-xmark: | Services, für die eine Wartungszeit erstellt werden soll |
 | Kommentar |  | Kommentar für die zu erstellende Wartungszeit |
 | Wiederkehrende Wartungszeit |  | Wird diese Option aktiviert, so kann eine Startzeit, Dauer, Wochentage oder Tag des Monats für die Wiederkehrende Wartungszeit gesetzt werden. |
 | Einzelne Wartungszeit |
-| Von | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
-| Bis | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
+| Von | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
+| Bis | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
 | Wiederkehrende Wartungszeit |
-| Startzeit | :fontawesome-solid-times: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
-| Dauer | :fontawesome-solid-times: | Dauer der Wiederkehrenden Wartungszeit |
-| Wochentage | :fontawesome-solid-times: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
-| Tag des Monats | :fontawesome-solid-times: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
+| Startzeit | :fontawesome-solid-xmark: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
+| Dauer | :fontawesome-solid-xmark: | Dauer der Wiederkehrenden Wartungszeit |
+| Wochentage | :fontawesome-solid-xmark: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
+| Tag des Monats | :fontawesome-solid-xmark: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
 
 ### Hostgruppen Wartungszeit
 
@@ -52,18 +52,18 @@ deren Services in eine Wartungszeit aufgenommen werden.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Hostgruppen | :fontawesome-solid-times: | Hostgruppe, für die eine Wartungszeit erstellt werden soll |
-| Wartungszeitraum für | :fontawesome-solid-times: | Hier kann festgelegt werden, ob nur für die Hosts oder die Hosts inklusive ihrer Services eine Wartungszeit erstellt werden soll. |
+| Hostgruppen | :fontawesome-solid-xmark: | Hostgruppe, für die eine Wartungszeit erstellt werden soll |
+| Wartungszeitraum für | :fontawesome-solid-xmark: | Hier kann festgelegt werden, ob nur für die Hosts oder die Hosts inklusive ihrer Services eine Wartungszeit erstellt werden soll. |
 | Kommentar |  | Kommentar für die zu erstellende Wartungszeit |
 | Wiederkehrende Wartungszeit |  | Wird diese Option aktiviert, so kann eine Startzeit, Dauer, Wochentage oder Tag des Monats für die Wiederkehrende Wartungszeit gesetzt werden. |
 | Einzelne Wartungszeit |
-| Von | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
-| Bis | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
+| Von | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
+| Bis | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
 | Wiederkehrende Wartungszeit |
-| Startzeit | :fontawesome-solid-times: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
-| Dauer | :fontawesome-solid-times: | Dauer der Wiederkehrenden Wartungszeit |
-| Wochentage | :fontawesome-solid-times: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
-| Tag des Monats | :fontawesome-solid-times: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
+| Startzeit | :fontawesome-solid-xmark: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
+| Dauer | :fontawesome-solid-xmark: | Dauer der Wiederkehrenden Wartungszeit |
+| Wochentage | :fontawesome-solid-xmark: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
+| Tag des Monats | :fontawesome-solid-xmark: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
 
 ### Container Wartungszeit
 
@@ -73,19 +73,19 @@ in die Wartungszeit aufgenommen werden sollen
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Host | :fontawesome-solid-times: | Container, für die eine Wartungszeit erstellt werden soll |
+| Host | :fontawesome-solid-xmark: | Container, für die eine Wartungszeit erstellt werden soll |
 | Rekursives Nachschlagen von Containern |  | Ist diese Option Aktiviert, so werden auch die Kind-Container des angegebenen Containers in die Wartungszeit mit aufgenommen |
-| Wartungszeitraum für | :fontawesome-solid-times: | Hier kann festgelegt werden, ob nur für den Host oder den Host inklusive seiner Services eine Wartungszeit erstellt werden soll. |
+| Wartungszeitraum für | :fontawesome-solid-xmark: | Hier kann festgelegt werden, ob nur für den Host oder den Host inklusive seiner Services eine Wartungszeit erstellt werden soll. |
 | Kommentar |  | Kommentar für die zu erstellende Wartungszeit |
 | Wiederkehrende Wartungszeit |  | Wird diese Option aktiviert, so kann eine Startzeit, Dauer, Wochentage oder Tag des Monats für die Wiederkehrende Wartungszeit gesetzt werden. |
 | Einzelne Wartungszeit |
-| Von | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
-| Bis | :fontawesome-solid-times: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
+| Von | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit starten soll |
+| Bis | :fontawesome-solid-xmark: | Datum und Uhrzeit, wann die Wartungszeit enden soll |
 | Wiederkehrende Wartungszeit |
-| Startzeit | :fontawesome-solid-times: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
-| Dauer | :fontawesome-solid-times: | Dauer der Wiederkehrenden Wartungszeit |
-| Wochentage | :fontawesome-solid-times: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
-| Tag des Monats | :fontawesome-solid-times: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
+| Startzeit | :fontawesome-solid-xmark: | Startzeit wann die Wiederkehrende Wartungszeit anfangen soll |
+| Dauer | :fontawesome-solid-xmark: | Dauer der Wiederkehrenden Wartungszeit |
+| Wochentage | :fontawesome-solid-xmark: | An welchem Wochentag soll die Wiederkehrende Wartungszeit erfolgen |
+| Tag des Monats | :fontawesome-solid-xmark: | An welchem Tag des Monats soll die Wiederkehrende Wartungszeit erfolgen |
 
 ### Wiederkehrende Wartungszeit
 

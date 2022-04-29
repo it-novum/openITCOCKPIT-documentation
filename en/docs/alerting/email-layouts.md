@@ -54,11 +54,11 @@ openITCOCKPIT then uses your layout as a template for emails.
 ## HTML and text emails
 The `--format` parameter can be used to specify the type of email to be sent.
 
-| Format | Description |
-|------|------------|
-| `both`   | Sends an HTML + text email. The client can decide which format is displayed. |
-| `html` | Only sends an HTML email |
-| `text`   | Only sends a text email |
+| Format | Description                                                                  |
+|--------|------------------------------------------------------------------------------|
+| `both` | Sends an HTML + text email. The client can decide which format is displayed. |
+| `html` | Only sends an HTML email                                                     |
+| `text` | Only sends a text email                                                      |
 
 All email attachments such as logos and graphs can be excluded via the `--no-attachments` parameter in order to save storage space.
 

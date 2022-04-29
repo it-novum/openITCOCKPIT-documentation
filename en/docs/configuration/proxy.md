@@ -10,6 +10,6 @@ Note that a proxy server can only be used if the `Enable Proxy` option has been 
 
 | Field | Required | Description |
 |---|---|---|
-| IP address | :fontawesome-solid-times: | IP address or host name of the proxy |
-| Port | :fontawesome-solid-times: | Proxy server port |
+| IP address | :fontawesome-solid-xmark: | IP address or host name of the proxy |
+| Port | :fontawesome-solid-xmark: | Proxy server port |
 | Activate proxy | | If this option has been enabled, the proxy will be used. |

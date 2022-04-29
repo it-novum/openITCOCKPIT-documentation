@@ -167,17 +167,17 @@ Now open the `perfdatabackend.php` configuration file and make sure that the sel
 
 Navigate to `Systemkonfiguration -> APIs -> Grafana`
 
-Configuration key|Default value|Description|
-|---|---|---|
-|Grafana URL|grafana.docker|Address of the Grafana server. `grafana.docker` is automatically resolved to the supplied Grafana instance. |
-|Grafana API key|Randomly generated|Saved under `/opt/openitc/etc/grafana/api_key`. Use the value found in this file..|
-|Grafana Prefix|openitcockpit|Prefix that is added to each metric in Carbon (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
-|Establish a connection via HTTPS|Yes|Determines whether HTTPS should be used to establish a connection.|
-|Use proxy|No|Determines whether the [proxy server](../../configuration/proxy/) should be used.|
-|Ignore SSL certificate|Yes|Self-signed certificates are trusted|
-|Dashboard style|Light|Use the light or dark style for Grafana|
-|Host group|*empty*|If this value is set, Grafana dashboards will be generated for all hosts in the specified host group(s) (if left empty, a dashboard will be generated for all hosts)|
-|Host groups (excluded)|*empty*|If set to **no**, Grafana dashboards will be created for the hosts in the specified host groups|
+| Configuration key                | Default value      | Description                                                                                                                                                          |
+|----------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Grafana URL                      | grafana.docker     | Address of the Grafana server. `grafana.docker` is automatically resolved to the supplied Grafana instance.                                                          |
+| Grafana API key                  | Randomly generated | Saved under `/opt/openitc/etc/grafana/api_key`. Use the value found in this file..                                                                                   |
+| Grafana Prefix                   | openitcockpit      | Prefix that is added to each metric in Carbon (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).                                                            |
+| Establish a connection via HTTPS | Yes                | Determines whether HTTPS should be used to establish a connection.                                                                                                   |
+| Use proxy                        | No                 | Determines whether the [proxy server](../../configuration/proxy/) should be used.                                                                                    |
+| Ignore SSL certificate           | Yes                | Self-signed certificates are trusted                                                                                                                                 |
+| Dashboard style                  | Light              | Use the light or dark style for Grafana                                                                                                                              |
+| Host group                       | *empty*            | If this value is set, Grafana dashboards will be generated for all hosts in the specified host group(s) (if left empty, a dashboard will be generated for all hosts) |
+| Host groups (excluded)           | *empty*            | If set to **no**, Grafana dashboards will be created for the hosts in the specified host groups                                                                      |
 
 ## Use external Graphite and Grafana servers (experts)
 
@@ -217,17 +217,17 @@ In the next step, open the `perfdatabackend.php` configuration file and make sur
 
 Navigate to `System configuration -> APIs -> Grafana`
 
-Configuration key|Value|Description|
-|---|---|---|
-|Grafana URL|xxx.xxx.xxx.xxx|Address of the external Grafana server|
-|Grafana API key|Randomly generated|A [Grafana API key](#grafana-api-schlussel-erzeugen) with "Editor" permissions must be generated|
-|Grafana Prefix|openitcockpit|Prefix that is added to each metric in Carbon (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).|
-|Establish a connection via HTTPS|Yes/No|Determines whether HTTPS should be used to establish a connection.|
-|Use proxy|Yes/No|Determines whether the [proxy server](../../configuration/proxy/) should be used|
-|Ignore SSL certificate|Yes/No|Self-signed certificates will be trusted|
-|Dashboard style|light|Use the light or dark style for Grafana|
-|Host group|*empty*|If this value is set, Grafana dashboards will be generated for all hosts in the specified host group(s) (if left empty, a dashboard will be generated for all hosts)|
-|Host groups (excluded)|*empty*|If set to **no**, Grafana dashboards will be created for the hosts in the specified host groups|
+| Configuration key                | Value              | Description                                                                                                                                                          |
+|----------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Grafana URL                      | xxx.xxx.xxx.xxx    | Address of the external Grafana server                                                                                                                               |
+| Grafana API key                  | Randomly generated | A [Grafana API key](#generate-grafana-api-key) with "Editor" permissions must be generated                                                                           |
+| Grafana Prefix                   | openitcockpit      | Prefix that is added to each metric in Carbon (Metric: <prefix>.<$HOSTNAME$>.<$SERVICEDESC$>.<$METRIC$>).                                                            |
+| Establish a connection via HTTPS | Yes/No             | Determines whether HTTPS should be used to establish a connection.                                                                                                   |
+| Use proxy                        | Yes/No             | Determines whether the [proxy server](../../configuration/proxy/) should be used                                                                                     |
+| Ignore SSL certificate           | Yes/No             | Self-signed certificates will be trusted                                                                                                                             |
+| Dashboard style                  | light              | Use the light or dark style for Grafana                                                                                                                              |
+| Host group                       | *empty*            | If this value is set, Grafana dashboards will be generated for all hosts in the specified host group(s) (if left empty, a dashboard will be generated for all hosts) |
+| Host groups (excluded)           | *empty*            | If set to **no**, Grafana dashboards will be created for the hosts in the specified host groups                                                                      |
 
 #### Generate Grafana API key
 ![new grafana api key](/images/Create-new-Grafana-API-Key.png)

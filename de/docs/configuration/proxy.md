@@ -10,6 +10,6 @@ Beachten Sie, dass der Proxyserver nur dann verwendet wird, wenn die Option `Akt
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| IP-Adresse | :fontawesome-solid-times: | IP-Adresse oder Hostname des Proxy |
-| Port | :fontawesome-solid-times: | Port des Proxy Servers |
+| IP-Adresse | :fontawesome-solid-xmark: | IP-Adresse oder Hostname des Proxy |
+| Port | :fontawesome-solid-xmark: | Port des Proxy Servers |
 | Aktiviere Proxy |  | Ist diese Option Aktiviert wird der Proxy verwendet |

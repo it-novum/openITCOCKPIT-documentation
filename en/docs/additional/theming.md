@@ -1,4 +1,4 @@
-# Selecting a theme and CI CE <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
+# Selecting a theme and CI <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 ## Design Module
 
@@ -19,7 +19,7 @@ To export a design, you must first create and save a design. You will then need 
 
 To import an exported design, click on the "Import" button and upload the corresponding `.json` file.
 
-For example, you can use this method to load our [Halloween theme for openITCOCKPIT ](https://github.com/it-novum/oitc-halloween-theme) laden.
+For example, you can use this method to load our [Halloween theme for openITCOCKPIT ](https://github.com/it-novum/oitc-halloween-theme).
 
 ![Halloween theme for openITCOCKPIT](/images/openitcockpit-Halloween-login.jpg)
 

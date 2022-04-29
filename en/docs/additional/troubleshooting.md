@@ -4,7 +4,7 @@
 
 A newly created host will not automatically appear in the main host list. Instead, newly created hosts can be found in the host list under the `Not monitored` tab. This means that the host exists in openITCOCKPIT, but is not yet known to the monitoring engine.
 
-You will first need to [export the configuration](../../monitoring/basic-principles/#wie-fuhre-ich-einen-export-aus) in order for the newly created host to be monitored.
+You will first need to [export the configuration](../../monitoring/basic-principles/#how-do-i-carry-out-an-export) in order for the newly created host to be monitored.
 
 ## sudo_server
 
@@ -35,7 +35,7 @@ If the problem still exists, restart the sudo_server service.
 systemctl restart sudo_server.service
 ```
 
-If the problem persists, you can [contact us for further assistance](../support/#ich-brauche-hilfe).
+If the problem persists, you can [contact us for further assistance](../support/#support).
 
 ## Debugging/Troubleshooting Page
 

@@ -3,7 +3,7 @@
 NRPE bietet eine Möglichkeit, Monitoring Plugins auf einem Remote System auszuführen. Dies setzt einen laufenden
 NRPE-Server und installierte Monitoring Plugins auf dem Remote System voraus.
 
-Es wird empfohlen den [openITCOCKPIT Monitoring Agent](#monitoring-mit-dem-openitcockpit-agent) zum Ausführen von
+Es wird empfohlen den [openITCOCKPIT Monitoring Agent](../openitcockpit-agent/#monitoring-mit-dem-openitcockpit-agent) zum Ausführen von
 Plugins auf dem Remote Host zu verwenden, da dieses Setup weit weniger komplex ist. Sie haben die Möglichkeit zu
 entscheiden, welche Methode Sie präferieren.
 

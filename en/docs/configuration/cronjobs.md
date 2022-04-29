@@ -7,12 +7,12 @@ To create a new cron job, first select the location of the task you want to perf
 !!! warning
     Cron jobs are an important component of how openITCOCKPIT functions and so should only be edited by experienced users.
 
-| Field | Required  | Description |
-|---|---|---|
-| Enhancements | :fontawesome-solid-times: | Task to be executed |
-| Tasks | :fontawesome-solid-times: | Task to be executed |
-| Interval |  | Interval (in minutes) at which the task should be executed |
-| Activated |  | If the task is to be executed, this checkbox must be ticked. |
+| Field        | Required                  | Description                                                  |
+|--------------|---------------------------|--------------------------------------------------------------|
+| Enhancements | :fontawesome-solid-xmark: | Task to be executed                                          |
+| Tasks        | :fontawesome-solid-xmark: | Task to be executed                                          |
+| Interval     |                           | Interval (in minutes) at which the task should be executed   |
+| Activated    |                           | If the task is to be executed, this checkbox must be ticked. |
 
 ## Systemd Timer
 Contrary to what the name suggests, openITCOCKPIT's cron jobs are not executed via the `cron daemon`, but rather use the systemd timer function.

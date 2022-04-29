@@ -6,6 +6,6 @@ ausgewählt.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container für den der Kalender sichtbar sein soll |
-| Name | :fontawesome-solid-times: | Name des zu erstellenden Kalenders |
+| Container | :fontawesome-solid-xmark: | Container für den der Kalender sichtbar sein soll |
+| Name | :fontawesome-solid-xmark: | Name des zu erstellenden Kalenders |
 | Beschreibung |  | Beschreibung des Kalenders |

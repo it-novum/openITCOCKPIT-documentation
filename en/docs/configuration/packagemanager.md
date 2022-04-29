@@ -2,7 +2,7 @@
 
 The openITCOCKPIT package manager allows modules to be installed in openITCOCKPIT. These modules are either free of charge or available via subscription. The modules are colour-coded. Free modules are shown in blue, while enterprise-level modules are red.
 
-## Voraussetzung
+## Prerequisites
 
 A valid licence is required to use the package manager. To gain access to the free modules you need to have at least a community licence which you can find on the [openitcockpit.io website](https://openitcockpit.io/download_server/). This licence must be entered in openITCOCKPIT.
 Access to the server's console must also be provided.

@@ -31,18 +31,18 @@ Once this option has been enabled, you can send reports to one or more users.
 
 | Field                      | Required                  | Description                                                  |
 | -------------------------- | ------------------------- | ------------------------------------------------------------ |
-| Container                  | :fontawesome-solid-times: | Container in which the immediate report is to be created     |
-| Name                       | :fontawesome-solid-times: | Name of the instant report                                   |
-| Type                       | :fontawesome-solid-times: | Object type to be evaluated. Host groups, hosts, service groups and services are possible |
-| Type-Object                | :fontawesome-solid-times: | Depending on the type selected, either hosts, host groups, services or service groups must be selected in the next field |
-| Evaluation                 | :fontawesome-solid-times: | Which objects are evaluated -> Only hosts, hosts and services or only services |
-| Time period                | :fontawesome-solid-times: | [Time period](../configuration/timeperiods/) to consider     |
-| Reflection State           | :fontawesome-solid-times: | The type of state to be evaluated. Hard state or soft and hard state |
+| Container                  | :fontawesome-solid-xmark: | Container in which the immediate report is to be created     |
+| Name                       | :fontawesome-solid-xmark: | Name of the instant report                                   |
+| Type                       | :fontawesome-solid-xmark: | Object type to be evaluated. Host groups, hosts, service groups and services are possible |
+| Type-Object                | :fontawesome-solid-xmark: | Depending on the type selected, either hosts, host groups, services or service groups must be selected in the next field |
+| Evaluation                 | :fontawesome-solid-xmark: | Which objects are evaluated -> Only hosts, hosts and services or only services |
+| Time period                | :fontawesome-solid-xmark: | [Time period](../configuration/timeperiods/) to consider     |
+| Reflection State           | :fontawesome-solid-xmark: | The type of state to be evaluated. Hard state or soft and hard state |
 | Consider maintenance times |                           | Determines whether maintenance times are to be taken into account |
 | Summary Display            |                           | Determines whether an overall view of the status of host and services is displayed instead of the listings of individual hosts. |
 | Send Email                 |                           |                                                              |
-| Sending Interval           | :fontawesome-solid-times: | Sending interval: DAY, WEEK, MONTH, YEAR                     |
-| User(s) to send            | :fontawesome-solid-times: | User(s) to whom the report is to be sent                     |
+| Sending Interval           | :fontawesome-solid-xmark: | Sending interval: DAY, WEEK, MONTH, YEAR                     |
+| User(s) to send            | :fontawesome-solid-xmark: | User(s) to whom the report is to be sent                     |
 
 ### Generate the Report
 
@@ -64,8 +64,8 @@ The generated report also contains the host status of the selected services as w
 
 | Field         | Required                  | Description                       |
 | ------------- | ------------------------- | --------------------------------- |
-| Services      | :fontawesome-solid-times: | Services that are to be evaluated |
-| Report format | :fontawesome-solid-times: | Report or Format HTML or PDF      |
+| Services      | :fontawesome-solid-xmark: | Services that are to be evaluated |
+| Report format | :fontawesome-solid-xmark: | Report or Format HTML or PDF      |
 
 ## Downtime reports
 
@@ -85,15 +85,15 @@ The reflection state defines whether either both a soft and hard state or only a
 
 | Field            | Required                  | Description                                                  |
 | ---------------- | ------------------------- | ------------------------------------------------------------ |
-| Evaluation       | :fontawesome-solid-times: | Hosts or hosts including services                            |
-| Report Format    | :fontawesome-solid-times: | Report format HTML or PDF                                    |
-| Time Period      | :fontawesome-solid-times: | [Time period](../configuration/timeperiods/) to consider     |
+| Evaluation       | :fontawesome-solid-xmark: | Hosts or hosts including services                            |
+| Report Format    | :fontawesome-solid-xmark: | Report format HTML or PDF                                    |
+| Time Period      | :fontawesome-solid-xmark: | [Time period](../configuration/timeperiods/) to consider     |
 | From             |                           | Start period of evaluation                                   |
 | To               |                           | End period of evaluation                                     |
-| Reflection State | :fontawesome-solid-times: | The type of state to be evaluated. Hard state or soft and hard state |
+| Reflection State | :fontawesome-solid-xmark: | The type of state to be evaluated. Hard state or soft and hard state |
 | Dynamic Colour   |                           | If there is an error, different colours are shown            |
 
-## Autoreports CE <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
+## Autoreports <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 The autoreport module in openITCOCKPIT is a configurable report that can be sent out automatically. Reports contain the length of downtime, the maximum permissible downtime and the availability of the hosts and services that have been selected.
 
@@ -137,18 +137,18 @@ From here you can select the output format and the time range to be evaluated. A
 
 | Field                      | Required                  | Description                                                  |
 | -------------------------- | ------------------------- | ------------------------------------------------------------ |
-| Container                  | :fontawesome-solid-times: | Container in which the Autoreport is to be created           |
-| Report name                | :fontawesome-solid-times: | Name of the Autoreport                                       |
+| Container                  | :fontawesome-solid-xmark: | Container in which the Autoreport is to be created           |
+| Report name                | :fontawesome-solid-xmark: | Name of the Autoreport                                       |
 | Report description         |                           | Description of the Autoreport                                |
 | Set Start                  |                           | Start date of the report is to be defined                    |
 | Start date                 |                           | Start date of the report. Can only be edited if "Set Start" has been activated. |
-| Time period                | :fontawesome-solid-times: | [Time period](../configuration/timeperiods/) to consider     |
-| Evaluation Period          | :fontawesome-solid-times: | Day, Week, Month, Quarter or Year                            |
-| Transmission interval      | :fontawesome-solid-times: | Daily, Weekly, Monthly, Quarterly, Yearly or Never           |
-| Guaranteed availability    | :fontawesome-solid-times: | Availability in percent. Either "Guaranteed availability" or "Maximum number of failures" must be specified |
-| Maximum number of outages  | :fontawesome-solid-times: | Maximum number of outages. Either "Guaranteed availability" or "Maximum number of outages" must be specified |
-| Graph                      | :fontawesome-solid-times: | Graph in percent or hours                                    |
-| Reflection State           | :fontawesome-solid-times: | The type of state to be evaluated. Hard state or soft and hard state |
+| Time period                | :fontawesome-solid-xmark: | [Time period](../configuration/timeperiods/) to consider     |
+| Evaluation Period          | :fontawesome-solid-xmark: | Day, Week, Month, Quarter or Year                            |
+| Transmission interval      | :fontawesome-solid-xmark: | Daily, Weekly, Monthly, Quarterly, Yearly or Never           |
+| Guaranteed availability    | :fontawesome-solid-xmark: | Availability in percent. Either "Guaranteed availability" or "Maximum number of failures" must be specified |
+| Maximum number of outages  | :fontawesome-solid-xmark: | Maximum number of outages. Either "Guaranteed availability" or "Maximum number of outages" must be specified |
+| Graph                      | :fontawesome-solid-xmark: | Graph in percent or hours                                    |
+| Reflection State           | :fontawesome-solid-xmark: | The type of state to be evaluated. Hard state or soft and hard state |
 | Consider maintenance times |                           | Maintenance times do not count as outages if enabled         |
 | Consider public holidays   |                           | Public holidays are considered                               |
 | Calendar                   |                           | Calendar with public holidays. Only configurable if "Consider Holidays" is enabled. |
@@ -160,7 +160,7 @@ From here you can select the output format and the time range to be evaluated. A
 
 | Field         | Required                  | Description                               |
 | ------------- | ------------------------- | ----------------------------------------- |
-| Hosts         | :fontawesome-solid-times: | Hosts that are to be evaluated            |
+| Hosts         | :fontawesome-solid-xmark: | Hosts that are to be evaluated            |
 | Service RegEx |                           | Filter for services as regular expression |
 
 ### Autoreport global settings

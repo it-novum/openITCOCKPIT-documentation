@@ -29,11 +29,11 @@ Anschließend legen Sie fest, welcher Status angezeigt werden darf und wie die D
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem die Automatische Karte erstellt werden soll |
-| Name | :fontawesome-solid-times: | Name der Automatischen Karte |
+| Container | :fontawesome-solid-xmark: | Container in dem die Automatische Karte erstellt werden soll |
+| Name | :fontawesome-solid-xmark: | Name der Automatischen Karte |
 | Beschreibung |  | Beschreibung der Automatischen Karte |
-| Host RegEx | :fontawesome-solid-times: | Host Filter als Regulärer Ausdruck |
-| Service RegEx | :fontawesome-solid-times: | Service Filter als Regulärer Ausdruck |
+| Host RegEx | :fontawesome-solid-xmark: | Host Filter als Regulärer Ausdruck |
+| Service RegEx | :fontawesome-solid-xmark: | Service Filter als Regulärer Ausdruck |
 
 
 ## Map Modul <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
@@ -53,11 +53,11 @@ Das Feld Aktualisierungsintervall legt fest, in welchem Intervall in Sekunden ei
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem die Karte erstellt werden soll |
+| Container | :fontawesome-solid-xmark: | Container in dem die Karte erstellt werden soll |
 | Satellit |  | Satellitensystem auf dem die Karte erstellt werden soll |
-| Kartenname | :fontawesome-solid-times: | Name der Karte |
-| Kartentitel | :fontawesome-solid-times: | Titel der Karte |
-| Aktualisierungsintervall | :fontawesome-solid-times: | Bestimmt das Intervall in Sekunden, in dem die Karte Ihre Elemente aktualisiert |
+| Kartenname | :fontawesome-solid-xmark: | Name der Karte |
+| Kartentitel | :fontawesome-solid-xmark: | Titel der Karte |
+| Aktualisierungsintervall | :fontawesome-solid-xmark: | Bestimmt das Intervall in Sekunden, in dem die Karte Ihre Elemente aktualisiert |
 
 ### Karte bearbeiten
 
@@ -162,10 +162,10 @@ Zum Schluss wählen Sie noch die Karten aus die Rotiert werden sollen.
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | Container in dem die Rotation erstellt werden soll |
-| Rotationsname | :fontawesome-solid-times: | Name der Rotation |
-| Rotationsintervall | :fontawesome-solid-times: | Das Intervall in dem die gewählten Karten rotieren sollen |
-| Karten | :fontawesome-solid-times: | Karten die rotieren sollen |
+| Container | :fontawesome-solid-xmark: | Container in dem die Rotation erstellt werden soll |
+| Rotationsname | :fontawesome-solid-xmark: | Name der Rotation |
+| Rotationsintervall | :fontawesome-solid-xmark: | Das Intervall in dem die gewählten Karten rotieren sollen |
+| Karten | :fontawesome-solid-xmark: | Karten die rotieren sollen |
 
 ### Rotation anzeigen
 
@@ -194,8 +194,8 @@ Die Filter "Location status" und "Empty Locations" sind Standard Einstellungen u
 
 | Feld Name | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| Server Adresse | :fontawesome-solid-times: | Ist die volle Adresse des OpenStreetMap Tile Servers, über welchen das Modul die Map Daten versucht abzurufen. **Beispiel**: [http://10.10.10.20/osm\_tiles/{z}/{x}/{y}.png](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
-| Kartenaktualisierungsintervall | :fontawesome-solid-times: | Intervall in Sekunden, mit dem die Map in der Ansicht aktualisiert wird (Standard: 30) |
+| Server Adresse | :fontawesome-solid-xmark: | Ist die volle Adresse des OpenStreetMap Tile Servers, über welchen das Modul die Map Daten versucht abzurufen. **Beispiel**: [http://10.10.10.20/osm\_tiles/{z}/{x}/{y}.png](http://10.10.10.20/osm_tiles/%7Bz%7D/%7Bx%7D/%7By%7D.png) |
+| Kartenaktualisierungsintervall | :fontawesome-solid-xmark: | Intervall in Sekunden, mit dem die Map in der Ansicht aktualisiert wird (Standard: 30) |
 | Standorte mit Status anzeigen |     | Definiert die Standard Zustände der Locations, die in der Ansicht angezeigt werden sollen |
 | Leere oder nicht überwachte Standorte |     | Die Option "Leere oder nicht überwachte Standorte" verhindert, dass leere Locations in der OpenStreetMap Ansicht angezeigt werden. |
 | Erweiterte Einstellungen | |  |

@@ -133,27 +133,27 @@ Wenn SSH zur Übertragung genutzt wird, wird der NSTA auf dem Satellitensystem n
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Container | :fontawesome-solid-times: | [Container](../container/) in dem der Satellit erstellt werden soll  |
-| Satellitenname | :fontawesome-solid-times: | Name des zu erstellenden Satelliten |
-| IP-Adresse | :fontawesome-solid-times: | IP-Adresse oder Hostname des Satelliten. Diese Adresse wird für die gesamte Kommunikation zwischen der Master-Instanz und dem Satellitensystem verwendet |
-| Synchronisationsmethode | :fontawesome-solid-times: | [Synchronisationsmethode](#synchronisationsmethoden) die die Art der Datenübertragung bestimmt |
-| Zeitzone | :fontawesome-solid-times: | Zeitzone des Satelliten |
+| Container | :fontawesome-solid-xmark: | [Container](../container/) in dem der Satellit erstellt werden soll  |
+| Satellitenname | :fontawesome-solid-xmark: | Name des zu erstellenden Satelliten |
+| IP-Adresse | :fontawesome-solid-xmark: | IP-Adresse oder Hostname des Satelliten. Diese Adresse wird für die gesamte Kommunikation zwischen der Master-Instanz und dem Satellitensystem verwendet |
+| Synchronisationsmethode | :fontawesome-solid-xmark: | [Synchronisationsmethode](#synchronisationsmethoden) die die Art der Datenübertragung bestimmt |
+| Zeitzone | :fontawesome-solid-xmark: | Zeitzone des Satelliten |
 | Zeitsynchronisation |  |  Legt fest, ob Sie die Systemuhr des Master-Servers mit dem Satellitensystem synchronisieren möchten. Hinweis: Es wird nicht empfohlen, diese Option zu aktivieren. Bitte verwenden Sie nach Möglichkeit einen NTP-Server.  |
 | HTTPS PULL-Modus |
-| URL | :fontawesome-solid-times: | Satellit URL |
+| URL | :fontawesome-solid-xmark: | Satellit URL |
 | Überprüfe das Zertifikat |  | nur valide Zertifikate werden akzeptiert |
 | Aktiviere Proxy |  | Bestimmt ob der weiter unten eingetragene Proxy für die verbindung mit dem Satellitensystem genutzt werden soll |
 | Proxy URL |  | Proxy Server URL |
-| API Schlüssel | :fontawesome-solid-times: | API Key Authentifizierung für den Satellit |
+| API Schlüssel | :fontawesome-solid-xmark: | API Key Authentifizierung für den Satellit |
 | Intervall |  | Zeitintervall in Sekunden, in welchem das Mastersystem die Prüfergebnisse aufnimmt |
 | Timeout |  | Zeitlimit in Sekunden, das definiert, wann der Satellit als OFFLINE markiert werden soll. |
 | HTTPS PUSH-Modus |
-| API Schlüssel | :fontawesome-solid-times: | API Key Authentifizierung für den Satellit |
+| API Schlüssel | :fontawesome-solid-xmark: | API Key Authentifizierung für den Satellit |
 | Timeout |  | Zeitlimit in Sekunden, das definiert, wann der Satellit als OFFLINE markiert werden soll. |
 | SSH |
-| Anmelden | :fontawesome-solid-times: | Benutzer mit dem sich über SSH auf dem Satellitensystem angemeldet werden soll |
-| Port | :fontawesome-solid-times: | SSH-Port des Remote-Computers. |
-| PrivateKeyPath | :fontawesome-solid-times: | Wir verwenden einen Standardpfad zum privaten Schlüssel, wenn dieses Feld leer bleibt |
+| Anmelden | :fontawesome-solid-xmark: | Benutzer mit dem sich über SSH auf dem Satellitensystem angemeldet werden soll |
+| Port | :fontawesome-solid-xmark: | SSH-Port des Remote-Computers. |
+| PrivateKeyPath | :fontawesome-solid-xmark: | Wir verwenden einen Standardpfad zum privaten Schlüssel, wenn dieses Feld leer bleibt |
 | RemotePort |  | Gearman-Port der Remote-Maschine. |
 
 ## Host auf einem Satelliten erstellen

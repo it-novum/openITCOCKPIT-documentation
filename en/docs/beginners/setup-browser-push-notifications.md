@@ -50,7 +50,7 @@ notifications` etc.
 
 ![contact browser push notfications](/images/contact-browser-push-notifications.png)
 
-After updating the contact, you must also [update the monitoring configuration as well](../create-first-host/#aktualisieren-der-uberwachungskonfiguration).
+After updating the contact, you must also [update the monitoring configuration as well](../create-first-host/#updating-the-monitoring-configuration).
 
 ## Notification examples
 

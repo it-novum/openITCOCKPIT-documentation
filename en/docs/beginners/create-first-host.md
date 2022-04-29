@@ -21,7 +21,7 @@ To keep things as simple as possible, let's select "/root" as the container so t
 
 ![create host](/images/openITCOCKPIT-Create-Host.png)
 
-Now scroll to the bottom of the page, click :fontawesome-solid-chevron-down: to the right of the "Create Host" button and then select `Save and Create Service`.
+Now scroll to the bottom of the page, click :fontawesome-solid-chevron-down: to the right of the `Create Host` button and then select `Save and Create Service`.
 
 ![create service](/images/create-host-and-service.png)
 
@@ -30,7 +30,7 @@ Using this shortcut we can directly create the first service on our new host.
 !!! info "Did you click Create Host?"
     No problem. Navigate to `Services` and click "+ New".
 
-Select the "Ping" service template and click `Erstelle Service`
+Select the "Ping" service template and click `Create service`
 
 ![crate service](/images/openITCOCKPIT-Create-Service.png)
 
@@ -42,7 +42,7 @@ The newly created service will now appear in the "Not Monitored" list as it has 
 
 Whenever you create a new object that you want to include in the monitoring engine - this includes, for example, hosts, services, contacts, contact groups, etc., the monitoring configuration must be updated.
 
-You can find this option in the top right corner as `Aktualisieren Sie die Überwachungskonfiguration`
+You can find this option in the top right corner as `Refresh monitoring configuration`
 
 ![export button](/images/openITCOCKPIT-Refresh-Monitoring-Config.png)
 

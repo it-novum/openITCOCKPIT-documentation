@@ -1,13 +1,17 @@
 # Monitoring with Checkmk <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
-Checkmk is seamlessly integrated into the openITCOCKPIT interface. Hosts running the Checkmk agent or an SNMP exporter can thus be scanned using the openITCOCKPIT interface. For the purposes of this tutorial, we will be monitoring an Ubuntu Linux system.
+Checkmk is seamlessly integrated into the openITCOCKPIT interface. Hosts running the Checkmk agent or an SNMP exporter
+can thus be scanned using the openITCOCKPIT interface. For the purposes of this tutorial, we will be monitoring an
+Ubuntu Linux system.
 
 ### Installing the Checkmk module for openITCOCKPIT
 
-The Checkmk extension for openITCOCKPIT is provided as a module. Making such tools available in this way has the advantage of keeping the openITCOCKPIT core small and flexible.
+The Checkmk extension for openITCOCKPIT is provided as a module. Making such tools available in this way has the
+advantage of keeping the openITCOCKPIT core small and flexible.
 
 !!! info "openITCOCKPIT Community Licence is required"
-    To get access to the community modules, you need to register your openITCOCKPIT instance using the **free** community licence.
+To get access to the community modules, you need to register your openITCOCKPIT instance using the **free** community
+licence.
 
 Navigate to `Management -> System Tools -> Package Manager` and install the *CheckmkModule*
 
@@ -17,7 +21,8 @@ Follow the instructions provided
 
 ![packagemanager install instructions](/images/package-manger-install-instructions.png)
 
-The installation will be complete when you see the following message: `Installation done. Please reload your openITCOCKPIT web interface.`
+The installation will be complete when you see the following
+message: `Installation done. Please reload your openITCOCKPIT web interface.`
 
 Navigate back in your web browser and press `Strg + R` or `Cmd + R` to refresh the page.
 
@@ -25,7 +30,8 @@ The CheckmkModule should now be displayed as installed.
 
 ![installed successful](/images/checkmk-integration-installed-successfully.png)
 
-Each module provides the ability to extend openITCOCKPIT's available permissions. By default, all permissions are granted to the `Administrator` user role.
+Each module provides the ability to extend openITCOCKPIT's available permissions. By default, all permissions are
+granted to the `Administrator` user role.
 
 If your current user is mapped to another user role, make sure you grant that role the appropriate permissions.
 
@@ -33,7 +39,8 @@ Navigate to `Administration -> User Management -> Manage User Roles` and select 
 
 ![checkmk userrole permissions grant](/images/checkmk-user-roles-permissions.png)
 
-New permissions are not automatically granted (except for users who hold the Administrator user role). This is because not every user is allowed to use modules that, for example, were only installed for test or evaluation purposes.
+New permissions are not automatically granted (except for users who hold the Administrator user role). This is because
+not every user is allowed to use modules that, for example, were only installed for test or evaluation purposes.
 
 ### Installing Checkmk Agent on the target system
 
@@ -44,7 +51,7 @@ To begin using this tool, you must first copy the Checkmk agent from your openIT
 `scp /opt/openitc/check_mk/share/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
 
 !!! tip "All Checkmk agents for the various operating systems can be found here"
-    `/opt/openitc/check_mk/share/check_mk/agents/`
+`/opt/openitc/check_mk/share/check_mk/agents/`
 
 **Now connect to the remote host via SSH**
 
@@ -56,7 +63,7 @@ chmod +x /usr/local/bin/check_mk_agent
 ```
 
 !!! danger "Security Notice"
-    By default, Checkmk uses unencrypted plain text communication!
+By default, Checkmk uses unencrypted plain text communication!
 
 Next you need to copy the following configuration to `/etc/xinetd.d/check_mk`:
 
@@ -97,7 +104,7 @@ In the host systems’ context menu, select the `Checkmk detection` option.
 
 ![checkmk discovery](/images/checkmk-discovery.png)
 
-Now select "Use the Checkmk agent for detection". Select `Checkmk Agent` as the data source. 
+Now select "Use the Checkmk agent for detection". Select `Checkmk Agent` as the data source.
 
 ![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
 
@@ -105,19 +112,24 @@ Once the discovery process has completed, you can select any services you wish t
 
 ![select checkmk services](/images/select-check-mk-services-4-3.png)
 
-To enable the new configuration, you must [update the monitoring configuration](../create-first-host/#aktualisieren-der-uberwachungskonfiguration).
+To enable the new configuration, you
+must [update the monitoring configuration](../create-first-host/#updating-the-monitoring-configuration).
 
-Once this has been done, the system will begin monitoring the selected services a few seconds later. It will also generate graphs whenever this is possible.
+Once this has been done, the system will begin monitoring the selected services a few seconds later. It will also
+generate graphs whenever this is possible.
 
 ![checkmk services openitcockpit](/images/checkmk-services-openitcockpit.png)
 
 ## Monitoring via SNMP with Checkmk
 
-Many devices such as routers, switches, sensors or operating systems can be monitored via SNMP (Simple Network Management Protocol). Before continuing with this guide, make sure you have read the section entitled [Monitoring with Checkmk](#monitoring-mit-checkmk).
+Many devices such as routers, switches, sensors or operating systems can be monitored via SNMP (Simple Network
+Management Protocol). Before continuing with this guide, make sure you have read the section
+entitled [Monitoring with Checkmk](#monitoring-with-checkmk-ce).
 
 ### Get SNMP data for the target device
 
-Before you get started, please check whether your monitoring server is able to query SNMP data from the target device. The program `snmpwalk` can be used for this.
+Before you get started, please check whether your monitoring server is able to query SNMP data from the target device.
+The program `snmpwalk` can be used for this.
 
 In this example we will query an Ubuntu Linux machine running `snmpd` version `2c` and the community `public`.
 
@@ -129,7 +141,8 @@ You should then see output similar to this:
 
 ![snmp walk example](/images/snmpwalk_example.png)
 
-If your system is not able to connect to the target system, check your firewall settings to see whether you are using the wrong SNMP version.
+If your system is not able to connect to the target system, check your firewall settings to see whether you are using
+the wrong SNMP version.
 
 ### Monitoring a Linux host using SNMP via Checkmk
 
@@ -137,24 +150,28 @@ Select the `Checkmk detection` option in the context menu for the host system.
 
 ![checkmk discovery snmp](/images/checkmk-discovery-snmp.png)
 
-Select the `Enable SNMP` option. The system will ask you for the required SNMP parameters. The SNMP configuration is saved on a per host basis, so you won't have to enter this data again. Then click Run detection to continue.
+Select the `Enable SNMP` option. The system will ask you for the required SNMP parameters. The SNMP configuration is
+saved on a per host basis, so you won't have to enter this data again. Then click Run detection to continue.
 
 ![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
 
-
-Once the discovery process has completed, you can select any services you would like to monitor. Click `Next` to continue.
+Once the discovery process has completed, you can select any services you would like to monitor. Click `Next` to
+continue.
 
 ![checkmk snmp result](/images/checkmk-snmp-result.png)
 
-To enable the new configuration, you must [update the monitoring configuration](../create-first-host/#aktualisieren-der-uberwachungskonfiguration).
+To enable the new configuration, you
+must [update the monitoring configuration](../create-first-host/#updating-the-monitoring-configuration).
 
-Once this has been done, the monitoring system will begin monitoring the selected services a few seconds later. It will also generate graphs whenever this is possible.
+Once this has been done, the monitoring system will begin monitoring the selected services a few seconds later. It will
+also generate graphs whenever this is possible.
 
 ![checkmk snmp services](/images/checkmk-snmp-services.png)
 
 ### Using description for SNMP interfaces
 
-Depending on the device being monitored, it is advisable to use the SNMP _description_ or alias instead of the index as the identifier for network interfaces.
+Depending on the device being monitored, it is advisable to use the SNMP _description_ or alias instead of the index as
+the identifier for network interfaces.
 
 By default, the index is used for monitoring interfaces. This can be easily recognised by the interface name.
 
@@ -162,9 +179,10 @@ By default, the index is used for monitoring interfaces. This can be easily reco
 
 If you would prefer to use the interface description instead of the index, a new Checkmk rule must be created.
 
-To do this, create the file 
+To do this, create the file
 `/opt/openitc/check_mk/etc/check_mk/conf.d/wato/interface_description_rule.mk`
 with the following content:
+
 ```
 globals().setdefault('inventory_if_rules', [])
 
@@ -177,13 +195,15 @@ Any new interface checks you create will now use the description.
 
 ![Checkmk network interfaces monitored by description](/images/checkmk-snmp-interface-description.png)
 
-If you choose to use the alias instead of the (_description_) , you must use the following: `'item_appearance': 'alias'`.
+If you choose to use the alias instead of the (_description_) , you must use the following: `'item_appearance': 'alias'`
+.
 
 ## Create missing service templates for Checkmk.
 
-Depending on the device on which you want to perform a discovery, you may find that the Options selection box is empty and the following text `Before you can monitor the following services, a corresponding service template must be created.` appears, followed by a table.
-If this is the case, you will have to create the missing service templates.
-
+Depending on the device on which you want to perform a discovery, you may find that the Options selection box is empty
+and the following
+text `Before you can monitor the following services, a corresponding service template must be created.` appears,
+followed by a table. If this is the case, you will have to create the missing service templates.
 
 ![check mk snmp missing servicetemplates](/images/check-mk-snmp-missing-service-template.png)
 
@@ -193,7 +213,10 @@ Open a new browser window and navigate to `Monitoring -> Templates -> Service Te
 
 #### Create a service template for `hp_procurve_cpu`
 
-It is recommended you use the same name for a service template as Checkmk uses (MK Check). In this case, the MK Check is `hp_procurve_cpu` so we use `CHECK_MK_HP_PROCURVE_CPU` as the service template name. Set `Checkmk templates` as the template type. Disable `Enable active checks`, use `check_none` as the check command and set the Parameter from the table as `ARG1`.
+It is recommended you use the same name for a service template as Checkmk uses (MK Check). In this case, the MK Check
+is `hp_procurve_cpu` so we use `CHECK_MK_HP_PROCURVE_CPU` as the service template name. Set `Checkmk templates` as the
+template type. Disable `Enable active checks`, use `check_none` as the check command and set the Parameter from the
+table as `ARG1`.
 
 Confirm with `Create service templates`
 
@@ -230,17 +253,21 @@ Now repeat this for all service templates.
 
 ### Creating services
 
-You are now able to create the services you want to monitor. Restart SNMP Discovery and select all desired services from the list that appears.
+You are now able to create the services you want to monitor. Restart SNMP Discovery and select all desired services from
+the list that appears.
 
 ![checkmk create new snmp services](/images/checkmk-create-new-snmp-services.png)
 
-To enable the new configuration, you must [update the monitoring configuration](../create-first-host/#aktualisieren-der-uberwachungskonfiguration).
+To enable the new configuration, you
+must [update the monitoring configuration](../create-first-host/#updating-the-monitoring-configuration).
 
 ![checkmk snmp hp switch](/images/checkmk-snmp-hp-switch.png)
 
 ### Mixing surveillance methods
 
-You can use both SNMP and the Checkmk agent at the same time without issue. To do this, select `Enable Checkmk agent`, select `Checkmk Agent` as the data soucre and Enable `Enable SNMP` as well as the SNMP version and your desired community.
+You can use both SNMP and the Checkmk agent at the same time without issue. To do this, select `Enable Checkmk agent`,
+select `Checkmk Agent` as the data soucre and Enable `Enable SNMP` as well as the SNMP version and your desired
+community.
 
 ![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
 
@@ -250,17 +277,19 @@ To create a Checkmk agent, go to `Monitoring -> Checkmk -> Checkmk Agents` in th
 
 Then click on the "New" button in the overview section.
 
-Now select a container, give it a name and then enter the appropriate command line command. The command you use will refer to a Checkmk script on the openITCOCKPIT server.
+Now select a container, give it a name and then enter the appropriate command line command. The command you use will
+refer to a Checkmk script on the openITCOCKPIT server.
 
-| Field | Required | Description |
-|---|---|---|
-| Container | :fontawesome-solid-times: | The container in which the Checkmk Agent is to be installed |
-| Name | :fontawesome-solid-times: | Name of the Checkmk agent |
-| Description |  | Description of the Checkmk agent |
-| Command line | :fontawesome-solid-times: | Command line command for the Checkmk agent script |
+| Field        | Required                  | Description                                                 |
+|--------------|---------------------------|-------------------------------------------------------------|
+| Container    | :fontawesome-solid-xmark: | The container in which the Checkmk Agent is to be installed |
+| Name         | :fontawesome-solid-xmark: | Name of the Checkmk agent                                   |
+| Description  |                           | Description of the Checkmk agent                            |
+| Command line | :fontawesome-solid-xmark: | Command line command for the Checkmk agent script           |
 
 ### Downloading Checkmk agents
 
-You can easily download Checkmk agents via openITCOCKPIT by going to `Monitoring -> Checkmk -> Checkmk Agents` and then to the `Agent downloads` tab.
+You can easily download Checkmk agents via openITCOCKPIT by going to `Monitoring -> Checkmk -> Checkmk Agents` and then
+to the `Agent downloads` tab.
 
 ![checkmk downloads](/images/checkmk-agent-downloads.png)

@@ -14,9 +14,9 @@ Wählen Sie Ihren Kommandotyp aus
 
 | Feld | Erforderlich | Beschreibung |
 |---|---|---|
-| Kommandotyp | :fontawesome-solid-times: | Kommando typ: [Service](#service-prüfkommando), [Host](#host-prüfkommando), [Benachrichtigung](#benachrichtigungskommando) oder [Ereignisbehandler](#ereignisbehandlerkommando-(eventhandler)) Kommando |
-| Name | :fontawesome-solid-times: | Name des Kommandos |
-| Kommandozeile | :fontawesome-solid-times: | Kommandozeilenbefehl mit [Makros](#standardmakros-und-benutzerdefinierte-makros) und Argumenten |
+| Kommandotyp | :fontawesome-solid-xmark: | Kommando typ: [Service](#service-prüfkommando), [Host](#host-prüfkommando), [Benachrichtigung](#benachrichtigungskommando) oder [Ereignisbehandler](#ereignisbehandlerkommando-(eventhandler)) Kommando |
+| Name | :fontawesome-solid-xmark: | Name des Kommandos |
+| Kommandozeile | :fontawesome-solid-xmark: | Kommandozeilenbefehl mit [Makros](#standardmakros-und-benutzerdefinierte-makros) und Argumenten |
 | Beschreibung |  | Beschreibung des Kommandos |
 | Argumente |  | Zu übergebende Parameter an das Prüf Skript. Siehe [Argumente](#argumente) |
 

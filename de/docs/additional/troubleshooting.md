@@ -39,7 +39,7 @@ Ist das Problem immer noch vorhanden, starten Sie den Dienst sudo_server neu.
 systemctl restart sudo_server.service
 ```
 
-Sollte das Problem weiterhin bestehen, können Sie sich [mit uns in Verbindung setzen](../support/#ich-brauche-hilfe).
+Sollte das Problem weiterhin bestehen, können Sie sich [mit uns in Verbindung setzen](../support/#support).
 
 ## Debugging / Fehlerbeseitigungsseite
 

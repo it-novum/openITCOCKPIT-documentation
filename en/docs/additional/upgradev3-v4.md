@@ -21,7 +21,7 @@ These instructions describe how to update your current installation of openITCOC
 
 | Ubuntu Focal (20.04) | Ubuntu Bionic (18.04) | Ubuntu Xenial (16.04) | Ubuntu Trusty (14.04) | Debian Buster (10) | Debian Stretch (9) | Debian Jessie (8) |
 |---|---|---|---|---|---|---|
-|:fontawesome-solid-check:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-exclamation-triangle:|:fontawesome-solid-times:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-exclamation-triangle:|:fontawesome-solid-times:|
+|:fontawesome-solid-check:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-exclamation-triangle:|:fontawesome-solid-xmark:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-exclamation-triangle:|:fontawesome-solid-xmark:|
 
 
 :fontawesome-solid-exclamation-triangle: **Ubuntu Xenial (16.04)**
