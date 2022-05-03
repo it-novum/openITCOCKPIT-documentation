@@ -4,7 +4,7 @@ Das Primärziel dieses Artikels ist es, ein System einzurichten, welches keine m
 
 
 !!! danger
-    Bitte beachten Sie, das alle Persohnen die Zugriff auf das Kiosk-System haben, auch Zugriff auf oenITCOCKPIT haben.
+    Bitte beachten Sie, das alle Personen die Zugriff auf das Kiosk-System haben, auch Zugriff auf oenITCOCKPIT haben.
     Es wird daher dringen empfohlen, einen eigenen openITCOCKPIT Benutzer mit sehr geringen Benutzerberechtigungen zu erstellen.
     Mehr dazu erfharen Sie unter [Benutzerverwaltung](/configuration/usermanagement/#benutzer-rollen-verwalten).
 
