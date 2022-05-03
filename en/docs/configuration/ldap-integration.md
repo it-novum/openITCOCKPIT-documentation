@@ -68,7 +68,7 @@ This can also be used to test, if openITCOCKPIT can establish an connection with
     Users that do not fullfill thes reqirement could not get imported into openITCOCKPIT.
     As soon as openITCOCKPIT drops users wie will geht a warning like this `2022-01-07 15:42:06 warning: Dropped 51/100 AD/LDAP users due to missing required fields. [samaccountname, mail, sn, givenname]` in the log file `/opt/openitc/frontend/logs/error.log`.
 
-## Importieren von Gruppen
+## Importing of Groups
 !!! info
     Requires openITCOCKPIT ≥ 4.4.0
 

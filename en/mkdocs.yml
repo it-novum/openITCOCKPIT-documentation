@@ -81,6 +81,7 @@ nav:
       - 'Running openITCOCKPIT behind a reverse proxy': 'additional/behind-reverse-proxy.md'
       - 'Mobile Website': 'additional/mobile-website.md'
       - 'Ports': 'additional/ports.md'
+      - 'Kiosk Mode': 'additional/kiosk-mode.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
