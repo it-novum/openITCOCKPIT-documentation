@@ -70,6 +70,7 @@ nav:
       - 'Datenbankzugriff': 'development/create-new-module/database.md'
       - 'Additionalplugin_database': 'development/create-new-module/additionalplugin-database.md'
     - 'Ein neues Check Plugin erstellen': 'development/new-check-plugin.md'
+    - 'Nightly Repository': 'development/nightly-repository.md'
   - 'Weitere Artikel':
     - 'Logging': 'additional/logs.md'
     - 'Theming und CI': 'additional/theming.md'

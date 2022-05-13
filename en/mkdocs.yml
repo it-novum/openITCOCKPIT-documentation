@@ -70,6 +70,7 @@ nav:
           - 'Database access': 'development/create-new-module/database.md'
           - 'Additionalplugin_database': 'development/create-new-module/additionalplugin-database.md'
       - 'Create a new check plugin': 'development/new-check-plugin.md'
+      - 'Nightly Repository': 'development/nightly-repository.md'
   - 'Additional reading':
       - 'Logging': 'additional/logs.md'
       - 'Theming and CI': 'additional/theming.md'
