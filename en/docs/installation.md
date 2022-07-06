@@ -5,6 +5,7 @@ openITCOCKPIT is installed via the package manager of your respective Linux dist
 ## Supported operating systems
 
 - Ubuntu
+    - Jammy (22.04)
     - Focal (20.04)
     - Bionic (18.04)
 - Debian
@@ -80,7 +81,7 @@ The web server will be configured automatically. The phpMyAdmin interface can th
 
 ## System requirements
 
-- Ubuntu Linux 64 bit (20.04 LTS “Focal” and 18.04 LTS “Bionic”), Debian Linux 64 bit (11 “Bullseye”) and Debian Linux 64 bit (10 “Buster”)
+- Ubuntu Linux 64 bit (22.04, 20.04, 18.04), Debian Linux 64 bit (11, 10)
 - 2 CPU cores (x86-64 or arm64)
 - 2 GB RAM
 - 40 GB of free hard disk space

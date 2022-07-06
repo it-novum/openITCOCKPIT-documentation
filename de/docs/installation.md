@@ -5,6 +5,7 @@ Die Installation von openITCOCKPIT erfolgt über den Paketmanager der Linux-Dist
 ## Unterstützte Betriebssysteme
 
 - Ubuntu
+    - Jammy (22.04)
     - Focal (20.04)
     - Bionic (18.04)
 - Debian
@@ -80,7 +81,7 @@ Die Konfiguration des Webservers wird automatisch durchgeführt. Die phpMyAdmin 
 
 ## Systemanforderungen
 
-- Ubuntu Linux 64 bit (20.04 LTS "Focal" und 18.04 LTS "Bionic"), Debian Linux 64 bit (11 "Bullseye") und Debian Linux 64 bit (10 "Buster")
+- Ubuntu Linux 64 bit (22.04, 20.04, 18.04), Debian Linux 64 bit (11, 10)
 - 2 CPU Kerne (x86-64 oder arm64)
 - 2 GB RAM
 - 40 GB freier Festplattenspeicher
