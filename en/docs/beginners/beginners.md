@@ -2,7 +2,7 @@
 
 This guide will give you insights into the basic concepts behind openITCOCKPIT. It will also help you monitor your first host. It is intended for new users who are just getting started with openITCOCKPIT.
 
-If you have not yet installed openITCOCKPIT, you can either use the [installation instructions](../installation/) in this documentation or visit the [download area of our website] (https://openitcockpit.io/download/#download).
+If you have not yet installed openITCOCKPIT, you can either use the [installation instructions](../../installation/) in this documentation or visit the [download area of our website](https://openitcockpit.io/download/#download).
 
 ![openitcockpit-login](/images/openitcockpit-login.png)
 
