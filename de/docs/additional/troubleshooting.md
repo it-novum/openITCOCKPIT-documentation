@@ -134,3 +134,53 @@ ersetzt werden, was die Lesbarkeit der Protokolldatei deutlich erhöht.
 ```
 /var/log/mysql/error.log
 ```
+
+## Aktualisierung der Überwachungskonfiguration hängt fest
+
+Im Falle eines Fehlers im Hintergrund von openITCOCKPIT kann es passieren, dass die Aktualisierung der Überwachungskonfiguration hängen bleibt und sich nicht beendet.
+Die Überwachungskonfiguration wird von einem eigenen Hintergrundprozess aktualisiert. Um das Problem zu beheben, folgen Sie bitte den unten beschriebenen Schritten.
+Da der Status der Aktualisierung in der openITCOCKPIT Datenbank gespeichert wird, kann das Problem nicht durch einen Neustart des Systems behoben werden.
+
+
+![Aktualisierung der Überwachungskonfiguration hängt fest](/images/troubleshooting/refresh_monitoring_configuration.png)
+
+1. Stoppen Sie den Hintergrundprozess `gearman_worker`
+```plaintext
+systemctl stop gearman_worker.service
+``` 
+
+2. Führen Sie nun den Befehl `gearadmin --status` aus, um zu überprüfen, dass keine Aufträge mehr in der Warteschlange `oitc_gearman` warten. Die Ausgabe sollte in etwas so aussehen:
+```plaintext
+oitc_gearman	0	0	0           # Wartende Aufträge    Aktive Aufträge    Verfügbare Prozesse
+```
+
+3. Sofern Sie wartende Aufträge in der Warteschlange haben, führen Sie solange den folgenden Befehl aus, bis alle Aufträge gelöscht wurden.
+```plaintext
+gearman -w -c 1 -t 1000 -f oitc_gearman > /dev/null
+```
+
+4. Leeren Sie nun die Tabelle `exports` in der `openitcockpit` Datenbank, um den Status der Aktualisierung der Überwachungskonfiguration zurückzusetzen.
+```
+mysql --defaults-extra-file=/opt/openitc/etc/mysql/mysql.cnf -e "TRUNCATE TABLE openitcockpit.exports;"
+``` 
+
+5. Starten Sie nun wieder den `gearman_worker` Dienst.
+```plaintext
+systemctl start gearman_worker.service
+```
+
+### Aktualisierung bleibt immer noch hängen
+
+In seltenen Fällen kann es sein, dass der `gearman_worker` Dienst erneut abstürzt. Dies liegt dann wahrscheinlich an einem Fehler im Programmcode selbst.
+Um eventuelle Fehlermeldungen auszugeben, folgen Sie zunächst den Schritten 1 bis 4 wie oben beschrieben.
+
+Starten Sie nun den Dienst `gearman_worker` im Vordergrund. Führen Sie anschließend eine Aktualisierung der Überwachungskonfiguration über die openITCOCKPIT Weboberfläche durch und prüfen Sie das Terminal
+auf eventuelle Fehler und Ausgaben.
+
+```
+export OITC_DEBUG=1
+
+oitc gearman_worker
+```
+
+![gearman_worker running in foreground mode to print out error message](/images/troubleshooting/gearman_worker_foreground_mode.JPG)
