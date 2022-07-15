@@ -122,3 +122,52 @@ It is recommended to view the log file with the `oitc debug --tailf` command, as
 ```
 /var/log/mysql/error.log
 ```
+
+## Refresh monitoring configuration is stucking
+
+In case of an error with the openITCOCKPIT backend, it could happen that the refresh of the monitoring configuration is running forever.
+The refresh is done by a separate background worker. To resolve the issue please follow the steps described below.
+The current state of the refresh is stored in the openITCOCKPIT database, so rebooting the machine will not resolve the issue.
+
+![Running refresh of monitoring configuration](/images/troubleshooting/refresh_monitoring_configuration.png)
+
+1. Stop the openITCOCKPIT `gearman_worker` background process
+```plaintext
+systemctl stop gearman_worker.service
+``` 
+
+2. Now execute the command `gearadmin --status`, to verify that no pending Jobs are waiting in the `oitc_gearman` queue. If there are no pending jobs, the output should look something like this:
+```plaintext
+oitc_gearman	0	0	0           # Pending jobs    Actively running    Available workers
+```
+
+3. If there are pending jobs, run the following command to truncate the queue. Repeat this until no more pending jobs are waiting in the queue.
+```plaintext
+gearman -w -c 1 -t 1000 -f oitc_gearman > /dev/null
+```
+
+4. Truncate the table `exports` in the `openitcockpit` database, to reset the current state of the refresh.
+```
+mysql --defaults-extra-file=/opt/openitc/etc/mysql/mysql.cnf -e "TRUNCATE TABLE openitcockpit.exports;"
+``` 
+
+5. Restart the `gearman_worker` service
+```plaintext
+systemctl start gearman_worker.service
+```
+
+### Refresh is still crashing
+
+Under some rare circumstances it could happen that the `gearman_worker` is crashing due to an error within the code itself.
+To print out any error messages, follow the steps 1 to 4 as described above. Instead of starting the  `gearman_worker` via systemd in the background,
+start it in foreground mode and refresh the monitoring configuration via the openITCOCKPIT interface.
+
+```
+export OITC_DEBUG=1
+
+oitc gearman_worker
+```
+
+Check the terminal for any errors.
+
+![gearman_worker running in foreground mode to print out error message](/images/troubleshooting/gearman_worker_foreground_mode.JPG)
