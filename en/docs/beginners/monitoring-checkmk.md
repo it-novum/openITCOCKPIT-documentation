@@ -48,10 +48,10 @@ As already mentioned, we use the Checkmk agent for monitoring remote systems.
 
 To begin using this tool, you must first copy the Checkmk agent from your openITCOCKPIT server to the target system:
 
-`scp /opt/openitc/check_mk/share/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
+`scp /opt/openitc/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
 
 !!! tip "All Checkmk agents for the various operating systems can be found here"
-`/opt/openitc/check_mk/share/check_mk/agents/`
+`/opt/openitc/check_mk/agents/`
 
 **Now connect to the remote host via SSH**
 

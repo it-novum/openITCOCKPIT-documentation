@@ -50,10 +50,10 @@ Wie bereits angesprochen, nutzen wir den Checkmk Agenten um das Remote System zu
 
 Zuallererst müssen Sie den Checkmk Agenten von Ihrem openITCOCKPIT Server auf das Zielsystem kopieren:
 
-`scp /opt/openitc/check_mk/share/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
+`scp /opt/openitc/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
 
 !!! tip "Alle Checkmk Agenten für die verschiedenen Betriebssysteme finden Sie hier"
-    `/opt/openitc/check_mk/share/check_mk/agents/`
+    `/opt/openitc/check_mk/agents/`
 
 **Verbinden Sie sich nun per SSH mit dem Remote Host**
 
