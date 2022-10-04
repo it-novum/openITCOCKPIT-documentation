@@ -140,3 +140,71 @@ Nun ändern Sie den Wert des `path` von `example-module` nach `example_module`.
 ```php
 ['path' => '/example_module'],
 ```
+
+## Erstellen und Ausführen der Migrationen
+
+
+Migrationen sind Dateien, die die Tabellen für die Anwendung in der Datenbank erstellen.
+
+Erstellen der Verzeichnisse für die Migrationen
+
+```bash
+mkdir -p plugins/ExampleModule/config/Migrations
+mkdir -p plugins/ExampleModule/config/Seeds
+
+oitc rights
+```
+
+### Create 'Initial' migration file
+
+```bash
+oitc migrations create -p ExampleModule Initial
+```
+Dieses Kommando erstellt eine Migrationsdatei innerhalb des `/config/Migrations` Verzeichnisses.
+Der Dateiname wird mit dem Zeitstempel gepräfixt und sieht folgendermaßen aus `20220928065505_Initial.php`.
+
+``` php
+<?php
+
+declare(strict_types=1);
+
+use Migrations\AbstractMigration;
+
+class Initial extends AbstractMigration
+{
+    /**
+     * Change Method.
+     *
+     * More information on this method is available here:
+     * https://book.cakephp.org/phinx/0/en/migrations.html#the-change-method
+     * @return void
+     */
+    public function change()
+    {
+        $table = $this->table('examples', ['id' => false, 'primary_key' => ['id']]);
+        $table->addColumn('id', 'integer', [
+            'autoIncrement' => true,
+            'limit' => 11
+        ]);
+        $table->addColumn('name', 'string', [
+            'limit' => 250,
+            'null' => false,
+        ]);
+
+        $table->addColumn('created', 'timestamp', [
+            'default' => 'CURRENT_TIMESTAMP',
+            'null' => false,
+        ]);
+
+        $table->addPrimaryKey("id");
+        $table->create();
+    }
+}
+```
+### Migration ausführen
+
+```bash
+oitc migrations migrate -p ExampleModule
+```
+
+Wenn das Kommando ausgeführt wurde, sieht man eine neue "examples" Tabelle in der Datenbank.
