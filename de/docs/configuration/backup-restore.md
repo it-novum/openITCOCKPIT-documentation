@@ -16,7 +16,7 @@ die Backupdatei auf dem Server im Verzeichnis `/opt/openitc/nagios/backup` ableg
 
 Nach einem neu Laden der Seite können Sie die Datei aus der Dropdown Liste auswählen und die Daten wiederherstellen.
 
-## Start a backup via the API
+## Backup über die API ausführen
 
 Aktuell bietet die openITCOCKPIT Oberfläche keine Möglichkeit, ein automatisches Backup einzurichten. Es ist jedoch möglich, dies über die HTTP API
 von openITCOCKPIT zu realisieren.
