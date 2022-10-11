@@ -2,12 +2,12 @@
 
 ## Installation
 
-Die Mobile Webseite ist so konzipiert, dass Sie auf einem eigenen Server betrieben werden kann.  
+Die Mobile Webseite ist so konzipiert, dass Sie auf einem eigenen Server betrieben werden kann.
 
-Um eine Instanz der Mobilen Webseite zu erzeugen, benötigen Sie eine openITCOCKPIT Enterprise Lizenz, welche Sie 
+Um eine Instanz der Mobilen Webseite zu erzeugen, benötigen Sie eine openITCOCKPIT Enterprise Lizenz, welche Sie
 berechtigt, die Mobile Webseite zu installieren. Bitte Kontaktieren Sie uns über unser [Sales-Kontaktformular](https://it-services.it-novum.com/)
 
-Sind die voraussetzungen dafür geschaffen, benötigen Sie auf ihrem neuen System Docker. 
+Sind die voraussetzungen dafür geschaffen, benötigen Sie auf ihrem neuen System Docker.
 
 ### Authentifizierung und herunterladen des Images
 Bevor Sie das Docker image herunterladen können, müssen Sie sich bei unserer Docker Registry anmelden:
@@ -16,8 +16,8 @@ Bevor Sie das Docker image herunterladen können, müssen Sie sich bei unserer D
 docker login https://cr.openitcockpit.io
 ```
 
-Der Befehl fordert Sie auf, einen Benutzernamen sowie ein Passwort einzugeben. 
-Als Benutzername geben Sie bitte die E-Mail-Adresse ein, welche mit Ihrem openITCOCKPIT Enterprise Lizenzschlüssel 
+Der Befehl fordert Sie auf, einen Benutzernamen sowie ein Passwort einzugeben.
+Als Benutzername geben Sie bitte die E-Mail-Adresse ein, welche mit Ihrem openITCOCKPIT Enterprise Lizenzschlüssel
 registriert ist. Als Passwort geben Sie Ihren Lizenzschlüssel ein.
 
 Nach erfolgreicher Authentifizierung können Sie das Docker image herunterladen:
@@ -44,14 +44,14 @@ https://<hostname oder IP adresse>:4443
 ![login](/images/mobile-website/login-screen.png){ width="300" }
 
 ### Login
-Nach erfolgreicher Installation können Sie nun mit Ihrem Smartphone oder Tablet die entsprechende Webseite öffnen und 
+Nach erfolgreicher Installation können Sie nun mit Ihrem Smartphone oder Tablet die entsprechende Webseite öffnen und
 gelangen damit auf die Login seite.
 
 Im Feld `Ihre Server-URL` geben Sie bitte die URL oder IP-Adresse Ihres openITCOCKPIT Systems an.
 
 #### Erstellung des API Keys
 Um sich einloggen zu können, müssen Sie zunächst einen API Key zur nutzung der Mobile webseite auf
-Ihrem openITCOCKPIT System erstellen ([siehe API Key erstellen](../../development/api/#api-keys)). Zum einfacheren 
+Ihrem openITCOCKPIT System erstellen ([siehe API Key erstellen](../../development/api/#api-keys)). Zum einfacheren
 übertragen des API Keys auf das Mobile endgerät, scannen Sie einfach den QR-Code mit einem entsprechendem
 QR-Code Scanner und kopieren sie den API-Key. Den kopierten Key können Sie einfach im Feld `Ihr Api-Key` einfügen.
 
@@ -62,7 +62,7 @@ Nach erfolgreichem Login werden Sie auf das Dashboard weitergeleitet.
 ![dashboard](/images/mobile-website/dashboard.png){ width="300" }
 
 Das Dashboard ermöglicht eine schnelle Übersicht über den Zustand Ihrer Infrastruktur. Unbehandelte Hosts und Services
-werden in ihren jeweiligen spalten als erstes angezeigt, danach wird nach Status weiter sortiert. 
+werden in ihren jeweiligen spalten als erstes angezeigt, danach wird nach Status weiter sortiert.
 Mit einem klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste
 
 
@@ -70,7 +70,7 @@ Mit einem klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefi
 ### Funktionen
 
 #### Prüfzeit zurücksetzen (Reset Check time) <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
-Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter 
+Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter
 `Aktionen`. Danach klicken Sie die Schaltfläche `Prüfzeit zurücksetzen`. Die Aktion wird sofort ausgeführt und benötigt
 keine weiteren Informationen.
 
@@ -86,7 +86,7 @@ Danach klicken Sie die Schaltfläche `Plane Wartung`.
 Danach verfahren Sie wie im Abschnitt [Wartungszeit erstellen](#wartungszeit-erstellen) beschrieben.
 
 Hier können keine wiederkehrenden Wartungszeiten eingerichtet
-werden. Wie Sie eine wiederkehrende Wartungszeit einrichten können, wird im Abschnitt 
+werden. Wie Sie eine wiederkehrende Wartungszeit einrichten können, wird im Abschnitt
 [wiederkehrende Wartungszeit erstellen](#wiedekehrende-wartungszeit-erstellen) erläutert.
 
 Weitere Informationen zu [Plane Wartung](../../monitoring/user-interface/#plane-wartung)
@@ -127,37 +127,37 @@ Danach klicken Sie die Schaltfläche `Benutzerdefinierte Benachrichtigung senden
 Weitere Informationen zu [Benutzerdefinierte Benachrichtigung senden](../../monitoring/user-interface/#benutzerdefinierte-servicebenachrichtigung-senden)
 
 #### Massenaktionen
-Massenaktionen sind für fast alle Funktionen verfügbar. Um eine Aktion für mehreren Hosts und / oder Services 
-gleichzeitig auszuführen, navigieren Sie zu entsprechenden Host oder Service Liste und klicken anschließend die 
+Massenaktionen sind für fast alle Funktionen verfügbar. Um eine Aktion für mehreren Hosts und / oder Services
+gleichzeitig auszuführen, navigieren Sie zu entsprechenden Host oder Service Liste und klicken anschließend die
 Schaltfläche `Auswahl`. Für jedes Listenelement werden nun Checkboxen angezeigt. Wählen Sie nun die entsprechenden
-Objekte aus und klicken auf die Schaltfläche `Aktionen`. Die ausgewählte aktion wird für alle selektierten Objekte 
-angewandt. 
+Objekte aus und klicken auf die Schaltfläche `Aktionen`. Die ausgewählte aktion wird für alle selektierten Objekte
+angewandt.
 
 #### Host und Service Wartungszeiten (Downtimes)
-Eine Übersicht aller Wartungszeiten sowie wiederkehrenden Wartungszeiten finden Sie 
-im Menü unter den Punkten `Host Wartungszeiten` und `Service Wartungszeiten`. 
+Eine Übersicht aller Wartungszeiten sowie wiederkehrenden Wartungszeiten finden Sie
+im Menü unter den Punkten `Host Wartungszeiten` und `Service Wartungszeiten`.
 
 ![downtimes host current filled](/images/mobile-website/downtimes-host-current-filled.png){ width="300" }
 
 ##### Wartungszeit erstellen
 
-Wartungszeiten erstellen sind für Hosts und Services gleich. 
-Bei hosts ist lediglich noch die Option zum Setzen der downtimes auf dessen Services 
+Wartungszeiten erstellen sind für Hosts und Services gleich.
+Bei hosts ist lediglich noch die Option zum Setzen der downtimes auf dessen Services
 
 === "Wartungszeit"
 
     ###### Wartungszeit erstellen
 
     Eine Wartungszeit erstellen Sie über den Menüpunkt `Host Wartungszeit` oder `Service Wartungszeit`. Dort klicken Sie
-    auf die Schaltfläche `Neu`. 
-    
+    auf die Schaltfläche `Neu`.
+
     Wählen Sie nun die entsprechenden Hosts oder Services aus, für die Sie eine Wartungzeit einrichten möchten.
-    Das Feld Wartungstyp ist nur bei Host Wartungszeiten verfügbar. Dort können Sie auswählen, ob für die gewählten 
-    Services der gewählten Hosts zusätzlich eine Wartungszeit mit den selben parametern erstellt werden soll. 
-    Mit dem Kommentar können Sie die Wartungszeit beschreiben. 
+    Das Feld Wartungstyp ist nur bei Host Wartungszeiten verfügbar. Dort können Sie auswählen, ob für die gewählten
+    Services der gewählten Hosts zusätzlich eine Wartungszeit mit den selben parametern erstellt werden soll.
+    Mit dem Kommentar können Sie die Wartungszeit beschreiben.
 
     Mit dem Auswahlfeld `Wiederkehrende Wartungszeit` können Sie [Wiederkehrende Wartungszeiten erstellen](#wiedekehrende-wartungszeit-erstellen)
-    
+
     Die Felder `Start` und `Ende` definieren den start und endzeitpunkt der Wartungszeit.
 
     ![downtimes host add downtime](/images/mobile-website/downtimes-host-add.png){ width="250" }
@@ -166,23 +166,23 @@ Bei hosts ist lediglich noch die Option zum Setzen der downtimes auf dessen Serv
 
     ###### Wiedekehrende Wartungszeit erstellen
 
-    Eine Wiederkehrende Wartungszeit erstellen Sie über den Menüpunkt `Host Wartungszeit` oder `Service Wartungszeit`. 
-    Dort klicken Sie auf die Schaltfläche `Neu`. 
-    
-    Wählen Sie nun die entsprechenden Hosts oder Services aus, für die Sie eine Wiederkehrende Wartungzeit einrichten 
-    möchten. Das Feld Wartungstyp ist nur bei Host Wartungszeiten verfügbar. Dort können Sie auswählen, ob für die 
-    gewählten Services der gewählten Hosts zusätzlich eine Wartungszeit mit den selben parametern erstellt werden soll. 
-    Mit dem Kommentar können Sie die Wartungszeit beschreiben. 
+    Eine Wiederkehrende Wartungszeit erstellen Sie über den Menüpunkt `Host Wartungszeit` oder `Service Wartungszeit`.
+    Dort klicken Sie auf die Schaltfläche `Neu`.
+
+    Wählen Sie nun die entsprechenden Hosts oder Services aus, für die Sie eine Wiederkehrende Wartungzeit einrichten
+    möchten. Das Feld Wartungstyp ist nur bei Host Wartungszeiten verfügbar. Dort können Sie auswählen, ob für die
+    gewählten Services der gewählten Hosts zusätzlich eine Wartungszeit mit den selben parametern erstellt werden soll.
+    Mit dem Kommentar können Sie die Wartungszeit beschreiben.
 
     Wählen Sie die Option `Wiederkehrende Wartungszeit` aus. Die Folgenden Formularfelder ändern sich nun.
 
-    Zunächst müssen Sie eine Startzeit angeben sowie eine Dauer. Die Dauer können Sie durch die vorgegebenen 
+    Zunächst müssen Sie eine Startzeit angeben sowie eine Dauer. Die Dauer können Sie durch die vorgegebenen
     Schaltflächen auswählen oder in dem darunterliegenden Feld eine eigenen Wert eintragen. Dieser Wert wird in Minuten
     angegeben.
 
-    Danach wählen sie entweder einen Wochentag, einen Monatstag oder beides aus. 
-    
-    Bei Wochentagen wird die Wartungszeit immer an den ausgewählten Wochentagen um die angegebene Uhrzeit für die 
+    Danach wählen sie entweder einen Wochentag, einen Monatstag oder beides aus.
+
+    Bei Wochentagen wird die Wartungszeit immer an den ausgewählten Wochentagen um die angegebene Uhrzeit für die
     angegebene Dauer erfolgen.
 
     Bei den Monatstagen entsprechend am angegebenen Tag des Monats.
@@ -195,8 +195,8 @@ Bei hosts ist lediglich noch die Option zum Setzen der downtimes auf dessen Serv
 
 ##### Wartungszeit abbrechen
 
-Wartungszeiten können über die Mobile Webseite auch abgebrochen werden. Dazu suchen Sie die entsprechende Wartungszeit aus 
-der Liste aus und klicken auf das Papierkorb-Symbol. 
+Wartungszeiten können über die Mobile Webseite auch abgebrochen werden. Dazu suchen Sie die entsprechende Wartungszeit aus
+der Liste aus und klicken auf das Papierkorb-Symbol.
 
 ![downtime host select cancel](/images/mobile-website/downtimes-host-select-cancel.png){ width="300" }
 
@@ -204,8 +204,8 @@ Es erscheint ein Popup, welches zur bestätigung der Löschung auffordert.
 
 ![downtime host cancel overlay](/images/mobile-website/downtime-host-cancel.png){ width="300" }
 
-Wiederkehrende Wartungszeiten können abgebrochen werden, indem auf die entsprechende wiederkehrende Wartungszeit geklickt 
-wird und danach `Downtime abbrechen`. 
+Wiederkehrende Wartungszeiten können abgebrochen werden, indem auf die entsprechende wiederkehrende Wartungszeit geklickt
+wird und danach `Downtime abbrechen`.
 
 ![downtime host cancel recurring overlay](/images/mobile-website/downtime-host-cancel-recurring-downtime.png){ width="300" }
 
@@ -233,7 +233,7 @@ werden:
 -v /my/path/to/CustomConfigDir:/var/www/localhost/htdocs/interface
 ```
 
-Dabei ist zu beachten, dass der Container interne Pfad: 
+Dabei ist zu beachten, dass der Container interne Pfad:
 
 `:/var/www/localhost/htdocs/interface` **immer** gleich bleibt!
 
@@ -244,8 +244,8 @@ Containers erfolgen - ein neu laden der Webseite genügt.
 
 Dies ist eine Beispielkonfiguration um zu veranschaulichen, wie sich eine Konfiguration der `interface.yml` Datei
 auswirkt.
-Hierzu haben wir die Bilder des [Halloween theme](https://github.com/it-novum/oitc-halloween-theme) 
-von openITCOCKPIT genutzt.  
+Hierzu haben wir die Bilder des [Halloween theme](https://github.com/it-novum/oitc-halloween-theme)
+von openITCOCKPIT genutzt.
 
 ![ci-login](/images/mobile-website/ci-login.png){ width="300"; align=center }
 
@@ -276,4 +276,8 @@ header_logo: openitcockpit_halloween_header.png
 # favicon logo
 # filename only - the complete path will be set automatically
 favicon: openitcockpit_halloween_header.png
+
+# FQDN or IP-Address of your openITCOCKPIT Server
+# If this value is defined, users have no option anymore to set the ip-address on the login screen.
+server_url: demo.openitcockpit.io
 ```
