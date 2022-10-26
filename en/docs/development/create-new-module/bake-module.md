@@ -150,7 +150,7 @@ oitc rights
 ### Create 'Initial' migration file
 
 ```bash
-oitc migrations create -p ExampleModule Initial
+OITC_DEBUG=1 oitc migrations create -p ExampleModule Initial
 ```
 
 This command will create a migration file inside `/config/Migrations` folder.
