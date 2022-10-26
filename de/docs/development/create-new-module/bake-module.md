@@ -158,7 +158,7 @@ oitc rights
 ### Create 'Initial' migration file
 
 ```bash
-oitc migrations create -p ExampleModule Initial
+OITC_DEBUG=1 oitc migrations create -p ExampleModule Initial
 ```
 Dieses Kommando erstellt eine Migrationsdatei innerhalb des `/config/Migrations` Verzeichnisses.
 Der Dateiname wird mit dem Zeitstempel gepräfixt und sieht folgendermaßen aus `20220928065505_Initial.php`.
