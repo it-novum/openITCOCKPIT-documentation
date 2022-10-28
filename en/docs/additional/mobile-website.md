@@ -188,9 +188,7 @@ downtimes for its services too.
 ##### Cancel downtime
 
 Downtimes can also be cancelled with the mobile website. Therefor you need to select the desired downtime from the list
- and click on the bin icon.
-
-![downtime service select cancel](/images/mobile-website/downtimes-host-select-cancel.png){ width="300" }
+ and click on the trashcan.
 
 A popup which prompt you to confirm the cancellation will be displayed.
 
@@ -200,6 +198,11 @@ Recurring downtimes can be cancelled if you select the desired recurring downtim
 on `Cancel downtime` in the information popup.
 
 ![downtime service cancel recurring overlay](/images/mobile-website/downtime-host-cancel-recurring-downtime.png){ width="300" }
+
+## Dark theme
+openITCOCKPIT Mobile provides a dark theme by default. You can switch between the light and dark theme via the main menu.
+
+![Light and dark theme](/images/mobile-website/mobile_light_and_dark.png)
 
 ## Customization
 
@@ -237,40 +240,112 @@ required.
 This is an example configuration to illustrate how a configuration of the `interface.yml` file affects the mobile
 website.
 
-For this example we used the images of the [Halloween theme](https://github.com/it-novum/oitc-halloween-theme) from
-openITCOCKPIT.
+This example was inspired by the [Halloween theme](https://github.com/it-novum/oitc-halloween-theme) for openITCOCKPIT.
 
-![ci-login](/images/mobile-website/ci-login.png){ width="300"; align=center }
+![ci-login](/images/mobile-website/ci-login.png){ width="300"}
 
 
 Configuration of the `interface.yml`:
 
 ```yaml
 ############
-# CUSTOM INTERFACE CONFIGURATION
+# CUSTOM INTERFACE CONFIGURATION EXAMPLE
 # All attributes are optional.
 # Custom images needs to be placed in the same directory as this configuration file
 ############
 
 # System name displayed in the website header
-systemname: Mobile Monitoring
+systemname: Spooky Monitoring
 
 # Title of the Website
-title: Mobile Monitoring title
+title: custom title
 
 # Logo used on the Login Screen
 # filename only! - the complete path will be set automatically
-login_logo: openitcockpit_login_logo.png
+login_logo: openitcockpit_halloween.png
+
+# Filename of a custom background image used by the login screen.
+# It is recommended to compress the used image https://tinypng.com/.
+# Compression can reduce the filesize up to 70%. The image should have a resolution of 2560x1440px
+# filename only! - the complete path will be set automatically
+login_bg: ben-mccloskey-wN_UDPOTC1w-unsplash.jpg
 
 # Logo used on the main manu
 # filename only! - the complete path will be set automatically
-header_logo: openitcockpit_halloween_header.png
+header_logo: ghost_emoji.png
+
+# Determine if openITCOCKPIT Mobile should use one image for all favicons
+# (one icon for all Desktop Browsers, Mobile Devices, Operating Systems)
+# of if openITCOCKPIT Mobile should use specialized icons for all kind of platforms
+# true = one icon for all platforms (not recommended)
+# false = Specializes icons per platform (recommended)
+simple_favicon: false
 
 # favicon logo
-# filename only - the complete path will be set automatically
-favicon: openitcockpit_halloween_header.png
+# filename only! - the complete path will be set automatically
+# This is only relevant if "simple_favicon" is set to true
+# If you want to use favicons per platform use the Website https://realfavicongenerator.net/
+# to generate all required files and pass the folder to the container
+# More information can be found in the docs: https://docs.openitcockpit.io/en/additional/mobile-website/
+favicon: favicon.ico
+
+# Theme color
+# Some mobile browsers support to set a so called theme-color, which defines the color of the address bar
+# or other parts of the browser itself.
+# https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
+# If you want to adjust this value, it is recommended to set "simple_favicon" to false and to pass own favicons as well.
+# The files "favicons/browserconfig.xml" and "favicons/site.webmanifest" to also contain the colors and have to be
+# adjusted manually.
+theme_color: '#4085c6'
 
 # FQDN or IP-Address of your openITCOCKPIT Server
 # If this value is defined, users have no option anymore to set the ip-address on the login screen.
 server_url: demo.openitcockpit.io
 ```
+
+### Favicons
+
+Favicons are icons that the browser will for bookmarks or in the menu of currently opened tabs.
+Different browsers and operating systems support different types of favicons. For example there are specialized icons if a
+bookmark gets created to the home screen of mobile devices.
+
+### Multiple favicons (recommended)
+As mentioned above different browsers on different operating systems support different Favicons. iOS and Android devices for example have a separate icon for home screen shortcuts.
+Microsoft Windows requires a tile icon and last but not least Safari and macOS which requires own icons for the tab and touch bar.
+
+The easiest way to get all required favicons is to use a online generator like [RealFaviconGenerator](https://realfavicongenerator.net/).
+
+The base path of all Favicons is `/favicons/`.
+The following example screenshots shows how to use the ghost emoji 👻 as favicon.
+
+![Usage example of RealFaviconGenerator](/images/mobile-website/realfavicongenerator_usage_example.png){ width="300"}
+
+
+If you have used [RealFaviconGenerator](https://realfavicongenerator.net/) you can simply extract all files from the downloaded archive file into a folder called `favicons`.
+
+Please make sure that your folder contains all the required files:
+
+- `android-chrome-192x192.png`
+- `android-chrome-512x512.png`
+- `apple-touch-icon.png`
+- `browserconfig.xml`
+- `favicon.ico`
+- `favicon-16x16.png`
+- `favicon-32x32.png`
+- `mstile-150x150.png`
+- `safari-pinned-tab.svg`
+- `site.webmanifest`
+
+To apply the changes, make sure that `simple_favicon` is set to `false` in your `interface.yml`. (default)
+Also pass the `favicons` to to contianer like so
+```
+-v /host/path/to/favicons:/var/www/localhost/htdocs/webroot/favicons:ro
+```
+
+### Simple favicon
+
+It is also possible to use one favicon for all platforms. **This is not recommended** and especially for mobile devices is a bad practice.
+
+Set `simple_favicon` is set to `true` and the file name at `favicon` in your `interface.yml`.
+Please make sure the file is a Microsoft Windows Icon (`.ico`)
+
