@@ -19,8 +19,7 @@ Bevor Sie anfangen, installieren Sie den openITCOCKPIT Monitoring Agenten auf de
 Um den Agenten herunterzuladen empfehlen wir Ihnen
 die [offizielle Download Seite](https://openitcockpit.io/download_agent/)
 
-Der Quellcode ist über das GitHub Repository verfügbar: :
-fontawesome-brands-github:  [https://github.com/it-novum/openitcockpit-agent-go](https://github.com/it-novum/openitcockpit-agent-go)
+Der Quellcode ist über das GitHub Repository verfügbar: :fontawesome-brands-github: [https://github.com/it-novum/openitcockpit-agent-go](https://github.com/it-novum/openitcockpit-agent-go)
 
 ## Überwachen eines Hosts mit dem openITCOCKPIT Monitoring Agent
 
