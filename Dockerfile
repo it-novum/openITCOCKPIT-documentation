@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add python3 py3-pip git
+RUN apk update && apk add python3 py3-pip py3-wheel git
 RUN pip install mkdocs && \
 pip install mkdocs-material && \
 pip install markdown-include && \
