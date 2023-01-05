@@ -172,7 +172,7 @@ class Initial extends AbstractMigration
      * https://book.cakephp.org/phinx/0/en/migrations.html#the-change-method
      * @return void
      */
-    public function change()
+    public function change(): void
     {
         $table = $this->table('examples', ['id' => false, 'primary_key' => ['id']]);
         $table->addColumn('id', 'integer', [
