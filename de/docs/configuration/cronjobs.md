@@ -31,4 +31,12 @@ Die Ausführung aller Cronjobs kann mit dem Befehl
 oitc cronjobs -f
 ```
 
-erzwungen werden. Durch den Parameter `-f` werden alle Cronjobs ausgeführt, unabhängig vom konfigurierten Interval.
+erzwungen werden. Durch den Parameter `-f` werden alle Cronjobs ausgeführt, unabhängig vom konfigurierten Intervall.
+
+Über die Angabe des Parameters `-t` (oder `--task`) kann die Ausführung eines einzelnen Cronjobs angestoßen werden.
+Soll die Ausführung erzwungen werden, unabhängig des konfigurierten Intervalls, so muss zusätzlich der Parameter `-f` angegeben werden.
+![Erzwungene Ausführung eines einzelnen Cronjobs](/images/configuration/force_execution_of_one_cronjob.png)
+
+### Liste aller Cronjobs
+Eine Liste, welche Cronjobs am System verfügbar sind, kann über den Parameter `-l` (oder `--list`) eingesehen werden
+![Liste aller verfügbaren Cronjobs](/images/configuration/list_of_cronjobs.png)

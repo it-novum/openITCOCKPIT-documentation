@@ -29,4 +29,12 @@ All cron jobs can be force executed using the command
 oitc cronjobs -f
 ```
 
-The `-f` parameter forces all cron jobs to run, regardless of the configured interval.
+The `-f` (or `--force`) parameter forces all cron jobs to run, regardless of the configured interval.
+
+The execution of a single cron job can be triggered by specifying the parameter `-t` (or `--task`).
+If the execution should be forced, regardless of the configured interval, the parameter `-f` must also be specified.
+![Forced execution of a single cron job](/images/configuration/force_execution_of_one_cronjob.png)
+
+### Liste of all cron jobs
+A list of which cron jobs are available on the system can be viewed using the `-l` (or `--list`) parameter
+![List of all available cron jobs](/images/configuration/list_of_cronjobs.png)
