@@ -10,8 +10,8 @@ The Checkmk extension for openITCOCKPIT is provided as a module. Making such too
 advantage of keeping the openITCOCKPIT core small and flexible.
 
 !!! info "openITCOCKPIT Community Licence is required"
-To get access to the community modules, you need to register your openITCOCKPIT instance using the **free** community
-licence.
+    To get access to the community modules, you need to register your openITCOCKPIT instance using the **free** community
+    licence.
 
 Navigate to `Management -> System Tools -> Package Manager` and install the *CheckmkModule*
 
