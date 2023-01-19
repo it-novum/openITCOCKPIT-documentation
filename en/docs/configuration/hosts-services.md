@@ -216,7 +216,8 @@ the services as with the other two methods.
 To create a host, first click on the “New” button in the host overview. In the form that opens, first select a container
 and a host template you would like to use in creating your host. All other fields relevant to the host will then appear.
 
-!!! danger Please note that it **is not possible** to make any subsequent changes to the host's container!
+!!! danger
+    Please note that it **is not possible** to make any subsequent changes to the host's container!
 
 You can then assign a host name and host address. Alternatively, you can assign a host address and have the host name
 completed automatically via DNS lookup.
@@ -249,9 +250,9 @@ openITCOCKPIT Agent, Checkmk or they can be created manually.
 | Checking interval                                  | :fontawesome-solid-xmark:  | Defines the interval at which checks should take place. See [intervals](#intervals_2)                                          |
 | Repeat interval                                    | :fontawesome-solid-xmark:  | Defines the waiting period before a new check takes place after a non-UP status has been reached. See [intervals](#intervals_2) |
 | Max. number of checking attempts                   | :fontawesome-solid-xmark:  | Determines the number of attempts to check a host before it transitions to a hard state. See [intervals](#intervals_2)          |
-| Notification configuration                         |                            |                                                                                                                               |	
-| Notification period                                | :fontawesome-solid-xmark:  | Determines the time period in which notifications are sent for a host.                                                        | 
-| Notification interval                              | :fontawesome-solid-xmark:  | Defines the interval for notifications sent to this host                                                                      | 
+| Notification configuration                         |                            |                                                                                                                               |
+| Notification period                                | :fontawesome-solid-xmark:  | Determines the time period in which notifications are sent for a host.                                                        |
+| Notification interval                              | :fontawesome-solid-xmark:  | Defines the interval for notifications sent to this host                                                                      |
 | Contacts                                           | :fontawesome-solid-xmark:  | One or more contacts who will receive notifications about this host                                                           |
 | Contact groups                                     | :fontawesome-solid-xmark:  | One or more contact groups that will receive notifications about this host                                                    |
 | Host notification options                          |                            | Defines the statuses that must be reached before notifications are sent                                                       |
@@ -259,7 +260,7 @@ openITCOCKPIT Agent, Checkmk or they can be created manually.
 | Host URL                                           |                            | Host URL                                                                                                                      |
 | Notes                                              | Host                       | template notes                                                                                                                |
 | Flap detection enabled                             |                            | (Flap detection) Detects whether a host status changes frequently over a short period of time                                 |
-| Host macro configuration                           |                            |                                                                                                                               |	
+| Host macro configuration                           |                            |                                                                                                                               |
 | Prometheus exporters                               |                            |                                                                                                                               |
 | Exporters                                          |                            | [Prometheus exporter](#prometheus-exporters)                                                                                  |
 
@@ -303,7 +304,7 @@ see [Reset the host or service field to default values](#resetting-host-or-servi
 
 | Field                            | Required                                                                             | Description                                                                                                    |
 |----------------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Basic configuration              |                                                                                      |                                                                                                                |	
+| Basic configuration              |                                                                                      |                                                                                                                |
 | Host                             | :fontawesome-solid-xmark:                                                            | The host on which the service is to be created                                                                 |
 | Service templates                | :fontawesome-solid-xmark:                                                            | The service template from which the service is to be created                                                   |
 | Service name                     | :fontawesome-solid-xmark:                                                            | Name of the service to be created                                                                              |
@@ -311,7 +312,7 @@ see [Reset the host or service field to default values](#resetting-host-or-servi
 | Service groups                   |                                                                                      | Assignment of one or more service groups                                                                       |
 | Keywords                         |                                                                                      | Tags                                                                                                           |
 | Priority                         |                                                                                      | Priority for filtering in lists                                                                                |
-| Checking configuration           |                                                                                      |                                                                                                                |		
+| Checking configuration           |                                                                                      |                                                                                                                |
 | Checking period                  | :fontawesome-solid-xmark:                                                            | Definites the period in which checks should take place                                                         |
 | Enable active checks             |                                                                                      | Determines whether the service should be checked actively or passively                                         |
 | Checking command                 | :fontawesome-solid-xmark:                                                            | The command executed to check the service                                                                      |

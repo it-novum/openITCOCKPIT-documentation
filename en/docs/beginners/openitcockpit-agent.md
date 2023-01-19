@@ -44,11 +44,12 @@ for [Push mode](#push-modus)
 The second step is basically a graphical configuration generator used for modifying the openITCOCKPIT Monitoring Agent
 configuration file. You just need to select the operating system you want to monitor and then click the "Next" button.
 
-!!! info "Connection Type: Auto-TLS"
-It is strongly recommended that you select Auto-TLS as the connection type. This will automatically secure and encrypt
-the connection between the openITCOCKPIT Server and the openITCOCKPIT Monitoring Agent. More information about the
-security of the openITCOCKPIT Monitoring Agent can be found in
-the [documentation](https://github.com/it-novum/openitcockpit-agent-go/wiki/Agent-Overview).
+!!! info
+    "Connection Type: Auto-TLS"
+    It is strongly recommended that you select Auto-TLS as the connection type. This will automatically secure and encrypt
+    the connection between the openITCOCKPIT Server and the openITCOCKPIT Monitoring Agent. More information about the
+    security of the openITCOCKPIT Monitoring Agent can be found in
+    the [documentation](https://github.com/it-novum/openitcockpit-agent-go/wiki/Agent-Overview).
 
 ![pull config](/images/agent-basic-pull-configuration.png)
 
@@ -106,8 +107,8 @@ the API key that the agent should use in the `openITCOCKPIT API key` field.
 Click `Next` to continue.
 
 !!! danger "Security Note!"
-It is strongly recommended to create a new user with very few privileges and use an API key for unprivileged users. No
-special authorisations via user roles are required to transfer check results.
+    It is strongly recommended to create a new user with very few privileges and use an API key for unprivileged users. No
+    special authorisations via user roles are required to transfer check results.
 
 ![agent push config](/images/agent-basic-push-configuration.png)
 
@@ -128,9 +129,10 @@ The system will collect basic health metrics like CPU, memory and swap by defaul
 processes and services that you want to monitor. Once you have selected the desired services, click on "Done" to
 complete the openITCOCKPIT Monitoring Agent Setup.
 
-!!! Info Because the agent runs in push mode, it is possible that openITCOCKPIT will not have received any data yet and
-therefore will not display any services. If this is the case, click :fontawesome-solid-arrow-left: to return to the
-previous step, wait 30 seconds, and then click the `Next` button again.
+!!! Info
+    Because the agent runs in push mode, it is possible that openITCOCKPIT will not have received any data yet and
+    therefore will not display any services. If this is the case, click :fontawesome-solid-arrow-left: to return to the
+    previous step, wait 30 seconds, and then click the `Next` button again.
 
 ![create services push](/images/agent-create-services-push.png)
 
