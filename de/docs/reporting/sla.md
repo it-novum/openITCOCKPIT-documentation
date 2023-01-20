@@ -1,4 +1,7 @@
-# SLA <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
+# Service-Level-Agreement Modul <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
+
+Das Service-Level-Agreement Modul kann über den Paketmanger von openITCOCKPIT installiert werden.
+Navigieren Sie zu `Verwaltung -> Systemwerkzeuge -> Paketmanager` und installieren Sie das *SLAModule*
 
 ## SLA Konfiguration
 
