@@ -9,14 +9,14 @@ Hier können neue SLAs erstellt werden beziehungsweise werden bereits angelegte 
 
 Für alle SLAs die bereits ausgewertet wurden, wird der aktuelle Wert angezeigt.
 
-Damit ein SLA ausgerechnet werden kann, müssen neben dem Namen und Zeitraum, ein Auswertungsintervall und garantierte
+Damit ein SLA ausgerechnet werden kann, müssen neben dem Namen und Zeitraum, ein Auswertungsinterval und garantierte
 Verfügbarkeit in Prozent angegeben werden. Falls gewünscht, kann ein Wert für eine vorzeitige Warnung eingetragen
 werden.
 Dieser Wert muss natürlich höher sein, als der Wert der garantierten Verfügbarkeit.
 
-Für die SLA Auswertung wird immer der erste Tag des Auswertungsintervall genommen. Zum Beispiel für den `MONAT`
-wird erster Tag des Monats und für die `WOCHE` Montag als Start der Auswertung genommen. Wenn der SLA an einem
-bestimmten Tag anfangen soll, kann man das im `Startdatum` Feld eintragen.
+Für die SLA Auswertung wird immer der erste Tag des Auswertungsinterval genommen. Zum Beispiel für den
+Auswertungsinterval `MONAT` wird der erste Tag des Monats und für die `WOCHE` Montag als Startdatum genommen.
+Wenn der SLA an einem bestimmten Tag anfangen soll, kann man das im `Startdatum` Feld eintragen.
 
 ![SLA kongigurieren](/images/sla/sla_configuration.png)
 
