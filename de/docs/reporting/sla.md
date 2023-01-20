@@ -25,18 +25,19 @@ Wenn der SLA an einem bestimmten Tag anfangen soll, kann man das im `Startdatum`
 
 #### Basiskonfiguration
 
-| Feld                          | Erforderlich | Beschreibung                                                                                         |
-|-------------------------------|---|------------------------------------------------------------------------------------------------------|
+| Feld                          | Erforderlich              | Beschreibung                                                                                         |
+|-------------------------------|---------------------------|------------------------------------------------------------------------------------------------------|
 | Container                     | :fontawesome-solid-xmark: | SLA Container                                                                                        |
 | Name                          | :fontawesome-solid-xmark: | Name der SLA                                                                                         |
-| Beschreibung                  |  | Beschreibung der SLA                                                                                 |
+| Beschreibung                  |                           | Beschreibung der SLA                                                                                 |
 | Auswertungsintervall          | :fontawesome-solid-xmark: | TAG, WOCHE, MONAT, QUARTAL, JAHR                                                                     |
-| Startdatum                    |  | Startdatum des SLAs                                                                                  |
+| Startdatum                    |                           | Startdatum des SLAs                                                                                  |
 | Garantierte Verfügbarkeit     | :fontawesome-solid-xmark: | Garantierte Verfügbarkeit in Prozent.                                                                |
-| Warnen beim Wert              |  | Ab diesem Wert kann eine Warnung für das SLA angezeigt werden                                        |
+| Warnen beim Wert              |                           | Ab diesem Wert kann eine Warnung für das SLA angezeigt werden                                        |
 | Zeitraum                      | :fontawesome-solid-xmark: | Zeitraum der bei der Auswertung berücksichtigt werden soll                                           |
-| Berücksichtige Wartungszeiten |  | Bestimmt ob Wartungszeiten berücksichtigt werden sollen. Ausfälle in Wartungszeiten werden ignoriert |
+| Berücksichtige Wartungszeiten |                           | Bestimmt ob Wartungszeiten berücksichtigt werden sollen. Ausfälle in Wartungszeiten werden ignoriert |
 | Reflexionszustand             | :fontawesome-solid-xmark: | Der auszuwertende Statustyp. Nur Hard-State oder Hard- und Soft-State                                |
+
 
 Nach der Installation des SLA Moduls wird der Konfigurationsbereich der Hostvorlage beziehungsweise des Hosts um die
 SLA Option erweitert. Der SLA kann immer entweder der Hostvorlage zugewiesen werden, damit sind alle Hosts, die diese
