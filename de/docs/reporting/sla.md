@@ -50,6 +50,9 @@ werden.
 
 ![Zugewiesene hosts](/images/sla/sla_affected_hosts.png)
 
+
+#### SLA Übersicht
+
 Sobald SLA ausgewertet wird in der SLA Liste die Verfügbarkeit des SLAs angezeigt. Diese ist mit der SLA
 Verfügbarkeitsübersicht verlinkt. Diese Übersicht kann auch über den Menüpunkt `Zeige details` erreicht werden.
 
