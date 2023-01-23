@@ -119,8 +119,9 @@ saving is then carried out automatically.
 
 #### Changing passwords
 
-!!! info This option is only available for local users. Users added via LDAP must change their password via the
-operating system or an LDAP account manager tool.
+!!! info
+    This option is only available for local users. Users added via LDAP must change their password via the
+    operating system or an LDAP account manager tool.
 
 To change your password, you can use this form. To do this, you must have your old password ready and be ready to assign
 a new password. The requirements for the new password are at least 6 alphanumeric characters and at least one digit.

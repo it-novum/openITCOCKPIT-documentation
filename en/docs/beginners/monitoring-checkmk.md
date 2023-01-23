@@ -10,8 +10,8 @@ The Checkmk extension for openITCOCKPIT is provided as a module. Making such too
 advantage of keeping the openITCOCKPIT core small and flexible.
 
 !!! info "openITCOCKPIT Community Licence is required"
-To get access to the community modules, you need to register your openITCOCKPIT instance using the **free** community
-licence.
+    To get access to the community modules, you need to register your openITCOCKPIT instance using the **free** community
+    licence.
 
 Navigate to `Management -> System Tools -> Package Manager` and install the *CheckmkModule*
 
@@ -50,8 +50,9 @@ To begin using this tool, you must first copy the Checkmk agent from your openIT
 
 `scp /opt/openitc/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
 
-!!! tip "All Checkmk agents for the various operating systems can be found here"
-`/opt/openitc/check_mk/agents/`
+!!! tip
+    "All Checkmk agents for the various operating systems can be found here"
+    `/opt/openitc/check_mk/agents/`
 
 **Now connect to the remote host via SSH**
 
@@ -63,7 +64,7 @@ chmod +x /usr/local/bin/check_mk_agent
 ```
 
 !!! danger "Security Notice"
-By default, Checkmk uses unencrypted plain text communication!
+   By default, Checkmk uses unencrypted plain text communication!
 
 Next you need to copy the following configuration to `/etc/xinetd.d/check_mk`:
 

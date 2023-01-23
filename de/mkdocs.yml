@@ -41,7 +41,10 @@ nav:
     - 'Slack': 'alerting/slack.md'
     - 'ServiceNow': 'alerting/servicenow.md'
     - 'E-Mail Layouts anpassen': 'alerting/email-layouts.md'
-  - 'Reporting': 'reporting.md'
+    - 'Custom Alert Module': 'alerting/custom-alert-module.md'
+  - 'Reporting':
+      - 'Reporting': 'reporting/reporting.md'
+      - 'SLA': 'reporting/sla.md'
   - 'Konfiguration':
     - 'Container': 'configuration/container.md'
     - 'Kommandos': 'configuration/commands.md'
@@ -158,4 +161,3 @@ extra:
     - link: /en/
       name: en - English
       lang: en
-

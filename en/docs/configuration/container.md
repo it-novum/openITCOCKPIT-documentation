@@ -33,8 +33,8 @@ therefore ideal for objects intended for use by different organisational units o
 time period `24x7` or the `Ping` service template
 
 !!! danger "Important"
-danger If you assign “important” objects to the root container, these cannot be moved to another container later! We
-recommend you use tenant containers instead.
+    danger If you assign “important” objects to the root container, these cannot be moved to another container later! We
+    recommend you use tenant containers instead.
 
 Users who have write access to the root container are global system administrators. They have the ability to view and
 edit all objects. Global system administrators are marked with a gold crown.
