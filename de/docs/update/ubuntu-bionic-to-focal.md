@@ -43,14 +43,14 @@ Jetzt wird das eigentliche Upgrade von Ubuntu 18.04 auf 20.04 durchgeführt.
 apt update && apt -y full-upgrade
 ```
 
-Wärend des Upgrades, werden vom System eventuell verschiedene Nachfragen gestellt. Diese sollten Sie wie folgt beantworten.
+Während des Upgrades, werden vom System eventuell verschiedene Nachfragen gestellt. Diese sollten Sie wie folgt beantworten.
 
 ### libc6
 Eventuelle Nachfragen bezüglich `libc6` müssen mit `Yes` beantwortet werden.
 ![libc6 configure](/images/updates/ubuntu-bionic/libc6.png){ align=center }
 
 ### MySQL
-Sehr warscheinlich wird der Neustart des MySQL Servers fehlschlagen. Dies kann ignoriert werden.
+Sehr wahrscheinlich wird der Neustart des MySQL Servers fehlgeschlagen. Dies kann ignoriert werden.
 
 ![mysql restart will fail](/images/updates/ubuntu-bionic/mysql.png){ align=center }
 
@@ -90,7 +90,7 @@ Auf einem openITCOCKPIT Satellit nutzen Sie den folgenden Befehl
 /opt/openitc/frontend/UPDATE.sh
 ```
 
-Um das Update abzuschließen, wird ein Neustart empfolen
+Um das Update abzuschließen, wird ein Neustart empfohlen
 ```
 reboot
 ```

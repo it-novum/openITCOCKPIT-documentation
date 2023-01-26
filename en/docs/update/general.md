@@ -14,7 +14,7 @@ Update package sources
 apt-get update
 ```
 
-Execute update
+Update
 ```
 apt-get dist-upgrade
 ```
@@ -27,7 +27,7 @@ Update package sources
 dnf --refresh check-update
 ```
 
-Execute update
+Update
 ```
 dnf update
 ```

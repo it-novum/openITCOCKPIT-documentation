@@ -1,96 +1,97 @@
 # Update Ubuntu Bionic (18.04) to Ubuntu Focal (20.04)
 
 !!! danger "Backup"
-    Bevor Sie beginnen, stellen Sie sicher ein **funktionierendes Backup** Ihres Systems gemacht zu haben!
+    Before you start, make sure you have a **working backup** of your system!
 
-Führen Sie alle Kommandos als `root` Benutzer aus.
+Please make sure to run all commands as `root` user.
 
-Um immer die aktuelle Version von openITCOCKPIT verwenden zu können, ist es wichtig, dass zugrundeliegende Betriebssystem aktuell zu halten.
-Mit dieser Anleitung können Sie Ihr Ubuntu Bionic System auf Ubuntu Focal aktualisieren.
+In order to always be able to use the latest version of openITCOCKPIT, it is important to keep the underlying operating system up to date.
+You can use this guide to upgrade your Ubuntu Bionic System to Ubuntu Focal.
 
-##  Voraussetzungen
- -  openITCOCKPIT in der Version 4.x
- -  Keine Pakete die `lxd` beinhalten
+##  Requirements
+ -  openITCOCKPIT in version 4.x
+ -  No packages containing `lxd`
 
-## Entfernen aller `lxd` Pakete
-Sollten auf Ihrem System `lxd` Pakete installiert sein, müssen diese zuerst entfernt werden. Prüfen können Sie dies mit dem Befehl
+
+## Removal of all `lxd` packages
+If you have `lxd` packages installed on your system, they must be removed first. You can check this with the command
 ```
 apt list --installed | grep lxd
 ```
 
-Sollten Pakete installiert sein, müssen diese zuerst entfernt werden
+If any `lxd` packages where found, remove tham like so
 ```
 apt -y remove lxd*
 ```
 
-## Installation aller Updates
-Bevor Sie mit dem Update von Ubuntu beginnen, stellen Sie bitte sicher, dass alle verfügbaren Updates installiert wurden.
+## Installation of all updates
+Before you start updating Ubuntu, please make sure that all available updates have been installed.
 
 ```
 apt update && apt -y full-upgrade
 ```
 
-## Paketquellen ändern
-Nun können die Paketquellen auf den nächsten Ubuntu-Release geändert werden
+## Change package sources
+Now the package sources can be changed to the next Ubuntu release
 ```
 sed -i 's/bionic/focal/g' /etc/apt/*.list
 sed -i 's/bionic/focal/g' /etc/apt/*/*.list
 ```
 
-## Upgrade durchführen
-Jetzt wird das eigentliche Upgrade von Ubuntu 18.04 auf 20.04 durchgeführt.
+## Upgrade
+Now the actual upgrade from Ubuntu 18.04 to 20.04 starts.
 ```
 apt update && apt -y full-upgrade
 ```
 
-Wärend des Upgrades, werden vom System eventuell verschiedene Nachfragen gestellt. Diese sollten Sie wie folgt beantworten.
+During the upgrade, the system may ask you various questions. You should answer them as follows.
 
 ### libc6
-Eventuelle Nachfragen bezüglich `libc6` müssen mit `Yes` beantwortet werden.
+Any queries regarding `libc6` must be answered with `Yes`.
 ![libc6 configure](/images/updates/ubuntu-bionic/libc6.png){ align=center }
 
 ### MySQL
-Sehr warscheinlich wird der Neustart des MySQL Servers fehlschlagen. Dies kann ignoriert werden.
+Most likely, restarting the MySQL server will fail. This can be ignored.
 
 ![mysql restart will fail](/images/updates/ubuntu-bionic/mysql.png){ align=center }
 
 ### openssh-server
-Behalten Sie die aktuelle Konfiguration Ihres OpenSSH Servers
+Keep the current configuration of your OpenSSH server
 
 ### phpMyAdmin
-Sollten Sie phpMyAdmin auf Ihrem System installiert haben, beantworten Sie auch diese Nachfrage mit `Yes`
+If you have phpMyAdmin installed on your system, answer this question with `Yes`
 
 ![configure phpMyAdmin](/images/updates/ubuntu-bionic/mysql.png){ align=center }
 
 ### Sub-process error
-Es kann passieren, dass die Installation dem Fehler `E: Sub-process /usr/bin/dpkg returned an exit code (1)` abbricht.
-Dies kann ignoriert werden.
+It can happen that the installation aborts with error `E: Sub-process /usr/bin/dpkg returned an exit code (1)`.
+This can be ignored.
 
 ![E: Sub-process error](/images/updates/ubuntu-bionic/fehler.png){ align=center }
 
-### Update von PHP
-Nun werden alle PHP Pakete aktualisiert.
+### Update PHP
+Now all PHP packages will be updated.
 ```
 dpkg -l | awk '/php7.2/ { print $2}' | sed 's/php7.2/php7.4/' | xargs apt-get install -y
 dpkg -l | awk '/php7.2/ { print $2}' | xargs apt-get purge -y
 ```
 
-### Konfiguration aktualisieren
-Im letzten Schritt werden alle Konfigurationsdateien aktualisiert und bei Bedarf neu generiert.
+### Update configuration
+In the last step, all configuration files are updated and regenerated if necessary.
 
 #### openITCOCKPIT Master
-Wenn Sie das Update auf einem openITCOCKPIT Master System ausführen, nutzen Sie den folgenden Befehl
+If you are running the update on an openITCOCKPIT master system, use the following command
 ```
 openitcockpit-update --cc
 ```
 
-#### openITCOCKPIT Satellit
-Auf einem openITCOCKPIT Satellit nutzen Sie den folgenden Befehl
+#### openITCOCKPIT Satellite
+For openITCOCKPIT Satellite execute
 ```
 /opt/openitc/frontend/UPDATE.sh
 ```
 
-Um das Update abzuschließen, wird ein Neustart empfolen
+A restart of the system is recommended to complete the update
 ```
 reboot
 ```

@@ -1,71 +1,72 @@
 # Update von Ubuntu Focal (20.04) auf Ubuntu Jammy (22.04)
 
 !!! danger "Backup"
-    Bevor Sie beginnen, stellen Sie sicher ein **funktionierendes Backup** Ihres Systems gemacht zu haben!
+    Before you start, make sure you have a **working backup** of your system!
 
-Führen Sie alle Kommandos als `root` Benutzer aus.
+Please make sure to run all commands as `root` user.
 
-Um immer die aktuelle Version von openITCOCKPIT verwenden zu können, ist es wichtig, dass zugrundeliegende Betriebssystem aktuell zu halten.
-Mit dieser Anleitung können Sie Ihr Ubuntu Focal System auf Ubuntu Jammy aktualisieren.
+In order to always be able to use the latest version of openITCOCKPIT, it is important to keep the underlying operating system up to date.
+You can use this guide to upgrade your Ubuntu Focal System to Ubuntu Jammy.
 
-##  Voraussetzungen
- -  openITCOCKPIT in der Version 4.x
- -  Keine Pakete die `lxd` beinhalten.
+##  Requirements
+ -  openITCOCKPIT in version 4.x
+ -  No packages containing `lxd`
 
-## Entfernen aller `lxd` Pakete
-Sollten auf Ihrem System `lxd` Pakete installiert sein, müssen diese zuerst entfernt werden. Prüfen können Sie dies mit dem Befehl
+
+## Removal of all `lxd` packages
+If you have `lxd` packages installed on your system, they must be removed first. You can check this with the command
 ```
 apt list --installed | grep lxd
 ```
 
-Sollten Pakete installiert sein, müssen diese zuerst entfernt werden
+If any `lxd` packages where found, remove tham like so
 ```
 apt -y remove lxd*
 ```
 
-## Installation aller Updates
-Bevor Sie mit dem Update von Ubuntu beginnen, stellen Sie bitte sicher, dass alle verfügbaren Updates installiert wurden.
+## Installation of all updates
+Before you start updating Ubuntu, please make sure that all available updates have been installed.
 
 ```
 apt update && apt -y full-upgrade
 ```
 
-## openITCOCKPIT Pakete ermitteln
-Nun werden zuerst alle installierten Pakete von openITCOCKPIT ermittelt und in der Variable `openitcockpit_upd` gespeichert.
+## Detect openITCOCKPIT packages
+First all installed packages of openITCOCKPIT are determined and saved in the variable `openitcockpit_upd`.
 ```
 openitcockpit_upd=$(apt-mark showmanual | grep openitcockpit | xargs echo)" "$(apt-mark showauto | grep openitcockpit | xargs echo)
 ```
 
-## Paketquellen ändern
-Nun können die Paketquellen auf den nächsten Ubuntu-Release geändert werden
+## Change package sources
+Now the package sources can be changed to the next Ubuntu release
 ```
 sed -i 's/focal/jammy/g' /etc/apt/*.list
 sed -i 's/focal/jammy/g' /etc/apt/*/*.list
 ```
 
-## Upgrade durchführen
-Jetzt wird das eigentliche Upgrade von Ubuntu 20.04 auf 22.04 durchgeführt.
+## Upgrade
+Now the actual upgrade from Ubuntu 20.04 to 22.04 starts.
 ```
 apt update && apt -y full-upgrade $openitcockpit_upd php-json php-curl php-gearman php-xml
 ```
 
 
-### Konfiguration aktualisieren
-Im letzten Schritt werden alle Konfigurationsdateien aktualisiert und bei Bedarf neu generiert.
+### Update configuration
+In the last step, all configuration files are updated and regenerated if necessary.
 
 #### openITCOCKPIT Master
-Wenn Sie das Update auf einem openITCOCKPIT Master System ausführen, nutzen Sie den folgenden Befehl
+If you are running the update on an openITCOCKPIT master system, use the following command
 ```
 openitcockpit-update --cc
 ```
 
-#### openITCOCKPIT Satellit
-Auf einem openITCOCKPIT Satellit nutzen Sie den folgenden Befehl
+#### openITCOCKPIT Satellite
+For openITCOCKPIT Satellite execute
 ```
 /opt/openitc/frontend/UPDATE.sh
 ```
 
-Um das Update abzuschließen, wird ein Neustart empfolen
+A restart of the system is recommended to complete the update
 ```
 reboot
 ```
