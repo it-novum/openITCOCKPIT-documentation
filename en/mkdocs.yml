@@ -8,6 +8,10 @@ dev_addr: 0.0.0.0:8000
 nav:
   - 'About openITCOCKPIT': 'index.md'
   - 'Installation': 'installation.md'
+  - 'Update':
+    - 'General update': 'update/general.md'
+    - 'Update Ubuntu Bionic to Focal': 'update/ubuntu-bionic-to-focal.md'
+    - 'Update Ubuntu Focal to Jammy': 'update/ubuntu-focal-to-jammy.md'
   - 'Beginners Guide':
       - 'Beginners Guide': 'beginners/beginners.md'
       - 'Container permissions': 'beginners/container-permissions.md'

@@ -1,4 +1,4 @@
-# Algemeines Update von openITCOCKPIT
+# Allgemeines Update von openITCOCKPIT
 
 Updates von openITCOCKPIT werden über den Paketmanger der jeweiligen Distribution eingespielt.
 

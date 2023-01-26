@@ -1,4 +1,4 @@
-# Update von Ubuntu Bionic (18.04) auf Ubuntu Focal (20.04)
+# Update Ubuntu Bionic (18.04) to Ubuntu Focal (20.04)
 
 !!! danger "Backup"
     Bevor Sie beginnen, stellen Sie sicher ein **funktionierendes Backup** Ihres Systems gemacht zu haben!
