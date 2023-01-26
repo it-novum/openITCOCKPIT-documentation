@@ -8,6 +8,11 @@ dev_addr: 0.0.0.0:8000
 nav:
   - 'Über openITCOCKPIT': 'index.md'
   - 'Installation': 'installation.md'
+  - 'Update':
+    - 'Allgemeines Update': 'update/general.md'
+    - 'Update Ubuntu Bionic auf Focal': 'update/ubuntu-bionic-to-focal.md'
+    - 'Update Ubuntu Focal auf Jammy': 'update/ubuntu-focal-to-jammy.md'
+    - 'Update Debian Buster auf Bullseye': 'update/debian-buster-to-bullseye.md'
   - 'Beginners Guide':
     - 'Beginners Guide': 'beginners/beginners.md'
     - 'Container Berechtigungen': 'beginners/container-permissions.md'
