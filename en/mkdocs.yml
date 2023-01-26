@@ -12,6 +12,7 @@ nav:
     - 'General update': 'update/general.md'
     - 'Update Ubuntu Bionic to Focal': 'update/ubuntu-bionic-to-focal.md'
     - 'Update Ubuntu Focal to Jammy': 'update/ubuntu-focal-to-jammy.md'
+    - 'Update Debian Buster to Bullseye': 'update/debian-buster-to-bullseye.md'
   - 'Beginners Guide':
       - 'Beginners Guide': 'beginners/beginners.md'
       - 'Container permissions': 'beginners/container-permissions.md'
