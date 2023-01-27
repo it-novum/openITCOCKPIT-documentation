@@ -30,6 +30,13 @@ Bevor Sie mit dem Update von Ubuntu beginnen, stellen Sie bitte sicher, dass all
 apt update && apt -y full-upgrade
 ```
 
+## Deaktivieren Sie MySQL Query Cache
+Der MySQL Query Cache wurde mit [MySQL 8.0](https://dev.mysql.com/blog-archive/mysql-8-0-retiring-support-for-the-query-cache/) entfernt.
+Stellen Sie daher sicher, dass der Query Cache in Ihrer MySQL-Konfiguration deaktiviert ist.
+```
+sed -i 's/^[ ]*query_cache/#query_cache/g' /etc/mysql/mysql.conf.d/*.cnf
+```
+
 ## Paketquellen ändern
 Nun können die Paketquellen auf den nächsten Ubuntu-Release geändert werden
 ```
