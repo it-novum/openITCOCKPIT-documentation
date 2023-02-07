@@ -32,6 +32,12 @@ apt update
 apt -y full-upgrade
 ```
 
+## Detect openITCOCKPIT packages
+First all installed packages of openITCOCKPIT are determined and saved in the variable `openitcockpit_upd`.
+```
+openitcockpit_upd=$(apt-mark showmanual | grep openitcockpit | xargs echo)" "$(apt-mark showauto | grep openitcockpit | xargs echo)
+```
+
 ## Change package sources
 Now the package sources can be changed to the next Debian release
 ```
