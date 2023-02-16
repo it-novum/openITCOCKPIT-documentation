@@ -38,6 +38,11 @@ Therefore it is important to make sure that the Query Cache feature is disabled 
 sed -i 's/^[ ]*query_cache/#query_cache/g' /etc/mysql/mysql.conf.d/*.cnf
 ```
 
+## Stop PHP-FPM service
+```
+systemctl stop php7.2-fpm.service
+```
+
 ## Change package sources
 Now the package sources can be changed to the next Ubuntu release
 ```
@@ -78,6 +83,10 @@ This can be ignored.
 
 ### Update PHP
 Now all PHP packages will be updated.
+```
+systemctl stop php7.2-fpm.service
+```
+
 ```
 dpkg -l | awk '/php7.2/ { print $2}' | sed 's/php7.2/php7.4/' | xargs apt-get install -y
 dpkg -l | awk '/php7.2/ { print $2}' | xargs apt-get purge -y

@@ -32,6 +32,11 @@ apt update
 apt -y full-upgrade
 ```
 
+## Stop PHP-FPM service
+```
+systemctl stop php7.3-fpm.service
+```
+
 ## Detect openITCOCKPIT packages
 First all installed packages of openITCOCKPIT are determined and saved in the variable `openitcockpit_upd`.
 ```
@@ -61,14 +66,14 @@ apt -y full-upgrade $openitcockpit_upd php-json php-curl php-gearman php-xml
 ### Update PHP
 Now all PHP packages will be updated.
 ```
-systemctl stop php7.3-fpm
+systemctl stop php7.3-fpm.service
 ```
 
 ```
 dpkg -l | awk '/php7.3/ { print $2}' | sed 's/php7.3/php7.4/' | xargs apt-get install -y
 dpkg -l | awk '/php7.3/ { print $2}' | xargs apt-get purge -y
 
-systemctl restart php7.4-fpm
+systemctl restart php7.4-fpm.service
 ```
 
 ### Update configuration

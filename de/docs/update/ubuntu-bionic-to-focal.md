@@ -37,6 +37,11 @@ Stellen Sie daher sicher, dass der Query Cache in Ihrer MySQL-Konfiguration deak
 sed -i 's/^[ ]*query_cache/#query_cache/g' /etc/mysql/mysql.conf.d/*.cnf
 ```
 
+## Stoppen Sie den PHP-FPM Dienst
+```
+systemctl stop php7.2-fpm.service
+```
+
 ## Paketquellen ändern
 Nun können die Paketquellen auf den nächsten Ubuntu-Release geändert werden
 ```
@@ -77,6 +82,11 @@ Dies kann ignoriert werden.
 
 ### Update von PHP
 Nun werden alle PHP Pakete aktualisiert.
+
+```
+systemctl stop php7.2-fpm.service
+```
+
 ```
 dpkg -l | awk '/php7.2/ { print $2}' | sed 's/php7.2/php7.4/' | xargs apt-get install -y
 dpkg -l | awk '/php7.2/ { print $2}' | xargs apt-get purge -y

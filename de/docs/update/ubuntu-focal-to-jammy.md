@@ -30,6 +30,11 @@ Bevor Sie mit dem Update von Ubuntu beginnen, stellen Sie bitte sicher, dass all
 apt update && apt -y full-upgrade
 ```
 
+## Stoppen Sie den PHP-FPM Dienst
+```
+systemctl stop php7.4-fpm.service
+```
+
 ## openITCOCKPIT Pakete ermitteln
 Nun werden zuerst alle installierten Pakete von openITCOCKPIT ermittelt und in der Variable `openitcockpit_upd` gespeichert.
 ```

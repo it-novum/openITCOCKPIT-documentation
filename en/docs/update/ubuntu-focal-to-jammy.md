@@ -31,6 +31,11 @@ Before you start updating Ubuntu, please make sure that all available updates ha
 apt update && apt -y full-upgrade
 ```
 
+## Stop PHP-FPM service
+```
+systemctl stop php7.4-fpm.service
+```
+
 ## Detect openITCOCKPIT packages
 First all installed packages of openITCOCKPIT are determined and saved in the variable `openitcockpit_upd`.
 ```
