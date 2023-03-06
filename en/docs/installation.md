@@ -7,10 +7,8 @@ openITCOCKPIT is installed via the package manager of your respective Linux dist
 - Ubuntu
     - Jammy (22.04)
     - Focal (20.04)
-    - Bionic (18.04)
 - Debian
     - Bullseye (11)
-    - Buster (10)
 - Enterprise Linux
     - Red Hat 8
 
@@ -34,9 +32,14 @@ apt-get update
 ### Debian
 
 ```
-deb http://deb.debian.org/debian/ buster main contrib non-free
-deb http://security.debian.org/debian-security buster/updates main contrib non-free
-deb http://deb.debian.org/debian/ buster-updates main contrib non-free
+deb http://deb.debian.org/debian/ bullseye main contrib non-free
+deb-src http://deb.debian.org/debian/ bullseye main contrib non-free
+
+deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+
+deb http://deb.debian.org/debian/ bullseye-updates main contrib non-free
+deb-src http://deb.debian.org/debian/ bullseye-updates main contrib non-free
 ```
 
 ```
@@ -61,7 +64,7 @@ You will now need to perform  the basic configuration. During this process, for 
 
 ## Registering the openITCOCKPIT Community Edition
 
-This step is optional and voluntary. You can expand your openITCOCKPIT installation's range of functions through the addition of modules. Several are available for free. In order to gain access to the community modules, you must first enter the openITCOCKPIT community key. To do this, click on `System -> Registration` and insert the following key: `e5aef99e-817b-0ff5-3f0e-140c1f342792`. 
+This step is optional and voluntary. You can expand your openITCOCKPIT installation's range of functions through the addition of modules. Several are available for free. In order to gain access to the community modules, you must first enter the openITCOCKPIT community key. To do this, click on `System -> Registration` and insert the following key: `e5aef99e-817b-0ff5-3f0e-140c1f342792`.
 
 No further information is required.
 
