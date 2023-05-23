@@ -52,7 +52,7 @@ sed -i 's/focal/jammy/g' /etc/apt/*/*.list
 ## Upgrade
 Now the actual upgrade from Ubuntu 20.04 to 22.04 starts.
 ```
-apt update && apt -y full-upgrade $openitcockpit_upd php-json php-curl php-gearman php-xml
+apt update && apt -y full-upgrade $openitcockpit_upd php-json php-curl php-gearman php-xml apache2-
 ```
 
 
