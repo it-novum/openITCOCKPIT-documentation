@@ -7,7 +7,9 @@ dev_addr: 0.0.0.0:8000
 
 nav:
   - 'Über openITCOCKPIT': 'index.md'
-  - 'Installation': 'installation.md'
+  - 'Installation':
+    - 'Installation': 'installation.md'
+    - 'Docker': 'installation/docker.md'
   - 'Update':
     - 'Allgemeines Update': 'update/general.md'
     - 'Update Ubuntu Bionic auf Focal': 'update/ubuntu-bionic-to-focal.md'
