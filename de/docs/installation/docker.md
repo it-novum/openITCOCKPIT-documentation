@@ -176,7 +176,7 @@ SSL_CERT OK - openitcockpit.io:443, https, x509 certificate 'openitcockpit.io' f
 root@dffc5ffe8681:/#
 ```
 
-<!--
+
 ## Portainer
 
 [Portainer Community Edition](https://github.com/portainer/portainer) ist eine Weboberfläche, mit dessen Hilfe sich Docker-Container bequem und einfach verwalten lassen.
@@ -185,17 +185,41 @@ root@dffc5ffe8681:/#
 
 1. Als Name können sie `openitcockpit-ce` setzen.
 
-2. Das Docker-Compose-File können Sie entweder über den Web-Editor hinzufügen, oder alternativ direkt aus dem GitHub Repository `https://github.com/it-novum/openITCOCKPIT-ce-docker` beziehen.
+2. Das [Docker-Compose-File](https://raw.githubusercontent.com/it-novum/openITCOCKPIT-ce-docker/main/compose.yml) können Sie entweder über den Web-Editor hinzufügen, oder alternativ direkt aus dem GitHub Repository `https://github.com/it-novum/openITCOCKPIT-ce-docker` beziehen.
 
-    **Bitte beachten Sie**, dass alle Verweise auf das `openitcockpit.env`-File entfernt werden müssen
+    **Bitte beachten Sie**, dass alle Verweise auf das `openitcockpit.env`-File durch `stack.env` ersetzten müssen.
+
+    Suchen Sie dafür nach diesen Einträgen
     ```
     env_file:
      - openitcockpit.env
     ```
 
-3. Wähle Sie unter `Environment variables` den `Advanced mode` und kopieren Sie den Inhalt der Datei `openitcockpit.env`.
+    Ersetzten Sie sie durch
+    ```
+    env_file:
+     - stack.env
+    ```
+
+    Sie können dies mit Hilfe des Web-Editors durchführen. (`CTRL + F` oder `CMD + F`)
+    ![Find and replace openitcockpit.env with stack.env](/images/docker/portainer_stack_env.png)
+
+3. Wähle Sie unter `Environment variables` den `Advanced mode` und kopieren Sie den Inhalt der Datei [openitcockpit.env](https://raw.githubusercontent.com/it-novum/openITCOCKPIT-ce-docker/main/openitcockpit.env).
     Alternative können Sie auch `Load variables from .env file` auswählen dann die Datei `openitcockpit.env` hochladen.
+    ![Portainer Stack configuration for openITCOCKPIT](/images/docker/portainer_create_stack.png)
 
 
 4. Klicken Sie auf `Deploy the stack`
--->
+    Portainer wird nun den kompletten Stack erstellen und alle Container starten.
+    ![Portainer running stack](/images/docker/portainer_stack_running.png)
+
+## Startsequenz
+
+Der Startvorgang des openITCOCKPIT Containers kann einige Zeit in Anspruch nehmen. Der Container überprüft bei jedem Start den Zustand der Datenbank und führt eventuelle Updates durch.
+Sobald das openITCOCKPIT Frontend erreichbar ist, gibt der Container die Meldung `openITCOCKPIT is now ready` aus.
+
+### Docker
+![openITCOCKPIT is ready via Docker Compose](/images/docker/docker_ready.png)
+
+### Portainer
+![openITCOCKPIT is ready via Portainer CE](/images/docker/container_ready.png)
