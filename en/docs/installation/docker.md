@@ -1,19 +1,19 @@
-# Docker images [Translate me]
+# Docker images
 
-Die offiziellen Docker-Images von openITCOCKPIT stehen hier zur Verfügung:
+The official Docker images of openITCOCKPIT are available here:
 
  - [Docker Hub](https://hub.docker.com/r/openitcockpit/openitcockpit-ce)
 
-Die Docker-Images von openITCOCKPIT stehen für die `amd64` und `arm64` CPU Architekturen zur Verfügung und können somit auch auf einem SoC wie dem Raspberry Pi 4 genutzt werden.
+The Docker images of openITCOCKPIT are available for the `amd64` and `arm64` CPU architectures and can also be used on a SoC like the Raspberry Pi 4.
 
-## Voraussetzungen
+## Requirements
 
-Docker und Docker Compose sind erforderlich. Bitte folgen Sie der [offiziellen Dokumentation](https://docs.docker.com/get-docker/),
-sollten Sie noch kein Docker installiert haben.
+Docker and Docker Compose are required. Please follow the [official documentation](https://docs.docker.com/get-docker/),
+if you do not have Docker installed yet.
 
-## Einstellungen
-Die Konfiguration von openITCOCKPIT kann über die Datei `openitcockpit.env` angepasst werden. Es wird empfohlen,
-**vor dem ersten start der Container** die Anmeldedaten zu ändern:
+## Settings
+The configuration of openITCOCKPIT can be customized via the `openitcockpit.env` file. It is recommended,
+to change the login data **before the first start of the container**:
 
 ```sh
 OITC_ADMIN_EMAIL=user@example.org
@@ -22,109 +22,108 @@ OITC_ADMIN_FIRSTNAME=John
 OITC_ADMIN_LASTNAME=Doe
 ```
 
-Alternativ können Sie auch einen neuen [Benutzer erstellen](https://docs.openitcockpit.io/en/configuration/usermanagement/) oder das Passwort ändern.
+Alternatively, you can also create a new [user](https://docs.openitcockpit.io/en/configuration/usermanagement/) or change the password.
 
-Außerdem wird empfohlen, dass Password des Grafana-Admin-Benutzers zu ersetzten. Setzten Sie dafür die folgenden zwei Variablen auf den gleichen Wert:
+It is also recommended to replace the password of Grafana admin user. To do this, set the following two variables to the same value:
 ```sh
 OITC_GRAFANA_ADMIN_PASSWORD=bGsPMxURCjg4esgJ
 
 GF_SECURITY_ADMIN_PASSWORD=bGsPMxURCjg4esgJ
 ```
 
-Zur Generierung eines sicheren Passworts kann der Befehl `pwgen -s -1 16` genutzt werden.
+To generate a secure password, the command `pwgen -s -1 16` can be used.
 
-Wie üblich bei Docker-Containern, können weitere Einstellungen wie Ports oder Volumes im `compose.yml` bei Bedarf angepasst werden.
+As usual with Docker containers, other settings like ports or volumes can be adjusted in the `compose.yml` if needed.
 
-## Standardwerte
+## Default values
 
-Standardmäßig stellt openITCOCKPIT diese Ports zur Verfügung:
+By default, openITCOCKPIT provides these ports:
 
  - 80 (HTTP)
  - 443 (HTTPS)
 
-Die Standardanmeldeinformationen sind:
+The default login credentials are:
 
  - E-Mail `user@example.org`
  - Password: `asdf12`
 
-## Vorbereitungen
+## Preparations
 
-1. Am einfachsten ist es, wenn Sie zuerst mit `git` eine lokale Kopie des Repositories erstellen, welches alle benötigten Daten enthält.
+1. The easiest way to check out fully containerized openITCOCKPIT is to use `git` to create a local copy of the repository that contains all the data you need.
 ```
 git clone https://github.com/it-novum/openITCOCKPIT-ce-docker.git
 ```
 
-2. Wechseln Sie nun in den Ordner
+2. Change to docker directory
 ```
 cd openITCOCKPIT-ce-docker
 ```
 
-3. Bearbeiten Sie die Datei `openitcockpit.env` und passen Sie Benutzername und Passwort an.
+3. Edit `openitcockpit.env` file and change the values username an password.
 
-## Container starten
+## Start containers
 
-Das Starten der Container erfolgt mit Hilfe des Befehls
-
+The containers are started with the help of the command
 ```
 docker compose up -d
 ```
 
 
-## Container aktualisieren
+## Update containers
 
-Um die Container von openITCOCKPIT zu aktualisieren, folgen Sie bitte diesen Schritten:
+To update the containers of openITCOCKPIT, please follow these steps:
 
-1. Aktualisieren Sie die lokale Kopie Ihres Repositories:
+1. Update the local copy of your repository:
 ```bash
 git pull origin main
 ```
 
-2. Stoppen Sie die laufenden Container
+2. Stop running containers
 ```bash
 docker compose down
 ```
 
-3. Führen Sie das Docker Compose Kommando aus, um die Container zu aktualisieren und starten:
+3. Run the Docker compose command to update and launch the containers:
 ```bash
 docker compose up --pull always -d
 ```
 
 ## Tags
 
-Die Docker-Registry von openITCOCKPIT beinhaltet für alle Container die folgende Tags:
+The Docker registry of openITCOCKPIT includes the following tags for all containers:
 
-- `latest` - Die letzte stabile Version von openITCOCKPIT (empfohlen)
-- Eine Version wie z.B. `4.6.4` - Diese Tags beinhalten die angegebene Version von openITCOCKPIT und können genutzt werden, um eine spezifische stabile Version zu erhalten.
+- `latest` - latest stabel version of openITCOCKPIT (recommended)
+- A version such as `4.6.4` - These tags contain the specified version of openITCOCKPIT and can be used to obtain a specific stable version.
 
-- `nightly` - Ein **ungetesteter** Build von openITCOCKPIT, welcher automatisiert erstellt und veröffentlicht wurde. Kann zum Testen von neuen Versionen und Feature genutzt werden. **Nicht für den produktiven Einsatz gedacht!**
+- `nightly` - An **untested** build of openITCOCKPIT which has been automatically created and released. Can be used for testing new versions and features. **Not intended for production use!**
 
 
-## Fehlersuche
+## Troubleshooting
 
-### Befehle in einem Container ausführen
+### Execute commands in a container
 
-1.  Führen Sie den Befehl `docker ps` aus, um die ID des gewünschten Containers auszulesen.
-2. Im nächsten Schritt können Sie über den Befehl  `docker exec` in den Container _springen_
+1. Run the `docker ps` command to read the ID of the desired container.
+2. In the next step, you need to 'jump' into the container using the `docker exec` command.
 ```
 docker exec -it d92a1431e619 bash
 ```
 
-### Eine MySQL Konsole starten
+### Starting MySQL console
 
-1. Gehen Sie zuerst mit dem Befehl `docker exec` in den `openitcockpit-ce` Container.
-2. Führen Sie den Befehl `mysql --defaults-file=/opt/openitc/etc/mysql/mysql.cnf` aus um eine MySQL Shell zu erhalten.
+1. 'Jump' into the `openitcockpit-ce` container with the `docker exec` command.
+2. Run the command `mysql --defaults-file=/opt/openitc/etc/mysql/mysql.cnf` to get a MySQL shell.
 
 ### Query Gearman status
-1. Gehen Sie zuerst mit dem Befehl `docker exec` in den `openitcockpit-ce` Container.
-2. Führen Sie den Befehl `gearadmin --status -h gearmand` aus um eine MySQL Shell zu erhalten.
+1. 'Jump' into the `openitcockpit-ce` container with the `docker exec` command.
+2. Run the command `gearadmin --status -h gearmand` to get a gearman status output.
 
-Sollten Sie den Hostnamen des Gearman-Job-Servers angepasst haben, können Sie den Wert direkt aus der Umgebungsvariable auslesen: `gearadmin --status -h $OITC_GEARMAN_ADDRESS`
+If you have customized the hostname of the gearman job server, you can read the value directly from the environment variable: `gearadmin --status -h $OITC_GEARMAN_ADDRESS`.
 
-### Neustarten von Diensten
-In der Regel müssen Sie keine Dienste manuell neustarten. Über den `openitcockpit-ce` Container ist es jedoch möglich, bestimmte Dienste in anderen Containern neu zu starten.
-Dafür kann der Befehl `oitc supervisor --help` genutzt werden.
+### Restarting services
+Normally, you do not have to restart services manually. However, via the `openitcockpit-ce` container it is possible to restart certain services in other containers.
+The `oitc supervisor --help` command can be used for this.
 
-Beispiele:
+Examples:
 ```
 oitc supervisor status naemon
 oitc supervisor restart nginx
@@ -132,13 +131,13 @@ oitc supervisor stop nginx
 oitc supervisor start nginx
 ```
 
-## Eigene Monitoring-Plugins installieren
+## Install your own monitoring plugins
 
-Der Container `openitcockpit/mod_gearman_worker` ist verantwortlich für das Ausführen von Monitoring-Plugins. Dieser Container basiert immer auf
-der aktuellen LTS Version von Ubuntu und kann als Basisimage für neue Container genutzt werden.
+The container `openitcockpit/mod_gearman_worker` is responsible for running monitoring plugins. This container is always based on
+the current LTS version of Ubuntu and can be used as a base image for new containers.
 
-Daf+r müssen Sie zuerst ein eigenes `Dockerfile` erstellen, welche alle gewünschten Plugins installieren. In diesem Beispiel, wird der Container um das Plugin
-[check_ssl_cert](https://github.com/matteocorti/check_ssl_cert) erweitert.
+Therefore, you must first create your own `Dockerfile`, which will install all the plugins you want. In this example, the container will be extended with the plugin
+[check_ssl_cert](https://github.com/matteocorti/check_ssl_cert).
 
 ```Dockerfile
 FROM openitcockpit/mod_gearman_worker:latest
@@ -159,16 +158,16 @@ RUN wget https://github.com/matteocorti/check_ssl_cert/releases/download/v2.69.0
 ```
 
 
-Erstellen Sie das neues Docker-Image:
+Create the new Docker image:
 ```
 docker build --rm -t openitcockpit/custom_mod_gearman_worker:latest .
 ```
 
-Im letzten Schritt müssen Sie noch Ihr eigenes Docker-Image in der `compose.yml`-Datei eintragen. Suchen Sie dafür den Container `openitcockpit/mod_gearman_worker` und ersetzten
-Sie das Image durch Ihr eigenes, zum Beispiel `openitcockpit/custom_mod_gearman_worker:latest`
+The last step is to add your own Docker image to the `compose.yml` file. Find the container `openitcockpit/mod_gearman_worker` and replace the image with your own.
+image with your own, for example `openitcockpit/custom_mod_gearman_worker:latest`.
 
 
-Nach einem Neustart der Container, wird Ihr eigens angepasster Container genutzt.
+After restarting the containers, your custom container will be used.
 ```
 [Ubuntu][11:49]root@srvcontainerswarm04/tmp/custom_mod_gearman# docker exec -it dffc5ffe8681 bash
 root@dffc5ffe8681:/# /opt/openitc/nagios/libexec/check_ssl_cert -H openitcockpit.io
@@ -179,44 +178,44 @@ root@dffc5ffe8681:/#
 
 ## Portainer
 
-[Portainer Community Edition](https://github.com/portainer/portainer) ist eine Weboberfläche, mit dessen Hilfe sich Docker-Container bequem und einfach verwalten lassen.
+[Portainer Community Edition](https://github.com/portainer/portainer) is a web interface that makes it convenient and easy to manage Docker containers.
 
-Über _Stacks_ ermöglicht die Portainer Oberfläche, dass Verwalten von Docker-Compose Dateien. Klicken Sie dazu unter `Stacks` auf `Add stack`.
+Through _Stacks_, the Portainer interface allows you to manage Docker Compose files. To do this, click `Add stack` under `Stacks`.
 
-1. Als Name können sie `openitcockpit-ce` setzen.
+1. As name you can set `openitcockpit-ce`.
 
-2. Das [Docker-Compose-File](https://raw.githubusercontent.com/it-novum/openITCOCKPIT-ce-docker/main/compose.yml) können Sie entweder über den Web-Editor hinzufügen, oder alternativ direkt aus dem GitHub Repository `https://github.com/it-novum/openITCOCKPIT-ce-docker` beziehen.
+2. You can either add the [Docker Compose File](https://raw.githubusercontent.com/it-novum/openITCOCKPIT-ce-docker/main/compose.yml) via the web editor, or alternatively get it directly from the GitHub repository `https://github.com/it-novum/openITCOCKPIT-ce-docker`.
 
-    **Bitte beachten Sie**, dass alle Verweise auf das `openitcockpit.env`-File durch `stack.env` ersetzten müssen.
+    **Please note** that all references to the `openitcockpit.env` file must be replaced by `stack.env`.
 
-    Suchen Sie dafür nach diesen Einträgen
+    To do this, look for these entries
     ```
     env_file:
      - openitcockpit.env
     ```
 
-    Ersetzten Sie sie durch
+    Replace with
     ```
     env_file:
      - stack.env
     ```
 
-    Sie können dies mit Hilfe des Web-Editors durchführen. (`CTRL + F` oder `CMD + F`)
+    You can do this with the help of the web editor. (`CTRL + F` or `CMD + F`)
     ![Find and replace openitcockpit.env with stack.env](/images/docker/portainer_stack_env.png)
 
-3. Wähle Sie unter `Environment variables` den `Advanced mode` und kopieren Sie den Inhalt der Datei [openitcockpit.env](https://raw.githubusercontent.com/it-novum/openITCOCKPIT-ce-docker/main/openitcockpit.env).
-    Alternative können Sie auch `Load variables from .env file` auswählen dann die Datei `openitcockpit.env` hochladen.
+3. Under `Environment variables` select `Advanced mode` and copy the contents of the file [openitcockpit.env](https://raw.githubusercontent.com/it-novum/openITCOCKPIT-ce-docker/main/openitcockpit.env).
+    Alternatively, you can select `Load variables from .env file` then upload the file `openitcockpit.env`.
     ![Portainer Stack configuration for openITCOCKPIT](/images/docker/portainer_create_stack.png)
 
 
-4. Klicken Sie auf `Deploy the stack`
-    Portainer wird nun den kompletten Stack erstellen und alle Container starten.
+4. Click on `Deploy the stack`
+    Portainer will now create the complete stack and start all containers.
     ![Portainer running stack](/images/docker/portainer_stack_running.png)
 
-## Startsequenz
+## Startup process
 
-Der Startvorgang des openITCOCKPIT Containers kann einige Zeit in Anspruch nehmen. Der Container überprüft bei jedem Start den Zustand der Datenbank und führt eventuelle Updates durch.
-Sobald das openITCOCKPIT Frontend erreichbar ist, gibt der Container die Meldung `openITCOCKPIT is now ready` aus.
+The startup process of the openITCOCKPIT container can take some time. The container checks the state of the database at each startup and performs any updates.
+As soon as the openITCOCKPIT frontend is accessible, the container outputs the message `openITCOCKPIT is now ready`.
 
 ### Docker
 ![openITCOCKPIT is ready via Docker Compose](/images/docker/docker_ready.png)

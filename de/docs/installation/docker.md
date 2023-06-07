@@ -116,7 +116,7 @@ docker exec -it d92a1431e619 bash
 
 ### Query Gearman status
 1. Gehen Sie zuerst mit dem Befehl `docker exec` in den `openitcockpit-ce` Container.
-2. Führen Sie den Befehl `gearadmin --status -h gearmand` aus um eine MySQL Shell zu erhalten.
+2. Führen Sie den Befehl `gearadmin --status -h gearmand` aus um eine Gearman Status Ausgabe zu erhalten.
 
 Sollten Sie den Hostnamen des Gearman-Job-Servers angepasst haben, können Sie den Wert direkt aus der Umgebungsvariable auslesen: `gearadmin --status -h $OITC_GEARMAN_ADDRESS`
 
