@@ -212,6 +212,13 @@ Zuerst müssen Sie die bestehenden Container vorbereiten.
     Bearbeiten Sie dazu die Datei `openitcockpit.env` und setzen Sie die folgenden Werte:
     ```cfg
     #####
+    ## Naemon Environment Variables
+    #####
+
+    MOD_GEARMAN_ENCRYPTION=yes
+    MOD_GEARMAN_KEY=should_be_changed
+
+    #####
     ## Mod_Gearman_Worker Environment Variables
     #####
     MOD_GEARMAN_WORKER_EVENTHANDLER=no

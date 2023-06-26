@@ -214,6 +214,13 @@ First you need to prepare your current container setup a bit.
     and set the following values:
     ```cfg
     #####
+    ## Naemon Environment Variables
+    #####
+
+    MOD_GEARMAN_ENCRYPTION=yes
+    MOD_GEARMAN_KEY=should_be_changed
+
+    #####
     ## Mod_Gearman_Worker Environment Variables
     #####
     MOD_GEARMAN_WORKER_EVENTHANDLER=no
