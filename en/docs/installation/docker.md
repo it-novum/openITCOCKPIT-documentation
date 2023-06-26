@@ -132,6 +132,12 @@ oitc supervisor start nginx
 ```
 
 ## Install your own monitoring plugins
+openITCOCKPIT supports two different methods to extend the monitoring capabilities with custom check plugins. The _containerized method_
+is recommended for users that have experience with building and maintaining container images.
+
+If you prefer a bare-metal server or virtual machine for this have a look at the _traditional method_.
+
+### Containerized method
 
 The container `openitcockpit/mod_gearman_worker` is responsible for running monitoring plugins. This container is always based on
 the current LTS version of Ubuntu and can be used as a base image for new containers.
@@ -175,6 +181,114 @@ SSL_CERT OK - openitcockpit.io:443, https, x509 certificate 'openitcockpit.io' f
 root@dffc5ffe8681:/#
 ```
 
+### Traditional method
+
+openITCOCKPIT make use of `Mod-Gearman` to distribute the execution of check plugins across multiple devices.
+
+If you don't feel comfortable by building and maintaining your own container image, openITCOCKPIT provides a package, so you can use any Debian, Ubuntu or Red Hat Enterprise Linux based system.
+Depending on your workload, it could make sense to spread the load across multiple servers.
+
+!!! warning
+    For security reasons we highly recommend to enable encryption.
+
+#### Prepare containers
+First you need to prepare your current container setup a bit.
+
+1. Expose Gearmand
+
+    To be able to connect an external Mod-Gearman Worker to openITCOCKPIT, you have to expose the `Gearman-Job-Server` to your network.
+    First, edit the file `compose.yml` and search for the `gearmand` service. Replace the line
+    ```
+    - "4730"       # Gearman-Job-Server
+    ```
+
+    with
+    ```
+    - "4730:4730"       # Gearman-Job-Server
+    ```
+
+2. Disable processing of host and service checks of openITCOCKPIT
+
+    To make sure that all host and services checks get executed by you own custom worker,
+    it is important to disable the default check execution of openITCOCKPIT. To do so, edit the file `openitcockpit.env`
+    and set the following values:
+    ```cfg
+    #####
+    ## Mod_Gearman_Worker Environment Variables
+    #####
+    MOD_GEARMAN_WORKER_EVENTHANDLER=no
+    MOD_GEARMAN_WORKER_NOTIFICATIONS=yes
+    MOD_GEARMAN_WORKER_SERVICES=no
+    MOD_GEARMAN_WORKER_HOSTS=no
+    MOD_GEARMAN_WORKER_ENCRYPTION=yes
+    MOD_GEARMAN_WORKER_KEY=should_be_changed
+    ```
+
+    To apply the changes, restart the containers.
+    The `openitcockpit/mod_gearman_worker` container will still be used to send notifications.
+    This behavior can also be changed, but to do so is only recommended for power users.
+
+#### Prepare VM
+Now it is time to setup a VM (or server) which you want to use for check execution.
+We recommend to start with a blank VM of the latest Ubuntu LTS release.
+
+1. Load the repository.
+
+    Please make sure to enable the [openITCOCKPIT repository](https://openitcockpit.io/download_server/) on your system.
+
+2. Install dependencies
+    ```
+    apt-get install mod-gearman-worker-go
+    ```
+
+    All check plugins are located at `/opt/openitc/nagios/libexec`. You can add any custom plugin you need to this (or any other) location.
+
+3. Connect worker to openITCOCKPIT Server
+
+    Open the file `/opt/openitc/mod_gearman/etc/worker.cfg` and set the hostname or IP-Address of your openITCOCKPIT Server.
+    ```cfg
+    server=localhost:4730
+
+    # Also make sure to set same encryption parameters
+    encryption=yes
+    key=should_be_changed
+    ```
+
+    To apply the settings, restart the service: `systemctl restart mod-gearman-worker.service`
+
+### Enabling encryption
+By default, openITCOCKPIT **has no encryption enabled** for Mod-Gearman. This is due to the fact, that by default all communication
+is only available through the containers that are part of the same container network.
+
+In case you have exposed the Gearman Port (4730) or are using any external Mod-Gearman Workers, we recommend to enable encryption.
+Mod-Gearman has a shared secret, so you need to make the changes on all affected systems!
+
+For containers edit the file `openitcockpit.env` and adjust the following variables:
+```
+#####
+## Naemon Environment Variables
+#####
+
+MOD_GEARMAN_ENCRYPTION=yes
+MOD_GEARMAN_KEY=should_be_changed
+
+#####
+## Mod_Gearman_Worker Environment Variables
+#####
+
+MOD_GEARMAN_WORKER_ENCRYPTION=yes
+MOD_GEARMAN_WORKER_KEY=should_be_changed
+```
+
+For traditional, edit the configuration file `/opt/openitc/mod_gearman/etc/worker.cfg`:
+```
+encryption=yes
+key=should_be_changed
+```
+
+The `key` option contains the shared secret and should be replaced with a secure string.
+
+To apply the changes restart all containers or the `mod-gearman-worker.service`.
 
 ## Portainer
 

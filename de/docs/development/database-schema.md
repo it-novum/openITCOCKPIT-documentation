@@ -1,7 +1,6 @@
 # Datenbankschema
 
 !!! Danger "Gefahr"
-
     Änderungen in der Datenbank können die Stabilität des Systems negativ beeinflussen
     und Probleme, besonders beim Einspielen von Updates, verursachen.
 

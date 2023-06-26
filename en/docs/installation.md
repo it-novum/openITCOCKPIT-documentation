@@ -11,11 +11,12 @@ openITCOCKPIT is installed via the package manager of your respective Linux dist
     - Bullseye (11)
 - Enterprise Linux
     - Red Hat 8
+    - Red Hat 9
 
 ## arm64 / Raspberry Pi
 openITCOCKPIT and all components are also available for arm64 processors and the Raspberry Pi.
 
-The installation is the same as for a 64-bit system with an AMD or Intel processor. If you want to use a Raspberry Pi system, the [64-Bit Version von Raspberry Pi OS](https://downloads.raspberrypi.org/raspios_arm64/images/) must be used.
+The installation is the same as for a 64-bit system with an AMD or Intel processor. If you want to use a Raspberry Pi system, the [64-Bit version of the Raspberry Pi OS](https://downloads.raspberrypi.org/raspios_arm64/images/) must be used.
 
 ## Adding the repository
 ### Ubuntu

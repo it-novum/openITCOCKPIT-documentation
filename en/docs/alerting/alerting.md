@@ -149,8 +149,9 @@ dependency is defined, each dependency is checked as follows:
 
 This loop runs until either all dependent hosts or services pass verification or a dependency fails.
 
-!!! info Unless otherwise configured, Naemon will use the latest hard state of the dependent hosts or services for its
-checking purposes.
+!!! info
+    Unless otherwise configured, Naemon will use the latest hard state of the dependent hosts or services for its
+    checking purposes.
 
 #### Execution error/failure criteria
 

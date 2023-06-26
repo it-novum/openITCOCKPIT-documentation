@@ -1,7 +1,7 @@
 # Using openITCOCKPIT behind a reverse proxy
 
 !!! hint
-    hint To be able to use openITCOCKPIT behind a reverse proxy, **no adjustments** have to be made to the openITCOCKPIT web server configuration!
+    Hint to be able to use openITCOCKPIT behind a reverse proxy, **no adjustments** have to be made to the openITCOCKPIT web server configuration!
 
 
 This documentation describes how openITCOCKPIT can be run behind an Nginx or Apache2 reverse proxy.
@@ -37,32 +37,32 @@ server {
     server_name  openitcockpit.example.org;
 
     server_tokens off;
-    
+
     # Set the IP Address or FQDN of your openITCOCKPIT Monitoring Server here
     set $oitcserver 157.230.114.24;
-    
+
     # Set the TLS certificate you like to use - for example Let’s Encrypt
     ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
     ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-    
+
     # Proxy openITCOCKPIT HTTP requests
     location / {
         proxy_pass https://$oitcserver;
         proxy_ssl_verify off;
-        
+
         proxy_set_header Host      $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
-    
+
     # Proxy Web Socket Connections
     location ~ ^/(sudo_server|push_notifications|nsta)$ {
         proxy_pass https://$oitcserver;
         proxy_ssl_verify off;
-        
+
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        
+
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
