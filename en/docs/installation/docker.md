@@ -169,8 +169,8 @@ Create the new Docker image:
 docker build --rm -t openitcockpit/custom_mod_gearman_worker:latest .
 ```
 
-The last step is to add your own Docker image to the `compose.yml` file. Find the container `openitcockpit/mod_gearman_worker` and replace the image with your own.
-image with your own, for example `openitcockpit/custom_mod_gearman_worker:latest`.
+The last step is, to add your own Docker image to the `compose.yml` file. Find the container `openitcockpit/mod_gearman_worker` and replace the image with your ownimage.
+For example: `openitcockpit/custom_mod_gearman_worker:latest`.
 
 
 After restarting the containers, your custom container will be used.
@@ -183,13 +183,13 @@ root@dffc5ffe8681:/#
 
 ### Traditional method
 
-openITCOCKPIT make use of `Mod-Gearman` to distribute the execution of check plugins across multiple devices.
+openITCOCKPIT make use of `Mod-Gearman` to distribute the execution of check plugins across multiple servers (or containers).
 
-If you don't feel comfortable by building and maintaining your own container image, openITCOCKPIT provides a package, so you can use any Debian, Ubuntu or Red Hat Enterprise Linux based system.
-Depending on your workload, it could make sense to spread the load across multiple servers.
+If you don't feel comfortable by building and maintaining your own container image, openITCOCKPIT provides a package, so you can use any Debian, Ubuntu or Red Hat Enterprise Linux based system as a worker system.
+Depending on your workload, it could make sense to spin-up multiple worker instances.
 
 !!! warning
-    For security reasons we highly recommend to enable encryption.
+    For security reasons we highly recommend to <a href="#enabling-encryption">enable encryption</a>.
 
 #### Prepare containers
 First you need to prepare your current container setup a bit.
@@ -209,7 +209,7 @@ First you need to prepare your current container setup a bit.
 
 2. Disable processing of host and service checks of openITCOCKPIT
 
-    To make sure that all host and services checks get executed by you own custom worker,
+    To make sure that all host and services checks get executed by your own custom worker,
     it is important to disable the default check execution of openITCOCKPIT. To do so, edit the file `openitcockpit.env`
     and set the following values:
     ```cfg
@@ -238,7 +238,7 @@ We recommend to start with a blank VM of the latest Ubuntu LTS release.
 
 2. Install dependencies
     ```
-    apt-get install mod-gearman-worker-go
+    apt-get install openitcockpit-mod-gearman-worker-go
     ```
 
     All check plugins are located at `/opt/openitc/nagios/libexec`. You can add any custom plugin you need to this (or any other) location.
@@ -247,7 +247,7 @@ We recommend to start with a blank VM of the latest Ubuntu LTS release.
 
     Open the file `/opt/openitc/mod_gearman/etc/worker.cfg` and set the hostname or IP-Address of your openITCOCKPIT Server.
     ```cfg
-    server=localhost:4730
+    server=srvpod03.example.org:4730
 
     # Also make sure to set same encryption parameters
     encryption=yes
@@ -280,7 +280,7 @@ MOD_GEARMAN_WORKER_ENCRYPTION=yes
 MOD_GEARMAN_WORKER_KEY=should_be_changed
 ```
 
-For traditional, edit the configuration file `/opt/openitc/mod_gearman/etc/worker.cfg`:
+For traditional setups, edit the configuration file `/opt/openitc/mod_gearman/etc/worker.cfg`:
 ```
 encryption=yes
 key=should_be_changed
