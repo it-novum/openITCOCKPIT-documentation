@@ -11,6 +11,7 @@ Die Installation von openITCOCKPIT erfolgt über den Paketmanager der Linux-Dist
     - Bullseye (11)
 - Enterprise Linux
     - Red Hat 8
+    - Red Hat 9
 
 ## arm64 / Raspberry Pi
 openITCOCKPIT und alle Komponenten stehen auch für arm64 Prozessoren und den Raspberry Pi zur Verfügung.

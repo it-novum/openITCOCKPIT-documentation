@@ -4,12 +4,13 @@
 
 These instructions describe how to update your current installation of openITCOCKPIT 3.7.3 (or newer) to openITCOCKPIT 4.
 
-!!! info "Before beginning the upgrade, please be sure to create a backup of your system!" We recommend testing both your backup and update processes in a test environment before using them on a live system.
+!!! info
+    "Before beginning the upgrade, please be sure to create a backup of your system!" We recommend testing both your backup and update processes in a test environment before using them on a live system.
 
 ### Prerequisites
 
 -	Make sure that:
--	your openITCOCKPIT installation is up to date 
+-	your openITCOCKPIT installation is up to date
 -	openITCOCKPIT >= 3.7.3
 -	all operating system updates have been installed
 -	a working backup of your openITCOCKPIT installation is available (in case something goes wrong)
@@ -88,7 +89,8 @@ mysqldump --defaults-extra-file=/etc/mysql/debian.cnf --databases openitcockpit 
 
 ### Step 3 - Carry out the openITCOCKPIT v4 compatibility check
 
-!!! danger "Note for users of the i-doit and discovery module" The module `openitcockpit-module-discovery` and `openitcockpit-module-idoit` sind in openITCOCKPIT 4 **are not available** in openITCOCKPIT 4. If you are using these modules, you should **not** update to openITCOCKPIT 4 at the current time!
+!!! danger
+    "Note for users of the i-doit and discovery module" The module `openitcockpit-module-discovery` and `openitcockpit-module-idoit` sind in openITCOCKPIT 4 **are not available** in openITCOCKPIT 4. If you are using these modules, you should **not** update to openITCOCKPIT 4 at the current time!
 
 To ensure that your system is capable of being updated to openITCOCKPIT 4.x, we provide a compatibility script for checking your system(s).
 
@@ -115,11 +117,11 @@ First resolve the issues that have been highlighted and run the script again. On
 #### Step 3.1 – Distributed monitoring
 
 It is assumed that all satellite systems have been updated to openITCOCKPIT 4.
-This is important, because with the current release it is not possible to connect openITCOCKPIT 3.x satellites to an openITCOCKPIT 4.x master system. If, for any reason, you are currently **unable to update your satellite systems**, do not update your master system at this time! 
+This is important, because with the current release it is not possible to connect openITCOCKPIT 3.x satellites to an openITCOCKPIT 4.x master system. If, for any reason, you are currently **unable to update your satellite systems**, do not update your master system at this time!
 
 #### Step 3.2 – Updating openITCOCKPIT
 
-!!! warning 
+!!! warning
     "Stable SSH connection is required!" The update process may take a while. To prevent SSH connection problems, we recommend using `tmux` or `screen`.
 
 **The compatibility checking script displays the commands required to update your openITCOCKPIT installation based on the modules installed and the distribution being used. The update commands are individually generated for each system**
@@ -141,7 +143,7 @@ Make sure that the non-free repositories have been activated on your system.
 
 `/etc/apt/sources.list`
 
-```bash 
+```bash
 deb http://ftp.de.debian.org/debian/ buster main contrib non-free
 deb http://ftp.de.debian.org/debian/ buster-updates main contrib non-free
 deb http://security.debian.org/ buster/updates main contrib non-free
@@ -203,7 +205,7 @@ We recommend you now [update the monitoring configuration](../../monitoring/basi
 
 To begin processing your satellite check results, you will need to restart the NSTA daemon
 
-```bash 
+```bash
 systemctl restart nsta
 ```
 
@@ -238,7 +240,7 @@ The Modules `openitcockpit-module-discovery` and `openitcockpit-module-idoit` ar
 
 If the password has been correctly reset, but the user is still unable to log into the openITCOCKPIT interface (error message: `Invalid username or password`), the user must be manually activated in the database. This can be done with the following SQL command:
 
-```sql 
+```sql
 UPDATE users SET is_active = 1 WHERE users.email= 'user@example.com';
 ```
 
@@ -327,16 +329,16 @@ If the update of Ubuntu Xenial fails due to the lxd package and the following er
 Old bridge configuration detected in /etc/default/lxd-bridge, upgrading
 Unsetting deprecated profile options
 Error: unknown command "profile" for "lxc"
- 
+
 Did you mean this?
     Profil
- 
+
 Run 'lxc --help' for usage.
 dpkg: error processing package lxd (--configure):
  installed lxd package post-installation script subprocess returned error exit status 1
- 
+
 ....
- 
+
 Errors  occurred while processing:
  lxd
 E: Sub-process /usr/bin/dpkg returned an error code (1)
@@ -351,7 +353,7 @@ apt-get install -f
 apt-get remove lxd
 apt-get autoremove
 reboot
- 
+
 #after reboot you need to trigger the UPGRADE script from itcockpit which was not triggered during the upgrade
 /opt/openitc/frontend/bin/scripts/UPGRADE.sh
 ```
