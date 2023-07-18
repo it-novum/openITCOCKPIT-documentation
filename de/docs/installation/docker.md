@@ -11,6 +11,14 @@ Die Docker-Images von openITCOCKPIT stehen für die `amd64` und `arm64` CPU Arch
 Docker und Docker Compose sind erforderlich. Bitte folgen Sie der [offiziellen Dokumentation](https://docs.docker.com/get-docker/),
 sollten Sie noch kein Docker installiert haben.
 
+### System requirements
+- 2 CPU Kerne (x86-64 oder arm64)
+- 2 GB RAM
+- 40 GB freier Festplattenspeicher
+
+!!! info
+    Der verwendete Festplattenspeicher hängt von der Anzahl der überwachten Hosts und Services ab.
+
 ## Einstellungen
 Die Konfiguration von openITCOCKPIT kann über die Datei `openitcockpit.env` angepasst werden. Es wird empfohlen,
 **vor dem ersten start der Container** die Anmeldedaten zu ändern:
@@ -334,3 +342,13 @@ Sobald das openITCOCKPIT Frontend erreichbar ist, gibt der Container die Meldung
 
 ### Portainer
 ![openITCOCKPIT is ready via Portainer CE](/images/docker/container_ready.png)
+
+## MySQL Binary Log
+
+Im Standard ist das Binary Log des MySQL-Servers über die `compose.yml`-Datei deaktiviert. Das Binary Log wird für eine Replikation zwischen mehrere MySQL-Servern benötigt,
+kann allerdings auch im Falle einer Wiederherstellung der Datenbank nützlich sein. Weitere Informationen können der [MySQL Dokumentation](https://dev.mysql.com/doc/refman/8.0/en/binary-log.html)
+entnommen werden.
+
+Sollten Sie das Binary Log aktivieren wollen, muss in der `compose.yml`-Datei der Parameter `--skip-log-bin` entfernt werden.
+Der Aufbewahrungszeitraum des Binary Logs, kann über den Parameter `--binlog-expire-logs-seconds=2592000` gesteuert werden. Dieser beträgt im Standard 30 Tage.
+
