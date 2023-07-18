@@ -11,7 +11,7 @@ The Docker images of openITCOCKPIT are available for the `amd64` and `arm64` CPU
 Docker and Docker Compose are required. Please follow the [official documentation](https://docs.docker.com/get-docker/),
 if you do not have Docker installed yet.
 
-### Systemanforderungen
+### System requirements
 - 2 CPU cores (x86-64 or arm64)
 - 2 GB RAM
 - 40 GB of free hard disk space
