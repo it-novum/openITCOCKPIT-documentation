@@ -96,7 +96,6 @@ nav:
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
-  - vendor/featherlight-v.1.7.14/release/featherlight.min.js
   - copyright_year.js
 
 markdown_extensions:
@@ -114,16 +113,15 @@ markdown_extensions:
     - markdown_include.include:
           base_path: docs
     - admonition
-    - featherlight
 
 extra_css:
   - bootstrap-selection.css
   - vendor/font-awesome-4.7.0/css/font-awesome.min.css
-  - vendor/featherlight-v.1.7.14/release/featherlight.min.css
   - oitc.css
 
 plugins:
   - search
+  - glightbox
 
 #  Theme docs: https://squidfunk.github.io/mkdocs-material/getting-started/
 theme:
