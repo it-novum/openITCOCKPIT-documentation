@@ -91,6 +91,7 @@ nav:
       - 'Upgrade v3.x to v4.x': 'additional/upgradev3-v4.md'
       - 'Running openITCOCKPIT behind a reverse proxy': 'additional/behind-reverse-proxy.md'
       - 'Mobile Website': 'additional/mobile-website.md'
+      - 'openITCOCKPIT-Desktop': 'additional/oitc-desktop.md'
       - 'Ports': 'additional/ports.md'
       - 'Kiosk Mode': 'additional/kiosk-mode.md'
 
