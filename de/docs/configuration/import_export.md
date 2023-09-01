@@ -16,11 +16,13 @@ Zunächst werden alle Elemente ausgewählt, die exportiert werden sollen. Wie be
 
 Mit einem Klick auf __*Export configuration items*__, wird eine .json-Datei erzeugt, die für den Import auf einem anderen System verwendet werden kann.
 
-**Hinweis:** Während des Imports wird die Prüfsumme der Datei überprüft und nur importiert, wenn die Prüfsumme korrekt ist. Eine Veränderung der exportierten Datei ist somit nicht möglich.
+!!! info "Hinweis"
+    Während des Imports wird die Prüfsumme der Datei überprüft und nur importiert, wenn die Prüfsumme korrekt ist. Eine Veränderung der exportierten Datei ist somit nicht möglich.
 
 ## Import der Configuration Items
 
-**Hinweis:** Bevor mit dem Import begonnen wird, sollte eine Sicherungskopie der Datenbank erstellt werden.
+!!! warning "Hinweis"
+    Bevor mit dem Import begonnen wird, sollte eine Sicherungskopie der Datenbank erstellt werden.
 
 Für den Import wird die exportierte .json-Datei benötigt. Die Datei kann einfach per Drag-and-Drop in das Upload-Feld gezogen werden oder es kann durch einen Klick auf das Feld nach der Datei gesucht werden.
 

@@ -16,11 +16,13 @@ First, select all items that should be exported. As already mentioned, the modul
 
 Clicking on __*Export configuration items*__ generates a .json file that is ready to use for the import on a different system.
 
-**Hint:** Do not try to change the content of the file. During the import, the checksum of the file is checked and will only be imported if the checksum is correct.
+!!! info "Hint"
+    Do not try to change the content of the file. During the import, the checksum of the file is checked and will only be imported if the checksum is correct.
 
 ## Importing configuration items
 
-**Hint:** Before starting the import it is recommended that you create a backup of your database first.
+!!! warning "Hint"
+    Before starting the import it is recommended that you create a backup of your database first.
 
 For the import only an exported .json file is needed. You can simply drop it to the upload field or click on the field to search for the file.
 
