@@ -24,7 +24,7 @@ To create a new calendar from scratch, you’ll have to click on the `+ New` but
 **There is also the possibility to add more information:**
 
 -	Description
--   You may describe the Calendar.
+    -   You may describe the Calendar.
 -	Color
     -   Select a varying color for the calendar, which will be used on the widget.
     -   This helps the users distinguish the different calendars which appear on one single widget.
