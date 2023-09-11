@@ -60,6 +60,7 @@ nav:
       - 'LDAP integration': 'configuration/ldap-integration.md'
       - 'Macros': 'configuration/macros.md'
       - 'Timeperiods' : 'configuration/timeperiods.md'
+      - 'Change Calendar': 'configuration/change_calendar.md'
       - 'Calendar': 'configuration/calendar.md'
       - 'Cronjobs': 'configuration/cronjobs.md'
       - 'Packagemanager': 'configuration/packagemanager.md'
