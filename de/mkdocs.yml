@@ -15,6 +15,7 @@ nav:
     - 'Update Ubuntu Bionic auf Focal': 'update/ubuntu-bionic-to-focal.md'
     - 'Update Ubuntu Focal auf Jammy': 'update/ubuntu-focal-to-jammy.md'
     - 'Update Debian Buster auf Bullseye': 'update/debian-buster-to-bullseye.md'
+    - 'Update Debian Bullseye auf Bookworm': 'update/debian-bullseye-to-bookworm.md'
   - 'Beginners Guide':
     - 'Beginners Guide': 'beginners/beginners.md'
     - 'Container Berechtigungen': 'beginners/container-permissions.md'
