@@ -70,8 +70,8 @@ systemctl stop php7.4-fpm.service
 ```
 
 ```
-dpkg -l | awk '/php7.4/ { print $2}' | sed 's/php7.4/php8.2/' | xargs apt-get install -y
 dpkg -l | awk '/php7.4/ { print $2}' | xargs apt-get purge -y
+rm -rf /etc/php/7.4/
 ```
 ### Set timezone in php.ini
 

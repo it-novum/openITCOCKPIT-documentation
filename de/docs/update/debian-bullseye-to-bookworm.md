@@ -66,8 +66,8 @@ apt -y full-upgrade $openitcockpit_upd php-json php-curl php-gearman php-xml
 Nun werden alle PHP Pakete aktualisiert.
 
 ```
-dpkg -l | awk '/php7.4/ { print $2}' | sed 's/php7.4/php8.2/' | xargs apt-get install -y
 dpkg -l | awk '/php7.4/ { print $2}' | xargs apt-get purge -y
+rm -rf /etc/php/7.4/
 ```
 
 ### Zeitzone in php.ini anpassen
