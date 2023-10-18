@@ -9,6 +9,7 @@ Die Installation von openITCOCKPIT erfolgt über den Paketmanager der Linux-Dist
     - Focal (20.04)
 - Debian
     - Bullseye (11)
+    - Bookworm (12)
 - Enterprise Linux
     - Red Hat 8
     - Red Hat 9
@@ -24,30 +25,55 @@ Die Installation unterscheidet sich dabei nicht von einem 64-Bit System mit AMD 
 ```
 add-apt-repository universe
 apt-get install apt-transport-https curl gnupg2 ca-certificates
-curl https://packages.openitcockpit.io/repokey.txt | apt-key add -
 
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+mkdir -p /etc/apt/keyrings
+curl https://packages.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
 ### Debian
 
-```
-deb http://deb.debian.org/debian/ bullseye main contrib non-free
-deb-src http://deb.debian.org/debian/ bullseye main contrib non-free
 
-deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
-deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+#### Debian 11
 
-deb http://deb.debian.org/debian/ bullseye-updates main contrib non-free
-deb-src http://deb.debian.org/debian/ bullseye-updates main contrib non-free
+Stellen Sie sicher, dass Sie `contrib` und `non-free` Repositorys in `/etc/apt/sources.list` aktiviert haben.
+
+
 ```
+echo "deb http://deb.debian.org/debian/ $(lsb_release -sc) main contrib non-free" > /etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian/ $(lsb_release -sc) main contrib non-free" >> /etc/apt/sources.list
+
+echo "deb http://deb.debian.org/debian-security/ $(lsb_release -sc)-security main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian-security/ $(lsb_release -sc)-security main contrib non-free" >> /etc/apt/sources.list
+
+echo "deb http://deb.debian.org/debian/ $(lsb_release -sc)-updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian/ $(lsb_release -sc)-updates main contrib non-free" >> /etc/apt/sources.list
+```
+
+#### Debian 12
+
+Stellen Sie sicher, dass Sie `contrib` und `non-free` Repositorys in `/etc/apt/sources.list.d/debian.sources` aktiviert haben.
+```
+Types: deb deb-src
+URIs: mirror+file:///etc/apt/mirrors/debian.list
+Suites: bookworm bookworm-updates bookworm-backports
+Components: main contrib non-free non-free-firmware
+
+Types: deb deb-src
+URIs: mirror+file:///etc/apt/mirrors/debian-security.list
+Suites: bookworm-security
+Components: main contrib non-free non-free-firmware
+```
+
+Aktivieren Sie das openITCOCKPIT Repository
 
 ```
 apt-get install apt-transport-https curl gnupg2 ca-certificates
-curl https://packages.openitcockpit.io/repokey.txt | apt-key add -
 
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+mkdir -p /etc/apt/keyrings
+curl https://packages.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
