@@ -15,11 +15,20 @@ After the change, the community or enterprise license key may have to be activat
 
 ### Debian
 ```
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
 ### Ubuntu
+```
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+apt-get update
+```
+
+#### Ubuntu / Debian (Legacy)
+
+Only use this, if the key of the openITCOCKPIT repository is stored in the legacy `trusted.gpg` keyring.
+
 ```
 echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
