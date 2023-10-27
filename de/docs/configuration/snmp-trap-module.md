@@ -49,3 +49,49 @@ snmptrap -Ci -e 0x8000123acd1ab43abbfff000fa -v 3 -a SHA -A traptest1 -x AES -X 
 snmptrap -Ci -v 3 -a SHA -A traptest1 -x AES -X traptest2 -l authPriv -u trapreceiver localhost 0 .1.3.6.1.6.3.1.1.5.3
 snmptrap -Ci -v 3 -a SHA -A traptest1 -x AES -X traptest2 -l authPriv -u trapreceiver localhost 0 .1.3.6.1.6.3.1.1.5.4
 ```
+
+### Probleme mit Ubuntu 22.04 / Debian 12
+
+#### **Beschreibung**
+
+Nach der Installation des Moduls werden keine Traps durch `snmptt` verarbeitet.
+Das liegt daran, dass der `snmptrapd` Service nicht korrekt funktioniert, weil dieser mit einer falschen Konfiguration
+gestartet wird.
+
+Die Servicedatei befindet sich unter `/usr/lib/systemd/system/snmptrapd.service`.
+Nach der Anpassung der Servicedatei muss einmal `systemctl daemon-reload` ausgeführt werden.
+
+#### **<span style="color:#FF6600;">Falsch/Original</span>**
+
+```plaintext
+[Unit]
+Description=Simple Network Management Protocol (SNMP) Trap Daemon.
+
+[Service]
+Type=notify
+User=Debian-snmp
+ExecStart=/usr/sbin/snmptrapd -LOw -f udp:162 udp6:162
+ExecReload=/bin/kill -HUP $MAINPID
+```
+
+#### **<span style="color:#99CC00;">Richtig/Geändert</span>**
+
+```plaintext
+[Unit]
+Description=Simple Network Management Protocol (SNMP) Trap Daemon.
+After=network.target
+ConditionPathExists=/etc/snmp/snmptrapd.conf
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/snmptrapd -LOw -f -p /run/snmptrapd.pid
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+```
+Neustart des `snmptrapd` Services
+
+```
+systemctl restart snmptrapd.service
+```
