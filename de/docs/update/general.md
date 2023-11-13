@@ -5,6 +5,9 @@ Updates von openITCOCKPIT werden über den Paketmanger der jeweiligen Distributi
 !!! danger "Backup"
     Bevor Sie beginnen, stellen Sie sicher ein **funktionierendes Backup** Ihres Systems gemacht zu haben!
 
+!!! warning "E-Mail Konfiguration"
+    Sofern Änderungen an der E-Mail-Konfiguration vorgenommen wurden, sollte die Datei **/opt/openitc/frontend/config/email.php** vor einem Backup gesichert und danach wiederhergestellt werden.
+
 Führen Sie alle Kommandos als `root` Benutzer aus.
 
 ## Ubuntu / Debian
