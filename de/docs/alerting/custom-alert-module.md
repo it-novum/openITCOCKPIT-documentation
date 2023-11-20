@@ -78,6 +78,18 @@ Um Änderungen an den Alarmregeln zu übernehmen, muss eine `Aktualisierung der 
 
 ![Definition von benutzerdefinierter Alarmregeln](/images/alerting/custom_alerts/custom_alerts_rules.png)
 
+## Einbindung als Dashboardwidget
+
+Um auch in den Dashboards den Überblick zu behalten, existiert mit dem **Custom Alerts Counter** ein konfigurierbares Widget. Dabei kann der Status für die Alerts ausgewählt werden, die gezählt werden sollen. Optional kann noch definiert werden, dass erst nur Alerts älter als x Tage gezählt werden.
+
+![Custom Alert Widget](/images/alerting/custom_alerts/custom_alerts_widget.png)
+
+## Überwachung und Alarmierung von Alerts
+
+Zur Überwachung und Alarmierung von vorhandenen Alerts kann ein parametrisierbares Plugin in openITCOCKPIT genutzt werdem. Mit dem Kommando **check_customalerts_by_stage_and_age** und der Servicevorlage **CHECK_CUSTOMALERTS_BY_STATE_AND_AGE** sind bereits ensprechende Templates vordefiniert, um direkt mit dem Monitoring starten zu können. Das Plugin bietet dabei eine Vielzahl an Konfigurationsoptionen, die man der folgenden Grafik entnehmen kann. Da die Einbindung als Servicecheck erfolgt, kann dieser in Eventkorrelationen, Benachrichtigungen, Reports und allen weiteren Bereichen wie gewohnt genutzt werden.
+
+![Custom Alert Plugin](/images/alerting/custom_alerts/custom_alerts_plugin.png)
+
 ## Hintergrundprozess
 Die benutzerdefinierten Alarme werden von einem dedizierten Hintergrundprozess verarbeitet. Der Dienst kann über systemd gesteuert werden `systemctl status customalert_worker.service`
 
