@@ -79,6 +79,18 @@ To apply changes to the alert rules, a `Refresh of the monitoring configuration`
 
 ![Defining custom alert rules](/images/alerting/custom_alerts/custom_alerts_rules.png)
 
+## Integration as dashboard widget
+
+The **Custom Alerts Counter** is a configurable widget that allows you to maintain an overview in the dashboards. The status of the alerts that are to be counted can be selected. Optionally, you can also define that only alerts older than x days are counted.
+
+![Custom Alert Widget](/images/alerting/custom_alerts/custom_alerts_widget.png)
+
+## Monitoring and notification of alerts
+
+A configurable plugin in openITCOCKPIT can be used to monitor and notify existing alerts. With the command **check_customalerts_by_stage_and_age** and the service template **CHECK_CUSTOMALERTS_BY_STATE_AND_AGE**, templates are already predefined so that monitoring can be started directly. The plugin offers a wide range of configuration options, which can be seen in the following graphic. As this is represented as a service check, it can be used as usual in event correlations, notifications, reports and all other areas.
+
+![Custom Alert Plugin](/images/alerting/custom_alerts/custom_alerts_plugin.png)
+
 ## Background daemon
 The custom alerts are handled by a dedicated background daemon. The service can be controlled through systemd `systemctl status customalert_worker.service`
 
