@@ -138,4 +138,4 @@ Im nächsten Schritt erhält man eine Übersicht mit allen Hosts, den zugewiesen
 ![](/images/import-module/import_sync_monitoring.png)
 
 !!! info "Hinweis"
-    Zur Aktivierung der Überwachung muss wie immer ein Refresh der Monitoringkonfiguration erfolgen.
+    Zur Aktivierung der Überwachung muss wie gewohnt ein Refresh der Monitoringkonfiguration erfolgen.

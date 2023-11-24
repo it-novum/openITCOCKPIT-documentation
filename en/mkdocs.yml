@@ -72,6 +72,7 @@ nav:
       - 'Distribute monitoring and satellites': 'configuration/distribute-module.md'
       - 'SNMP Traps': 'configuration/snmp-trap-module.md'
       - 'Import/Export': 'configuration/import_export.md'
+      - 'Import-Module': 'configuration/import-module.md'
   - 'Development':
       - 'API': 'development/api.md'
       - 'Database schema': 'development/database-schema.md'
