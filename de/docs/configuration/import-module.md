@@ -139,3 +139,69 @@ Im nächsten Schritt erhält man eine Übersicht mit allen Hosts, den zugewiesen
 
 !!! info "Hinweis"
     Zur Aktivierung der Überwachung muss wie gewohnt ein Refresh der Monitoringkonfiguration erfolgen.
+
+## Darstellung & Informationen
+
+Im Rahmen des Imports werden bei den einzelnen Systemen weitere Informationen in openITCOCKPIT übertragen. Dabei kann es sich um Informationen aus Externen Monitoringsystemen oder Externen Systemen (wie CMDBs) handeln.
+
+### Externe Monitoringsysteme
+Bei dem Import aus externen Monitoringsystemen wird in der Regel nicht nur die Konfiguration importiert, sondern auch die Status- und Performancedaten übertragen.
+
+#### Icinga2
+Icinga2 verfügt über einen Eventbroker, von dem die Statusdaten in Echtzeit ermittelt werden können. 
+
+![](/images/import-module/import_icinga2_oitc_1.png)
+
+![](/images/import-module/import_icinga2_oitc_2.png)
+
+Dadurch können sogar Acknowledgements und Downtimes in Echtzeit von Icinga2 in openITCOCKPIT übertragen werden.
+
+![](/images/import-module/import_icinga2_oitc_3.png)
+
+![](/images/import-module/import_icinga2_oitc_4.png)
+
+#### PRTG
+
+Für PRTG bietet das Importmodul die Möglichkeit Statusinformation und Performancendaten zu übertragen. Anders als bei Icinga2 müssen die Informationen über eine API abgefragt werden. Dadurch ist eine Echtzeitauswertung der Daten nicht möglich. Auch bietet die PRTG-API keine Möglichkeit Downtimes oder Acknowledgments auszulesen.
+
+![](/images/import-module/import_prtg_oitc_1.png)
+
+![](/images/import-module/import_prtg_oitc_2.png)
+
+![](/images/import-module/import_prtg_oitc_3.png)
+
+#### OpManager / ManageEngine
+
+Der OpManager von ManageEngine kann ebenfalls über eine API angebunden werden. Auch hier ist eine Abfrage der API zur Ermittlung der Informationen notwendig, was eine Auswertung in Echtzeit nicht möglich macht. Zudem muss darauf geachtet werden, dass die Anzahl der API Calls limitiert ist und gegebenenfalls die Lizenz des OpManagers erweitert werden muss.
+
+![](/images/import-module/import_opmanager_oitc_1.png)
+
+![](/images/import-module/import_opmanager_oitc_2.png)
+
+![](/images/import-module/import_opmanager_oitc_3.png)
+
+![](/images/import-module/import_opmanager_oitc_4.png)
+
+### Externe Systeme
+
+Neben Informationen zu der Konfiguration, liefern externe Systeme in der Regel auch weitere Aspekte wie Assetinformationen und Abhängigkeitsbäume, die in openITCOCKPIT als zusätzliche Attribute dargestellt werden können.
+
+#### i-doit
+
+i-doit ist eines der Systeme, die auch Assetinformationen liefern können. Dabei werden Unterkategorien sogar auf einer Seite zusammengeführt und ansprechend dargestellt. Für weiterführende Informationen existiert eine Verlinkung, die direkt auf das Asset verweist.
+
+![](/images/import-module/import_oitc_idoit_asset_1.png)
+
+![](/images/import-module/import_oitc_idoit_asset_2.png)
+
+Neben den Assetinformationen können auch Abhängigkeiten zwischen den einzelnen Assets als Servicebaum dargestellt werden.
+
+#### iTop
+
+Analog zu i-doit liefert iTop ebenfalls Assetinformationen, die bei den Hosts im Reiter CMDB dargestellt werden. Eine Verlinkung auf das entsprechende CI innerhalb von iTop ist ebenfalls vorhanden.
+
+Und auch die Abhängigkeiten können ähnlich wie bei i-doit dargestellt werden.
+
+![](/images/import-module/import_oitc_itop_tree_1.png)
+
+![](/images/import-module/import_oitc_itop_tree_2.png)

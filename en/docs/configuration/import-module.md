@@ -97,7 +97,7 @@ Navigate to `Administration -> Object import -> Importers`.
 !!! info "Hint"
     By importing the hosts, they are also extended with asset information from the CMDB.
 
-### Externes Monitoring System
+### External Monitoring System
 
 As with the CMDB, the external monitoring system must first be created before creating an importer.
 
@@ -109,7 +109,7 @@ Navigate to `Administration -> Object import -> Importers`.
 
 ![](/images/import-module/importer_ext_mon_source.png)
 
-### CMDB + Externes Monitoring System
+### CMDB + External Monitoring System
 
 The combination requires a defined external monitoring system and an external system. The creation takes place according to the points External monitoring system and CMDB.
 
@@ -119,7 +119,7 @@ The importer can now be created with both data sources.
 
 ![](/images/import-module/importer_both_source.png)
 
-## Import der Daten
+## Data import
 
 Once all preparations have been made, the import can now be carried out.
 
@@ -139,3 +139,73 @@ The next step provides an overview of all hosts, the assigned services and other
 
 !!! info "Hint"
     To activate monitoring, the monitoring configuration must be refreshed as usual.
+
+## Visualisation & information
+
+As part of the import, additional information is transferred from the individual systems to openITCOCKPIT. This can be information from external monitoring systems or external systems (such as CMDBs).
+
+### External Monitoring systems
+When importing from external monitoring systems, not only the configuration is imported, the status and performance data is also transferred.
+
+#### Icinga2
+Icinga2 has an event broker from which the status data can be determined in real time.
+
+![](/images/import-module/import_icinga2_oitc_1.png)
+
+![](/images/import-module/import_icinga2_oitc_2.png)
+
+This even allows acknowledgements and downtimes to be transferred from Icinga2 to openITCOCKPIT in real time.
+
+![](/images/import-module/import_icinga2_oitc_3.png)
+
+![](/images/import-module/import_icinga2_oitc_4.png)
+
+#### PRTG
+
+For PRTG, the import module offers the option of transferring status information and performance data. Unlike Icinga2, the information must be requested via an API. This means that the data cannot be analysed in real time. The PRTG API also does not offer the option of reading downtimes or acknowledgments.
+
+![](/images/import-module/import_prtg_oitc_1.png)
+
+![](/images/import-module/import_prtg_oitc_2.png)
+
+![](/images/import-module/import_prtg_oitc_3.png)
+
+#### OpManager / ManageEngine
+
+ManageEngine's OpManager can also be connected via an API. Here, too, a query of the API is necessary to determine the information, which makes real-time evaluation impossible. It is also important to note that the number of API calls is limited and that the OpManager licence may need to be extended in big environments.
+
+![](/images/import-module/import_opmanager_oitc_1.png)
+
+![](/images/import-module/import_opmanager_oitc_2.png)
+
+![](/images/import-module/import_opmanager_oitc_3.png)
+
+![](/images/import-module/import_opmanager_oitc_4.png)
+
+### External Systems
+
+In addition information about the configuration, external systems usually also provide other aspects such as asset information and dependency trees, which can be displayed as additional attributes in openITCOCKPIT.
+
+#### i-doit
+
+i-doit is one of the systems that can also provide asset information. Sub-categories are even brought together on one page and presented in an appealing way. For further information, there is a link that refers directly to the asset.
+
+![](/images/import-module/import_oitc_idoit_asset_1.png)
+
+![](/images/import-module/import_oitc_idoit_asset_2.png)
+
+In addition to the asset information, dependencies between the individual assets can also be displayed as a service tree.
+
+![](/images/import-module/import_oitc_idoit_tree_1.png)
+
+![](/images/import-module/import_oitc_idoit_tree_2.png)
+
+#### iTop
+
+Analogue to i-doit, iTop also provides asset information, which is displayed for the hosts in the CMDB tab. There is also a link to the corresponding CI within iTop.
+
+The dependencies can also be displayed in a similar way to i-doit.
+
+![](/images/import-module/import_oitc_itop_tree_1.png)
+
+![](/images/import-module/import_oitc_itop_tree_2.png)
