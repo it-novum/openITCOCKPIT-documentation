@@ -14,7 +14,7 @@ Did you find a typo or do you want to improve the documentation?
 Feel free to send a pull request.
 
 
-### Setup local copy via Docker
+### Setup your local copy via Docker
 
 1. Clone this repository
 ```
