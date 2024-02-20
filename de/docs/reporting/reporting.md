@@ -112,6 +112,68 @@ harter Zustand berücksichtigt werden soll.
 | Reflexionszustand | :fontawesome-solid-xmark: | Der auszuwertende Statustyp. Hard-State oder Soft und Hard-State |
 | Dynamische Farbe |  | Je nach Ausfall werden verschiedene Farben angezeigt |
 
+
+## Statusseiten
+
+Statusseiten in openITCOCKPIT bieten Statusinformationen über Hosts, Services, Hostguppen, Ervicegroups in aeiner einheitlichen Weise.
+
+Statusseiten können - wenn gewünscht - auch öffentlich (heißt ohne Login) aufgerufen werden. Alle Elemente einer Statusseite können über Aliasnamen annonymisiert werden. 
+Alle Elemente einer Statusseite werden im selben Format dargestellt, so dass nicht ablesbar ist, um welche Art von Element es sich handelt.  
+
+Jedes Element einer Statusseite kann Informationen über die enthaltenden Probleme (bestätigt/nicht betätigt) und Wartungen (laufend, für die nächsten 10 Tage geplant) enthalten.
+
+### Statusseite erstellen
+![](/images/status-pages/status-page-create.png)
+
+| Feld            | Erforderlich                 | Beschreibung                                               |
+| ---------------- | ------------------------- | ------------------------------------------------------------ |
+| Container | :fontawesome-solid-xmark: | Der Container bestimmt die Auswahl der Elemente, Elemente des Rootcontainers sind immer auswählbar.|
+| Name             | :fontawesome-solid-xmark: | Der Name der Seite |
+| Beschreibung      |                           | Optionale Beschreibung |
+| Öffentlich          |                           | Seite ist ohne Autentifizierung aufrufbar |
+| Zeige Wartungen   |                           | Alle laufenden/geplanten Wartungen werden angezeigt | 
+| Zeige  Wartungskommentar  |      | Die original Kommentare der Wartungen werden angezeigt                                   |
+| Zeige Bestätigungen |  | Es wird angezeigt wieviele Probleme bestätigt sind |
+| Zeige Bestätigungskommentar  |   | Die originalen Kommentare der Bestätigungen werden angezeigt. |
+| Hostgruppen, Servicegruppen, Hosts, Services | | Die wählbaren Elemente der Seite|
+| Anzeigename | | optionaler Aliasname, wenn gefüllt, wird dieser statt des Originalnamens angezeigt.|
+
+
+### Anzeige
+![](/images/status-pages/status-page-view.png)
+
+#### Interne Anzeige
+![](/images/status-pages/status-page-view-internal.png)
+
+#### Externe Anzeige
+![](/images/status-pages/status-page-view-external.png)
+
+In- und externe Ansicht sind prinzipiell gleich.aber in der internen Ansicht sind die Elementnamen verlinkt.
+
+### Status, Statusfarbe
+Die farbliche kennzeichnung der Elemente entspricht den oitc Statusfarben. Die Farbe (Status) wird abhängig vom Typ des Elements ermittelt.
+
+| Typ             |   Status/Farbe                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| Service          |  Status des Service                                                 |
+|Servicegruppe     |  Es wird über den höchsten Status aller enthaltenen Services kumuliert.                               |.
+| Host             |  Ist der Status des Host in DOWN, UNREACHABLE, dann ist das der Status des Hosts. Ist der Host UP wird der höchste Status aller enthaltenen Services auf den Hoststatus kumuliert.  |
+|Hostgruppe        | Zunächst wir der höchste Status aller Hosts kumuliert, ist dieser !== UP , dann ist das der Stus der  Gruppe. Ist der Status des Hosts === UP wird über sämtliche Status der in allen Hosts enthaltenen Services kumuliert, und der Höchste ist der Stus der Gruppe.|
+| Statusseite      | Der höchste Status aller Elemente ist der Seitenstatus|
+
+
+### Zählung der Probleme(Bestätigungen)/Wartungen(laufend, geplant)
+Es wird über alles gezählt, was auch zur Ermittlung des Status herangezogen wird.
+
+| Typ             |   Probleme(Bestätigungen)/Wartungen(laufend, geplant)                                       |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| Service | Es wird gezählt(angezeigt), ob der Service ein Problem hat. Es werden alle Downtimes(laufend, geplant) des Service gezählt.
+ |
+|Servicegruppe | Es werden die Probleme aller enthaltenen Services gezählt. Es werden alle Downtimes(laufend, geplant) aller entaltenen Services gezählt. |
+| Host | Es werde alle Probleme über den Host und die enthaltenen Services gezählt(angezeigt). Es werden alle Downtimes (laufend, geplant) über den Host und die enthaltenen Services gezählt(angezeigt). |
+| Hostgruppe | Es werden alle Probleme über alle Hosts und alle in den Hosts enthaltenen Services gezählt(angezeigt). Es werden alle Downtimes (laufend, geplant) über alle Hosts und die enthaltenen Services gezählt(angezeigt). |
+
+
 ## Autoreports <span class="badge badge-primary badge-outlined" title="Community Edition">CE</span>
 
 Das Autoreport-Modul in openITCOCKPIT ist ein konfigurierbarer Report, der automatisiert versendet werden kann. Ein
