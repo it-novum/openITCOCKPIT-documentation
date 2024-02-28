@@ -143,3 +143,14 @@ The host and services views and their detail pages are derived from the correspo
 ![serviceslist](../images/oitc-desktop/servicelist.png)
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
+
+## Custom Widgets
+With version 4.6.9 of the openITCOCKPIT-Desktop App it is possible to configure and show any number of widgets.
+#### Administration
+![widget-verwaltung](../images/oitc-desktop/widget-administration.png)
+#### Configuration
+The configuration is extended by the marked Fields. To process this new filter fields the  openITCOCKPIT-Backend 4.7.0 is needed.
+#### Display
+![widgets-show](../images/oitc-desktop/custom-widgets.png)
+
+Note: At screen sharing with ms-teams an undefined behaviour of the widgets can happen -they go to background. The defined behaviour isthat the widgets always on top. 

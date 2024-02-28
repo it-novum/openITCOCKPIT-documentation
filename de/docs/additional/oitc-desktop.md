@@ -145,3 +145,17 @@ Die Host-, Services-Views und ihre Detailseiten sind von den entsprechenden Seit
 ![serviceslist](../images/oitc-desktop/servicelist.png)
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
+
+## Custom Widgets
+Mit Version 4.6.9 der openITCOCKPIT-Desktop App ist die Möglichkeit geschaffen worden, beliebig viele Widgets zu konfigurieren und anzuzeigen.
+#### Verwaltung
+![widget-verwaltung](../images/oitc-desktop/widget-administration.png)
+#### Konfiguration
+![widget-verwaltung](../images/oitc-desktop/custom-widgets-config.png)
+Die Konfiguration der Widgets ist um die gekennzeichneten Felder erweitert worden. Die neuen Filter benötigen das openITCOCKPIT-Backend 4.7.0.
+#### Anzeige
+![widgets-show](../images/oitc-desktop/custom-widgets.png)
+
+Anmerkung: Beim Bildschirm teilen unter MS-Teams ist der Effekt  aufgetrten, dass die widgets teilweise -auf grund des MS-Teams Overlays - in den Hintegrung gelegt wurden. Ansonsten gilt das definierte Standardverhalten, dass die Widgets immer im Vordergrund (always on top) liegen.
+
+
