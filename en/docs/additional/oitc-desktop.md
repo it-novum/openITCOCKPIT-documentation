@@ -149,8 +149,6 @@ With version 4.6.9 of the openITCOCKPIT-Desktop App it is possible to configure 
 #### Administration
 ![widget-verwaltung](../images/oitc-desktop/widget-administration.png)
 #### Configuration
-![widget-verwaltung](../images/oitc-desktop/custom-widgets-config.png)
-Die Konfiguration der Widgets ist um die gekennzeichneten Felder erweitert worden. Die neuen Filter benötigen das openITCOCKPIT-Backend 4.7.0.
 The configuration is extended by the marked Fields. To process this new filter fields the  openITCOCKPIT-Backend 4.7.0 is needed.
 #### Display
 ![widgets-show](../images/oitc-desktop/custom-widgets.png)
