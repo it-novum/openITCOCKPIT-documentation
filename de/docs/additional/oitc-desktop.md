@@ -1,7 +1,7 @@
-# openITCOCKPIT-Desktop  
+# openITCOCKPIT-Desktop
 Die openITCOCKPIT-Desktop-App ist eine Standalone-Application, die auf jedem modernen Betriebssystem installiert werden kann und einen Überblick über aktuelle Überwachungsereignisse und Statusaktualisierungen bietet. openITCOCKPIT-Desktop nutzt die openITCOCKPIT HTTP API zur Kommunikation mit dem openITCOCKPIT Server.
 
-![dashboard](../images/oitc-desktop/desktop-ligt.png)  
+![dashboard](../images/oitc-desktop/desktop-ligt.png)
 
 ![dashboard](../images/oitc-desktop/desktop-dark.png)
 
@@ -10,12 +10,12 @@ Die openITCOCKPIT-Desktop-App ist eine Standalone-Application, die auf jedem mod
 * Es stehen für jedes Betriebssystem - Linux, Windows, Macos - entsprechende Installationspakete zur Verfügung.
 * Es kann in der App eingestellt werden, dass beim Start - oder manuell über die Settingsseite - automatisch nach Updates gesucht wird.
 
-## Anwendung   
+## Anwendung
 ### Login
 
 ![login](../images/oitc-desktop/login.png)
 
-Im ersten Feld `Ihre Server-URL` geben Sie bitte die URL oder IP-Adresse Ihres openITCOCKPIT Systems an.  
+Im ersten Feld `Ihre Server-URL` geben Sie bitte die URL oder IP-Adresse Ihres openITCOCKPIT Systems an.
 Im zweiten Feld geben sie den Api-Key eines Benutzers des openITCOCKPIT Systems ein.
 #### Erstellung des API Keys
 Um sich einloggen zu können, müssen Sie zunächst einen API Key auf
@@ -32,52 +32,52 @@ Nach erfolgreichem Login werden Sie auf das Dashboard weitergeleitet.
 
 ### Settings
 Sämtliche Einstellungen auf der Settingsseite werden automatisch gespeichert!
-![settings](../images/oitc-desktop/settings.png)  
+![settings](../images/oitc-desktop/settings.png)
 
-* **Enable auto start**    
+* **Enable auto start**
 Die Anwendung wird beim Start des Bestriebssystem mitgestartet (beta)
 
-* **Close to tray**  
+* **Close to tray**
 Beim Schliessen der Anwendung über die Anwendungsleiste wird die Anwendung nicht beendet sondern nur versteckt, kann über das Tray-Icon menü wieder zur Anzeige gebracht werden.
 
-* **Show widget on start**  
-Das Widget wird beim Starten der Anwendung angezeigt. 
+* **Show widget on start**
+Das Widget wird beim Starten der Anwendung angezeigt.
 
-* **Show only widget on start**  
-Beim Starten der Anwendung wird nur das Widget zur Anzeige gebracht.  
+* **Show only widget on start**
+Beim Starten der Anwendung wird nur das Widget zur Anzeige gebracht.
 Die Hauptanwendung kann über das Menü im Tray zur Anzeige gebracht werden.
 
-* **State refresh interval**  
+* **State refresh interval**
 Das interval der Abfrage der Daten für das Widget und das Dashboard (min. 1 Minute).
 
-* **Use slow pagination in lists**  
+* **Use slow pagination in lists**
 Umschalten der Paginierung
 
-* **Activate widget position storage**  
+* **Activate widget position storage**
 Speichert  automatisch die Position des Widgets
 
-* **Activate window posisiton storage**  
-Speichert automatisch die Postion und Größe der Anwendung  
+* **Activate window posisiton storage**
+Speichert automatisch die Postion und Größe der Anwendung
 
-* **Disable automatic update checks**  
+* **Disable automatic update checks**
 Schaltet den Updatecheck beim Start der App aus.
 
-* **Enable push notifications**  
+* **Enable push notifications**
 Schaltet Pushbenarichtigungen an/aus.
 
-* **Enable dark mode**  
+* **Enable dark mode**
 ON/OFF schalten den Dark Mode explizt an/aus. Auto schaltet den Modus anhand der Betriebssystemeinstellung.
 
-* **Auto login enabled**  
+* **Auto login enabled**
 Die Anwendung loggt sich beim Start automatisch mit den letzten aktiven Anmeldedaten (Profil) ein.
 
-* **Logout**  
+* **Logout**
 Die Anwendung loggt sich aus und springt zur Loginseite, etwa um das Profil zu wechseln oder zu editieren.
 
-* **Check & save**  
+* **Check & save**
 Prüft und speichert die Anmeldedaten des aktiven Profils
 
-* **Check for update**  
+* **Check for update**
 Expliziter Check ob ein Update für die App vorhanden ist.
 
 ### Widget settings
@@ -85,35 +85,35 @@ Expliziter Check ob ein Update für die App vorhanden ist.
 ![tray](../images/oitc-desktop/widget-settings.png)
 
 ### Widget
-* Die zweite Zeile des Widgets zeigt die unhandled Anteile. 
+* Die zweite Zeile des Widgets zeigt die unhandled Anteile.
 * Mit Hilfe des Icons kann das Widget positioniert werden.
-* Beim Klicken uf einen Widgeteintag wird die entsprechende List in der Anwendung zur Anzeige gebracht.  
+* Beim Klicken uf einen Widgeteintag wird die entsprechende List in der Anwendung zur Anzeige gebracht.
 ![widget](../images/oitc-desktop/widget.png)
 
 ### Tray
-![tray](../images/oitc-desktop/tray.png)  
+![tray](../images/oitc-desktop/tray.png)
 Über das Trayicon (Rechtsclick) können ebenfalls einige Einstellungen vorgenommen werden.
 
 ## Personalisierung
 
-Die openITCOCKPIT-Desktop Anwnedung ist in der Lage, sich der Identität des jeweiligen Unternehmens anzupassen.  
+Die openITCOCKPIT-Desktop Anwnedung ist in der Lage, sich der Identität des jeweiligen Unternehmens anzupassen.
 Dazu können das Appicon (Anwendungleiste, Tray, Widget), das Logo der Loginseite und das Hintergrundbild der Loginseite getauscht werden.
 
 ![assets](../images/oitc-desktop/custom-assets.png)
 
 Dazu muss innerhalb des Konfigurationsverzeichnisses der Anwendung ein Ordner names **customAssets** angelegt (verlinkt) werden.
 
-Das Konfigurationsverzeichnis liegen je nach Betriebssystem an folgenden Orten:  
+Das Konfigurationsverzeichnis liegen je nach Betriebssystem an folgenden Orten:
 
 Windows
-```bash  
+```bash
 c:\Benutzer\<user>\AppData\Roaming\openITCOCKIT-Desktop
 ```
 OSX
-```bash  
+```bash
 /users/<user>/Library/Application Support/openITCOCKIT-Desktop
 ```
-Linux  
+Linux
 ```bash
 /home/<user>/.config/openITCOCKIT-Desktop
 ```
@@ -121,27 +121,27 @@ Linux
 ### customAssets
 Innerhalb des Ordners customAssets müssen folgende Dateinamenkonventionen beachtet werden:
 
-**Icon**: favicon.png   
-Nur png als Endung erlaubt.  
-Je nach Betriebssystem sollten die Dimensionen etwas anders sein:  
+**Icon**: favicon.png
+Nur png als Endung erlaubt.
+Je nach Betriebssystem sollten die Dimensionen etwas anders sein:
 Windows: mindestens 64x64, besser 256x256
 Linux: gilt dasselbe wie für Windows
 OSX: maximal 32x32, besser 16x16 - da sonst das Icon oben in der Leiste zu groß wird.
 
-**logo**: logo.png (.svg,.jpg)  
-Auflösung beliebig, da skaliert wird  
+**logo**: logo.png (.svg,.jpg)
+Auflösung beliebig, da skaliert wird
 
-**background**: background.png (.svg, .jpg)  
+**background**: background.png (.svg, .jpg)
 Auflösung im Prinzip auch beliebig, da skaliert wird, sollte aber mindestens FullHD sein.
 
 ## Hosts, Services
 
 Die Host-, Services-Views und ihre Detailseiten sind von den entsprechenden Seiten der Weboberfläche des oitc-Servers abgeleitet und werden deshalb hier nicht näher ausgeführt.
-### Hostslist  
-![hostslist](../images/oitc-desktop/hostlist.png)  
-### Hostbrowser  
-![hostbrowser](../images/oitc-desktop/hostbrowser.png) 
-### Serviceslist  
+### Hostslist
+![hostslist](../images/oitc-desktop/hostlist.png)
+### Hostbrowser
+![hostbrowser](../images/oitc-desktop/hostbrowser.png)
+### Serviceslist
 ![serviceslist](../images/oitc-desktop/servicelist.png)
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
@@ -156,6 +156,10 @@ Die Konfiguration der Widgets ist um die gekennzeichneten Felder erweitert worde
 #### Anzeige
 ![widgets-show](../images/oitc-desktop/custom-widgets.png)
 
-Anmerkung: Beim Bildschirm teilen unter MS-Teams ist der Effekt  aufgetrten, dass die widgets teilweise -auf grund des MS-Teams Overlays - in den Hintegrung gelegt wurden. Ansonsten gilt das definierte Standardverhalten, dass die Widgets immer im Vordergrund (always on top) liegen.
+#### Bekannte Probleme
+
+!!! info
+    Wenn Sie Ihren Bildschirm mit Microsoft Teams übertragen, kann es passieren, das die Widgets teilweise im Hintergrund verschwinden.
+    Das Problem kann durch einen Neustart der openITCOCKPIT Desktop Anwendung behoben werden.
 
 

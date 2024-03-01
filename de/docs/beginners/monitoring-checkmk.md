@@ -106,7 +106,7 @@ Im Kontextmenü der Hosts wählen Sie die Option `Checkmk Erkennung`.
 
 ![checkmk discovery](/images/checkmk-discovery.png)
 
-Nun wählen Sie den Checkmk Agent zur Erkennung nutzen. Als Datasource wählen Sie `Checkmk Agent` aus. 
+Nun wählen Sie den Checkmk Agent zur Erkennung nutzen. Als Datasource wählen Sie `Checkmk Agent` aus.
 
 ![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
 
@@ -144,7 +144,7 @@ Sie sollten eine ähnliche Ausgabe wie diese sehen:
 
 ![snmp walk example](/images/snmpwalk_example.png)
 
-Sollte Ihr System nicht in der Lage sein sich mit dem Zielsystem zu verbinden, überprüfen Sie ihre Firewall 
+Sollte Ihr System nicht in der Lage sein sich mit dem Zielsystem zu verbinden, überprüfen Sie ihre Firewall
 Einstellungen oder, ob Sie eine falsche SNMP Version nutzen.
 
 ### Überwachen eines Linux Hosts durch SNMP via Checkmk
@@ -202,7 +202,7 @@ Wenn anstelle der Beschreibung (_description_) der Alias verwendet werden soll, 
 
 ## Fehlende Servicevorlagen für Checkmk erstellen.
 
-Abhängig von dem Gerät, auf dem Sie ein Discovery durchführen wollen, kann es vorkommen, dass das Auswahlfeld `Optionen` 
+Abhängig von dem Gerät, auf dem Sie ein Discovery durchführen wollen, kann es vorkommen, dass das Auswahlfeld `Optionen`
 leer ist und der Hinweistext `Bevor Sie die folgenden Dienste überwachen können, muss eine entsprechende Servicevorlage erstellt werden.`
 gefolgt von einer Tabelle erscheint. Ist dies der fall, so müssen Sie die fehlenden Servicevorlagen erstellen.
 
@@ -274,6 +274,38 @@ Community.
 
 ![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
 
+## Eigene Regeln hinterlegen
+
+Bei Checkmk handelt es sich um ein regelbasiertes Monitoring-Tool. Daher können bei Bedarf, einige Standards durch benutzerdefinierte Regeln angepasst werden.
+
+Damit eigene Regeln immer zuletzt geladen und nicht von openITCOCKPIT überschrieben werden, müssen benutzerdefinierte Regeln in der Datei
+`/opt/openitc/check_mk/etc/check_mk/conf.d/wato/zz_rules.mk` abgelegt werden. Sollte die Datei nicht existieren, können Sie diese einfach erstellen.
+
+
+### Interface Beschreibung
+
+Bei der Überwachung von Netzwerkschnittstellen ist es oft Sinnvoll, für die Überwachung die Beschreibung, den Alias anstelle des Index zu nutzen.
+
+Kopieren Sie dafür die Folgende Regel in die Datei `zz_rules.mk`. Gültige Werte für das Feld `item_appearance` sind: `alias`, `descr` oder `index`.
+```
+inventory_if_rules = [
+{'id': 'cf1d4626-052a-4b7d-9f17-8e42bab49222', 'value': {'discovery_single': (True, {'item_appearance': 'alias', 'pad_portnumbers': True}), 'matching_conditions': (True, {})}, 'condition': {}, 'options': {'disabled': False, 'comment': 'Use alias for Interfaces'}},
+] + inventory_if_rules
+```
+
+### Interface Traffic in Bit/s
+
+Die Einheit des aktuellen Traffics auf einem Netzwerkinterface kann bei bedarf von `Byte/s (5 Mb/s)` in `Bit/s (40 Mbit/s)` geändert werden.
+
+Kopieren Sie dafür die folgende Regel in die Datei `zz_rules.mk`.
+```
+checkgroup_parameters['if'] = [
+{'id': 'a25bc8b5-b827-4215-8df5-1b9abad01f5b', 'value': {'unit': 'bit'}, 'condition': {}, 'options': {'disabled': False, 'comment': 'SNMP Interface speed in bits'}},
+] + checkgroup_parameters['if']
+```
+
+![Checkmk custom rules](/images/checkmk_custom_rules.png)
+
 ## Checkmk Agent erstellen
 
 Um einen Checkmk Agenten zu erstellen, Navigieren Sie im Hauptmenü nach `Monitoring -> Checkmk -> Checkmk-Agenten`.
@@ -283,12 +315,13 @@ Dort klicken Sie in der Übersicht auf die Schaltfläche "Neu"
 Danach wählen Sie einen Container aus, vergeben einen namen und tragen anschließend ein Kommandozeilenbefehl ein. Dieser
 Kommandozeilenbefehl verweist auf ein Checkmk Skript auf dem openITCOCKPIT Server.
 
-| Feld | Erforderlich | Beschreibung |
-|---|---|---|
-| Container | :fontawesome-solid-xmark: | Container, in dem der Checkmk Agent installiert werden soll |
-| Name | :fontawesome-solid-xmark: | Name des Checkmk Agenten |
-| Beschreibung |  | Beschreibung des Checkmk Agenten |
-| Kommandozeile | :fontawesome-solid-xmark: | Kommandozeilenbefehl für das Checkmk Agenten Skript |
+| Feld          | Erforderlich              | Beschreibung                                                |
+|---------------|---------------------------|-------------------------------------------------------------|
+| Container     | :fontawesome-solid-xmark: | Container, in dem der Checkmk Agent installiert werden soll |
+| Name          | :fontawesome-solid-xmark: | Name des Checkmk Agenten                                    |
+| Beschreibung  |                           | Beschreibung des Checkmk Agenten                            |
+| Kommandozeile | :fontawesome-solid-xmark: | Kommandozeilenbefehl für das Checkmk Agenten Skript         |
+
 
 ### Checkmk Agenten herunterladen
 

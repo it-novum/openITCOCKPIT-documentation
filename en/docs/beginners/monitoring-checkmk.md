@@ -272,6 +272,41 @@ community.
 
 ![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
 
+## Define custom rules
+
+Checkmk is a rule-based monitoring tool. Therefore, if needed, some standards can be adjusted through user-defined rules.
+
+To ensure that custom rules are always loaded last and not overwritten by openITCOCKPIT, user-defined rules must be placed in the file
+`/opt/openitc/check_mk/etc/check_mk/conf.d/wato/zz_rules.mk`. If the file does not exist, you can simply create it.
+
+
+### Interface description
+
+When monitoring network interfaces, it is often useful to use the description or alias instead of the index for monitoring.
+
+Copy the following rule into the file `zz_rules.mk`. Valid values for the `item_appearance` field are: `alias`, `descr`, or `index`.
+```
+inventory_if_rules = [
+{'id': 'cf1d4626-052a-4b7d-9f17-8e42bab49222', 'value': {'discovery_single': (True, {'item_appearance': 'alias', 'pad_portnumbers': True}), 'matching_conditions': (True, {})}, 'condition': {}, 'options': {'disabled': False, 'comment': 'Use alias for Interfaces'}},
+] + inventory_if_rules
+```
+
+### Interface Traffic in Bit/s
+
+The unit of current traffic on a network interface can be changed from Byte/s `(5 Mb/s)` to Bit/s `(40 Mbit/s)` if needed.
+
+Kopieren Sie dafür die folgende Regel in die Datei `zz_rules.mk`.
+Copy the following rule into the file `zz_rules.mk`.
+
+```
+checkgroup_parameters['if'] = [
+{'id': 'a25bc8b5-b827-4215-8df5-1b9abad01f5b', 'value': {'unit': 'bit'}, 'condition': {}, 'options': {'disabled': False, 'comment': 'SNMP Interface speed in bits'}},
+] + checkgroup_parameters['if']
+```
+
+![Checkmk custom rules](/images/checkmk_custom_rules.png)
+
+
 ## Creating the Checkmk agent
 
 To create a Checkmk agent, go to `Monitoring -> Checkmk -> Checkmk Agents` in the main menu.
