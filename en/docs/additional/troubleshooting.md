@@ -184,7 +184,7 @@ the `mysql-server` package rather than having a hard dependency.
 Another example is the `Grafana Module`. While it is nice to have Grafana installed, it is not a must have. So openITCOCKPIT just recommends to install Grafana
 but it has no hard dependency for it.
 
-By default, Ubuntu and Debian systems are installing recommended packages. How ever, some cloud providers have configured `apt`
+By default, Ubuntu and Debian systems are installing recommended packages. How ever, _some cloud providers_ have configured `apt`
 to **not install** recommended packages.
 
 To see if your apt is configured to **not install** recommended packages, you can use this command
@@ -223,7 +223,7 @@ is installed and running.
 
 To ensure that the Mod-Gearman Worker is installed on your openITCOCKPIT Server execute `apt-get install openitcockpit-mod-gearman-worker-go-local`
 
-If this does not resolve the issue, please take a look at the [Mod-Gearman section](/additional/mod-gearman/) for more information
+If this does not resolve the issue, please take a look at the [Mod-Gearman section](/additional/mod-gearman/) for more information.
 
 ### Grafana is missing
 
