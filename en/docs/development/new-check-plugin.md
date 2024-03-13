@@ -1,8 +1,5 @@
 # Creating a New openITCOCKPIT Check Plugin
 
-For this article you will need an openITCOCKPIT development environment.
-Read [this guide to create an openITCOCKPIT development environment.](../../setup-dev-env/#creating-an-openitcockpit-development-environment)
-
 openITCOCKPIT uses a plugin-based system to check the status of hosts and services. The plugin API is 100% compatible
 with the [Nagios](https://nagios-plugins.org/doc/guidelines.html)
 , [Naemon](https://www.naemon.io/documentation/usersguide/pluginapi.html)
@@ -58,9 +55,9 @@ By default, the "plugin output" must be one line of text to STDOUT, as in this e
 
 ```bash
 #!/bin/bash
- 
+
 echo "This is the minimum plugin output"
- 
+
 # Return with status UP or OK
 exit 0
 ```
