@@ -79,7 +79,11 @@ By setting `use_embedded_perl_implicitly=1` in the `mod_gearman/worker.cfg` - al
 
 #### Limitations
 
-Command line arguments that contain one of these characters `!$^&*()~[]\\|{};<>?\`` will only be executed via Embedded Perl if the characters are wrapped within single quotes.
+Command line arguments that contain one of these characters
+```
+!$^&*()~[]\|{};<>?`
+```
+will only be executed via Embedded Perl if the characters are wrapped within single quotes.
 
 For example:
 
@@ -273,7 +277,7 @@ You can now connect a few thousand workers to your system
 ## Orphaned checks
 If you have a bunch of error messages like this:
 ```
-`(service check orphaned, is the mod-gearman worker on queue 'service' running?)`
+(service check orphaned, is the mod-gearman worker on queue 'service' running?)
 ```
 it means that no workers are executing your host or service checks. Please make sure that the Mod-Gearman Workers are running.
 
