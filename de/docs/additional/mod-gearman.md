@@ -211,7 +211,7 @@ Um Prüfungen an einen Worker zu binden, müssen Sie das `WORKER`-benutzerdefini
 
 Definieren Sie das Makro `WORKER` mit dem Wert `hostgroup_Fulda`
 
-![Eigene Hostgruppen-Warteschlangen für Fulda Frankfurt und Berlin](/images/mod_gearman/mg_routing_oitc.jpg)
+![Worker ueber Macro steuern](/images/mod_gearman/mg_routing_oitc.jpg)
 
 !!! note
     Es ist wichtig, dass der Wert des benutzerdefinierten Makros mit `hostgroup_` vorangestellt ist.
@@ -220,7 +220,7 @@ Um die Änderungen zu übernehmen, [aktualisieren Sie die Überwachungskonfigura
 
 Alle Prüfungen mit `WORKER=hostgroup_Fulda` werden jetzt von dem definierten Worker behandelt
 
-![Eigene Hostgruppen-Warteschlangen für Fulda Frankfurt und Berlin](/images/mod_gearman/mod_gearman_forced_worker.jpg)
+![Alle Checks werden nun von dem bestimmten Worker ausgefuehrt](/images/mod_gearman/mod_gearman_forced_worker.png)
 
 
 #### Was sind die `worker_` Warteschlangen?

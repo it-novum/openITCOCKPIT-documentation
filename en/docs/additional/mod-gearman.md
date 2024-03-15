@@ -223,7 +223,7 @@ To route checks into one of those groups, you need to define the `WORKER` custom
 
 Define the macro `WORKER` with the value `hostgroup_Fulda`
 
-![Own hostgroup queues for Fulda Frankfurt and Berlin](/images/mod_gearman/mg_routing_oitc.jpg)
+![Worker controlled by a macro](/images/mod_gearman/mg_routing_oitc.jpg)
 
 !!! note
     It is important, that the value of the custom macro is prefixed with `hostgroup_`
@@ -232,7 +232,7 @@ To apply the changes, [update the monitoring configuration](../../beginners/crea
 
 All checks with the `WORKER=hostgroup_Fulda` will now be handled by the defined worker
 
-![Own hostgroup queues for Fulda Frankfurt and Berlin](/images/mod_gearman/mod_gearman_forced_worker.jpg)
+![All checks get now executed by the forced worker](/images/mod_gearman/mod_gearman_forced_worker.png)
 
 
 #### What are the `worker_` queues?
