@@ -33,7 +33,10 @@ Standardmäßig verfügt openITCOCKPIT über einen lokalen Mod-Gearman-Worker. D
 systemctl status mod-gearman-worker.service
 ```
 
-Dieser Dienst wird durch das Paket `openitcockpit-mod-gearman-worker-go-local` bereitgestellt und kann entfernt werden. Durch Deinstallieren des Pakets `openitcockpit-mod-gearman-worker-go-local` oder durch Anhalten des `mod-gearman-worker.service` wird der openITCOCKPIT-Server keine Host- und Servicetprüfungen mehr ausführen. Bitte stellen Sie sicher, dass externe Mod-Gearman-Worker im Voraus eingerichtet sind!
+Dieser Dienst wird durch das Paket `openitcockpit-mod-gearman-worker-go-local` bereitgestellt und kann entfernt werden. Durch Deinstallieren des Pakets `openitcockpit-mod-gearman-worker-go-local` oder durch Anhalten des `mod-gearman-worker.service` wird der openITCOCKPIT-Server **keine** Host- und Servicetprüfungen mehr ausführen. 
+
+!!! Warning
+    Bitte stellen Sie sicher, dass externe Mod-Gearman-Worker im Voraus eingerichtet sind!
 
 ### Umgehen von Mod-Gearman
 

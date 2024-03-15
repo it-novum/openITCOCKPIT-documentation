@@ -43,7 +43,10 @@ systemctl status mod-gearman-worker.service
 
 This service is provided by the `openitcockpit-mod-gearman-worker-go-local` package and can be removed.
 By uninstalling the `openitcockpit-mod-gearman-worker-go-local` package or by stopping the `mod-gearman-worker.service`,
-the openITCOCKPIT server will not execute any host and service checks anymore. So please make sure to set up external Mod-Gearman Workers upfront!
+the openITCOCKPIT server will **not** execute any host and service checks anymore. 
+
+!!! warning
+    So please make sure to set up external Mod-Gearman Workers upfront!
 
 
 ### Bypass Mod-Gearman
