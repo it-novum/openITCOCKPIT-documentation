@@ -43,6 +43,7 @@ nav:
     - 'Benachrichtigungen': 'alerting/alerting.md'
     - 'E-Mail Benachrichtigungen': 'beginners/setup-email-notifications/#e-mail-benachrichtigungen-einrichten'
     - 'Push Benachrichtigungen': 'beginners/setup-browser-push-notifications/#browser-push-benachrichtigungen-einrichten'
+    - 'Systemzustand Benachrichtigungen': 'alerting/system-health-notifications.md'
     - 'Axios Assyst': 'alerting/axiosassyst.md'
     - 'Mattermost': 'alerting/mattermost.md'
     - 'PagerDuty': 'alerting/pagerduty.md'
