@@ -5,14 +5,14 @@ This means that instead of having all monitoring checks executed on a single ope
 to multiple servers, improving scalability and performance.
 
 !!! info
-    All openITCOCKPIT versions > 4.7.0 are shipped with Mod-Gearman by default.
+    All openITCOCKPIT versions > 4.7.1 are shipped with Mod-Gearman by default.
 
 
-This document is for traditional installations of openITCOCKPIT. If you are using a Docker/Container-based setup, please refer to this [this documentation](/installation/docker).
+This document is for traditional installations of openITCOCKPIT. If you are using a Docker/Container-based setup, please refer to this [this documentation](../../installation/docker).
 
 ## Difference between Mod-Gearman and Distributed Monitoring
 
-The [Distributed Monitoring Module of openITCOCKPIT](/configuration/distribute-module/) allows setting up self-sufficient monitoring servers called "Satellite Systems".
+The [Distributed Monitoring Module of openITCOCKPIT](../../configuration/distribute-module/) allows setting up self-sufficient monitoring servers called "Satellite Systems".
 openITCOCKPIT Satellite Systems provide a web interface and are the best solution for monitoring remote locations or multiple data centers.
 
 In a limited way, Satellite Systems can also be used to offload workload from the openITCOCKPIT Main Server.
@@ -228,7 +228,7 @@ Define the macro `WORKER` with the value `hostgroup_Fulda`
 !!! note
     It is important, that the value of the custom macro is prefixed with `hostgroup_`
 
-To apply the changes, [update the monitoring configuration](/beginners/create-first-host/#updating-the-monitoring-configuration).
+To apply the changes, [update the monitoring configuration](../../beginners/create-first-host/#updating-the-monitoring-configuration).
 
 All checks with the `WORKER=hostgroup_Fulda` will now be handled by the defined worker
 
@@ -252,7 +252,7 @@ chmod u+s /opt/openitc/nagios/libexec/check_icmp
 chmod u+s /opt/openitc/nagios/libexec/check_dhcp
 ```
 
-## Too many open files
+### Too many open files
 
 When your Gearman Job Server becomes unresponsive or you get error messages like `ERROR 2015-04-14 22:02:54.000000 [ main ] accept(Too many open files) -> libgearman-server/gearmand.cc:788`,
 you have reached the limit of open files.
@@ -274,7 +274,7 @@ You can now connect a few thousand workers to your system
 ![Many thousand workers](/images/mod_gearman/mod_gearman_many_workers.jpg)
 
 
-## Orphaned checks
+### Orphaned checks
 If you have a bunch of error messages like this:
 ```
 (service check orphaned, is the mod-gearman worker on queue 'service' running?)
@@ -284,3 +284,11 @@ it means that no workers are executing your host or service checks. Please make 
 ```
 systemctl restart mod-gearman-worker.service
 ```
+
+## Temporary files
+
+Some monitoring plugins create temporary files on the disk to compare _counter values_ with the values from the last execution. A well-known plugin that require temporary files is the `check_new_health` plugin, which, unless specified otherwise, creates temporary files under `/var/tmp/check_nwc_health`.
+
+The `check_diskstats` plugin uses the directory `/var/tmp/nagios`.
+
+If you use plugins that rely on temporary files to collect correct values, you must ensure that all workers have access to the same temporary files. This can typically be achieved most easily with an NFS share that is mounted on all Mod-Gearman workers.

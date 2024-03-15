@@ -3,13 +3,13 @@
 Mod-Gearman ermöglicht es openITCOCKPIT, Überwachungsaufgaben auf mehrere Worker-Prozesse oder Server mithilfe des Gearman-Jobservers zu verteilen. Das bedeutet, dass anstelle aller Überwachungsprüfungen auf einem einzelnen openITCOCKPIT-Server ausgeführt zu werden, die Arbeitslast auf mehrere Server verteilt werden kann, was die Skalierbarkeit und Leistung verbessert.
 
 !!! info
-    Alle openITCOCKPIT-Versionen > 4.7.0 werden standardmäßig mit Mod-Gearman ausgeliefert.
+    Alle openITCOCKPIT-Versionen > 4.7.1 werden standardmäßig mit Mod-Gearman ausgeliefert.
 
-Dieses Dokument gilt für traditionelle Installationen von openITCOCKPIT. Wenn Sie eine Docker-/Container-basierte Konfiguration verwenden, lesen Sie bitte diese [Dokumentation](/installation/docker).
+Dieses Dokument gilt für traditionelle Installationen von openITCOCKPIT. Wenn Sie eine Docker-/Container-basierte Konfiguration verwenden, lesen Sie bitte diese [Dokumentation](../../installation/docker).
 
 ## Unterschied zwischen Mod-Gearman und verteiltem Monitoring
 
-Das [Distributed Monitoring Module von openITCOCKPIT](/configuration/distribute-module/) ermöglicht die Einrichtung eigenständiger Überwachungsserver, die als "Satellitensysteme" bezeichnet werden. openITCOCKPIT-Satellitensysteme bieten eine Weboberfläche und sind die beste Lösung zur Überwachung entfernter Standorte oder mehrerer Rechenzentren.
+Das [Distributed Monitoring Module von openITCOCKPIT](../../configuration/distribute-module/) ermöglicht die Einrichtung eigenständiger Überwachungsserver, die als "Satellitensysteme" bezeichnet werden. openITCOCKPIT-Satellitensysteme bieten eine Weboberfläche und sind die beste Lösung zur Überwachung entfernter Standorte oder mehrerer Rechenzentren.
 
 Satellitensysteme von openITCOCKPIT können in begrenztem Umfang auch zur Lastverteilung genutzt werden.
 
@@ -216,7 +216,7 @@ Definieren Sie das Makro `WORKER` mit dem Wert `hostgroup_Fulda`
 !!! note
     Es ist wichtig, dass der Wert des benutzerdefinierten Makros mit `hostgroup_` vorangestellt ist.
 
-Um die Änderungen zu übernehmen, [aktualisieren Sie die Überwachungskonfiguration](/beginners/create-first-host/#updating-the-monitoring-configuration).
+Um die Änderungen zu übernehmen, [aktualisieren Sie die Überwachungskonfiguration](../../beginners/create-first-host/#aktualisieren-der-uberwachungskonfiguration).
 
 Alle Prüfungen mit `WORKER=hostgroup_Fulda` werden jetzt von dem definierten Worker behandelt
 
@@ -271,3 +271,12 @@ bedeutet dies, dass keine Worker Ihre Host- oder Service-Prüfungen ausführen. 
 ```
 systemctl restart mod-gearman-worker.service
 ```
+
+## Temporäre Dateien
+
+Einige Monitoring-Plugins erstellen temporäre Dateien auf der Festplatte, um _Counter-Werte_ mit den Werten der letzten Ausführung zu vergleichen. Ein bekanntes Plugin ist das `check_new_health` Plugin, dieses erstellt, sofern nicht anders angegeben, temporäre Dateien unter `/var/tmp/check_nwc_health`.
+
+Das `check_diskstats` Plugin verwendet den Ordner `/var/tmp/nagios`.
+
+Sollten Sie Plugins verwenden, welche temporäre Dateien erstellen und benötigen um korrekte Werte liefern zu können, müssen Sie dafür sorgen, das alle Worker über die gleichen temporären Dateien verfügen. Dies können Sie in der Regel am einfachsten mit einem NFS-Share erreichen, welches auf allen Mod-Gearman Workern eingebunden wird.
+
