@@ -43,7 +43,7 @@ systemctl status mod-gearman-worker.service
 
 This service is provided by the `openitcockpit-mod-gearman-worker-go-local` package and can be removed.
 By uninstalling the `openitcockpit-mod-gearman-worker-go-local` package or by stopping the `mod-gearman-worker.service`,
-the openITCOCKPIT server will **not** execute any host and service checks anymore. 
+the openITCOCKPIT server will **not** execute any host and service checks anymore.
 
 !!! warning
     So please make sure to set up external Mod-Gearman Workers upfront!
@@ -62,6 +62,14 @@ You can also define the macro for a particular service to only exclude this serv
 
 Embedded Perl can speed up the execution of Perl plugins by a lot and will also reduce the amount of required CPU power.
 A common example is the popular `check_nwc_health` plugin. Luckily, this plugin is compatible with Embedded Perl out of the box.
+
+
+This chart show the impact of resource usage Embedded Perl could have.
+Without Embedded Perl the system was using 38% CPU on average and simply by enabling Embedded Perl the CPU usage could be reduced to 20%.
+
+Even more impressive is the reduction of the Plugin execution time from 450ms on average to 140ms.
+
+![Resource usage with and without embedded perl](/images/mod_gearman/mod_gearman_chart.png)
 
 
 ### Include / Exclude plugins from Embedded Perl

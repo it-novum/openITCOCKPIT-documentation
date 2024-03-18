@@ -33,7 +33,7 @@ Standardmäßig verfügt openITCOCKPIT über einen lokalen Mod-Gearman-Worker. D
 systemctl status mod-gearman-worker.service
 ```
 
-Dieser Dienst wird durch das Paket `openitcockpit-mod-gearman-worker-go-local` bereitgestellt und kann entfernt werden. Durch Deinstallieren des Pakets `openitcockpit-mod-gearman-worker-go-local` oder durch Anhalten des `mod-gearman-worker.service` wird der openITCOCKPIT-Server **keine** Host- und Servicetprüfungen mehr ausführen. 
+Dieser Dienst wird durch das Paket `openitcockpit-mod-gearman-worker-go-local` bereitgestellt und kann entfernt werden. Durch Deinstallieren des Pakets `openitcockpit-mod-gearman-worker-go-local` oder durch Anhalten des `mod-gearman-worker.service` wird der openITCOCKPIT-Server **keine** Host- und Servicetprüfungen mehr ausführen.
 
 !!! Warning
     Bitte stellen Sie sicher, dass externe Mod-Gearman-Worker im Voraus eingerichtet sind!
@@ -51,6 +51,13 @@ Sie können das Makro auch für einen bestimmten Dienst definieren, um nur diese
 Eingebettetes Perl (Embedded Perl) kann die Ausführung von Perl-Plugins erheblich beschleunigen und auch den benötigte CPU-Leistung verringern.
 Ein gutes Beispiel ist das beliebte Plugin `check_nwc_health`. Glücklicherweise ist dieses Plugin von Anfang an mit eingebettetem Perl kompatibel.
 
+
+Dieses Diagramm zeigt die Auswirkungen auf die Ressourcennutzung, die Embedded Perl haben kann.
+Ohne eingebettetes Perl verbrauchte das System durchschnittlich 38% der CPU, und allein durch die Aktivierung von Embedded Perl konnte die CPU-Auslastung auf 20 % reduziert werden.
+
+Noch beeindruckender ist die Reduzierung der Plugin-Ausführungszeit von durchschnittlich 450ms auf 140ms.
+
+![Resource usage with and without embedded perl](/images/mod_gearman/mod_gearman_chart.png)
 
 ### Ein- und Ausschließen von eingebettetem Perl pro Plugin
 
