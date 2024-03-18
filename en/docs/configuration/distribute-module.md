@@ -1,4 +1,4 @@
-# Distributed Monitoring and Satellite EE <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
+# Distributed Monitoring and Satellite <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
 The Distribute module makes it possible to use distributed monitoring with satellite systems. These can then monitor remote locations as a self-sufficient unit. This makes it easier to maintain firewall rules, because only one connection between the openITCOCKPIT Monitoring Server and the satellites is required and not to the systems to be monitored. Distributed monitoring can also be used for load balancing if required.
 

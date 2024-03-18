@@ -1,8 +1,5 @@
 # Ein neues openITCOCKPIT Check Plugin erstellen
 
-Für diesen Artikel benötigen Sie eine openITCOCKPIT Entwicklungsumgebung. Lesen
-Sie [diesen Guide um sich eine openITCOCKPIT Entwicklungsumgebung zu erstellen](../../setup-dev-env/#openitcockpit-entwicklungsumgebung-erstellen)
-
 openITCOCKPIT nutzt ein Plugin basiertes system um den Status von Hosts und Services zu überprüfen. Die Plugin API ist
 zu 100 % kompatibel mit der [Nagios](https://nagios-plugins.org/doc/guidelines.html)
 , [Naemon](https://www.naemon.io/documentation/usersguide/pluginapi.html)
@@ -58,9 +55,9 @@ Standardmäßig muss der "Plugin Output" eine Zeile Text nach STDOUT, wie in die
 
 ```bash
 #!/bin/bash
- 
+
 echo "This is the minimum plugin output"
- 
+
 # Return with status UP or OK
 exit 0
 ```
@@ -73,11 +70,11 @@ echo "This is [b]bold text[/b]"
 ```
 
 ### Performance Daten (Metriken)
-Performance Daten werden von openITCOCKPIT genutzt um Graphen für das Interface, Benachrichtigungen und Grafana zu 
+Performance Daten werden von openITCOCKPIT genutzt um Graphen für das Interface, Benachrichtigungen und Grafana zu
 erstellen.
 
 Performance Daten werden durch ein "pipe" Symbol `|` vom Plugin Output separiert. Dies ist optional da nicht jedes
-Plugin Performance daten liefert. 
+Plugin Performance daten liefert.
 
 Das format der Performance daten ist wie folgt:
 ```

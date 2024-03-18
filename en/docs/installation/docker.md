@@ -260,7 +260,7 @@ We recommend to start with a blank VM of the latest Ubuntu LTS release.
 
 3. Connect worker to openITCOCKPIT Server
 
-    Open the file `/opt/openitc/mod_gearman/etc/worker.cfg` and set the hostname or IP-Address of your openITCOCKPIT Server.
+    Open the file `/etc/openitcockpit-mod-gearman/worker.cfg` and set the hostname or IP-Address of your openITCOCKPIT Server.
     ```cfg
     server=srvpod03.example.org:4730
 
@@ -295,7 +295,7 @@ MOD_GEARMAN_WORKER_ENCRYPTION=yes
 MOD_GEARMAN_WORKER_KEY=should_be_changed
 ```
 
-For traditional setups, edit the configuration file `/opt/openitc/mod_gearman/etc/worker.cfg`:
+For traditional setups, edit the configuration file `/etc/openitcockpit-mod-gearman/worker.cfg`:
 ```
 encryption=yes
 key=should_be_changed
