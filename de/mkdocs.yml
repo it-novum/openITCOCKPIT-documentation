@@ -50,6 +50,7 @@ nav:
     - 'ServiceNow': 'alerting/servicenow.md'
     - 'E-Mail Layouts anpassen': 'alerting/email-layouts.md'
     - 'Custom Alert Module': 'alerting/custom-alert-module.md'
+    - 'Microsoft Teams': 'alerting/microsoft-teams.md'
   - 'Reporting':
       - 'Reporting': 'reporting/reporting.md'
       - 'SLA': 'reporting/sla.md'
