@@ -12,7 +12,6 @@ New SLAs can be created here and SLAs that have already been created are listed.
 
 The current availability is displayed for all SLAs that have already been evaluated.
 
-
 To calculate the availability the SLA needs to be defined with an name, a time period, an evaluation period and
 guaranteed availability as a percentage. If desired, a value for an early warning can be entered as well.
 The warning threshold needs to be higher than the guaranteed availability.
@@ -38,24 +37,46 @@ It is also possible to define a custom start date using the `Start date` field.
 | Consider downtimes      |                           | Determines whether maintenance times  (downtimes) should be taken into account. Outages during maintenance times are ignored |
 | Reflection state        | :fontawesome-solid-xmark: | The status type to evaluate. Hard state only or hard and soft state                                                          |
 
-After installing the SLA module, the configuration area of the host template or the host has a new SLA option.
-The SLA can always be assigned to either the host template, so all hosts that use this
-template are automatically in SLA or to a particular host.
+#### Host and Service Assignment
 
-The menu item `Affected hosts` shows a list of all hosts that have been assigned to the SLA, either directly or via the host templates.
+After installing the SLA module, the configuration area of the host template or the host is extended with the SLA
+option. The SLA can always be assigned to either the host template, meaning all hosts using this template are
+automatically included in the SLA, or directly to the host.
+
+It is also possible to exclude certain services from the SLA using the `SLA relevant` field. This can be done either via
+the service template or directly on the service.
+
+##### Host Assignment Rules
+
+In addition to individual assignments, it is also possible to assign multiple hosts to an SLA. Through the `Assign to
+hosts` menu item, there is an option to select multiple hosts simultaneously using specific filters.
+
+![menu Assign to hosts](/images/sla/sla_assign_to_hosts.png)
+
+By default, only hosts that are not assigned to any SLA are displayed in the list. The `Only unassigned hosts` switch
+can be deactivated to disable this filtering. After clicking `Assign to hosts`, the corresponding SLA will be assigned
+to
+**all** hosts listed. If no service filter is set, all services will be considered within the SLA, in accordance with
+the corresponding service template. However, if you need to override the settings of the service
+template (`SLA relevant` field) or only want to select specific services, this can be achieved using a `Service RegEx`.
+
+![Host mapping rules](/images/sla/sla_assign_to_hosts_filter.png)
+
+The menu item `Affected hosts` shows a list of all hosts that have been assigned to the SLA, either directly or via the
+host templates.
 
 ![menu Affected hosts](/images/sla/sla_menu_affected_hosts.png)
 
 In this list you can see directly how the SLA was assigned. It is also possible to jump into the object configuration
 to change the SLA assignment. For a better overview it is possible to filter by hostname.
 
-![Zugewiesene hosts](/images/sla/sla_affected_hosts.png)
-
+![Affected hosts](/images/sla/sla_affected_hosts.png)
 
 #### SLA Overview
 
 As soon as the SLA is evaluated, the availability of the SLA is displayed in the SLA list.
-By clicking on an SLA you get to the detail view. This view can also be reached via the drop down menu item `View details`.
+By clicking on an SLA you get to the detail view. This view can also be reached via the drop down menu
+item `View details`.
 
 ![SLA Oberview](/images/sla/sla_view_details.png)
 
@@ -75,7 +96,8 @@ By clicking on the badge you can open a detailed overview for the particular hos
 
 ![SLA Host details](/images/sla/sla_host_browser_details.png)
 
-The SLA details overview of a host, will also display the availability of the services that are associated with this host.
+The SLA details overview of a host, will also display the availability of the services that are associated with this
+host.
 The `Service -> Browser` page also contains a badge, which displays the service availability.
 
 ![SLA Service details](/images/sla/sla_service_browser_details.png)
