@@ -11,12 +11,13 @@ Das Primärziel dieses Artikels ist es, ein System einzurichten, welches keine m
 Zuerst müssen Sie einen neuen Benutzer in openITCOCKPIT erstellen, welcher sehr geringe Berechtigungen hat. Während Sie den Benutzer erstellen, können Sie dem Benutzer auch gleich einen [API Keys](/development/api/#api-keys) hinzufügen.
 [API Keys](/development/api/#api-keys) können auch später noch erstellt werden.
 
-Im nächsten Schritt installieren Sie auf dem Kiosk-System die Browser-Erweiterung  [ModHeader](https://github.com/modheader/modheader). Die ModHeader Browser-Erweiterung wird später den API Key an alle Anfragen, welche vom Webbrowser ausgeführt werden, automatisch anhängen. Somit sind keine weiteren Anmeldedaten mehr erforderlich.
+!!! info
+    In der Vergangenheit haben wir die Browsererweiterung `ModHeader` empfohlen, die für alle gängigen Browser verfügbar ist/war. Wir wurden von unserer Community darüber informiert, dass die Erweiterung Werbung einfügt und nicht mehr Open Source ist.
 
+    Bitte lassen Sie es uns wissen, wenn Sie eine gute Alternative kennen.
 
-- ModHeader für [Chrome](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?src=modheader-com)
-- ModHeader für [Firefox](https://addons.mozilla.org/firefox/addon/modheader-firefox)
-- ModHeader für [Edge](https://microsoftedge.microsoft.com/addons/detail/opgbiafapkbbnbnjcdomjaghbckfkglc)
+Im nächsten Schritt installieren Sie auf dem Kiosk-System die Browser-Erweiterung ModHeader. Die ModHeader Browser-Erweiterung wird später den API Key an alle Anfragen, welche vom Webbrowser ausgeführt werden, automatisch anhängen. Somit sind keine weiteren Anmeldedaten mehr erforderlich.
+
 
 Erstellen Sie einen neuen Request Header mit dem Namen `Authorization` und setzen Sie `X-OITC-API <API-KEY>` als Value.
 
