@@ -12,7 +12,7 @@ durchführen, damit der Host überwacht wird.
 ## sudo_server
 
 **Fehlermeldung**
-  
+
 Englisch:
 ```
 Attention! Lost connection to SudoServer. External commands may not work. Please try to reload this page
@@ -75,7 +75,7 @@ Informationen zum Betriebssystem, Webserver, Basis PHP Informationen und der CPU
 
 ### CPU Load und RAM / Festplatten auslastung des openITCOCKPIT Servers
 
-Die openITCOCKPIT Weboberfläche bietet eine Übersicht der aktuellen CPU, RAM, SWAP sowie Festplattenauslastung an. 
+Die openITCOCKPIT Weboberfläche bietet eine Übersicht der aktuellen CPU, RAM, SWAP sowie Festplattenauslastung an.
 Diese ist auf der Debugging-Seite einsehbar.
 
 ### Queuing Engine
@@ -83,14 +83,14 @@ Eine Übersicht der Queuing Engine finden Sie auf der Debugging-Seite. Hier werd
 ![gearman-job-server overview](/images/debugging-queuingengine.png)
 
 ### E-Mail Konfiguration
-Eine Übersicht der aktuellen E-Mail Konfiguration erhalten Sie auf der Debugging-Seite unter dem Punkt "E-Mail konfiguration". 
+Eine Übersicht der aktuellen E-Mail Konfiguration erhalten Sie auf der Debugging-Seite unter dem Punkt "E-Mail konfiguration".
 
 ### PHP Konfiguration
 Eine Übersicht der aktuellen gesamten PHP Konfiguration erhalten Sie am Ende der Debugging-Seite.
 
 ## System Health / Systemzustand
 Die System Health Anzeige gibt aufschluss über den gesamtstatus des openITCOCKPIT Systems.
-Siehe [System Health anzeige](../../monitoring/user-interface/#system-health) 
+Siehe [System Health anzeige](../../monitoring/user-interface/#system-health)
 
 ## Wo finde ich welche Logdateien?
 
@@ -147,7 +147,7 @@ Da der Status der Aktualisierung in der openITCOCKPIT Datenbank gespeichert wird
 1. Stoppen Sie den Hintergrundprozess `gearman_worker`
 ```plaintext
 systemctl stop gearman_worker.service
-``` 
+```
 
 2. Führen Sie nun den Befehl `gearadmin --status` aus, um zu überprüfen, dass keine Aufträge mehr in der Warteschlange `oitc_gearman` warten. Die Ausgabe sollte in etwas so aussehen:
 ```plaintext
@@ -162,7 +162,7 @@ gearman -w -c 1 -t 1000 -f oitc_gearman > /dev/null
 4. Leeren Sie nun die Tabelle `exports` in der `openitcockpit` Datenbank, um den Status der Aktualisierung der Überwachungskonfiguration zurückzusetzen.
 ```
 mysql --defaults-extra-file=/opt/openitc/etc/mysql/mysql.cnf -e "TRUNCATE TABLE openitcockpit.exports;"
-``` 
+```
 
 5. Starten Sie nun wieder den `gearman_worker` Dienst.
 ```plaintext
@@ -184,3 +184,63 @@ oitc gearman_worker
 ```
 
 ![gearman_worker running in foreground mode to print out error message](/images/troubleshooting/gearman_worker_foreground_mode.JPG)
+
+
+## Empfohlene Pakete
+
+openITCOCKPIT installiert einige optionale **aber dennoch wichtige** Pakete anhand weicher Abhängigkeiten. Ein gutes Beispiel dafür ist der MySQL-Server.
+Um zu funktionieren benötigt openITCOCKPIT zwar einen MySQL-Sever, dieser kann aber auch auf einem zweiten System installiert sein. Ein zentraler Datenbank Server zum Beispiel.
+Aus diesem Grund empfiehlt openITCOCKPIT nur die Installation des Paketes `mysql-server`, anstelle eine harte Abhängigkeiten auf das Paket zu haben.
+
+![apt zeigt empfohlene Pakete](/images/troubleshooting/apt_recommended.jpg)
+
+Ein weiteres Beispiel ist das `Grafana Module`. Grafana ist für den Betrieb von openITCOCKPIT nicht erforderlich, jedoch ist es für den Benutzer schön, Grafana zu haben.
+Also empfiehlt hier openITCOCKPIT wieder die Installation des Modules, hat jedoch keine  harte Abhängigkeiten auf Grafana.
+
+In der Standardkonfiguration installiert der Paketmanager `apt` sowohl unter Ubuntu als auch Debian empfohlene (recommended) Pakete automatisch. _Manche Cloud Anbieter_ haben jedoch `apt`
+so konfiguriert, dass **keine empfohlene Pakete** installiert werden sollen.
+
+Um zu überprüfen ob eine solche Konfiguration vorliegt, kann dieser Befehl benutzt werden:
+```
+grep -ri 'Install-Recommends\|Install-Suggests' /etc/apt
+```
+
+Das Beispiel zeigt eine apt Konfiguration, welche die Installation von empfohlenen Paketen verhindert:
+```
+root@ubuntu-4gb-hel1-1:~# grep -ri 'Install-Recommends\|Install-Suggests' /etc/apt
+/etc/apt/apt.conf.d/01norecommends:APT::Install-Recommends "0";
+/etc/apt/apt.conf.d/01norecommends:APT::Install-Suggests "0";
+```
+
+### RHEL basierende Systeme
+
+Auf RHEL basierenden Systemen nutzen wir die gleiche Tehnik, hier werden empfohlene Pakete als `Weak Dependencies` bezeichnet.
+
+![weak dependencies on RHEL](/images/troubleshooting/RHEL_weak_dependencies.jpg)
+
+### Unsupported distribution or /etc/mysql/debian.cnf is missing!
+
+Wenn Sie diese Fehlermeldung bei der Ausführung von `/opt/openitc/frontend/SETUP.sh` bekommen, haben Sie sehr wahrscheinlich openITCOCKPIT ohne das empfohlene `mysql-server` Pakete installiert.
+Unter Ubuntu kann das Problem durch `apt-get install mysql-server` und unter Debian mit `apt-get install mariadb-server` behoben werden.
+
+Führen Sie im Anschluss wieder die `SETUP.sh` aus.
+
+![mysql server ist nicht installiert](/images/troubleshooting/unsupported_distribution.jpg)
+
+### /opt/openitc/nagios/libexec: No such file or directory
+
+In diesem Fall haben Sie die standard Monitoring Plugins nicht installiert. Diese können einfach über `apt-get install openitcockpit-monitoring-plugins` nachinstalliert werden.
+
+### Es werden keine Checks ausgeführt
+
+Falls Sie die Meldung `(service check orphaned, is the mod-gearman worker on queue 'service' running?)` als Prüfausgabe erhalten, stellen Sie bitte sicher das der Mod-Gearman Worker
+installiert und gestartet ist.
+
+Um sicherzustellen das der Mod-Gearman Worker auf Ihrem openITCOCKPIT Server installiert ist, führen Sie `apt-get install openitcockpit-mod-gearman-worker-go-local` aus.
+
+Sollte dies das Problem nicht beheben, schauen Sie sich bitte den [Mod-Gearman Abschnitt](/additional/mod-gearman/) an.
+
+### Grafana fehlt
+
+Sollte Ihre openITCOCKPIT Oberfläche kein `Grafana` enthalten, kann dies mit `apt-get install openitcockpit-module-grafana` nachinstalliert werden.
+

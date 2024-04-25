@@ -90,6 +90,7 @@ nav:
       - 'Logging': 'additional/logs.md'
       - 'Theming and CI': 'additional/theming.md'
       - 'Troubleshooting': 'additional/troubleshooting.md'
+      - 'Mod-Gearman': 'additional/mod-gearman.md'
       - 'Support': 'additional/support.md'
       - 'Reset Passwords': 'additional/reset-passwords.md'
       - 'Graphing Backend': 'additional/graphing-backend.md'
