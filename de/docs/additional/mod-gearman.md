@@ -95,7 +95,7 @@ Beispiel:
 
 ## Deaktivieren von Mod-Gearman
 
-openITCOCKPIT-Versionen 4.7.2 und höher haben Mod-Gearman standardmäßig aktiviert. Mod-Gearman kann deaktiviert werden, wenn Sie das alte Verhalten wiederherstellen möchten, bei dem alle Plugins direkt von der Überwachungs-Engine ausgeführt werden.
+openITCOCKPIT-Versionen 4.8.0 und höher haben Mod-Gearman standardmäßig aktiviert. Mod-Gearman kann deaktiviert werden, wenn Sie das alte Verhalten wiederherstellen möchten, bei dem alle Plugins direkt von der Überwachungs-Engine ausgeführt werden.
 
 Um dies zu tun, navigieren Sie zu `System -> Konfigurationsdatei Editor` und bearbeiten Sie die Datei `/opt/openitc/nagios/etc/nagios.cfg`.
 

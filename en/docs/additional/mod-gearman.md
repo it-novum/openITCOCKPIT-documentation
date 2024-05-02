@@ -108,7 +108,7 @@ For example:
 
 ## How to disable Mod-Gearman
 
-openITCOCKPIT versions 4.7.2 and above have Mod_Gearman enabled by default. Mod_Gearman can be disabled if you want to bring back the old behavior where all plugins get
+openITCOCKPIT versions 4.8.0 and above have Mod_Gearman enabled by default. Mod_Gearman can be disabled if you want to bring back the old behavior where all plugins get
 executed directly by the Monitoring Engine.
 
 To do so, navigate to `System -> Config file editor` and edit the file `/opt/openitc/nagios/etc/nagios.cfg`.
