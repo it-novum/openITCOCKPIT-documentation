@@ -486,6 +486,8 @@ Sie haben dort die möglichkeit verschiedene Aktionen zu tätigen wie zum beispi
 
 Beim klick auf das "+" Symbol eines Hosts in der Liste öffnet sich eine erweitere Ansicht, die die Services des Hosts, sowie die Gesamtstatus derer enthält.
 
+Wenn das SLA Modul installiert ist, dann wird ein weiterer Tab namens "SLA Hosts Status" angezeigt, welcher eine [Übersichtsseite](/reporting/sla/#sla-host-status-ubersicht-fur-hostgruppen) anzeigt, die alle Hosts der Hostgruppe mit ihrem aktuellen SLA-Verfügbarkeitsstatus in Form einer Heatmap anzeigt. 
+
 
 ## Servicegruppen
 

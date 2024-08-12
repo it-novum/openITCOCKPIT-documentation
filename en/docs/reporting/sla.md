@@ -103,3 +103,31 @@ The `Service -> Browser` page also contains a badge, which displays the service 
 ![SLA Service details](/images/sla/sla_service_browser_details.png)
 
 The SLA service details overview does additionally contain a list of the last 10 days.
+
+##SLA Host status overview for host groups
+
+There is an overview page for the host groups that shows all the hosts included with their current SLA availability status in the form of a heat map. The hosts status overview is integrated as a tab in the extended view of the host group.   
+
+![SLA Hostgroup Hosts Status Overview](/images/sla/sla_hostgroup_hosts_status_overview.png)
+
+Hosts without availability status are displayed as `Not calculated`. The display leads to an overview of these hosts via a link.
+
+![SLA Hostgroup Hosts Status Overview Non-Calculated Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated.png)
+![SLA Hostgroup Hosts Status Overview Non-calculated Hosts Overview Page](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated_hosts.png)
+
+The status is always displayed in ascending order. This means that the hosts with the lowest availability are displayed first. Each individual tile shows the current availability value in % and is linked to the SLA tab in `Hosts->Browser`. The threshold values for the minimum availability and warning, which are used to display the color values, are calculated by averaging all threshold values of the hosts in the heatmap. If the minimum availability value is greater than the warning value, the warning value is not taken into account and is therefore not colored. 
+
+![SLA Hostgroup Hosts Status Overview Tile](/images/sla/sla_hostgroup_hosts_status_overview_tile.png)
+![SLA Hostgroup Hosts Status Overview Host Browser SLA Page](/images/sla/sla_hostgroup_hosts_status_overview_host_browser.png)
+
+The hosts can be filtered using the following fields:
+
+* Host name
+* Availability (from, to)
+* Container
+
+![SLA Hostgroup Hosts Status Overview Filter](/images/sla/sla_hostgroup_hosts_status_overview_filter.png)
+
+This overview can also be accessed directly via the host group overview by accessing the context menu of the elements or by clicking on the SLA label. Both are only displayed if the host group or its hosts are assigned to an SLA  
+
+![SLA Hostgroup Hosts Overview Page](/images/sla/sla_hostgroups_overview.png)
