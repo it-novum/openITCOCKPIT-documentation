@@ -117,12 +117,20 @@ Für die Hostgruppen gibt es eine Übersichtseite, die alle beinhalteten Hosts m
 Hosts ohne Verfügbarkeitsstatus werden darüber als `Nicht kalkuliert` angezeigt. Die Anzeige führt über einen Link zur einer Übersicht dieser Hosts.
 
 ![SLA Hostgroup Hosts Status Übersicht Nicht kakultierte Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated.png)
-![SLA Hostgroup Hosts Status Übersicht Nicht kakultierte Hosts Übersicht Seite](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated_hosts.png)
 
-Der Status wir immer aufsteigend angezeigt. Das bedeutet, die Hosts mit der niedrigsten Verfügbarkeit werden zuerst angezeigt. Jede einzelne Kachel zeigt den aktuellen Verfügbarkeitswert in % an und ist auf den SLA Tab in `Hosts->Browser` verlinkt. Die Schwellwerte für die Mindestverfügbarkeit und Warnung, die zur Abbildung der Farbwerte genutzt werden, werden über eine Durschnittrechnung aller Schwellwerte der Hosts in der Heatmap berechnet. Sollte hierbei der Mindestverfügbarkeitswert größer sein als der Warnungswert, wird der Warnungswert nicht berücksichtigt und dementsprechend nicht eingefärbt. 
+Hosts welche einem SLA nicht zugeordnet sind werden darüber als `Nicht in SLA` angezeigt. Die Anzeige führt über einen Link zur einer Übersicht dieser Hosts.
+
+![SLA Hostgroup Hosts Status Übersicht Nicht in SLA Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_sla.png)
+
+Der Status wir immer aufsteigend angezeigt. Das bedeutet, die Hosts mit der niedrigsten Verfügbarkeit werden zuerst angezeigt. 
+
+Jede einzelne Kachel zeigt den aktuellen Verfügbarkeitswert und den Mindestverfügbarkeitswert in % an und ist auf den SLA Tab in `Hosts->Browser` verlinkt (Darstellung: aktueller Verfügbarkeitswert / Mindestverfügbarkeitswert %). Sollte der der Mindestverfügbarkeitswert unterschritten werden, dann wird die Kachel rot eingefärbt, andernfalls grün.
+
+Hält man den Mauszeiger länger auf eine Kachel erscheint der jeweilige Hostname, dem der Status zugeordnet ist, im Tooltip.   
 
 ![SLA Hostgroup Hosts Status Übersicht Kachel](/images/sla/sla_hostgroup_hosts_status_overview_tile.png)
-![SLA Hostgroup Hosts Status Übersicht Host Browser SLA Seite](/images/sla/sla_hostgroup_hosts_status_overview_host_browser.png)
+
+Über `Aktion` kann die Heatmap als CSV Datei exportiert werden. 
 
 Die Hosts können über folgende Felder gefiltert werden:
 
@@ -132,6 +140,6 @@ Die Hosts können über folgende Felder gefiltert werden:
 
 ![SLA Hostgroup Hosts Status Übersicht Filter](/images/sla/sla_hostgroup_hosts_status_overview_filter.png)
 
-Diese Übersicht ist auch über die Hostgruppenübersicht direkt erreichbar, indem man auf das Kontextmenü der Elemente zurückgreift oder auf die SLA-Kennzeichnung drückt. Beides wird nur angezeigt, wenn die Hostgruppe oder deren Hosts einem SLA zugeordnet sind  
+Diese Übersicht ist auch über die Hostgruppenübersicht direkt erreichbar, indem man auf das Kontextmenü der Elemente zurückgreift oder auf die SLA-Kennzeichnung drückt. Beides wird nur angezeigt, wenn die Hostgruppe oder deren Hosts einem SLA zugeordnet sind.  
 
 ![SLA Hostgroup Hosts Übersicht Seite](/images/sla/sla_hostgroups_overview.png)

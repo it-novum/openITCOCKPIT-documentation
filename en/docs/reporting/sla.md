@@ -110,24 +110,32 @@ There is an overview page for the host groups that shows all the hosts included 
 
 ![SLA Hostgroup Hosts Status Overview](/images/sla/sla_hostgroup_hosts_status_overview.png)
 
-Hosts without availability status are displayed as `Not calculated`. The display leads to an overview of these hosts via a link.
+Hosts without availability status are displayed above this as `Not calculated`. The display leads to an overview of these hosts via a link.
 
-![SLA Hostgroup Hosts Status Overview Non-Calculated Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated.png)
-![SLA Hostgroup Hosts Status Overview Non-calculated Hosts Overview Page](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated_hosts.png)
+![SLA Hostgroup Hosts Status Overview Non-calculated Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated.png)
 
-The status is always displayed in ascending order. This means that the hosts with the lowest availability are displayed first. Each individual tile shows the current availability value in % and is linked to the SLA tab in `Hosts->Browser`. The threshold values for the minimum availability and warning, which are used to display the color values, are calculated by averaging all threshold values of the hosts in the heatmap. If the minimum availability value is greater than the warning value, the warning value is not taken into account and is therefore not colored. 
+Hosts that are not assigned to an SLA are displayed as `Not in SLA`. The display leads to an overview of these hosts via a link.
+
+![SLA Hostgroup Hosts Status Overview Not in SLA Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_sla.png)
+
+The status is always displayed in ascending order. This means that the hosts with the lowest availability are displayed first. 
+
+Each individual tile shows the current availability value and the minimum availability value in % and is linked to the SLA tab in `Hosts->Browser` (display: current availability value / minimum availability value %). If the minimum availability value is not reached, the tile is colored red, otherwise green.
+
+If you hold the mouse pointer over a tile for longer, the respective host name to which the status is assigned appears in the tooltip. 
 
 ![SLA Hostgroup Hosts Status Overview Tile](/images/sla/sla_hostgroup_hosts_status_overview_tile.png)
-![SLA Hostgroup Hosts Status Overview Host Browser SLA Page](/images/sla/sla_hostgroup_hosts_status_overview_host_browser.png)
+
+The heatmap can be exported as a CSV file via `Action`. 
 
 The hosts can be filtered using the following fields:
 
-* Host name
+* Hostname
 * Availability (from, to)
 * Container
 
 ![SLA Hostgroup Hosts Status Overview Filter](/images/sla/sla_hostgroup_hosts_status_overview_filter.png)
 
-This overview can also be accessed directly via the host group overview by accessing the context menu of the elements or by clicking on the SLA label. Both are only displayed if the host group or its hosts are assigned to an SLA  
+This overview can also be accessed directly via the host group overview by accessing the context menu of the elements or by clicking on the SLA label. Both are only displayed if the host group or its hosts are assigned to an SLA.  
 
 ![SLA Hostgroup Hosts Overview Page](/images/sla/sla_hostgroups_overview.png)
