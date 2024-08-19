@@ -14,6 +14,7 @@ nav:
     - 'General update': 'update/general.md'
     - 'Update Ubuntu Bionic to Focal': 'update/ubuntu-bionic-to-focal.md'
     - 'Update Ubuntu Focal to Jammy': 'update/ubuntu-focal-to-jammy.md'
+    - 'Update Ubuntu Jammy to Noble': 'update/ubuntu-jammy-to-noble.md'
     - 'Update Debian Buster to Bullseye': 'update/debian-buster-to-bullseye.md'
     - 'Update Debian Bullseye to Bookworm': 'update/debian-bullseye-to-bookworm.md'
   - 'Beginners Guide':
