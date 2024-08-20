@@ -5,10 +5,9 @@ Die Installation von openITCOCKPIT erfolgt über den Paketmanager der Linux-Dist
 ## Unterstützte Betriebssysteme
 
 - Ubuntu
+    - Noble (24.04)
     - Jammy (22.04)
-    - Focal (20.04)
 - Debian
-    - Bullseye (11)
     - Bookworm (12)
 - Enterprise Linux
     - Red Hat 8
@@ -33,25 +32,6 @@ apt-get update
 ```
 
 ### Debian
-
-
-#### Debian 11
-
-Stellen Sie sicher, dass Sie `contrib` und `non-free` Repositorys in `/etc/apt/sources.list` aktiviert haben.
-
-
-```
-echo "deb http://deb.debian.org/debian/ $(lsb_release -sc) main contrib non-free" > /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian/ $(lsb_release -sc) main contrib non-free" >> /etc/apt/sources.list
-
-echo "deb http://deb.debian.org/debian-security/ $(lsb_release -sc)-security main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian-security/ $(lsb_release -sc)-security main contrib non-free" >> /etc/apt/sources.list
-
-echo "deb http://deb.debian.org/debian/ $(lsb_release -sc)-updates main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian/ $(lsb_release -sc)-updates main contrib non-free" >> /etc/apt/sources.list
-```
-
-#### Debian 12
 
 Stellen Sie sicher, dass Sie `contrib` und `non-free` Repositorys in `/etc/apt/sources.list.d/debian.sources` aktiviert haben.
 ```
@@ -111,7 +91,7 @@ Die Konfiguration des Webservers wird automatisch durchgeführt. Die phpMyAdmin 
 
 ## Systemanforderungen
 
-- Ubuntu Linux 64 bit (22.04, 20.04, 18.04), Debian Linux 64 bit (11, 10)
+- Ubuntu Linux 64 bit, Debian Linux 64 bit, RHEL 64 bit
 - 2 CPU Kerne (x86-64 oder arm64)
 - 2 GB RAM
 - 40 GB freier Festplattenspeicher
