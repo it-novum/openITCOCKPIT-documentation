@@ -126,7 +126,7 @@ Der Status wir immer aufsteigend angezeigt. Das bedeutet, die Hosts mit der nied
 
 Jede einzelne Kachel zeigt den aktuellen Verfügbarkeitswert und den Mindestverfügbarkeitswert in % an und ist auf den SLA Tab in `Hosts->Browser` verlinkt (Darstellung: aktueller Verfügbarkeitswert / Mindestverfügbarkeitswert %). Sollte der der Mindestverfügbarkeitswert unterschritten werden, dann wird die Kachel rot eingefärbt, andernfalls grün.
 
-Hält man den Mauszeiger länger auf eine Kachel erscheint der jeweilige Hostname, dem der Status zugeordnet ist, im Tooltip.   
+Unter den Verfügbarkeitswerten steht der Hostname, dem die Werte zugeordnet sind. 
 
 ![SLA Hostgroup Hosts Status Übersicht Kachel](/images/sla/sla_hostgroup_hosts_status_overview_tile.png)
 

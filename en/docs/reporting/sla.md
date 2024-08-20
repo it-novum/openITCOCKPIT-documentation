@@ -122,7 +122,7 @@ The status is always displayed in ascending order. This means that the hosts wit
 
 Each individual tile shows the current availability value and the minimum availability value in % and is linked to the SLA tab in `Hosts->Browser` (display: current availability value / minimum availability value %). If the minimum availability value is not reached, the tile is colored red, otherwise green.
 
-If you hold the mouse pointer over a tile for longer, the respective host name to which the status is assigned appears in the tooltip. 
+The host name to which the values are assigned is shown below the availability values. 
 
 ![SLA Hostgroup Hosts Status Overview Tile](/images/sla/sla_hostgroup_hosts_status_overview_tile.png)
 
