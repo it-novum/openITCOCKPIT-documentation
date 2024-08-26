@@ -17,6 +17,7 @@ The changelog is a record all changes made in openITCOCKPIT with reference to th
 -  	Locations
 -  	Clients
 -  	Nodes
+-   Users
 
 The following actions are also taken into account:
 
