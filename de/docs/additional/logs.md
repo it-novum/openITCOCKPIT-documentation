@@ -42,7 +42,7 @@ Protokolleinträge liefert Informationen zur Datenverarbeitung durch Statusengin
 
 ## Ergeignisprotokoll
 
-Im Ereignisprotokoll werden Ergeinisse und die betroffenen Objekte aufgeführt, die zu bestimmten Zeitpunkten ausgelöst wurden. Zu den protokollierten Ergeignissen gehören folgende Typen:
+Im Ereignisprotokoll werden Ereignisse und die betroffenen Objekte aufgeführt, die zu bestimmten Zeitpunkten ausgelöst wurden. Zu den protokollierten Ereignissen gehören folgende Typen:
 
 - Benutzer Login
 - Benutzer Löschung
