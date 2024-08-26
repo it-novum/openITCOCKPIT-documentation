@@ -17,6 +17,7 @@ Das Änderungsprotokoll beinhaltet alle in openITCOCKPIT vorgenommen Änderungen
 -   Standorte
 -   Mandanten
 -   Knoten
+-   Benutzer
 
 Folgende Aktionen werden dabei berücksichtigt:
 
@@ -38,3 +39,13 @@ Das Benachrichtigungsprotokoll zeigt alle versendeten Benachrichtigungen zu Host
 ## Protokolleinträge
 
 Protokolleinträge liefert Informationen zur Datenverarbeitung durch Statusengine
+
+## Ergeignisprotokoll
+
+Im Ereignisprotokoll werden Ergeinisse und die betroffenen Objekte aufgeführt, die zu bestimmten Zeitpunkten ausgelöst wurden. Zu den protokollierten Ergeignissen gehören folgende Typen:
+
+- Benutzer Login
+- Benutzer Löschung
+- Benutzer Passwordänderung
+
+![Eventlog Übersicht](/images/eventlogs_overview.png)
