@@ -5,10 +5,9 @@ openITCOCKPIT is installed via the package manager of your respective Linux dist
 ## Supported operating systems
 
 - Ubuntu
+    - Noble (24.04)
     - Jammy (22.04)
-    - Focal (20.04)
 - Debian
-    - Bullseye (11)
     - Bookworm (12)
 - Enterprise Linux
     - Red Hat 8
@@ -33,23 +32,6 @@ apt-get update
 ```
 
 ### Debian
-
-#### Debian 11
-
-Ensure you have enabled `contrib` and `non-free` repositories in `/etc/apt/sources.list`
-
-```
-echo "deb http://deb.debian.org/debian/ $(lsb_release -sc) main contrib non-free" > /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian/ $(lsb_release -sc) main contrib non-free" >> /etc/apt/sources.list
-
-echo "deb http://deb.debian.org/debian-security/ $(lsb_release -sc)-security main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian-security/ $(lsb_release -sc)-security main contrib non-free" >> /etc/apt/sources.list
-
-echo "deb http://deb.debian.org/debian/ $(lsb_release -sc)-updates main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian/ $(lsb_release -sc)-updates main contrib non-free" >> /etc/apt/sources.list
-```
-
-#### Debian 12
 
 Ensure you have enabled `contrib` and `non-free` repositories in `/etc/apt/sources.list.d/debian.sources`
 ```
@@ -109,7 +91,7 @@ The web server will be configured automatically. The phpMyAdmin interface can th
 
 ## System requirements
 
-- Ubuntu Linux 64 bit (22.04, 20.04, 18.04), Debian Linux 64 bit (11, 10)
+- Ubuntu Linux 64 bit,  Debian Linux 64 bit, RHEL 64 bit
 - 2 CPU cores (x86-64 or arm64)
 - 2 GB RAM
 - 40 GB of free hard disk space
