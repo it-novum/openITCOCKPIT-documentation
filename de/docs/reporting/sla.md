@@ -107,3 +107,39 @@ einzelne Services haben eine eigene Verfügbarkeitsanzeige im  `Services ->Brows
 ![SLA Service details](/images/sla/sla_service_browser_details.png)
 
 Auf der SLA Service Übersicht bekommt man zusätzlich eine Auflistung der letzten 10 Tage.
+
+##SLA Host Status Übersicht für Hostgruppen
+
+Für die Hostgruppen gibt es eine Übersichtseite, die alle beinhalteten Hosts mit ihrem aktuellen SLA-Verfügbarkeitsstatus in Form einer Heatmap anzeigt. Die Hosts Status Übersicht ist in der erweiterten Ansicht der Hostgruppe als Tab eingebunden.   
+
+![SLA Hostgroup Hosts Status Übersicht](/images/sla/sla_hostgroup_hosts_status_overview.png)
+
+Hosts ohne Verfügbarkeitsstatus werden darüber als `Nicht kalkuliert` angezeigt. Die Anzeige führt über einen Link zur einer Übersicht dieser Hosts.
+
+![SLA Hostgroup Hosts Status Übersicht Nicht kakultierte Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_calculated.png)
+
+Hosts welche einem SLA nicht zugeordnet sind werden darüber als `Nicht in SLA` angezeigt. Die Anzeige führt über einen Link zur einer Übersicht dieser Hosts.
+
+![SLA Hostgroup Hosts Status Übersicht Nicht in SLA Hosts](/images/sla/sla_hostgroup_hosts_status_overview_not_sla.png)
+
+Der Status wir immer aufsteigend angezeigt. Das bedeutet, die Hosts mit der niedrigsten Verfügbarkeit werden zuerst angezeigt. 
+
+Jede einzelne Kachel zeigt den aktuellen Verfügbarkeitswert und den Mindestverfügbarkeitswert in % an und ist auf den SLA Tab in `Hosts->Browser` verlinkt (Darstellung: aktueller Verfügbarkeitswert / Mindestverfügbarkeitswert %). Sollte der der Mindestverfügbarkeitswert unterschritten werden, dann wird die Kachel rot eingefärbt, andernfalls grün.
+
+Unter den Verfügbarkeitswerten steht der Hostname, dem die Werte zugeordnet sind. 
+
+![SLA Hostgroup Hosts Status Übersicht Kachel](/images/sla/sla_hostgroup_hosts_status_overview_tile.png)
+
+Über `Aktion` kann die Heatmap als CSV Datei exportiert werden. 
+
+Die Hosts können über folgende Felder gefiltert werden:
+
+* Hostnamen
+* Verfügbarkeit (von, bis)
+* Container
+
+![SLA Hostgroup Hosts Status Übersicht Filter](/images/sla/sla_hostgroup_hosts_status_overview_filter.png)
+
+Diese Übersicht ist auch über die Hostgruppenübersicht direkt erreichbar, indem man auf das Kontextmenü der Elemente zurückgreift oder auf die SLA-Kennzeichnung drückt. Beides wird nur angezeigt, wenn die Hostgruppe oder deren Hosts einem SLA zugeordnet sind.  
+
+![SLA Hostgroup Hosts Übersicht Seite](/images/sla/sla_hostgroups_overview.png)
