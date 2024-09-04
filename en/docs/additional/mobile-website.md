@@ -38,6 +38,10 @@ After that you can open the page with your mobile device:
 ```text
 https://<hostname oder IP adresse>:4443
 ```
+#### Known Problems
+
+!!! info
+    Due to API adjustments, version 1.7 of the mobile website requires at least openITCOCKPIT version 4.8.1 as backend.
 
 ## Usage
 
@@ -66,6 +70,11 @@ After the successful login you will be redirected to the dashboard.
 The dashboard enables you to get a quick overview of the condition of your infrastructure. Unhandled hosts and services
 will be displayed first in their panels. With a click on a status you will be redirected to the corresponding filtered
 host or service list.
+
+#### Taktical Overviews
+![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }
+
+With version 1.7, the dashboard has been expanded to include the tactical overviews (hosts, services) that the logged in user has in the Server dashboard.
 
 ### Functions
 

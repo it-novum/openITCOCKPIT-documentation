@@ -5,6 +5,19 @@ The openITCOCKPIT desktop app is a standalone application that can be installed 
 
 ![dashboard](../images/oitc-desktop/desktop-dark.png)
 
+With version 4.7.0, the dashboard has been expanded to include the tactical overviews that the logged-in user has in the oitc dashboard.
+![dashboard](../images/oitc-desktop/tacticals-desktop.png)
+
+###### Furthermore, the following elements have been added with version 4.7.0:
+
+* Status pages
+* Notifications Index
+* Groups(Hosts, Services)
+* System downtimes
+
+!!! info
+    Due to API adjustments, version 4.7.0 requires at least openITCOCKPIT version 4.8.1 as backend for full functionality.
+
 ### Installation
 * Appropriate installation packages are available for every operating system - Linux, Windows, MacOS.
 * The app can be set to automatically search for updates when it starts - or manually via the settings page.

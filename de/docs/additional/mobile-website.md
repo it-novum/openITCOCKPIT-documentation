@@ -39,6 +39,11 @@ Danach können Sie die Seite mit Ihrem Mobilen Endgerät öffnen:
 https://<hostname oder IP adresse>:4443
 ```
 
+#### Bekannte Probleme
+
+!!! info
+    Wegen Api-Anpassungen benötigt die Version 1.7 der mobilen Webseite mindestens openITCOCKPIT Version 4.8.1 als Backend.
+
 ## Benutzung
 
 ![login](/images/mobile-website/login-screen.png){ width="300" }
@@ -63,7 +68,12 @@ Nach erfolgreichem Login werden Sie auf das Dashboard weitergeleitet.
 
 Das Dashboard ermöglicht eine schnelle Übersicht über den Zustand Ihrer Infrastruktur. Unbehandelte Hosts und Services
 werden in ihren jeweiligen spalten als erstes angezeigt, danach wird nach Status weiter sortiert.
-Mit einem klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste
+Mit einem klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste.
+
+#### Taktische Übersichten
+![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }
+
+Mit Version 1.7 ist das Dashboard um die taktischen Übersichten (Hosts, Services), die der angemeldete Benutzer im Server-Dashboard besitzt erweitert worden.
 
 
 
