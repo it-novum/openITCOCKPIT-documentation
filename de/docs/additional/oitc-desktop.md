@@ -5,6 +5,22 @@ Die openITCOCKPIT-Desktop-App ist eine Standalone-Application, die auf jedem mod
 
 ![dashboard](../images/oitc-desktop/desktop-dark.png)
 
+Mit Version 4.7.0 ist das Dashboard um die taktischenÜbersichten, die der angemeldete Benutzer im oitc-Dashboard besitzt erweitert worden.
+![dashboard](../images/oitc-desktop/tacticals-desktop.png)
+
+###### Weiterhin sind mit Version 4.7.0 folgende Element hinzugefügt worden:
+
+* Statusseiten
+* Notifications Index
+* Gruppen (Hosts, Services)
+* System Wartungen
+
+!!! info
+    Wegen Api-Anpassungen benötigt die Version 4.7.0 für volle Funktionalität mindestens openITCOCKPIT Version 4.8.1 als Backend.
+
+
+
+
 
 ### Installation
 * Es stehen für jedes Betriebssystem - Linux, Windows, Macos - entsprechende Installationspakete zur Verfügung.
