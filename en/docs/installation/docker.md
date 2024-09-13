@@ -100,7 +100,7 @@ docker compose up --pull always -d
 
 The Docker registry of openITCOCKPIT includes the following tags for all containers:
 
-- `latest` - latest stabel version of openITCOCKPIT (recommended)
+- `latest` - latest stable version of openITCOCKPIT (recommended)
 - A version such as `4.6.4` - These tags contain the specified version of openITCOCKPIT and can be used to obtain a specific stable version.
 
 - `nightly` - An **untested** build of openITCOCKPIT which has been automatically created and released. Can be used for testing new versions and features. **Not intended for production use!**
