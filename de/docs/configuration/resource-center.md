@@ -62,11 +62,11 @@ und Manager.
 | Benutzer     | :fontawesome-solid-xmark: | Benutzer die eine Erinnerungs- und Eskalationsmail bekommen                                                                   |
 | Manager      | :fontawesome-solid-xmark: | Benutzer die eine Eskalationsmail bekommen                                                                                    |
 
-#### Erinnerungsmail:
+#### Erinnerungsmail
 
 ![Erinnerungsmail](/images/scm/scm_reminder_mail.png)
 
-#### Eskalationsmail:
+#### Eskalationsmail
 
 ![Eskalationsmail](/images/scm/scm_escalation_mail.png)
 
