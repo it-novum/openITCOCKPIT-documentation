@@ -1,6 +1,6 @@
 # Service Capacity Management Modul (Ressourcen - Verwaltung Modul) <span class="badge badge-danger badge-outlined" title="Enterprise Edition">EE</span>
 
-Das Service Capacity Management kann über den Paketmanager von openITCOCKPIT installiert werden.
+Das Service Capacity Management Modul kann über den Paketmanager von openITCOCKPIT installiert werden.
 Navigieren Sie zu `Verwaltung -> Systemwerkzeuge -> Paketmanager` und installieren Sie das *ScmModule*
 
 Mit Service Capacity Management haben Provider die Möglichkeit den Status ihrer Ressourcen (z.B. IT-Services) zu einem
@@ -88,12 +88,12 @@ Alle Resources sind nach Status sortiert.
 Unbestätigte Ressourcen werden zuerst angezeigt.
 Eine Ressource kann einen der folgenden Status haben:
 
-| Status | Info              |
-|--------|-------------------|
-| 🟦     | - unbestätigt (0) |
-| 🟩     | - ok (1)          |
-| 🟧     | - warning (2)     |
-| 🟥     | - critical (3)    |
+| Status | Info            |
+|--------|-----------------|
+| 🟦     | unbestätigt (0) |
+| 🟩     | ok (1)          |
+| 🟧     | warning (2)     |
+| 🟥     | critical (3)    |
 
 Über den Menüpunkt `Set status for selected` kann der Status für mehrere Ressourcen gesetzt werden. Alternativ kann auch
 nur der Status für eine Ressource gesetzt werden.
