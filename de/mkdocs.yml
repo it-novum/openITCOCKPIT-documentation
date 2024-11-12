@@ -8,120 +8,121 @@ dev_addr: 0.0.0.0:8000
 nav:
   - 'Über openITCOCKPIT': 'index.md'
   - 'Installation':
-    - 'Installation': 'installation.md'
-    - 'Docker': 'installation/docker.md'
+      - 'Installation': 'installation.md'
+      - 'Docker': 'installation/docker.md'
   - 'Update':
-    - 'Allgemeines Update': 'update/general.md'
-    - 'Update Ubuntu Bionic auf Focal': 'update/ubuntu-bionic-to-focal.md'
-    - 'Update Ubuntu Focal auf Jammy': 'update/ubuntu-focal-to-jammy.md'
-    - 'Update Ubuntu Jammy auf Noble': 'update/ubuntu-jammy-to-noble.md'
-    - 'Update Debian Buster auf Bullseye': 'update/debian-buster-to-bullseye.md'
-    - 'Update Debian Bullseye auf Bookworm': 'update/debian-bullseye-to-bookworm.md'
+      - 'Allgemeines Update': 'update/general.md'
+      - 'Update Ubuntu Bionic auf Focal': 'update/ubuntu-bionic-to-focal.md'
+      - 'Update Ubuntu Focal auf Jammy': 'update/ubuntu-focal-to-jammy.md'
+      - 'Update Ubuntu Jammy auf Noble': 'update/ubuntu-jammy-to-noble.md'
+      - 'Update Debian Buster auf Bullseye': 'update/debian-buster-to-bullseye.md'
+      - 'Update Debian Bullseye auf Bookworm': 'update/debian-bullseye-to-bookworm.md'
   - 'Beginners Guide':
-    - 'Beginners Guide': 'beginners/beginners.md'
-    - 'Container Berechtigungen': 'beginners/container-permissions.md'
-    - 'Den ersten Host erstellen': 'beginners/create-first-host.md'
-    - 'Monitoring mit dem openITCOCKPIT Agent': 'beginners/openitcockpit-agent.md'
-    - 'Monitoring mit Checkmk': 'beginners/monitoring-checkmk.md'
-    - 'Monitoring durch NRPE': 'beginners/monitoring-nrpe.md'
-    - 'Monitoring mit Prometheus': 'monitoring/prometheus/#uberwachung-mit-prometheus-ee'
-    - 'Check by SSH': 'beginners/check-by-ssh.md'
-    - 'Browser Push-Benachrichtigungen einrichten': 'beginners/setup-browser-push-notifications.md'
-    - 'E-Mail Benachrichtigungen einrichten': 'beginners/setup-email-notifications.md'
+      - 'Beginners Guide': 'beginners/beginners.md'
+      - 'Container Berechtigungen': 'beginners/container-permissions.md'
+      - 'Den ersten Host erstellen': 'beginners/create-first-host.md'
+      - 'Monitoring mit dem openITCOCKPIT Agent': 'beginners/openitcockpit-agent.md'
+      - 'Monitoring mit Checkmk': 'beginners/monitoring-checkmk.md'
+      - 'Monitoring durch NRPE': 'beginners/monitoring-nrpe.md'
+      - 'Monitoring mit Prometheus': 'monitoring/prometheus/#uberwachung-mit-prometheus-ee'
+      - 'Check by SSH': 'beginners/check-by-ssh.md'
+      - 'Browser Push-Benachrichtigungen einrichten': 'beginners/setup-browser-push-notifications.md'
+      - 'E-Mail Benachrichtigungen einrichten': 'beginners/setup-email-notifications.md'
   - 'Monitoring':
-    - 'Grundlegende Prinzipien': 'monitoring/basic-principles.md'
-    - 'User Interface': 'monitoring/user-interface.md'
-    - 'Dashboard': 'monitoring/dashboard.md'
-    - 'Acknowledging' : 'monitoring/acknowledging.md'
-    - 'Downtimes': 'monitoring/downtimes.md'
-    - 'Graphing': 'monitoring/graphing.md'
-    - 'Überwachung mit Prometheus': 'monitoring/prometheus.md'
-    - 'Überwachung mit Checkmk': 'beginners/monitoring-checkmk/#monitoring-mit-checkmk-ce'
-    - 'Monitoring mit NRPE': 'beginners/monitoring-nrpe/#monitoring-durch-nrpe'
-    - 'Karten': 'monitoring/maps.md'
-    - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
+      - 'Grundlegende Prinzipien': 'monitoring/basic-principles.md'
+      - 'User Interface': 'monitoring/user-interface.md'
+      - 'Dashboard': 'monitoring/dashboard.md'
+      - 'Acknowledging': 'monitoring/acknowledging.md'
+      - 'Downtimes': 'monitoring/downtimes.md'
+      - 'Graphing': 'monitoring/graphing.md'
+      - 'Überwachung mit Prometheus': 'monitoring/prometheus.md'
+      - 'Überwachung mit Checkmk': 'beginners/monitoring-checkmk/#monitoring-mit-checkmk-ce'
+      - 'Monitoring mit NRPE': 'beginners/monitoring-nrpe/#monitoring-durch-nrpe'
+      - 'Karten': 'monitoring/maps.md'
+      - 'Eventkorrelation': 'monitoring/eventcorrelation.md'
   - 'Alerting / Benachrichtigungen':
-    - 'Benachrichtigungen': 'alerting/alerting.md'
-    - 'E-Mail Benachrichtigungen': 'beginners/setup-email-notifications/#e-mail-benachrichtigungen-einrichten'
-    - 'Push Benachrichtigungen': 'beginners/setup-browser-push-notifications/#browser-push-benachrichtigungen-einrichten'
-    - 'Systemzustand Benachrichtigungen': 'alerting/system-health-notifications.md'
-    - 'Axios Assyst': 'alerting/axiosassyst.md'
-    - 'Mattermost': 'alerting/mattermost.md'
-    - 'PagerDuty': 'alerting/pagerduty.md'
-    - 'Slack': 'alerting/slack.md'
-    - 'ServiceNow': 'alerting/servicenow.md'
-    - 'E-Mail Layouts anpassen': 'alerting/email-layouts.md'
-    - 'Custom Alert Module': 'alerting/custom-alert-module.md'
-    - 'Microsoft Teams': 'alerting/microsoft-teams.md'
+      - 'Benachrichtigungen': 'alerting/alerting.md'
+      - 'E-Mail Benachrichtigungen': 'beginners/setup-email-notifications/#e-mail-benachrichtigungen-einrichten'
+      - 'Push Benachrichtigungen': 'beginners/setup-browser-push-notifications/#browser-push-benachrichtigungen-einrichten'
+      - 'Systemzustand Benachrichtigungen': 'alerting/system-health-notifications.md'
+      - 'Axios Assyst': 'alerting/axiosassyst.md'
+      - 'Mattermost': 'alerting/mattermost.md'
+      - 'PagerDuty': 'alerting/pagerduty.md'
+      - 'Slack': 'alerting/slack.md'
+      - 'ServiceNow': 'alerting/servicenow.md'
+      - 'E-Mail Layouts anpassen': 'alerting/email-layouts.md'
+      - 'Custom Alert Module': 'alerting/custom-alert-module.md'
+      - 'Microsoft Teams': 'alerting/microsoft-teams.md'
   - 'Reporting':
       - 'Reporting': 'reporting/reporting.md'
       - 'SLA': 'reporting/sla.md'
   - 'Konfiguration':
-    - 'Container': 'configuration/container.md'
-    - 'Kommandos': 'configuration/commands.md'
-    - 'Hosts und Services': 'configuration/hosts-services.md'
-    - 'Benutzerverwaltung': 'configuration/usermanagement.md'
-    - 'LDAP Integration': 'configuration/ldap-integration.md'
-    - 'Makros': 'configuration/macros.md'
-    - 'Zeitabschnitte' : 'configuration/timeperiods.md'
-    - 'Change Kalender': 'configuration/change_calendar.md'
-    - 'Kalender': 'configuration/calendar.md'
-    - 'Cronjobs': 'configuration/cronjobs.md'
-    - 'Paketmanager': 'configuration/packagemanager.md'
-    - 'Backup & Restore': 'configuration/backup-restore.md'
-    - 'Konfigurationsdateien': 'configuration/config-file-editor.md'
-    - 'Proxy': 'configuration/proxy.md'
-    - 'Systemeinstellungen': 'configuration/systemsettings.md'
-    - 'Verteiltes Monitoring und Satelliten': 'configuration/distribute-module.md'
-    - 'SNMP Traps': 'configuration/snmp-trap-module.md'
-    - 'Import / Export': 'configuration/import_export'
-    - 'Import Modul': 'configuration/import-module.md'
+      - 'Container': 'configuration/container.md'
+      - 'Kommandos': 'configuration/commands.md'
+      - 'Hosts und Services': 'configuration/hosts-services.md'
+      - 'Benutzerverwaltung': 'configuration/usermanagement.md'
+      - 'LDAP Integration': 'configuration/ldap-integration.md'
+      - 'Makros': 'configuration/macros.md'
+      - 'Zeitabschnitte': 'configuration/timeperiods.md'
+      - 'Change Kalender': 'configuration/change_calendar.md'
+      - 'Kalender': 'configuration/calendar.md'
+      - 'Cronjobs': 'configuration/cronjobs.md'
+      - 'Paketmanager': 'configuration/packagemanager.md'
+      - 'Backup & Restore': 'configuration/backup-restore.md'
+      - 'Konfigurationsdateien': 'configuration/config-file-editor.md'
+      - 'Proxy': 'configuration/proxy.md'
+      - 'Systemeinstellungen': 'configuration/systemsettings.md'
+      - 'Verteiltes Monitoring und Satelliten': 'configuration/distribute-module.md'
+      - 'SNMP Traps': 'configuration/snmp-trap-module.md'
+      - 'Import / Export': 'configuration/import_export'
+      - 'Import Modul': 'configuration/import-module.md'
+      - 'Service Capacity Management Modul': 'configuration/resource-center.md'
   - 'Development':
-    - 'API': 'development/api.md'
-    - 'Datenbankschema': 'development/database-schema.md'
-    - 'Entwicklungsumgebung einrichten': 'development/setup-dev-env.md'
-    - 'Ein neues Modul erstellen':
-      - 'Einleitung': 'development/create-new-module/introduction.md'
-      - 'Modul erstellen': 'development/create-new-module/bake-module.md'
-      - 'Hello World': 'development/create-new-module/hello-world.md'
-      - 'Datenbankzugriff': 'development/create-new-module/database.md'
-      - 'Additionalplugin_database': 'development/create-new-module/additionalplugin-database.md'
-    - 'Ein neues Check Plugin erstellen': 'development/new-check-plugin.md'
-    - 'Nightly Repository': 'development/nightly-repository.md'
+      - 'API': 'development/api.md'
+      - 'Datenbankschema': 'development/database-schema.md'
+      - 'Entwicklungsumgebung einrichten': 'development/setup-dev-env.md'
+      - 'Ein neues Modul erstellen':
+          - 'Einleitung': 'development/create-new-module/introduction.md'
+          - 'Modul erstellen': 'development/create-new-module/bake-module.md'
+          - 'Hello World': 'development/create-new-module/hello-world.md'
+          - 'Datenbankzugriff': 'development/create-new-module/database.md'
+          - 'Additionalplugin_database': 'development/create-new-module/additionalplugin-database.md'
+      - 'Ein neues Check Plugin erstellen': 'development/new-check-plugin.md'
+      - 'Nightly Repository': 'development/nightly-repository.md'
   - 'Weitere Artikel':
-    - 'Logging': 'additional/logs.md'
-    - 'Theming und CI': 'additional/theming.md'
-    - 'Troubleshooting': 'additional/troubleshooting.md'
-    - 'Mod-Gearman': 'additional/mod-gearman.md'
-    - 'Support': 'additional/support.md'
-    - 'Passwörter zurücksetzen': 'additional/reset-passwords.md'
-    - 'Graphing Backend': 'additional/graphing-backend.md'
-    - 'Upgrade v3.x zu v4.x': 'additional/upgradev3-v4.md'
-    - 'openITCOCKPIT hinter einem Reverse Proxy betreiben': 'additional/behind-reverse-proxy.md'
-    - 'Mobile Webseite': 'additional/mobile-website.md'
-    - 'openITCOCKPIT-Desktop': 'additional/oitc-desktop.md'
-    - 'Ports': 'additional/ports.md'
-    - 'Kiosk Mode': 'additional/kiosk-mode.md'
+      - 'Logging': 'additional/logs.md'
+      - 'Theming und CI': 'additional/theming.md'
+      - 'Troubleshooting': 'additional/troubleshooting.md'
+      - 'Mod-Gearman': 'additional/mod-gearman.md'
+      - 'Support': 'additional/support.md'
+      - 'Passwörter zurücksetzen': 'additional/reset-passwords.md'
+      - 'Graphing Backend': 'additional/graphing-backend.md'
+      - 'Upgrade v3.x zu v4.x': 'additional/upgradev3-v4.md'
+      - 'openITCOCKPIT hinter einem Reverse Proxy betreiben': 'additional/behind-reverse-proxy.md'
+      - 'Mobile Webseite': 'additional/mobile-website.md'
+      - 'openITCOCKPIT-Desktop': 'additional/oitc-desktop.md'
+      - 'Ports': 'additional/ports.md'
+      - 'Kiosk Mode': 'additional/kiosk-mode.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
   - copyright_year.js
 
 markdown_extensions:
-    - toc:
-        permalink: True
-    - pymdownx.highlight
-    - pymdownx.superfences
-    - pymdownx.tabbed:
-        alternate_style: true
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-    - attr_list
-    - def_list
-    - markdown_include.include:
-          base_path: docs
-    - admonition
+  - toc:
+      permalink: True
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - def_list
+  - markdown_include.include:
+      base_path: docs
+  - admonition
 
 extra_css:
   - bootstrap-selection.css
