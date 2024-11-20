@@ -65,17 +65,37 @@ After the successful login you will be redirected to the dashboard.
 
 ### Dashboard
 
-![dashboard](/images/mobile-website/dashboard.png){ width="300" }
+![dashboard](/images/mobile-website/mobile-dashboard-en.png){ width="300" }
 
-The dashboard enables you to get a quick overview of the condition of your infrastructure. Unhandled hosts and services
-will be displayed first in their panels. With a click on a status you will be redirected to the corresponding filtered
-host or service list.
+The dashboard enables a quick overview of the condition of your infrastructure.  
+With any element that is displayed on the dashboard pages, it can be deepened by clicking on the corresponding detail pages.
+On each side that can be deepened on the top left there is a back sign (<), which can be returned to the dashboard, this can also be done over several recesses.
+
+#### Overview
+The overview shows the number of hosts and services that fall into the respective status.
+Untreated hosts and services are displayed in their respective columns.
+With a click on the respective status, you can get to the accordingly filtered host or service list.
 
 #### Taktical Overviews
 ![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }
 
-With version 1.7, the dashboard has been expanded to include the tactical overviews (hosts, services) that the logged in user has in the Server dashboard.
+Among the tactical overviews, the tactical overviews configured in the OITC-Backend are displayed.
+If entries are displayed in the statusicons - larger 0 - can be deepened by clicking on the corresponding list (hosts, services), the same applies to the details buttons.
+If there are no configured in the server dashboard, then no one is displayed here!
 
+#### Alerts (Notifications)
+![dashboard](/images/mobile-website/mobile-notifications-en.png){ width="300" }
+
+Here the notifications of the last 24 hours with the stabbing status are displayed. A corresponding widget is only displayed
+If there were notifications during this period.
+The respective widget includes a list through which scrolling can be scrolled - a maximum of 25 entries are displayed.
+The list is sorted by the number and the last (current date) of the notification (s). Number does not mean the number of noticeable contacts,
+but the number of notifications for this host (service) itself.
+
+#### Statuspages
+![dashboard](/images/mobile-website/mobile-statuspages-en.png){ width="300" }
+
+If status pages are configured in the OITC backend, they are sorted here according to the highest cumulative status (see reporting-> status pages).
 ### Functions
 
 #### Reset Check time <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>

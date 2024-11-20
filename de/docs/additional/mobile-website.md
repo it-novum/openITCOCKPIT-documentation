@@ -64,16 +64,38 @@ Nach erfolgreichem Login werden Sie auf das Dashboard weitergeleitet.
 
 ### Dashboard
 
-![dashboard](/images/mobile-website/dashboard.png){ width="300" }
+![dashboard](/images/mobile-website/mobile-dashboard-de.png){ width="300" }
 
-Das Dashboard ermöglicht eine schnelle Übersicht über den Zustand Ihrer Infrastruktur. Unbehandelte Hosts und Services
-werden in ihren jeweiligen spalten als erstes angezeigt, danach wird nach Status weiter sortiert.
-Mit einem klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste.
+Das Dashboard ermöglicht eine schnelle Übersicht über den Zustand Ihrer Infrastruktur.  
+Es kann bei jedem Element, das auf dem Dashboardseiten angezeigt wird, durch Anklicken zu den entsprechenden Detailseiten vertieft werden.
+Auf jeder Seite, auf die vertieft werden kann befindet sich oben links ein Zurückzeichen(<), über das zum Dashboard zurückgekehrt werden kann, das geht auch über mehrere Vertiefungen.
+
+#### Übersicht
+Der erste Abschnitt der Dashboardübersicht, zeigt den Gesamtstaus der Hosts und Services an. Dieser Abschnitt ist immer vorhanden, Durch Anklicken der entsprechenden Einträge kann vertieft werden.
+
+Die Übersicht zeigt die Anzahl der Hosts und Services, die in den jeweiligen Status fallen.
+Unbehandelte Hosts und Services werden in ihren jeweiligen Spalten extra angezeigt.
+Mit einem Klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste.
 
 #### Taktische Übersichten
 ![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }
 
-Mit Version 1.7 ist das Dashboard um die taktischen Übersichten (Hosts, Services), die der angemeldete Benutzer im Server-Dashboard besitzt erweitert worden.
+Unter den taktischen Übersichten werden die im OITC-Backend Dashboard des Users konfigurierten taktischen Übersichten angezeigt.
+Werden in den Statusicons Einträge angezeigt - größer 0 - kann durch Anklicken auf die entsprechende Liste (Hosts, Services) vertieft werden, gleiches gilt für die Details Buttons.
+Sind im Server Dashboard keine konfiguriert, dann werden hier auch keine angezeigt!
+
+#### Alarme (Benachrichtigugen)
+![dashboard](/images/mobile-website/mobile-notifications-de.png){ width="300" }
+
+Hier werden die Benachrichtigungen der letzten 24 Stunden mit dem entstechenden Status angezeigt. Ein entsprechendes Widget wird nur angezeigt, 
+wenn es in diesem Zeitraum auch Benachrichtigungen dazu gab. 
+Das jeweilige Widget beinhaltet eine Liste, durch die gescrollt werden kann - es werden maximal 25 Einträge angezeigt. 
+Die Liste ist sortiert nach der Anzahl und dem letzten (aktuellen Datum) der Benachrichtigung(en). Anzahl bedeutet hier nicht die Anzahl der benachrichtgten Kontakte, 
+sondern die Anzahl der Benachrichtigungen zu diesem Host(Service) selbst.
+
+#### Statusseiten
+![dashboard](/images/mobile-website/mobile-statuspages-de.png){ width="300" }
+Sind im OITC-Backend Statusseiten konfiguriert, so werden diese hier nach höchstem kumuliertem Status sortiert (s. Reporting->Statusseiten) angezeigt.
 
 
 

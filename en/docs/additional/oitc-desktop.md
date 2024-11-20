@@ -1,24 +1,38 @@
 # openITCOCKPIT-Desktop
 The openITCOCKPIT desktop app is a standalone application that can be installed on any modern operating system and provides an overview of current monitoring events and status updates. openITCOCKPIT desktop uses the openITCOCKPIT HTTP API to communicate with the openITCOCKPIT server.
 
-![dashboard](../images/oitc-desktop/desktop-ligt.png)
+## Dashboard
+![dashboard](../images/oitc-desktop/desktop-app-dashboard.png)
 
-![dashboard](../images/oitc-desktop/desktop-dark.png)
+The dashboard consists of the overview page plus further views (alarms, status pages) that can be reached over the tabs in the top right.
 
-With version 4.7.0, the dashboard has been expanded to include the tactical overviews that the logged-in user has in the oitc dashboard.
-![dashboard](../images/oitc-desktop/tacticals-desktop.png)
+#### Overview
+The first section of the dashboard overview shows the total congestion of the hosts and services. This section is always available.
+You can go into more detail by clicking on the corresponding entries.
 
-###### Furthermore, the following elements have been added with version 4.7.0:
+#### Takctical Overviews
+If tactical overviews are configured in the server dashboard of the user, they are also displayed here.
+Clicking the corresponding entries can be deepened.
 
-* Status pages
-* Notifications Index
-* Groups(Hosts, Services)
-* System downtimes
+#### Changeclendar
+If change calendars are defined on the server to which the logged-in user has access, these are also displayed here
+The display of the individual calendars can be configured.
 
-!!! info
-    Due to API adjustments, version 4.7.0 requires at least openITCOCKPIT version 4.8.1 as backend for full functionality.
+#### Top Alerts(Notifications)
+![dashboard](../images/oitc-desktop/desktop-alerts.png)
 
-### Installation
+The notifications of the last 24 hours are displayed here with their status.
+The respective widget contains a list that can be scrolled through.
+The list is sorted according to the number and the last (current date) of the notification(s). Number here does not mean the number of contacts notified,
+but the number of notifications for this host (service) itself.
+Clicking on the corresponding host(service) links to the notification log view, where you can then see which contacts have been notified and how.
+#### Statusseiten
+![dashboard](../images/oitc-desktop/desktop-statuspages.png)
+
+If status pages are configured in the OITC backend, they are sorted here according to the highest cumulative status (see reporting-> status pages).
+
+
+## Installation
 * Appropriate installation packages are available for every operating system - Linux, Windows, MacOS.
 * The app can be set to automatically search for updates when it starts - or manually via the settings page.
 
@@ -156,6 +170,15 @@ The host and services views and their detail pages are derived from the correspo
 ![serviceslist](../images/oitc-desktop/servicelist.png)
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
+
+### More Views
+The further Views::
+
+* SystemDowntimes,
+* Groups (Hosts,Services),
+* Notification-Log
+
+have been taken 1:1 from the server and therefore require no further documentation.
 
 ## Custom Widgets
 With version 4.6.9 of the openITCOCKPIT-Desktop App it is possible to configure and show any number of widgets.
