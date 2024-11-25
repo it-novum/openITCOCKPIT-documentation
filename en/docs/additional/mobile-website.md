@@ -90,7 +90,8 @@ Here the notifications of the last 24 hours with the stabbing status are display
 If there were notifications during this period.
 The respective widget includes a list through which scrolling can be scrolled - a maximum of 25 entries are displayed.
 The list is sorted by the number and the last (current date) of the notification (s). Number does not mean the number of noticeable contacts,
-but the number of notifications for this host (service) itself.
+but the number of notifications for this host (service) itself.  
+The evaluation of the alarms is available from OITC version 4.8.3.
 
 #### Statuspages
 ![dashboard](/images/mobile-website/mobile-statuspages-en.png){ width="300" }
