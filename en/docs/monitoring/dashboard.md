@@ -130,6 +130,15 @@ The host or service status overview widget shows the number of hosts or services
 
 The host or service status overview only shows the number of hosts or services in the selected status. This selection can be made via the widget configuration interface. It is also possible to filter according to the host or host and service name. The widget configuration interface can be accessed via the gear symbol in the upper right area of the widget.
 
+##### Host/Service Top Alerts
+![host service top alerts](/images/server-Top-alerts.png)
+
+The Host or Service Top Alerts widgets show the notification alerts for the configured status within the retroactively configured time period. 
+It is grouped by number and most recent date. Count here refers to the number of alarms themselves and not the number of notifications sent. So if 20 people have been notified of an alarm, only 1 alarm will be counted. Otherwise, it will distort the display of the actual alarms.
+
+###### Configuration
+The widgets can be configured according to status and the period to be viewed.
+
 ##### Automap
 ![automap widget](/images/dashboard-automapwidget.png)
 
