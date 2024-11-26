@@ -20,7 +20,7 @@ Sind auf dem Server Änderungskalender definiert, auf die der angemeldete User Z
 Die Anzeige der einzelnen Kalener ist konfigurierbar.
 
 #### Top Alarme
-![dashboard](../images/oitc-desktop/desktop-alerts.png)
+![dashboard](../images/oitc-desktop/desktop-top-alerts.png)
 
 Hier werden die Benachrichtigungen der letzten 24 Stunden mit dem entstechenden Status angezeigt. 
 Das jeweilige Widget beinhaltet eine Liste, durch die gescrollt werden kann.

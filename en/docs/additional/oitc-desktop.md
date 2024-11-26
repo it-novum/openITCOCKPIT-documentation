@@ -19,7 +19,7 @@ If change calendars are defined on the server to which the logged-in user has ac
 The display of the individual calendars can be configured.
 
 #### Top Alerts(Notifications)
-![dashboard](../images/oitc-desktop/desktop-alerts.png)
+![dashboard](../images/oitc-desktop/desktop-top-alerts.png)
 
 The notifications of the last 24 hours are displayed here with their status.
 The respective widget contains a list that can be scrolled through.

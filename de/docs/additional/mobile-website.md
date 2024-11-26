@@ -71,41 +71,49 @@ Es kann bei jedem Element, das auf dem Dashboardseiten angezeigt wird, durch Ank
 Auf jeder Seite, auf die vertieft werden kann befindet sich oben links ein Zurückzeichen(<), über das zum Dashboard zurückgekehrt werden kann, das geht auch über mehrere Vertiefungen.
 
 #### Übersicht
-Der erste Abschnitt der Dashboardübersicht, zeigt den Gesamtstaus der Hosts und Services an. 
-Dieser Abschnitt ist immer vorhanden, Durch Anklicken der entsprechenden Einträge kann vertieft werden.  
-Ab OIT-Version 4.8.3 steht ein Resourcenmanagement Modul (Enterprise) zur Verfügung. Zu iesem Modul gehört auch ein Widget, auf dem der Benutzer den aktuellen Status der ihm zugewiesenen Resourcen angezeigt bekommt.
-
-
+Die Dashboardübersicht zeigt den Gesamtstaus der Hosts und Services an.
+Dieser Abschnitt ist immer vorhanden.
 Die Übersicht zeigt die Anzahl der Hosts und Services, die in den jeweiligen Status fallen.
-Unbehandelte Hosts und Services werden in ihren jeweiligen Spalten extra angezeigt.
+Unbehandelte Hosts und Services werden in ihren jeweiligen Spalten extra angezeigt.  
 Mit einem Klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste.
+Durch Anklicken der entsprechenden Einträge kann vertieft werden.  
+
+Besitzt der Benutzer in seinem openITCOCKPIT Server Dashboard ein Ressourcenübersichts-Widget, so wird dieses auf dieser Seite auch angezeigt - noch vor der Übersicht.
+Per Klick auf die entsprechenden Statuseinträge (größer 0) kann auf die ensprechenden Ressourcen vertieft werden.
+
 
 
 #### Taktische Übersichten
 ![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }
 
-Unter den taktischen Übersichten werden die im OITC-Backend Dashboard des Users konfigurierten taktischen Übersichten angezeigt.
+Unter den taktischen Übersichten werden die im openITCOCKPIT-Backend Dashboard des Users konfigurierten taktischen Übersichten angezeigt.
 Werden in den Statusicons Einträge angezeigt - größer 0 - kann durch Anklicken auf die entsprechende Liste (Hosts, Services) vertieft werden, gleiches gilt für die Details Buttons.
 Sind im Server Dashboard keine konfiguriert, dann werden hier auch keine angezeigt!
 
 #### Alarme (Benachrichtigugen)
 ![dashboard](/images/mobile-website/mobile-notifications-de.png){ width="300" }
 
-
-Hier werden die Benachrichtigungen der letzten 24 Stunden mit dem entstechenden Status angezeigt. Ein entsprechendes Widget wird nur angezeigt, 
+Hier werden die Benachrichtigungen der letzten 24 Stunden mit dem entsprendem Status angezeigt. Ein entsprechendes Widget wird nur angezeigt, 
 wenn es in diesem Zeitraum auch Benachrichtigungen dazu gab. 
 Das jeweilige Widget beinhaltet eine Liste, durch die gescrollt werden kann - es werden maximal 25 Einträge angezeigt. 
 Die Liste ist sortiert nach der Anzahl und dem letzten (aktuellen Datum) der Benachrichtigung(en). Anzahl bedeutet hier nicht die Anzahl der benachrichtgten Kontakte, 
 sondern die Anzahl der Benachrichtigungen zu diesem Host(Service) selbst.  
-Die Auswertung der Alarme steht ab OITC-Version 4.8.3 zur Verfügung.
+Die Auswertung der Alarme steht ab openITCOCKPIT Version 4.8.3 zur Verfügung.
 
 #### Statusseiten
 ![dashboard](/images/mobile-website/mobile-statuspages-de.png){ width="300" }
-Sind im OITC-Backend Statusseiten konfiguriert, so werden diese hier nach höchstem kumuliertem Status sortiert (s. Reporting->Statusseiten) angezeigt.
+Sind im openITCOCKPIT-Backend Statusseiten konfiguriert, so werden diese hier nach höchstem kumuliertem Status sortiert (s. Reporting->Statusseiten) angezeigt.
 
 
 
 ### Funktionen
+
+#### Ressourcenstatus setzen
+Ist auf dem openItcockpit Server das SCM-Module installiert, dann wird die Ressourcenliste ebenfalls auf der mobilen Seite angzeigt.
+Dort kann dann der Ressourcenstatus neu gesetzt werden.
+![dashboard](/images/mobile-website/mobile-resources.png){ width="300" } | ![dashboard](/images/mobile-website/mobile-resource-form.png){ width="300" }
+
+Zu den Ressourcengruppen können Detailinformationen aufgerufen werden ![dashboard](/images/mobile-website/mobile-resourcegroup.png){ width="300" }
 
 #### Prüfzeit zurücksetzen (Reset Check time) <span class="badge badge-info badge-outlined" title="Host">Host</span> <span class="badge badge-info badge-outlined" title="Host">Service</span>
 Wählen Sie den gewünschten Host oder Service aus der jeweiligen Liste aus und klicken Sie anschließend auf den Reiter
