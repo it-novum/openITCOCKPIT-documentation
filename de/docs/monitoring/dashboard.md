@@ -134,6 +134,15 @@ Das Host- bzw. Servicestatusübersicht-Widget zeigt die Anzahl der Hosts bzw. Se
 
 Die Host bzw. Servicestatus Übersicht zeigt immer nur die Anzahl der Hosts bzw. Services in dem gewählten Status an. Diese auswahl kann über die Konfiguration des Widgets getroffen werden. Zudem kann auch nach dem Host bzw. Host und Servicenamen gefiltert werden. Zur Konfigurationsoberfläche des Widgets gelangt man über das Zahnradsymbol im oberen rechten Bereich des Widgets.
 
+##### Host/Service Top Alerts
+![host service top alerts](/images/server-Top-alerts.png)
+
+Die Host bzw. Service Top Alerts Widgets zeigen die Benachrichtigungsalarme zu dem konfigurierten Status innerhalb des rückwirkenden konfiguriertem Zeitraums.
+Es wird nach Anzahl und aktuellstem Datum gruppiert. Mit Anzahl ist hier die Anzahl der Alarme selbst und nicht die Anzahl verschickten Benachrichtigungen gemeint. Also wenn bei einem Alarm 20 Personen benachrichtigt wurden, wird nur 1 Alarm gezählt. Sonst verfälscht es die Anzeige der tatsächlichen Alarme.
+
+###### Konfiguration  
+Die Widgets können nach Status und zu betrachtrendem Zeitraum konfiguriert werden. 
+
 ##### Automatische Karte
 ![automap widget](/images/dashboard-automapwidget.png)
 

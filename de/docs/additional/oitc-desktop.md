@@ -1,28 +1,40 @@
 # openITCOCKPIT-Desktop
 Die openITCOCKPIT-Desktop-App ist eine Standalone-Application, die auf jedem modernen Betriebssystem installiert werden kann und einen Überblick über aktuelle Überwachungsereignisse und Statusaktualisierungen bietet. openITCOCKPIT-Desktop nutzt die openITCOCKPIT HTTP API zur Kommunikation mit dem openITCOCKPIT Server.
 
-![dashboard](../images/oitc-desktop/desktop-ligt.png)
+## Dashboard
+![dashboard](../images/oitc-desktop/desktop-app-dashboard.png)
 
-![dashboard](../images/oitc-desktop/desktop-dark.png)
-
-Mit Version 4.7.0 ist das Dashboard um die taktischenÜbersichten, die der angemeldete Benutzer im oitc-Dashboard besitzt erweitert worden.
-![dashboard](../images/oitc-desktop/tacticals-desktop.png)
-
-###### Weiterhin sind mit Version 4.7.0 folgende Element hinzugefügt worden:
-
-* Statusseiten
-* Notifications Index
-* Gruppen (Hosts, Services)
-* System Wartungen
-
-!!! info
-    Wegen Api-Anpassungen benötigt die Version 4.7.0 für volle Funktionalität mindestens openITCOCKPIT Version 4.8.1 als Backend.
+Das Dashboard besteht aus der Übersichtsseite plus weiteren Ansichten (Alarme, Statusseiten), die oben rechts über die Tabs erreichbar sind.
 
 
+#### Übersicht
+Der erste Abschnitt der Dashboardübersicht, zeigt den Gesamtstaus der Hosts und Services an. Dieser Abschnitt ist immer vorhanden.
+Durch Anklicken der entsprechenden Einträge kann vertieft werden.
+
+#### Taktische Übersichten
+Sind im Server Dashboard des Users taktische Übersichten konfiguriert, so werden diese auch hier angezeigt.
+Durch Anklicken der entsprechenden Einträge kann vertieft werden.
+
+#### Änderungskalender
+Sind auf dem Server Änderungskalender definiert, auf die der angemeldete User Zugriff hat, so werden diese hier auch angezeigt
+Die Anzeige der einzelnen Kalener ist konfigurierbar.
+
+#### Top Alarme
+![dashboard](../images/oitc-desktop/desktop-top-alerts.png)
+
+Hier werden die Benachrichtigungen der letzten 24 Stunden mit dem entstechenden Status angezeigt. 
+Das jeweilige Widget beinhaltet eine Liste, durch die gescrollt werden kann.
+Die Liste ist sortiert nach der Anzahl und dem letzten (aktuellen Datum) der Benachrichtigung(en). Anzahl bedeutet hier nicht die Anzahl der benachrichtgten Kontakte,
+sondern die Anzahl der Benachrichtigungen zu diesem Host(Service) selbst.
+Durch Anklicken des enstprechenden Hosts(service) wird auf die Benachrichtigungs-Log Ansicht verlinkt, wo dann zu sehen ist, welche Kontakte auf welchem Weg benachrichtigt worden sind.
+
+#### Statusseiten
+![dashboard](../images/oitc-desktop/desktop-statuspages.png)
+
+Sind im OITC-Backend Statusseiten konfiguriert, so werden diese hier nach höchstem kumuliertem Status sortiert (s. Reporting->Statusseiten) angezeigt.
 
 
-
-### Installation
+## Installation
 * Es stehen für jedes Betriebssystem - Linux, Windows, Macos - entsprechende Installationspakete zur Verfügung.
 * Es kann in der App eingestellt werden, dass beim Start - oder manuell über die Settingsseite - automatisch nach Updates gesucht wird.
 
@@ -161,6 +173,15 @@ Die Host-, Services-Views und ihre Detailseiten sind von den entsprechenden Seit
 ![serviceslist](../images/oitc-desktop/servicelist.png)
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
+
+### Weitere Ansichten
+Die weiteren Ansichten:
+
+* SystemDowntiems,
+* Gruppen,
+* Notification-Log
+
+sind 1:1 aus dm Server übernommen worden, und bedürfen daher keiner weiteren Dokuentation.
 
 ## Custom Widgets
 Mit Version 4.6.9 der openITCOCKPIT-Desktop App ist die Möglichkeit geschaffen worden, beliebig viele Widgets zu konfigurieren und anzuzeigen.
