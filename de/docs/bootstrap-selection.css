@@ -265,3 +265,7 @@ kbd kbd {
   border-color: #ef1c1c;
   color: #ef1c1c
 }
+
+.text-danger {
+    color: #ef1c1c
+}

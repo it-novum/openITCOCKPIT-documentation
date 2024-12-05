@@ -78,13 +78,20 @@ Unbehandelte Hosts und Services werden in ihren jeweiligen Spalten extra angezei
 Mit einem Klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste.
 Durch Anklicken der entsprechenden Einträge kann vertieft werden.  
 
-Besitzt der Benutzer in seinem openITCOCKPIT Server Dashboard ein Ressourcenübersichts-Widget, so wird dieses auf dieser Seite auch angezeigt - noch vor der Übersicht.
-Per Klick auf die entsprechenden Statuseinträge (größer 0) kann auf die ensprechenden Ressourcen vertieft werden.
+##### Resourcenübersichts-Widget *
+Besitzt der Benutzer in seinem ***openITCOCKPIT Server Dashboard*** ein Ressourcenübersichts-Widget, so wird dieses auf dieser Seite auch angezeigt - noch vor der Übersicht.
+Per Klick auf die entsprechenden Statuseinträge (größer 0) kann auf die ensprechenden Ressourcen vertieft werden.  
+
+!!! info
+    Das Ressourcenübersichts-Widget erscheint nur auf der mobilen Dashboardübersicht, wenn es auch im openITCOCKPIT Server Dashboard vorhanden ist.  
 
 
-
-#### Taktische Übersichten
+#### Taktische Übersichten *
 ![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }
+
+
+!!! info
+    Es werden die - **und nur die** - taktischen Übersichten angezeigt, die im openITCOCKPIT-Backend Dashboard des Users konfiguriert sind.
 
 Unter den taktischen Übersichten werden die im openITCOCKPIT-Backend Dashboard des Users konfigurierten taktischen Übersichten angezeigt.
 Werden in den Statusicons Einträge angezeigt - größer 0 - kann durch Anklicken auf die entsprechende Liste (Hosts, Services) vertieft werden, gleiches gilt für die Details Buttons.
