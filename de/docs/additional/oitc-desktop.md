@@ -11,9 +11,19 @@ Das Dashboard besteht aus der Übersichtsseite plus weiteren Ansichten (Alarme, 
 Der erste Abschnitt der Dashboardübersicht, zeigt den Gesamtstaus der Hosts und Services an. Dieser Abschnitt ist immer vorhanden.
 Durch Anklicken der entsprechenden Einträge kann vertieft werden.
 
+#### Resourcenübersichts-Widget *
+![dashboard](../images/oitc-desktop/desktop-scm-widget.png)
+Besitzt der Benutzer in seinem ***openITCOCKPIT Server Dashboard*** ein Ressourcenübersichts-Widget, so wird dieses auf dieser Seite auch angezeigt - noch vor der Übersicht.
+Per Klick auf die entsprechenden Statuseinträge (größer 0) kann auf die ensprechenden Ressourcen vertieft werden.
+
+!!! info
+    Das Ressourcenübersichts-Widget erscheint nur auf der mobilen Dashboardübersicht, wenn es auch im openITCOCKPIT Server Dashboard vorhanden ist.
+
 #### Taktische Übersichten
 Sind im Server Dashboard des Users taktische Übersichten konfiguriert, so werden diese auch hier angezeigt.
 Durch Anklicken der entsprechenden Einträge kann vertieft werden.
+!!! info
+    Es werden die - **und nur die** - taktischen Übersichten angezeigt, die im openITCOCKPIT-Backend Dashboard des Users konfiguriert sind.
 
 #### Änderungskalender
 Sind auf dem Server Änderungskalender definiert, auf die der angemeldete User Zugriff hat, so werden diese hier auch angezeigt
@@ -170,18 +180,38 @@ Die Host-, Services-Views und ihre Detailseiten sind von den entsprechenden Seit
 ### Hostbrowser
 ![hostbrowser](../images/oitc-desktop/hostbrowser.png)
 ### Serviceslist
-![serviceslist](../images/oitc-desktop/servicelist.png)
+![serviceslist](../images/oitc-desktop/servicelist.png) 
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
 
-### Weitere Ansichten
-Die weiteren Ansichten:
+## Weitere Ansichten
 
-* SystemDowntiems,
-* Gruppen,
-* Notification-Log
+### Notification-Log
+![notification-log](../images/oitc-desktop/desktop-notifications.png)
+### Downtimes
+![downtimes](../images/oitc-desktop/desktop-downtimes.png)
+![systemdowntimes](../images/oitc-desktop/desktop-systemdowntimes.png)
+### Gruppen
+#### Hostgroups
+![hostgroup](../images/oitc-desktop/desktop-hostgroup.png)
+![hostgroup-extended](../images/oitc-desktop/desktop-hostgroup-extended.png)
+#### Servicegroups
+![sevicegroup](../images/oitc-desktop/desktop-servicegroups.png)
+![servicegroup-extended](../images/oitc-desktop/desktop-servicegroups-extended.png)
+### ResourcenCenter
+#### Resourcen
+![resources](../images/oitc-desktop/desktop-resources.png)
+![resources-statuslog](../images/oitc-desktop/desktop-resources-statuslog.png)
+![resources-setstatus](../images/oitc-desktop/desktop-resources-setstatus.png)
 
-sind 1:1 aus dm Server übernommen worden, und bedürfen daher keiner weiteren Dokuentation.
+#### Resourcengruppen
+![resourcegroup](../images/oitc-desktop/desktop-resources.png)
+![resourcegroup-summary](../images/oitc-desktop/desktop-resourcegroup-summary.png)
+![resourcegroup-notifications](../images/oitc-desktop/desktop-resourcegroup-notifications.png)
+
+
+
+sind soweit 1:1 (ohne Create und Delete) aus dem Server übernommen worden, und bedürfen daher keiner weiteren Dokumentation.
 
 ## Custom Widgets
 Mit Version 4.6.9 der openITCOCKPIT-Desktop App ist die Möglichkeit geschaffen worden, beliebig viele Widgets zu konfigurieren und anzuzeigen.
