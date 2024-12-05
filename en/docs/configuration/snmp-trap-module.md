@@ -85,5 +85,6 @@ WantedBy=multi-user.target
 Restart `snmptrapd` service
 
 ```
+systemctl daemon-reload
 systemctl restart snmptrapd.service
 ```
