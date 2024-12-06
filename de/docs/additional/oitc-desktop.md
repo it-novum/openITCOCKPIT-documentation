@@ -11,9 +11,19 @@ Das Dashboard besteht aus der Übersichtsseite plus weiteren Ansichten (Alarme, 
 Der erste Abschnitt der Dashboardübersicht, zeigt den Gesamtstaus der Hosts und Services an. Dieser Abschnitt ist immer vorhanden.
 Durch Anklicken der entsprechenden Einträge kann vertieft werden.
 
+#### Ressourcenübersichts-Widget *
+![dashboard](../images/oitc-desktop/desktop-scm-widget.png)
+Besitzt der Benutzer in seinem ***openITCOCKPIT Server Dashboard*** ein Ressourcenübersichts-Widget, so wird dieses auf dieser Seite auch angezeigt - direkt nach der generellen Übersicht.
+Per Klick auf die entsprechenden Statuseinträge (größer 0) kann auf die ensprechenden Ressourcen vertieft werden.
+
+!!! info
+    Das Ressourcenübersichts-Widget erscheint nur auf der mobilen Dashboardübersicht, wenn es auch im openITCOCKPIT Server Dashboard vorhanden ist.
+
 #### Taktische Übersichten
 Sind im Server Dashboard des Users taktische Übersichten konfiguriert, so werden diese auch hier angezeigt.
 Durch Anklicken der entsprechenden Einträge kann vertieft werden.
+!!! info
+    Es werden die - **und nur die** - taktischen Übersichten angezeigt, die im openITCOCKPIT-Backend Dashboard des Users konfiguriert sind.
 
 #### Änderungskalender
 Sind auf dem Server Änderungskalender definiert, auf die der angemeldete User Zugriff hat, so werden diese hier auch angezeigt
@@ -118,6 +128,16 @@ Expliziter Check ob ein Update für die App vorhanden ist.
 * Beim Klicken uf einen Widgeteintag wird die entsprechende List in der Anwendung zur Anzeige gebracht.
 ![widget](../images/oitc-desktop/widget.png)
 
+### Custom Widgets
+Mit Version 4.6.9 der openITCOCKPIT-Desktop App ist die Möglichkeit geschaffen worden, beliebig viele Widgets zu konfigurieren und anzuzeigen.
+#### Verwaltung
+![widget-verwaltung](../images/oitc-desktop/widget-administration.png)
+#### Konfiguration
+![widget-configuration](../images/oitc-desktop/custom-widgets-config.png)
+Die Konfiguration der Widgets ist um die gekennzeichneten Felder erweitert worden. Die neuen Filter benötigen das openITCOCKPIT-Backend 4.7.0.
+#### Anzeige
+![widgets-show](../images/oitc-desktop/custom-widgets.png)
+
 ### Tray
 ![tray](../images/oitc-desktop/tray.png)
 Über das Trayicon (Rechtsclick) können ebenfalls einige Einstellungen vorgenommen werden.
@@ -170,31 +190,39 @@ Die Host-, Services-Views und ihre Detailseiten sind von den entsprechenden Seit
 ### Hostbrowser
 ![hostbrowser](../images/oitc-desktop/hostbrowser.png)
 ### Serviceslist
-![serviceslist](../images/oitc-desktop/servicelist.png)
+![serviceslist](../images/oitc-desktop/servicelist.png) 
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
 
-### Weitere Ansichten
-Die weiteren Ansichten:
+## Weitere Ansichten
 
-* SystemDowntiems,
-* Gruppen,
-* Notification-Log
+### Benachrichtigungs-Log
+![notification-log](../images/oitc-desktop/desktop-notifications.png)
+### Downtimes
+![downtimes](../images/oitc-desktop/desktop-downtimes.png)
+![systemdowntimes](../images/oitc-desktop/desktop-systemdowntimes.png)
+### Gruppen
+#### Hostgruppen
+![hostgroup](../images/oitc-desktop/desktop-hostgroup.png)
+![hostgroup-extended](../images/oitc-desktop/desktop-hostgroup-extended.png)
+#### Servicegruppen
+![sevicegroup](../images/oitc-desktop/desktop-servicegroups.png)
+![servicegroup-extended](../images/oitc-desktop/desktop-servicegroups-extended.png)
+### RessourcenCenter
+Siehe [Resource Center Server Dokumentation](../configuration/resource-center.md)
+#### Ressourcen
+![resources](../images/oitc-desktop/desktop-resources.png)
+![resources-statuslog](../images/oitc-desktop/desktop-resources-statuslog.png)
+![resources-setstatus](../images/oitc-desktop/desktop-resources-setstatus.png)
 
-sind 1:1 aus dm Server übernommen worden, und bedürfen daher keiner weiteren Dokuentation.
+#### Ressourcengruppen
+![resourcegroup](../images/oitc-desktop/desktop-resources.png)
+![resourcegroup-summary](../images/oitc-desktop/desktop-resourcegroup-summary.png)
+![resourcegroup-notifications](../images/oitc-desktop/desktop-resourcegroup-notifications.png)
 
-## Custom Widgets
-Mit Version 4.6.9 der openITCOCKPIT-Desktop App ist die Möglichkeit geschaffen worden, beliebig viele Widgets zu konfigurieren und anzuzeigen.
-#### Verwaltung
-![widget-verwaltung](../images/oitc-desktop/widget-administration.png)
-#### Konfiguration
-![widget-verwaltung](../images/oitc-desktop/custom-widgets-config.png)
-Die Konfiguration der Widgets ist um die gekennzeichneten Felder erweitert worden. Die neuen Filter benötigen das openITCOCKPIT-Backend 4.7.0.
-#### Anzeige
-![widgets-show](../images/oitc-desktop/custom-widgets.png)
+Die weiteren Ansichten sind -  soweit ausgeführt - aus dem Server übernommen worden.
 
 #### Bekannte Probleme
-
 !!! info
     Wenn Sie Ihren Bildschirm mit Microsoft Teams übertragen, kann es passieren, das die Widgets teilweise im Hintergrund verschwinden.
     Das Problem kann durch einen Neustart der openITCOCKPIT Desktop Anwendung behoben werden.

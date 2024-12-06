@@ -10,6 +10,14 @@ The dashboard consists of the overview page plus further views (alarms, status p
 The first section of the dashboard overview shows the total congestion of the hosts and services. This section is always available.
 You can go into more detail by clicking on the corresponding entries.
 
+#### Resource overview widget *
+![dashboard](../images/oitc-desktop/desktop-scm-widget.png)
+If the user has a resource overview widget in his ***openITCOCKPIT Server Dashboard***, this will also be displayed on this page - straight after the general overview section. By clicking on the corresponding status entries (greater than 0), you can delve into the corresponding resources.
+
+!!! info
+    The Resource overview widget only appears on the mobile dashboard overview if it is also present in the openITCOCKPIT Server Dashboard.
+
+
 #### Takctical Overviews
 If tactical overviews are configured in the server dashboard of the user, they are also displayed here.
 Clicking the corresponding entries can be deepened.
@@ -117,6 +125,16 @@ The widget can be positioned using the icon.
 Clicking on a widget entry brings up the corresponding list in the application.
   ![widget](../images/oitc-desktop/widget.png)
 
+### Custom Widgets
+With version 4.6.9 of the openITCOCKPIT-Desktop App it is possible to configure and show any number of widgets.
+#### Administration
+![widget-verwaltung](../images/oitc-desktop/widget-administration.png)
+#### Configuration
+![widget-configuration](../images/oitc-desktop/custom-widgets-config.png)
+The configuration is extended by the marked Fields. To process this new filter fields the  openITCOCKPIT-Backend 4.7.0 is needed.
+#### Display
+![widgets-show](../images/oitc-desktop/custom-widgets.png)
+
 ### Tray
 ![tray](../images/oitc-desktop/tray.png)
 Some settings can also be made via the tray icon (right-click).
@@ -171,23 +189,32 @@ The host and services views and their detail pages are derived from the correspo
 ### Servicebrowser
 ![servicebrowser](../images/oitc-desktop/servicebrowser.png)
 
-### More Views
-The further Views::
+### Other Views
+### Notification-Log
+![notification-log](../images/oitc-desktop/desktop-notifications.png)
+### Downtimes
+![downtimes](../images/oitc-desktop/desktop-downtimes.png)
+![systemdowntimes](../images/oitc-desktop/desktop-systemdowntimes.png)
+### Groups
+#### Host groups
+![hostgroup](../images/oitc-desktop/desktop-hostgroup.png)
+![hostgroup-extended](../images/oitc-desktop/desktop-hostgroup-extended.png)
+#### Service groups
+![sevicegroup](../images/oitc-desktop/desktop-servicegroups.png)
+![servicegroup-extended](../images/oitc-desktop/desktop-servicegroups-extended.png)
+### Resource center
+See [Resource Center Server Dokumentation](../configuration/resource-center.md)
+#### Resources
+![resources](../images/oitc-desktop/desktop-resources.png)
+![resources-statuslog](../images/oitc-desktop/desktop-resources-statuslog.png)
+![resources-setstatus](../images/oitc-desktop/desktop-resources-setstatus.png)
 
-* SystemDowntimes,
-* Groups (Hosts,Services),
-* Notification-Log
+#### Resource groups
+![resourcegroup](../images/oitc-desktop/desktop-resources.png)
+![resourcegroup-summary](../images/oitc-desktop/desktop-resourcegroup-summary.png)
+![resourcegroup-notifications](../images/oitc-desktop/desktop-resourcegroup-notifications.png)
 
-have been taken 1:1 from the server and therefore require no further documentation.
-
-## Custom Widgets
-With version 4.6.9 of the openITCOCKPIT-Desktop App it is possible to configure and show any number of widgets.
-#### Administration
-![widget-verwaltung](../images/oitc-desktop/widget-administration.png)
-#### Configuration
-The configuration is extended by the marked Fields. To process this new filter fields the  openITCOCKPIT-Backend 4.7.0 is needed.
-#### Display
-![widgets-show](../images/oitc-desktop/custom-widgets.png)
+The other views have - as far as stated - been taken from the server.
 
 #### Known Issues
 

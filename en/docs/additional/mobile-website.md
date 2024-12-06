@@ -76,11 +76,18 @@ The overview shows the number of hosts and services that fall into the respectiv
 Untreated hosts and services are displayed in their respective columns.
 With a click on the respective status, you can get to the accordingly filtered host or service list.
 
+##### Resource summary overview widget *
 If the user has a resource summary overview widget in his openITCOCKPIT Server Dashboard, this is also displayed on this page - even before the overview.
 With click on the entries - larger 0 - it can be deepened to the corresponding resources.
 
-#### Taktical Overviews
-![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }
+!!! info
+    The resource overview widget only appears on the mobile dashboard overview, even if it is also available in the OpenitCockpit Server Dashboard.
+
+#### Taktical Overviews *
+![dashboard](/images/mobile-website/tacticals-mobile.png){ width="300" }  
+
+!!! info
+    Only he tactical overviews , which are configured in the User's openITCOCKPIT Server Dashboard, will  be displayed here.
 
 Among the tactical overviews, the tactical overviews configured in the openITCOCKPIT-Backend are displayed.
 With click on the statusicons - larger 0 - it can be deepened to the corresponding list (hosts, services), the same applies to the details buttons.
