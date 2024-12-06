@@ -78,7 +78,7 @@ Unbehandelte Hosts und Services werden in ihren jeweiligen Spalten extra angezei
 Mit einem Klick auf den jeweiligen status, gelangen Sie zu der entsprechend gefilterten Host oder Service Liste.
 Durch Anklicken der entsprechenden Einträge kann vertieft werden.  
 
-##### Resourcenübersichts-Widget *
+##### Ressourcenübersichts-Widget *
 Besitzt der Benutzer in seinem ***openITCOCKPIT Server Dashboard*** ein Ressourcenübersichts-Widget, so wird dieses auf dieser Seite auch angezeigt - noch vor der Übersicht.
 Per Klick auf die entsprechenden Statuseinträge (größer 0) kann auf die ensprechenden Ressourcen vertieft werden.  
 
