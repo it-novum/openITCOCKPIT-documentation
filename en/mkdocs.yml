@@ -103,6 +103,17 @@ nav:
       - 'openITCOCKPIT-Desktop': 'additional/oitc-desktop.md'
       - 'Ports': 'additional/ports.md'
       - 'Kiosk Mode': 'additional/kiosk-mode.md'
+  - 'Agent':
+      - 'Overview': 'agent/overview.md'
+      - 'Define custom checks': 'agent/define-customchecks.md'
+      - 'Determining the host status': 'agent/hoststatus.md'
+      - 'Debugging': 'agent/debugging.md'
+      - 'Build binary': 'agent/build-binary.md'
+      - 'Join Development': 'agent/join-development.md'
+      - 'Agent APIs': 'agent/API.md'
+      - 'Run Agent as non-privileged user': 'agent/run-as-normal-user.md'
+      - 'Windows Service Configuration': 'agent/windows-service.md'
+      - 'Update from Agent 1.x to 3.x': 'agent/update-1.x.md'
 
 extra_javascript:
   - vendor/jquery-3.6.0.min.js
