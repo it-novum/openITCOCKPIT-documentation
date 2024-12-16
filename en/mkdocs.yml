@@ -98,6 +98,7 @@ nav:
       - 'Reset Passwords': 'additional/reset-passwords.md'
       - 'Graphing Backend': 'additional/graphing-backend.md'
       - 'Upgrade v3.x to v4.x': 'additional/upgradev3-v4.md'
+      - 'Lets Encrypt Certificates for openITCOCKPIT': 'additional/lets-encrypt-openitcockpit.md'
       - 'Running openITCOCKPIT behind a reverse proxy': 'additional/behind-reverse-proxy.md'
       - 'Mobile Website': 'additional/mobile-website.md'
       - 'openITCOCKPIT-Desktop': 'additional/oitc-desktop.md'
