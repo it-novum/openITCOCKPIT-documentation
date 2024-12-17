@@ -70,3 +70,32 @@ Wenn Sie die Check-Ergebnisse nicht an die Monitoring-Engine weiterleiten möcht
 Öffnen Sie die openITCOCKPIT-Weboberfläche und navigieren Sie zu `openITCOCKPIT Agent -> Agents Overview -> Push` und wählen Sie `Show received data` aus dem Dropdown-Menü aus.
 
 Wenn der gesamte Agent in der Liste fehlt, überprüfen Sie bitte die Protokolldatei des Agents auf Fehler.
+
+
+
+## Windows Management Instrumentation (WMI)
+
+Auf Windows-Systemen nutzt der openITCOCKPIT Monitoring Agent WMI, um Systemmetriken abzufragen. Es ist wichtig, dass WMI aktiviert und betriebsbereit ist (Standardverhalten).
+
+In seltenen Fällen treten Fehler wie "Win32_PerfFormattedData_PerfOS_Processor: WMI: Ungültige Klasse" auf.
+
+Zuerst sollten Sie versuchen, WMI manuell über PowerShell abzufragen.
+```powershell
+Get-WmiObject Win32_PerfFormattedData_PerfOS_Processor
+```
+
+Wenn dies mit einer Fehlermeldung fehlschlägt, können Sie die Einstellungen der Windows Performance Counter auf die Standardeinstellungen zurücksetzen.
+
+1. Öffnen Sie eine CMD.
+
+2. Stellen Sie die Einstellungen der Windows Performance Counter wieder her.
+```cmd
+lodctr /R
+```
+
+3. Synchronisieren Sie die Performance Counter mit Windows Management Instrumentation (WMI):
+```cmd
+WINMGMT /RESYNCPERF
+```
+
+4. Starten Sie den openITCOCKPIT Monitoring Agent Dienst neu.

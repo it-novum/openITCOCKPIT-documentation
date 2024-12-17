@@ -70,3 +70,31 @@ If you don't want to pass the check results to the Monitoring Engine add the opt
 Open the openITCOCKPIT web interface and navigate to `openITCOCKPIT Agent -> Agents Overview -> Push` and select `Show received data` from the drop down menu.
 
 If the entire Agent is missing from the list, please check the log file of the Agent for any errors.
+
+
+## Windows Management Instrumentation (WMI)
+
+On Windows Systems, the openITCOCKPIT Monitoring Agent relies on WMI to query system metrics. It is important that WMI is enabled and operational (default behavior).
+
+In rare cases, the Agent faces some errors such as `could not query wmi for process perfdata list: Exception occurred. (Invalid query )` or `Win32_PerfFormattedData_PerfOS_Processor: WMI: Invalid class`.
+
+First you should try to query WMI manually through PowerShell.
+```powershell
+Get-WmiObject Win32_PerfFormattedData_PerfOS_Processor
+```
+
+If this fails with an error message, you can restore the Windows Performance Counter settings to the defaults.
+
+1. Open a CMD.
+
+2. Restore Windows Performance Counter settings
+```cmd
+lodctr /R
+```
+
+3. Resync the counters with Windows Management Instrumentation (WMI):
+```cmd
+WINMGMT /RESYNCPERF
+```
+
+4. Restart the openITCOCKPIT Monitoring Agent Service.
