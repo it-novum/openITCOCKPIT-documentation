@@ -44,18 +44,17 @@ By clicking on a specific resource group, a detailed view is displayed.
 
 By clicking the <code>+ New</code> button, the area where you can create a new resource group opens.
 
-The container determines the visibility of this group. Automatically, this serves as a filter for user selection. The
-user selection determines which users are allowed to set a status. The division between managers and users determines
-who receives a reminder email in case of missing status. An escalation is triggered if no status is set even after the
-reminder email is sent. The escalation goes to all users and managers.
+The container determines the visibility of this group. Automatically, this serves as a filter for user selection. The user selection determines which users are allowed to set a status. The division between Region Manager, Manager, and Users determines who receives a reminder email, status email, escalation email, or cumulative status email.
+An escalation is triggered if no status is set even after the reminder email is sent. The reminder email goes to all users and managers. The escalation email or status email goes only to managers. The cumulative status email is sent to the Region Manager.
 
-| Field       | Required                  | Description                                                                                                      |
-|-------------|---------------------------|------------------------------------------------------------------------------------------------------------------|
-| Container   | :fontawesome-solid-xmark: | The container determines the visibility of this group. Automatically, this serves as a filter for user selection |
-| Name        | :fontawesome-solid-xmark: | Name of the resource group                                                                                       |
-| Description |                           | Description of the resource group                                                                                |
-| Users       | :fontawesome-solid-xmark: | Users who receive a reminder and escalation email                                                                |
-| Managers    | :fontawesome-solid-xmark: | Users who receive an escalation email                                                                            |
+| Field          | Required                  | Description                                                                                                      |
+|----------------|---------------------------|------------------------------------------------------------------------------------------------------------------|
+| Container      | :fontawesome-solid-xmark: | The container determines the visibility of this group. Automatically, this serves as a filter for user selection |
+| Name           | :fontawesome-solid-xmark: | Name of the resource group                                                                                       |
+| Description    |                           | Description of the resource group                                                                                |
+| Users          | :fontawesome-solid-xmark: | Users who receive a reminder and escalation email                                                                |
+| Managers       | :fontawesome-solid-xmark: | Users who receive an escalation email                                                                            |
+| Region Manager | :fontawesome-solid-xmark: | Users who receive a cumulative status email                                                                      |
 
 #### Reminder Email
 
@@ -64,6 +63,15 @@ reminder email is sent. The escalation goes to all users and managers.
 #### Escalation Email
 
 ![Escalation Email](/images/scm/scm_escalation_mail.png)
+
+#### Status Email
+
+![Status Email](/images/scm/scm_status_mail.png)
+
+#### Cumulative Status Email
+
+![Cumulative Status Email](/images/scm/scm_cumulative_report_mail.png)
+
 
 All emails are logged in the database and can be viewed via the "Notifications" menu item. The resource names in the
 email are linked to the openITCOCKPIT web interface.

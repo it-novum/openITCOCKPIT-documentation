@@ -50,17 +50,22 @@ Ressourcengruppe erstellen kann.
 
 Über den Container legt man die Sichtbarkeit dieser Gruppe fest. Automatisch dient dieser, als Filter für die
 Benutzerauswahl. Die Benutzerauswahl legt fest, welche Benutzer einen Status setzen dürfen. Die Unterteilung zwischen
-Manager und Users legt fest, an wen eine Erinnerungsmail bei fehlendem Status verschickt wird. Eine Eskalation wird
-ausgelöst, sollte auch nach dem Versand der Erinnerungsmail kein Status gesetzt werden. Die Eskalation geht an alle User
-und Manager.
+Region Manager,
+Manager und Users legt fest, an wen eine Erinnerungsmail, Statusmail, Eskalationsmail oder kumulierte Statusmail
+verschickt wird. Eine Eskalation wird
+ausgelöst, sollte auch nach dem Versand der Erinnerungsmail kein Status gesetzt werden. Die Erinnerungsmail geht an alle
+User
+und Manager, Eskalationsmail beziehungsweise Statusmail geht nur an Manager. Eine kumulierte Statusmail wird an die
+Region Manager verschickt.
 
-| Feld         | Erforderlich              | Beschreibung                                                                                                                  |
-|--------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Container    | :fontawesome-solid-xmark: | Über den Container legt man die Sichtbarkeit dieser Gruppe fest. Automatisch dient dieser, als Filter für die Benutzerauswahl |
-| Name         | :fontawesome-solid-xmark: | Name der Ressourcengruppe                                                                                                     |
-| Beschreibung |                           | Beschreibung der Ressourcengruppe                                                                                             |
-| Benutzer     | :fontawesome-solid-xmark: | Benutzer die eine Erinnerungs- und Eskalationsmail bekommen                                                                   |
-| Manager      | :fontawesome-solid-xmark: | Benutzer die eine Eskalationsmail bekommen                                                                                    |
+| Feld           | Erforderlich              | Beschreibung                                                                                                                  |
+|----------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Container      | :fontawesome-solid-xmark: | Über den Container legt man die Sichtbarkeit dieser Gruppe fest. Automatisch dient dieser, als Filter für die Benutzerauswahl |
+| Name           | :fontawesome-solid-xmark: | Name der Ressourcengruppe                                                                                                     |
+| Beschreibung   |                           | Beschreibung der Ressourcengruppe                                                                                             |
+| Benutzer       | :fontawesome-solid-xmark: | Benutzer die eine Erinnerungsmail bekommen                                                                                    |
+| Manager        | :fontawesome-solid-xmark: | Benutzer die eine Eskalationsmail und Statusmail bekommen                                                                     |
+| Region Manager | :fontawesome-solid-xmark: | Benutzer die eine kumulierte Statusmail bekommen                                                                              |
 
 #### Erinnerungsmail
 
@@ -69,6 +74,14 @@ und Manager.
 #### Eskalationsmail
 
 ![Eskalationsmail](/images/scm/scm_escalation_mail.png)
+
+#### Statusmail
+
+![Statusmail](/images/scm/scm_status_mail.png)
+
+#### Kumulierte Statusmail
+
+![Statusmail](/images/scm/scm_cumulative_report_mail.png)
 
 Alle E-Mails werden in der Datenbank protokolliert und sind über den Menüpunkt „Notifications“ einsehbar. Die
 Ressourcen-Namen in der E-Mail mit der openITCOCKPIT Weboberfläche verlinkt.
