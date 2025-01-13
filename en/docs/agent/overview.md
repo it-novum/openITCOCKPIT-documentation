@@ -72,6 +72,36 @@ HTTP Basic Authentication can be enabled in the `config.ini`
 auth = user:password
 ```
 
+### TLS configuration
+
+TLS supports different versions and cipher suites, not all of them are secure anymore.
+
+To be compatible with as many systems as possible, without making the configuration too complicated, we decided to introduce three preconfigured levels of security:
+
+- `lax`
+- `intermediate`
+- `modern`
+
+The TLS security level can be configured in the `config.ini` using the `tls_security_level` directive.
+
+
+!!! info
+    If no `tls_security_level` is configured, the Agent will fall back to `lax`.
+
+#### lax
+Enforce minimum TLS 1.2 but does not restrict usage of cipher suites.
+Was the default behavior before openITCOCKPIT Agent Version 3.1.
+
+#### intermediate
+Enforce minimum TLS 1.2 and restrict usage of cipher suites to:
+```
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
+```
+
+#### modern
+Enforce minimum TLS 1.3 and does not restrict usage of cipher suites.
+
 ## Start Monitoring
 Open the openITCOCKPIT web interface and navigate to `openITCOCKPIT Agent -> Agent Wizard` and select the host you want to monitor. Follow the wizard to monitor your target system with the openITCOCKPIT Monitoring Agent in 5 steps. The wizard covers everything from choosing the communication method over installing and configuring the Agent up to service creation.
 
