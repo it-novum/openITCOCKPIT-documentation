@@ -114,6 +114,7 @@ nav:
       - 'Agent APIs': 'agent/API.md'
       - 'Run Agent as non-privileged user': 'agent/run-as-normal-user.md'
       - 'Windows Service Configuration': 'agent/windows-service.md'
+      - 'Prometheus Proxy': 'agent/prometheus-proxy.md'
       - 'Update from Agent 1.x to 3.x': 'agent/update-1.x.md'
 
 extra_javascript:
@@ -128,8 +129,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - def_list
   - markdown_include.include:

@@ -70,6 +70,36 @@ Die HTTP Basic Authentication kann in der `config.ini` aktiviert werden.
 auth = user:password
 ```
 
+### TLS Konfiguration
+
+TLS unterstützt verschiedene Versionen und Verschlüsselungssammlungen (Cipher Suite), von denen nicht alle als sicher gelten.
+Um mit möglichst vielen Systemen kompatibel zu sein, ohne die Konfiguration zu kompliziert zu machen, haben wir uns entschieden, drei vorkonfigurierte Sicherheitsstufen einzuführen:
+
+- `lax`
+- `intermediate`
+- `modern`
+
+
+Die TLS-Sicherheitsstufe kann in der `config.ini` mit der Direktive `tls_security_level` konfiguriert werden.
+
+
+!!! info
+    Wenn kein `tls_security_level` gesetzt ist, wird der Agent die Einstellung `lax` verwenden.
+
+#### lax
+Erzwingt mindestens TLS 1.2, schränkt aber die Verwendung von Verschlüsselungssammlungen nicht ein.
+War das Standardverhalten vor openITCOCKPIT Agent Version 3.1.
+
+#### intermediate
+Erzwingen Sie mindestens TLS 1.2 und beschränken Sie die Verwendung von Verschlüsselungssammlungen auf:
+```
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
+```
+
+#### modern
+Erzwingt mindestens TLS 1.3 und schränkt die Verwendung von Verschlüsselungssammlungen nicht ein.
+
 ## Monitoring starten
 Öffnen Sie die openITCOCKPIT-Weboberfläche und navigieren Sie zu `openITCOCKPIT Agent -> Agenten-Assistent` und wählen Sie den Host aus, den Sie überwachen möchten. Folgen Sie dem Assistenten, um Ihr Zielsystem mit dem openITCOCKPIT Monitoring Agent in 5 Schritten zu überwachen. Der Assistent deckt alles ab, von der Auswahl der Kommunikationsmethode über die Installation und Konfiguration des Agenten bis hin zur Service-Erstellung.
 
