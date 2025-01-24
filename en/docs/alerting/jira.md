@@ -20,12 +20,15 @@ If you select more than one project, you need to mark one project as the `Defaul
 
 ![openITCOCKPIT Jira Integration settings](/images/alerting/jira/datacenter/openitcockpit_jira_integration.png)
 
+
 ### Close transition ID
+
+#### Jira Data Center
 
 To close a Jira issue, openITCOCKPIT needs the ID of the close transition. This transition ID is required for openITCOCKPIT to automatically close Jira issues when a host or service recovers.
 If you do not provide a transition ID or enter an incorrect ID, openITCOCKPIT will still create issues in Jira but will not be able to close them.
 
-Depending on your workflow, the transition ID can vary. Unfortunately, Jira Data Center does not provide an API to query the transition ID. You must manually look up the transition ID in the Jira web interface and enter the number.
+Depending on your workflow, the transition ID can vary. Unfortunately, Jira does not provide an API to query the transition ID. You must manually look up the transition ID in the Jira web interface and enter the number.
 
 Navigate to `Projects` -> Select your project -> `Workflows` and click on the pencil icon.
 ![Jira Settings -> Project](/images/alerting/jira/datacenter/jira_main_menu_projects.png)
@@ -34,6 +37,23 @@ Navigate to `Projects` -> Select your project -> `Workflows` and click on the pe
 Now you will see a list of all transitions in the workflow. In this example, the `Done` transition will be used to mark issues as closed, with the ID `41`.
 
 ![openITCOCKPIT Jira Workflow Done Transitions](/images/alerting/jira/datacenter/project_worksflow_Close_transitions_ID.png)
+
+#### Jira Cloud
+
+With Jira Cloud, the situation did not improved. The _easiest_ method to get the Close transition ID is, to open your browsers developer console, and close an issue.
+![Grab transition id from Developer Tools](/images/alerting/jira/cloud/jira_cloud_transition_id.png)
+
+
+### Jira API keys
+
+#### Jira Data Center
+
+Jira Data Center uses Personal Access Tokens. Please follow the official documentation to create a new access token: [https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html).
+
+#### Jira Cloud
+
+Jira Cloud API tokens are bound to a user account. Please follow the official documentation: [https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+
 
 ## Setup Webhooks
 
@@ -126,6 +146,33 @@ Repeat the steps described above, but this time add the post function to your `D
 ![Jira Settings -> Workflow -> Add Post Function](/images/alerting/jira/datacenter/9_add_close_webhook.png)
 ![Jira Settings -> Workflow -> Publish](/images/alerting/jira/datacenter/10_close_webhook_done.png)
 
+
+### Jira Cloud
+
+Jira Cloud provides Automations, which can be created with a simple Editor in the Project settings.
+
+First navigate into the Project Settings, select `Automation` on the left hand side, select `Rules` and `Create rule`.
+
+![Jira Cloud Create a new Rule](/images/alerting/jira/cloud/1_create_new_automation.png)
+
+In case this is the first rule you create, the Jira Web interface will show you a little tutorial. It is recommended to read the tutorial.
+
+Now, add a new `Issue transitioned` trigger. Select the states you like to call the Webhook, so from `To Do -> In Progress` in this case.
+
+![Jira Cloud Add Trigger](/images/alerting/jira/cloud/2_add_trigger.png)
+
+Click on `Add component` and add a new Action `Send web request`.
+
+Important settings are:
+
+- **Web Request URL**: *See openITCOCKPIT Jira Settings and copy the webhook URL*
+- **HTTP method**: `POST`
+- **Web request body**: `Issue data (Jira format)`
+
+![Jira Cloud Add Action](/images/alerting/jira/cloud/3_add_action.png)
+
+Save the Automation in the top right corner and repeat the steps for the close transition and the close webhook.
+
 ## Macros
 
 Macros (custom variables) can be used to override the default Jira project, add an assignee or parent issue, or change the issue type. These settings can be defined as custom variables for hosts, services, or contacts.
@@ -134,6 +181,9 @@ Macros (custom variables) can be used to override the default Jira project, add 
 - `JIRA_PROJECT` - Project key to override the default project, e.g., `PX`
 - `JIRA_ISSUE_TYPE` - To override the default issue type, e.g., `Bug` or `Task`
 - `JIRA_PARENT_ISSUE` - A valid Jira issue to assign as a "related issue" (e.g., `PX-30`)
+
+!!! notice
+    Jira Cloud Users: The macro `JIRA_ISSUE_TYPE` requires to pass the Issue Type ID (e.g. 10001) for Jira Cloud!
 
 ## Commands
 
