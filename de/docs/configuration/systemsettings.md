@@ -71,6 +71,7 @@ zu finden.
 | HIDDEN_USER_IN_CHANGELOG | Ist diese Option aktiviert, werden die Namen im Änderungsprotokoll zu Privatsphärezwecken versteckt. |
 | PRESELECTED_DOWNTIME_OPTION | Standardwert für die Auswahl von Einzelnen `Host` oder `Host einschließlich Services` in Wartungszeiten |
 | DISABLE_LOGIN_ANIMATION | Animationen auf der Login Seite werden Deaktiviert. Dies kann sehr nützlich bei Fernzugriffen  sein |
+| DISABLE_LOGIN_SOCIAL_BUTTONS | Entfernt die Verlinkungen auf soziale Medien und die openITCOCKPIT Webseite auf der Login Seite |
 | REPLACE_USER_MACROS | Wenn diese Option aktiviert ist, werden die Benutzerdefinierten Makros `$USERn$` in der Kommandozeile der Host und Service status Übersichten übersetzt |
 | ENABLE_IFRAME_IN_DASHBOARDS | Wenn aktiviert ist das Webseiten Widget im Dashboard verfügbar. Mit diesem können drittanbieter webseiten eingebunden werden |
 | SSO.AUTH_PROVIDER | Hier kann ausgewählt werden, welcher Authentifizierungs-Provider vom System genutzt werden soll |
