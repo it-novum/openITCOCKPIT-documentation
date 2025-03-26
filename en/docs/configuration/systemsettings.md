@@ -70,6 +70,7 @@ The system settings define basic settings for openITCOCKPIT and can be found und
 | PRESELECTED_DOWNTIME_OPTION | Default value for the selection of individual `hosts` or `hosts including services` during maintenance |
 | DISABLE_LOGIN_ANIMATION | Animations on the login page are disabled. This can be very useful for remote access |
 | DISABLE_LOGIN_SOCIAL_BUTTONS | Removes social media links and the openITCOCKPIT project website from the login page |
+| ENABLE_COLUMN_LAYOUT_FOR_THE_LOGIN_PAGE | Enable column layout for the login page |
 | REPLACE_USER_MACROS | If this option is enabled, the user-defined macros $USERn$ are translated in the command line of the host and service status overviews |
 | ENABLE_IFRAME_IN_DASHBOARDS | If this option is enabled, the user-defined macros $USERn$ are translated in the command line of the host and service status overviews |
 | SSO.AUTH_PROVIDER | Here you can select which authentication provider should be used by the system |
