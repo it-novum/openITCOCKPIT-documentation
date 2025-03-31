@@ -22,15 +22,15 @@ These instructions describe how to update your current installation of openITCOC
 
 | Ubuntu Focal (20.04) | Ubuntu Bionic (18.04) | Ubuntu Xenial (16.04) | Ubuntu Trusty (14.04) | Debian Buster (10) | Debian Stretch (9) | Debian Jessie (8) |
 |---|---|---|---|---|---|---|
-|:fontawesome-solid-check:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-exclamation-triangle:|:fontawesome-solid-xmark:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-exclamation-triangle:|:fontawesome-solid-xmark:|
+|:fontawesome-solid-check:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-triangle-exclamation:|:fontawesome-solid-xmark:|:fontawesome-solid-check:|:fontawesome-solid-check: :fontawesome-solid-triangle-exclamation:|:fontawesome-solid-xmark:|
 
 
-:fontawesome-solid-exclamation-triangle: **Ubuntu Xenial (16.04)**
+:fontawesome-solid-triangle-exclamation: **Ubuntu Xenial (16.04)**
 
 openITCOCKPIT does not support Ubuntu Xenial. When updating to openITCOCKPIT 4, an upgrade to Ubuntu Bionic (18.04) will also be carried out.
 
 
-:fontawesome-solid-exclamation-triangle: **Debian Stretch (9)**
+:fontawesome-solid-triangle-exclamation: **Debian Stretch (9)**
 
 openITCOCKPIT does not support Debian Stretch. When upgrading to openITCOCKPIT 4, an upgrade to Debian Buster (10) will also be carried out.
 
