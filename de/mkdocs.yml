@@ -98,6 +98,7 @@ nav:
       - 'Passwörter zurücksetzen': 'additional/reset-passwords.md'
       - 'Graphing Backend': 'additional/graphing-backend.md'
       - 'Upgrade 3.x zu 4.x': 'additional/upgradev3-v4.md'
+      - 'Upgrade 4.x zu 5.x': 'additional/upgradev4-v5.md'
       - 'Lets Encrypt Zertifikate für openITCOCKPIT': 'additional/lets-encrypt-openitcockpit.md'
       - 'openITCOCKPIT hinter einem Reverse Proxy betreiben': 'additional/behind-reverse-proxy.md'
       - 'Mobile Webseite': 'additional/mobile-website.md'

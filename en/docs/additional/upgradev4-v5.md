@@ -17,6 +17,13 @@ These instructions describe how to update your current installation of openITCOC
 -	You have at least **20 GB** free hard disk space
 -	Execute all commands as `root` user
 
+### Docker setup?
+
+For Docker (or any other container runtime) based installations of openITCOCKPIT no manually upgrade process is required.
+All you have to do is stop the containers, pull the new images and start the containers again.
+
+Please see the [container update instructions](/installation/docker/#update-containers) for more information.
+
 ### Supported operating systems:
 
 openITCOCKPIT 5 can be installed on the following operating systems:
@@ -281,6 +288,7 @@ Some Enterprise Linux installations still use PHP 8.0, in this case you need to 
 Due to the amount of support complexity with Enterprise Linux systems, only the [openITCOCKPIT Enterprise Edition](https://openitcockpit.io/editions/) is avaiable for
 Red Hat Enterprise Linux and RHEL based distributions such as: CentOS, Rocky Linux AlmaLinux or Oracle Linux.
 
+Please get in [touch with us](https://it-services.it-novum.com/en/) if you need assistants upgrading your installation of openITCOCKPIT.
 
 ### Troubleshooting
 
@@ -296,8 +304,6 @@ apt-get install -f
 
 For the update process to complete successfully, you must be using at least version 4.8.7 of openITCOCKPIT.
 
-
-The web interface should then be visible and the distribution update should be completed.
 
 #### What if I use Ubuntu Bionic, Debian Buster or openITCOCKPIT 3?
 
