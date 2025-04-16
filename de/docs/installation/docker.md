@@ -13,8 +13,8 @@ sollten Sie noch kein Docker installiert haben.
 
 ### System requirements
 - 2 CPU Kerne (x86-64 oder arm64)
-- 2 GB RAM
-- 40 GB freier Festplattenspeicher
+- 4 GB RAM
+- 60 GB freier Festplattenspeicher
 
 !!! info
     Der verwendete Festplattenspeicher hängt von der Anzahl der überwachten Hosts und Services ab.

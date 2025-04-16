@@ -13,8 +13,8 @@ if you do not have Docker installed yet.
 
 ### System requirements
 - 2 CPU cores (x86-64 or arm64)
-- 2 GB RAM
-- 40 GB of free hard disk space
+- 4 GB RAM
+- 60 GB of free hard disk space
 
 !!! info
     The amount of disk space used depends on the number of monitored hosts and services.
