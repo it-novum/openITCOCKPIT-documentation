@@ -93,5 +93,5 @@ Die Konfiguration des Webservers wird automatisch durchgeführt. Die phpMyAdmin 
 
 - Ubuntu Linux 64 bit, Debian Linux 64 bit, RHEL 64 bit
 - 2 CPU Kerne (x86-64 oder arm64)
-- 2 GB RAM
-- 40 GB freier Festplattenspeicher
+- 4 GB RAM
+- 60 GB freier Festplattenspeicher

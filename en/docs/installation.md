@@ -93,5 +93,5 @@ The web server will be configured automatically. The phpMyAdmin interface can th
 
 - Ubuntu Linux 64 bit,  Debian Linux 64 bit, RHEL 64 bit
 - 2 CPU cores (x86-64 or arm64)
-- 2 GB RAM
-- 40 GB of free hard disk space
+- 4 GB RAM
+- 60 GB of free hard disk space
