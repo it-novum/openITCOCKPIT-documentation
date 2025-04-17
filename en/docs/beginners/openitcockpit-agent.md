@@ -37,7 +37,7 @@ Before you begin, you need to decide whether you want to monitor your host in pu
 ## Pull mode
 
 Both modes are easy to set up. For purposes of this tutorial we will use **Pull mode**. Click here
-for [Push mode](#push-modus)
+for [Push mode](#push-mode)
 
 ![push or pull](/images/agent-push-or-pull.png)
 
