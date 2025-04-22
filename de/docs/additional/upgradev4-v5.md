@@ -321,6 +321,29 @@ Red Hat Enterprise Linux und RHEL-basierte Distributionen wie CentOS, Rocky Linu
 
 Bitte nehmen Sie [Kontakt mit uns auf](https://it-services.it-novum.com/de/), wenn Sie Unterstützung bei der Aktualisierung Ihrer openITCOCKPIT Installation benötigen.
 
+Stellen Sie vor dem Start sicher, dass Sie die neuesten Updates für Ihr System installiert haben:
+```bash
+dnf --refresh check-update
+
+dnf update
+```
+
+Diese Dokumentation setzt voraus, dass Sie PHP von [Remi's RPM repository](https://rpms.remirepo.net/) installiert haben.
+
+Um Ihre PHP-Version zu aktualisieren, führen Sie bitte den folgenden Befehl aus:
+
+```
+dnf module switch-to php:remi-8.1
+```
+
+Dadurch wird Ihr System auf die neueste Version von PHP 8.1 umgestellt. Sie können auch PHP 8.2 oder 8.3 verwenden.
+
+Um das Upgrade abzuschließen, führen Sie bitte den folgenden Befehl aus:
+
+```bash
+openitcockpit-update
+```
+
 ### Troubleshooting
 
 #### Netzwerk Fehler
