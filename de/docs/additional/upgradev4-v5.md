@@ -152,7 +152,16 @@ curl -s https://raw.githubusercontent.com/it-novum/openITCOCKPIT/development/bin
 
 Beheben Sie zuerst die hervorgehobenen Probleme und führen Sie das Skript erneut aus. Sobald alle Fehler behoben sind, können Sie mit dem Update fortfahren.
 
+### Inkompatible Änderungen
 
+Obwohl wir versucht haben, openITCOCKPIT 5 so kompatibel wie möglich zu halten, bringt ein großes Update wie dieses einige inkompatible Änderungen (Breaking Changes) mit sich.
+
+!!! danger
+    **Während des Updates werden alle gespeicherten Filter gelöscht.**
+    
+    Wir empfehlen, die MySQL-Tabelle `openitcockpit.filter_bookmarks` vor dem Update zu exportieren, damit Sie die Informationen verwenden können, um die Filter nach dem Update neu zu erstellen.
+
+![Löschen der aktuell gespeicherten Filter](/images/openitcockpit5/filter_bookmarks.png)
 
 
 ### Upgrade openITCOCKPIT

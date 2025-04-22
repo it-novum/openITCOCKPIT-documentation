@@ -154,6 +154,17 @@ curl -s https://raw.githubusercontent.com/it-novum/openITCOCKPIT/development/bin
 First resolve the issues that have been highlighted and run the script again. Once you have resolved all errors, you can continue with the update.
 
 
+### Breaking Changes
+
+While we tried to keep the openITCOCKPIT 5 as compatible as possible, a large update like this comes with some breaking changes.
+
+!!! danger
+    **During the update, all stored filters will be deleted.**
+    
+    We recommend to export the MySQL table `openitcockpit.filter_bookmarks` before the update, so you can use the information to recreate the filters after the update.
+
+
+![Truncate of current stored filters](/images/openitcockpit5/filter_bookmarks.png)
 
 
 ### Upgrade openITCOCKPIT
