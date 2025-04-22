@@ -1,4 +1,4 @@
-# Upgrade openITCOCKPIT 3 zu openITCOCKPIT 4
+# Upgrade openITCOCKPIT 4 zu openITCOCKPIT 5
 
 ![Weg zu openITCOCKPIT 5](/images/openitcockpit5/oitc5_autobahn.png)
 
@@ -199,6 +199,13 @@ apt-get update
 
 ##### RHEL8-Benutzer
 
+!!! warning
+    Stellen Sie sicher, dass Sie Ihren openITCOCKPIT Lizenzschlüssel am Ende der Repository-Konfigurationsdatei hinzufügen:
+    ```
+    username=secret
+    password=e5aef99e-817b-0ff5-3f0e-140c1f342792
+    ```
+
 ```bash
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
@@ -214,6 +221,13 @@ dnf --refresh check-update
 
 ##### RHEL9-Benutzer
 
+!!! warning
+    Stellen Sie sicher, dass Sie Ihren openITCOCKPIT Lizenzschlüssel am Ende der Repository-Konfigurationsdatei hinzufügen:
+    ```
+    username=secret
+    password=e5aef99e-817b-0ff5-3f0e-140c1f342792
+    ```
+
 ```bash
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
@@ -227,7 +241,22 @@ EOT
 dnf --refresh check-update
 ```
 
-#### Schritt 3 - openITCOCKPIT aktualisieren
+#### Schritt 3 - Lizenz übertragen
+
+Nutzer der openITCOCKPIT Community Edition und Enterprise Edition können Ihren bestehenden Lizenzschlüssel weiterhin verwenden. Wichtig ist, dass Sie vor dem Update die Repository-Adresse in der Datei `/etc/apt/auth.conf.d/openitcockpit.conf` in `packages5.openitcockpit.io` ändern.
+
+Die Datei sollte folgendermaßen aussehen:
+```
+machine packages5.openitcockpit.io login secret password e5aef99e-817b-0ff5-3f0e-140c1f342792
+```
+
+Um die Änderungen zu übernehmen, führen Sie den folgenden Befehl aus:
+
+```bash
+apt-get update
+```
+
+#### Schritt 4 - openITCOCKPIT aktualisieren
 
 !!! warning
     Eine stabile SSH-Verbindung ist erforderlich! Der Aktualisierungsprozess kann eine Weile dauern. Um SSH-Verbindungsprobleme zu vermeiden, empfehlen wir die Verwendung von `tmux` oder `screen`.
@@ -240,7 +269,7 @@ Um das Update zu starten, führen Sie aus:
 apt-get dist-upgrade
 ```
 
-#### Schritt 4 - Browser-Cache leeren
+#### Schritt 5 - Browser-Cache leeren
 
 Bevor Sie sich in Ihre neue openITCOCKPIT-Oberfläche einloggen, sollten Sie den Cache Ihres Browsers leeren.
 
@@ -248,7 +277,7 @@ Mozilla Firefox: <https://support.mozilla.org/en-US/kb/how-clear-firefox-cache>
 
 Google Chrome: <https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=en>
 
-#### Schritt 5 - System neu starten
+#### Schritt 6 - System neu starten
 
 Ein Neustart des Systems wird empfohlen, ist jedoch nicht erforderlich.
 

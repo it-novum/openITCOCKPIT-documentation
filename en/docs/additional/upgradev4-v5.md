@@ -199,6 +199,13 @@ apt-get update
 
 ##### RHEL8 users
 
+!!! warning
+    Make sure to add your openITCOCKPIT license key to the end of the repository configuration file:
+    ```
+    username=secret
+    password=e5aef99e-817b-0ff5-3f0e-140c1f342792
+    ```
+
 ```bash
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
@@ -214,6 +221,13 @@ dnf --refresh check-update
 
 ##### RHEL9 users
 
+!!! warning
+    Make sure to add your openITCOCKPIT license key to the end of the repository configuration file:
+    ```
+    username=secret
+    password=e5aef99e-817b-0ff5-3f0e-140c1f342792
+    ```
+
 ```bash
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
@@ -227,7 +241,23 @@ EOT
 dnf --refresh check-update
 ```
 
-#### Step 3 -  Updating openITCOCKPIT
+#### Step 3 - Migrate license
+
+Users of the openITCOCKPIT Community Edition and Enterprise Edition can continue to use their existing license key. It is important to change the repository address to `packages5.openitcockpit.io` in the file `/etc/apt/auth.conf.d/openitcockpit.conf` before you continue with the update.
+
+The file should look like this:
+```
+machine packages5.openitcockpit.io login secret password e5aef99e-817b-0ff5-3f0e-140c1f342792
+```
+
+To apply the changes, run the following command:
+
+```bash
+apt-get update
+```
+
+
+#### Step 4 -  Updating openITCOCKPIT
 
 !!! warning
     Stable SSH connection is required! The update process may take a while. To prevent SSH connection problems, we recommend using `tmux` or `screen`.
@@ -240,7 +270,7 @@ To start the update, execute:
 apt-get dist-upgrade
 ```
 
-#### Step 4 - Clear browser cache
+#### Step 5 - Clear browser cache
 
 Before logging into your new openITCOCKPIT interface, you should clear your browser cache
 
@@ -248,7 +278,7 @@ Mozilla Firefox: <https://support.mozilla.org/en-US/kb/how-clear-firefox-cache>
 
 Google Chrome: <https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=en>
 
-#### Step 5 - Reboot the system
+#### Step 6 - Reboot the system
 
 A system restart is recommended, but not required.
 
