@@ -315,7 +315,17 @@ This is to prevent unexpected system upgrades.
 
 The new address ist: `packages5.openitcockpit.io`.
 
-#### Step 3 -  Updating openITCOCKPIT Satellite
+#### Step 3 - Carry out the openITCOCKPIT Satellite 5 compatibility check
+
+To ensure that your system is capable of being updated to openITCOCKPIT 5.x, we provide a compatibility script for checking your system(s).
+
+Execute the following script on your openITCOCKPIT Satellite instance:
+
+```bash
+curl -s https://raw.githubusercontent.com/it-novum/openITCOCKPIT/refs/heads/development/bin/scripts/oitcSat4to5.sh | sudo /bin/bash
+```
+
+#### Step 4 -  Updating openITCOCKPIT Satellite
 
 ```bash
 apt-get update

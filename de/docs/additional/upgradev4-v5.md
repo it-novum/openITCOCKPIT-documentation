@@ -309,8 +309,17 @@ openITCOCKPIT 5 verwendet eine andere Repository-Adresse als openITCOCKPIT 4. Di
 
 Die neue Adresse lautet: `packages5.openitcockpit.io`.
 
+#### Schritt 3 - Kompatibilitätsprüfung für openITCOCKPIT-Satellit 5 durchführen
 
-#### Schritt 3 - openITCOCKPIT-Satellit aktualisieren
+Um sicherzustellen, dass Ihr System auf openITCOCKPIT 5.x aktualisiert werden kann, stellen wir ein Kompatibilitätsskript zur Überprüfung Ihres Systems bereit.
+
+Führen Sie das folgende Skript auf Ihrer openITCOCKPIT-Satellit-Instanz aus:
+
+```bash
+curl -s https://raw.githubusercontent.com/it-novum/openITCOCKPIT/refs/heads/development/bin/scripts/oitcSat4to5.sh | sudo /bin/bash
+```
+
+#### Schritt 4 - openITCOCKPIT-Satellit aktualisieren
 
 ```bash
 apt-get update
