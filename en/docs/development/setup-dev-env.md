@@ -4,9 +4,9 @@
 
 It is recommended you create a new virtual machine (e.g. with [VirtualBox](https://www.virtualbox.org/)) that meets the following minimum requirements:
 
-| OS | Hard disk | RAM | CPU cores |
-|---|---|---|---|
-| Ubuntu Focal 20.04 (64 Bit) | 20 GB | 2048 MB | 2 |
+| OS                          | Hard disk | RAM     | CPU cores |
+|-----------------------------|---|---------|-----------|
+| Ubuntu Noble 24.04 (64 Bit) | 20 GB | 8192 MB | 4         |
 
 To be able to reach the machine via the network, select the `Bridged Network` option under the network settings for the virtual machine.
 
@@ -30,7 +30,7 @@ sudo apt-get dist-upgrade
 ### Installing the required packages for the development environment
 
 ```bash
-sudo apt-get dist-upgrade vim git tmux screen mc htop curl wget ca-certificates sysstat nfs-kernel-server samba-common samba gnupg2 apt-transport-https
+sudo apt-get dist-upgrade vim git tmux screen mc htop curl wget ca-certificates sysstat nfs-kernel-server samba-common samba gnupg2 apt-transport-https npm
 ```
 
 ### Enable "root" user
@@ -59,7 +59,7 @@ PermitRootLogin yes
 Enable the change:
 
 ```bash
-systemctl restart sshd
+systemctl restart ssh
 ```
 
 You can now log onto the system as `root` via SSH.
@@ -77,7 +77,7 @@ sudo apt-get update
 sudo apt-get install openitcockpit
 ```
 
-### Setup openITCOCKPIT
+### Set up openITCOCKPIT
 Run the openITCOCKPIT Setup Wizard to create a user for the web interface. An actual email address is **not** required.
 
 ```bash
@@ -89,6 +89,9 @@ sudo /opt/openitc/frontend/SETUP.sh
 ### Setup phpMyAdmin (optional)
 
 phpMyAdmin is a web-based MySQL database management tool. After installation, it can be accessed via `https://xxx.xxx.xxx.xxx/phpmyadmin` erreichbar. The MySQL access data can be found in the file `/opt/openitc/etc/mysql/mysql.cnf`.
+!!! warning "Skip phpMyAdmin Webserver setup"
+    During installation, select neither of the two options for the web server. The installation will then be completed without any further configuration. Otherwise the setup adds configuration to present webservers, which may interfere with our own configuration.
+
 
 ```bash
 sudo apt-get install phpmyadmin
@@ -118,42 +121,41 @@ sudo cp composer.phar /usr/local/bin/composer
 ```
 
 ## Cloning the GitHub source code 
-openITCOCKPIT uses git as a version control system. The repository is publicly hosted on GitHub.
+openITCOCKPIT uses git as a version control system. The repositories are publicly hosted on [GitHub](https://github.com/it-novum/openITCOCKPIT):
+- [openITCOCKPIT (back-end)](https://github.com/it-novum/openITCOCKPIT)
+- [openITCOCKPIT (front-end)](https://github.com/it-novum/openITCOCKPIT-frontend-angular)
 
-### Forking the openITCOCKPIT repository
-Although not strictly necessary, it is strongly recommended that you create a personal fork of the official openITCOCKPIT repository.
+### Forking the openITCOCKPIT repositories
+Although not strictly necessary, it is strongly recommended that you create personal forks of both the front-end and back-end repositories. This will allow you to create pull requests and submit your changes to the openITCOCKPIT project.
 
 However, if you want to contribute to the openITCOCKPIT project, this is a **prerequisite**. If you only intend to look at the source code or you don't have a GitHub account, you can simply clone the official openITCOCKPIT repository.
 
 ![fork repo](/images/forking.png)
 
-### Cloning your personal repository (recommended)
 
-Delete the files that were installed by apt
+### Delete files delivered by apt
+Delete the files that were installed by apt by removing both folders.
 ```bash
 sudo su
 rm -rf /opt/openitc/frontend
+rm -rf /opt/openitc/frontend-angular
 ```
 
-Clone the repository (replace YOUR_ACCOUNT_NAME with your GitHub username).
+### Cloning your forked repositories (recommended)
+Clone the repository (replace %YOUR_ACCOUNT_NAME% with your GitHub username).
 ```bash 
 cd /opt/openitc/
-git clone -b development https://github.com/YOUR_ACCOUNT_NAME/openITCOCKPIT frontend
+git clone -b development https://github.com/%YOUR_ACCOUNT_NAME%/openITCOCKPIT frontend
+git clone -b development https://github.com/%YOUR_ACCOUNT_NAME%/openITCOCKPIT-frontend-angular frontend-angular
 ```
 
-### Cloning the official openITCOCKPIT repository (only recommended if you do NOT have a GitHub account)
-
-Delete the files that were installed by apt
-```bash
-sudo su
-rm -rf /opt/openitc/frontend
-```
-
+### Cloning the official openITCOCKPIT Back-End repository 
+_(only recommended if you do NOT have a GitHub account)_
 ```bash
 cd /opt/openitc/
 git clone -b development https://github.com/it-novum/openITCOCKPIT frontend
+git clone -b development https://github.com/it-novum/openITCOCKPIT-frontend-angular frontend-angular
 ```
-
 
 ### Installing dependencies
 
@@ -168,16 +170,29 @@ composer install
 rm -f /opt/openitc/frontend/config/app_local.php
 ```
 
-#### Installing the JavaScript dependencies
+#### Installing the JavaScript and TypeScript dependencies
 ```bash
-cd /opt/openitc/frontend
+cd /opt/openitc/frontend-angular
  
 npm install
+
+npm install -g @angular/cli
 ```
 
 #### Updating the database and repairing the file permissions
 ```bash
 openitcockpit-update --cc --rights
+```
+
+### Installing Node.js
+```bash
+apt-get install -y ca-certificates curl gnupg
+mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+
+apt-get update
+apt-get install nodejs -y
 ```
 
 ## Activating openITCOCKPIT development mode (permanent)
@@ -193,10 +208,53 @@ echo "OITC_DEBUG=1" >> /etc/environment
 export OITC_DEBUG=1
  
 sed -i 's/OITC_DEBUG 0/OITC_DEBUG 1/g' /etc/nginx/openitc/master.conf
+```
+
+Also, in ``/etc/nginx/openitc/master.conf`` comment out the entire block for the angular front-end reverse proxy, and un-comment the development block:
+```
+# Proxy for the Angular Frontend (production)
+#location ^~ /a/ {
+#    alias /opt/openitc/frontend-angular/browser/;
+#    index index.html;
+#    try_files $uri $uri/ /a/index.html;
+#}
+
+# Proxy for the Angular Frontend (development)
+location ^~ /a/ {
+    proxy_pass http://localhost:4200/a/;
+    # Try to replace localhost with 127.0.0.1 if you have any issues
+
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "Upgrade";
+
+    proxy_set_header    Host                $host;
+    proxy_set_header    X-Real-IP           $remote_addr;
+    proxy_set_header    X-Forwarded-Host    $host;
+    proxy_set_header    X-Forwarded-Server  $host;
+    proxy_set_header    X-Forwarded-Proto   $scheme;
+    proxy_set_header    X-Forwarded-For     $remote_addr;
+    proxy_redirect off;
+    proxy_connect_timeout 90s;
+    proxy_read_timeout 90s;
+    proxy_send_timeout 90s;
+}
+```
+
+### Restart nginx web server
+```bash 
 systemctl restart nginx
 ```
 
 ## Start hacking
+
+### Serving your very own angular front-end
+To serve the angular application correctly, you'll need to "serve" the application. Do this by running the following command in ``/opt/openitc/frontend-angular/``
+```bash
+cd /opt/openitc/frontend-angular/ 
+npm start
+```
+
 ### Accessing files via a remote system (IDE) (optional)
 Your development environment (e.g. PHPStorm, Visual Studio Code, etc.) will usually not run on the same system as openITCOCKPIT.
 
