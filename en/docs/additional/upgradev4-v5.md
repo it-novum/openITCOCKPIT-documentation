@@ -369,7 +369,23 @@ To finish the upgrade, please run the following command:
 openitcockpit-update
 ```
 
+#### Grafana
 
+The Grafana version shipped with openITCOCKPIT 5 will now use MySQL as database backend. This improves the API performance of Grafana by a lot.
+This change only affects traditional installations of openITCOCKPIT. Docker installations of openITCOCKPIT will continue to use SQLite as database backend for Grafana.
+How ever, it is possible to switch the database backend of Grafana in Docker installations as well if preferred.
+
+This change requires to re-syncronize **Grafana User Dashboards**. You can do this by selecting all Grafana Dashboards and clicking on the `Synchronize` button at the bottom of the page.
+
+![Synchronize Grafana User Dashboards](/images/openitcockpit5/sync_userdefined_grafana_dashboards.png)
+
+openITCOCKPIT will re-create all automatically generated Grafana dashboards automatically.
+It is also possible to force the re-creation of all Grafana dashboards by running the following command:
+
+```bash
+openitcockpit-update --cc
+oitc cronjobs -f
+```
 
 ### Troubleshooting
 
