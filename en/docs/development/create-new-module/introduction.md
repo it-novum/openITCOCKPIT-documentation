@@ -8,7 +8,7 @@ This article contains the best practices for adding new features to openITCOCKPI
 
 The backend of openITCOCKPIT is written in PHP and uses the [CakePHP 4](https://book.cakephp.org/4/en/index.html) framework.
 
-The frontend is based on an [AngularJS](https://angularjs.org/), [jQuery](https://jquery.com/) and [Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) stack.
+The frontend is based on an [Angular](https://angular.dev/) and [CoreUI](https://coreui.io) stack.
 
 We recommend [JetBrains PHPStorm](https://www.jetbrains.com/phpstorm/) as your IDE and [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/) as your Browser.
 
