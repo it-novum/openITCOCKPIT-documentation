@@ -121,9 +121,10 @@ sudo cp composer.phar /usr/local/bin/composer
 ```
 
 ## Cloning the GitHub source code 
-openITCOCKPIT uses git as a version control system. The repositories are publicly hosted on [GitHub](https://github.com/it-novum/openITCOCKPIT):
+openITCOCKPIT uses git as a version control system. The repositories are publicly hosted on GitHub:
+
 - [openITCOCKPIT (back-end)](https://github.com/it-novum/openITCOCKPIT)
-- [openITCOCKPIT (front-end)](https://github.com/it-novum/openITCOCKPIT-frontend-angular)
+- [openITCOCKPIT-frontend-angular](https://github.com/it-novum/openITCOCKPIT-frontend-angular)
 
 ### Forking the openITCOCKPIT repositories
 Although not strictly necessary, it is strongly recommended that you create personal forks of both the front-end and back-end repositories. This will allow you to create pull requests and submit your changes to the openITCOCKPIT project.
@@ -142,7 +143,7 @@ rm -rf /opt/openitc/frontend-angular
 ```
 
 ### Cloning your forked repositories (recommended)
-Clone the repository (replace %YOUR_ACCOUNT_NAME% with your GitHub username).
+Clone the repositories into the same directories, you've just deleted. Replace `%YOUR_ACCOUNT_NAME%` with your GitHub username.
 ```bash 
 cd /opt/openitc/
 git clone -b development https://github.com/%YOUR_ACCOUNT_NAME%/openITCOCKPIT frontend
@@ -164,7 +165,7 @@ Make sure that you execute all commands as the `root` user (`sudo su`).
 #### Installing the PHP dependencies
 ```bash
 cd /opt/openitc/frontend
- 
+
 composer install
  
 rm -f /opt/openitc/frontend/config/app_local.php

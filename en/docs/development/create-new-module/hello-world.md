@@ -274,13 +274,12 @@ CREATE src/app/modules/example_module/pages/test/test-index/test-index.component
 Before changing your page, reset the file permissions here again:
 ```bash
 oitc rights
-
 ```
 
 
 
 ### Creating the Routes
-In your module's main directory, create a new file called `example_module.routes.ts` with the following content:
+In your module's main directory, create a new file called `example_module.route[AppController.php](../../../../../openITCOCKPIT-ExampleModule-Frontend-Angular/frontend/plugins/ExampleModule/src/Controller/AppController.php)s.ts` with the following content:
 
 ```typescript
 import { Routes } from '@angular/router';
