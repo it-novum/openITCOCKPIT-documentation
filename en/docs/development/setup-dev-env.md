@@ -69,9 +69,9 @@ You can now log onto the system as `root` via SSH.
 Since you are wanting to install an openITCOCKPIT development environment, we assume that you are familiar with the openITCOCKPIT setup process. For more information on the setup process, please click on the following link: <https://openitcockpit.io/download_server/>
 
 ```bash
-curl https://packages.openitcockpit.io/repokey.txt | sudo apt-key add -
+curl https://packages5.openitcockpit.io/repokey.txt | sudo apt-key add -
  
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openitcockpit.list
+echo "deb https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openitcockpit.list
 sudo apt-get update
  
 sudo apt-get install openitcockpit
