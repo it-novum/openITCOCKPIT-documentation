@@ -72,4 +72,4 @@ Das Container-basierte Berechtigungskonzept kann sehr komplex werden, aber biete
 ermöglicht granulare Berechtigungsmöglichkeiten.
 
 !!! note 
-    Seit openITCOCKPIT 4 können Container Berechtigungen auch in "Benutzer Container Rollen" abgebildet werden.
+    Seit openITCOCKPIT 5 können Container Berechtigungen auch in "Benutzer Container Rollen" abgebildet werden.
