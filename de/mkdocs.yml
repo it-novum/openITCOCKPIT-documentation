@@ -1,4 +1,4 @@
-site_name: openITCOCKPIT 4
+site_name: openITCOCKPIT 5
 site_url: http://mkdocs.oitc.itn:8000/
 repo_url: https://github.com/it-novum/openITCOCKPIT-documentation
 edit_uri: https://github.com/it-novum/openITCOCKPIT-documentation/blob/main/de/docs/
@@ -90,6 +90,7 @@ nav:
           - 'Additionalplugin_database': 'development/create-new-module/additionalplugin-database.md'
       - 'Ein neues Check Plugin erstellen': 'development/new-check-plugin.md'
       - 'Nightly Repository': 'development/nightly-repository.md'
+      - 'Archiv Repository': 'development/archive-repository.md'
   - 'Weitere Artikel':
       - 'Logging': 'additional/logs.md'
       - 'Theming und CI': 'additional/theming.md'
