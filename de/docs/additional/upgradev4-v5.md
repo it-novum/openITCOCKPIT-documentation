@@ -390,6 +390,59 @@ Sollten Sie Verbindungsfehler mit Ihrem System haben, können Sie versuchen die 
 apt-get install -f
 ```
 
+#### Keine Graphen / CPU does not support x86-64-v2
+
+Wenn Sie nach dem Upgrade auf openITCOCKPIT 5 keine Graphen sehen, Grafana nicht funktioniert oder die Fehlermeldung `Fatal glibc error: CPU does not support x86-64-v2` erhalten,
+nutzten Sie entweder eine sehr alte CPU, welche von openITCOCKPIT 5 nicht mehr untersützt wird,
+oder Sie betreiben openITCOCKPIT in einer virtuellen Maschine und haben keinen CPU-Type eingestellt.
+
+Sollte bei Ihnen der Dienst `openitcockpit-graphing.service` nicht starten können, sollten Sie den CPU-Type prüfen.
+
+Ob sie von dem Fehler `Fatal glibc error: CPU does not support x86-64-v2` betroffen sind, können Sie prüfen, indem Sie versuchen den MySQL-Server als Docker-Container zu starten.
+
+##### CPU-Fehler
+
+Im Fehlerfall werden Sie folgende Ausgabe erhalten und der MySQL-Server wird sich automatisch beenden:
+
+```bash
+docker run --rm -it mysql:latest
+
+Fatal glibc error: CPU does not support x86-64-v2
+```
+
+Um dies zu beheben, müssen Sie den CPU-Typ Ihrer virtuellen Maschine anpassen. Abhänikg von Ihrer Virtualisierungssoftware können Sich die Einstellungen unterscheiden.
+Wir zeigen in diesem Beispiel die Option für `Proxmox` / `KVM`.
+
+Aktuell ist bei der VM kein CPU-Typ eingestellt und es wird der Type `Default kvm64` verwendet.
+
+![Default CPU-Type Default kvm64](/images/openitcockpit5/pve_default_kvm64.png)
+
+Ändern Sie den CPU-Typ auf `host` oder `x86-64-v2-AES`, speichern Sie die Änderungen und schalten die VM aus und wieder ein.
+Im Anschluss sollten das Problem behoben sein.
+
+![Default CPU-Type x86-64-v2-AES](/images/openitcockpit5/pve_x86-64-v2-AES.png)
+
+##### Erfolg
+
+Wenn der MySQL-Server erfolgreich gestartet werden kann, erhalten Sie eine Ausgabe wie diese und der MySQL-Server wird sich automatisch beenden:
+
+```bash
+docker run --rm -it mysql:latest
+
+2025-05-13 14:37:28+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.3.0-1.el9 started.
+2025-05-13 14:37:29+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2025-05-13 14:37:29+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.3.0-1.el9 started.
+2025-05-13 14:37:29+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+```
+
+In diesem Fall ist Ihr System nicht betroffen und Sie können die Schritte zur Fehlerbehebung ignorieren.
+
+
+
 #### Wenn Ihre openITCOCKPIT Version < 4.8.7 ist
 
 Damit der Aktualisierungsprozess erfolgreich abgeschlossen werden kann, müssen Sie mindestens Version 4.8.7 von openITCOCKPIT verwenden.
