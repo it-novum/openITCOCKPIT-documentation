@@ -53,7 +53,7 @@ the openITCOCKPIT server will **not** execute any host and service checks anymor
 
 To bypass Mod-Gearman for an entire host, you can set the `WORKER` custom macro with the value `local`.
 
-![Bypass Mod-Gearman](/images/mod_gearman/bypass_mod_gearman.jpg)
+![Bypass Mod-Gearman](/images/mod_gearman/bypass_mod_gearman.png)
 
 You can also define the macro for a particular service to only exclude this service.
 
@@ -113,7 +113,7 @@ executed directly by the Monitoring Engine.
 
 To do so, navigate to `System -> Config file editor` and edit the file `/opt/openitc/nagios/etc/nagios.cfg`.
 
-![Disable Mod_Gearman](/images/mod_gearman/enable_mg.jpg)
+![Disable Mod_Gearman](/images/mod_gearman/enable_mg.png)
 
 Untick the `enable_mod_gearman` option and press on Save.
 
@@ -234,7 +234,7 @@ To route checks into one of those groups, you need to define the `WORKER` custom
 
 Define the macro `WORKER` with the value `hostgroup_Fulda`
 
-![Worker controlled by a macro](/images/mod_gearman/mg_routing_oitc.jpg)
+![Worker controlled by a macro](/images/mod_gearman/mg_routing_oitc.png)
 
 !!! note
     It is important, that the value of the custom macro is prefixed with `hostgroup_`
