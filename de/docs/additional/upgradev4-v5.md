@@ -184,15 +184,11 @@ Dies dient dazu, unerwartete System-Upgrades zu verhindern.
 
 Die neue Adresse lautet: `packages5.openitcockpit.io`.
 
-!!! warning
-    Derzeit befindet sich openITCOCKPIT 5 in der **Beta-Phase**. Bitte verwenden Sie dieses Version nicht für Produktionssysteme.
-    Das Repository ist automatisch für die Verwendung des Kanals `nightly` konfiguriert.
-
 ##### Ubuntu-Benutzer
 
 ```bash
 curl https://packages5.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 
 apt-get update
 ```
@@ -201,7 +197,7 @@ apt-get update
 
 ```bash
 curl https://packages5.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 
 apt-get update
 ```
@@ -219,7 +215,7 @@ apt-get update
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
 name=openITCOCKPIT Monitoring System
-baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/nightly/\$basearch/
+baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/stable/\$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=https://packages5.openitcockpit.io/repokey.txt
@@ -241,7 +237,7 @@ dnf --refresh check-update
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
 name=openITCOCKPIT Monitoring System
-baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/nightly/\$basearch/
+baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/stable/\$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=https://packages5.openitcockpit.io/repokey.txt
