@@ -55,4 +55,4 @@ It is also possible to give all users read and write permissions to each contain
 Although the container-based authorisation model can become very complex, it offers the greatest possible flexibility and enables the granular management of authorisation options.
 
 !!! note
-    Since openITCOCKPIT 4, container permissions can also be mapped in "user container roles".
+    Since openITCOCKPIT 5, container permissions can also be mapped in "user container roles".

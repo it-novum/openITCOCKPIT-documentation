@@ -14,6 +14,11 @@ den [Downloadbereich unserer Webseite](https://openitcockpit.io/download/#downlo
 Damit Sie Zugriff auf alle frei verfügbaren Community Module haben, müssen Sie Ihr openITCOCKPIT Registrieren. Dazu
 navigieren Sie zu `Systemkonfiguration -> System -> Registrierung` und tragen den Community-Lizenzschlüssel ein.
 
+!!! note "openITCOCKPIT 5.x Community Lizenz"
+    ```
+    e5aef99e-817b-0ff5-3f0e-140c1f342792
+    ```
+
 !!! note "openITCOCKPIT 4.x Community Lizenz"
     ```
     e5aef99e-817b-0ff5-3f0e-140c1f342792

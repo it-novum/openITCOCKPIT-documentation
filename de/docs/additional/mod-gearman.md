@@ -42,7 +42,7 @@ Dieser Dienst wird durch das Paket `openitcockpit-mod-gearman-worker-go-local` b
 
 Um Mod-Gearman für einen gesamten Host zu umgehen, können Sie das benutzerdefinierte Makro `WORKER` mit dem Wert `local` setzen.
 
-![Mod-Gearman umgehen](/images/mod_gearman/bypass_mod_gearman.jpg)
+![Mod-Gearman umgehen](/images/mod_gearman/bypass_mod_gearman.png)
 
 Sie können das Makro auch für einen bestimmten Dienst definieren, um nur diesen Dienst auszuschließen.
 
@@ -99,7 +99,7 @@ openITCOCKPIT-Versionen 4.8.0 und höher haben Mod-Gearman standardmäßig aktiv
 
 Um dies zu tun, navigieren Sie zu `System -> Konfigurationsdatei Editor` und bearbeiten Sie die Datei `/opt/openitc/nagios/etc/nagios.cfg`.
 
-![Deaktivieren von Mod-Gearman](/images/mod_gearman/enable_mg.jpg)
+![Deaktivieren von Mod-Gearman](/images/mod_gearman/enable_mg.png)
 
 Deaktivieren Sie die Option `enable_mod_gearman` und klicken Sie auf Speichern.
 
@@ -221,7 +221,7 @@ Um Prüfungen an einen Worker zu binden, müssen Sie das `WORKER`-benutzerdefini
 
 Definieren Sie das Makro `WORKER` mit dem Wert `hostgroup_Fulda`
 
-![Worker ueber Macro steuern](/images/mod_gearman/mg_routing_oitc.jpg)
+![Worker ueber Macro steuern](/images/mod_gearman/mg_routing_oitc.png)
 
 !!! note
     Es ist wichtig, dass der Wert des benutzerdefinierten Makros mit `hostgroup_` vorangestellt ist.

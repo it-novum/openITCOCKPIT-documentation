@@ -26,8 +26,8 @@ add-apt-repository universe
 apt-get install apt-transport-https curl gnupg2 ca-certificates
 
 mkdir -p /etc/apt/keyrings
-curl https://packages.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+curl https://packages5.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
@@ -52,8 +52,8 @@ Aktivieren Sie das openITCOCKPIT Repository
 apt-get install apt-transport-https curl gnupg2 ca-certificates
 
 mkdir -p /etc/apt/keyrings
-curl https://packages.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+curl https://packages5.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 

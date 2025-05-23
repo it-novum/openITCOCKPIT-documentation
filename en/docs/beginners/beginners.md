@@ -10,6 +10,11 @@ If you have not yet installed openITCOCKPIT, you can either use the [installatio
 
 In order to gain access to all freely available community modules, you must register your openITCOCKPIT installation. To do this, navigate to `System Configuration -> System -> Registration` and enter the community license key.
 
+!!! note "openITCOCKPIT 5.x Community License"
+    ```
+    e5aef99e-817b-0ff5-3f0e-140c1f342792
+    ```
+
 !!! note "openITCOCKPIT 4.x Community License"
     ```
     e5aef99e-817b-0ff5-3f0e-140c1f342792

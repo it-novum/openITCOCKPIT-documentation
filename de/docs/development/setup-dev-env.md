@@ -71,9 +71,9 @@ openITCOCKPIT Setup Prozess vertraut sind. Für weitere Informationen zum Setup 
 Link: <https://openitcockpit.io/download_server/>
 
 ```bash
-curl https://packages.openitcockpit.io/repokey.txt | sudo apt-key add -
+curl https://packages5.openitcockpit.io/repokey.txt | sudo apt-key add -
  
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openitcockpit.list
+echo "deb https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/openitcockpit.list
 sudo apt-get update
  
 sudo apt-get install openitcockpit

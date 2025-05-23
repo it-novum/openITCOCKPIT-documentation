@@ -50,7 +50,7 @@ Wie bereits angesprochen, nutzen wir den Checkmk Agenten um das Remote System zu
 
 Zuallererst müssen Sie den Checkmk Agenten von Ihrem openITCOCKPIT Server auf das Zielsystem kopieren:
 
-`scp /opt/openitc/check_mk/agents/check_mk_agent.linux root@172.16.166.103:/usr/local/bin/check_mk_agent`
+`scp /opt/openitc/check_mk/agents/check_mk_agent.linux root@172.16.166.179:/usr/local/bin/check_mk_agent`
 
 !!! tip "Alle Checkmk Agenten für die verschiedenen Betriebssysteme finden Sie hier"
     `/opt/openitc/check_mk/agents/`
@@ -137,7 +137,7 @@ abzufragen. Dazu können Sie das Programm `snmpwalk` nutzen.
 In diesem Beispiel fragen wie ein Ubuntu Linux, auf dem `snmpd` in der Version `2c` und der community `public` läuft ab.
 
 ```
-snmpwalk -v2c -c public 172.16.166.103
+snmpwalk -v2c -c public 172.16.166.179
 ```
 
 Sie sollten eine ähnliche Ausgabe wie diese sehen:
@@ -157,7 +157,7 @@ Wählen Sie die `Enable SNMP` Option aus.
 Das System wird Sie nach den benötigten SNMP Parametern befragen. Die SNMP Konfiguration wird pro Host gespeichert, Sie
 müssen diese Daten also nicht nochmals eingeben. Klicken Sie anschließend auf `Erkennung ausführen` um fortzufahren.
 
-![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
+![checkmk remote SNMP discovery](/images/checkmk-remote-snmp-discovery-4-3.png)
 
 
 Sobald der Erkennungsprozess vollendet ist, können Sie alle gewünschten Services, welche Sie überwachen möchten,
@@ -272,7 +272,7 @@ Sie können neben SNMP gleichzeitig den Checkmk Agenten nutzen.
 Dazu wählen Sie `Enable Checkmk agent`, als Datasource `Checkmk Agent` und `Enable SNMP`, sowie die SNMP Version und die
 Community.
 
-![checkmk remote discovery](/images/checkmk-remote-discovery-4-3.png)
+![checkmk mix agent and snmp](/images/checkmk-mix-agent-and-snmp.png)
 
 ## Eigene Regeln hinterlegen
 

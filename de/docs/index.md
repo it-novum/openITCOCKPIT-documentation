@@ -32,7 +32,7 @@ Professionelle Unterstützung und Support wird durch die [it-novum GmbH](https:/
 openITCOCKPIT und die Dokumentation stehen unter einer dualen Lizenz:
 
 ```
-Copyright (C) 2015-2020  it-novum GmbH
+Copyright (C) 2015-2025  it-novum GmbH
 
 
 openITCOCKPIT is dual licensed
