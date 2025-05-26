@@ -81,16 +81,6 @@ Below the main menu you will find some additional buttons (3):
   enterprise modules.
 - :fontawesome-solid-book: links to an overview page that contains further links to various documentation.
 
-#### Page menu button
-
-The page menu button can always be seen at the bottom right of the screen and contains two functions that can be used on
-any page in openITCOCKPIT.
-
-- :fontawesome-solid-expand: displays the page in full-screen mode.
-- :fontawesome-solid-arrow-up: scrolls automatically to the top of the current page.
-
-![sidemenu button](/images/sidemenu-button.png)
-
 ### Profile
 
 In the profile overview, you have the ability to make adjustments to your own user profile.

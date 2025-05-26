@@ -25,7 +25,6 @@ namespace ExampleModule\Controller;
  
  
 class TestController extends AppController {
-     
 }
 ```
 
@@ -45,15 +44,7 @@ namespace ExampleModule\Controller;
 class TestController extends AppController {
  
     public function index() {
-        if (!$this->isApiRequest()) {
-            // The requested URL was: /example_module/test/index.html
-            // The controller only sends the HTML template to the client browser / AngularJS
- 
-            // Pass the variable "message" with the content "Hello World (HTML)" to the view for .html requests
-            $this->set('message', 'Hello World (HTML)');
-            return;
-        }
- 
+
         // This get executed for API requests
         //  The requested URL was: /example_module/test/index.json
  
@@ -66,52 +57,6 @@ class TestController extends AppController {
  
 }
 ```
-
-#### Creating the view
-
-The [view](https://book.cakephp.org/4/en/views.html) is rendered in your browser. openITCOCKPIT supports two view types:
-
-The HTML view is loaded by AngularJS and contains the static HTML structure with placeholders for information about the
-current [action](#creating-a-new-action).
-
-The JSON view contains the data for the placeholders that pertain to the current [action](#creating-a-new-action).
-
-##### Creating the HTML view
-
-Create the file `/opt/openitc/frontend/plugins/ExampleModule/templates/Test/index.php` with the following content:
-
-```php
-<?php
-/**
- * @var \App\View\AppView $this
- * @var string $message
- */
-?>
- 
-<div class="row">
-    <div class="col-xl-12">
-        <div id="panel-1" class="panel">
-            <div class="panel-hdr">
-                <h2>
-                    <?php echo __('Example Module'); ?>
-                    <span class="fw-300"><i><?php echo __('Hello World'); ?></i></span>
-                </h2>
-            </div>
-            <div class="panel-container show">
-                <div class="panel-content">
- 
-                    <!-- Output "Hello World (HTML)" that was set by the controller -->
-                    <?= h($message); ?>
- 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-```
-
-!!! info AngularJS will load the template once and then cache it. Do not use `<?php foreach($data as $record): ?>` to
-output data.
 
 ##### Creating the JSON view
 
@@ -189,18 +134,20 @@ class Menu implements MenuInterface {
                 'ExampleModule',
                 __('Example Module'),
                 1000,
-                'fas fa-burn'
+                ['fas', 'burn']
             ))
                 //Add new Link to Sub-Category
                 ->addLink(new MenuLink(
                     __('Hello world'),
-                    'TestIndex', //Name of the NG-State
-                    'Test', //Name of the PHP Controller
-                    'index', //Name of the PHP action
+                    'TestIndex', // Name of the NG-State, historically needed but may be deprecated in the future
+                    'Test', // Name of the PHP Controller
+                    'index', // Name of the PHP action
                     'ExampleModule', //Name of the Module
-                    'fas fa-code', //Menu Icon
+                    ['fas', 'code'], //Menu Icon
                     [],
-                    1
+                    1,
+                    true,
+                    'example_module/index' //URL to the action
                 ))
             );
  
@@ -213,10 +160,6 @@ class Menu implements MenuInterface {
 **Result**
 
 ![new menu entry](/images/new-menu-entry.png)
-
-**PHPStorm**
-
-![new entry phpstorm](/images/new-menu-entry-phpstorm.png)
 
 Now execute the following command to update the display for the views that have been edited.
 
@@ -257,18 +200,20 @@ class Menu implements MenuInterface {
                 'ExampleModule',
                 __('Example Module'),
                 1000,
-                'fas fa-burn'
+                'fas burn'
             ))
                 //Add new Link to Sub-Category
                 ->addLink(new MenuLink(
                     __('Hello world'),
-                    'TestIndex', //Name of the NG-State
+                    'TestIndex', // Name of the NG-State, historically needed but may be deprecated in the future
                     'Test', //Name of the PHP Controller
                     'index', //Name of the PHP action
                     'ExampleModule', //Name of the Module
-                    'fas fa-code', //Menu Icon
+                    ['fas', 'code'], //Menu Icon
                     [],
-                    1
+                    1,
+                    true,
+                    'example_module/index' //URL to the action
                 ))
             );
  
@@ -282,59 +227,107 @@ class Menu implements MenuInterface {
 
 ![](/images/new-menu-headline.png)
 
-**PHPStorm**
-
-![](/images/new-menu-headline-phpstorm.png)
-
 Now execute the following command to update the display for the views that have been edited.
 
 ```bash
 openitcockpit-update --no-system-files
 ```
 
-### Creating a new NG-State / AngularJS route
-
-The web interface for openITCOCKPIT is built on the AngularJS framework. Each API action needs its own AngularJS state
-and controller.
-
-All states are defined in the file `/opt/openitc/frontend/plugins/ExampleModule/webroot/js/scripts/ng.states.js`
-definiert.
-
-```Javascript
-openITCOCKPIT.config(function($stateProvider){
-    $stateProvider
-        .state('TestIndex', { // Name of the NG-State => Same as in Menu.php
-            url: '/example_module/test/index', // URL the browser should display
-            templateUrl: '/example_module/test/index.html', // URL of the .html Template for AngularJS
-            controller: 'TestIndexController' // Name of the AngularJS Controller. Convention: Controller name + Action Name + 'Controller'
-        });
-});
+### Creating Front-End
+First, you will want to browse to the front-end repository of openITCOCKPIT.
+```bash
+cd /opt/openitc/frontend-angular/
 ```
 
-#### Creating an AngularJS controller
-
-Each action encapsulates its JavaScript logic within an AngularJS controller. Controllers only execute one action at a
-time. **Each action requires its own controller.** If you want the same code in different controllers, create
-an [AngularJS service](https://docs.angularjs.org/guide/services).
-
-Now create your "TestIndexController" under the directory:
-`/opt/openitc/frontend/plugins/ExampleModule/webroot/js/scripts/controllers/Test/TestIndexController.js`.
-Convention: `/opt/openitc/frontend/plugins/ExampleModule/webroot/js/scripts/controllers/<PHPController name>/<Controller Name><Action Name>Controller.js`
-.
-
-```Javascript
-angular.module('openITCOCKPIT')
-    .controller('TestIndexController', function($scope, $http){
-
-        //Name TestIndexController same as in ng.states.js
-        //Convention: Controller name + Action Name + 'Controller' = TestIndexController
-
-
-        console.log('TestIndexController is loaded');
-
-    });
+Before beginning, also create your own branch here, since your are now in a different GIT repository.
+```bash
+git checkout -b example_module
 ```
 
-You can now click on your menu item and see the results.
+Also, you will create your module's main directory tree there:
+```bash
+mkdir src/app/modules/example_module 
+mkdir src/app/modules/example_module/pages      # A place for pages (views)
+mkdir src/app/modules/example_module/components # A place for your custom components
+```
 
-![new module page](/images/new-module-page.png)
+In pages, we use the same folder structure like in the URI, so four our ``example_module/test/index`` page, we need at least the controller's level of the directory:
+```bash
+mkdir src/app/modules/example_module/pages/test
+```
+
+### Creating the Page
+In the "controller level" directory of your module, execute the following command to generate a new page:
+```bash
+cd src/app/modules/example_module/pages/test
+ng generate component TestIndex
+```
+
+Result:
+```bash
+CREATE src/app/modules/example_module/pages/test/test-index/test-index.component.css (0 bytes)
+CREATE src/app/modules/example_module/pages/test/test-index/test-index.component.html (25 bytes)
+CREATE src/app/modules/example_module/pages/test/test-index/test-index.component.spec.ts (614 bytes)
+CREATE src/app/modules/example_module/pages/test/test-index/test-index.component.ts (306 bytes)
+```
+
+Before changing your page, reset the file permissions here again:
+```bash
+oitc rights
+```
+
+
+
+### Creating the Routes
+In your module's main directory, create a new file called `example_module.route[AppController.php](../../../../../openITCOCKPIT-ExampleModule-Frontend-Angular/frontend/plugins/ExampleModule/src/Controller/AppController.php)s.ts` with the following content:
+
+```typescript
+import { Routes } from '@angular/router';
+
+export const exampleModuleRoutes: Routes = [
+    {
+        path: 'example_module/test/index',
+        loadComponent: () => import('./pages/test/test-index/test-index.component').then(m => m.TestIndexComponent)
+    }
+];
+```
+
+### Registering the Routes
+In the file `src/app/app.routes.ts`, add the following line to the import section:
+```typescript
+import { exampleModuleRoutes } from './modules/example_module/example_module.routes';
+```
+
+Then, add the following line to the `routes` array:
+```typescript
+/***    Routes for modules   ***/
+const moduleRoutes: Routes = [
+    ...snmpTrapModuleRoutes,
+    // ...
+    ...servicenowModuleRoutes,
+    ...exampleModuleRoutes // Add this line
+];
+```
+
+### Serve the angular application
+If not already done, run the ``ng serve...`` command to serve the angular application
+```bash
+cd /opt/openitc/frontend-angular/ 
+npm start
+```
+
+If already running, the angular server will automatically detect your changes and rebuild the page. 
+
+Don't panic if this takes a while, at least if you had added the first change during the ng servers runtime. The next ones will be faster.
+```bash
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/a
+  ➜  Network: http://192.168.93.131:4200/a
+  ➜  Network: http://172.17.0.1:4200/a
+  ➜  Network: http://172.18.0.1:4200/a
+  ➜  press h + enter to show help
+⠸ Changes detected. Rebuilding...
+```
+
+After the rebuild has finished, you can open your browser and navigate to the following URL:
+https://master-release/a/example_module/test/index

@@ -16,13 +16,13 @@ Eventuell muss nach dem Wechsel, der Community oder Enterprise Lizenzschlüssel 
 
 ### Debian
 ```
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
 ### Ubuntu
 ```
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
@@ -31,7 +31,7 @@ apt-get update
 Verwenden Sie dies nur, wenn der Schlüssel des openITCOCKPIT-Repositorys im alten Schlüsselbund `trusted.gpg` gespeichert ist.
 
 ```
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
@@ -47,12 +47,12 @@ Eventuell muss nach dem Wechsel, der Community oder Enterprise Lizenzschlüssel 
 
 ### Debian
 ```
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```
 
 ### Ubuntu
 ```
-echo "deb https://packages.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 apt-get update
 ```

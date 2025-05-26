@@ -2,6 +2,11 @@
 
 Before you start, make sure you are in the `/opt/openitc/frontend` folder and have created a new git branch for your development work.
 
+```bash
+cd /opt/openitc/frontend
+git checkout -b example_module
+```
+
 ![new git branch](/images/prepare-for-new-module.png)
 
 openITCOCKPIT has its own CLI tool "`oitc`", which can, among other things, create a "skeleton" for a new module. This is referred to as the bake command, which is based on the CakePHP "[bake](https://book.cakephp.org/4/en/plugins.html#creating-a-plugin-using-bake)" command.

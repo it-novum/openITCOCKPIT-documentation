@@ -186,15 +186,11 @@ This is to prevent unexpected system upgrades.
 
 The new address ist: `packages5.openitcockpit.io`.
 
-!!! warning
-    Currently openITCOCKPIT 5 is in **beta**. Please do not use this repository for production systems.
-    The repository is automatically configured to use the `nightly` branch.
-
 ##### Ubuntu users
 
 ```bash
 curl https://packages5.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 
 apt-get update
 ```
@@ -203,7 +199,7 @@ apt-get update
 
 ```bash
 curl https://packages5.openitcockpit.io/repokey.txt | tee /etc/apt/keyrings/openitcockpit-keyring.asc
-echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/nightly $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
+echo "deb [signed-by=/etc/apt/keyrings/openitcockpit-keyring.asc] https://packages5.openitcockpit.io/openitcockpit/$(lsb_release -sc)/stable $(lsb_release -sc) main" > /etc/apt/sources.list.d/openitcockpit.list
 
 apt-get update
 ```
@@ -221,7 +217,7 @@ apt-get update
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
 name=openITCOCKPIT Monitoring System
-baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/nightly/\$basearch/
+baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/stable/\$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=https://packages5.openitcockpit.io/repokey.txt
@@ -243,7 +239,7 @@ dnf --refresh check-update
 cat <<EOT > /etc/yum.repos.d/openitcockpit.repo
 [openitcockpit]
 name=openITCOCKPIT Monitoring System
-baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/nightly/\$basearch/
+baseurl=https://packages5.openitcockpit.io/openitcockpit/RHEL8/stable/\$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=https://packages5.openitcockpit.io/repokey.txt
@@ -396,6 +392,57 @@ If you find you are having connectivity errors with your system, you can try to 
 ```bash
 apt-get install -f
 ```
+
+#### No Graphs / CPU does not support x86-64-v2
+
+If you do not get any graphs after upgrading to openITCOCKPIT 5, Grafana does not work, or you receive the error message `Fatal glibc error: CPU does not support x86-64-v2`,
+you are either using a very old CPU that is no longer supported by openITCOCKPIT 5,
+or you are running openITCOCKPIT in a virtual machine and have not set a CPU type.
+
+If the `openitcockpit-graphing.service` cannot start, you should check the CPU type first.
+
+You can check if you are affected by the `Fatal glibc error: CPU does not support x86-64-v2` error by trying to start the MySQL server as a Docker container.
+
+##### CPU Error
+
+In case of an error, you will receive the following output and the MySQL server will automatically terminate:
+
+```bash
+docker run --rm -it mysql:latest
+
+Fatal glibc error: CPU does not support x86-64-v2
+```
+
+To fix this, you need to adjust the CPU type of your virtual machine. Depending on your virtualization software, the settings may differ.
+In this example, we show the option for `Proxmox` / `KVM`.
+
+Currently, no CPU type is set for the VM and the type `Default kvm64` is used.
+
+![Default CPU-Type Default kvm64](/images/openitcockpit5/pve_default_kvm64.png)
+
+Change the CPU type to `host` or `x86-64-v2-AES`, save the changes, and power the VM off and on again.
+Afterwards, the problem should be resolved.
+
+![Default CPU-Type x86-64-v2-AES](/images/openitcockpit5/pve_x86-64-v2-AES.png)
+
+##### Success
+
+If the MySQL server can be started successfully, you will receive output like this and the MySQL server will automatically terminate:
+
+```bash
+docker run --rm -it mysql:latest
+
+2025-05-13 14:37:28+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.3.0-1.el9 started.
+2025-05-13 14:37:29+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2025-05-13 14:37:29+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 9.3.0-1.el9 started.
+2025-05-13 14:37:29+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+```
+
+In this case, your system is not affected and you can ignore the troubleshooting steps.
 
 #### If your openITCOCKPIT version is < 4.8.7
 
