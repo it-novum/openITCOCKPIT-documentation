@@ -58,6 +58,14 @@ apt-get update
 ```
 
 ## Installation von openITCOCKPIT
+
+!!! danger
+    openITCOCKPIT erwartet, dass die Linux-Standard-Umask auf `022` eingestellt ist (Standard für die meisten Linux-Distributionen).
+    Wenn Sie unsicher sind, ändern Sie die Umask auf `022`, bevor Sie mit dem Update fortfahren.
+    ```
+    umask 0022
+    ```
+
 Die eigentliche Installation wird durch folgenden Befehl ausgeführt:
 ```
 apt-get install openitcockpit

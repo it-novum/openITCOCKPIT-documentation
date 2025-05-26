@@ -270,6 +270,13 @@ Während des Updates werden Sie möglicherweise gefragt, ob Sie einige Konfigura
 
 Um das Update zu starten, führen Sie aus:
 
+!!! danger
+    openITCOCKPIT erwartet, dass die Linux-Standard-Umask auf `022` eingestellt ist (Standard für die meisten Linux-Distributionen).
+    Wenn Sie unsicher sind, ändern Sie die Umask auf `022`, bevor Sie mit dem Update fortfahren.
+    ```
+    umask 0022
+    ```
+
 ```bash
 apt-get dist-upgrade
 ```
@@ -293,6 +300,13 @@ Das Update auf openITCOCKPIT 5 ist nun abgeschlossen 🎉.
 Der Aktualisierungsprozess für openITCOCKPIT-Satellitensysteme ist unkompliziert. openITCOCKPIT 5 kann auch mit openITCOCKPIT 4 Satelliten kommunizieren. Ein Upgrade wird zwar **empfohlen**, ist jedoch (Stand jetzt) nicht erforderlich.
 
 #### Schritt 1 - Betriebssystem aktualisieren
+
+!!! danger
+    openITCOCKPIT erwartet, dass die Linux-Standard-Umask auf `022` eingestellt ist (Standard für die meisten Linux-Distributionen).
+    Wenn Sie unsicher sind, ändern Sie die Umask auf `022`, bevor Sie mit dem Update fortfahren.
+    ```
+    umask 0022
+    ```
 
 ```bash
 apt-get update
