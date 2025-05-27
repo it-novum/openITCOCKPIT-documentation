@@ -167,3 +167,19 @@ sudo -u www-data /opt/openitc/frontend/bin/cake user --username admin --password
 ```
 
 All other users can then be created and managed via the web interface.
+
+## Settings
+
+Settings for the satellite can be done in the file `/opt/openitc/frontend/config/interface.yml`.
+
+Here you can edit the configuration for interface, retention time, perfdata and docker.
+
+Example:
+- Deactivate social buttons on the login-page
+```
+show_link_in_login: 0
+```
+- Retention time for host statehistory
+```
+age_host_statehistory: 90
+```
