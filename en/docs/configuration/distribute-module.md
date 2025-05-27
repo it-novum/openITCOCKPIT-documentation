@@ -175,6 +175,7 @@ Settings for the satellite can be done in the file `/opt/openitc/frontend/config
 Here you can edit the configuration for interface, retention time, perfdata and docker.
 
 Example:
+
 - Deactivate social buttons on the login-page
 ```
 show_link_in_login: 0
