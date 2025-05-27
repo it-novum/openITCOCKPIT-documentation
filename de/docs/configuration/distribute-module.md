@@ -198,6 +198,7 @@ Einstellungen für den Satellit können in der Datei `/opt/openitc/frontend/conf
 Hier finden sich Einstellungen zu dem Interface, Aufbewahrungsdauer, Perfdata und Docker.
 
 Beispiel:
+
 - Deaktivieren der Socal-Buttons auf der Login-Seite
 ```
 show_link_in_login: 0
