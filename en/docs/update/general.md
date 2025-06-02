@@ -25,6 +25,13 @@ apt-get dist-upgrade
 
 ## Red Hat Enterprise Linux
 
+!!! danger
+    openITCOCKPIT expecteds the Linux default umask to be set to `022` (default for most Linux distributions).
+    If you are unsure change the umask to `022` before you continue with the update.
+    ```
+    umask 0022
+    ```
+
 Update package sources
 ```
 dnf --refresh check-update
